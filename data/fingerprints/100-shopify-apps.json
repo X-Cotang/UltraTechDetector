@@ -1,0 +1,3396 @@
+{
+  "apps": {
+    "Accentuate Custom Fields": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.accentuate\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Accentuate Custom Fields is the professional and de facto solution to easily extend your Shopify store with your own custom fields such multi-language text fields, images, checkboxes, dates, selection list and custom JSON objects.",
+      "website": "https://www.accentuate.io",
+      "icon": "Accentuate Custom Fields.png"
+    },
+    "AdNabu": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/adnabu-shopify"
+            }
+          }
+        }
+      ],
+      "description": "AdNabu is a software solution for managing product feeds on Shopify, enabling organization and optimization for online stores.",
+      "website": "https://www.adnabu.com",
+      "icon": "AdNabu.svg"
+    },
+    "Alia": {
+      "cats": [
+        100,
+        110
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof alia !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof alia !== 'undefined';"
+        }
+      ],
+      "description": "Alia is a Shopify app to design Email and SMS sign-up pop-up units",
+      "website": "https://www.alialearn.com/",
+      "icon": "Alia.png"
+    },
+    "Autocommerce": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.autocommerce\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Autocommerce is a product recommendation app for Shopify stores, similar to Amazon, designed to enhance the shopping experience by suggesting relevant products to customers based on their browsing and purchase history.",
+      "website": "https://autocommerce.io",
+      "icon": "Autocommerce.svg"
+    },
+    "Autoketing Product Reviews": {
+      "cats": [
+        100,
+        90
+      ],
+      "implies": [
+        "Autoketing",
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof autoketingproduct_reivew !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof autoketingproduct_reivew !== 'undefined';"
+        }
+      ],
+      "description": "Autoketing Product Reviews is an application that allows shop owners to manage the product review section on their website.",
+      "website": "https://apps.shopify.com/product-reviews-autoketing",
+      "icon": "Autoketing.png"
+    },
+    "Avada AVASHIP": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*freeshippingbar\\.apps\\.avada\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AVADA_FSB !== 'undefined' \u0026\u0026 typeof AVADA_FSB.bars !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AVADA_FSB.bars !== 'undefined';"
+        }
+      ],
+      "description": "Avada AVASHIP is an order tracking Shopify app.",
+      "website": "https://apps.shopify.com/avaship",
+      "icon": "Avada.svg"
+    },
+    "Avada Boost Sales": {
+      "cats": [
+        100,
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*boostsales\\.apps\\.avada\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AVADA_BS_LAST_UPDATE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AVADA_BS_LAST_UPDATE !== 'undefined';"
+        }
+      ],
+      "description": "AVADA Boost Sales is a one-stop solution that is specially designed to increase your sales with countdown timer, trust badges, sales pop, sales boost and many more.",
+      "website": "https://apps.shopify.com/avada-boost-sales",
+      "icon": "Avada.svg"
+    },
+    "Avada SEO": {
+      "cats": [
+        100,
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*seo\\.apps\\.avada\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Avada SEO is a Shopify app built and designed following strict SEO practices.",
+      "website": "https://apps.shopify.com/avada-seo-suite",
+      "icon": "Avada.svg"
+    },
+    "Avada Size Chart": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sizechart\\.apps\\.avada\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Avada Size Chart is a thoughtful app that helps online stores reduce return rates with useful size guides.",
+      "website": "https://apps.shopify.com/avada-size-chart",
+      "icon": "Avada.svg"
+    },
+    "Back In Stock": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.backinstock\\.org/"
+            }
+          }
+        }
+      ],
+      "description": "Back In Stock lets your customers choose restock alerts for specific variant combinations, including size, colour or style.",
+      "website": "https://backinstock.org",
+      "icon": "Back In Stock.png"
+    },
+    "Beam AfterSell": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.aftersell\\.app/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof aftersell !== 'undefined' \u0026\u0026 typeof aftersell.hooks !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof aftersell.hooks !== 'undefined';"
+        }
+      ],
+      "description": "AfterSell is a Shopify app by Beam which helps brands create powerful post purchase offers.",
+      "website": "https://www.aftersell.com",
+      "icon": "AfterSell.svg"
+    },
+    "Beam OutSell": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//outsellapp\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof outsellAiRecommendationsIsEnabled !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof outsellAiRecommendationsIsEnabled !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof outsellApp !== 'undefined';"
+        }
+      ],
+      "description": "OutSell is a Shopify app by Beam. Frequently Bought Together, Discounted Upsell, Also Bought.",
+      "website": "https://apps.shopify.com/outsell",
+      "icon": "Beam.svg"
+    },
+    "Better Price": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/shopify-apps//js/betterprice/betterprice\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof fc_metafield_betterprice !== 'undefined' \u0026\u0026 typeof fc_metafield_betterprice.betterpricesuccess !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fc_metafield_betterprice.betterpricesuccess !== 'undefined';"
+        }
+      ],
+      "description": "Better Price is a Shopify app which provide coupons to real leads only when discounted price is requested build by Architechpro.",
+      "website": "https://apps.shopify.com/better-price",
+      "icon": "Better Price.png"
+    },
+    "BiteSpeed": {
+      "cats": [
+        100,
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.bitespeed\\.co/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.bitespeed\\.co/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "BiteSpeed is an all-in-one Shopify marketing app which helps ecommerce brands recover revenue.",
+      "website": "https://www.bitespeed.co",
+      "icon": "BiteSpeed.png"
+    },
+    "Bogos": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*collect\\.bogos\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Bogos is a Shopify app for free gift promotions, enabling sales growth through offers such as Buy X Get Y and other customizable promotional campaigns.",
+      "website": "https://bogos.io",
+      "icon": "Bogos.svg"
+    },
+    "Bold Brain": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Bold Commerce",
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*brain-assets\\.boldapps\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BOLD !== 'undefined' \u0026\u0026 typeof BOLD.brain !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BOLD.brain !== 'undefined';"
+        }
+      ],
+      "description": "Bold Brain help customers discover more products and add more to their cart with dynamic recommendations for Shopify and use advanced analytics.",
+      "website": "https://boldcommerce.com/bold-brain",
+      "icon": "Bold.svg"
+    },
+    "Bold Bundles": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Bold Commerce",
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bundles\\.boldapps\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BOLD !== 'undefined' \u0026\u0026 typeof BOLD.bundles !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BOLD.bundles !== 'undefined';"
+        }
+      ],
+      "description": "Bold Bundles Shopify app is designed to present recommended product widgets to cross-sell your products.",
+      "website": "https://boldcommerce.com/bundles",
+      "icon": "Bold.svg"
+    },
+    "Bold Custom Pricing": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Bold Commerce",
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cp.\\.boldapps\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BOLD !== 'undefined' \u0026\u0026 typeof BOLD.csp !== 'undefined' \u0026\u0026 typeof BOLD.csp.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return BOLD.csp.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BOLD.csp.version !== 'undefined';",
+          "version": "try { return String(BOLD.csp.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Bold Custom Pricing is an app that makes it easy to create a tiered pricing structure for your customers.",
+      "website": "https://boldcommerce.com/custom-pricing",
+      "icon": "Bold.svg"
+    },
+    "Bold Motivator": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Bold Commerce",
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*motivate\\.boldapps\\.net/"
+            }
+          }
+        }
+      ],
+      "description": "Bold Motivator motivate customers to spend more on your store with free shipping and gifts using a customisable banner that counts down how much more they have to buy.",
+      "website": "https://boldcommerce.com/motivator",
+      "icon": "Bold.svg"
+    },
+    "Bold Product Options": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Bold Commerce",
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*option\\.boldapps\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BOLD !== 'undefined' \u0026\u0026 typeof BOLD.options !== 'undefined' \u0026\u0026 typeof BOLD.options.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return BOLD.options.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BOLD.options.version !== 'undefined';",
+          "version": "try { return String(BOLD.options.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Product Options is a Shopify app which allows customers to customise products with unlimited custom options built by Bold.",
+      "website": "https://boldcommerce.com/product-options",
+      "icon": "Bold.svg"
+    },
+    "Bold Subscriptions": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Bold Commerce",
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sub\\.boldapps\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BOLD !== 'undefined' \u0026\u0026 typeof BOLD.subscriptions !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BOLD.subscriptions !== 'undefined';"
+        }
+      ],
+      "description": "Bold Subscriptions provides powerful, API-driven customisation options to build and scale a subscription service that fits your business.",
+      "website": "https://boldcommerce.com/shopify-subscription-app",
+      "icon": "Bold.svg"
+    },
+    "Bold Upsell": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Bold Commerce",
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*upsells\\.boldapps\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BOLD !== 'undefined' \u0026\u0026 typeof BOLD.upsell !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BOLD.upsell !== 'undefined';"
+        }
+      ],
+      "description": "Bold Upsell allows the substitution or attachment of products to the customers' carts.",
+      "website": "https://boldcommerce.com/upsell",
+      "icon": "Bold.svg"
+    },
+    "BookThatApp": {
+      "cats": [
+        100,
+        72
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.bookthatapp\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BookThatApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BookThatApp !== 'undefined';"
+        }
+      ],
+      "description": "BookThatApp is a Shopify appointment booking, product rental and class booking app.",
+      "website": "https://www.bookthatapp.com",
+      "icon": "BookThatApp.png"
+    },
+    "Booster Page Speed Optimizer": {
+      "cats": [
+        100,
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/assets/booster-page-speed-optimizer\\.js"
+            }
+          }
+        }
+      ],
+      "description": "The Page Speed Optimizer is a Shopify app built by BoosterApps.",
+      "website": "https://apps.shopify.com/page-speed-optimizer",
+      "icon": "BoosterApps.png"
+    },
+    "Boutiq": {
+      "cats": [
+        100,
+        103
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof caazamApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof caazamApp !== 'undefined';"
+        }
+      ],
+      "description": "Boutiq is a personal video shopping solution.",
+      "website": "https://www.getboutiq.com",
+      "icon": "Boutiq.svg"
+    },
+    "CJDropshipping app": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.cjdropshipping\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "CJDropshipping is a dropshipping supplier and fulfillment service from China.",
+      "website": "https://apps.shopify.com/cucheng",
+      "icon": "CJDropshipping.svg"
+    },
+    "CareCart Sales Pop Up": {
+      "cats": [
+        100,
+        5
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sales-pop\\.carecart\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "CareCart Sales Pop Up is a stock countdown timer, recent sales notifications, live sales pop up widget.",
+      "website": "https://carecart.io/sales-pop-up-app",
+      "icon": "CareCart.png"
+    },
+    "Carro": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/carro\\.min\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getcarro\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Carro connects participating Shopify stores together to enable cross-store selling or the ability for like-minded partners to directly sell each other products without the need for inventory, managing returns, or minimum order quantities.",
+      "website": "https://getcarro.com",
+      "icon": "Carro.svg"
+    },
+    "Coin Currency Converter": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/apps/coin/coin\\.js.+\\.myshopify\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Coin Currency Converter is an automatic currency conversion app for Shopify.",
+      "website": "https://apps.shopify.com/coin",
+      "icon": "Coin Currency Converter.png"
+    },
+    "Conjured": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.conjured\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Conjured provides Shopify brands with Shopify apps and custom development.",
+      "website": "https://conjured.co",
+      "icon": "Conjured.png"
+    },
+    "Conversio App": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Conversio"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.conversio\\.com/.+\\.myshopify\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Conversio App is an optimisation and analytics app for Shopify stores.",
+      "website": "https://apps.shopify.com/conversio",
+      "icon": "Conversio.svg"
+    },
+    "Cozy AntiTheft": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdncozyantitheft\\.addons\\.business/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cozyEcoAdnsUa !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cozyEcoAdnsUa !== 'undefined';"
+        }
+      ],
+      "description": "Cozy AntiTheft helps you to protect your store content, images and texts from being stolen with a few simple clicks.",
+      "website": "https://apps.shopify.com/cozy-antitheft-for-images-and-more",
+      "icon": "Cozy AntiTheft.png"
+    },
+    "DelightChat": {
+      "cats": [
+        100
+      ],
+      "description": "DelightChat is a customer service platform for Shopify, offering omnichannel support via Email, Live Chat, Facebook, Instagram, and WhatsApp, all managed through a shared inbox.",
+      "website": "https://www.delightchat.io",
+      "icon": "DelightChat.svg"
+    },
+    "Delm": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.delm\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Delm is a customisable and multilingual delivery date estimation app for Shopify, providing shipping information.",
+      "website": "https://delm.io",
+      "icon": "Delm.svg"
+    },
+    "Digismoothie Candy Rack": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CANDYRACK_DOCUMENT_LISTENER !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CANDYRACK_DOCUMENT_LISTENER !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof candyrackEnableDebug !== 'undefined';"
+        }
+      ],
+      "description": "Digismoothie Candy Rack is an upsell app for Shopify which allow merchants to offer custom services or bundle products.",
+      "website": "https://www.digismoothie.com/apps/candy-rack",
+      "icon": "Digismoothie.svg"
+    },
+    "Drop A Hint": {
+      "cats": [
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DropAHint !== 'undefined' \u0026\u0026 typeof DropAHint.BaseURL !== 'undefined' \u0026\u0026 DropAHint.BaseURL === 'dropahint\\.love/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DropAHint.BaseURL !== 'undefined';",
+          "version": "try { return String(DropAHint.BaseURL || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dropAHintTypeProduct !== 'undefined';"
+        }
+      ],
+      "description": "Drop A Hint is an Shopify app which help share hints via email, SMS, WhatsApp and messengers.",
+      "website": "https://apps.shopify.com/drop-a-hint-v2",
+      "icon": "Drop A Hint.png"
+    },
+    "Easy Hide PayPal": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*easyhide\\.herculesapps\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Easy Hide PayPal hides PayPal button from product page, cart and checkout but keep PayPal as payment option in checkout.",
+      "website": "https://apps.shopify.com/easyhide",
+      "icon": "Easy Hide PayPal.png"
+    },
+    "Easy Redirects": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*easy-redirects\\..+/redirect-app\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Easy Redirects is a Shopify app built by Eastside, and part of the best Shopify Apps collection.",
+      "website": "https://apps.shopify.com/easyredirects",
+      "icon": "Easy Redirects.png"
+    },
+    "EasyGift": {
+      "cats": [
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof EasyGift !== 'undefined' \u0026\u0026 typeof EasyGift.nonTargetingRules !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EasyGift.nonTargetingRules !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EasyGiftScriptLoaded !== 'undefined';"
+        }
+      ],
+      "description": "EasyGift is a tool that automates the addition of free gifts or products to the cart based on custom rules, allowing for upsells, BOGO (Buy 1 Get 1) offers, and the creation of rules based on cart value or specific products, with the ability to schedule start times for offer activation.",
+      "website": "https://apps.shopify.com/gifter-cart-auto-include",
+      "icon": "EasyGift.png"
+    },
+    "Enlistly": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.enlistly\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Enlistly tracks referral orders in realtime. Orders that are partially refunded, refunded, or cancelled update on the fly.",
+      "website": "https://enlistly.com",
+      "icon": "Enlistly.png"
+    },
+    "EraofEcom Cartroids": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cartroids !== 'undefined' \u0026\u0026 typeof cartroids.appBase !== 'undefined' \u0026\u0026 cartroids.appBase === 'cartroids\\.eraofecom\\.org'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cartroids.appBase !== 'undefined';",
+          "version": "try { return String(cartroids.appBase || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "EraofEcom Cartroids makes it easy for you to create highly targeted upsells, cross-sells and bundle offers.",
+      "website": "https://eraofecom.org/collections/tech/products/cartroids",
+      "icon": "EraofEcom.png"
+    },
+    "EraofEcom MTL": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mtl\\.eraofecom\\.org"
+            }
+          }
+        }
+      ],
+      "description": "EraofEcom MTL is a Shopify pop up app that enables you to catch your website visitors.",
+      "website": "https://eraofecom.org/collections/tech/products/milk-the-leads",
+      "icon": "EraofEcom.png"
+    },
+    "EraofEcom WinAds": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof win_ads !== 'undefined' \u0026\u0026 typeof win_ads.baseURL !== 'undefined' \u0026\u0026 win_ads.baseURL === 'winads\\.eraofecom\\.org'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof win_ads.baseURL !== 'undefined';",
+          "version": "try { return String(win_ads.baseURL || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "EraofEcom WinAds is an all-in-one Facebook pixel app for Shopify.",
+      "website": "https://eraofecom.org/collections/tech/products/win-ads-manager",
+      "icon": "EraofEcom.png"
+    },
+    "Fast Bundle": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.fastbundle\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FastBundleConf !== 'undefined' \u0026\u0026 typeof FastBundleConf.bundleBox !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FastBundleConf.bundleBox !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FastBundleConf.cartInfo.app_version !== 'undefined';",
+          "version": "try { return String(FastBundleConf.cartInfo.app_version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Fast Bundle gives you the ability to create product bundle offers with discounts.",
+      "website": "https://fastbundle.co",
+      "icon": "Fast Bundle.svg"
+    },
+    "Fera Product Reviews App": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Fera",
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof feraJsUrl !== 'undefined' \u0026\u0026 feraJsUrl === 'cdn\\.fera\\.ai/js/fera\\.js.+\\.myshopify\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof feraJsUrl !== 'undefined';",
+          "version": "try { return String(feraJsUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Fera Product Reviews App is a product review and social proof app for Shopify.",
+      "website": "https://apps.shopify.com/fera",
+      "icon": "Fera.svg"
+    },
+    "FireApps Ali Reviews": {
+      "cats": [
+        100,
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//alireviews\\.fireapps\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "FireApps Ali Reviews is an all-in-one solution that helps to collect, showcase, and manage impactful reviews.",
+      "website": "https://apps.shopify.com/ali-reviews",
+      "icon": "FireApps.svg"
+    },
+    "Flits": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof flitsObjects !== 'undefined' \u0026\u0026 typeof flitsObjects.accountPage !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof flitsObjects.accountPage !== 'undefined';"
+        }
+      ],
+      "description": "Flits is a customer account pages that get all your shopper data in one place.",
+      "website": "https://getflits.com",
+      "icon": "Flits.png"
+    },
+    "Fontify": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*fontify\\.nitroapps\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Fontify allows you to utilise any font without having to alter code.",
+      "website": "https://apps.shopify.com/fontify-change-customize-font-for-your-store",
+      "icon": "Fontify.png"
+    },
+    "Frequently Bought Together": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.codeblackbelt\\.com/js/modules/frequently-bought-together/"
+            }
+          }
+        }
+      ],
+      "description": "Frequently Bought Together is a Shopify app which add Amazon-like 'Customers Who Bought This Item Also Bought' product recommendations to your store.",
+      "website": "https://www.codeblackbelt.com",
+      "icon": "Frequently Bought Together.png"
+    },
+    "Froonze": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shopify\\.com/extensions/[^/]+/froonze-loyalty-wishlist[^/]*"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof frcp !== 'undefined' \u0026\u0026 typeof frcp.httpsUrl !== 'undefined' \u0026\u0026 frcp.httpsUrl === 'app\\.froonze\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof frcp.httpsUrl !== 'undefined';",
+          "version": "try { return String(frcp.httpsUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Froonze is a modular Shopify app that enhances the customer account page with features like wishlists, loyalty programs, and social logins.",
+      "website": "https://www.froonze.com",
+      "icon": "Froonze.svg"
+    },
+    "GTranslate app": {
+      "cats": [
+        100,
+        89
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*gtranslate\\.io/shopify/"
+            }
+          }
+        }
+      ],
+      "description": "GTranslate app is a website translator which can translate any website to any language automatically.",
+      "website": "https://apps.shopify.com/multilingual-shop-by-gtranslate",
+      "icon": "GTranslate.svg"
+    },
+    "GemPages": {
+      "cats": [
+        100,
+        51
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/files/gempagev\\d+\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GEMSTORE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GEMSTORE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GEMVENDOR !== 'undefined';"
+        }
+      ],
+      "description": "GemPages is a powerful Shopify landing page buidler that empowers SMEs, agency, and freelancers to build their brands and sell online.",
+      "website": "https://gempages.net",
+      "icon": "GemPages.svg"
+    },
+    "Gist Giftship": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets/js/giftship\\.([\\d\\.]+)\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Gist Giftship is a gifting app on Shopify that allows your customers to complete all of their gift shopping at once.",
+      "website": "https://gist-apps.com/giftship",
+      "icon": "Gist.svg"
+    },
+    "Globo Also Bought": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets/globo\\.alsobought\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Also Bought is a conversion Shopify app by Globo.",
+      "website": "https://apps.shopify.com/globo-related-products",
+      "icon": "Globo apps.png"
+    },
+    "Globo Color Swatch": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets/globo\\.swatch\\.data\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Globo Color Swatch app gives you an easy-to-use tool to display product variants on both collection page, homepage and product page creatively as a means to enhance customers' experience and stimulate them to purchase.",
+      "website": "https://apps.shopify.com/globo-related-products",
+      "icon": "Globo apps.png"
+    },
+    "Globo Form Builder": {
+      "cats": [
+        100,
+        110
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/assets/globo\\.formbuilder\\.init\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Form Builder is a Shopify form builder app for contact form built by Globo.",
+      "website": "https://apps.shopify.com/form-builder-contact-form",
+      "icon": "Globo apps.png"
+    },
+    "Globo Pre-Order": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GloboPreorderParams !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GloboPreorderParams !== 'undefined';"
+        }
+      ],
+      "description": "Globo Pre-Order is a Shopify app for building pre-order functionality on Shopify stores.",
+      "website": "https://apps.shopify.com/pre-order-pro",
+      "icon": "Globo apps.png"
+    },
+    "Govalo": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shopify\\.com/extensions/.+/([\\d\\.]+)/assets/govalo\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Govalo !== 'undefined' \u0026\u0026 typeof Govalo.meta !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Govalo.meta !== 'undefined';"
+        }
+      ],
+      "description": "Govalo is a software startup company that builds a Shopify app.",
+      "website": "https://govalo.com",
+      "icon": "Govalo.svg"
+    },
+    "Helixo UFE": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ufe !== 'undefined' \u0026\u0026 typeof ufe.funnelData !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ufe.funnelData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ufeStore.cartTotal !== 'undefined';"
+        }
+      ],
+      "description": "Helixo UFE is a lightweight Shopify upsell sales funnel app.",
+      "website": "https://helixo.co/upsell-funnel-engine/",
+      "icon": "Helixo.svg"
+    },
+    "Hextom Free Shipping Bar": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hextom\\.com/js/freeshippingbar\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Free Shipping Bar is a Shopify app built by Hextom. Free Shipping Bar help promote free shipping with progressive messages to motivate customers to buy more.",
+      "website": "https://hextom.com/case_study/free-shipping-bar",
+      "icon": "Hextom.png"
+    },
+    "Hextom Ultimate Sales Boost": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hextom\\.com/js/ultimatesalesboost\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hextom_usb !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hextom_usb !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ht_usb.isLoaded !== 'undefined';"
+        }
+      ],
+      "description": "Ultimate Sales Boost by Hextom is an app designed to help you drive more sales by creating a sense of urgency, scarcity and trust.",
+      "website": "https://hextom.com/case_study/ultimate-sales-boost",
+      "icon": "Hextom.png"
+    },
+    "HulkApps Age Verification": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*age-verification\\.hulkapps\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "HulkApps Age Verification allow your customers to certify their age before they land in your store.",
+      "website": "https://www.hulkapps.com/products/age-verification-shopify",
+      "icon": "HulkApps.svg"
+    },
+    "In Cart Upsell \u0026 Cross-Sell": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.incartupsell\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "In Cart Upsell \u0026 Cross-Sell is a Shopify app built by InCart Upsell, provides targeted upsells and cross-sells directly in your cart and product page.",
+      "website": "https://incartupsell.com",
+      "icon": "In Cart Upsell \u0026 Cross-Sell.png"
+    },
+    "Instafeed": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*instafeed\\.nfcube\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Instafeed is an official Instagram app.",
+      "website": "https://apps.shopify.com/instafeed",
+      "icon": "Instafeed.png"
+    },
+    "Jilt App": {
+      "cats": [
+        100,
+        98
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jiltStorefrontParams !== 'undefined' \u0026\u0026 typeof jiltStorefrontParams.platform !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jiltStorefrontParams.platform !== 'undefined';",
+          "version": "try { return String(jiltStorefrontParams.platform || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Jilt App helps ecommerce store owners track and recover abandoned orders. Works seamlessly with Shopify and WooCommerce.",
+      "website": "https://community.shopify.com/c/shopify-apps/jilt-is-over-what-app-to-use-for-abandoned-carts-now/td-p/1575095",
+      "icon": "Jilt.svg"
+    },
+    "Juphy": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.juphy\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Juphy is an AI sales assistant designed for Shopify stores, enabling businesses to increase sales through automated customer engagement and support.",
+      "website": "https://juphy.com",
+      "icon": "Juphy.svg"
+    },
+    "Justuno App": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Justuno"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//scripttags\\.justuno\\.com/shopify_justuno"
+            }
+          }
+        }
+      ],
+      "description": "Justuno is a premium conversion marketing and analytics platform that provides retailers with powerful tools to increase conversions.",
+      "website": "https://apps.shopify.com/justuno-pop-ups-email-conversion",
+      "icon": "Justuno.svg"
+    },
+    "Kilatech": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.kilatechapps\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Kilatech is a Shopify ecommerce application builder.",
+      "website": "https://web.kilatechapps.com",
+      "icon": "Kilatech.svg"
+    },
+    "Klip": {
+      "cats": [
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KLIP_APP_DATA !== 'undefined' \u0026\u0026 typeof KLIP_APP_DATA.ATCPath !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KLIP_APP_DATA.ATCPath !== 'undefined';"
+        }
+      ],
+      "description": "Klip is a tool for creating product page coupons designed to enhance customer engagement, boost conversions, and improve retention.",
+      "website": "https://klipcoupons.com",
+      "icon": "Klip.svg"
+    },
+    "LangShop": {
+      "cats": [
+        100,
+        89
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.langshop\\.app/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LangShop !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LangShop !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LangShopConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LangShopSDK !== 'undefined';"
+        }
+      ],
+      "description": "LangShop is an app for translating Shopify stores.",
+      "website": "https://langshop.io",
+      "icon": "LangShop.svg"
+    },
+    "LayoutHub": {
+      "cats": [
+        100,
+        51
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.layouthub\\.com/shopify/layouthub\\.js"
+            }
+          }
+        }
+      ],
+      "description": "LayoutHub is an easy page builder that helps merchants quickly set up an online store with any kind of page type by using our library of pre-designed layouts and blocks.",
+      "website": "https://layouthub.com",
+      "icon": "LayoutHub.png"
+    },
+    "Leaflet platform": {
+      "cats": [
+        100,
+        74
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*scripts\\.leaflet\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Leaflet is the price testing platform for Shopify.",
+      "website": "https://join.leaflet.co",
+      "icon": "Leaflet platform.png"
+    },
+    "Littledata": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LittledataLayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LittledataLayer.version !== 'undefined';",
+          "version": "try { return String(LittledataLayer.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LittledataLayer !== 'undefined';"
+        }
+      ],
+      "description": "Littledata provides a seamless connection between your Shopify site, marketing channels, and Google Analytics.",
+      "website": "https://www.littledata.io",
+      "icon": "Littledata.svg"
+    },
+    "Livescale": {
+      "cats": [
+        100,
+        103
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.livescale\\.tv/"
+            }
+          }
+        }
+      ],
+      "description": "Livescale is a video platform that enables teams to transform content and ecommerce into a live shopping experience that reaches engages and monetizes audiences with LiveShopping.",
+      "website": "https://www.livescale.tv",
+      "icon": "Livescale.png"
+    },
+    "Locksmith": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Locksmith !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Locksmith !== 'undefined';"
+        }
+      ],
+      "description": "Locksmith is a shopify app for adding access control capability on shopify stores.",
+      "website": "https://apps.shopify.com/locksmith",
+      "icon": "Locksmith.png"
+    },
+    "MinMaxify": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof minMaxify !== 'undefined' \u0026\u0026 typeof minMaxify.checkLimits !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof minMaxify.checkLimits !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof minMaxify.shop !== 'undefined';"
+        }
+      ],
+      "description": "MinMaxify is an app that allows Shopify store owners to set minimum and maximum values for customer orders built by Intillium.",
+      "website": "https://apps.shopify.com/order-limits-minmaxify",
+      "icon": "MinMaxify.png"
+    },
+    "Obsidian Incentivize": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shopify\\.com/extensions/.+/([\\.\\d]{3,})/assets/upsell\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Obsidian !== 'undefined' \u0026\u0026 typeof Obsidian.IncentiveApi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Obsidian.IncentiveApi !== 'undefined';"
+        }
+      ],
+      "description": "Obsidian Incentivize is designed to increase your average order size through in-cart upsells, cross sells and personalised product recommendations.",
+      "website": "https://obsidianapps.co",
+      "icon": "Obsidian.png"
+    },
+    "Obviyo": {
+      "cats": [
+        100,
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*deploy\\.hiconversion\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __hic !== 'undefined' \u0026\u0026 typeof __hic.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return __hic.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __hic.version !== 'undefined';",
+          "version": "try { return String(__hic.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Obviyo is an ecommerce intelligence platform helping merchants personalise and optimise shopping experience.",
+      "website": "https://www.obviyo.com",
+      "icon": "Obviyo.png"
+    },
+    "Omnisend Email Marketing \u0026 SMS": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Omnisend"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*omnis(?:nippet1|rc)\\.com/inshop/embed/shopify\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Omnisend Email Marketing \u0026 SMS is an omnichannel marketing automation channel that allows Shopify store owners to manage their SMS, web push notifications, WhatsApp, Facebook messenger, pop-ups, segmentation, and dynamic Facebook and Google ad integrations.",
+      "website": "https://apps.shopify.com/omnisend",
+      "icon": "Omnisend.svg"
+    },
+    "Order Deadline": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof orderDeadlineAppByEESL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof orderDeadlineAppByEESL !== 'undefined';"
+        }
+      ],
+      "description": "Order Deadline is an estimated delivery, countdown timer, shipping date Shopify app.",
+      "website": "https://apps.shopify.com/order-deadline",
+      "icon": "Order Deadline.png"
+    },
+    "OrderLogic app": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OrderLogic !== 'undefined' \u0026\u0026 typeof OrderLogic.ALERTS_KEY !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OrderLogic.ALERTS_KEY !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OrderLogic.DEFAULT_MONEY_FORMAT !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OrderLogic.cartData !== 'undefined';"
+        }
+      ],
+      "description": "OrderLogic app allows you to define minimum and maximum product quantities for all products in your Shopify store.",
+      "website": "https://apps.shopify.com/orderlogic",
+      "icon": "OrderLogic app.png"
+    },
+    "Ordersify Product Alerts": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.ordersify\\.com/sdk/productalerts-shopify\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ORDERSIFY_BIS !== 'undefined' \u0026\u0026 typeof ORDERSIFY_BIS.stockRemainingSetting !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ORDERSIFY_BIS.stockRemainingSetting !== 'undefined';"
+        }
+      ],
+      "description": "Ordersify Product Alerts is a Shopify app which detects automatically product stock and send email alerts to contact immediately after your products are restocked.",
+      "website": "https://ordersify.com/products/product-alerts",
+      "icon": "Ordersify.svg"
+    },
+    "Packlink PRO": {
+      "cats": [
+        100,
+        99
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*packlink-spf-pro\\.appspot\\.com/.+myshopify\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Packlink PRO is a multicarrier shipping solutions for ecommerce and marketplaces.",
+      "website": "https://apps.shopify.com/packlink-pro",
+      "icon": "Packlink.png"
+    },
+    "Paloma": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getpaloma\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Paloma !== 'undefined' \u0026\u0026 typeof Paloma.createCookie !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Paloma.createCookie !== 'undefined';"
+        }
+      ],
+      "description": "Paloma helps ecommerce businesses sell directly to customers in messaging channels, with automated personal shopping conversations.",
+      "website": "https://www.getpaloma.com",
+      "icon": "Paloma.svg"
+    },
+    "PerfectApps Swift": {
+      "cats": [
+        100,
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*swift\\.perfectapps\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ps_apiURI !== 'undefined' \u0026\u0026 ps_apiURI === 'swift-api\\.perfectapps\\.io/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ps_storeUrl !== 'undefined';",
+          "version": "try { return String(ps_storeUrl || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ps_apiURI !== 'undefined';",
+          "version": "try { return String(ps_apiURI || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Swift is a page speed solution for ecommerce store owners built by PerfectApps.",
+      "website": "https://apps.shopify.com/swift",
+      "icon": "PerfectApps Swift.png"
+    },
+    "PickyStory": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.pickystory\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pickystory !== 'undefined' \u0026\u0026 typeof pickystory.overrideStore !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pickystory.overrideStore !== 'undefined';"
+        }
+      ],
+      "description": "PickyStory is the ecommerce conversion platform.",
+      "website": "https://pickystory.com",
+      "icon": "PickyStory.png"
+    },
+    "Picture It": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.pictureit\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Picture It is a preview tool designed for Shopify art stores, enabling visualization of products within a single platform.",
+      "website": "https://www.pictureit.co",
+      "icon": "PictureIt.svg"
+    },
+    "PreProduct": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.preproduct\\.io"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/preproduct-embed\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PPshowPreProduct !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PPshowPreProduct !== 'undefined';"
+        }
+      ],
+      "description": "PreProduct is a tool that enables businesses to boost sales and manage demand through Shopify’s pre-order system.",
+      "website": "https://preproduct.io",
+      "icon": "PreProduct.svg"
+    },
+    "Privy App": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Privy"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//shopify\\.privy\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Privy App helps you improve your website conversion rate, grow your email list, automate your email marketing, drive repeat purchases and much more.",
+      "website": "https://apps.shopify.com/privy",
+      "icon": "Privy.svg"
+    },
+    "Product Personalizer": {
+      "cats": [
+        100,
+        76
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/product-personalizer/pplr_common\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Product Personalizer apps can help you to customise your products and offer a more personalised experience for your customers.",
+      "website": "https://productpersonalizer.com",
+      "icon": "Product Personalizer.png"
+    },
+    "PushDaddy Whatsapp Chat": {
+      "cats": [
+        100,
+        98
+      ],
+      "implies": [
+        "Shopify",
+        "WhatsApp Business Chat"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shopify\\.com/.+/pushdaddy_v([\\d\\.]+).*\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Whatsapp Chat is an live chat and abondoned cart solution built by PushDaddy.",
+      "website": "https://apps.shopify.com/whatsapp-chat-for-support",
+      "icon": "PushDaddy.png"
+    },
+    "Qikify": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.qikify\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Qikify is a trusted Shopify Expert providing services for over 35,000 Shopify merchants through Shopify Apps or custom modifications.",
+      "website": "https://qikify.com",
+      "icon": "Qikify.svg"
+    },
+    "Quoli": {
+      "cats": [
+        100,
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.quoli\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Quoli is a Shopify app designed to help merchants collect and showcase social proof, incorporating product reviews, photos/videos, attributes, nuggets, questions, and user-generated content (UGC).",
+      "website": "https://quoli.io",
+      "icon": "Quoli.png"
+    },
+    "Rapid Search": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.rapidsearch\\.dev"
+            }
+          }
+        }
+      ],
+      "description": "Rapid Search is an AI-powered Shopify search tool that enhances store conversions through an advanced search bar, product filters, and instant search functionality.",
+      "website": "https://www.rapidsearch.app",
+      "icon": "RapidSearch.svg"
+    },
+    "ReConvert": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.stilyoapps\\.com/reconvert/assets/js/store_reconvert_node\\.js"
+            }
+          }
+        }
+      ],
+      "description": "ReConvert is a post-purchase upsell \u0026 thank you page.",
+      "website": "https://www.reconvert.io",
+      "icon": "ReConvert.svg"
+    },
+    "Recomify": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.recomify\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Recomify is a 1-click install, cost-effective smart product recommendation engine.",
+      "website": "https://www.recomify.com",
+      "icon": "Recomify.png"
+    },
+    "Releasit COD Form \u0026 Upsells": {
+      "cats": [
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RSI_CSS_LOADER !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RSI_CSS_LOADER !== 'undefined';"
+        }
+      ],
+      "description": "Releasit COD Form \u0026 Upsells is a Shopify app that replaces the standard checkout with a customizable cash-on-delivery order form and supports upsell features to increase average order value.",
+      "website": "https://www.releas.it/products/releasit-cod-form-upsells",
+      "icon": "Releasit.svg"
+    },
+    "Reserve In-Store": {
+      "cats": [
+        100,
+        93
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof reserveInStore !== 'undefined' \u0026\u0026 typeof reserveInStore.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return reserveInStore.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof reserveInStore.version !== 'undefined';",
+          "version": "try { return String(reserveInStore.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof reserveInStoreJsUrl !== 'undefined';",
+          "version": "try { return String(reserveInStoreJsUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Reserve In-Store app will allow customers to reserve an item in your store online to come to pick it up or view the item before making the purchase.",
+      "website": "https://www.reserveinstore.com",
+      "icon": "Reserve In-Store.svg"
+    },
+    "Retention.com": {
+      "cats": [
+        100,
+        36
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof B2BRetention !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof B2BRetention !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof addedToCartRetentionButton !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof viewedProductRetention !== 'undefined';"
+        }
+      ],
+      "description": "Retention.com's identity resolution software helps Shopify merchants recover lost shoppers.",
+      "website": "https://retention.com",
+      "icon": "Retention.com.svg"
+    },
+    "Return Prime": {
+      "cats": [
+        100,
+        102
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//return-prime-proxy-prod\\.s3[^ ]*\\.amazonaws\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Return Prime is an application to manage returns for Shopify stores.",
+      "website": "https://www.returnprime.com/",
+      "icon": "return-prime.png"
+    },
+    "Revy": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.revy\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RevyApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RevyUpsell !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RevyApp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RevyBundle !== 'undefined';"
+        }
+      ],
+      "description": "Revy is dedicated to build Shopify Apps to generate more sales for merchants.",
+      "website": "https://revy.io",
+      "icon": "Revy.png"
+    },
+    "SchemaPlus": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//schemaplusfiles\\.s3\\.amazonaws\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SchemaPlus_Reviews !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SchemaPlus_Reviews !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SchemaPlus_handleCallback !== 'undefined';"
+        }
+      ],
+      "description": "SchemaPlus is a Shopify app for Shopify ecommerce shops to add schema to them and thereby make them easier to find for search engines.",
+      "website": "https://schemaplus.io",
+      "icon": "SchemaPlus.svg"
+    },
+    "Seal Subscriptions": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sealsubscriptions\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SealSubs !== 'undefined' \u0026\u0026 typeof SealSubs.checkout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sealsubsloaded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SealSubs.checkout !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sealsubscriptions_settings_updated !== 'undefined';"
+        }
+      ],
+      "description": "Seal Subscriptions is a Shopify subscriptions app, packed with lots of features, such as automated product swaps, interval changes, payment calendar, Quick Checkout Wizard, and more.",
+      "website": "https://www.sealsubscriptions.com",
+      "icon": "Seal Subscriptions.png"
+    },
+    "Secomapp": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.secomapp\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SECOMAPP !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SECOMAPP !== 'undefined';"
+        }
+      ],
+      "description": "Secomapp is a trusted Shopify Expert providing services through Shopify Apps.",
+      "website": "https://www.secomapp.com",
+      "icon": "Secomapp.png"
+    },
+    "ShipTection": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.shiptection\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ShipTection is the easiest way to offer shipping protection on your Shopify site.",
+      "website": "https://wamapps.io/pages/shiptection-protection",
+      "icon": "ShipTection.png"
+    },
+    "Shogun Landing Page Builder": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shogun Page Builder"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getshogun\\.com/.+\\.myshopify\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Shogun Landing Page Builder is a drag and drop Shopify page builder for creating high-converting store pages.",
+      "website": "https://apps.shopify.com/shogun",
+      "icon": "Shogun Page Builder.svg"
+    },
+    "ShopKeeper Tools": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*magic-button-app\\.shopkeepertools\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ShopKeeper Tools is a suite of easy-to-use Shopify apps designed to increase conversion rates and drive revenue growth for online stores.",
+      "website": "https://www.shopkeepertools.com",
+      "icon": "ShopKeeper.svg"
+    },
+    "ShopPad Infinite Options": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Shoppad !== 'undefined' \u0026\u0026 typeof Shoppad.apps !== 'undefined' \u0026\u0026 typeof Shoppad.apps.infiniteoptions !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Shoppad.apps.infiniteoptions !== 'undefined';"
+        }
+      ],
+      "description": "ShopPad Infinite Options allows you to create as many custom option fields for your product pages as you need.",
+      "website": "https://apps.shopify.com/custom-options",
+      "icon": "ShopPad.svg"
+    },
+    "Shopapps": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.myshopapps\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof iStockUrl !== 'undefined' \u0026\u0026 iStockUrl === 'iwish\\.myshopapps\\.com/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof iStockUrl !== 'undefined';",
+          "version": "try { return String(iStockUrl || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof iWishUrl !== 'undefined';",
+          "version": "try { return String(iWishUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Shopapps is a trusted Shopify Expert providing services through Shopify Apps.",
+      "website": "https://www.shopapps.in",
+      "icon": "Shopapps.png"
+    },
+    "Shopify Buy Button": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdks\\.shopifycdn\\.com/buy-button/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdks\\.shopifycdn\\.com/js-buy-sdk/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ShopifyBuy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ShopifyBuy !== 'undefined';"
+        }
+      ],
+      "description": "Shopify Buy Button is an app from Shopify which allows merchant to embed buy functionality for any product or collection into another website or blog.",
+      "website": "https://apps.shopify.com/buy-button",
+      "icon": "Shopify.svg"
+    },
+    "Shopify Geolocation App": {
+      "cats": [
+        100,
+        79
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*geolocation-recommendations\\.shopifycloud\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Shopify Geolocation App makes language and country recommendations to your customers based on their geographic location and browser or device language.",
+      "website": "https://apps.shopify.com/geolocation",
+      "icon": "Shopify Geolocation App.png"
+    },
+    "Shortly": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//shortly\\.shop/"
+            }
+          }
+        }
+      ],
+      "description": "Shortly help create short URLs for influencer-marketing, social media posts \u0026 email-marketing campaigns with your own store domain.",
+      "website": "https://apps.shopify.com/shortly",
+      "icon": "Shortly.png"
+    },
+    "Simplio Upsells": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//upsell\\.simplio\\.app/"
+            }
+          }
+        }
+      ],
+      "description": "Simplio Upsells сreate more revenue with promotions and post purchase upsells.",
+      "website": "https://apps.shopify.com/simple-promotions-and-upsells",
+      "icon": "Simplio Upsells.png"
+    },
+    "Skio": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.skio\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Skio helps brands on Shopify sell subscriptions without ripping their hair out.",
+      "website": "https://skio.com",
+      "icon": "Skio.png"
+    },
+    "Smile App": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Smile"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.smile\\.io/.+smile-shopify\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Smile App offers a loyalty program for Shopify stores.",
+      "website": "https://apps.shopify.com/smile-io",
+      "icon": "Smile.svg"
+    },
+    "Spin-a-Sale": {
+      "cats": [
+        100,
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*client\\.spinasale\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Spin-a-Sale adds the intensity of gamification to your site. Spin-a-Sale overlay displays a special prize wheel for visitors that you can fully configure.",
+      "website": "https://spinasale.com",
+      "icon": "Spin-a-Sale.png"
+    },
+    "SuperLemon app": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "WhatsApp Business Chat"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/files/superlemon_.+\\.js"
+            }
+          }
+        }
+      ],
+      "description": "SuperLemon app is an all-in-one WhatsApp plugin for Shopify stores.",
+      "website": "https://apps.shopify.com/whatsapp-chat-button",
+      "icon": "SuperLemon.png"
+    },
+    "Sweet Upsell": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.sweetupsell\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Upsell is a tool that boosts Shopify store profits by automating product upsells.",
+      "website": "https://sweetupsell.com",
+      "icon": "SweetUpsell.svg"
+    },
+    "Swym Wishlist Plus": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof swappName !== 'undefined' \u0026\u0026 swappName === 'Wishlist'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof swappName !== 'undefined';",
+          "version": "try { return String(swappName || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof swymCart.attributes !== 'undefined';",
+          "version": "try { return String(swymCart.attributes || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Swym Wishlist Plus enables your customers to bookmark their favorite products and pick up where they left off when they return.",
+      "website": "https://swym.it/apps/wishlist/",
+      "icon": "Swym.png"
+    },
+    "Tabarnapp": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.tabarn\\.app/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof tabarnapp_loaded_ad !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tabarnapp_loaded_ad !== 'undefined';"
+        }
+      ],
+      "description": "Tabarnapp is a platform for Shopify apps and themes.",
+      "website": "https://tabarnapp.com",
+      "icon": "Tabarnapp.png"
+    },
+    "Tada": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.trytada\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Tada offers interactive website popups that allow Shopify merchants to collect more emails and increase sales by engaging website visitors through gamification.",
+      "website": "https://trytada.com",
+      "icon": "Tada.png"
+    },
+    "Tern": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*live\\.tern-returns\\.eastsideapps\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Tern is a plug and play ecommerce app, built for Shopify, that offers merchants the ability to provide a seamless trade-in service.",
+      "website": "https://www.tern.eco",
+      "icon": "Tern.png"
+    },
+    "TikShop": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.tikshop\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "TikShop is a tool that integrates TikTok accounts with Shopify stores, allowing for the creation of shoppable feeds to facilitate quicker product promotion and sales directly through TikTok.",
+      "website": "https://tikshop.co",
+      "icon": "TikShop.svg"
+    },
+    "Timesact": {
+      "cats": [
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof timesactScriptNew !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof timesactScriptNew !== 'undefined';"
+        }
+      ],
+      "description": "Timesact is a Shopify app that automates pre-order and back-in-stock notifications to streamline inventory and sales management.",
+      "website": "https://timesact.com",
+      "icon": "Timesact.svg"
+    },
+    "Track123": {
+      "cats": [
+        100,
+        99
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*track123\\.com\\/common\\/checkout-script-loader\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof track123 !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof track123 !== 'undefined';"
+        }
+      ],
+      "description": "Track123 is a product under Lingxing, founded in September 2021, with a focus on providing all-in-one tracking and management services for cross-border sellers.",
+      "website": "https://www.track123.com",
+      "icon": "Track123.svg"
+    },
+    "Trackify X": {
+      "cats": [
+        100,
+        10
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*trackifyx\\.redretarget\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Trackify X is a pixel engine that helps merchants backup their pixel data and manage multiple pixels.",
+      "website": "https://trackifyapp.com",
+      "icon": "Trackify X.png"
+    },
+    "Tyslo EasySell": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof openTysloForm !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return tysloConfigVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof openTysloForm !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tysloApplyDiscount !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tysloConfigVersion !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tysloEasysellConfig !== 'undefined';"
+        }
+      ],
+      "description": "Tyslo EasySell replaces default Shopify checkout process by embedding (or popup) a simple order form on the product or cart page.",
+      "website": "https://tyslo.com",
+      "icon": "Tyslo EasySell.png"
+    },
+    "Video Greet": {
+      "cats": [
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __vg !== 'undefined' \u0026\u0026 typeof __vg.video_greet_button_src !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __vg.video_greet_button_src !== 'undefined';"
+        }
+      ],
+      "description": "Video Greet lets your customers add a video message to gifts with QR codes.",
+      "website": "https://apps.shopify.com/videogreet-gift-messages",
+      "icon": "Video Greet.png"
+    },
+    "Visely": {
+      "cats": [
+        100,
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Visely !== 'undefined' \u0026\u0026 typeof Visely.RecommendationsApi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Visely.RecommendationsApi !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ViselyCartProductIds !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ViselyPage !== 'undefined';"
+        }
+      ],
+      "description": "Visely is a Shopify app which personalise product recommendations for Shopify sites.",
+      "website": "https://visely.io",
+      "icon": "Visely.svg"
+    },
+    "Visual Quiz Builder": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//whai-cdn\\.nyc\\d\\.cdn\\.digitaloceanspaces\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Visual Quiz Builder is a Shopify app built by AskWhai.",
+      "website": "https://apps.shopify.com/product-recommendation-quiz",
+      "icon": "Visual Quiz Builder.png"
+    },
+    "Vitals": {
+      "cats": [
+        100,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//appsolve\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VITALS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VITALS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vitals_app_cache_keys_v1 !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vitals_country_code !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vitals_product_data !== 'undefined';"
+        }
+      ],
+      "description": "Vitals is an all-in-one Shopify marketing software.",
+      "website": "https://vitals.co",
+      "icon": "Vitals.svg"
+    },
+    "WideBundle": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//widebundle\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "WideBundle is a Shopify application that allows a merchant to set up bundles on his store.",
+      "website": "https://en.widebundle.com",
+      "icon": "WideBundle.png"
+    },
+    "Wishlist King": {
+      "cats": [
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Appmate !== 'undefined' \u0026\u0026 typeof Appmate.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Appmate.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Appmate.wk !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Appmate.version !== 'undefined';",
+          "version": "try { return String(Appmate.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Wishlist King is a Shopify app which helps you to add your favorite products or share the wishlist with your friends built by Appmate.",
+      "website": "https://appmate.io",
+      "icon": "Wishlist King.png"
+    },
+    "YMQ Product Options Variant Option": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ymq_option !== 'undefined' \u0026\u0026 typeof ymq_option.v !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return ymq_option.v || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ymq_option.v !== 'undefined';",
+          "version": "try { return String(ymq_option.v || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "YMQ Product Options Variant Option help add an unlimited number of product options to your items so you're not restricted by Shopify's limit of 3 options and 100 variants.",
+      "website": "https://apps.shopify.com/ymq-options",
+      "icon": "YMQ Product Options Variant Option.png"
+    },
+    "Yotpo Subscriptions": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!-- begin app block: shopify://apps/yotpo-subscriptions/blocks/app-embed-block"
+            }
+          }
+        }
+      ],
+      "description": "Yotpo Subscriptions is a Shopify app designed for merchants to provide subscription services to customers.",
+      "website": "https://www.yotpo.com/platform/subscriptions/",
+      "icon": "Yotpo.svg"
+    },
+    "YouPay": {
+      "cats": [
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.youpay\\.ai/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof YouPay !== 'undefined' \u0026\u0026 typeof YouPay.buttonWindow !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof YouPay.buttonWindow !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof youpayReady !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof youpayStatus !== 'undefined';"
+        }
+      ],
+      "description": "YouPay is an alternative method of payment that allows you to give someone else the ability to pay for your shopping cart with no fees or interest.",
+      "website": "https://youpay.co",
+      "icon": "YouPay.svg"
+    },
+    "Zakeke Visual Customizer": {
+      "cats": [
+        100,
+        76
+      ],
+      "implies": [
+        "Zakeke"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.zakeke\\.com/scripts/integration/shopify/"
+            }
+          }
+        }
+      ],
+      "description": "Zakeke Visual Customizer is a cloud-connected visual ecommerce tool that allows brands and retailers to offer live, personalised, 2D, 3D, and augmented reality (AR) functionality for their products.",
+      "website": "https://www.zakeke.com",
+      "icon": "Zakeke.png"
+    },
+    "Zalify": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.zalify\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof zalify !== 'undefined' \u0026\u0026 typeof zalify.render !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zalify.render !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zalifyCurrentScript !== 'undefined';"
+        }
+      ],
+      "description": "Zalify is a data-driven growth engine for Shopify merchants, designed to provide agility and precision in the ecommerce environment.",
+      "website": "https://www.zalify.com",
+      "icon": "Zalify.svg"
+    },
+    "ZendApps": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.zend-apps\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ZendApps is a tool designed to grow Shopify stores by streamlining operations and enhancing performance through automated features.",
+      "website": "https://zendapps.com",
+      "icon": "ZendApps.svg"
+    },
+    "Zipify OCU": {
+      "cats": [
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/zipify-oneclickupsell-vendor\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Zipify OCU allows you to add upsells and cross-sells to your checkout sequence.",
+      "website": "https://zipify.com/apps/ocu/",
+      "icon": "Zipify OCU.svg"
+    },
+    "Zipify Pages": {
+      "cats": [
+        100,
+        51
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ZipifyPages !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ZipifyPages !== 'undefined';"
+        }
+      ],
+      "description": "Zipify Pages the first landing page builder uniquely designed for ecommerce.",
+      "website": "https://zipify.com/apps/pages/",
+      "icon": "Zipify Pages.svg"
+    }
+  }
+}

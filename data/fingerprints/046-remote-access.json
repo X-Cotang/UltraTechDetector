@@ -1,0 +1,269 @@
+{
+  "apps": {
+    "Atera": {
+      "cats": [
+        46
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ateraAnalyticsFirstLoad !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ateraAnalyticsFirstLoad !== 'undefined';"
+        }
+      ],
+      "description": "Atera is a software solution for RMM network discovery, PSA, and remote access.",
+      "website": "https://www.atera.com",
+      "icon": "Atera.svg"
+    },
+    "Cardina": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.cohere\\.so"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Cohere !== 'undefined' \u0026\u0026 typeof Cohere.addCallStatusListener !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Cohere.addCallStatusListener !== 'undefined';"
+        }
+      ],
+      "description": "Cardina is a screen-sharing and cobrowsing tool that enables agents to see, draw on, and guide a customer’s screen during phone or live chat interactions without requiring customer actions.",
+      "website": "https://cardina.com",
+      "icon": "Cardina.svg"
+    },
+    "CargoServer": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^cargoserver$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "CargoServer is a platform that enables secure data transfer.",
+      "website": "https://cargoserver.ch",
+      "icon": "CargoServer.svg"
+    },
+    "Chaser": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//chaser\\.ru'"
+            }
+          }
+        }
+      ],
+      "description": "Chaser is a telephone callback system designed to connect users by initiating return calls through a central server.",
+      "website": "https://chaser.ru",
+      "icon": "Chaser.svg"
+    },
+    "Citrix": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/ctxs\\.core\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AddHeaderAndBarForCitrix !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AddHeaderAndBarForCitrix !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CTXS.AccessGateway !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CTXS.WebApiClient !== 'undefined';"
+        }
+      ],
+      "description": "Citrix is a people-centric solutions provider offering software that enables employees to work and collaborate remotely, irrespective of their device or network.",
+      "website": "https://www.citrix.com",
+      "icon": "Citrix.svg"
+    },
+    "Glance": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.glancecdn\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Glance is a screen sharing and co-browsing solution for sales, service, and support.",
+      "website": "https://www.glance.cx",
+      "icon": "Glance.svg"
+    },
+    "Impero": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.netop\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Impero offers educational and corporate customers the most secure way of remotely accessing devices.",
+      "website": "https://www.imperosoftware.com",
+      "icon": "Impero.svg"
+    },
+    "Netop": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.netop\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Netop is a platform that provides remote support and chat solutions for secure communication and technical assistance.",
+      "website": "https://netop.com",
+      "icon": "Netop.svg"
+    },
+    "Palo Alto Networks - GlobalProtect": {
+      "cats": [
+        46
+      ],
+      "description": "GlobalProtect is a web-based portal that enables connection to a VPN, providing secure access to enterprise networks and resources.",
+      "website": "https://www.paloaltonetworks.com/sase/globalprotect",
+      "icon": "GlobalProtect.svg"
+    },
+    "Pulse Secure": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Pulse Secure allows to deploy VPNs to securely to your internal resources.",
+      "website": "https://www.pulsesecure.net/products/remote-access-overview/",
+      "icon": "PulseSecure.png",
+      "cpe": "cpe:2.3:a:pulsesecure:pulse_connect_secure:*:*:*:*:*:*:*:*"
+    },
+    "ShellInABox": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ctitle\u003eshell in a box\u003c/title\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "must be enabled for shellinabox\u003c/noscript\u003e"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ShellInABox !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ShellInABox !== 'undefined';"
+        }
+      ],
+      "description": "Shell In A Box implements a web server that can export arbitrary command line tools to a web based terminal emulator.",
+      "website": "https://shellinabox.com",
+      "icon": "ShellInABox.png"
+    },
+    "Upscope": {
+      "cats": [
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.upscope\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Upscope !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Upscope !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Upscope._version !== 'undefined';",
+          "version": "try { return String(Upscope._version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Upscope is a cobrowsing software enabling real-time website navigation with others, facilitating seamless teamwork and improved customer support.",
+      "website": "https://upscope.com",
+      "icon": "Upscope.svg"
+    }
+  }
+}

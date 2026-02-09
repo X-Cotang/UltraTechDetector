@@ -1,0 +1,315 @@
+{
+  "apps": {
+    "Clicksign": {
+      "cats": [
+        50
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Clicksign !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Clicksign !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof endpointClickSign !== 'undefined';"
+        }
+      ],
+      "description": "Clicksign is a platform offering document signing services.",
+      "website": "https://www.clicksign.com",
+      "icon": "Clicksign.svg"
+    },
+    "Clinked": {
+      "cats": [
+        50
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*a\\.clinked\\.com/(\\d+\\.\\d+\\.\\d+)/standard/js/.+\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Clinked is a cloud-based platform for secure file sharing, project management, and team collaboration with client portals.",
+      "website": "https://clinked.com",
+      "icon": "Clinked.svg"
+    },
+    "DSpace": {
+      "cats": [
+        50
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']dspace ([\\d.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DSpaceChoiceLookup !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DSpaceChoiceLookup !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DSpaceChoicesSetup !== 'undefined';"
+        }
+      ],
+      "description": "DSpace is a software platform for academic, non-profit, and commercial organizations to create and manage open digital repositories.",
+      "website": "https://dspace.org/",
+      "icon": "DSpace.svg"
+    },
+    "Data8": {
+      "cats": [
+        50
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof data8 !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof data8 !== 'undefined';"
+        }
+      ],
+      "description": "Data8 is a data quality management and validation platform.",
+      "website": "https://www.data-8.co.uk",
+      "icon": "Data8.svg"
+    },
+    "Evernote": {
+      "cats": [
+        50
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.evernote\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Evernote !== 'undefined' \u0026\u0026 typeof Evernote.Ajax !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Evernote.Ajax !== 'undefined';"
+        }
+      ],
+      "description": "Evernote is a digital workspace that organizes notes, tasks, and schedules in one place for project management and information retention.",
+      "website": "https://evernote.com",
+      "icon": "Evernote.svg"
+    },
+    "Invenio": {
+      "cats": [
+        50
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:powered by|system)\\s+(?:cern )?\u003ca (?:class=\"footer\" )?href=\"http://(?:cdsware\\.cern\\.ch(?:/invenio)?|invenio-software\\.org|cern\\.ch/invenio)(?:/)?\"\u003e(?:cds )?invenio\u003c/a\u003e\\s*v?([\\d\\.]+)?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Invenio is an open-source software framework for large-scale digital repositories that provides the tools for management of digital assets in an institutional repository and research data management systems.",
+      "website": "https://invenio-software.org",
+      "icon": "Invenio.png"
+    },
+    "Koha": {
+      "cats": [
+        50
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca href=\"/cgi-bin/koha/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cinput name=\"koha_login_context\" value=\"intranet\" type=\"hidden\"\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^koha ([\\d.]+)$\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KOHA !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KOHA !== 'undefined';"
+        }
+      ],
+      "description": "Koha is an open-source Integrated Library System (ILS).",
+      "website": "https://koha-community.org/",
+      "icon": "koha.png",
+      "cpe": "cpe:2.3:a:koha:koha:*:*:*:*:*:*:*:*"
+    },
+    "Onehub": {
+      "cats": [
+        50
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.onehub\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Onehub !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Onehub !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OnehubBarView !== 'undefined';"
+        }
+      ],
+      "description": "Onehub is a cloud-based platform that enables secure file sharing and access control for businesses and teams.",
+      "website": "https://www.onehub.com",
+      "icon": "Onehub.svg"
+    },
+    "Open Journal Systems": {
+      "cats": [
+        50
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']open journal systems(?: ([\\d.]+))?\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Open Journal Systems (OJS) is an open-source software application for managing and publishing scholarly journals.",
+      "website": "https://pkp.sfu.ca/ojs",
+      "icon": "Open Journal Systems.png",
+      "cpe": "cpe:2.3:a:public_knowledge_project:open_journal_systems:*:*:*:*:*:*:*:*"
+    },
+    "Paperless Pipeline": {
+      "cats": [
+        50
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^paperless pipeline$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.paperlesspipeline\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Paperless Pipeline is a real estate transaction management software.",
+      "website": "https://www.paperlesspipeline.com",
+      "icon": "PaperlessPipeline.svg"
+    },
+    "ProductDyno": {
+      "cats": [
+        50
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.productdyno\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "ProductDyno is a digital platform designed to help users manage, protect, and deliver digital products while enhancing online presence.",
+      "website": "https://productdyno.com",
+      "icon": "ProductDyno.svg"
+    },
+    "Typeflo": {
+      "cats": [
+        50
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.typeflo\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Typeflo is a platform that simplifies blogging by allowing users to create websites directly from Google Docs, offering features such as analytics, custom domains, and theme customization.",
+      "website": "https://typeflo.io",
+      "icon": "Typeflo.svg"
+    }
+  }
+}

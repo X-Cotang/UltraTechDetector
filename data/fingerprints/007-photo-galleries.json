@@ -1,0 +1,591 @@
+{
+  "apps": {
+    "Alboom Proof": {
+      "cats": [
+        7
+      ],
+      "description": "Alboom Proof is a platform that provides client photo galleries, photo sales, and proofing services in one location, enabling photographers and visual artists to deliver their work.",
+      "website": "https://www.alboompro.com/ferramentas/alboom-proof",
+      "icon": "Alboom.svg"
+    },
+    "Blessing Skin": {
+      "cats": [
+        7
+      ],
+      "implies": [
+        "Laravel"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof blessing !== 'undefined' \u0026\u0026 typeof blessing.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return blessing.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof blessing.version !== 'undefined';",
+          "version": "try { return String(blessing.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Blessing Skin is a plubin that brings your custom skins back in offline Minecraft servers.",
+      "website": "https://github.com/bs-community/blessing-skin-server",
+      "icon": "Blessing Skin.png"
+    },
+    "Bloom Portfolio": {
+      "cats": [
+        7
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']bloom\\.io[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*code\\.bloom\\.io"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Bloom Portfolio is an online platform for showcasing work in a structured manner.",
+      "website": "https://bloom.io/features/website-portfolio",
+      "icon": "BloomIO.svg"
+    },
+    "Canvy": {
+      "cats": [
+        7
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof config !== 'undefined' \u0026\u0026 typeof config.apiPath !== 'undefined' \u0026\u0026 config.apiPath === 'api\\.canvy\\.app/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof config.apiPath !== 'undefined';",
+          "version": "try { return String(config.apiPath || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof config.cdnPath !== 'undefined';",
+          "version": "try { return String(config.cdnPath || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Canvy is an online tool designed for fine art painters and poster designers to enhance the promotion and presentation of their artwork online.",
+      "website": "https://canvy.com",
+      "icon": "Canvy.svg"
+    },
+    "Chevereto": {
+      "cats": [
+        7,
+        19
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']chevereto\\s(?:[\\d\\.]+)[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/chevereto\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CHEVERETO !== 'undefined' \u0026\u0026 typeof CHEVERETO.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return CHEVERETO.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CHEVERETO.version !== 'undefined';",
+          "version": "try { return String(CHEVERETO.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Chevereto is an image hosting software that allows you to create a full-featured image hosting website on your own server.",
+      "website": "https://chevereto.com",
+      "icon": "Chevereto.svg"
+    },
+    "Clickbooq": {
+      "cats": [
+        7
+      ],
+      "description": "Clickbooq is a website builder specially designed for photographers to showcase their work.",
+      "website": "https://www.clickbooq.com",
+      "icon": "Clickbooq.svg"
+    },
+    "Coppermine": {
+      "cats": [
+        7
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!--coppermine photo gallery ([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Coppermine is an open-source image gallery application.",
+      "website": "https://coppermine-gallery.net",
+      "icon": "Coppermine.png",
+      "cpe": "cpe:2.3:a:coppermine-gallery:coppermine_photo_gallery:*:*:*:*:*:*:*:*"
+    },
+    "Gallery": {
+      "cats": [
+        7
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca href=\"http://gallery\\.sourceforge\\.net\"\u003e\u003cimg[^\u003e]+powered by gallery\\s*(?:(?:v|version)\\s*([0-9.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cdiv id=\"gsnavbar\" class=\"gcborder1\"\u003e"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $ !== 'undefined' \u0026\u0026 typeof $.fn !== 'undefined' \u0026\u0026 typeof $.fn.gallery_valign !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof galleryAuthToken !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $.fn.gallery_valign !== 'undefined';"
+        }
+      ],
+      "description": "Gallery is an open-source web based photo album organiser.",
+      "website": "https://galleryproject.org/",
+      "icon": "Gallery.png"
+    },
+    "Imagekit": {
+      "cats": [
+        7
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-server": {
+              "$regex": "imagekit\\.io"
+            }
+          }
+        }
+      ],
+      "description": "ImageKit is an image optimisation and transformation server for web and mobile app developers.",
+      "website": "https://imagekit.io/",
+      "icon": "ImageKit.svg"
+    },
+    "JAlbum": {
+      "cats": [
+        7
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']jalbum( [\\d.]+)?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "jAlbum is across-platform photo website software for creating and uploading galleries from images and videos.",
+      "website": "https://jalbum.net/en",
+      "icon": "JAlbum.png"
+    },
+    "Keepeek": {
+      "cats": [
+        7,
+        95
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof keepeekScrollToName !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof keepeekScrollToName !== 'undefined';"
+        }
+      ],
+      "description": "Keepeek is a digital asset management and photo library solutions provider.",
+      "website": "https://www.keepeek.com",
+      "icon": "Keepeek.svg"
+    },
+    "Lightfolio": {
+      "cats": [
+        7
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*lfpublicstatic\\.lightfolio\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Lightfolio is a platform that offers online photo galleries designed for easy sharing, downloading, and selling of images.",
+      "website": "https://www.lightfolio.com",
+      "icon": "Lightfolio.svg"
+    },
+    "Lychee": {
+      "cats": [
+        7
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']lychee v([\\d\\.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof lychee !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lychee !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lychee.version !== 'undefined';",
+          "version": "try { return String(lychee.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Lychee is a photo-management tool designed to operate on your server or web-space.",
+      "website": "https://lycheeorg.github.io",
+      "icon": "Lychee.png"
+    },
+    "Master Slider": {
+      "cats": [
+        7
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MasterSlider !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MasterSlider !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MasterSlider.version !== 'undefined';",
+          "version": "try { return String(MasterSlider.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Master Slider is an SEO friendly, responsive image and video slider.",
+      "website": "https://www.masterslider.com",
+      "icon": "master_slider.png"
+    },
+    "NextGEN Gallery": {
+      "cats": [
+        7,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- \u003cmeta name=\"nextgen\" version=\"([\\d.]+)\" /\u003e --\u003e\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/nextgen-gallery/js/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof nextgen_lightbox_settings !== 'undefined' \u0026\u0026 typeof nextgen_lightbox_settings.static_path !== 'undefined' \u0026\u0026 nextgen_lightbox_settings.static_path === '/wp-content/plugins/nextgen-gallery/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof nextgen_lightbox_settings.static_path !== 'undefined';",
+          "version": "try { return String(nextgen_lightbox_settings.static_path || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "NextGEN Gallery is a free open-source image management plugin for the WordPress content management system.",
+      "website": "https://www.imagely.com/wordpress-gallery-plugin",
+      "icon": "NextGEN Gallery.png",
+      "cpe": "cpe:2.3:a:imagely:nextgen_gallery:*:*:*:*:*:*:*:*"
+    },
+    "PhotoSwipe": {
+      "cats": [
+        7,
+        59
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*photoswipe/([\\d\\.]+)/photoswipe\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PhotoSwipe !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PhotoSwipe !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PhotoSwipeUI_Default !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof photoswipeParseHash !== 'undefined';"
+        }
+      ],
+      "description": "PhotoSwipe is an open-source gallery to support JavaScript-based image zooming.",
+      "website": "https://photoswipe.com",
+      "icon": "PhotoSwipe.png"
+    },
+    "Piwigo": {
+      "cats": [
+        7
+      ],
+      "implies": [
+        "MySQL"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^piwigo\\s[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Piwigo is an open-source photo management software designed for creating and managing online photo galleries.",
+      "website": "https://piwigo.com",
+      "icon": "Piwigo.svg"
+    },
+    "Pixpa": {
+      "cats": [
+        7,
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*themeassets\\.pixpa\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Pixpa is a software that enables photographers, artists and creative designers build and manage online presence by letting them create a professional portfolio website without the need of any coding skills.",
+      "website": "https://www.pixpa.com",
+      "icon": "Pixpa.svg"
+    },
+    "SmugMug": {
+      "cats": [
+        7
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.smug-cdn": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _smugsp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _smugsp !== 'undefined';"
+        }
+      ],
+      "description": "SmugMug is a paid image sharing, image hosting service, and online video platform on which users can upload photos and videos.",
+      "website": "https://www.smugmug.com",
+      "icon": "SmugMug.svg"
+    },
+    "Theasys": {
+      "cats": [
+        7
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.theasys\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof theasys !== 'undefined' \u0026\u0026 typeof theasys.api !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof theasys.api !== 'undefined';"
+        }
+      ],
+      "description": "Theasys is a platform for creating, uploading, and embedding 360° VR panoramic images and virtual tours online.",
+      "website": "https://www.theasys.io",
+      "icon": "Theasys.svg"
+    },
+    "Wfolio": {
+      "cats": [
+        7
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wfolio\\.pro"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof initWfolioCard !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initWfolioCard !== 'undefined';"
+        }
+      ],
+      "description": "Wfolio is an online solution designed to help photographers showcase their work and grow their business.",
+      "website": "https://wfolio.com",
+      "icon": "Wfolio.svg"
+    },
+    "Zenfolio": {
+      "cats": [
+        7
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Zenfolio !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Zenfolio !== 'undefined';"
+        }
+      ],
+      "description": "Zenfolio is a photography website builder.",
+      "website": "https://zenfolio.com",
+      "icon": "Zenfolio.png"
+    },
+    "bxSlider": {
+      "cats": [
+        7,
+        59
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bxslider(?:\\.min)?\\.js(?:\\?ver=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Add a respsonsive image slider to any website.",
+      "website": "https://bxslider.com/",
+      "icon": "bxSlider.png"
+    },
+    "phpAlbum": {
+      "cats": [
+        7
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!--phpalbum ([.\\d\\s]+)--\u003e\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "phpAlbum is an open-source PHP script which allows you to create your personal photo album.",
+      "website": "https://phpalbum.net",
+      "icon": "phpAlbum.png"
+    }
+  }
+}

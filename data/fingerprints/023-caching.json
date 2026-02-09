@@ -1,0 +1,446 @@
+{
+  "apps": {
+    "FastPixel": {
+      "cats": [
+        23,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003clink[^\u003e]+href=\"https://cdn\\.fastpixel\\.io"
+            }
+          }
+        }
+      ],
+      "description": "FastPixel is a web performance and security service that provides caching, a content delivery network, web application firewall, and image optimization.",
+      "website": "https://fastpixel.io/",
+      "icon": "FastPixel.svg"
+    },
+    "Google PageSpeed": {
+      "cats": [
+        23,
+        33,
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-mod-pagespeed": {
+                  "$regex": "([\\d.]+)\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-page-speed": {
+                  "$regex": "(.+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Google PageSpeed is a family of tools designed to help websites performance optimisations.",
+      "website": "https://developers.google.com/speed/pagespeed/mod",
+      "icon": "Google PageSpeed.svg"
+    },
+    "LiteSpeed Cache": {
+      "cats": [
+        23,
+        87
+      ],
+      "implies": [
+        "LiteSpeed"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-litespeed-cache": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-turbo-charged-by": {
+                  "$regex": "litespeed"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wp-content/plugins/litespeed-cache/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof litespeed_docref !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof litespeed_docref !== 'undefined';"
+        }
+      ],
+      "description": "LiteSpeed Cache is an all-in-one site acceleration plugin for WordPress.",
+      "website": "https://www.litespeedtech.com/products/cache-plugins/wordpress-acceleration",
+      "icon": "LiteSpeed.svg"
+    },
+    "Litespeed Cache": {
+      "cats": [
+        23,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-litespeed-cache": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-turbo-charged-by": {
+                  "$regex": "litespeed"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "LiteSpeed Cache is an all-in-one site acceleration plugin for WordPress.",
+      "website": "https://wordpress.org/plugins/litespeed-cache/",
+      "icon": "litespeed-cache.png"
+    },
+    "NitroPack": {
+      "cats": [
+        23,
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']nitropack[\"']"
+            }
+          }
+        }
+      ],
+      "description": "NitroPack creates optimised HTML cache for fast page loading experience.",
+      "website": "https://nitropack.io/",
+      "icon": "NitroPack.svg"
+    },
+    "Oracle Web Cache": {
+      "cats": [
+        23
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "oracle(?:as)?[- ]web[- ]cache(?:[- /]([\\da-z./]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Oracle Web Cache is a browser and content management server, which improves the performance of web sites.",
+      "website": "https://oracle.com",
+      "icon": "Oracle.svg",
+      "cpe": "cpe:2.3:a:oracle:web_cache:*:*:*:*:*:*:*:*"
+    },
+    "RabbitLoader": {
+      "cats": [
+        23
+      ],
+      "description": "RabbitLoader is a plugin designed to enhance PageSpeed Insights Score by addressing Core Web Vitals issues including FID, LCP, \u0026 CLS.",
+      "website": "https://rabbitloader.com",
+      "icon": "RabbitLoader.svg"
+    },
+    "RackCache": {
+      "cats": [
+        23
+      ],
+      "implies": [
+        "Ruby"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-rack-cache": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "RackCache is a quick drop-in component to enable HTTP caching for Rack-based applications.",
+      "website": "https://github.com/rtomayko/rack-cache",
+      "icon": "RackCache.png"
+    },
+    "Redis Object Cache": {
+      "cats": [
+        23
+      ],
+      "implies": [
+        "Redis",
+        "WordPress"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!--\\s+performance optimized by redis object cache"
+            }
+          }
+        }
+      ],
+      "website": "https://wprediscache.com",
+      "icon": "RedisObjectCache.svg"
+    },
+    "Sitecore Experience Edge": {
+      "cats": [
+        23
+      ],
+      "implies": [
+        "GraphQL",
+        "Sitecore Experience Platform"
+      ],
+      "description": "Sitecore Experience Edge is a product that optimises content delivery by utilising edge computing and caching technologies to enhance website performance and user experience.",
+      "website": "https://doc.sitecore.com/xp/en/developers/101/developer-tools/experience-edge-for-xm-apis.html",
+      "icon": "Sitecore.svg"
+    },
+    "Varnish": {
+      "cats": [
+        23
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-varnish-cache": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-varnish-hostname": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.via": {
+                  "$regex": "varnish(?: \\(varnish/([\\d.]+)\\))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-varnish": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-varnish-action": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-varnish-age": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Varnish is a reverse caching proxy.",
+      "website": "https://www.varnish-cache.org",
+      "icon": "Varnish.svg",
+      "cpe": "cpe:2.3:a:varnish-software:varnish_cache:*:*:*:*:*:*:*:*"
+    },
+    "W3 Total Cache": {
+      "cats": [
+        23,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!--[^\u003e]+w3 total cache"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "w3 total cache(?:/([\\d.]+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "W3 Total Cache (W3TC) improves the SEO and increases website performance and reducing load times by leveraging features like content delivery network (CDN) integration and the latest best practices.",
+      "website": "https://www.w3-edge.com/wordpress-plugins/w3-total-cache",
+      "icon": "W3 Total Cache.png"
+    },
+    "WP Rocket": {
+      "cats": [
+        23,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!--[^\u003e]+wp rocket"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "wp rocket(?:/([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-rocket-nginx-bypass": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/wp-rocket/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RocketLazyLoadScripts !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RocketLazyLoadScripts !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RocketPreloadLinksConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rocket_lazy !== 'undefined';"
+        }
+      ],
+      "description": "WP Rocket is a caching and performance optimisation plugin to improve the loading speed of WordPress websites.",
+      "website": "https://wp-rocket.me",
+      "icon": "WP Rocket.png"
+    },
+    "WPCacheOn": {
+      "cats": [
+        23,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^optimized by wpcacheon"
+            }
+          }
+        }
+      ],
+      "description": "WPCacheOn is a caching and performance optimisation plugin, which improves the loading speed of WordPress websites.",
+      "website": "https://wpcacheon.io",
+      "icon": "WPCacheOn.png"
+    },
+    "WordPress Super Cache": {
+      "cats": [
+        23,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!--[^\u003e]+wp-super-cache"
+                }
+              },
+              {
+                "headers.wp-super-cache": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "WordPress Super Cache is a static caching plugin for WordPress.",
+      "website": "https://z9.io/wp-super-cache/",
+      "icon": "wp_super_cache.png"
+    },
+    "wpCache": {
+      "cats": [
+        23,
+        87
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!--[^\u003e]+wpcache"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "wpcache(?:/([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']wpcache[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']keywords[\"'][^\u003e]+content=[\"']wpcache[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "WPCache is a static caching plugin for WordPress.",
+      "website": "https://wpcache.co",
+      "icon": "wpCache.png"
+    }
+  }
+}

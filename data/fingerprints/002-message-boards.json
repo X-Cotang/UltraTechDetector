@@ -1,0 +1,1234 @@
+{
+  "apps": {
+    "Circle": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof circleUser !== 'undefined' \u0026\u0026 circleUser === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof circleUser !== 'undefined';",
+          "version": "try { return String(circleUser || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Circie is an all-in-one community platform for businesses that brings together engaging courses, discussions, members, live streams, chat, events, and memberships.",
+      "website": "https://circle.so",
+      "icon": "Circle.svg"
+    },
+    "CometD": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/cometd/jquery\\.cometd\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cometMsgReceived !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cometMsgReceived !== 'undefined';"
+        }
+      ],
+      "description": "CometD is a scalable clustered web messaging platform that provides a HTTP-based event routing bus using the Ajax Push technology pattern known as Comet.",
+      "website": "https://cometd.org",
+      "icon": "CometD.svg"
+    },
+    "Community": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.community\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Community is a platform enabling public figures, small to midsize businesses, and enterprise brands to connect instantly with their audience through large-scale conversational text messaging.",
+      "website": "https://www.community.com",
+      "icon": "Community.svg"
+    },
+    "Copiny": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.copiny\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Copiny is a Russian-based community support system.",
+      "website": "https://copiny.com",
+      "icon": "Copiny.svg"
+    },
+    "Countable": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']appleid-signin-client-id[\"'][^\u003e]+content=[\"']com\\.countable\\.signin[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.countable\\.us/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Countable is a community platform designed to support discussion, collaboration, and engagement among members through shared content, forums, and interactive features.",
+      "website": "https://www.countable.com",
+      "icon": "Countable.svg"
+    },
+    "Discourse": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "Ruby on Rails"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']discourse(?: ?/?([\\d.]+\\d))?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Discourse !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Discourse !== 'undefined';"
+        }
+      ],
+      "description": "Discourse is an open-source internet forum and mailing list management software application.",
+      "website": "https://discourse.org",
+      "icon": "Discourse.png"
+    },
+    "Discuz! X": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']discuz! x([\\d\\.]+)?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DISCUZCODE !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return discuzVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof discuz_uid !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DISCUZCODE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof discuzVersion !== 'undefined';",
+          "version": "try { return String(discuzVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Discuz! X is an internet forum software written in PHP and supports MySQL and PostgreSQL databases.",
+      "website": "https://www.discuz.net",
+      "icon": "Discuz X.png"
+    },
+    "ElkArte": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "MySQL"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof elk_forum_action !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof elk_forum_action !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof elk_iso_case_folding !== 'undefined';"
+        }
+      ],
+      "description": "ElkArte is an open-source PHP-based forum software with MySQL integration, offering features such as user authentication, topic categorisation, post formatting, private messaging, moderation tools, and customisable themes and extensions.",
+      "website": "https://www.elkarte.net",
+      "icon": "ElkArte.png"
+    },
+    "FUDforum": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP",
+        "Perl"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof fud_msg_focus !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fud_msg_focus !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fud_tree_msg_focus !== 'undefined';"
+        }
+      ],
+      "description": "FUDforum is a discussion forum software with support for posts, topics, polls and attachments.",
+      "website": "https://github.com/fudforum/FUDforum",
+      "icon": "default.svg",
+      "cpe": "cpe:2.3:a:fudforum:fudforum:*:*:*:*:*:*:*:*"
+    },
+    "Flarum": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "MySQL",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cdiv id=\"flarum-loading\""
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof app !== 'undefined' \u0026\u0026 typeof app.cache !== 'undefined' \u0026\u0026 typeof app.cache.discussionList !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof app.cache.discussionList !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof app.forum.freshness !== 'undefined';"
+        }
+      ],
+      "description": "Flarum is a discussion platform.",
+      "website": "https://flarum.org/",
+      "icon": "flarum.png",
+      "cpe": "cpe:2.3:a:flarum:flarum:*:*:*:*:*:*:*:*"
+    },
+    "FluxBB": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cp id=\"poweredby\"\u003e[^\u003c]+\u003ca href=\"https?://fluxbb\\.org/\"\u003e"
+            }
+          }
+        }
+      ],
+      "website": "https://fluxbb.org",
+      "icon": "FluxBB.png",
+      "cpe": "cpe:2.3:a:fluxbb:fluxbb:*:*:*:*:*:*:*:*"
+    },
+    "Higher Logic Vanilla": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers. x-vanilla-version": {
+                  "$regex": "([\\d\\.]+)\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "vanilla"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Vanilla !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Vanilla !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __VANILLA_GLOBALS__ !== 'undefined';"
+        }
+      ],
+      "description": "Higher Logic Vanilla is a cloud-based customer community platform offering features like discussion forums, Q\u0026A, ideation, gamification, and advanced analytics, enabling businesses to enhance customer engagement and support.",
+      "website": "https://vanilla.higherlogic.com",
+      "icon": "Higher Logic.svg"
+    },
+    "IPB": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "MySQL",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+ipb_[^\u003e]+\\.css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jscripts/ips_"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof IPBoard !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ipb_var !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ipsSettings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof IPBoard !== 'undefined';"
+        }
+      ],
+      "website": "https://invisioncommunity.com/",
+      "icon": "IPB.png"
+    },
+    "Invision Power Board": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "MySQL",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+ipb_[^\u003e]+\\.css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jscripts/ips_"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ipb_url_filter_option"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof IPBoard !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof IPBoard !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ipb_var !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ipsSettings !== 'undefined';"
+        }
+      ],
+      "description": "Invision Power Board is a commercial Internet forum software developed by Invision Community (formerly Invision Power Services).",
+      "website": "https://invisioncommunity.com",
+      "icon": "Invision Power Board.svg"
+    },
+    "Jiglu": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.jiglu\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Jiglu is a collaboration and communities suite that connects enterprise content with conversations to support improved communication.",
+      "website": "https://www.jiglu.com",
+      "icon": "Jiglu.svg"
+    },
+    "Linen": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "Elixir",
+        "TypeScript"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __NEXT_DATA__ !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps.currentCommunity !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps.currentCommunity.logoUrl !== 'undefined' \u0026\u0026 __NEXT_DATA__.props.pageProps.currentCommunity.logoUrl === 'static\\.main\\.linendev\\.com/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __NEXT_DATA__.props.pageProps.currentCommunity.logoUrl !== 'undefined';",
+          "version": "try { return String(__NEXT_DATA__.props.pageProps.currentCommunity.logoUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Linen is a real-time chat platform built for communities.",
+      "website": "https://www.linen.dev",
+      "icon": "Linen.svg"
+    },
+    "Mastodon": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^mastodon$"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Mastodon is a free and open-source self-hosted social networking service.",
+      "website": "https://joinmastodon.org",
+      "icon": "Mastodon.svg"
+    },
+    "Mattermost": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "Go",
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cnoscript\u003e to use mattermost, please enable javascript\\. \u003c/noscript\u003e"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mm_config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mm_user !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mm_config !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mm_current_user_id !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mm_license !== 'undefined';"
+        }
+      ],
+      "website": "https://about.mattermost.com",
+      "icon": "mattermost.png",
+      "cpe": "cpe:2.3:a:jenkins:mattermost:*:*:*:*:*:*:*:*"
+    },
+    "Mighty Network": {
+      "cats": [
+        2,
+        21
+      ],
+      "implies": [
+        "Ruby",
+        "Ruby on Rails"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Mighty !== 'undefined' \u0026\u0026 typeof Mighty.BroadcastBotApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Mighty.BroadcastBotApp !== 'undefined';"
+        }
+      ],
+      "description": "Mighty Networks is a platform that facilitates the creation and management of online communities, offering customisable websites, discussion forums, member profiles, events, courses, and multimedia content sharing for individuals and organisations.",
+      "website": "https://www.mightynetworks.com",
+      "icon": "Mighty Network.svg"
+    },
+    "Misskey": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- thank you for using misskey! @syuilo --\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']misskey[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Misskey is a distributed microblogging platform.",
+      "website": "https://join.misskey.page/",
+      "icon": "Misskey.svg"
+    },
+    "MyBB": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MyBB !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MyBB !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MyBBEditor !== 'undefined';"
+        }
+      ],
+      "description": "MyBB is a free and open-source forum software written in PHP.",
+      "website": "https://mybb.com",
+      "icon": "MyBB.png",
+      "cpe": "cpe:2.3:a:mybb:mybb:*:*:*:*:*:*:*:*"
+    },
+    "Nabble": {
+      "cats": [
+        2
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Nabble !== 'undefined' \u0026\u0026 typeof Nabble.analytics !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Nabble.analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NabbleDropdown !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof t_show_nabble_notice !== 'undefined';"
+        }
+      ],
+      "description": "Nabble is a platform offering free forum hosting and online web applications with customizable features.",
+      "website": "https://nabble.com"
+    },
+    "NodeBB": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^nodebb$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/nodebb\\.min\\.js\\?"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "NodeBB forum software is powered by Node.js and built on either a Redis or MongoDB database.",
+      "website": "https://nodebb.org",
+      "icon": "NodeBB.svg",
+      "cpe": "cpe:2.3:a:nodebb:nodebb:*:*:*:*:*:*:*:*"
+    },
+    "Oclocher": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.access-control-allow-origin": {
+                  "$regex": "widget\\.oclocher\\.fr"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.oclocher\\.fr"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Oclocher is a parish animation app used by parishes and dioceses to help maintain connections between parishioners from one Sunday to the next.",
+      "website": "https://www.oclocher.fr",
+      "icon": "OClocher.svg"
+    },
+    "PeerBoard": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.peerboard\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "PeerBoard is a plug-and-play community solution, which helps groups, clubs, startups, marketplaces and businesses create discussion forums.",
+      "website": "https://peerboard.com",
+      "icon": "PeerBoard.png"
+    },
+    "PeerTube": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']og:platform[\"'][^\u003e]+content=[\"']^peertube$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "PeerTube is a free and open-source, decentralized, federated video platform powered by ActivityPub and WebTorrent.",
+      "website": "https://joinpeertube.org/",
+      "icon": "PeerTube.svg"
+    },
+    "Philomena": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "Elixir",
+        "Erlang"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^philomena$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Philomena is an imageboard software.",
+      "website": "https://github.com/derpibooru/philomena",
+      "icon": "Philomena.svg"
+    },
+    "PixelFed": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "Laravel"
+      ],
+      "description": "PixelFed is an activitypub based image sharing platform.",
+      "website": "https://pixelfed.org",
+      "icon": "PixelFed.svg"
+    },
+    "Pleroma": {
+      "cats": [
+        2
+      ],
+      "description": "Pleroma is a free, federated social networking server built on open protocols.",
+      "website": "https://pleroma.social/",
+      "icon": "Pleroma.svg"
+    },
+    "Popvox": {
+      "cats": [
+        2
+      ],
+      "description": "Popvox is a platform that fosters civic engagement by providing tools for citizens to influence policy decisions and engage with elected representatives on governing innovations.",
+      "website": "https://popvox.com",
+      "icon": "Popvox.svg"
+    },
+    "PushWoosh": {
+      "cats": [
+        2
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Pushwoosh !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pushwoosh !== 'undefined';"
+        }
+      ],
+      "description": "PushWoosh is a messaging system that supports push notifications and in-app messages.",
+      "website": "https://www.pushwoosh.com",
+      "icon": "PushWoosh.svg"
+    },
+    "Rasayel": {
+      "cats": [
+        2
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RasayelOmniWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RasayelOmniWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RasayelWabaWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RasayelWhatsAppWidget !== 'undefined';"
+        }
+      ],
+      "description": "Rasayel is a customer communication platform that helps businesses sell to and support their customers over WhatsApp and other social messaging channels.",
+      "website": "https://www.rasayel.io",
+      "icon": "Rasayel.svg"
+    },
+    "Reddit": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "(?:\u003ca[^\u003e]+powered by reddit|powered by \u003ca[^\u003e]+\u003ereddit\u003c)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof reddit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof reddit !== 'undefined';"
+        }
+      ],
+      "website": "https://code.reddit.com",
+      "icon": "Reddit.svg"
+    },
+    "Remind": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.remind\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Remind is a communication tool designed to connect educators with students and parents for timely updates and messages.",
+      "website": "https://www.remind.com/chat",
+      "icon": "Remind.svg"
+    },
+    "Simple Machines Forum": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof smf_avatarResize !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof smf_avatarResize !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof smf_default_theme_url !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof smf_theme_url !== 'undefined';"
+        }
+      ],
+      "description": "Simple Machines Forum is a free open-source software, used for community forums and is written in PHP.",
+      "website": "https://www.simplemachines.org",
+      "icon": "Simple Machines Forum.png",
+      "cpe": "cpe:2.3:a:simplemachines:simple_machine_forum:*:*:*:*:*:*:*:*"
+    },
+    "Tapatalk": {
+      "cats": [
+        2
+      ],
+      "description": "Tapatalk is a mobile-enablement platform that optimizes forums and blogs for engagement.",
+      "website": "https://www.tapatalk.com",
+      "icon": "Tapatalk.svg"
+    },
+    "Ultimate Bulletin Board": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^ubb\\.threads\\s([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Ultimate Bulletin Board is an internet forum software designed for online communities, offering features such as user registration, thread organisation, moderation tools, search functionality, and customisable design options to facilitate discussions and community engagement.",
+      "website": "https://www.ubbcentral.com"
+    },
+    "Vanilla": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cbody id=\"(?:discussionspage|vanilla)"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "vanilla"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Vanilla is a both a cloud-based (SaaS) open-source community forum software.",
+      "website": "https://vanillaforums.org",
+      "icon": "Vanilla.png"
+    },
+    "Web Wiz Forums": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^web\\swiz\\sforums(?:\\s([\\d\\.]+))?$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Web Wiz Forums is a web-based forum software that enables developers to create and manage online discussion boards or forums for engaging user interactions and community building.",
+      "website": "https://www.webwizforums.com"
+    },
+    "XMB": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!-- powered by xmb"
+            }
+          }
+        }
+      ],
+      "website": "https://www.xmbforum.com",
+      "icon": "XMB.png"
+    },
+    "XenForo": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "MySQL",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:jquery\\.extend\\(true, xenforo|\u003ca[^\u003e]+\u003eforum software by xenforo™|\u003c!--xf:branding|\u003chtml[^\u003e]+id=\"xenforo\")"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003chtml id=\"xf\" "
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof XF !== 'undefined' \u0026\u0026 typeof XF.GuestUsername !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof XF.GuestUsername !== 'undefined';"
+        }
+      ],
+      "description": "XenForo is a PHP-based forum hosting program for communities that is designed to be deployed on a remote web server.",
+      "website": "https://xenforo.com",
+      "icon": "XenForo.png"
+    },
+    "YaBB": {
+      "cats": [
+        2
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "powered by \u003ca href=\"[^\u003e]+yabbforum"
+            }
+          }
+        }
+      ],
+      "website": "https://www.yabbforum.com",
+      "icon": "YaBB.png"
+    },
+    "bbPress": {
+      "cats": [
+        2
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof gdbbPressAttachmentsInit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gdbbPressAttachmentsInit !== 'undefined';"
+        }
+      ],
+      "description": "bbPress is a forum software built to integrate seamlessly with WordPress, allowing discussion forums to run directly within a WordPress blog.",
+      "website": "https://bbpress.org",
+      "icon": "bbPress.svg"
+    },
+    "phpBB": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c[^\u003e]+styles/(?:sub|pro)silver/theme"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cdiv class=phpbb_copyright\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cimg[^\u003e]+i_icon_mini"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003ctable class=\"[^\"]*forumline"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "powered by \u003ca[^\u003e]+phpbb"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']copyright[\"'][^\u003e]+content=[\"']phpbb group[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof phpbb !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof phpbb !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof style_cookie_settings !== 'undefined';"
+        }
+      ],
+      "description": "phpBB is a free open-source Internet forum package in the PHP scripting language.",
+      "website": "https://phpbb.com",
+      "icon": "phpBB.png",
+      "cpe": "cpe:2.3:a:phpbb:phpbb:*:*:*:*:*:*:*:*"
+    },
+    "punBB": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "powered by \u003ca href=\"[^\u003e]+punbb"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PUNBB !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PUNBB !== 'undefined';"
+        }
+      ],
+      "website": "https://punbb.informer.com",
+      "icon": "punBB.png"
+    },
+    "vBulletin": {
+      "cats": [
+        2
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cdiv id=\"copyright\"\u003epowered by vbulletin"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']vbulletin ?([\\d.]+)?\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof vBulletin !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vBulletin !== 'undefined';"
+        }
+      ],
+      "description": "vBulletin is tool that is used to create and manage online forums or discussion boards. It is written in PHP and uses a MySQL database server.",
+      "website": "https://www.vbulletin.com",
+      "icon": "vBulletin.png",
+      "cpe": "cpe:2.3:a:vbulletin:vbulletin:*:*:*:*:*:*:*:*"
+    }
+  }
+}

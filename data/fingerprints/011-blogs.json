@@ -1,0 +1,393 @@
+{
+  "apps": {
+    "Aegea": {
+      "cats": [
+        11
+      ],
+      "implies": [
+        "PHP",
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^(?:e2\\s)?aegea\\s(?:v)?([\\d\\.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Aegea is a blog engine created by Ilya Birman.",
+      "website": "https://blogengine.ru",
+      "icon": "Aegea.png"
+    },
+    "BUROGU": {
+      "cats": [
+        11
+      ],
+      "description": "Burogu is a no-code platform that enables users to create and manage blogs.",
+      "website": "https://burogu.pro",
+      "icon": "BUROGU.svg"
+    },
+    "Beehiiv": {
+      "cats": [
+        11
+      ],
+      "description": "Beehiiv is a relatively young, hosted newsletter platform built for businesses and creators.",
+      "website": "https://www.beehiiv.com",
+      "icon": "Beehiiv.svg"
+    },
+    "Blogger": {
+      "cats": [
+        11
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^blogger$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Blogger is a blog-publishing service that allows multi-user blogs with time-stamped entries.",
+      "website": "https://www.blogger.com",
+      "icon": "Blogger.png"
+    },
+    "DropInBlog": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.dropinblog\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "DropInBlog is a remotely hosted, cloud based platform that is designed to embed a blog into your html site.",
+      "website": "https://dropinblog.com",
+      "icon": "DropInBlog.png"
+    },
+    "Haloscan": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.haloscan\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Haloscan is a tool that enables blogs to incorporate trackbacks and comments, allowing users to engage with blog content through discussions and feedback.",
+      "website": "https://www.haloscan.com",
+      "icon": "Haloscan.svg"
+    },
+    "Hashnode": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*hashnode\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Hashnode is a free developer blogging platform that allows you to publish articles on your own domain and helps you stay connected with a global developer community.",
+      "website": "https://hashnode.com/",
+      "icon": "hashnode.png"
+    },
+    "Jugem": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*imaging\\.jugem\\.jp"
+            }
+          }
+        }
+      ],
+      "description": "Jugem is a blogging software from Japan that allows users to create, manage, and publish online content.",
+      "website": "https://jugem.jp",
+      "icon": "Jugem.svg"
+    },
+    "LiveJournal": {
+      "cats": [
+        11
+      ],
+      "description": "LiveJournal is a social networking service where users can keep a blog, journal or diary.",
+      "website": "https://www.livejournal.com",
+      "icon": "LiveJournal.png"
+    },
+    "Medium": {
+      "cats": [
+        11
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^medium$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*medium\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Medium is an online publishing platform.",
+      "website": "https://medium.com",
+      "icon": "Medium.svg"
+    },
+    "Overblog": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.over-blog-kiwi\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Overblog is a French blog platform that enables users to create and share content.",
+      "website": "https://www.over-blog.com",
+      "icon": "OverBlog.svg"
+    },
+    "Postach": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.postach\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Postach is a blogging platform integrated with Evernote, allowing users to create and manage blog posts directly from their Evernote account.",
+      "website": "https://postach.io",
+      "icon": "Postach.svg"
+    },
+    "Quickblog": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.quickblog\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Quickblog is a platform that aids bloggers and agencies in producing embedded, SEO-ready blog content seamlessly compatible with any existing website.",
+      "website": "https://www.quickblog.co",
+      "icon": "Quickblog.svg"
+    },
+    "Substack": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-cluster": {
+                  "$regex": "substack"
+                }
+              },
+              {
+                "headers.x-served-by": {
+                  "$regex": "substack"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Substack is an American online platform that provides publishing, payment, analytics, and design infrastructure to support subscription newsletters.",
+      "website": "https://substack.com/",
+      "icon": "Substack.svg"
+    },
+    "Superblog": {
+      "cats": [
+        11
+      ],
+      "description": "Superblog is a blogging platform that automatically manages SEO audits, page speed optimization, sudden traffic spikes, and reader experience.",
+      "website": "https://superblog.ai",
+      "icon": "Superblog.svg"
+    },
+    "Svbtle": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^svbtle\\.com$[\"']"
+            }
+          }
+        }
+      ],
+      "website": "https://www.svbtle.com",
+      "icon": "svbtle.png"
+    },
+    "Tumblr": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ciframe src=\"[^\u003e]+tumblr\\.com"
+                }
+              },
+              {
+                "headers.x-tumblr-user": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Tumblr is a microblogging and social networking website. The service allows users to post multimedia and other content to a short-form blog.",
+      "website": "https://www.tumblr.com",
+      "icon": "Tumblr.png"
+    },
+    "TypePad": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']typepad[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Typepad is a blog hosting service.",
+      "website": "https://www.typepad.com",
+      "icon": "TypePad.png"
+    },
+    "Typecho": {
+      "cats": [
+        11
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']typecho( [\\d.]+)?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TypechoComment !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TypechoComment !== 'undefined';"
+        }
+      ],
+      "description": "Typecho is a PHP Blogging Platform.",
+      "website": "https://typecho.org/",
+      "icon": "typecho.svg"
+    },
+    "Virgool": {
+      "cats": [
+        11
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^virgool$"
+            }
+          }
+        }
+      ],
+      "website": "https://virgool.io",
+      "icon": "Virgool.svg"
+    },
+    "Zinnia": {
+      "cats": [
+        11
+      ],
+      "implies": [
+        "Django"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']zinnia[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Zimbra is a is a collaborative software suite that includes an email server and a web client.",
+      "website": "https://django-blog-zinnia.com",
+      "icon": "Zinnia.png"
+    }
+  }
+}

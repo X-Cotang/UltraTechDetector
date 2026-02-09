@@ -1,0 +1,4361 @@
+{
+  "apps": {
+    "Acquia Site Studio": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Acquia Cloud Platform"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sites/\\w*/files/cohesion"
+            }
+          }
+        }
+      ],
+      "description": "Site Studio (formerly Cohesion) is a low-code, Drupal add-on page builder.",
+      "website": "https://www.acquia.com/products/drupal-cloud/site-studio",
+      "icon": "acquia-site-studio.png"
+    },
+    "Adalo": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.adalo\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Adalo is a no-code platform enabling the creation of mobile and web applications.",
+      "website": "https://www.adalo.com",
+      "icon": "Adalo.svg"
+    },
+    "Adobe Portfolio": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']twitter:site[\"'][^\u003e]+content=[\"']@adobeportfolio[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Adobe Portfolio is an Adobe platform that allows you to create a web page where you can show your projects, creations, and the services you offer.",
+      "website": "https://portfolio.adobe.com",
+      "icon": "Adobe Portfolio.svg"
+    },
+    "Alboom Prosite": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bifrost\\.alboompro\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Alboom Prosite is a website and landing page builder for businesses.",
+      "website": "https://www.alboompro.com/ferramentas/alboom-prosite",
+      "icon": "Alboom.svg"
+    },
+    "ApexPages": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Salesforce"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "salesforce\\.com apexpages"
+            }
+          }
+        }
+      ],
+      "website": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_intro.htm",
+      "icon": "Salesforce.svg"
+    },
+    "Appjustable": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//appjustable\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Appjustable is a platform offering Weebly app solutions for creating websites, enabling users to design and manage their online presence through customizable tools and features tailored to individual or business needs.",
+      "website": "https://appjustable.com",
+      "icon": "Appjustable.svg"
+    },
+    "Appy Pie Builder": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*snappy\\.appypie\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Appypie is a platform that enables the creation of apps and websites using AI.",
+      "website": "https://www.appypie.com",
+      "icon": "Appypie.svg"
+    },
+    "Art Schema": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.artschema\\.net/"
+            }
+          }
+        }
+      ],
+      "description": "Art Schema is a tool for creating websites with custom designs and data types, offering a template-free website building experience.",
+      "website": "https://www.artschema.net",
+      "icon": "ArtSchema.svg"
+    },
+    "Assemble": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.assemble\\.me"
+            }
+          }
+        }
+      ],
+      "description": "Assemble is a website builder designed for creating and managing film-related websites.",
+      "website": "https://assemble.me",
+      "icon": "Assemble.svg"
+    },
+    "B12": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.b12\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof b12 !== 'undefined' \u0026\u0026 typeof b12.banner !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof b12.banner !== 'undefined';"
+        }
+      ],
+      "description": "B12 is an AI-powered website builder that automatically generates and customizes websites using machine learning to streamline design, content creation, and deployment.",
+      "website": "https://www.b12.io",
+      "icon": "B12.svg"
+    },
+    "BaseKit": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^basekit$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BaseKit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BaseKit !== 'undefined';"
+        }
+      ],
+      "description": "BaseKit is a platform offering website-building solutions for small businesses and individuals. It enables users to create websites easily with drag-and-drop tools and customizable templates, without the need to write code.",
+      "website": "https://www.basekit.com/",
+      "icon": "BaseKit.svg"
+    },
+    "Baya": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.baya\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Baya is a platform that enables the creation of professional websites for small businesses, offering tools to design, build, and manage an online presence.",
+      "website": "https://baya.co",
+      "icon": "Baya.svg"
+    },
+    "Beae": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*beae\\.base\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BEAEBASE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BEAEVIDEO !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BEAEBASE !== 'undefined';"
+        }
+      ],
+      "description": "Beae is a Shopify page builder that enables the creation of landing, home, and product pages designed to improve store sales and conversion rates.",
+      "website": "https://beae.com",
+      "icon": "Beae.svg"
+    },
+    "Beaver Builder": {
+      "cats": [
+        51,
+        87
+      ],
+      "implies": [
+        "WordPress"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cbody[^\u003e]+fl-builder"
+            }
+          }
+        }
+      ],
+      "description": "Beaver Builder is a drag and drop page builder for WordPress.",
+      "website": "https://www.wpbeaverbuilder.com/",
+      "icon": "beaver-builder-icon.png"
+    },
+    "Beezer": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.beezer\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Beezer is a no-code web app builder with drag-and-drop functionality for creating applications.",
+      "website": "https://www.beezer.com",
+      "icon": "Beezer.svg"
+    },
+    "Behzi": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^behzi$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Behzi is an all-in-one Iranian platform providing services such as event organization, tours, school registrations, and store discounts.",
+      "website": "https://behzi.com",
+      "icon": "Behzi.svg"
+    },
+    "BeyondMenu": {
+      "cats": [
+        51,
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.beyondmenu\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "BeyondMenu is an online food ordering service.",
+      "website": "https://www.beyondmenu.com/contactus.aspx",
+      "icon": "BeyondMenu.png"
+    },
+    "Blutui": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.blutui\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Blutui is a web platform designed for creative agencies to build, manage, and deploy client websites.",
+      "website": "https://blutui.com",
+      "icon": "Blutui.svg"
+    },
+    "Boats Group": {
+      "cats": [
+        51
+      ],
+      "description": "Boats Group is a website platform for boat dealers and brokers.",
+      "website": "https://www.boatsgroup.com/websites",
+      "icon": "Boats Group.png"
+    },
+    "Boxmode": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*storage\\.boxmode\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BOXMODE_PROJECT_ID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _BoxmodeConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BOXMODE_PROJECT_ID !== 'undefined';"
+        }
+      ],
+      "description": "Boxmode is a drag-and-drop website builder designed for creating websites across various niches.",
+      "website": "https://www.boxmode.com",
+      "icon": "Boxmode.svg"
+    },
+    "Breakdance": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BreakdanceFrontend !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BreakdanceFrontend !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BreakdanceHeaderBuilder !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BreakdanceSwiper !== 'undefined';"
+        }
+      ],
+      "description": "Breakdance is a page builder that features a drag-and-drop interface for users to create pages using full site editing functionality.",
+      "website": "https://breakdance.com",
+      "icon": "Breakdance.svg"
+    },
+    "Bricks": {
+      "cats": [
+        51,
+        80
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/themes/bricks/assets/"
+            }
+          }
+        }
+      ],
+      "description": "Bricks is a premium WordPress theme that lets you visually build performant WordPress sites.",
+      "website": "https://bricksbuilder.io",
+      "icon": "Bricks.svg"
+    },
+    "Bricksite": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^bricksite$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof brickSite !== 'undefined' \u0026\u0026 typeof brickSite.common !== 'undefined' \u0026\u0026 typeof brickSite.common.apiUrls !== 'undefined' \u0026\u0026 typeof brickSite.common.apiUrls.base !== 'undefined' \u0026\u0026 brickSite.common.apiUrls.base === '\\.bricksite\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof brickSite.common.apiUrls.base !== 'undefined';",
+          "version": "try { return String(brickSite.common.apiUrls.base || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Bricksite is a free website online tool where clients can create free accounts with various themes and features.",
+      "website": "https://bricksite.io",
+      "icon": "Bricksite.svg"
+    },
+    "Brizy": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BrizyLibs !== 'undefined' \u0026\u0026 typeof BrizyLibs.Flatpickr !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BrizyLibs.Flatpickr !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BrizyProLibs !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Brz.emit !== 'undefined';"
+        }
+      ],
+      "description": "Brizy is a visual website builder that allows users to create and design websites using drag-and-drop functionality without the need for coding skills.",
+      "website": "https://www.brizy.io",
+      "icon": "Brizy.svg"
+    },
+    "Brizy WordPress": {
+      "cats": [
+        51,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cdiv[^\u003e]+class=[\"']brz-root__container"
+            }
+          }
+        }
+      ],
+      "description": "Brizy WordPress is a plugin that enables users to build and design WordPress websites with an easy-to-use drag-and-drop editor and a wide range of customizable templates.",
+      "website": "https://brizy.io",
+      "icon": "brizy.svg"
+    },
+    "Brushd": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-computed-host": {
+                  "$regex": "content\\.brushd\\.co"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.brushd\\.co/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Brushd is a portfolio website builder that simplifies the creation and maintenance of online creative portfolios.",
+      "website": "https://www.brushd.com",
+      "icon": "Brushd.svg"
+    },
+    "Bubble": {
+      "cats": [
+        51,
+        18
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-bubble-capacity-limit": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-bubble-capacity-used": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-bubble-perf": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _bubble_page_load_data !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return bubble_version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _bubble_page_load_data !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bubble_environment !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bubble_hostname_modifier !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bubble_version !== 'undefined';"
+        }
+      ],
+      "description": "Bubble is a no-code platform that lets anyone build web apps without writing any code.",
+      "website": "https://bubble.io",
+      "icon": "bubble.png"
+    },
+    "Cantrip": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']cantrip\\.io[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^cantrip website builder$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Cantrip is a tool that uses artificial intelligence to generate personalized websites.",
+      "website": "https://cantrip.io"
+    },
+    "Canva": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof canva_debounceResize !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof canva_debounceResize !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof canva_scriptExecutor !== 'undefined';"
+        }
+      ],
+      "description": "Canva is an online graphic design platform that allows users to create various visual content using pre-designed templates and a library of elements.",
+      "website": "https://www.canva.com",
+      "icon": "Canva.svg"
+    },
+    "Cargo": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?\u003c!elo\\.io)/cargo\\."
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Cargo !== 'undefined' \u0026\u0026 typeof Cargo.Config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Cargo.Config !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __cargo_js_ver__ !== 'undefined';"
+        }
+      ],
+      "description": "Cargo is a professional site building platform for designers and artists.",
+      "website": "https://cargo.site",
+      "icon": "Cargo.svg"
+    },
+    "Carrd": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\(\\!section\\s\\|\\|\\ssection\\.tagname\\s\\!\\=\\s\\'section\\'\\)"
+            }
+          }
+        }
+      ],
+      "description": "Carrd is a platform for building simple, responsive, one-page sites.",
+      "website": "https://carrd.co",
+      "icon": "Carrd.svg"
+    },
+    "CartFlows": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cartflows !== 'undefined' \u0026\u0026 typeof cartflows.active_checkout_cookie !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cartflows.active_checkout_cookie !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cartflows_checkout_optimized_fields !== 'undefined';"
+        }
+      ],
+      "description": "CartFlows is a sales funnel builder for WordPress.",
+      "website": "https://cartflows.com",
+      "icon": "Cartflows.svg"
+    },
+    "Caspio": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.caspio\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Caspio is an online database platform that enables the creation of business applications, custom forms, and reports without the need for coding.",
+      "website": "https://www.caspio.com",
+      "icon": "Caspio.svg"
+    },
+    "Chinese Menu Online": {
+      "cats": [
+        51,
+        93
+      ],
+      "description": "Chinese Menu Online is an online food ordering service.",
+      "website": "https://www.chinesemenuonline.com",
+      "icon": "Chinese Menu Online.png"
+    },
+    "CoffeeCup": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^coffeecup visual site designer[\"']"
+            }
+          }
+        }
+      ],
+      "description": "CoffeeCup is a suite of web development tools for building sites, emails, and forms, with optional coding for added flexibility.",
+      "website": "https://www.coffeecup.com",
+      "icon": "CoffeeCup.svg"
+    },
+    "Control": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']cntrl\\.site[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Control is a freehand website builder that allows users to create beautiful fully-custom responsive sites.",
+      "website": "https://cntrl.site",
+      "icon": "Control.svg"
+    },
+    "Convertri": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.convertri\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CONVERTRI_CONSTANTS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CONVERTRI_CONSTANTS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ConvertriAnalytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof convertriParameters !== 'undefined';"
+        }
+      ],
+      "description": "Convertri is a sales funnel building solution.",
+      "website": "https://www.convertri.com",
+      "icon": "Convertri.svg"
+    },
+    "Convrrt": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.convrrt\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Convrrt is a platform that offers tools for creating responsive landing pages.",
+      "website": "https://www.convrrt.com",
+      "icon": "Convrrt.svg"
+    },
+    "Craftum": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^craftum cms$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Craftum is an Russian website builder.",
+      "website": "https://craftum.com",
+      "icon": "Craftum.svg"
+    },
+    "Creatium": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^creatium$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Creatium is a website builder developed in Russia that provides a user-friendly drag-and-drop interface and a variety of customisation options for creating websites without coding knowledge.",
+      "website": "https://creatium.io",
+      "icon": "Creatium.svg"
+    },
+    "Destinet": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "destinet"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DestinetMap !== 'undefined' \u0026\u0026 typeof DestinetMap.SetMap !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DestinetMap.SetMap !== 'undefined';"
+        }
+      ],
+      "description": "Destinet is a homepage generator system designed to streamline the creation of customizable web pages.",
+      "website": "https://www.destinet.no"
+    },
+    "Directorist": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof directorist !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof directoristCustomRangeSlider !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof directorist !== 'undefined';"
+        }
+      ],
+      "description": "Directorist is a business directory plugin that streamlines the creation of scalable, industry-standard, and user-focused online business directories.",
+      "website": "https://directorist.com",
+      "icon": "Directorist.svg"
+    },
+    "Divhunt": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*divhunt-site\\.\\w-cdn\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Divhunt !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Divhunt !== 'undefined';"
+        }
+      ],
+      "description": "Divhunt is an SPA builder.",
+      "website": "https://www.divhunt.com",
+      "icon": "Divhunt.svg"
+    },
+    "Divi": {
+      "cats": [
+        51,
+        80,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']divi(?:\\sv\\.([\\d\\.]+))?\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*divi/js/custom\\.(?:min|unified)\\.js\\?ver=([\\d.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DIVI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DIVI !== 'undefined';"
+        }
+      ],
+      "description": "Divi is a WordPress Theme and standalone WordPress plugin from Elegant themes that allows users to build websites using the visual drag-and-drop Divi page builder.",
+      "website": "https://www.elegantthemes.com/gallery/divi",
+      "icon": "Divi.svg"
+    },
+    "DotGo": {
+      "cats": [
+        51
+      ],
+      "description": "DotGo is a UK-based business website builder that provides a platform for creating and managing websites.",
+      "website": "https://www.dotgo.uk",
+      "icon": "DotGo.svg"
+    },
+    "Doteasy Website Builder": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Doteasy"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof fsData !== 'undefined' \u0026\u0026 typeof fsData.fs !== 'undefined' \u0026\u0026 fsData.fs === '\\.dotezcdn\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fsData.fs !== 'undefined';",
+          "version": "try { return String(fsData.fs || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Doteasy Website Builder is a tool provided by Doteasy, a web hosting company that enables users to create and personalise their own websites without necessitating any technical knowledge or expertise in website design.",
+      "website": "https://www.doteasy.com/website-builder/",
+      "icon": "Doteasy.svg"
+    },
+    "Droip": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof droipViewports !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof showDroipPopup !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wp_droip !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof droipViewports !== 'undefined';"
+        }
+      ],
+      "description": "Droip is a WordPress no-code website builder with a drag-and-drop visual interface for creating responsive websites.",
+      "website": "https://droip.com/",
+      "icon": "Droip.svg"
+    },
+    "Durable": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.durable\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Durable is an AI-powered tool that automatically builds websites, streamlining the creation process with minimal user input.",
+      "website": "https://durable.co",
+      "icon": "Durable.svg"
+    },
+    "Easy Web Editor": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']visualvision\\.com [\"']"
+            }
+          }
+        }
+      ],
+      "description": "Easy Web Editor is a website builder platform that enables users to create and manage web pages through a visual interface without requiring advanced coding knowledge.",
+      "website": "https://easywebeditor.com"
+    },
+    "Elementor": {
+      "cats": [
+        51,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^elementor\\s([\\d\\.]+)\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/elementor(?:-pro)?/.+frontend-modules\\.min\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof elementorFrontend !== 'undefined' \u0026\u0026 typeof elementorFrontend.getElements !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return elementorFrontendConfig.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof elementorFrontend.getElements !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof elementorFrontendConfig.version !== 'undefined';",
+          "version": "try { return String(elementorFrontendConfig.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Elementor is a website builder platform for professionals on WordPress.",
+      "website": "https://elementor.com",
+      "icon": "Elementor.svg"
+    },
+    "EverWeb": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']everweb ([\\d.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "EverWeb is a website builder that allows users to create websites without any coding required.",
+      "website": "https://www.everwebapp.com",
+      "icon": "EverWeb.svg"
+    },
+    "FASO": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-faso-server-execution-time": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "FASO is a web platform developed by BoldBrush that enables artists to create and manage professional fine art portfolio websites online.",
+      "website": "https://www.faso.com",
+      "icon": "FASO.svg"
+    },
+    "Ferret One": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ferret-one"
+            }
+          }
+        }
+      ],
+      "description": "Ferret One is a personal website builder tool developed in Asia.",
+      "website": "https://ferret-one.com",
+      "icon": "FerretOne.svg"
+    },
+    "Finsweet": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.finsweet\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Finsweet is a platform that designs and develops websites exclusively using Webflow.",
+      "website": "https://finsweet.com",
+      "icon": "Finsweet.svg"
+    },
+    "Flexbe": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof flexbe_cli !== 'undefined' \u0026\u0026 typeof flexbe_cli.adaptive !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof flexbe_cli.adaptive !== 'undefined';"
+        }
+      ],
+      "description": "Flexbe is a website and landing page builder that allows users to create and design web pages without coding.",
+      "website": "https://flexbe.com",
+      "icon": "Flexbe.svg"
+    },
+    "FlexiFunnels": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.flexifunnels\\.com"
+            }
+          }
+        }
+      ],
+      "description": "FlexiFunnels is a platform for building high-converting sales funnels, generating leads, and selling products without requiring coding knowledge.",
+      "website": "https://flexifunnels.com",
+      "icon": "FlexiFunnels.svg"
+    },
+    "Flipsite": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^made with flipsite$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Flipsite is a platform for creating and managing websites.",
+      "website": "https://flipsite.io",
+      "icon": "Flipsite.svg"
+    },
+    "Flipsnack": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^flipsnack$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.flipsnack\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Flipsnack is a web-based platform that allows users to create and publish interactive digital flipbooks.",
+      "website": "https://www.flipsnack.com",
+      "icon": "Flipsnack.svg"
+    },
+    "Frontastic": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.frontastic-request-id": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "Frontastic is a Commerce Frontend Platform that unites business and development teams to build commerce sites on headless.",
+      "website": "https://www.frontastic.cloud/",
+      "icon": "Frontastic.png"
+    },
+    "Funnelish": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof funnelish !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof funnelish !== 'undefined';"
+        }
+      ],
+      "description": "Funnelish is a software tool that helps businesses create and optimise sales funnels for their websites to increase their conversion rates and revenue. Funnelish page builder is a funnel builder focused on building ecommerce funnels.",
+      "website": "https://funnelish.com",
+      "icon": "Funnelish.svg"
+    },
+    "Get Siimple": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.getsiimple\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Get Siimple is a tool that enables the creation of a single-page website without requiring technical or design expertise.",
+      "website": "https://getsiimple.com",
+      "icon": "GetSiimple.svg"
+    },
+    "Goope": {
+      "cats": [
+        51
+      ],
+      "description": "Goope is a Japanese homepage design system that provides tools for creating and managing websites.",
+      "website": "https://goope.jp",
+      "icon": "Goope.svg"
+    },
+    "GrapesJS": {
+      "cats": [
+        51,
+        18
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof grapesjs !== 'undefined' \u0026\u0026 typeof grapesjs.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return grapesjs.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof grapesjs.version !== 'undefined';",
+          "version": "try { return String(grapesjs.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "GrapesJS is an open-source, multi-purpose page builder which combines different plugins and intuitive drag and drop interface.",
+      "website": "https://grapesjs.com",
+      "icon": "GrapesJS.png",
+      "cpe": "cpe:2.3:a:grapesjs:grapesjs:*:*:*:*:*:node.js:*:*"
+    },
+    "GreatPages": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.greatpages\\.com\\.br/"
+            }
+          }
+        }
+      ],
+      "description": "GreatPages is a multi-purpose page builder software developed in Brazil.",
+      "website": "https://www.greatpages.com.br",
+      "icon": "GreatPages.svg"
+    },
+    "GroovePages": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//app\\.groove\\.cm/groovepages/"
+            }
+          }
+        }
+      ],
+      "description": "GroovePages is a cloud-based drag-and-drop website and funnel builder that enables users to create responsive websites, landing pages, and sales funnels without coding.",
+      "website": "https://groove.cm/pages",
+      "icon": "GrooveKart.svg"
+    },
+    "Heroic": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.heroicnow\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Heroic is a platform that offers design templates and tools for creating websites.",
+      "website": "https://heroicnow.com",
+      "icon": "Heroic.svg"
+    },
+    "Heyflow": {
+      "cats": [
+        51,
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.heyflow\\.app/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunk_heyflow_widget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunk_heyflow_widget !== 'undefined';"
+        }
+      ],
+      "description": "Heyflow is an all-in-one platform that enables users to create interactive lead funnels, multi-step forms, and customized landing pages that drive conversions and engage website visitors, all without the need for coding.",
+      "website": "https://heyflow.com",
+      "icon": "Heyflow.svg"
+    },
+    "Homestead": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^homestead sitebuilder$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Homestead is a website builder.",
+      "website": "https://www.homestead.com",
+      "icon": "Homestead.png"
+    },
+    "Hostinger Horizons": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^hostinger horizons$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^hostinger horizons$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Hostinger Horizons is a no-code web app builder designed to simplify web application creation without requiring programming knowledge.",
+      "website": "https://www.hostinger.com/horizons",
+      "icon": "Hostinger.svg"
+    },
+    "Hostinger Website Builder": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Vue.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']hostinger website builder[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*userapp\\.zyrosite\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Hostinger Website Builder is a web-based platform that allows users to create and design websites without needing to write code or have extensive technical knowledge.",
+      "website": "https://www.hostinger.com",
+      "icon": "Hostinger.svg"
+    },
+    "Hotel Propeller": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hotelpropeller\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Hotel Propeller is a web design platform that creates responsive websites tailored for hotels.",
+      "website": "https://hotelpropeller.com",
+      "icon": "HotelPropeller.svg"
+    },
+    "Hypervisual Page Builder": {
+      "cats": [
+        51,
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.gethypervisual\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hypervisualPreflight !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hypervisualPreflight !== 'undefined';"
+        }
+      ],
+      "description": "Hypervisual Page Builder is a page builder for Shopify.",
+      "website": "https://gethypervisual.com",
+      "icon": "Hypervisual.png"
+    },
+    "Instant": {
+      "cats": [
+        51,
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Instant !== 'undefined' \u0026\u0026 typeof Instant.initialized !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __instantInitSliders !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Instant.initialized !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Instant.initializedVersion !== 'undefined';",
+          "version": "try { return String(Instant.initializedVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Instant is a no-code, visual page builder for Shopify, allowing users to create custom landing pages and sections through a drag-and-drop interface without requiring any coding skills.",
+      "website": "https://instant.so",
+      "icon": "Instant.svg"
+    },
+    "Instapage": {
+      "cats": [
+        51,
+        74,
+        10
+      ],
+      "implies": [
+        "Lua",
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.instapagemetrics\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*heatmap-events-collector\\.instapage\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _instapageSnowplow !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof instapageSp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _instapageSnowplow !== 'undefined';"
+        }
+      ],
+      "description": "Instapage is a cloud-based landing page platform designed for marketing teams and agencies.",
+      "website": "https://instapage.com",
+      "icon": "Instapage.svg"
+    },
+    "Italiaonline": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.italiaonline\\.it"
+            }
+          }
+        }
+      ],
+      "description": "Italiaonline is a web platform that provides tools and services for building and managing websites.",
+      "website": "https://www.italiaonline.it",
+      "icon": "Italiaonline.svg"
+    },
+    "Jacklist": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.jacklist\\.jp/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof homepage_api_url !== 'undefined' \u0026\u0026 homepage_api_url === 'api\\.jacklist\\.jp'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof homepage_api_url !== 'undefined';",
+          "version": "try { return String(homepage_api_url || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Jacklist is a website builder system developed in Japan.",
+      "website": "https://jacklist.ltd",
+      "icon": "Jacklist.svg"
+    },
+    "Jottful": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']web_author[\"'][^\u003e]+content=[\"']^jottful[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Jottful is a platform that enables small businesses to create and manage professional websites.",
+      "website": "https://jottful.com",
+      "icon": "Jottful.svg"
+    },
+    "Kapix Studio": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "TypeScript",
+        "Vite"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __INITIAL_STATE__ !== 'undefined' \u0026\u0026 __INITIAL_STATE__ === 'KapixNoCode'; } catch(e){ return ''; }",
+          "version": "try { return kapixVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __INITIAL_STATE__ !== 'undefined';",
+          "version": "try { return String(__INITIAL_STATE__ || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kapixVersion !== 'undefined';",
+          "version": "try { return String(kapixVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Kapix Studio is a no-code platform that lets anyone build web apps without writing any code.",
+      "website": "https://studio.kapix.fr",
+      "icon": "Kapix.svg"
+    },
+    "Kites": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof kiteInstance !== 'undefined' \u0026\u0026 typeof kiteInstance.analytics !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kiteInstance.analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kiteJS !== 'undefined';"
+        }
+      ],
+      "description": "Kites is a no-code, drag-and-drop builder for creating interactive mobile websites.",
+      "website": "https://www.kites.io",
+      "icon": "Kites.svg"
+    },
+    "Kopage": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof kopageBar !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kopageBar !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kopageChatBar !== 'undefined';"
+        }
+      ],
+      "description": "Kopage is an AI-powered website builder designed to simplify the process of creating and managing websites, offering automated tools and features that enable users to build functional websites without extensive technical knowledge.",
+      "website": "https://www.kopage.com",
+      "icon": "Kopage.svg"
+    },
+    "Kubio Builder": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof kubio !== 'undefined' \u0026\u0026 typeof kubio.frontend !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kubio.frontend !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kubioFrontendData !== 'undefined';"
+        }
+      ],
+      "description": "Kubio Builder is a WordPress site builder that enables editing of all site elements within a single interface.",
+      "website": "https://kubiobuilder.com",
+      "icon": "KubioBuilder.svg"
+    },
+    "Kyvio": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.kyvio\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Kyvio is a platform for creating membership websites and constructing marketing funnels.",
+      "website": "https://kyvio.com",
+      "icon": "Kyvio.svg"
+    },
+    "Ladipage": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*w\\.ladicdn\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LadiPageApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LadiPageApp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LadiPageCommand !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LadiPageScript !== 'undefined';"
+        }
+      ],
+      "description": "Ladipage is a landing page designing platform that helps businesses to promote sales by advertising their products and services.",
+      "website": "https://ladipage.vn",
+      "icon": "Ladipage.svg"
+    },
+    "Landingi": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*scripts\\.assets-landingi\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof landingiInternalDetails !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof landingiInternalDetails !== 'undefined';"
+        }
+      ],
+      "description": "Landingi is a platform for automating the creation, management, and optimization of landing pages.",
+      "website": "https://landingi.com",
+      "icon": "Landingi.svg"
+    },
+    "Launchrock": {
+      "cats": [
+        51,
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*builder\\.launchrock\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof lrIgnition !== 'undefined' \u0026\u0026 lrIgnition === '\\;confidence:25'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lrIgnition !== 'undefined';",
+          "version": "try { return String(lrIgnition || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lrLoadedJs !== 'undefined';",
+          "version": "try { return String(lrLoadedJs || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lrSiteRenderingData.apiEndpoint !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lrSiteSettingAsBoolean !== 'undefined';",
+          "version": "try { return String(lrSiteSettingAsBoolean || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lrignition !== 'undefined';",
+          "version": "try { return String(lrignition || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Launchrock is an online tool designed to help capture email addresses and create online product launching events.",
+      "website": "https://www.launchrock.com",
+      "icon": "Launchrock.svg"
+    },
+    "LeadPages": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.leadpages\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LeadPagesCenterObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LeadPagesCenterObject !== 'undefined';"
+        }
+      ],
+      "description": "LeadPages is a tool that allows users to transform their ideas into published landing pages efficiently.",
+      "website": "https://www.leadpages.com",
+      "icon": "LeadPages.svg"
+    },
+    "Level 5": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof l5_inventory_url !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof l5_inventory_url !== 'undefined';"
+        }
+      ],
+      "description": "Level 5 is a page builder constructed with WordPress and powered with WP Engine hosting featuring advanced caching and performance optimisation.",
+      "website": "https://level5advertising.com/websites/",
+      "icon": "Level 5.png"
+    },
+    "LiveBooks": {
+      "cats": [
+        51
+      ],
+      "description": "LiveBooks is a platform offering mobile-friendly websites built using customized website templates.",
+      "website": "https://livebooks.com",
+      "icon": "LiveBooks.svg"
+    },
+    "LiveEdit": {
+      "cats": [
+        51,
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']www\\.getliveedit\\.com[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/js/([\\d\\.]+)/liveedit\\.base\\.min\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "LiveEdit is a platform that provides web design, copywriting, and other features for businesses in the health, fitness, wellness, and beauty sectors.",
+      "website": "https://liveeditplatform.com",
+      "icon": "LiveEdit.svg"
+    },
+    "LiveSite": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^livesite\\s+-\\s+https://livesite\\.com$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "LiveSite is a professional website builder that enables users to create, manage, and publish websites.",
+      "website": "https://livesite.com",
+      "icon": "LiveSite.svg"
+    },
+    "Mahara": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']mahara ([\\d\\.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Mahara is an open source ePortfolio and social networking web application.",
+      "website": "https://mahara.org",
+      "icon": "Mahara.svg"
+    },
+    "MailerLite Website Builder": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.mailerlite\\.com/moment/moment\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "MailerLite Website Builder is a free drag \u0026 drop website builder with interactive blocks and ecommerce integrations.",
+      "website": "https://www.mailerlite.com/features/website-builder",
+      "icon": "MailerLite.svg"
+    },
+    "Makeswift": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.access-control-allow-origin": {
+                  "$regex": "app\\.makeswift\\.com"
+                }
+              },
+              {
+                "headers.content-security-policy": {
+                  "$regex": "app\\.makeswift\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.makeswift\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Makeswift is a no-code website builder with the power and detail of a design tool.",
+      "website": "https://www.makeswift.com",
+      "icon": "Makeswift.svg"
+    },
+    "Menufy Website": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sitecontent-menufycom\\.netdna-ssl\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Views_Website_Layouts_Footer_Menufy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Views_Website_Layouts_Footer_Menufy !== 'undefined';"
+        }
+      ],
+      "description": "Menufy is an online and mobile meal ordering service.",
+      "website": "https://restaurant.menufy.com",
+      "icon": "Menufy.png"
+    },
+    "Mobirise": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- site made with mobirise website builder v([\\d.]+)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^mobirise v([\\d.]+)\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Mobirise is a free offline app for Windows and Mac to easily create small/medium websites, landing pages, online resumes and portfolios.",
+      "website": "https://mobirise.com",
+      "icon": "mobirise.png"
+    },
+    "Modulify": {
+      "cats": [
+        51
+      ],
+      "description": "Modulify is a platform that enables the creation and deployment of scalable websites.",
+      "website": "https://modulify.ai",
+      "icon": "Modulify.svg"
+    },
+    "Motive": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.app\\.ridemotive\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Motive is an all-in-one website platform designed to create and manage online presence for the automotive industry.",
+      "website": "https://motivehq.com",
+      "icon": "Motive.svg"
+    },
+    "Mottor": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mottorLogError !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mottorLogError !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof serviceBaseUrl !== 'undefined';",
+          "version": "try { return String(serviceBaseUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Mottor is a no-code tool for creating websites, online stores, landing pages, and more.",
+      "website": "https://lpmotor.ru",
+      "icon": "Mottor.svg"
+    },
+    "MySiteNow": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']app-platform[\"'][^\u003e]+content=[\"']^mysitenow$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "MySiteNow provides cloud-based web development services, allowing users to create HTML5 websites and mobile sites.",
+      "website": "https://mysitenow.gr",
+      "icon": "MySiteNow.png"
+    },
+    "MyWebsite": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']ionos mywebsite\\;version:8[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SystemID !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return SystemID || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SystemID !== 'undefined';",
+          "version": "try { return String(SystemID || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "MyWebsite is website builder designed for easy editing and fast results.",
+      "website": "https://www.ionos.com",
+      "icon": "MyWebsite.svg"
+    },
+    "MyWebsite Creator": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Duda"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mywebsite-editor\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*website-editor\\.net"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "MyWebsite Creator is website builder designed for easy editing and fast results.",
+      "website": "https://www.ionos.com",
+      "icon": "MyWebsite.svg"
+    },
+    "MyWebsite Now": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "GraphQL",
+        "Node.js",
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']mywebsite now[\"']"
+            }
+          }
+        }
+      ],
+      "description": "MyWebsite Now is a website builder designed for getting online quickly.",
+      "website": "https://www.ionos.com",
+      "icon": "MyWebsite.svg"
+    },
+    "Mysitefy": {
+      "cats": [
+        51
+      ],
+      "description": "Mysitefy is a digital platform for B2B enterprises. It provides companies with a closed-loop digital application system from website building to marketing, to customer and order management.",
+      "website": "https://www.mysitefy.com",
+      "icon": "Mysitefy.png"
+    },
+    "Nebula Sites": {
+      "cats": [
+        51,
+        88
+      ],
+      "description": "Nebula Sites is a platform that allows users to create, host, and manage websites.",
+      "website": "https://nebulasites.org",
+      "icon": "NebulaSites.svg"
+    },
+    "Netlify Create": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.stackbit\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __NEXT_DATA__ !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps.withStackbit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __NEXT_DATA__.props.pageProps.withStackbit !== 'undefined';"
+        }
+      ],
+      "description": "Netlify Create (formerly Stackbit) is a visual experience platform for building decoupled websites.",
+      "website": "https://www.stackbit.com",
+      "icon": "Netlify.svg"
+    },
+    "Nicepage": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']nicepage\\s([\\d\\.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _npAccordionInit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _npAccordionInit !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _npDialogsInit !== 'undefined';"
+        }
+      ],
+      "description": "Nicepage is a free website building tool that requires no coding skills and integrates seamlessly with all leading CMS systems.",
+      "website": "https://nicepage.com",
+      "icon": "Nicepage.png"
+    },
+    "Notion": {
+      "cats": [
+        51
+      ],
+      "description": "Notion is a collaboration platform with modified Markdown support that integrates kanban boards, tasks, wikis, and database.",
+      "website": "https://notion.so",
+      "icon": "Notion.svg"
+    },
+    "OnUniverse": {
+      "cats": [
+        51
+      ],
+      "description": "OnUniverse is the first website builder and commerce platform built for mobile devices.",
+      "website": "https://onuniverse.com",
+      "icon": "OnUniverse.png"
+    },
+    "Onepage": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.onepage\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Onepage is a page-building software that enhances productivity by streamlining the creation and management of web pages.",
+      "website": "https://onepage.io",
+      "icon": "Onepage.svg"
+    },
+    "Oopy": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Next.js",
+        "Notion"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __OOPY__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __OOPY__ !== 'undefined';"
+        }
+      ],
+      "description": "Oopy provides you with a simple and easy way to turn your Notion page into a performant website.",
+      "website": "https://oopy.us/",
+      "icon": "Oopy.png"
+    },
+    "Optimx Sports": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/optimx-sports\\.appspot"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackJsonpoptimx_sports_client_website !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackJsonpoptimx_sports_client_website !== 'undefined';"
+        }
+      ],
+      "description": "OptimX Sports is a platform that provides professional website designs for hockey, rugby, and lacrosse teams using a state-of-the-art creation system.",
+      "website": "https://optimxsports.com",
+      "icon": "OptimxSports.svg"
+    },
+    "Oracle Application Express": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof apex !== 'undefined' \u0026\u0026 typeof apex.libVersions !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return apex.libVersions || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apex.libVersions !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apex_img_dir !== 'undefined';"
+        }
+      ],
+      "description": "Oracle Application Express (APEX) is an enterprise low-code development platform from Oracle Corporation. APEX is a fully supported no-cost feature of Oracle Database.",
+      "website": "https://apex.oracle.com",
+      "icon": "Oracle.svg"
+    },
+    "Ova": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cffOptions !== 'undefined' \u0026\u0026 typeof cffOptions.placeholder !== 'undefined' \u0026\u0026 cffOptions.placeholder === '\\.ova\\.net\\.au/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cffOptions.placeholder !== 'undefined';",
+          "version": "try { return String(cffOptions.placeholder || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cffOptions.resized_url !== 'undefined';"
+        }
+      ],
+      "description": "Ova is a website builder platform from Australia.",
+      "website": "https://ova.net.au",
+      "icon": "Ova.svg"
+    },
+    "Oxygen": {
+      "cats": [
+        51,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cbody class=(?:\"|')[^\"']*oxygen-body"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink [^\u003e]*href=(?:\"|')[^\u003e]*wp-content/plugins/oxygen/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wp-content/plugins/oxygen"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Oxygen Builder is a tool to build a WordPress website.",
+      "website": "https://oxygenbuilder.com",
+      "icon": "Oxygen.png"
+    },
+    "PARSICO": {
+      "cats": [
+        51
+      ],
+      "description": "PARSICO is a website builder that simplifies the creation of responsive websites through an intuitive interface.",
+      "website": "https://parsico.org/",
+      "icon": "PARSICO.svg"
+    },
+    "PageFly": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "pagefly"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.pagefly\\.io"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __pagefly_setting__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __pagefly_setting__ !== 'undefined';"
+        }
+      ],
+      "description": "PageFly is an app for Shopify that allows you to build landing pages, product pages, blogs, and FAQs.",
+      "website": "https://pagefly.io",
+      "icon": "pagefly.png"
+    },
+    "Pagecloud": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app-assets\\.pagecloud\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Pagecloud is a drag-and-drop website builder that enables you to design and deploy websites without writing code.",
+      "website": "https://www.pagecloud.com",
+      "icon": "Pagecloud.svg"
+    },
+    "Pagemaker": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.pagemaker\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pagemaker !== 'undefined' \u0026\u0026 typeof pagemaker.accordion !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pagemaker.accordion !== 'undefined';"
+        }
+      ],
+      "description": "Pagemaker is a tool for creating mobile-first web pages optimized for high conversion rates.",
+      "website": "https://pagemaker.io",
+      "icon": "Pagemaker.svg"
+    },
+    "Peraichi": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Peraichi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Peraichi !== 'undefined';"
+        }
+      ],
+      "description": "Peraichi is a software company that develops website creation tools and user support systems necessary for businesses.",
+      "website": "https://peraichi.com",
+      "icon": "Peraichi.svg"
+    },
+    "Pickaxe": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.pickaxeproject\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PICKAXE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PICKAXE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PickaxeProject !== 'undefined';"
+        }
+      ],
+      "description": "Pickaxe is a no-code platform that enables users to build, launch, and sell AI products without requiring coding skills.",
+      "website": "https://pickaxe.co",
+      "icon": "Pickaxe.svg"
+    },
+    "Pineapple Builder": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.pineapple-cdn\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Pineapple Builder is an AI-powered website builder designed to help businesses create and scale websites.",
+      "website": "https://www.pineapplebuilder.com",
+      "icon": "PineappleBuilder.svg"
+    },
+    "Pixelesq": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^pixelesq\\s-\\sai\\swebsite\\sbuilder$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Pixelesq is a no-code platform that uses AI tools to generate and manage websites with structured control over SEO, accessibility, performance, and branding standards.",
+      "website": "https://www.pixelesq.com",
+      "icon": "Pixelesq.svg"
+    },
+    "Pixenio": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Pixenio is a responsive website builder that enables users to create fast, SEO-optimized sites with simplicity comparable to managing social media profiles.",
+      "website": "https://pixenio.com",
+      "icon": "Pixenio.svg"
+    },
+    "Planoplan": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.planoplan\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.planoplan\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Planoplan is a 3D interior design program that offers layouts, visualizations, and virtual tours for creating and exploring interior spaces.",
+      "website": "https://planoplan.com",
+      "icon": "Planoplan.svg"
+    },
+    "Plasmic": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __NEXT_DATA__ !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps.plasmicData !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __NEXT_DATA__.props.pageProps.plasmicData !== 'undefined';"
+        }
+      ],
+      "description": "Plasmic is a visual, no-code headless page/content builder for any website or codebase.",
+      "website": "https://www.plasmic.app",
+      "icon": "Plasmic.svg"
+    },
+    "Platforma LP": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.lpcdn\\.site/"
+            }
+          }
+        }
+      ],
+      "description": "Platforma LP is a web design and development platform that provides ready-to-use website templates for various industries and purposes. It is a collection of over 500 website templates that can be customised and edited according to user needs.",
+      "website": "https://platformalp.ru",
+      "icon": "Platforma LP.png"
+    },
+    "Pobo": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.pobo\\.cz"
+            }
+          }
+        }
+      ],
+      "description": "Pobo is a platform for building and customizing web pages with drag-and-drop functionality and design tools.",
+      "website": "https://www.pobo.cz",
+      "icon": "Pobo.svg"
+    },
+    "Podpage": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.getpodpage\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Podpage is a podcast site builder that automatically creates professional websites for podcasts using RSS feeds.",
+      "website": "https://www.podpage.com",
+      "icon": "Podpage.svg"
+    },
+    "Popsy": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.popsy\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Popsy is a no-code website builder designed for creators to build and publish websites without programming knowledge.",
+      "website": "https://popsy.co",
+      "icon": "Popsy.svg"
+    },
+    "PromoBuilding": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- made with https://promobuilding\\.ru"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof promoApi !== 'undefined' \u0026\u0026 promoApi === '\\;confidence:25'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof promoDomain !== 'undefined';",
+          "version": "try { return String(promoDomain || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof promoIsOver !== 'undefined';",
+          "version": "try { return String(promoIsOver || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof promoStart !== 'undefined';",
+          "version": "try { return String(promoStart || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof promoApi !== 'undefined';",
+          "version": "try { return String(promoApi || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "PromoBuilding is a subscription-based website builder for optimising budgets for creating promotional campaigns.",
+      "website": "https://promobuilding.ru",
+      "icon": "PromoBuilding.svg"
+    },
+    "QUV": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.quv\\.kr/"
+            }
+          }
+        }
+      ],
+      "description": "QUV is a Korean no-code website builder platform that enables website creation through drag-and-drop functionality.",
+      "website": "https://quv.kr",
+      "icon": "QUV.svg"
+    },
+    "RapidWeaver": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^rapidweaver$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "RapidWeaver is a web design software for Mac that enables users to create and publish websites using a visual interface with templates and plugins.",
+      "website": "https://www.realmacsoftware.com/rapidweaver/",
+      "icon": "RapidWeaver.svg"
+    },
+    "Rawabit": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']powered-by[\"'][^\u003e]+content=[\"']^rawabit$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Rawabit is a website builder that lets small businesses design landing pages, modify sections, and embed content links using a drag and drop editor.",
+      "website": "https://www.rawabit.me",
+      "icon": "Rawabit.svg"
+    },
+    "Readymag": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^readymag$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Readymag is a browser-based design tool that helps create websites, portfolios and all kinds of online publications without coding.",
+      "website": "https://readymag.com",
+      "icon": "Readymag.svg"
+    },
+    "Real Geeks": {
+      "cats": [
+        51,
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']og:image[\"'][^\u003e]+content=[\"']\\.realgeeks\\.media/[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.realgeeks\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof realgeeks !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof realgeeks !== 'undefined';"
+        }
+      ],
+      "description": "Real Geeks is a SaaS platform for real estate professionals that combines CRM, lead generation, and website building tools.",
+      "website": "https://www.realgeeks.com",
+      "icon": "Real Geeks.svg"
+    },
+    "Replo": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*replocdn\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Replo is a platform offering customizable landing pages designed for ecommerce teams.",
+      "website": "https://www.replo.app",
+      "icon": "replo.svg"
+    },
+    "Retrina Builder": {
+      "cats": [
+        51
+      ],
+      "description": "Retrina Builder is a drag-and-drop page builder for OpenCart that enables website creation without requiring coding skills.",
+      "website": "https://retrina.com/ronixa-product",
+      "icon": "RetrinaBuilder.svg"
+    },
+    "Revize": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RZ !== 'undefined' \u0026\u0026 typeof RZ.MSIE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RZ.MSIE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RZabsoluteUrl !== 'undefined';"
+        }
+      ],
+      "description": "Revize is a platform designed to create and manage websites for government agencies.",
+      "website": "https://www.revize.com",
+      "icon": "Revize.svg"
+    },
+    "Rocketspark": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.rocketspark\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Rocketspark is a website builder that enables users to design and manage professional-looking websites without coding, offering customizable templates and integrated ecommerce features.",
+      "website": "https://www.rocketspark.com",
+      "icon": "Rocketspark.svg"
+    },
+    "STUDIO": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Firebase",
+        "Google Cloud",
+        "Google Tag Manager",
+        "Nuxt.js",
+        "Vue.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^studio$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "STUDIO is a Japan-based company and SaaS application for designing and hosting websites. The service includes a visual editor with built-in CMS and analytics.",
+      "website": "https://studio.design",
+      "icon": "STUDIO.svg"
+    },
+    "Sellful": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sellful\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Sellful is an AI-powered, all-in-one software for entrepreneurs and agencies, enabling the creation of web and mobile applications without coding through a white-label website builder.",
+      "website": "https://sellful.com",
+      "icon": "Sellful.svg"
+    },
+    "Sharing": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^sharing$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Sharing is a platform for AI-generated websites, offering tools for web creation and site building.",
+      "website": "https://web.sharing.tw",
+      "icon": "Sharing.svg"
+    },
+    "Shogun Page Builder": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof shogunAnalytics !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof shogunAnalytics !== 'undefined';"
+        }
+      ],
+      "description": "Shogun is a page builder commonly used with headless implementations.",
+      "website": "https://getshogun.com/page-builder",
+      "icon": "Shogun Page Builder.svg"
+    },
+    "Showit": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*lib\\.showit\\.co/engine/([\\d\\.]+)/\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof showit !== 'undefined' \u0026\u0026 typeof showit.default !== 'undefined' \u0026\u0026 typeof showit.default.siteId !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof showit.default.siteId !== 'undefined';"
+        }
+      ],
+      "description": "Showit is a drag-and-drop, no-code website builder for photographers and creative professionals.",
+      "website": "https://showit.co",
+      "icon": "Showit.svg"
+    },
+    "Silex": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^silex v([\\d.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof silex !== 'undefined' \u0026\u0026 typeof silex.getCurrentPage !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof silex.getCurrentPage !== 'undefined';"
+        }
+      ],
+      "description": "Silex is an open-source web-based website builder that allows users to create websites without writing code.",
+      "website": "https://www.silex.me",
+      "icon": "Silex.svg"
+    },
+    "Simple.ink": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Notion"
+      ],
+      "description": "Simple.ink allows you to build no-code websites with Notion.",
+      "website": "https://www.simple.ink",
+      "icon": "Simple.ink.svg"
+    },
+    "Simvoly": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Simvoly !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Simvoly !== 'undefined';"
+        }
+      ],
+      "description": "Simvoly is a drag-and-drop website builder for small and medium-sized businesses, agencies, and freelancers.",
+      "website": "https://simvoly.com",
+      "icon": "Simvoly.png"
+    },
+    "SiteW": {
+      "cats": [
+        51
+      ],
+      "description": "SiteW is a French-based company that offers a website building service.",
+      "website": "https://www.en.sitew.com",
+      "icon": "SiteW.svg"
+    },
+    "SiteWright": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sitewright\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "SiteWright is a platform for creating fitness and wellness websites.",
+      "website": "https://www.sitewright.io",
+      "icon": "SiteWright.svg"
+    },
+    "Siteklik": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//webstats\\.siteklik\\.nl/"
+            }
+          }
+        }
+      ],
+      "description": "Siteklik is a sitebuilder designed for small businesses and self-employed individuals.",
+      "website": "https://siteklik.nl/",
+      "icon": "Siteklik.svg"
+    },
+    "Siter": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof readySiterPage !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof readySiterPage !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof renderSiterPage !== 'undefined';"
+        }
+      ],
+      "description": "Siter is a responsive, no-code site builder that uses a drag-and-drop interface for creating websites without the need for programming skills.",
+      "website": "https://siter.io",
+      "icon": "Siter.svg"
+    },
+    "Sitey": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.sitey\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Sitey is a website builder that enables users to create and customize websites using drag-and-drop tools.",
+      "website": "https://app.sitey.com",
+      "icon": "Sitey.svg"
+    },
+    "Siweb": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunksiweb2 !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunksiweb2 !== 'undefined';"
+        }
+      ],
+      "description": "Siweb is an AI-based website builder from Spain.",
+      "website": "https://siweb.es",
+      "icon": "Siweb.svg"
+    },
+    "Snapps": {
+      "cats": [
+        51,
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//snappsapi\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Snapps is a platform designed to host and build websites.",
+      "website": "https://www.snapps.ai",
+      "icon": "Snapps.svg"
+    },
+    "Sociavore": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^sociavore$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Sociavore is a platform providing mobile-friendly website solutions for restaurants, enabling optimized browsing and menu access across devices.",
+      "website": "https://www.sociavore.co",
+      "icon": "Sociavore.svg"
+    },
+    "Softr": {
+      "cats": [
+        51
+      ],
+      "description": "Softr is a tool designed to help users build custom websites, web apps, clients portals, or internal tools using Airtable or Google Sheets data.",
+      "website": "https://www.softr.io",
+      "icon": "Softr.svg"
+    },
+    "Solo": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.soloist\\.ai"
+            }
+          }
+        }
+      ],
+      "description": "Solo is a free AI website creator that builds professional websites for businesses using minimal inputs.",
+      "website": "https://soloist.ai",
+      "icon": "Solo.svg"
+    },
+    "SpotHopper": {
+      "cats": [
+        51,
+        32,
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.spotapps\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Spothopper !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Spothopper !== 'undefined';"
+        }
+      ],
+      "description": "SpotHopper is an all-in-one marketing and online revenue platform for restaurants.",
+      "website": "https://www.spothopperapp.com",
+      "icon": "SpotHopper.png"
+    },
+    "Springnest": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*b-cdn\\.springnest\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Springnest is a website builder designed for tourism professionals, offering tools to create and manage travel-related websites.",
+      "website": "https://springnest.com",
+      "icon": "Springnest.svg"
+    },
+    "Sqwiz": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//sqwiz\\.com/scripts/"
+            }
+          }
+        }
+      ],
+      "description": "Sqwiz is a tool that uses previously entered business information, such as name, contact details, and Facebook posts, to build a mobile-ready website.",
+      "website": "https://sqwiz.com",
+      "icon": "Sqwiz.svg"
+    },
+    "Stackbit": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.stackbit\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __NEXT_DATA__ !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps.withStackbit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __NEXT_DATA__.props.pageProps.withStackbit !== 'undefined';"
+        }
+      ],
+      "description": "Stackbit is a visual experience platform for building decoupled websites.",
+      "website": "https://www.stackbit.com",
+      "icon": "stackbit.svg"
+    },
+    "StackerHQ": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof stacker !== 'undefined' \u0026\u0026 typeof stacker.install_feature !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof stacker.install_feature !== 'undefined';"
+        }
+      ],
+      "description": "StackerHQ is a tool in the low code platforms and application builders categories.",
+      "website": "https://www.stackerhq.com",
+      "icon": "StackerHQ.svg"
+    },
+    "Stardekk": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^stardekk$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']copyright[\"'][^\u003e]+content=[\"']^stardekk$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.stardekk\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Stardekk is a platform that provides hotel web design solutions.",
+      "website": "https://www.stardekk.com/blog",
+      "icon": "Stardekk.svg"
+    },
+    "Starhost": {
+      "cats": [
+        51,
+        62
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.cache-control": {
+                  "$regex": "starhost"
+                }
+              },
+              {
+                "headers.x-starhost": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Starhost provides a Platform-as-a-Service (PaaS) for website building, web hosting, and domain registration.",
+      "website": "https://starhost.verbosec.com",
+      "icon": "Starhost.svg"
+    },
+    "Super Builder": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Next.js",
+        "Notion"
+      ],
+      "description": "Super Builder is a new tool for creating sleek landing pages right in Notion.",
+      "website": "https://super.so",
+      "icon": "Super Builder.svg"
+    },
+    "Swipe Pages": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.swipepages\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Swipe Pages is a platform used to build landing pages.",
+      "website": "https://swipepages.com",
+      "icon": "Swipe Pages.svg"
+    },
+    "Taptop": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof taptop !== 'undefined' \u0026\u0026 typeof taptop.gsap !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof taptop.gsap !== 'undefined';"
+        }
+      ],
+      "description": "Taptop is Software-as-a-Service (SaaS) for website building and hosting.",
+      "website": "https://taptop.pro",
+      "icon": "Taptop.svg"
+    },
+    "TeleportHQ": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "React"
+      ],
+      "description": "TeleportHQ is a front-end development platform featuring a visual builder and headless content modeling capabilities.",
+      "website": "https://teleporthq.io",
+      "icon": "TeleportHq.svg"
+    },
+    "The Church Co": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^thechurchco\\s([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "The Church Co is a church-focused website development platform that provides tools and features specifically designed to support the growth and online presence of churches and religious organisations.",
+      "website": "https://thechurchco.com",
+      "icon": "The Church Co.png"
+    },
+    "Themify Builder": {
+      "cats": [
+        51,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cdiv[^\u003e]+class=[\"']themify_builder_*"
+            }
+          }
+        }
+      ],
+      "description": "Themify Builder is a plugin that allows users to create complex layouts and designs by dragging and dropping elements onto their pages.",
+      "website": "https://themify.me/builder",
+      "icon": "themify-builder.png"
+    },
+    "Tunosite": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.tunosite\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Tunosite is a web app builder for startups and business with combining content, membership, and discussions in one place, under your own brand with no coding skills required.",
+      "website": "https://tunosite.com",
+      "icon": "Tunosite.svg"
+    },
+    "Umso": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ispriorblockingenabled\\;confidence:75"
+            }
+          }
+        }
+      ],
+      "description": "Umso is a website builder for Startups.",
+      "website": "https://www.umso.com",
+      "icon": "Umso.svg"
+    },
+    "Untree": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']untree\\.co[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Untree is a provider of free Bootstrap templates for building responsive websites.",
+      "website": "https://untree.co",
+      "icon": "Untree.svg"
+    },
+    "Venngage": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*infograph\\.venngage\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __venngage_embed_script_loaded !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __venngage_embed_script_loaded !== 'undefined';"
+        }
+      ],
+      "description": "Venngage is a platform that enables the creation of infographics using AI-powered tools to streamline design and visualization.",
+      "website": "https://venngage.com",
+      "icon": "Venngage.svg"
+    },
+    "Vev": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.vev\\.design/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof vev !== 'undefined' \u0026\u0026 typeof vev.App !== 'undefined' \u0026\u0026 typeof vev.App.compare !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vev.App.compare !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vev.DEFAULT_APP_STATE !== 'undefined';"
+        }
+      ],
+      "description": "Vev is a cloud-based design and publishing platform that enables users to create interactive digital content without coding, using a drag-and-drop interface and built-in templates and integrations.",
+      "website": "https://www.vev.design",
+      "icon": "Vev.svg"
+    },
+    "Vintcer": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.vintcer\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Vintcer is a drag-and-drop website builder that includes a built-in page manager, hosting, and email services.",
+      "website": "https://vintcer.com",
+      "icon": "Vintcer.svg"
+    },
+    "Visual Composer": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "PHP",
+        "WordPress"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']powered by visual composer website builder[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Visual Composer is an all-in-one web design tool for anyone who uses WordPress.",
+      "website": "https://visualcomposer.com",
+      "icon": "visualcomposer.svg"
+    },
+    "Vitrin.me": {
+      "cats": [
+        51
+      ],
+      "implies": [
+        "Django",
+        "Next.js",
+        "Python",
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.vitrin\\.me/"
+            }
+          }
+        }
+      ],
+      "description": "Vitrin.me is a no-code platform that lets anyone build web apps without writing any code.",
+      "website": "https://vitrin.me",
+      "icon": "Vitrin.me.svg"
+    },
+    "Voog": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.voog\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Voog is a user-friendly website building platform.",
+      "website": "https://www.voog.com",
+      "icon": "Voog.svg"
+    },
+    "WeWeb": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof wwg_designInfo !== 'undefined' \u0026\u0026 typeof wwg_designInfo.wewebPreviewURL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wwg_designInfo.wewebPreviewURL !== 'undefined';"
+        }
+      ],
+      "description": "WeWeb is a no-code front-end builder that allows customers to build on-top of any back-end.",
+      "website": "https://www.weweb.io",
+      "icon": "WeWeb.svg"
+    },
+    "Weaverse": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __weaverses !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __weaverses !== 'undefined';"
+        }
+      ],
+      "description": "Weaverse is a theme customizer and headless CMS for Shopify Hydrogen.",
+      "website": "https://weaverse.io",
+      "icon": "Weaverse.svg"
+    },
+    "WebBoss": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']webboss ([\\d.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "WebBoss is a website builder designed for professional designers and developers, offering tools for creating and managing custom websites.",
+      "website": "https://webboss.io",
+      "icon": "WebBoss.svg"
+    },
+    "WebWave": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webwave !== 'undefined' \u0026\u0026 typeof webwave.getAppVersion !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return webwave.getAppVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webwaveFontsLoadedFlag !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webwave.getAppVersion !== 'undefined';"
+        }
+      ],
+      "description": "WebWave is a drag and drop website builder.",
+      "website": "https://webwavecms.com",
+      "icon": "WebWave.svg"
+    },
+    "Webcake": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WebcakeAddresses !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WebcakeAddresses !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WebcakeScript !== 'undefined';"
+        }
+      ],
+      "description": "Webcake is a platform for designing visually appealing landing pages.",
+      "website": "https://webcake.io",
+      "icon": "Webcake.svg"
+    },
+    "Webflow": {
+      "cats": [
+        51,
+        1
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']webflow[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Webflow !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Webflow !== 'undefined';"
+        }
+      ],
+      "description": "Webflow is Software-as-a-Service (SaaS) for website building and hosting.",
+      "website": "https://webflow.com",
+      "icon": "webflow.svg"
+    },
+    "Webito": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^webito website builder$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Webito is a website builder that uses AI to provide flexible and scalable site creation.",
+      "website": "http://webito.co",
+      "icon": "Webito.svg"
+    },
+    "Webready": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Webready !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Webready !== 'undefined';"
+        }
+      ],
+      "description": "Webready is a platform that enables users to create custom vacation rental websites.",
+      "website": "https://usewebready.com",
+      "icon": "Webready.svg"
+    },
+    "WebsiteBuilder": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _site !== 'undefined' \u0026\u0026 typeof _site.urls !== 'undefined' \u0026\u0026 typeof _site.urls.dataproxy !== 'undefined' \u0026\u0026 _site.urls.dataproxy === '\\.mywebsitebuilder\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _site.urls.dataproxy !== 'undefined';",
+          "version": "try { return String(_site.urls.dataproxy || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "WebsiteBuilder is a page-builder for creating web pages without knowledge of programming languages.",
+      "website": "https://www.websitebuilder.com",
+      "icon": "WebsiteBuilder.svg"
+    },
+    "Webstudio": {
+      "cats": [
+        51
+      ],
+      "description": "Webstudio is a platform that enables users to build custom frontends without manually writing code.",
+      "website": "https://webstudio.is",
+      "icon": "Webstudio.svg"
+    },
+    "Webware": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*iglu:io\\.webware/"
+            }
+          }
+        }
+      ],
+      "description": "Webware is a platform that provides a user-friendly toolkit designed to help businesses establish an online presence.",
+      "website": "https://www.webware.ai",
+      "icon": "Webware.svg"
+    },
+    "Webydo": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*global\\.webydo\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Webydo is an online website generator that enables users to create websites without coding.",
+      "website": "https://www.webydo.com",
+      "icon": "Webydo.svg"
+    },
+    "Wized": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Wized !== 'undefined' \u0026\u0026 typeof Wized.data !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Wized.data !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wized_config !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wized_config_dev !== 'undefined';"
+        }
+      ],
+      "description": "Wized is a web application builder that enables the creation of apps without requiring any coding knowledge.",
+      "website": "https://www.wized.io",
+      "icon": "Wized.svg"
+    },
+    "Wolters Kluwer": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^designed by cch site builder$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.cchwebsites\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Wolters Kluwer is a site builder designed for tax professionals to create and manage websites tailored to their practice needs.",
+      "website": "https://www.cchwebsites.com",
+      "icon": "WoltersKluwer.svg"
+    },
+    "WordPress Block Editor": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cdiv[^\u003e]+class=[\"']wp-block-*"
+            }
+          }
+        }
+      ],
+      "description": "Sites using the WordPress Block Editor, also known as Gutenberg.",
+      "website": "https://wordpress.org/gutenberg/",
+      "icon": "WordPress.svg"
+    },
+    "WordPress Site Editor": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cdiv class=\"wp-site-blocks\"\u003e"
+            }
+          }
+        }
+      ],
+      "description": "Full Site Editing enables users to design and customize their entire WordPress website with a block-based editor.",
+      "website": "https://wordpress.org/documentation/article/site-editor/",
+      "icon": "WordPress.svg"
+    },
+    "YOAPress": {
+      "cats": [
+        51
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof yoa_cache_clear !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof yoa_cache_clear !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof yoa_gallary !== 'undefined';"
+        }
+      ],
+      "description": "YOAPress is a SaaS platform that provides website building solutions tailored for real estate professionals.",
+      "website": "https://yoapress.com",
+      "icon": "YOAPress.svg"
+    },
+    "Ycode": {
+      "cats": [
+        51
+      ],
+      "description": "Ycode is a no-code development platform that allows users to create web and mobile applications without any coding skills.",
+      "website": "https://www.ycode.com",
+      "icon": "Ycode.svg"
+    },
+    "Yola": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.yola(?:cdn)?\\.(?:net|com)/"
+            }
+          }
+        }
+      ],
+      "description": "Yola is a website builder and website hosting company headquartered in San Francisco.",
+      "website": "https://www.yola.com",
+      "icon": "Yola.png"
+    },
+    "Zarla": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.zarlasites\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Zarla is a website builder designed for small businesses, offering SEO optimization features to improve online visibility.",
+      "website": "https://www.zarla.com",
+      "icon": "Zarla.svg"
+    },
+    "Zeta Producer": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^zeta producer ([\\d\\.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Zeta Producer is a professional homepage builder for Windows that enables users to create websites.",
+      "website": "https://www.zeta-producer.com",
+      "icon": "ZetaProducer.svg",
+      "cpe": "cpe:2.3:a:zeta-producer:zeta_producer:*:*:*:*:*:*:*:*"
+    },
+    "ZipWP": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.zipwp\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ZipWP is a website builder that enables creation of professional sites with extensive customization options and no coding required.",
+      "website": "https://zipwp.com",
+      "icon": "ZipWP.svg"
+    },
+    "Zoho Sites": {
+      "cats": [
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^zoho sites ([\\d\\.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Zoho Sites is an all-in-one platform designed to help businesses create websites.",
+      "website": "https://www.zoho.com/sites/",
+      "icon": "Zoho.svg"
+    },
+    "wpBakery": {
+      "cats": [
+        51,
+        87
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']wpbakery[\"']"
+            }
+          }
+        }
+      ],
+      "description": "WPBakery is a drag and drop visual page builder plugin for WordPress.",
+      "website": "https://wpbakery.com",
+      "icon": "wpBakery.svg"
+    }
+  }
+}

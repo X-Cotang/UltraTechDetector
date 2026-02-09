@@ -1,0 +1,229 @@
+{
+  "apps": {
+    "CoinHive": {
+      "cats": [
+        56
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\/(?:coinhive|(authedmine))(?:\\.min)?\\.js\\;version:\\1?opt-in:"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*coinhive\\.com/lib"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CoinHive !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CoinHive !== 'undefined';"
+        }
+      ],
+      "description": "Coinhive is a cryptocurrency mining service.",
+      "website": "https://coinhive.com",
+      "icon": "CoinHive.svg"
+    },
+    "Coinhave": {
+      "cats": [
+        56
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*https?://coin-have\\.com/c/[0-9a-za-z]{4}\\.js"
+            }
+          }
+        }
+      ],
+      "description": "CoinHave is a cryptocurrency mining service.",
+      "website": "https://coin-have.com/",
+      "icon": "coinhave.png"
+    },
+    "Coinimp": {
+      "cats": [
+        56
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*https?://www\\.hashing\\.win/scripts/min\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Client !== 'undefined' \u0026\u0026 typeof Client.Anonymous !== 'undefined' \u0026\u0026 Client.Anonymous === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Client.Anonymous !== 'undefined';",
+          "version": "try { return String(Client.Anonymous || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "CoinImp is a cryptocurrency mining service.",
+      "website": "https://www.coinimp.com",
+      "icon": "coinimp.png"
+    },
+    "Crypto-Loot": {
+      "cats": [
+        56
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/crlt\\.js\\;confidence:75"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^/crypto-loot\\.com/lib/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^/cryptoloot\\.pro/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^/webmine\\.pro/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CRLT !== 'undefined' \u0026\u0026 typeof CRLT.CONFIG !== 'undefined' \u0026\u0026 typeof CRLT.CONFIG.ASMJS_NAME !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CRLT.CONFIG.ASMJS_NAME !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CryptoLoot !== 'undefined';"
+        }
+      ],
+      "description": "Crypto-Loot is a browser based web miner for the uPlexa Blockchain.",
+      "website": "https://crypto-loot.com/",
+      "icon": "Crypto-Loot.png"
+    },
+    "JSEcoin": {
+      "cats": [
+        56
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^(?:https):?//load\\.jsecoin\\.com/load/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jseMine !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jseMine !== 'undefined';"
+        }
+      ],
+      "description": "JSEcoin is a way to mine, receive payments for your goods or services and transfer cryptocurrency",
+      "website": "https://jsecoin.com/",
+      "icon": "JSEcoin.png"
+    },
+    "Minero.cc": {
+      "cats": [
+        56
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//minero\\.cc/lib/minero(?:-miner|-hidden)?\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Minero.cc is a bot that helps run crypto mining application.",
+      "website": "https://minero.cc/"
+    },
+    "Minerstat": {
+      "cats": [
+        56
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.minerstat\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Minerstat is a software provider offering management solutions for crypto mining professionals and mining farms.",
+      "website": "https://minerstat.com",
+      "icon": "Minerstat.svg"
+    },
+    "deepMiner": {
+      "cats": [
+        56
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*deepminer\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof deepMiner !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof deepMiner !== 'undefined';"
+        }
+      ],
+      "website": "https://github.com/deepwn/deepMiner",
+      "icon": "deepminer.png"
+    }
+  }
+}

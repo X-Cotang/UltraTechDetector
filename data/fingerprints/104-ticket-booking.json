@@ -1,0 +1,969 @@
+{
+  "apps": {
+    "Adalte": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']www\\.adalte\\.com[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Adalte is an online solution designed for travel agencies, tour operators, and DMCs, offering travel management capabilities.",
+      "website": "https://www.adalte.com",
+      "icon": "Adalte.svg"
+    },
+    "Agoda": {
+      "cats": [
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof agoda !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof agoda !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof agoda_ad_client !== 'undefined';"
+        }
+      ],
+      "description": "Agoda is an online travel platform offering its services globally via its app and website.",
+      "website": "https://www.agoda.com",
+      "icon": "Agoda.svg"
+    },
+    "Airdata": {
+      "cats": [
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BOOKING_BASE_API_URL !== 'undefined' \u0026\u0026 BOOKING_BASE_API_URL === 'api\\.airdata\\.vn'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BOOKING_BASE_API_URL !== 'undefined';",
+          "version": "try { return String(BOOKING_BASE_API_URL || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Airdata is a ticket booking system for agents in Vietnam, offering unique features to maximize benefits for businesses in managing and selling flight tickets.",
+      "website": "https://airdata.vn",
+      "icon": "Airdata.svg"
+    },
+    "Asksuite": {
+      "cats": [
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AsksuiteUtil !== 'undefined' \u0026\u0026 typeof AsksuiteUtil.calcTime !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AsksuiteUtil.calcTime !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof asksuiteLocalStorage !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof asksuiteLog !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof asksuiteSessionStorage !== 'undefined';"
+        }
+      ],
+      "description": "Asksuite is a platform that enhances direct bookings and revenue for hotels and resorts by improving service experiences and boosting reservation sales productivity.",
+      "website": "https://asksuite.com",
+      "icon": "Asksuite.svg"
+    },
+    "Beyonk": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.beyonk\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Beyonk is an online ticketing software that provides EPOS and booking management solutions for businesses.",
+      "website": "https://beyonk.com",
+      "icon": "Beyonk.svg"
+    },
+    "Bileto": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.bileto\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Bileto is an all-in-one platform for ticket sale and inspection.",
+      "website": "https://www.bileto.com",
+      "icon": "Bileto.svg"
+    },
+    "Book N Pay": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.booknpay\\.net/"
+            }
+          }
+        }
+      ],
+      "description": "Book N Pay is a platform for booking and paying for various services and activities.",
+      "website": "https://booknpay.net",
+      "icon": "BookNPay.svg"
+    },
+    "Busify": {
+      "cats": [
+        104
+      ],
+      "description": "Busify is a bus software platform that enables operators to issue tickets, enhance customer experiences, and manage fleets.",
+      "website": "https://www.busify.com",
+      "icon": "Busify.svg"
+    },
+    "ClickBus": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.clickbus\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ClickBus is an online platform that enables users to search, compare, and book bus travel routes.",
+      "website": "https://www.clickbus.com.br",
+      "icon": "ClickBus.svg"
+    },
+    "Cooltix": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.cooltix\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Cooltix is an event and ticketing system designed to manage and sell tickets for concerts.",
+      "website": "https://cooltix.com",
+      "icon": "Cooltix.svg"
+    },
+    "Dice": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widgets\\.dice\\.fm"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.dice\\.fm"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DiceEventListWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DiceEventListWidget !== 'undefined';"
+        }
+      ],
+      "description": "Dice is an event and ticketing platform that enables users to discover, access, and attend live events through a streamlined digital experience.",
+      "website": "https://dice.fm",
+      "icon": "Dice.svg"
+    },
+    "Etix": {
+      "cats": [
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Etix !== 'undefined' \u0026\u0026 typeof Etix.javaContext !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Etix.javaContext !== 'undefined';"
+        }
+      ],
+      "description": "Etix is an international web-based ticketing service provider for the entertainment, travel, and sports industries.",
+      "website": "https://hello.etix.com",
+      "icon": "Etix.svg"
+    },
+    "EzTix": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*kiosk\\.eztix\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "EzTix is an event ticketing system.",
+      "website": "https://www.eztix.com",
+      "icon": "EzTix.svg"
+    },
+    "Fatsoma": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fatsoma\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Fatsoma is a platform for creating event and concert websites, enabling organizers to manage listings and ticket sales.",
+      "website": "https://www.fatsoma.com",
+      "icon": "Fatsoma.svg"
+    },
+    "Fever": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*feverup\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Fever is a digital platform facilitating the discovery and booking of top events and experiences worldwide.",
+      "website": "https://feverup.com",
+      "icon": "Fever.svg"
+    },
+    "Gevme": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^gevme analytics$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.gevme\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GEVME !== 'undefined' \u0026\u0026 typeof GEVME.analytics !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GEVME.analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GevmeActivityFeed !== 'undefined';"
+        }
+      ],
+      "description": "Gevme is an omnichannel event management platform designed to streamline planning, coordination, and execution across physical, virtual, and hybrid events.",
+      "website": "https://www.gevme.com",
+      "icon": "Gevme.svg"
+    },
+    "Guidap": {
+      "cats": [
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GUIDAP !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GUIDAP !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GUIDAPInitConfig !== 'undefined';"
+        }
+      ],
+      "description": "Guidap is a platform enabling online activity sales, streamlining booking, scheduling, and payment collection processes across all devices, without commissions.",
+      "website": "https://guidap.com",
+      "icon": "Guidap.svg"
+    },
+    "Haku": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hakuapp\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof addHakuRegisterEvent !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof addHakuRegisterEvent !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof addHakuSubmitEvent !== 'undefined';"
+        }
+      ],
+      "description": "Haku is a technology platform for endurance races that supports organizations in growing participation, increasing registrations, and improving event experiences.",
+      "website": "https://hakusports.com",
+      "icon": "Haku.svg"
+    },
+    "HelixPay": {
+      "cats": [
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HELIXPAY !== 'undefined' \u0026\u0026 typeof HELIXPAY.PAGE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HELIXPAY.PAGE !== 'undefined';"
+        }
+      ],
+      "description": "HelixPay is an event ticketing platform providing online payment integration, digital tickets, and customizable event websites for large-scale events.",
+      "website": "https://helixpay.ph",
+      "icon": "HelixPay.svg"
+    },
+    "HoldMyTicket": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//holdmyticket\\.com/widgets"
+            }
+          }
+        }
+      ],
+      "description": "HoldMyTicket is a platform offering event ticketing and box office solutions for organizers.",
+      "website": "https://tickets.holdmyticket.com",
+      "icon": "HoldMyTicket.svg"
+    },
+    "InEvent": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']apiurl[\"'][^\u003e]+content=[\"']inevent\\.com[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']namespace[\"'][^\u003e]+content=[\"']^inevent$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "InEvent is event management software designed to streamline planning, organization, and execution of virtual, hybrid, and in-person events.",
+      "website": "https://inevent.com",
+      "icon": "InEvent.svg"
+    },
+    "Indexic": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.web\\.indexic\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Indexic is a booking management platform designed for tours, activities, and rental operations.",
+      "website": "https://www.indexic.net",
+      "icon": "Indexic.svg"
+    },
+    "Invitario": {
+      "cats": [
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof InvitarioWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof InvitarioWidget !== 'undefined';"
+        }
+      ],
+      "description": "Invitario is an event marketing platform that provides a digital invitation and guest management for business events.",
+      "website": "https://invitario.com",
+      "icon": "Invitario.svg"
+    },
+    "KKTIX": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.kktix\\.io"
+            }
+          }
+        }
+      ],
+      "description": "KKTIX is a Taiwanese software platform that provides online ticketing and event management solutions.",
+      "website": "https://kktix.com",
+      "icon": "KKTIX.svg"
+    },
+    "Luma": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.lu\\.ma"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof luma !== 'undefined' \u0026\u0026 typeof luma.initCheckout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof luma.initCheckout !== 'undefined';"
+        }
+      ],
+      "description": "Luma is a platform for creating event pages, sending invites, and managing tickets.",
+      "website": "https://lu.ma",
+      "icon": "Luma.svg"
+    },
+    "Musement": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.musement\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Musement is a platform that allows users to book tickets for attractions, museums, and activities, providing access to various cultural and entertainment experiences.",
+      "website": "https://www.musement.com",
+      "icon": "Musement.svg"
+    },
+    "OpTuNE": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.optune\\.me"
+            }
+          }
+        }
+      ],
+      "description": "OpTuNE is an online platform for booking and managing events, designed for artists, venues, and promoters.",
+      "website": "https://www.optune.me",
+      "icon": "OpTuNE.svg"
+    },
+    "Planne": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^planne$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Planne is a ticketing and booking reservation system.",
+      "website": "https://www.planne.com.br",
+      "icon": "Planne.svg"
+    },
+    "Planning Pod": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*run\\.planningpod\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Planning Pod is an all-in-one event management software offering integrated online solutions for planning, organizing, and executing events.",
+      "website": "https://www.planningpod.com",
+      "icon": "PlanningPod.svg"
+    },
+    "PromoTix": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']apple-mobile-web-app-title[\"'][^\u003e]+content=[\"']^promotix$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.promotix\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "PromoTix is a ticketing software application designed to streamline event ticket sales and management.",
+      "website": "https://www.promotix.com",
+      "icon": "PromoTix.svg"
+    },
+    "Race Roster": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.raceroster\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Race Roster is an event organization platform that provides tools for planning, managing, and tracking endurance events such as races and fundraisers.",
+      "website": "https://raceroster.com",
+      "icon": "RaceRoster.svg"
+    },
+    "Radario": {
+      "cats": [
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof radario !== 'undefined' \u0026\u0026 typeof radario.accentColor !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof radario.accentColor !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof radarioButtonScript !== 'undefined';"
+        }
+      ],
+      "description": "Radario is a Russia-based ticketing system designed for event management and ticket sales.",
+      "website": "https://business.radario.ru",
+      "icon": "Radario.svg"
+    },
+    "Seated": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.seated\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Seated is a platform offering a ticketing system for live events and live streams.",
+      "website": "https://www.seated.com",
+      "icon": "Seated.svg"
+    },
+    "ShowClix": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.showclix\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ShoClix is a full-service event ticketing platform that provides tools for managing ticket sales, event promotion, and attendee registration.",
+      "website": "https://www.showclix.com",
+      "icon": "ShowClix.svg"
+    },
+    "Starboard Suite": {
+      "cats": [
+        104
+      ],
+      "description": "Starboard Suite is a boat-based booking system that facilitates reservations, scheduling, and customer management for maritime services.",
+      "website": "https://www.starboardsuite.com",
+      "icon": "StarboardSuite.svg"
+    },
+    "Stay22": {
+      "cats": [
+        104,
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.stay22\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Stay22 !== 'undefined' \u0026\u0026 typeof Stay22.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Stay22.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Stay22.version !== 'undefined';",
+          "version": "try { return String(Stay22.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Stay22 is a travel tech company that offers affiliate revenue generation opportunities for events, ticketing and travel media publications.",
+      "website": "https://www.stay22.com",
+      "icon": "Stay22.svg"
+    },
+    "Tickera": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/tickera/js/"
+            }
+          }
+        }
+      ],
+      "description": "Tickera is a WordPress plugin that enables event organizers to sell tickets directly from their websites.",
+      "website": "https://tickera.com",
+      "icon": "Tickera.svg"
+    },
+    "TicketSpice": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ticketspice\\.com"
+            }
+          }
+        }
+      ],
+      "description": "TicketSpice is a ticketing software platform that enables businesses to sell tickets online and manage event registrations through a web-based interface.",
+      "website": "https://www.ticketspice.com",
+      "icon": "TicketSpice.svg"
+    },
+    "Ticketbro": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ticketbro\\.(tools|io)(?:/widget)?/widget\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Ticketbro is a mobile ticket booking system that enables users to browse, select, and purchase event or travel tickets directly from a smartphone.",
+      "website": "https://www.ticketbro.com",
+      "icon": "Ticketbro.svg"
+    },
+    "Ticketmeo": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/plugins/ploxel/js/ploxel\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Ticketmeo is a platform for managing live and virtual events, formerly known as Ploxel, that enables users to sell tickets online.",
+      "website": "https://www.ticketmeo.com",
+      "icon": "Ticketmeo.svg"
+    },
+    "Ticketure": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^built by ticketure[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Ticketure is a cloud-based admission ticketing system designed for arts and cultural organizations with timed entry requirements.",
+      "website": "https://tixtrack.com/ticketure-timed-entry-ticketing",
+      "icon": "Ticketure.svg"
+    },
+    "Tito": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.tito\\.io/v([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Tito is an event software platform that provides a solution for selling tickets online.",
+      "website": "https://ti.to",
+      "icon": "Tito.svg"
+    },
+    "Tix": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.secure-tix\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Tix is a system designed for managing event tickets, allowing users to organize, distribute, and track tickets.",
+      "website": "https://www.tix.com",
+      "icon": "Tix.svg"
+    },
+    "TuriTop": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.turitop\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof httpTuritop !== 'undefined' \u0026\u0026 httpTuritop === 'app\\.turitop\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof httpTuritop !== 'undefined';",
+          "version": "try { return String(httpTuritop || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof turitopBuild !== 'undefined';"
+        }
+      ],
+      "description": "TuriTop is a booking software for tours and activities that streamlines scheduling and reservation management through an automated interface.",
+      "website": "https://www.turitop.com",
+      "icon": "TuriTop.svg"
+    },
+    "Ventrata": {
+      "cats": [
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Ventrata !== 'undefined' \u0026\u0026 typeof Ventrata.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Ventrata.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Ventrata.version !== 'undefined';",
+          "version": "try { return String(Ventrata.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Ventrata is a booking platform designed for high volume tours and attractions, offering all-in-one ticketing systems.",
+      "website": "https://ventrata.com",
+      "icon": "Ventrata.svg"
+    },
+    "WeTravel": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wetravel\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "WeTravel is a platform providing booking and payment solutions tailored for travel companies.",
+      "website": "https://www.wetravel.com",
+      "icon": "WeTravel.svg"
+    },
+    "vFairs": {
+      "cats": [
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*vfairs\\.com"
+            }
+          }
+        }
+      ],
+      "description": "vFairs is an event management platform for organizing customizable in-person and virtual events.",
+      "website": "https://www.vfairs.com",
+      "icon": "vFairs.svg"
+    }
+  }
+}

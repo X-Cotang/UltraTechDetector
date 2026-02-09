@@ -1,0 +1,743 @@
+{
+  "apps": {
+    "Airform": {
+      "cats": [
+        110
+      ],
+      "description": "Airform is a functional HTML forms for front-end developers.",
+      "website": "https://airform.io",
+      "icon": "Airform.svg"
+    },
+    "Basin": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.usebasin\\.com/v([\\d\\.]+)\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof onloadBasinCallback !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof onloadBasinCallback !== 'undefined';"
+        }
+      ],
+      "description": "Basin is a plug-and-play form backend for designers and developers, allowing users to collect submissions and track conversions without coding.",
+      "website": "https://usebasin.com",
+      "icon": "Basin.svg"
+    },
+    "Campflow": {
+      "cats": [
+        110
+      ],
+      "description": "Campflow is a SaaS platform for event and membership management that provides online registration forms, participant tracking, communication tools, and financial reporting.",
+      "website": "https://www.campflow.de",
+      "icon": "Campflow.svg"
+    },
+    "Digioh": {
+      "cats": [
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DIGIOH_API !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DIGIOH_API !== 'undefined';"
+        }
+      ],
+      "description": "Digioh is a lead generation and marketing company helping to convert clicks to customers known for it's email/sms sign-up units",
+      "website": "https://www.digioh.com/",
+      "icon": "Digioh.png"
+    },
+    "Form.io": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.form\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Formio !== 'undefined' \u0026\u0026 typeof Formio.Form !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Formio.Form !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FormioUtils !== 'undefined';"
+        }
+      ],
+      "description": "Form.io is a platform for designing, managing, and converting forms and data within applications.",
+      "website": "https://form.io",
+      "icon": "FormIO.svg"
+    },
+    "Form.taxi": {
+      "cats": [
+        110
+      ],
+      "description": "Form.taxi is a backend service that enables reliable HTML form submissions without requiring any programming.",
+      "website": "https://form.taxi/en/backend",
+      "icon": "FormTaxi.svg"
+    },
+    "FormAssembly": {
+      "cats": [
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof wFORMS !== 'undefined' \u0026\u0026 typeof wFORMS.VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return wFORMS.VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wFORMS.VERSION !== 'undefined';",
+          "version": "try { return String(wFORMS.VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "FormAssembly is a platform that enables to collection of data and processing via workflow.",
+      "website": "https://www.formassembly.com",
+      "icon": "FormAssembly.svg"
+    },
+    "FormBold": {
+      "cats": [
+        110
+      ],
+      "description": "FormBold is a complete web forms solution for static websites that allows you to create forms, collect data, and send notifications.",
+      "website": "https://formbold.com",
+      "icon": "FormBold.svg"
+    },
+    "FormDr": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.formdr\\.com"
+            }
+          }
+        }
+      ],
+      "description": "FormDr is a HIPAA-compliant platform providing secure online forms for collecting and managing sensitive healthcare information.",
+      "website": "https://formdr.com",
+      "icon": "FormDr.svg"
+    },
+    "Formaloo": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//formaloo\\.net/"
+            }
+          }
+        }
+      ],
+      "description": "Formaloo is a no-code collaboration platform that helps businesses create custom data-driven business applications and internal tools, automate their processes and engage their audience.",
+      "website": "https://www.formaloo.com",
+      "icon": "Formaloo.svg"
+    },
+    "Formcake": {
+      "cats": [
+        110
+      ],
+      "description": "Formcake is a backend service that enables developers to integrate forms and manage form data within their applications.",
+      "website": "https://formcake.com",
+      "icon": "Formcake.svg"
+    },
+    "Formcan": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.formcan\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Formcan is a form builder that enables creation, customization, and deployment of online forms for data collection and management.",
+      "website": "https://www.formcan.com",
+      "icon": "Formcan.svg"
+    },
+    "Formester": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.formester\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Formester is a platform for creating interactive forms with AI, supporting logic jumps and automation without requiring coding.",
+      "website": "https://formester.com",
+      "icon": "Formester.svg"
+    },
+    "Formless": {
+      "cats": [
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __formless_cleanup_signals !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __formless_cleanup_signals !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __formless_init !== 'undefined';"
+        }
+      ],
+      "description": "Formless is an AI-powered solution that creates interactive forms, enabling natural conversation, asking and answering questions, and engaging users at any touchpoint.",
+      "website": "https://formless.ai",
+      "icon": "Formless.svg"
+    },
+    "Formli": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:app|cdn)\\.(?:formli|humanagency)\\.(?:com|org)/"
+            }
+          }
+        }
+      ],
+      "description": "Formli is a web-based form builder service that permits users to produce and personalise online forms for different purposes, including surveys, feedback forms, event registrations, and others.",
+      "website": "https://formli.com",
+      "icon": "Formli.svg"
+    },
+    "Formrun": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.form\\.run"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Formrun !== 'undefined' \u0026\u0026 typeof Formrun.init !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Formrun.init !== 'undefined';"
+        }
+      ],
+      "description": "Formrun is a form creation tool.",
+      "website": "https://form.run",
+      "icon": "Formrun.svg"
+    },
+    "Formsite": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.formsite\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Formsite is a platform for creating professional online forms, surveys, and workflows for data collection and process automation.",
+      "website": "https://www.formsite.com",
+      "icon": "Formsite.svg"
+    },
+    "Formsort": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']powered-by[\"'][^\u003e]+content=[\"']^formsort$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunk_formsort_flow !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunk_formsort_flow !== 'undefined';"
+        }
+      ],
+      "description": "Formsort is a system that enables form design and data conversion within applications.",
+      "website": "https://formsort.com",
+      "icon": "Formsort.svg"
+    },
+    "Formstack": {
+      "cats": [
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Formstack !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loadFormstack !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Formstack !== 'undefined';"
+        }
+      ],
+      "description": "Formstack is a platform offering no-code solutions for digital workflows, including forms, documents, and signatures.",
+      "website": "https://www.formstack.com",
+      "icon": "Formstack.svg"
+    },
+    "Frontlead": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.frontlead\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Frontlead is a platform that enables the creation of forms, funnels, and surveys to streamline workflows and collect actionable insights.",
+      "website": "https://frontlead.io",
+      "icon": "Frontlead.svg"
+    },
+    "GoZen Forms": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*signup-forms-cdn\\.app\\.gozen\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GzFormAjax !== 'undefined' \u0026\u0026 typeof GzFormAjax.send !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GzFormMain !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GzFormPopup !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GzForms !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GzFormAjax.send !== 'undefined';"
+        }
+      ],
+      "description": "GoZen Forms is an AI-powered no-code form builder that automates form creation, collects signup data, payments, and e-signatures.",
+      "website": "https://gozen.io/forms/",
+      "icon": "GoZenForms.svg"
+    },
+    "Google Forms": {
+      "cats": [
+        110
+      ],
+      "description": "Google Forms is a free online form builder that allows you to create and publish online forms, surveys, quizzes, order forms, and more.",
+      "website": "https://www.google.com/forms/about/",
+      "icon": "Google Forms.svg"
+    },
+    "Growform": {
+      "cats": [
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof embedGrowform !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof embedGrowform !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof growform.setHiddenField !== 'undefined';"
+        }
+      ],
+      "description": "Growform is a multi-step form builder that includes email alerts, Zapier integrations, and built-in templates.",
+      "website": "https://www.growform.co",
+      "icon": "Growform.svg"
+    },
+    "Inputflow": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*script\\.inputflow\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Inputflow is a tool for creating multi-step forms in Webflow with full customization options.",
+      "website": "https://inputflow.com",
+      "icon": "Inputflow.svg"
+    },
+    "Jotform": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.jotform\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof JOTFORM_ENV !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof JOTFORM_ENV !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof JotForm.FBCollectInformation !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof JotFormActions !== 'undefined';"
+        }
+      ],
+      "description": "Jotform is an online form builder that enables the creation of robust forms.",
+      "website": "https://www.jotform.com",
+      "icon": "Jotform.svg"
+    },
+    "Klaviyo Forms": {
+      "cats": [
+        110
+      ],
+      "description": "Klaviyo Forms are used to capture Email and SMS sign-ups",
+      "website": "https://www.klaviyo.com/features/web-forms",
+      "icon": "Klaviyo.svg"
+    },
+    "Modal Forms": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.modalforms\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Modal Forms is a tool that enhances your website by adding interactive pop-ups.",
+      "website": "https://www.modalforms.com",
+      "icon": "ModalForms.svg"
+    },
+    "NativeForms": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*script\\.nativeforms\\.com"
+            }
+          }
+        }
+      ],
+      "description": "NativeForms is a tool for creating forms, surveys, and polls across various platforms.",
+      "website": "https://nativeforms.com",
+      "icon": "NativeForms.svg"
+    },
+    "Netlify Forms": {
+      "cats": [
+        110
+      ],
+      "implies": [
+        "Netlify"
+      ],
+      "description": "Netlify Forms is a serverless form handling solution for static websites.",
+      "website": "https://www.netlify.com/products/forms",
+      "icon": "Netlify.svg"
+    },
+    "Pabbly Form Builder": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*forms\\.pabbly\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Pabbly Form Builder is a no-code tool for creating professional business forms, offering customization options without requiring programming skills.",
+      "website": "https://www.pabbly.com",
+      "icon": "Pabbly.svg"
+    },
+    "Powerful Form": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.powerfulform\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Powerful Form is a tool that enables custom form creation for Shopify stores, allowing collection and management of customer information directly within the storefront.",
+      "website": "https://powerfulform.com",
+      "icon": "PowerfulForm.svg"
+    },
+    "QForm": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.qform(?:24\\.com|\\.io)/"
+            }
+          }
+        }
+      ],
+      "description": "QForm is a tool for designing and managing customizable forms for data collection and processing.",
+      "website": "https://qform.io",
+      "icon": "QForm.svg"
+    },
+    "Quform": {
+      "cats": [
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Quform !== 'undefined' \u0026\u0026 typeof Quform.captchaRefreshFormQueue !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Quform.captchaRefreshFormQueue !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof QuformRecaptchaLoaded !== 'undefined';"
+        }
+      ],
+      "description": "Quform is a WordPress plugin designed for building and managing forms.",
+      "website": "https://www.quform.com",
+      "icon": "Quform.svg"
+    },
+    "Reform": {
+      "cats": [
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Reform !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Reform !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ReformHandlers !== 'undefined';"
+        }
+      ],
+      "description": "Reform is a conversion-focused form builder designed to optimize data collection.",
+      "website": "https://www.reform.app",
+      "icon": "Reform.svg"
+    },
+    "Respondi": {
+      "cats": [
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.respondi\\.app"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof respondiElement !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof respondiElement !== 'undefined';"
+        }
+      ],
+      "description": "Respondi is a tool for creating forms, including surveys, questionnaires, quizzes, and other custom data collection formats.",
+      "website": "https://respondi.app",
+      "icon": "Respondi.svg"
+    },
+    "Sheet Monkey": {
+      "cats": [
+        110
+      ],
+      "description": "Sheet Monkey is a form builder that stores data in Google Sheets, eliminating the need for a backend.",
+      "website": "https://sheetmonkey.io",
+      "icon": "SheetMonkey.svg"
+    },
+    "Slapform": {
+      "cats": [
+        110
+      ],
+      "description": "Slapform is a backend service for forms that securely stores submissions in the cloud and sends them via email.",
+      "website": "https://slapform.com",
+      "icon": "Slapform.svg"
+    },
+    "Superform": {
+      "cats": [
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Superform !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return SuperformAPI.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Superform !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SuperformAPI.version !== 'undefined';",
+          "version": "try { return String(SuperformAPI.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Superform is a next-gen form engine developed for Webflow's no-code community, enabling form creation and management without requiring coding knowledge.",
+      "website": "https://superformjs.webflow.io/",
+      "icon": "Superform.svg"
+    },
+    "Web3Forms": {
+      "cats": [
+        110
+      ],
+      "description": "Web3Forms is a contact form to email service utilising the Web3 API.",
+      "website": "https://web3forms.com",
+      "icon": "Web3Forms.svg"
+    },
+    "Youform": {
+      "cats": [
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof youForm !== 'undefined' \u0026\u0026 typeof youForm.blurActiveElement !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof youForm.blurActiveElement !== 'undefined';"
+        }
+      ],
+      "description": "Youform is a no-code form builder to create conversational style forms for collecting leads, surveys, and feedback.",
+      "website": "https://youform.com",
+      "icon": "Youform.svg"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "apps": {
+    "Conversion Bear": {
+      "cats": [
+        81
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.conversionbear\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Conversion Bear is a Shopify app providing trust badges and sticky add-to-cart features to enhance store credibility and streamline the purchasing process.",
+      "website": "https://www.conversionbear.com",
+      "icon": "ConversionBear.svg"
+    },
+    "Shoptimized": {
+      "cats": [
+        81
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof isshoptimized !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof isshoptimized !== 'undefined';"
+        }
+      ],
+      "description": "Shoptimized is a Shopify theme and support package designed to enhance store functionality, performance, and user experience.",
+      "website": "https://shoptimized.net",
+      "icon": "Shoptimized.svg"
+    }
+  }
+}

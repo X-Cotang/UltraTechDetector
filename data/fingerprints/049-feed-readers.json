@@ -1,0 +1,84 @@
+{
+  "apps": {
+    "AnnounceKit": {
+      "cats": [
+        49
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.announcekit\\.app/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof announcekit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof announcekit_feed !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof announcekit !== 'undefined';"
+        }
+      ],
+      "description": "AnnounceKit is a platform facilitating announcements for product updates and company news.",
+      "website": "https://announcekit.app",
+      "icon": "AnnounceKit.svg"
+    },
+    "Beehiiv RSS feed": {
+      "cats": [
+        49
+      ],
+      "description": "Beehiiv RSS feed is a feature of the Beehiiv. Beehiiv is a relatively young, hosted newsletter platform built for businesses and creators.",
+      "website": "https://www.beehiiv.com",
+      "icon": "Beehiiv.svg"
+    },
+    "Blendle": {
+      "cats": [
+        49
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof asyncBlendleButtonInit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof asyncBlendleButtonInit !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof blendleButtonInit.locale !== 'undefined';"
+        }
+      ],
+      "description": "Blendle is a digital magazine system that allows users to access and read articles from various publications.",
+      "website": "https://www.blendle.com",
+      "icon": "Blendle.svg"
+    },
+    "Planet": {
+      "cats": [
+        49
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^planet(?:/([\\d.]+))?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Planet is a feed aggregator, which creates pages with entries from the original feeds in chronological order, most recent entries first.",
+      "website": "https://planetplanet.org",
+      "icon": "Planet.png"
+    }
+  }
+}

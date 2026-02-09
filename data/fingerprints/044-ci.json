@@ -1,0 +1,114 @@
+{
+  "apps": {
+    "Code Climate": {
+      "cats": [
+        44
+      ],
+      "description": "Code Climate is a platform that enhances code quality and efficiency.",
+      "website": "https://codeclimate.com",
+      "icon": "CodeClimate.svg"
+    },
+    "GitLab CI/CD": {
+      "cats": [
+        44,
+        47
+      ],
+      "implies": [
+        "Ruby on Rails"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']description[\"'][^\u003e]+content=[\"']gitlab ci/cd is a tool built into gitlab for software development through continuous methodologies.[\"']"
+            }
+          }
+        }
+      ],
+      "website": "https://about.gitlab.com/gitlab-ci",
+      "icon": "GitLab CI.png"
+    },
+    "Jenkins": {
+      "cats": [
+        44
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cspan class=\"jenkins_ver\"\u003e\u003ca href=\"https://jenkins\\.io/\"\u003ejenkins ver\\. ([\\d.]+)\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-jenkins": {
+                  "$regex": "([\\d.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jenkinsCIGlobal !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jenkinsCIGlobal !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jenkinsRules !== 'undefined';"
+        }
+      ],
+      "description": "Jenkins is an open-source automation tool written in Java with plugins built for Continuous Integration (CI) purposes.",
+      "website": "https://jenkins.io/",
+      "icon": "Jenkins.png",
+      "cpe": "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:*:*:*"
+    },
+    "TeamCity": {
+      "cats": [
+        44
+      ],
+      "implies": [
+        "Apache Tomcat",
+        "Java",
+        "Moment.js",
+        "Prototype",
+        "React",
+        "Underscore.js",
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cspan class=\"versiontag\"\u003e\u003cspan class=\"vword\"\u003eversion\u003c/span\u003e ([\\d\\.]+)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']teamcity[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "TeamCity is a build management and continuous integration server from JetBrains.",
+      "website": "https://www.jetbrains.com/teamcity/",
+      "icon": "TeamCity.svg"
+    }
+  }
+}

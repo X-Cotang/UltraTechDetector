@@ -1,0 +1,1535 @@
+{
+  "apps": {
+    "Addsearch": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//addsearch\\.com/js/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AddSearchClient !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AddSearchClient !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AddSearchUI !== 'undefined';"
+        }
+      ],
+      "description": "Addsearch is a site search solution for small and large websites.",
+      "website": "https://www.addsearch.com/",
+      "icon": "Addsearch.svg"
+    },
+    "Algolia": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.algolia"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ALGOLIA_INSIGHTS_SRC !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return algoliasearch.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ALGOLIA_INSIGHTS_SRC !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AlgoliaSearch !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __GLOBAL__.algolia !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __NEXT_DATA__.props.pageProps.appSettings.ALGOLIA_APP_ID !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __algolia !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __algolia.algoliasearch.version !== 'undefined';",
+          "version": "try { return String(__algolia.algoliasearch.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof algoliasearch.version !== 'undefined';",
+          "version": "try { return String(algoliasearch.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Algolia offers a hosted web search product delivering real-time results.",
+      "website": "https://www.algolia.com",
+      "icon": "Algolia.svg"
+    },
+    "Apisearch": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.apisearch\\.cloud"
+            }
+          }
+        }
+      ],
+      "description": "Apisearch is a real-time search platform for ecommerce.",
+      "website": "https://apisearch.io",
+      "icon": "Apisearch.png"
+    },
+    "Athena Search": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wp-content/plugins/athena-search"
+            }
+          }
+        }
+      ],
+      "description": "Athena Search is a customizable autocomplete, feature-rich dashboard, smart predictions, real-time reports search engine developed from scratch by Syncit Group’s.",
+      "website": "https://www.athenasearch.io",
+      "icon": "Athena Search.svg"
+    },
+    "Attraqt": {
+      "cats": [
+        29,
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.attraqt\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _attraqt !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _attraqt !== 'undefined';"
+        }
+      ],
+      "description": "Attraqt provides AI-driven search, merchandising and personalisation solutions.",
+      "website": "https://www.attraqt.com/",
+      "icon": "Attraqt.png"
+    },
+    "Awesomplete": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+href=\"[^\u003e]*awesomplete(?:\\.min)?\\.css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/awesomplete\\.js(?:$|\\?)"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof awesomplete !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof awesomplete !== 'undefined';"
+        }
+      ],
+      "description": "Awesomplete is a tool in the Javascript UI Libraries category of a tech stack.",
+      "website": "https://leaverou.github.io/awesomplete/"
+    },
+    "Baidu Search Box": {
+      "cats": [
+        29
+      ],
+      "description": "Baidu Search Box is a feature integrated within web pages enabling users to conduct searches directly on the site.",
+      "website": "https://www.baidu.com/search/sug/sugcode.html",
+      "icon": "BaiduSearchBox.svg"
+    },
+    "Bloomreach Discovery": {
+      "cats": [
+        29,
+        74
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.brcdn\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.brsrvr\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BrTrk !== 'undefined' \u0026\u0026 typeof BrTrk.scriptVersion !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return BrTrk.scriptVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BrTrk.scriptVersion !== 'undefined';",
+          "version": "try { return String(BrTrk.scriptVersion || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof br_data.acct_id !== 'undefined';"
+        }
+      ],
+      "description": "Bloomreach Discovery is a powerful combination of AI-powered site search, SEO, recommendations, and product merchandising.",
+      "website": "https://www.bloomreach.com/en/products/discovery",
+      "icon": "Bloomreach.svg"
+    },
+    "Boost Commerce": {
+      "cats": [
+        29,
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bcSfFilterConfig !== 'undefined' \u0026\u0026 typeof bcSfFilterConfig.api !== 'undefined' \u0026\u0026 typeof bcSfFilterConfig.api.filterUrl !== 'undefined' \u0026\u0026 bcSfFilterConfig.api.filterUrl === 'services\\.mybcapps\\.com/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bcSfFilterConfig.api.filterUrl !== 'undefined';",
+          "version": "try { return String(bcSfFilterConfig.api.filterUrl || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof boostPFSAppConfig.api.filterUrl !== 'undefined';",
+          "version": "try { return String(boostPFSAppConfig.api.filterUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Boost Commerce provides beautiful and advanced product filter and smart site search for Shopify stores to boost sales.",
+      "website": "https://boostcommerce.net",
+      "icon": "Boost Commerce.png"
+    },
+    "Cludo": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*customer\\.cludo\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Cludo !== 'undefined' \u0026\u0026 typeof Cludo.getPublicSettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Cludo.getPublicSettings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CludoSearch !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CludoSearchInstances !== 'undefined';"
+        }
+      ],
+      "description": "Cludo is a cloud-based search solution.",
+      "website": "https://www.cludo.com",
+      "icon": "Cludo.svg"
+    },
+    "Constructor.io": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cnstrc\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ConstructorioClient !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ConstructorioClient !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof constructorio !== 'undefined';"
+        }
+      ],
+      "description": "Constructor.io is a site search and merchandising platform designed to help ecommerce.",
+      "website": "https://constructor.io/",
+      "icon": "ConstructorIO.png"
+    },
+    "Convermax": {
+      "cats": [
+        29
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Convermax !== 'undefined' \u0026\u0026 typeof Convermax.addProductsHistory !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Convermax.addProductsHistory !== 'undefined';"
+        }
+      ],
+      "description": "Convermax is a search solution that enhances the search experience for ecommerce website visitors by providing more accurate and relevant results.",
+      "website": "https://convermax.com",
+      "icon": "Convermax.svg"
+    },
+    "Coveo": {
+      "cats": [
+        29,
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.cloud\\.coveo\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Coveo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Coveo !== 'undefined';"
+        }
+      ],
+      "description": "Coveo designs enterprise search and predictive insights platforms for businesses.",
+      "website": "https://www.coveo.com/",
+      "icon": "Coveo.png"
+    },
+    "Dalue": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.dalue\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DalueSearch !== 'undefined' \u0026\u0026 typeof DalueSearch.Consts !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DalueSearch.Consts !== 'undefined';"
+        }
+      ],
+      "description": "Dalue is a cloud-based search engine developed in South Korea that enables information retrieval and indexing across online data sources.",
+      "website": "https://dalue.io/dalue",
+      "icon": "Dalue.svg"
+    },
+    "Doofinder": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.doofinder\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof doofinder !== 'undefined' \u0026\u0026 typeof doofinder.classic !== 'undefined' \u0026\u0026 typeof doofinder.classic.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return doofinder.classic.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof doofinder.classic.version !== 'undefined';",
+          "version": "try { return String(doofinder.classic.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Doofinder is a search site solution that enables users to include advanced and smart search engine capabilities in their ecommerce website.",
+      "website": "https://www.doofinder.com",
+      "icon": "Doofinder.svg"
+    },
+    "ElasticSuite": {
+      "cats": [
+        29
+      ],
+      "implies": [
+        "Elasticsearch",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/smile_elasticsuitetracker/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof smileTracker !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof smileTracker !== 'undefined';"
+        }
+      ],
+      "description": "ElasticSuite is a merchandising suite for Magento and OroCommerce.",
+      "website": "https://elasticsuite.io",
+      "icon": "ElasticSuite.svg"
+    },
+    "Elasticsearch": {
+      "cats": [
+        29
+      ],
+      "description": "Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.",
+      "website": "https://www.elastic.co",
+      "icon": "Elasticsearch.svg",
+      "cpe": "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    },
+    "ExpertRec": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*expertrec\\.com/api/js/ci_common\\.js\\?id=.*"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _er_config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _er_config !== 'undefined';"
+        }
+      ],
+      "description": "ExpertRec is a collaborative Web search engine, which allows users share search histories through a web browser.",
+      "website": "https://www.expertrec.com/",
+      "icon": "ExpertRec.png"
+    },
+    "FAST ESP": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cform[^\u003e]+id=\"fastsearch\""
+            }
+          }
+        }
+      ],
+      "description": "FAST ESP is a service-oriented architecture development platform which is geared towards production searchable indexes. It provided a flexible framework for creating ETL applications for efficient indexing of searchable content.",
+      "website": "https://microsoft.com/enterprisesearch",
+      "icon": "FAST ESP.png"
+    },
+    "FAST Search for SharePoint": {
+      "cats": [
+        29
+      ],
+      "implies": [
+        "Microsoft ASP.NET",
+        "Microsoft SharePoint"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cinput[^\u003e]+ name=\"parametricsearch"
+            }
+          }
+        }
+      ],
+      "description": "FAST Search for SharePoint is the search engine for Microsoft's SharePoint collaboration platform. Its purpose is helping SharePoint users locate and retrieve stored enterprise content.",
+      "website": "https://sharepoint.microsoft.com/en-us/product/capabilities/search/Pages/Fast-Search.aspx",
+      "icon": "FAST Search for SharePoint.png"
+    },
+    "Fact Finder": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- factfinder"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*suggest\\.ff"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Fact Finder is a platform which, combines search, navigation, and merchandising solutions to streamline online search and power sales.",
+      "website": "https://fact-finder.com",
+      "icon": "Fact Finder.png"
+    },
+    "FiboSearch": {
+      "cats": [
+        29
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof dgwt_wcas !== 'undefined' \u0026\u0026 typeof dgwt_wcas.ajax_search_endpoint !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dgwt_wcas.ajax_search_endpoint !== 'undefined';"
+        }
+      ],
+      "description": "FiboSearch is a WooCommerce product search plugin, formerly known as AJAX Search.",
+      "website": "https://fibosearch.com",
+      "icon": "FiboSearch.svg"
+    },
+    "Findbar": {
+      "cats": [
+        29
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Findbar !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Findbar !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof findbarScriptLoaded !== 'undefined';"
+        }
+      ],
+      "description": "Findbar specializes in advanced on-site search technology, enhancing user engagement and improving the overall user experience on websites and applications.",
+      "website": "https://findbar.io",
+      "icon": "Findbar.svg"
+    },
+    "Findberry": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.findberry\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jQuery_Findberry !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jQuery_Findberry !== 'undefined';"
+        }
+      ],
+      "description": "Findberry is an internal site search service designed for web developers and site owners looking to integrate a professional, ad-free search engine into their websites.",
+      "website": "https://www.findberry.com",
+      "icon": "Findberry.svg"
+    },
+    "Findify": {
+      "cats": [
+        29,
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*@findify/bundle@([\\d.]+)/dist/.+\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FindifyAnalytics !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FindifyAnalytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof findify !== 'undefined';"
+        }
+      ],
+      "description": "Findify is an intelligent ecommerce search, navigation and personalisation solution.",
+      "website": "https://www.findify.io",
+      "icon": "Findify.svg"
+    },
+    "Goodsearch": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.goodsearch\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Goodsearch is a search engine that donates 50 percent of its sponsored search revenue to charities and schools designated by users.",
+      "website": "https://www.goodsearch.com",
+      "icon": "Goodsearch.svg"
+    },
+    "GroupBy": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.groupbycloud\\.com"
+            }
+          }
+        }
+      ],
+      "description": "GroupBy is a search enging for eCommerce sites.",
+      "website": "https://groupbyinc.com/",
+      "icon": "Groupby.svg"
+    },
+    "HawkSearch": {
+      "cats": [
+        29
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HawkCompare !== 'undefined' \u0026\u0026 typeof HawkCompare.addImage !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HawkCompare.addImage !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HawkSearch.BaseUrl !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hawkIntervalSearch !== 'undefined';"
+        }
+      ],
+      "description": "HawkSearch is a responsive ecommerce site search solution designed to enhance product discovery and improve search functionality.",
+      "website": "https://www.hawksearch.com",
+      "icon": "HawkSearch.svg"
+    },
+    "Kibana": {
+      "cats": [
+        29,
+        25
+      ],
+      "implies": [
+        "Elasticsearch",
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ctitle\u003ekibana\u003c/title\u003e"
+                }
+              },
+              {
+                "headers.kbn-name": {
+                  "$regex": "kibana"
+                }
+              },
+              {
+                "headers.kbn-version": {
+                  "$regex": "^([\\d.]+)$\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Kibana is an open-source data visualisation dashboard for Elasticsearch. It provides visualisation capabilities on top of the content indexed on an Elasticsearch cluster. Users can create bar, line and scatter plots, or pie charts and maps on top of large volumes of data.",
+      "website": "https://www.elastic.co/products/kibana",
+      "icon": "kibana.svg",
+      "cpe": "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:*:*:*"
+    },
+    "Klevu": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.klevu\\.\\w+/klevu-js-v([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof klevu !== 'undefined' \u0026\u0026 typeof klevu.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return klevu.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof klevu.version !== 'undefined';",
+          "version": "try { return String(klevu.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof klevu_apiKey !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof klevu_layout !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof klevu_sessionId !== 'undefined';"
+        }
+      ],
+      "description": "Klevu is a highly advanced AI-Powered search solution for ecommerce platforms.",
+      "website": "https://www.klevu.com",
+      "icon": "Klevu.png"
+    },
+    "Layers": {
+      "cats": [
+        29
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Layers !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Layers !== 'undefined';"
+        }
+      ],
+      "description": "Layers is a site search and merchandising platform designed to help ecommerce.",
+      "website": "https://www.uselayers.com/",
+      "icon": "Layers.png"
+    },
+    "Loop54": {
+      "cats": [
+        29,
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Loop54 !== 'undefined' \u0026\u0026 typeof Loop54.config !== 'undefined' \u0026\u0026 typeof Loop54.config.libVersion !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Loop54.config.libVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Loop54.config.libVersion !== 'undefined';",
+          "version": "try { return String(Loop54.config.libVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Loop54 is a ecommerce search and navigation SaaS product.",
+      "website": "https://www.loop54.com",
+      "icon": "Loop54.png"
+    },
+    "MageWorx Search Autocomplete": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mageworx_searchsuiteautocomplete"
+            }
+          }
+        }
+      ],
+      "description": "MageWorx Search Autocomplete extension offers an AJAX-based popup window that displays and updates relevant search results while a customer forms his or her query.",
+      "website": "https://github.com/mageworx/search-suite-autocomplete",
+      "icon": "MageWorx.svg"
+    },
+    "Mars Flag": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.marsflag\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Mars Flag is a search platform provider originating from Japan, known for its leading domestic market share in website search services.",
+      "website": "https://www.marsflag.com/en",
+      "icon": "MarsFlag.svg"
+    },
+    "Meilisearch": {
+      "cats": [
+        29
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MeiliSearch !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof instantMeiliSearch !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MeiliSearch !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MeiliSearchApiError !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MeiliSearchTimeOutError !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ac_apsulis_meilisearch !== 'undefined';"
+        }
+      ],
+      "description": "Meilisearch is a search engine created by Meili, a software development company based in France.",
+      "website": "https://www.meilisearch.com",
+      "icon": "Meilisearch.svg"
+    },
+    "Miso": {
+      "cats": [
+        29,
+        76
+      ],
+      "description": "Miso is a real-time personalisation APIs for search, recommendation, and marketing.",
+      "website": "https://miso.ai",
+      "icon": "Miso.svg"
+    },
+    "Nova Busca": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.novabusca\\.com\\.br"
+            }
+          }
+        }
+      ],
+      "description": "Nova Busca is an artificial intelligence tool that enhances search functionality on ecommerce websites by improving result relevance and user experience.",
+      "website": "https://novabusca.com.br",
+      "icon": "NovaBusca.svg"
+    },
+    "Orama": {
+      "cats": [
+        29
+      ],
+      "description": "Orama is a platform offering full-text and vector search capabilities across 300 global locations.",
+      "website": "https://oramasearch.com",
+      "icon": "OramaSearch.svg"
+    },
+    "Pickzen": {
+      "cats": [
+        29
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pickzen !== 'undefined' \u0026\u0026 typeof pickzen.server !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pickzen.server !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pickzenLoaded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pickzenonActivation !== 'undefined';"
+        }
+      ],
+      "description": "Pickzen is an AI-powered tool designed for conversational search.",
+      "website": "https://www.pickzen.com",
+      "icon": "Pickzen.svg"
+    },
+    "Queryly": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.queryly\\.com/js/queryly\\.v([\\d\\.]+)\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof queryly !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof queryly !== 'undefined';"
+        }
+      ],
+      "description": "Queryly is a cloud-based API providing site search and content recommendation functionalities, utilizing advanced algorithms to deliver quick, relevant search results and personalized content suggestions.",
+      "website": "https://queryly.com/",
+      "icon": "Queryly.svg"
+    },
+    "SEO Manager": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.seomanager\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "SEO Manager is a platform that optimizes Shopify websites to enhance search engine visibility and improve organic traffic.",
+      "website": "https://venntov.com/pages/seo-manager",
+      "icon": "SEOManager.svg"
+    },
+    "Search Magic": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.searchmagic\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof yswSearchMagicCssUrl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof yswSearchMagicCssUrl !== 'undefined';"
+        }
+      ],
+      "description": "Search Magic is an ecommerce website search solution designed to improve product discovery and enhance user experience through advanced search capabilities.",
+      "website": "https://yourstorewizards.com/app-store/search-magic",
+      "icon": "SearchMagic.svg"
+    },
+    "Searchanise": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*searchanise(?:-.+\\.kxcdn)?\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Searchanise !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Searchanise !== 'undefined';"
+        }
+      ],
+      "description": "Searchanise is a complete search and filter solution for ecommerce.",
+      "website": "https://start.searchanise.com",
+      "icon": "Searchanise.svg"
+    },
+    "SearchiQ": {
+      "cats": [
+        29
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof siqConfig !== 'undefined' \u0026\u0026 typeof siqConfig.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return siqConfig.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof siqConfig.version !== 'undefined';",
+          "version": "try { return String(siqConfig.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof siq_version !== 'undefined';",
+          "version": "try { return String(siq_version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "SearchiQ is a cloud-based search engine solution that can be integrated into a website.",
+      "website": "https://www.searchiq.co",
+      "icon": "SearchiQ.svg"
+    },
+    "Searchine": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.searchine\\.net/"
+            }
+          }
+        }
+      ],
+      "description": "Searchine is a site search system that provides insights into visitor search behaviour and offers suggestions for website improvements.",
+      "website": "https://www.searchine.net",
+      "icon": "Searchine.svg"
+    },
+    "Searchspring": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.searchspring\\.net"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SearchSpring !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SearchSpring !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SearchSpringConf !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SearchSpringInit !== 'undefined';"
+        }
+      ],
+      "description": "Searchspring is a site search and merchandising platform designed to help ecommerce.",
+      "website": "https://searchspring.com",
+      "icon": "Searchspring.svg"
+    },
+    "Searchtap": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.searchtap\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Searchtap is a hosted search-as-a-service platform that enables websites to integrate fast and scalable search functionality.",
+      "website": "https://searchtap.io",
+      "icon": "Searchtap.svg"
+    },
+    "Segmentify": {
+      "cats": [
+        29,
+        97,
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.segmentify\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SegmentifyIntegration !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SegmentifyIntegration !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SegmentifyTrackingObject !== 'undefined';"
+        }
+      ],
+      "description": "Segmentify is an ecommerce personalisation platform.",
+      "website": "https://segmentify.com",
+      "icon": "Segmentify.svg"
+    },
+    "Site Search 360": {
+      "cats": [
+        29
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ss360Config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ss360Config !== 'undefined';"
+        }
+      ],
+      "description": "Site Search 360 is a site search as a service solution.",
+      "website": "https://www.sitesearch360.com/",
+      "icon": "Site Search 360.svg"
+    },
+    "SniperFast": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sniperfast\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sniperEnableSearch !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sniperEnableSearch !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sniper_search_key !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sniperfast_page_id !== 'undefined';"
+        }
+      ],
+      "description": "SniperFast is instant search system for ecommerce sites.",
+      "website": "https://www.sniperfast.com",
+      "icon": "SniperFast.png"
+    },
+    "Swiftype": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*swiftype\\.com/embed\\.js$"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Swiftype !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Swiftype !== 'undefined';"
+        }
+      ],
+      "description": "Swiftype provides search software for organisations, websites, and computer programs.",
+      "website": "https://swiftype.com",
+      "icon": "Swiftype.svg"
+    },
+    "Trivago": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.trivago\\.it"
+            }
+          }
+        }
+      ],
+      "description": "Trivago is a hotel search and booking engine that allows users to compare accommodation options and prices from various travel websites, helping them find the best deals.",
+      "website": "https://www.trivago.com",
+      "icon": "Trivago.svg"
+    },
+    "Typesense": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/typesense@([\\d\\.]+)/dist/typesense\\.min\\.js\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*typesense-api"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Typesense !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof typesenseBlogPostCollection !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof typesenseHost !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof typesenseSearchKey !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof typesenseSettings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Typesense !== 'undefined';"
+        }
+      ],
+      "description": "Typesense is an open-source, typo-tolerant search-engine optimized for speed and relevance.",
+      "website": "https://typesense.org",
+      "icon": "Typesense.svg"
+    },
+    "VuFind": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^vufind\\s([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VuFind !== 'undefined' \u0026\u0026 typeof VuFind.defaultSearchBackend !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VuFind.defaultSearchBackend !== 'undefined';"
+        }
+      ],
+      "description": "VuFind is a library resource portal designed and developed by Villanova University library.",
+      "website": "https://vufind.org",
+      "icon": "VuFind.png"
+    },
+    "WizSoft": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wizsoft\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "WizSoft is a search engine designed for embedding in ecommerce websites and other platforms where data are stored in records.",
+      "website": "https://www.wizsoft.com"
+    },
+    "Wizzy": {
+      "cats": [
+        29
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WizzyFrontend !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WizzyFrontend !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof foundWizzyConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wizzyConfig.analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wizzyScriptLoaded !== 'undefined';"
+        }
+      ],
+      "description": "Wizzy is a tool that simplifies ecommerce site search, enabling users to find relevant products, pages, and information.",
+      "website": "https://wizzy.ai",
+      "icon": "Wizzy.svg"
+    },
+    "Yext": {
+      "cats": [
+        29,
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ANSWERS !== 'undefined' \u0026\u0026 typeof ANSWERS._analyticsReporterService !== 'undefined' \u0026\u0026 typeof ANSWERS._analyticsReporterService._baseUrl !== 'undefined' \u0026\u0026 ANSWERS._analyticsReporterService._baseUrl === '\\.yext-pixel\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof yext.analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof yextAnalyticsEnabled !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof yext_analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ANSWERS._analyticsReporterService._baseUrl !== 'undefined';",
+          "version": "try { return String(ANSWERS._analyticsReporterService._baseUrl || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Yext.BaseUrl !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof YextAnalyticsObject !== 'undefined';"
+        }
+      ],
+      "description": "Yext is a technology company that provides a cloud-based platform for managing digital knowledge and online reputation.",
+      "website": "https://www.yext.com",
+      "icon": "Yext.svg"
+    },
+    "Zevi": {
+      "cats": [
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.zevi\\.ai/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Zevi is an AI-powered site search and discovery platform designed to enhance product discovery.",
+      "website": "https://www.zevi.ai",
+      "icon": "Zevi.svg"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "apps": {
+    "MapTrack": {
+      "cats": [
+        45
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.maptrackpro\\.com"
+            }
+          }
+        }
+      ],
+      "description": "MapTack is a platform to audit and manage assets from a single interface.",
+      "website": "https://maptrack.com",
+      "icon": "MapTrack.svg"
+    },
+    "Milvus": {
+      "cats": [
+        45,
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.api\\.milvus\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Milvus is an intelligent system designed to manage IT operations and provide help desk support.",
+      "website": "https://milvus.com.br",
+      "icon": "Milvus.svg"
+    },
+    "Sedna System": {
+      "cats": [
+        45
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*client\\.sednasystem\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Sedna System is a real-time yacht management platform designed to monitor operations, track vessel status, and optimize onboard resources.",
+      "website": "https://sednasystem.io"
+    }
+  }
+}

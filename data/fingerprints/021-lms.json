@@ -1,0 +1,1367 @@
+{
+  "apps": {
+    "Absorb": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AbsorbLMS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AbsorbLMS !== 'undefined';"
+        }
+      ],
+      "description": "Absorb is a cloud-based learning management system.",
+      "website": "https://www.absorblms.com",
+      "icon": "Absorb.svg"
+    },
+    "AccessAlly": {
+      "cats": [
+        21
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof accessally_order_form_data_is_during_restore !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof accessally_order_form_data_is_during_restore !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof accessally_script_object !== 'undefined';"
+        }
+      ],
+      "description": "AccessAlly is a customizable platform designed for scalable growth, offering tools for membership management, online courses, and automation.",
+      "website": "https://accessally.com",
+      "icon": "AccessAlly.svg"
+    },
+    "Accredible": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.access-control-allow-headers": {
+              "$regex": "^accredible-authorization"
+            }
+          }
+        }
+      ],
+      "description": "Accredible is a branded digital certificates provider that supports learner and program growth through secure, verifiable credentialing.",
+      "website": "https://www.accredible.com",
+      "icon": "Accredible.svg"
+    },
+    "Aforest LMS": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']publisher[\"'][^\u003e]+content=[\"']^aforest lux - c.i.d.$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "AFOREST LMS is a training management system that supports the entire training cycle, including client needs assessment, course organization, learner tracking, quality control, assessments, certification, and e-learning integration, with invoicing capabilities.",
+      "website": "https://www.groupe-aforest.com",
+      "icon": "AforestLMS.svg"
+    },
+    "Canvas LMS": {
+      "cats": [
+        21
+      ],
+      "implies": [
+        "React",
+        "Ruby on Rails"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-canvas-meta": {
+              "$regex": "login/canvas"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunkcanvas_lms !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkcanvas_lms !== 'undefined';"
+        }
+      ],
+      "description": "Canvas LMS is a web-based learning management system, or LMS.",
+      "website": "https://www.instructure.com/canvas",
+      "icon": "Canvas LMS.svg"
+    },
+    "Chamilo": {
+      "cats": [
+        21
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "chamilo ([\\d.]+)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']chamilo ([\\d.]+)\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Chamilo is an open-source learning management and collaboration system.",
+      "website": "https://www.chamilo.org",
+      "icon": "Chamilo.png",
+      "cpe": "cpe:2.3:a:chamilo:chamilo_lms:*:*:*:*:*:*:*:*"
+    },
+    "Classeh": {
+      "cats": [
+        21
+      ],
+      "implies": [
+        "PHP",
+        "Python",
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^fanavar\\.org$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Classeh is a LMS that allows user to participate in webinars and also use LMS options like messanger,finances,homework,quiz and some extra options like sending messages and more.",
+      "website": "https://fanavar.org",
+      "icon": "Classeh.svg"
+    },
+    "Clever": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*clever\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Clever is an identity platform for education that helps schools and applications secure identities, manage data access, and support classroom learning.",
+      "website": "https://www.clever.com",
+      "icon": "Clever.svg"
+    },
+    "Coachy": {
+      "cats": [
+        21
+      ],
+      "description": "Coachy is a platform for creating and selling online courses with integrated payment systems and GDPR-compliant data storage​.",
+      "website": "https://coachy.net",
+      "icon": "Coachy.svg"
+    },
+    "Dokeos": {
+      "cats": [
+        21
+      ],
+      "implies": [
+        "PHP",
+        "Xajax",
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:portal \u003ca[^\u003e]+\u003edokeos|@import \"[^\"]+dokeos_blue)"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "dokeos"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']dokeos[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Dokeos is an e-learning and course management web application.",
+      "website": "https://dokeos.com",
+      "icon": "Dokeos.png"
+    },
+    "EAD Plataforma": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.eadplataforma\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof getEadPlayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof taxa_ead_base_boleto !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof getEadPlayer !== 'undefined';"
+        }
+      ],
+      "description": "EAD Plataforma is a distance learning platform designed to deliver online educational content and support remote instruction across various subjects.",
+      "website": "https://eadplataforma.com",
+      "icon": "EADPlataforma.svg"
+    },
+    "Edmingle": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*edmingle\\.b-cdn\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Edmingle is a course creation system that enables organizations to design, manage, and deliver online training programs.",
+      "website": "https://www.edmingle.com",
+      "icon": "Edmingle.svg"
+    },
+    "Edwiser Bridge": {
+      "cats": [
+        21,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/edwiser-bridge(?:-sso|-pro)?/public/assets/js/.+\\.js\\?ver=(\\d+(?:\\.\\d+)+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Edwiser Bridge is a Wordpress plugin facilitating the sale of Moodle courses with synchronized data and single sign-on capability.",
+      "website": "https://edwiser.org",
+      "icon": "EdwiserBridge.svg"
+    },
+    "Eloomi": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//cdn\\.eloomi\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Eloomi is a cloud-based learning management system (LMS) and performance management platform.",
+      "website": "https://eloomi.com",
+      "icon": "Eloomi.png"
+    },
+    "Elopage": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.myelopage\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Elopage is a tool made for entrepreneurs to setup, manage, and scale their digital businesses around digital products, online courses, memberships, tickets, and digital services.",
+      "website": "https://elopage.com",
+      "icon": "Elopage.svg"
+    },
+    "Enrollware": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jquery\\.enrollware\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Enrollware is a CPR class management software that streamlines course scheduling, student registration, instructor tracking, and certification management for training providers.",
+      "website": "https://www.enrollwaresolutions.com",
+      "icon": "Enrollware.svg"
+    },
+    "Famly": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.famly\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Famly is a digital platform enabling early educators and families to collaborate, share responsibilities, and support child development.",
+      "website": "https://www.famly.co",
+      "icon": "Famly.svg"
+    },
+    "Forento": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^forento$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.forento\\.site"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Forento is a platform that allows selling courses and digital downloads while managing creation, marketing, and scaling of online businesses under custom branding.",
+      "website": "https://forento.io",
+      "icon": "Forento.svg"
+    },
+    "Graphy": {
+      "cats": [
+        21
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof getGraphyCookie !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof getGraphyCookie !== 'undefined';"
+        }
+      ],
+      "description": "Graphy is a platform that enables the creation and scaling of courses, communities, and digital products using AI tools.",
+      "website": "https://graphy.com",
+      "icon": "Graphy.svg"
+    },
+    "Gurucan": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.gurucan\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Gurucan is a platform that enables users to create and sell online courses through a single interface.",
+      "website": "https://www.gurucan.com",
+      "icon": "Gurucan.svg"
+    },
+    "Heights Platform": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.access-control-allow-origin": {
+                  "$regex": "uploads\\.heightsplatform\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Heights Platform is an all-in-one platform for creating and selling online courses.",
+      "website": "https://www.heightsplatform.com",
+      "icon": "HeightsPlatform.svg"
+    },
+    "Huddle": {
+      "cats": [
+        21
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HuddleEvent !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HuddleEvent !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HuddleUser !== 'undefined';"
+        }
+      ],
+      "description": "Huddle is a digital product agency based in Amsterdam, Netherlands, specialising in developing and designing custom software solutions for startups and enterprises, including e-learning products, community platforms, and mobile applications.",
+      "website": "https://www.thehuddle.nl",
+      "icon": "Huddle.svg"
+    },
+    "Ilias": {
+      "cats": [
+        21
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof il !== 'undefined' \u0026\u0026 typeof il.Accordion !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof il.Accordion !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ilAccordionsInits !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ilTagging !== 'undefined';"
+        }
+      ],
+      "description": "Ilias is an open source learning management system.",
+      "website": "https://www.ilias.de",
+      "icon": "Ilias.svg"
+    },
+    "IrisLMS": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.irislms\\.ir/"
+            }
+          }
+        }
+      ],
+      "description": "IrisLMS comprehensive education management system, in order to support e-learning and provide suitable conditions for holding online and offline classes with all facilities.",
+      "website": "https://irislms.ir",
+      "icon": "IrisLMS.png"
+    },
+    "KAMAR": {
+      "cats": [
+        21
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KAMAR !== 'undefined' \u0026\u0026 typeof KAMAR.has_address_ben_found !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KAMAR.has_address_ben_found !== 'undefined';"
+        }
+      ],
+      "description": "KAMAR is a Student Management System utilised by secondary schools.",
+      "website": "https://kamar.nz",
+      "icon": "KAMAR.svg"
+    },
+    "Knoma": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.knoma\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Knoma is a platform where users can search hundreds of courses from leading schools and bootcamps.",
+      "website": "https://www.knoma.io",
+      "icon": "Knoma.svg"
+    },
+    "Knorish": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Knorish is a platform that enables users to create and sell online courses directly from their own websites.",
+      "website": "https://knorish.com",
+      "icon": "Knorish.svg"
+    },
+    "LearnDash": {
+      "cats": [
+        21,
+        87
+      ],
+      "description": "LearnDash is a WordPress plugin that enables the creation and management of online courses, quizzes, and educational content within a website.",
+      "website": "https://www.learndash.com",
+      "icon": "LearnDash.svg"
+    },
+    "LearnUpon": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "LearnUpon is a learning management system (LMS) that helps businesses enhance employee development by streamlining the delivery, management, and tracking of training programs.",
+      "website": "https://www.learnupon.com/",
+      "icon": "LearnUpon.svg"
+    },
+    "LearnWorlds": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.mycourse\\.app/v([\\d\\.]+)/\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LWClient !== 'undefined' \u0026\u0026 typeof LWClient.ebooks !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LWClient.ebooks !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LWSettings.deactive_components !== 'undefined';"
+        }
+      ],
+      "description": "LearnWorlds is a powerful yet lightweight, user-friendly, white-labeled cloud-based LMS ideal for versatile employee training.",
+      "website": "https://www.learnworlds.com",
+      "icon": "LearnWorlds.svg"
+    },
+    "LearnyBox": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*learnybox\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ExecuteActionLearnyMail !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ExecuteActionLearnyMail !== 'undefined';"
+        }
+      ],
+      "description": "LearnyBox is an all-in-one platform that enables users to launch, manage, and sell training courses.",
+      "website": "https://learnybox.com",
+      "icon": "LearnyBox.svg"
+    },
+    "LifterLMS": {
+      "cats": [
+        21,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/plugins/lifterlms/assets/js/llms\\.min\\.js\\?ver=([\\d\\.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "LifterLMS is a learning management system plugin for WordPress.",
+      "website": "https://lifterlms.com",
+      "icon": "LifterLMS.svg"
+    },
+    "LightSpeed VT": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.lightspeedvt\\.com"
+            }
+          }
+        }
+      ],
+      "description": "LightSpeed VT is a learning management system designed to deliver, track, and manage educational courses and training programs.",
+      "website": "https://lightspeedvt.com",
+      "icon": "LightSPeedVT.svg"
+    },
+    "Maestrus": {
+      "cats": [
+        21
+      ],
+      "description": "Maestrus is a complete EAD platform that enables course sales, employee training, and secure content delivery with personalization.",
+      "website": "https://maestrus.com",
+      "icon": "Maestrus.svg"
+    },
+    "Masteriyo": {
+      "cats": [
+        21
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _MASTERIYO_WISHLIST_ADDON_ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _MASTERIYO_WISHLIST_ADDON_ !== 'undefined';"
+        }
+      ],
+      "description": "Masteriyo is a course creation and monetization tool for WordPress.",
+      "website": "https://masteriyo.com",
+      "icon": "Masteriyo.svg"
+    },
+    "Mastery Manager": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.masterymanager\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Mastery Manager is a student learning system designed to track academic progress, evaluate performance, and support data-driven instructional planning.",
+      "website": "https://masterymanager.com",
+      "icon": "MasteryManager.svg"
+    },
+    "Moodle": {
+      "cats": [
+        21
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cimg[^\u003e]+moodlelogo"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']keywords[\"'][^\u003e]+content=[\"']^moodle[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof M !== 'undefined' \u0026\u0026 typeof M.core !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof M.core !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Y.Moodle !== 'undefined';"
+        }
+      ],
+      "description": "Moodle is a free and open-source Learning Management System (LMS) written in PHP and distributed under the GNU General Public License.",
+      "website": "https://moodle.org",
+      "icon": "Moodle.png",
+      "cpe": "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    },
+    "Noodle Factory": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*portalapi\\.noodlefactory\\.ai"
+            }
+          }
+        }
+      ],
+      "description": "Noodle Factory is a tutor platform that enhances teaching through personalized and engaging student learning experiences.",
+      "website": "https://www.noodlefactory.ai",
+      "icon": "NoodleFactory.svg"
+    },
+    "Opigno LMS": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*opigno_(?:commerce|wtp_app|scorm|learning_path)"
+            }
+          }
+        }
+      ],
+      "description": "Opigno LMS is an open-source Learning Management System (LMS) based on Drupal, designed for creating and delivering online courses and educational content.",
+      "website": "https://www.opigno.org",
+      "icon": "Opigno LMS.svg"
+    },
+    "Oreed": {
+      "cats": [
+        21
+      ],
+      "description": "Oreed is an all-in-one learning experience platform, centralizing all organizational learning, training, and development activities.",
+      "website": "https://oreed.org/en",
+      "icon": "Oreed.svg"
+    },
+    "PRONOTE": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^pronote\\s[\\d]{4}\\s-\\s([\\d\\.]+)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^pronote$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "PRONOTE is an information system created by Index Education, a French company, designed for deployment in approximately 7,400 schools to enable streamlined communication among administrative personnel, teachers, and families.",
+      "website": "https://www.index-education.com/fr/logiciel-gestion-vie-scolaire.php",
+      "icon": "PRONOTE.png"
+    },
+    "Parentapps": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']parentapps(?: v\\.([\\d.]+))?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Parentapps is a school communication platform designed to streamline interaction between parents and teachers through centralized messaging and updates.",
+      "website": "https://www.parentapps.co.uk",
+      "icon": "Parentapps.svg"
+    },
+    "Podia": {
+      "cats": [
+        21,
+        6
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.podia\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Podia !== 'undefined' \u0026\u0026 typeof Podia.Checkout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Podia.Checkout !== 'undefined';"
+        }
+      ],
+      "description": "Podia is a platform to host and sell online courses, memberships, and digital downloads.",
+      "website": "https://www.podia.com",
+      "icon": "Podia.svg"
+    },
+    "PowerSchool": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.powerschool\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^powerschool$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "PowerSchool is a widely used student information system (SIS) used by K-12 schools, districts, and other educational institutions to manage student data and information. The software is developed and marketed by PowerSchool Group LLC, which is based in California, USA.",
+      "website": "https://www.powerschool.com",
+      "icon": "PowerSchool.svg"
+    },
+    "Punchpass": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.punchpass\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof punchpassForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof punchpassForm !== 'undefined';"
+        }
+      ],
+      "description": "Punchpass is a class management system designed to organize schedules, track attendance, and manage client information.",
+      "website": "https://punchpass.com",
+      "icon": "Punchpass.svg"
+    },
+    "Sakai": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sakai !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sakai !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sakaiPortalWindow !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sakaiTutorialSkin !== 'undefined';"
+        }
+      ],
+      "description": "Sakai is a robust open-source learning management system created by higher ed for higher ed.",
+      "website": "https://www.sakailms.org",
+      "icon": "Sakai.png",
+      "cpe": "cpe:2.3:a:sakailms:sakai:*:*:*:*:*:*:*:*"
+    },
+    "School Kiwi": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.school\\.kiwi"
+            }
+          }
+        }
+      ],
+      "description": "School Kiwi is a student management system designed to streamline administrative tasks, track student records, and enhance communication within educational institutions.",
+      "website": "https://kamar.nz/support/hosted",
+      "icon": "SchoolKiwi.svg"
+    },
+    "Simplero Websites": {
+      "cats": [
+        21
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Simplero Websites are a learning management system which suited for courses, coaching programs, memberships and digital products by Simplero.",
+      "website": "https://simplero.com/websites",
+      "icon": "Simplero.svg"
+    },
+    "Skilljar": {
+      "cats": [
+        21
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SKILLJAR_DASHBOARD_GLOBALS !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return skilljarThemeVersionMajor || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SKILLJAR_DASHBOARD_GLOBALS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof skilljarCatalogPage !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof skilljarThemeVersionMajor !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof skilljarTranslate !== 'undefined';"
+        }
+      ],
+      "description": "Skilljar is a B2B customer training platform and learning management system.",
+      "website": "https://www.skilljar.com/",
+      "icon": "skilljar.svg"
+    },
+    "Spayee": {
+      "cats": [
+        21
+      ],
+      "description": "Spayee is a platform that enables creators and businesses to build and sell online courses and digital products.",
+      "website": "https://learn.spayee.com",
+      "icon": "Spayee.svg"
+    },
+    "Spring Metrics": {
+      "cats": [
+        21
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _springMetq !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _springMetq !== 'undefined';"
+        }
+      ],
+      "description": "Spring Metrics is an online learning platform for management software in the hospitality industry.",
+      "website": "https://springmetrics.com"
+    },
+    "Teachable": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']asset_host[\"'][^\u003e]+content=[\"']\\.teachablecdn\\.com[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.teachablecdn\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof isTeachable !== 'undefined' \u0026\u0026 isTeachable === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof isTeachable !== 'undefined';",
+          "version": "try { return String(isTeachable || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof teachableIcons !== 'undefined';",
+          "version": "try { return String(teachableIcons || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof trackTeachableGAEvent !== 'undefined';"
+        }
+      ],
+      "description": "Teachable is a learning management system or LMS platform.",
+      "website": "https://teachable.com",
+      "icon": "Teachable.png"
+    },
+    "Thinkific": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn(?:-themes)?\\.thinkific\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Thinkific !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Thinkific !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ThinkificAnalytics !== 'undefined';"
+        }
+      ],
+      "description": "Thinkific is a software platform that enables entrepreneurs to create, market, sell, and deliver their own online courses.",
+      "website": "https://www.thinkific.com",
+      "icon": "Thinkific.svg"
+    },
+    "Thought Industries": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*thoughtindustries\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Thought Industries is an enterprise learning platform designed for customer, partner, and professional training, offering a structured learning experiences system.",
+      "website": "https://www.thoughtindustries.com",
+      "icon": "ThoughtIndustries.svg"
+    },
+    "Totara": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Totara is a learning management system designed for businesses.",
+      "website": "https://www.totaralearning.com",
+      "icon": "Totara.svg"
+    },
+    "Tutor LMS": {
+      "cats": [
+        21
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof tutorElementorData !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tutorElementorData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tutor_prevent_copy !== 'undefined';"
+        }
+      ],
+      "description": "Tutor LMS is an all-in-one learning management system.",
+      "website": "https://tutorlms.com",
+      "icon": "TutorLMS.svg"
+    },
+    "VClasses": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.vclasses\\.net"
+            }
+          }
+        }
+      ],
+      "description": "VClasses is a subscription-based software platform that enables users to set up a secure learning management system (LMS) and offer courses for sale.",
+      "website": "https://vclasses.net",
+      "icon": "VClasses.svg"
+    },
+    "Voomly": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.voomly\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof attachVoomlyPlayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof attachVoomlyPlayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof voomlyEmbedPlayerApp !== 'undefined';"
+        }
+      ],
+      "description": "Voomly is a hosted video course system that facilitates the creation, management, and distribution of video-based educational content.",
+      "website": "https://www.voomly.com",
+      "icon": "Voomly.svg"
+    },
+    "Yo!Coach": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.set-cookie": {
+              "$regex": "\\.yo-coach\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Yo!Coach is a tutoring and consultation platform designed to connect learners with experts for one-on-one sessions.",
+      "website": "https://www.yo-coach.com",
+      "icon": "Yo!Coach.svg"
+    },
+    "Zenler": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*webtracker\\.newzenler\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Zenler is a course creation platform that combines live classes, webinars, community building, and marketing tools in one system.",
+      "website": "https://www.newzenler.com",
+      "icon": "Zenler.svg"
+    },
+    "aSc EduPage": {
+      "cats": [
+        21
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.edupage\\.org"
+            }
+          }
+        }
+      ],
+      "description": "aSc EduPage is a cloud-based school management system.",
+      "website": "https://www.edupage.org",
+      "icon": "aScEduPage.svg"
+    },
+    "eChalk": {
+      "cats": [
+        21
+      ],
+      "description": "eChalk is a school website and learning management system.",
+      "website": "https://www.echalk.com",
+      "icon": "eChalk.svg"
+    },
+    "uPortal": {
+      "cats": [
+        21
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']description[\"'][^\u003e]+content=[\"'] uportal [\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof uportal !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof uportal !== 'undefined';"
+        }
+      ],
+      "description": "uPortal is an open source enterprise portal framework built by and for higher education institutions.",
+      "website": "https://www.apereo.org/projects/uportal",
+      "icon": "uPortal.png"
+    }
+  }
+}

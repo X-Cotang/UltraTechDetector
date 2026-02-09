@@ -1,0 +1,639 @@
+{
+  "apps": {
+    "4Partners": {
+      "cats": [
+        99
+      ],
+      "description": "4Partners is an international dropshipping service that allows you to launch a ready-made online store.",
+      "website": "https://4partners.io/en/",
+      "icon": "4Partners.svg"
+    },
+    "APC": {
+      "cats": [
+        99
+      ],
+      "description": "APC offers door-to-door parcel and mail delivery.",
+      "website": "https://www.apc-pli.com",
+      "icon": "APC.svg"
+    },
+    "Asendia": {
+      "cats": [
+        99
+      ],
+      "description": "Asendia is an international mail joint venture of French La Poste and Swiss Post.",
+      "website": "https://www.asendia.com",
+      "icon": "Asendia.svg"
+    },
+    "Australia Post": {
+      "cats": [
+        99
+      ],
+      "description": "Australia Post is the government business enterprise that provides postal services in Australia.",
+      "website": "https://auspost.com.au",
+      "icon": "AusPost.svg"
+    },
+    "B2C Europe": {
+      "cats": [
+        99
+      ],
+      "description": "B2C Europe offers logistic solutions for your ecommerce businesses.",
+      "website": "https://www.b2ceurope.eu/",
+      "icon": "B2C Europe.svg"
+    },
+    "BRT": {
+      "cats": [
+        99
+      ],
+      "description": "BRT, also known as Bartolini, is an Italian-based logistics service provider.",
+      "website": "https://www.brt.it",
+      "icon": "BRT.svg"
+    },
+    "Billbee": {
+      "cats": [
+        99
+      ],
+      "description": "Billbee is an order processing and inventory management solution.",
+      "website": "https://www.billbee.io/",
+      "icon": "Billbee.png"
+    },
+    "Bleckmann": {
+      "cats": [
+        99,
+        107
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof API_BASE_URL_FE !== 'undefined' \u0026\u0026 API_BASE_URL_FE === '\\.bleckmann\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof API_BASE_URL_FE !== 'undefined';",
+          "version": "try { return String(API_BASE_URL_FE || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apiCall !== 'undefined';",
+          "version": "try { return String(apiCall || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Bleckmann is a logistics provider offering services to fashion and lifestyle brands, ensuring they meet customer delivery promises.",
+      "website": "https://www.bleckmann.com",
+      "icon": "Bleckmann.svg"
+    },
+    "Boxtal": {
+      "cats": [
+        99
+      ],
+      "description": "Boxtal is a cloud-based multi-carrier shipping solution.",
+      "website": "https://www.boxtal.com",
+      "icon": "Boxtal.svg"
+    },
+    "Bpost": {
+      "cats": [
+        99
+      ],
+      "description": "Bpost, also known as the Belgian Post Group, is the Belgian company responsible for the delivery of national and international mail.",
+      "website": "https://www.bpost.be",
+      "icon": "Bpost.svg"
+    },
+    "Budbee": {
+      "cats": [
+        99
+      ],
+      "description": "Budbee is a tech company that operates a logistics service for ecommerce.",
+      "website": "https://app.budbee.com/",
+      "icon": "Budbee.svg"
+    },
+    "CTT": {
+      "cats": [
+        99
+      ],
+      "description": "CTT operates as the national postal service of Portugal.",
+      "website": "https://www.ctt.pt",
+      "icon": "CTT.svg"
+    },
+    "Celeritas": {
+      "cats": [
+        99
+      ],
+      "description": "Celeritas offers transportation logistics services for package deliveries.",
+      "website": "https://celeritastransporte.com",
+      "icon": "Celeritas.svg"
+    },
+    "Chronofresh": {
+      "cats": [
+        99
+      ],
+      "description": "Chronofresh is an express transport service for food products.",
+      "website": "https://www.chronofresh.fr",
+      "icon": "Chronopost.svg"
+    },
+    "Chronopost": {
+      "cats": [
+        99
+      ],
+      "description": "Chronopost provides a domestic and international express shipping and delivery service.",
+      "website": "https://www.chronopost.fr",
+      "icon": "Chronopost.svg"
+    },
+    "CityMail": {
+      "cats": [
+        99
+      ],
+      "description": "CityMail is a private postal organisation operating in Sweden.",
+      "website": "https://www.citymail.se",
+      "icon": "CityMail.png"
+    },
+    "Colis Privé": {
+      "cats": [
+        99
+      ],
+      "description": "Colis Privé is a private parcel delivery service provider specialised in last-mile delivery.",
+      "website": "https://www.colisprive.fr",
+      "icon": "Colis Prive.svg"
+    },
+    "Colissimo": {
+      "cats": [
+        99
+      ],
+      "description": "Colissimo is a 'drop off' parcel delivery service.",
+      "website": "https://www.colissimo.entreprise.laposte.fr",
+      "icon": "DPD.svg"
+    },
+    "Correos": {
+      "cats": [
+        99
+      ],
+      "description": "Correos is a state-owned company responsible for providing postal service in Spain.",
+      "website": "https://www.correos.es",
+      "icon": "Correos.svg"
+    },
+    "Corso": {
+      "cats": [
+        99
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.corso\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Corso is an all-in-one platform for Shopify that provides shipping protection, returns, exchanges, and warranty management to streamline post-purchase processes.",
+      "website": "https://corso.com",
+      "icon": "Corso.svg"
+    },
+    "Coureon": {
+      "cats": [
+        99
+      ],
+      "description": "Coureon is a digital logistics carrier for international shipping.",
+      "website": "https://www.coureon.com",
+      "icon": "Coureon.png"
+    },
+    "Cubyn": {
+      "cats": [
+        99
+      ],
+      "description": "Cubyn is B2B logistics company headquartered in France.",
+      "website": "https://www.cubyn.com",
+      "icon": "Cubyn.svg"
+    },
+    "DHL": {
+      "cats": [
+        99
+      ],
+      "description": "DHL is an international courier, package delivery and express mail service, which is a division of the German logistics firm Deutsche Post.",
+      "website": "https://www.dhl.com",
+      "icon": "DHL.svg"
+    },
+    "DPD": {
+      "cats": [
+        99
+      ],
+      "description": "DPD is an international parcel delivery service for sorter compatible parcels.",
+      "website": "https://www.dpd.com",
+      "icon": "DPD.svg"
+    },
+    "DX": {
+      "cats": [
+        99
+      ],
+      "description": "DX (also known as DX Freight) is a British mail, courier and logistics company.",
+      "website": "https://www.dxdelivery.com",
+      "icon": "DX.svg"
+    },
+    "Dachser": {
+      "cats": [
+        99
+      ],
+      "description": "Dachser is a German freight company.",
+      "website": "https://www.dachser.com",
+      "icon": "Dachser.svg"
+    },
+    "Delivengo": {
+      "cats": [
+        99
+      ],
+      "description": "Delivengo is an international shipping service powered by La Poste.",
+      "website": "https://mydelivengo.laposte.fr/",
+      "icon": "La Poste.svg"
+    },
+    "Deutsche Post": {
+      "cats": [
+        99
+      ],
+      "description": "Deutsche Post is a German multinational package delivery and supply chain management company in Germany.",
+      "website": "https://www.deutschepost.de",
+      "icon": "Deutsche Post.svg"
+    },
+    "Easylog": {
+      "cats": [
+        99
+      ],
+      "description": "EasyLog is a logistics company based in Brazil.",
+      "website": "https://www.easylog.com.br"
+    },
+    "Ecovium": {
+      "cats": [
+        99
+      ],
+      "description": "Ecovium is an end-to-end logistics company in Germany.",
+      "website": "https://ecovium.com",
+      "icon": "Ecovium.svg"
+    },
+    "Envialia": {
+      "cats": [
+        99
+      ],
+      "website": "https://www.envialia.com",
+      "icon": "Envialia.png"
+    },
+    "FedEx": {
+      "cats": [
+        99
+      ],
+      "description": "FedEx is an American multinational company which focuses on transportation, ecommerce and business services.",
+      "website": "https://www.fedex.com",
+      "icon": "FedEx.svg"
+    },
+    "France Express": {
+      "cats": [
+        99
+      ],
+      "description": "France Express is a delivery service based in France.",
+      "website": "https://www.france-express.com",
+      "icon": "France Express.svg"
+    },
+    "Frequenceo": {
+      "cats": [
+        99
+      ],
+      "description": "Frequenceo is a fixed-rate postage service in France.",
+      "website": "https://www.laposte.fr/entreprise/produit-entreprise/frequenceo",
+      "icon": "La Poste.svg"
+    },
+    "GEODIS": {
+      "cats": [
+        99
+      ],
+      "description": "GEODIS is a global transport and logistics company.",
+      "website": "https://geodis.com",
+      "icon": "GEODIS.svg"
+    },
+    "GLS": {
+      "cats": [
+        99
+      ],
+      "description": "GLS offers parcel, logistics and express services, throughout Europe as well as in the US and in Canada.",
+      "website": "https://gls-group.eu",
+      "icon": "GLS.svg"
+    },
+    "Hermes": {
+      "cats": [
+        99
+      ],
+      "description": "Hermes offers integrated solutions along the supply chain and partners with national and international trading companies.",
+      "website": "https://www.hermesworld.com",
+      "icon": "Hermes.svg"
+    },
+    "Homerr": {
+      "cats": [
+        99
+      ],
+      "description": "Homerr is a logistics company operating in the Netherlands and Belgium.",
+      "website": "https://www.homerr.com",
+      "icon": "Homerr.svg"
+    },
+    "Keen Delivery": {
+      "cats": [
+        99
+      ],
+      "description": "Keen Delivery is a Dutch shipping platform ",
+      "website": "https://www.keendelivery.com",
+      "icon": "Keen Delivery.svg"
+    },
+    "LogoiX": {
+      "cats": [
+        99
+      ],
+      "description": "LogoiX is a German shipping company.",
+      "website": "https://www.logoix.com",
+      "icon": "LogoiX.png"
+    },
+    "MRW": {
+      "cats": [
+        99
+      ],
+      "description": "MRW is a Spanish courier company specialised in express national and international shipping services.",
+      "website": "https://www.mrw.es",
+      "icon": "MRW.png"
+    },
+    "Mondial Relay": {
+      "cats": [
+        99
+      ],
+      "description": "Mondial Relay is a parcel shipping and delivery service in Europe.",
+      "website": "https://www.mondialrelay.com",
+      "icon": "Mondial Relay.svg"
+    },
+    "My Flying Box": {
+      "cats": [
+        99
+      ],
+      "description": "My Flying Box is an international parcel shipping company.",
+      "website": "https://www.myflyingbox.com/",
+      "icon": "My Flying Box.svg"
+    },
+    "NACEX": {
+      "cats": [
+        99
+      ],
+      "description": "NACEX is an express courier company in Spain, Andorra and Portugal.",
+      "website": "https://www.nacex.es",
+      "icon": "NACEX.svg"
+    },
+    "Nexive": {
+      "cats": [
+        99
+      ],
+      "description": "Nexive is a postal operator in Italy.",
+      "website": "https://www.nexive.it",
+      "icon": "Nexive.svg"
+    },
+    "Osterreichische Post": {
+      "cats": [
+        99
+      ],
+      "description": "Österreichische Post is an Austrian logistics and postal services provider.",
+      "website": "https://www.post.at",
+      "icon": "Post AG.svg"
+    },
+    "Parcelforce": {
+      "cats": [
+        99
+      ],
+      "description": "Parcelforce is a courier and logistics service in the United Kingdom.",
+      "website": "https://www.parcelforce.com",
+      "icon": "Parcelforce.svg"
+    },
+    "Pickrr": {
+      "cats": [
+        99
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.pickrr\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Pickrr is a logistics and shipping solution that manages and optimizes order fulfillment for ecommerce businesses.",
+      "website": "https://pickrr.com",
+      "icon": "Pickrr.svg"
+    },
+    "PostNL": {
+      "cats": [
+        99
+      ],
+      "description": "PostNL (formerly TNT) is a mail, parcel and ecommerce corporation with operations in the Netherlands, Germany, Italy, Belgium, and the United Kingdom.",
+      "website": "https://postnl.post",
+      "icon": "PostNL.svg"
+    },
+    "Poste Italiane": {
+      "cats": [
+        99
+      ],
+      "description": "Poste Italiane is the Italian postal service provider.",
+      "website": "https://www.poste.it",
+      "icon": "Poste Italiane.svg"
+    },
+    "Red je Pakketje": {
+      "cats": [
+        99
+      ],
+      "description": "Red je Pakketje is a Dutch company specialised in same-day-delivery.",
+      "website": "https://redjepakketje.nl",
+      "icon": "Red je Pakketje.svg"
+    },
+    "Relais Colis": {
+      "cats": [
+        99
+      ],
+      "description": "Relais Colis is a French parcel delivery network.",
+      "website": "https://www.relaiscolis.com",
+      "icon": "Relais Colis.png"
+    },
+    "Royal Mail": {
+      "cats": [
+        99
+      ],
+      "description": "Royal Mail is a British multinational postal service and courier company.",
+      "website": "https://www.royalmail.com",
+      "icon": "Royal Mail.png"
+    },
+    "SEUR": {
+      "cats": [
+        99
+      ],
+      "description": "SEUR is a Spanish shipments and express transport company.",
+      "website": "https://www.seur.com",
+      "icon": "DPD.svg"
+    },
+    "Sherpa": {
+      "cats": [
+        99
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*plugin-app\\.sherpa\\.net\\.au"
+            }
+          }
+        }
+      ],
+      "description": "Sherpa is a platform that provides on-demand courier services in Australia, enabling delivery of goods from various locations.",
+      "website": "https://www.sherpa.net.au",
+      "icon": "Sherpa.svg"
+    },
+    "ShipStation": {
+      "cats": [
+        99
+      ],
+      "description": "ShipStation is a web-based shipping software designed to help ecommerce businesses streamline their shipping processes. It allows businesses to import, manage, and ship their orders from multiple sales channels, including marketplaces, shopping carts, and ecommerce platforms.",
+      "website": "https://www.shipstation.com",
+      "icon": "ShipStation.svg"
+    },
+    "Shipup": {
+      "cats": [
+        99
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.shipup\\.co/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*shipup\\.co"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ShipupETA !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ShipupETA !== 'undefined';"
+        }
+      ],
+      "description": "Shipup is a system that enables users to track shipping packages, providing real-time updates on delivery status and location.",
+      "website": "https://www.shipup.co",
+      "icon": "Shipup.svg"
+    },
+    "T1 Envios": {
+      "cats": [
+        99
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^t1envios$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "T1 Envios is a delivery solution, allows the business to select the best courier to send their packages.",
+      "website": "https://t1envios.com",
+      "icon": "T1 Envios.svg"
+    },
+    "Tipsa": {
+      "cats": [
+        99
+      ],
+      "description": "TIPSA is a parcel delivery company in Spain, Portugal and Andorra.",
+      "website": "https://www.tip-sa.com",
+      "icon": "Tipsa.svg"
+    },
+    "Transmart": {
+      "cats": [
+        99
+      ],
+      "description": "Transmart is a shipping company in Turkey.",
+      "website": "https://transmartshipping.com"
+    },
+    "Trunkrs": {
+      "cats": [
+        99
+      ],
+      "description": "Trunkrs is a Dutch parcel delivery service.",
+      "website": "https://trunkrs.nl",
+      "icon": "Trunkrs.svg"
+    },
+    "UK Mail": {
+      "cats": [
+        99
+      ],
+      "description": "UK Mail is a postal service company operating in the United Kingdom.",
+      "website": "https://www.ukmail.com",
+      "icon": "UK Mail.png"
+    },
+    "UPS": {
+      "cats": [
+        99
+      ],
+      "description": "UPS is an American multinational shipping \u0026 receiving and supply chain management company.",
+      "website": "https://www.ups.com",
+      "icon": "UPS.svg"
+    },
+    "USPS": {
+      "cats": [
+        99
+      ],
+      "description": "The United States Postal Service (USPS) is an independent agency of the executive branch of the United States federal government responsible for providing postal service in the United States.",
+      "website": "https://www.usps.com",
+      "icon": "USPS.svg"
+    },
+    "Waaship": {
+      "cats": [
+        99
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*platform-app\\.waaship\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Waaship is an all-in-one fulfillment software designed to manage orders, inventory, picking, packing, and shipping.",
+      "website": "https://waaship.com",
+      "icon": "Waaship.svg"
+    },
+    "Whistl": {
+      "cats": [
+        99
+      ],
+      "description": "Whistl is a postal delivery company operating in the United Kingdom.",
+      "website": "https://www.whistl.co.uk",
+      "icon": "Whistl.svg"
+    },
+    "Yodel": {
+      "cats": [
+        99
+      ],
+      "description": "Yodel is a delivery company for B2B and B2C orders in the United Kingdom.",
+      "website": "https://www.yodel.co.uk/"
+    },
+    "Zeleris": {
+      "cats": [
+        99
+      ],
+      "description": "Zeleris provides door to door shipment delivery to Ireland, UK and the EU.",
+      "website": "https://www.zeleris.com"
+    }
+  }
+}

@@ -1,0 +1,679 @@
+{
+  "apps": {
+    "34SP.com": {
+      "cats": [
+        88
+      ],
+      "description": "34SP.com specialises in website hosting, discount domain names, low cost VPS servers and dedicated servers.",
+      "website": "https://www.34sp.com",
+      "icon": "34SP.com.svg"
+    },
+    "ALL-INKL": {
+      "cats": [
+        88
+      ],
+      "description": "ALL-INKL is a German-based web hosting provider that promises to offer high-performance services for fair prices.",
+      "website": "https://all-inkl.com",
+      "icon": "ALL-INKL.png"
+    },
+    "ANS": {
+      "cats": [
+        88,
+        62
+      ],
+      "description": "ANS is a UK-based IT services company specializing in cloud computing, managed services, and digital transformation solutions.",
+      "website": "https://www.ans.co.uk",
+      "icon": "ANS.svg"
+    },
+    "Acquia Cloud Site Factory": {
+      "cats": [
+        88
+      ],
+      "implies": [
+        "Acquia Cloud Platform",
+        "Drupal Multisite"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sites\\/g\\/files"
+            }
+          }
+        }
+      ],
+      "description": "Acquia Site Factory is a multisite platform for Drupal.",
+      "website": "https://www.acquia.com/products/drupal-cloud/site-factory",
+      "icon": "acquia-site-factory.png"
+    },
+    "Aruba.it": {
+      "cats": [
+        88,
+        62
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-servername": {
+              "$regex": "\\.aruba\\.it"
+            }
+          }
+        }
+      ],
+      "description": "Aruba.it is an Italian company mainly active in the web hosting and domain registration businesses.",
+      "website": "https://www.aruba.it",
+      "icon": "Aruba.it.svg"
+    },
+    "Bluehost": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.host-header": {
+              "$regex": "c2hhcmvklmjsdwvob3n0lmnvbq=="
+            }
+          }
+        }
+      ],
+      "description": "Bluehost is a large web host known for its WordPress expertise, variety of “one-stop-shop” services, and bargain prices.",
+      "website": "https://www.bluehost.com",
+      "icon": "Bluehost.svg"
+    },
+    "Contabo": {
+      "cats": [
+        88
+      ],
+      "description": "Contabo is a German hosting provider, previously known by the name Giga-International.",
+      "website": "https://contabo.com",
+      "icon": "Contabo.svg"
+    },
+    "DomainFactory": {
+      "cats": [
+        88
+      ],
+      "description": "DomainFactory has been operating as a web hosting company. It is owned by GoDaddy and targets businesses in Austria and Germany.",
+      "website": "https://www.df.eu",
+      "icon": "DomainFactory.png"
+    },
+    "Doteasy": {
+      "cats": [
+        88
+      ],
+      "description": "Doteasy is a web hosting company that provides web hosting services, domain registration, and other related services for businesses and individuals. The company was founded in 2000 and is based in Vancouver, Canada.",
+      "website": "https://www.doteasy.com",
+      "icon": "Doteasy.svg"
+    },
+    "DreamHost": {
+      "cats": [
+        88
+      ],
+      "description": "DreamHost is a Los Angeles-based web hosting provider and domain name registrar.",
+      "website": "https://www.dreamhost.com",
+      "icon": "DreamHost.svg"
+    },
+    "Drupal Multisite": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/sites/(?!(?:default|all)/).*/(?:files|themes|modules)/"
+            }
+          }
+        }
+      ],
+      "description": "Drupal Multisite enables separate, independent sites to be served from a single codebase.",
+      "website": "https://www.drupal.org/docs/multisite-drupal",
+      "icon": "Drupal.svg"
+    },
+    "Elementor Cloud": {
+      "cats": [
+        88
+      ],
+      "implies": [
+        "Elementor",
+        "WordPress"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "elementor cloud"
+            }
+          }
+        }
+      ],
+      "description": "Elementor Cloud is a platform for creating and hosting WordPress websites with Elementor.",
+      "website": "https://elementor.com",
+      "icon": "Elementor.svg"
+    },
+    "FastComet": {
+      "cats": [
+        88
+      ],
+      "description": "FastComet is a hosting service company from San Francisco, California.",
+      "website": "https://www.fastcomet.com",
+      "icon": "FastComet.png"
+    },
+    "GoDaddy": {
+      "cats": [
+        88
+      ],
+      "description": "GoDaddy is used as a web host and domain registrar.",
+      "website": "https://www.godaddy.com",
+      "icon": "GoDaddy.svg"
+    },
+    "GuideIT": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.platform": {
+              "$regex": "^guideit$"
+            }
+          }
+        }
+      ],
+      "description": "GuideIT is a cloud hosting provider.",
+      "website": "https://guideit.uk",
+      "icon": "GuideIT.png"
+    },
+    "Helhost": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "helhost"
+            }
+          }
+        }
+      ],
+      "description": "Helhost is a web hosting provider and internet domain registrar from Democratic Republic of Congo.",
+      "website": "https://www.helhost.com",
+      "icon": "Helhost.svg"
+    },
+    "Hetzner": {
+      "cats": [
+        88,
+        62
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "heray"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "hetzner"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Hetzner provides dedicated hosting, shared web hosting, virtual private servers, managed servers, domain names, SSL certificates, storage boxes, and cloud.",
+      "website": "https://www.hetzner.com",
+      "icon": "Hetzner.svg"
+    },
+    "HostEurope": {
+      "cats": [
+        88
+      ],
+      "description": "HostEurope is a European website hosting, email and domain name registrar company headquartered Hayes, West London.",
+      "website": "https://www.hosteurope.de",
+      "icon": "HostEurope.png"
+    },
+    "Hostens": {
+      "cats": [
+        88
+      ],
+      "description": "Hostens is a web hosting company specialising in hosting services, virtual private server hosting, and the domain name or transition.",
+      "website": "https://www.hostens.com",
+      "icon": "Hostens.svg"
+    },
+    "Hostgator": {
+      "cats": [
+        88
+      ],
+      "description": "HostGator is a Houston-based provider of shared, reseller, virtual private server, and dedicated web hosting with an additional presence in Austin, Texas.",
+      "website": "https://www.hostgator.com",
+      "icon": "Hostgator.svg"
+    },
+    "Hosting Ukraine": {
+      "cats": [
+        88
+      ],
+      "description": "Hosting Ukraine is a web hosting provider and internet domain registrar.",
+      "website": "https://www.ukraine.com.ua",
+      "icon": "Hosting Ukraine.png"
+    },
+    "Hostinger": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.platform": {
+              "$regex": "hostinger"
+            }
+          }
+        }
+      ],
+      "description": "Hostinger is an employee-owned Web hosting provider and internet domain registrar.",
+      "website": "https://www.hostinger.com",
+      "icon": "Hostinger.svg"
+    },
+    "Hostiq": {
+      "cats": [
+        88
+      ],
+      "description": "Hostiq is a web hosting provider and internet domain registrar.",
+      "website": "https://hostiq.ua",
+      "icon": "Hostiq.png"
+    },
+    "Hostpoint": {
+      "cats": [
+        88
+      ],
+      "description": "Hostpoint is a Switzerland-based web hosting company.",
+      "website": "https://www.hostpoint.ch",
+      "icon": "Hostpoint.svg"
+    },
+    "Hypercloudhost": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^hypercloudhost$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Hypercloudhost is a hosting service solution in Indonesia offering anti-DDoS protection and high-performance cloud hosting.",
+      "website": "https://hypercloudhost.com",
+      "icon": "Hypercloudhost.svg"
+    },
+    "Hyperlane": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hyperlane\\.co/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hyperlane\\.co/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Hyperlane is a hosting platform for WordPress and Craft CMS websites.",
+      "website": "https://hyperlane.co",
+      "icon": "Hyperlane.svg"
+    },
+    "IONOS": {
+      "cats": [
+        88
+      ],
+      "description": "IONOS is the web hosting and cloud partner for small and medium-sized businesses.",
+      "website": "https://www.ionos.com",
+      "icon": "IONOS.svg"
+    },
+    "Infomaniak": {
+      "cats": [
+        88
+      ],
+      "description": "Infomaniak is a hosting company based in Geneva, Switzerland.",
+      "website": "https://www.infomaniak.com",
+      "icon": "Infomaniak.svg"
+    },
+    "Luveedu Cloud": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.luveedu\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Luveedu Cloud is a domain and web hosting platform.",
+      "website": "https://cloud.luveedu.com",
+      "icon": "LuveeduCloud.svg"
+    },
+    "Mercurycloud": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-host": {
+                  "$regex": "\\.mercurycloud\\.fr"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "mercurycloud cdn v([\\d\\.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Mercurycloud is a hosting service provider offering a range of solutions, including web hosting, virtual private servers (VPS), dedicated servers, and game servers.",
+      "website": "https://mercurycloud.fr",
+      "icon": "Mercurycloud.svg"
+    },
+    "Mittwald": {
+      "cats": [
+        88
+      ],
+      "description": "Mittwald is a web hosting agency, established in 2003 in Espelkamp, Germany",
+      "website": "https://www.mittwald.de",
+      "icon": "Mittwald.svg"
+    },
+    "Motherhost": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.platform": {
+              "$regex": "^motherhost$"
+            }
+          }
+        }
+      ],
+      "description": "Motherhost is a web hosting company based in India that offers a range of hosting services, including shared hosting, VPS hosting, dedicated servers, and cloud hosting.",
+      "website": "https://www.motherhost.com",
+      "icon": "Motherhost.svg"
+    },
+    "Nestify": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-nestify-cache": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "Nestify is a fully managed WordPress hosting platform that runs on AWS graviton processors.",
+      "website": "https://nestify.io",
+      "icon": "Nestify.png"
+    },
+    "Newspack by Automattic": {
+      "cats": [
+        88
+      ],
+      "implies": [
+        "Newspack"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.host-header": {
+              "$regex": "newspack"
+            }
+          }
+        }
+      ],
+      "description": "Automattic's Newspack service is an all-in-one platform designed for small and medium-sized news organizations that simplifies publishing and drives audience and revenue right out of the box.",
+      "website": "https://newspack.pub/",
+      "icon": "NewspackLogo.png"
+    },
+    "Niagahoster": {
+      "cats": [
+        88
+      ],
+      "implies": [
+        "Niagahoster"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "niagahoster"
+            }
+          }
+        }
+      ],
+      "description": "Niagahoster is a web hosting service for small and medium enterprises. It provides shared hosting, WordPress hosting, Virtual Private Server (VPS), and more.",
+      "website": "https://niagahoster.co.id",
+      "icon": "Niagahoster.svg"
+    },
+    "One.com": {
+      "cats": [
+        88
+      ],
+      "description": "One.com is a Denmark-based company offering bargain-priced WordPress and shared web hosting plans.",
+      "website": "https://www.one.com",
+      "icon": "One.com.svg"
+    },
+    "REG.RU": {
+      "cats": [
+        88
+      ],
+      "description": "REG.RU is a web hosting provider and internet domain registrar.",
+      "website": "https://www.reg.ru",
+      "icon": "REG.RU.svg"
+    },
+    "Rosti": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-rosti": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "Rosti is a hosting service suitable for development and production deployment of web applications.",
+      "website": "https://rosti.cz",
+      "icon": "Rosti.png"
+    },
+    "Saba.Host": {
+      "cats": [
+        88
+      ],
+      "description": "Saba.Host is a total web-hosting solutions. It provides shared hosting, WordPress hosting, dedicated server, virtual private server (VPS), SSL and more.",
+      "website": "https://saba.host",
+      "icon": "Saba.Host.png"
+    },
+    "Sakura Internet": {
+      "cats": [
+        88
+      ],
+      "description": "Sakura Internet is a web hosting provider that has been operating for almost 30 years.",
+      "website": "https://www.sakura.ad.jp",
+      "icon": "Sakura Internet.png"
+    },
+    "Smilii": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.platform": {
+              "$regex": "^smilii$"
+            }
+          }
+        }
+      ],
+      "description": "Smilii is a family-owned web hosting provider and internet domain registrar offering domain registration and website hosting services.",
+      "website": "https://smilii.net",
+      "icon": "Smilii.svg"
+    },
+    "Strato": {
+      "cats": [
+        88,
+        62
+      ],
+      "description": "Strato is an internet hosting service provider headquartered in Berlin, Germany which provide dedicated server hosting, a website builder and a cloud storage services.",
+      "website": "https://www.strato.com",
+      "icon": "Strato.svg"
+    },
+    "Strattic": {
+      "cats": [
+        88
+      ],
+      "implies": [
+        "WordPress"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "strattic"
+            }
+          }
+        }
+      ],
+      "description": "Strattic offers static and headless hosting for WordPress sites.",
+      "website": "https://www.strattic.com/",
+      "icon": "strattic-icon.png"
+    },
+    "Tangled Network": {
+      "cats": [
+        88
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-hosting-provider": {
+              "$regex": "tangled network"
+            }
+          }
+        }
+      ],
+      "description": "Tangled Network provides a managed services in website devleopment, web and database hosting and domain registration, with a focus on everything managed for small and medium sized businesses.",
+      "website": "https://tanglednetwork.com",
+      "icon": "atws.png"
+    },
+    "UKFast": {
+      "cats": [
+        88,
+        62
+      ],
+      "description": "UKFast is a business-to-business internet hosting company based in Manchester, UK.",
+      "website": "https://www.ukfast.co.uk",
+      "icon": "UKFast.png"
+    },
+    "VentraIP": {
+      "cats": [
+        88
+      ],
+      "description": "VentraIP is the largest privately owned web host and domain name registrar in Australia.",
+      "website": "https://ventraip.com.au",
+      "icon": "VentraIP.svg"
+    },
+    "WebHostUK": {
+      "cats": [
+        88
+      ],
+      "description": "WebHostUK is a UK based web hosting company offering cheap yet reliable and secure web hosting solutions on both Linux and Windows servers.",
+      "website": "https://www.webhostuk.co.uk",
+      "icon": "WebHostUK.png"
+    },
+    "WordPress Multisite": {
+      "cats": [
+        88
+      ],
+      "description": "A multisite network is a collection of sites that all share the same WordPress installation core files. ",
+      "website": "https://wordpress.org/documentation/article/create-a-network/",
+      "icon": "WordPress.svg"
+    },
+    "World4You": {
+      "cats": [
+        88
+      ],
+      "description": "World4You operates homepage and domain solutions. World4Youu operates data centers in Austria and provides data protection.",
+      "website": "https://www.world4you.com",
+      "icon": "World4You.svg"
+    },
+    "Xserver": {
+      "cats": [
+        88
+      ],
+      "description": "Xserver engages in web hosting, web application and internet-related services.",
+      "website": "https://www.xserver.ne.jp",
+      "icon": "Xserver.png"
+    },
+    "YalinHost": {
+      "cats": [
+        88
+      ],
+      "description": "YalinHost is a web hosting service provider.",
+      "website": "https://yalinhost.com",
+      "icon": "YalinHost.png"
+    },
+    "idCloudHost": {
+      "cats": [
+        88
+      ],
+      "description": "idCloudHost is a local web service provider based in Indonesia that offer a wide range of services including domain name registration and cloud hosting.",
+      "website": "https://idcloudhost.com",
+      "icon": "idCloudHost.png"
+    }
+  }
+}

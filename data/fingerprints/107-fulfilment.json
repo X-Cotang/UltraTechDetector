@@ -1,0 +1,285 @@
+{
+  "apps": {
+    "AfterShip": {
+      "cats": [
+        107
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof aftership !== 'undefined' \u0026\u0026 typeof aftership.__VERSION__ !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return aftership.__VERSION__ || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof aftership.__VERSION__ !== 'undefined';",
+          "version": "try { return String(aftership.__VERSION__ || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "AfterShip provides automated shipment tracking as a service.",
+      "website": "https://www.aftership.com",
+      "icon": "AfterShip.svg"
+    },
+    "Bobgo": {
+      "cats": [
+        107
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.bobgo\\.co\\.za"
+            }
+          }
+        }
+      ],
+      "description": "Bobgo is a smart shipping and order management solution designed to streamline logistics and simplify order fulfillment for businesses.",
+      "website": "https://www.bobgo.co.za",
+      "icon": "Bobgo.svg"
+    },
+    "Deliverr": {
+      "cats": [
+        107
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*fast-tags\\.deliverr\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof deliverrScript !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof deliverrScript !== 'undefined';"
+        }
+      ],
+      "description": "Deliverr is a fulfilment service that facilitates shipping services for ecommerce businesses.",
+      "website": "https://deliverr.com",
+      "icon": "Deliverr.svg"
+    },
+    "Descartes": {
+      "cats": [
+        107
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.descartes\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ies\\.descartes"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Descartes is a technology platform that offers solutions for logistics and supply chain management.",
+      "website": "https://www.descartes.com",
+      "icon": "Descartes.svg"
+    },
+    "Enviopack": {
+      "cats": [
+        107
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.enviopack\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Enviopack is a technological solution designed to optimize ecommerce logistics by improving efficiency and streamlining operational processes.",
+      "website": "https://enviopack.com",
+      "icon": "Enviopack.svg"
+    },
+    "Extend": {
+      "cats": [
+        107
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.helloextend\\.com/extend-sdk-client/v([\\d.]+)/extend-sdk-client\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Extend !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Extend !== 'undefined';"
+        }
+      ],
+      "description": "Extend is a service that offers brands product and shipping protection, creating a new revenue source while enhancing customer loyalty and trust.",
+      "website": "https://www.extend.com",
+      "icon": "Extend.svg"
+    },
+    "Malomo": {
+      "cats": [
+        107
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.gomalomo\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Malomo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Malomo !== 'undefined';"
+        }
+      ],
+      "description": "Malomo is a cloud-based shipment tracking solution that helps small to midsize eCommerce businesses provide customers with shipping updates via white-label package tracking pages.",
+      "website": "https://gomalomo.com",
+      "icon": "Malomo.svg"
+    },
+    "MapMyChannel": {
+      "cats": [
+        107
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.mapmychannel\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "MapMyChannel is a cloud-based fulfillment platform that integrates with ecommerce systems to automate inventory, shipping, and order management.",
+      "website": "https://www.mapmychannel.com",
+      "icon": "MapMyChannel.svg"
+    },
+    "Planzer": {
+      "cats": [
+        107
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/planzer-jobs/"
+            }
+          }
+        }
+      ],
+      "description": "Planzer is a provider of transport and warehouse logistics services, specializing in efficient and reliable solutions for supply chain management across various industries.",
+      "website": "https://www.planzer.ch",
+      "icon": "Planzer.svg"
+    },
+    "Route": {
+      "cats": [
+        107
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.routeapp\\.io"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*shopify-widget\\.route\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Routeapp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof routeWidgetInitialized !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Routeapp !== 'undefined';"
+        }
+      ],
+      "description": "Route is a delivery and shipping tracking app",
+      "website": "https://route.com/",
+      "icon": "route.png"
+    },
+    "Shoprunner": {
+      "cats": [
+        107,
+        102
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/shoprunner/shoprunner_init\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _shoprunner_com !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _shoprunner_com !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _shoprunner_com.version !== 'undefined';",
+          "version": "try { return String(_shoprunner_com.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "ShopRunner is a service offering consumers free two-day shipping and returns on online orders placed with certain retailers.",
+      "website": "https://www.shoprunner.com",
+      "icon": "Shoprunner.png"
+    }
+  }
+}

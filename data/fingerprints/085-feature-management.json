@@ -1,0 +1,215 @@
+{
+  "apps": {
+    "Beamer": {
+      "cats": [
+        85
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Beamer !== 'undefined' \u0026\u0026 typeof Beamer.enabled !== 'undefined' \u0026\u0026 Beamer.enabled === 'true'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Beamer.enabled !== 'undefined';",
+          "version": "try { return String(Beamer.enabled || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _BEAMER_URL !== 'undefined';",
+          "version": "try { return String(_BEAMER_URL || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Beamer is a feature management platform that allows businesses to manage and share new product releases, feature updates, and bug fixes with their customers.",
+      "website": "https://www.getbeamer.com",
+      "icon": "Beamer.svg"
+    },
+    "Featurebase": {
+      "cats": [
+        85
+      ],
+      "description": "Featurebase is feature management software designed to collect, organise, and analyse product feedback, empowering teams to make data-driven decisions for building products that align with customer preferences.",
+      "website": "https://www.featurebase.app",
+      "icon": "Featurebase.svg"
+    },
+    "FlagSmith": {
+      "cats": [
+        85
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.flagsmith\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof flagsmith !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof flagsmith !== 'undefined';"
+        }
+      ],
+      "description": "FlagSmith is an open-source, fully supported feature flag \u0026 remote configuration solution, which provides hosted API to help deployment to a private cloud or on-premises environment.",
+      "website": "https://flagsmith.com",
+      "icon": "FlagSmith.svg"
+    },
+    "LaunchDarkly": {
+      "cats": [
+        85
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:\\.|\\-)launchdarkly(?:\\.com/|\\-sdk\\.)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DDC !== 'undefined' \u0026\u0026 typeof DDC.WS !== 'undefined' \u0026\u0026 typeof DDC.WS.state !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DDC.WS.state !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof launchDarkly !== 'undefined';"
+        }
+      ],
+      "description": "LaunchDarkly is a continuous delivery and feature flags as a service platform that integrates into a company's current development cycle.",
+      "website": "https://launchdarkly.com",
+      "icon": "LaunchDarkly.svg"
+    },
+    "LaunchNotes": {
+      "cats": [
+        85
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.launchnotes\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "LaunchNotes is a platform that aligns teams with product development and release pipelines while keeping users informed and engaged with product updates.",
+      "website": "https://launchnotes.com",
+      "icon": "LaunchNotes.svg"
+    },
+    "Noticeable": {
+      "cats": [
+        85
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.noticeable\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof noticeable !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof noticeable !== 'undefined';"
+        }
+      ],
+      "description": "Noticeable is a platform that simplifies product updates and company announcements while enhancing user communication and feedback analysis.",
+      "website": "https://noticeable.io",
+      "icon": "Noticeable.svg"
+    },
+    "Olvy": {
+      "cats": [
+        85
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.olvy\\.co"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OlvyConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OlvyConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OlvyInstances !== 'undefined';"
+        }
+      ],
+      "description": "Olvy is a feedback management platform that enables user-centric teams to analyze insights, streamline product development, and keep stakeholders informed.",
+      "website": "https://olvy.co",
+      "icon": "Olvy.svg"
+    },
+    "Split": {
+      "cats": [
+        85,
+        74
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.split\\.io/(?:sdk/split-([\\d\\.]+)\\.min\\.js)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SPLITIO_API_KEY !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SPLITIO_API_KEY !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof split_shopper_client !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof split_visitor_client !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof splitio !== 'undefined';"
+        }
+      ],
+      "description": "Split is a feature delivery platform that powers feature flag management, software experimentation, and continuous delivery.",
+      "website": "https://www.split.io",
+      "icon": "Split.png"
+    }
+  }
+}

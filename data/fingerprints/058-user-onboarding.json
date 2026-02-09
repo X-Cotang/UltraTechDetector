@@ -1,0 +1,477 @@
+{
+  "apps": {
+    "Appcues": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*fast\\.appcues\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Appcues !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Appcues !== 'undefined';"
+        }
+      ],
+      "description": "Appcues is a solution for measuring and improving product adoption.",
+      "website": "https://www.appcues.com/",
+      "icon": "Appcues.png"
+    },
+    "Arengu": {
+      "cats": [
+        58,
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.arengu\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Arengu is an online form builder designed to streamline user onboarding.",
+      "website": "https://www.arengu.com",
+      "icon": "Arengu.svg"
+    },
+    "Canopy Connect": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.usecanopy\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Canopy Connect is a tool that enables instant collection of insurance information for verification, analysis, or onboarding processes.",
+      "website": "https://www.usecanopy.com",
+      "icon": "CanopyConnect.svg"
+    },
+    "Chameleon": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.trychameleon\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof chmln !== 'undefined' \u0026\u0026 typeof chmln.Snippet !== 'undefined' \u0026\u0026 typeof chmln.Snippet.urls !== 'undefined' \u0026\u0026 typeof chmln.Snippet.urls.fast !== 'undefined' \u0026\u0026 chmln.Snippet.urls.fast === 'fast\\.trychameleon\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof chmln.Snippet.urls.fast !== 'undefined';",
+          "version": "try { return String(chmln.Snippet.urls.fast || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof chmlnData.organizationAttributes !== 'undefined';"
+        }
+      ],
+      "description": "Chameleon is a sophisticated no-code platform for product success, empowering SaaS teams to build self-service user onboarding, feature adoption, and feedback collection.",
+      "website": "https://www.trychameleon.com",
+      "icon": "Chameleon.png"
+    },
+    "Checkin": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*registration\\.checkin\\.no"
+            }
+          }
+        }
+      ],
+      "description": "Checkin is a system that automates registration processes.",
+      "website": "https://www.checkin.no",
+      "icon": "Checkin.svg"
+    },
+    "Elevio": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.elev\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _elev !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _elev !== 'undefined';"
+        }
+      ],
+      "description": "Elevio is a self-service support platform for SaaS that delivers contextual knowledge to customers, support agents, and internal teams.",
+      "website": "https://elev.io",
+      "icon": "Elevio.svg"
+    },
+    "FintechOS": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']ftos-app-version[\"'][^\u003e]+content=[\"']\\sv([\\d\\.]+)\\s\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FtosChat !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FtosChat !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ftos.core.getB2CCulture !== 'undefined';"
+        }
+      ],
+      "description": "FintechOS is a low-code platform for banking and insurance.",
+      "website": "https://fintechos.com",
+      "icon": "FintechOS.svg"
+    },
+    "Hansel": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hansel\\.io/web/([\\d\\.]+)/\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Hansel !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Hansel !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HanselPX !== 'undefined';"
+        }
+      ],
+      "description": "Hansel is a B2B enterprise software that deploys real-time Nudges to drive feature adoption and address user drop-offs, at scale.",
+      "website": "https://hansel.io",
+      "icon": "Hansel.png"
+    },
+    "LOU": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.louassist\\.com*"
+            }
+          }
+        }
+      ],
+      "description": "LOU is a Digital Adoption Platform that streamlines user onboarding and training.",
+      "website": "https://www.louassist.com",
+      "icon": "LOU.png"
+    },
+    "PeerPal": {
+      "cats": [
+        58
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof initPeerPal !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initPeerPal !== 'undefined';"
+        }
+      ],
+      "description": "PeerPal is a platform that enhances the admission experience by connecting prospective families with students, alumni, faculty, and parent ambassadors.",
+      "website": "https://gravyty.com/peerpal",
+      "icon": "PeerPal.svg"
+    },
+    "Poper": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.poper\\.ai"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof POPER_EXECUTED_STATE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof POPER_EXECUTED_STATE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof POPER_INSTANCES !== 'undefined';"
+        }
+      ],
+      "description": "Poper is an AI-powered onsite engagement platform designed to enhance user interactions, increase retention, and improve conversion rates.",
+      "website": "https://www.poper.ai",
+      "icon": "Poper.svg"
+    },
+    "Stonly": {
+      "cats": [
+        58
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof STONLY_WID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof STONLY_WID !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof StonlyWidget.queue !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jsonpStonlyWidget !== 'undefined';"
+        }
+      ],
+      "description": "Stonly is a platform that enhances support efficiency by enabling customer self-service through personalized knowledge, AI-driven assistance, and process automation.",
+      "website": "https://stonly.com",
+      "icon": "Stonly.svg"
+    },
+    "Toonimo": {
+      "cats": [
+        58
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TMO_jsFetchTimeStart !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Toonimo.Analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ToonimoLoader !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TMO_jsFetchTimeStart !== 'undefined';"
+        }
+      ],
+      "description": "Toonimo is a cloud-based platform that enables businesses to showcase key website features and guide site visitors.",
+      "website": "https://www.toonimo.com",
+      "icon": "Toonimo.svg"
+    },
+    "Userflow": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.userflow\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof USERFLOWJS_QUEUE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof userflow.endAllFlows !== 'undefined';",
+          "version": "try { return String(userflow.endAllFlows || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof userflow.endChecklist !== 'undefined';",
+          "version": "try { return String(userflow.endChecklist || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof USERFLOWJS_QUEUE !== 'undefined';"
+        }
+      ],
+      "description": "Userflow is a user onboarding software for building product tours and onboarding checklists, tailored to your app and your users.",
+      "website": "https://userflow.com",
+      "icon": "Userflow.svg"
+    },
+    "Userlane": {
+      "cats": [
+        58
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Userlane !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Userlane !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof UserlaneCommandObject !== 'undefined';"
+        }
+      ],
+      "description": "Userlane is a platform that provides an interactive step-by-step guide system designed to help users navigate software applications.",
+      "website": "https://www.userlane.com",
+      "icon": "Userlane.svg"
+    },
+    "Userpilot": {
+      "cats": [
+        58,
+        97
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof userpilot !== 'undefined' \u0026\u0026 typeof userpilot.triggerById !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof userpilotPako !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof userpilot.triggerById !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof userpilotInitiatorSDK !== 'undefined';"
+        }
+      ],
+      "description": "Userpilot is a cloud-based product experience platform designed for customer success and product teams to onboard users and increase product adoption through behavior-triggered experiences.",
+      "website": "https://userpilot.com",
+      "icon": "Userpilot.svg"
+    },
+    "WalkMe": {
+      "cats": [
+        58
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WalkMeAPI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WalkMeAPI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _walkmeConfig !== 'undefined';"
+        }
+      ],
+      "description": "WalkMe is a cloud-based interactive guidance and engagement platform.",
+      "website": "https://www.walkme.com",
+      "icon": "WalkMe.svg"
+    },
+    "Whatfix": {
+      "cats": [
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.whatfix\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _wfx_add_logger !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wfx_is_playing__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _wfx_add_logger !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _wfx_settings !== 'undefined';"
+        }
+      ],
+      "description": "Whatfix is a SaaS based platform which provides in-app guidance and performance support for web applications and software products.",
+      "website": "https://whatfix.com",
+      "icon": "Whatfix.svg"
+    }
+  }
+}

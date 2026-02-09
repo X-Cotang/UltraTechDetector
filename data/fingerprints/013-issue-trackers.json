@@ -1,0 +1,1539 @@
+{
+  "apps": {
+    "Asana": {
+      "cats": [
+        13
+      ],
+      "description": "Asana is a web and mobile application designed to help teams organize, track, and manage their work.",
+      "website": "https://asana.com",
+      "icon": "Asana.svg"
+    },
+    "Atlassian Jira": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "title=\"JiraVersion\" value=\"([\\d.]+)\"\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']jira[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']data-version[\"'][^\u003e]+content=[\"']([\\d.]+)\\;version:\\1\\;confidence:0[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jira !== 'undefined' \u0026\u0026 typeof jira.id !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jira.id !== 'undefined';"
+        }
+      ],
+      "website": "https://www.atlassian.com/software/jira/overview/",
+      "icon": "Atlassian Jira.svg",
+      "cpe": "cpe:2.3:a:atlassian:jira:*:*:*:*:*:*:*:*"
+    },
+    "Atlassian Jira Issue Collector": {
+      "cats": [
+        13,
+        47
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*atlassian\\.jira\\.collector\\.plugin"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jira-issue-collector-plugin"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Atlassian Jira Issue Collector is a tool used to download a list of websites using with email addresses, phone numbers and LinkedIn profiles.",
+      "website": "https://www.atlassian.com/software/jira/overview/",
+      "icon": "Atlassian Jira.svg"
+    },
+    "Atlassian Statuspage": {
+      "cats": [
+        13,
+        62
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca[^\u003e]*href=\"https?://(?:www\\.)?statuspage\\.io/powered-by[^\u003e]+\u003e"
+                }
+              },
+              {
+                "headers.x-statuspage-skip-logging": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-statuspage-version": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Statuspage is a status and incident communication tool.",
+      "website": "https://www.atlassian.com/software/statuspage",
+      "icon": "Atlassian Statuspage.svg"
+    },
+    "Better Stack": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//(?:uptime\\.)?(?:betteruptime|betterstack)\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Better Stack is the all-in-one infrastructure monitoring platform for your incident management, uptime monitoring, and status pages.",
+      "website": "https://betterstack.com/uptime",
+      "icon": "Better Stack.svg"
+    },
+    "BugHerd": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.bugherd\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BugHerdConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BugHerdConfig !== 'undefined';"
+        }
+      ],
+      "description": "BugHerd is a cloud-based feedback collection and bug management tool.",
+      "website": "https://bugherd.com",
+      "icon": "BugHerd.svg"
+    },
+    "Buglog": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.buglog\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof buglog !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof buglog !== 'undefined';"
+        }
+      ],
+      "description": "Buglog is a tool for creating and sharing bug reports in real-time directly from the browser.",
+      "website": "https://buglog.com",
+      "icon": "Buglog.svg"
+    },
+    "Bugzilla": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca href=\"https?://www\\.bugzilla\\.org/docs/([0-9.]+)/[^\u003e]+\u003ehelp\u003c\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmain id=\"bugzilla-body\""
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cspan id=\"information\" class=\"header_addl_info\"\u003eversion ([\\d.]+)\u003c\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "href=\"enter_bug\\.cgi\"\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']bugzilla ?([\\d.]+)?\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BUGZILLA !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BUGZILLA !== 'undefined';"
+        }
+      ],
+      "website": "https://www.bugzilla.org",
+      "icon": "Bugzilla.png",
+      "cpe": "cpe:2.3:a:mozilla:bugzilla:*:*:*:*:*:*:*:*"
+    },
+    "Cachet": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Cachet !== 'undefined' \u0026\u0026 typeof Cachet.Notifier !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Cachet.Notifier !== 'undefined';"
+        }
+      ],
+      "description": "Cachet is the free and open-source status page for your API, service or company.",
+      "website": "https://cachethq.io",
+      "icon": "Cachet.svg"
+    },
+    "Canny": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "//canny\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Canny !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Canny !== 'undefined';"
+        }
+      ],
+      "description": "Canny is a cloud-based solution that helps small to large businesses collect, analyse, prioritise and track user feedback to make informed product decisions.",
+      "website": "https://canny.io",
+      "icon": "Canny.svg"
+    },
+    "Checkly": {
+      "cats": [
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __NUXT__ !== 'undefined' \u0026\u0026 typeof __NUXT__.config !== 'undefined' \u0026\u0026 typeof __NUXT__.config.public !== 'undefined' \u0026\u0026 typeof __NUXT__.config.public.apiUrl !== 'undefined' \u0026\u0026 __NUXT__.config.public.apiUrl === 'api\\.checklyhq\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __NUXT__.config.public.apiUrl !== 'undefined';",
+          "version": "try { return String(__NUXT__.config.public.apiUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Checkly is the API and E2E monitoring platform for the modern stack: programmable, flexible and loving JavaScript.",
+      "website": "https://www.checklyhq.com",
+      "icon": "Checkly.svg"
+    },
+    "Combodo iTop": {
+      "cats": [
+        13,
+        19
+      ],
+      "description": "Combodo iTop is an open-source IT service management (ITSM) and IT operations management (ITOM) platform developed by Combodo, a software company based in France.",
+      "website": "https://www.combodo.com/itop-193",
+      "icon": "Combodo iTop.svg"
+    },
+    "Faveo": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/lb-faveo/js/"
+            }
+          }
+        }
+      ],
+      "description": "Faveo is an open source help desk system and ticket management tool that enables tracking, assignment, and resolution of support tickets.",
+      "website": "https://faveohelpdesk.com",
+      "icon": "Faveo.svg"
+    },
+    "Feedback Fish": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^https://feedback\\.fish/ff\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Feedback Fish is a widget for collecting website feedback from users.",
+      "website": "https://feedback.fish",
+      "icon": "feedback-fish.svg"
+    },
+    "Flyspray": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:\u003ca[^\u003e]+\u003epowered by flyspray|\u003cmap id=\"projectsearchform)"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://flyspray.org",
+      "icon": "Flyspray.png"
+    },
+    "Get Satisfaction": {
+      "cats": [
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GSFN !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GSFN !== 'undefined';"
+        }
+      ],
+      "website": "https://getsatisfaction.com/corp/",
+      "icon": "Get Satisfaction.png"
+    },
+    "GetFeedback": {
+      "cats": [
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof usabilla_live !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof usabilla_live !== 'undefined';"
+        }
+      ],
+      "description": "GetFeedback (formerly Usabilla) is a user feedback solution for collecting qualitative and quantitative user feedback across digital channels including websites, apps and emails.",
+      "website": "https://www.getfeedback.com",
+      "icon": "GetFeedback.svg"
+    },
+    "GitLab": {
+      "cats": [
+        13,
+        47
+      ],
+      "implies": [
+        "Ruby on Rails",
+        "Vue.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cheader class=\"navbar navbar-fixed-top navbar-gitlab with-horizontal-nav\"\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta content=\"https?://[^/]+/assets/gitlab_logo-"
+                }
+              },
+              {
+                "headers.x-gitlab-meta": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']og:site_name[\"'][^\u003e]+content=[\"']^gitlab$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GitLab !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gl.dashboardOptions !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GitLab !== 'undefined';"
+        }
+      ],
+      "description": "GitLab is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and continuous integration and deployment pipeline features, using an open-source license.",
+      "website": "https://about.gitlab.com",
+      "icon": "GitLab.svg",
+      "cpe": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    },
+    "GlitchTip": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.glitchtip\\.com"
+            }
+          }
+        }
+      ],
+      "description": "GlitchTip is an open-source platform for error tracking, monitoring errors, performance, and uptime.",
+      "website": "https://glitchtip.com",
+      "icon": "GlitchTip.svg"
+    },
+    "Help Scout": {
+      "cats": [
+        13,
+        52
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.helpscout\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __onBeaconDestroy !== 'undefined' \u0026\u0026 __onBeaconDestroy === '\\;confidence:25'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __onBeaconDestroy !== 'undefined';",
+          "version": "try { return String(__onBeaconDestroy || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof beaconStore !== 'undefined';",
+          "version": "try { return String(beaconStore || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Help Scout is a customer service platform including email, a knowledge base tool and live chat.",
+      "website": "https://www.helpscout.com",
+      "icon": "Help Scout.svg"
+    },
+    "HetrixTools": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.hetrixtools\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hetrixtools\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof htoolz !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof htoolz !== 'undefined';"
+        }
+      ],
+      "description": "HetrixTools is an uptime and blacklist monitoring platform.",
+      "website": "https://hetrixtools.com",
+      "icon": "HetrixTools.png"
+    },
+    "Honeybadger": {
+      "cats": [
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Honeybadger !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Honeybadger !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initHoneyBadger !== 'undefined';"
+        }
+      ],
+      "description": "Honeybadger provides exception and uptime monitoring to keep your web apps error-free.",
+      "website": "https://www.honeybadger.io",
+      "icon": "honey-badger.svg"
+    },
+    "Hund.io": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hund\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Hund.io is an automated status pages with monitoring.",
+      "website": "https://hund.io",
+      "icon": "Hund.io.svg"
+    },
+    "Incident.io": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-webkit-csp": {
+              "$regex": "incident-io-team\\.vercel\\.app"
+            }
+          }
+        }
+      ],
+      "description": "Incident.io is a Slack-integrated incident management tool used to announce, manage, and resolve all incidents in a single channel.",
+      "website": "https://incident.io",
+      "icon": "Incident.io.svg"
+    },
+    "Instatus": {
+      "cats": [
+        13
+      ],
+      "description": "Instatus is a status and incident communication tool.",
+      "website": "https://instatus.com",
+      "icon": "Instatus.svg"
+    },
+    "LoopedIn": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.productstash\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "LoopedIn is an all-in-one tool for collecting feedback, building roadmaps, sharing changelogs, and publishing knowledge bases.",
+      "website": "https://www.loopedin.io",
+      "icon": "LoopedIn.svg"
+    },
+    "MantisBT": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "MySQL"
+      ],
+      "description": "MantisBT is an open-source, web-based issue tracking system written in PHP with a MySQL database backend, designed to facilitate bug tracking and project management for software development teams.",
+      "website": "https://www.mantisbt.org",
+      "icon": "MantisBT.png",
+      "cpe": "cpe:2.3:a:mantisbt:mantisbt:*:*:*:*:*:*:*:*"
+    },
+    "Marker": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*edge\\.marker\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof markerConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof markerConfig !== 'undefined';"
+        }
+      ],
+      "description": "Marker.io is an issue tracker solution for Project Managers, QA Testers and Agency Clients to report feedback \u0026 bugs to developers.",
+      "website": "https://marker.io",
+      "icon": "Marker.svg"
+    },
+    "Mojo Helpdesk": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "asset\\.mojohelpdesk\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Mojo Helpdesk is a ticketing system used to centralize requests, assign tasks, automate workflows, and track progress for improved organization.",
+      "website": "https://mojohelpdesk.com",
+      "icon": "MojoHelpdesk.svg"
+    },
+    "Mopinion": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*deploy\\.mopinion\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Pastease !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pastease !== 'undefined';"
+        }
+      ],
+      "description": "Mopinion is an all-in-one user feedback platform that helps digital enterprises listen, understand, and act across all digital touchpoints.",
+      "website": "https://mopinion.com",
+      "icon": "Mopinion.svg"
+    },
+    "Muscula": {
+      "cats": [
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Muscula !== 'undefined' \u0026\u0026 typeof Muscula.settings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Muscula.settings !== 'undefined';"
+        }
+      ],
+      "description": "Muscula is an error logging solution that collects and analyzes errors for websites or applications, providing actionable insights.",
+      "website": "https://www.muscula.com/",
+      "icon": "Muscula.svg"
+    },
+    "NodePing": {
+      "cats": [
+        13
+      ],
+      "description": "NodePing is a tool in the Website Monitoring category of a tech stack. NodePing is an open source tool with GitHub stars and GitHub forks.",
+      "website": "https://nodeping.com",
+      "icon": "NodePing.svg"
+    },
+    "Noibu": {
+      "cats": [
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof NOIBUJS_CONFIG !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NOIBUJS_CONFIG !== 'undefined';"
+        }
+      ],
+      "description": "Noibu helps ecommerce websites detect revenue-impacting errors on their websites and provides them with the information needed to resolve them.",
+      "website": "https://noibu.com",
+      "icon": "noibu.svg"
+    },
+    "Nolt": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.nolt\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Nolt !== 'undefined' \u0026\u0026 typeof Nolt.initialized !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Nolt.initialized !== 'undefined';"
+        }
+      ],
+      "description": "Nolt is a collaborative platform for managing user requests, designed to replace outdated spreadsheets and Trello boards while providing actionable customer insights.",
+      "website": "https://nolt.io",
+      "icon": "Nolt.svg"
+    },
+    "Nootiz": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*load\\.nootiz\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Nootiz is a visual feedback tool designed to streamline the process of collecting and managing user feedback on websites.",
+      "website": "https://www.nootiz.com",
+      "icon": "Nootiz.svg"
+    },
+    "Oh Dear": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ohdear\\.app/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __NEXT_DATA__ !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps.config !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps.config.userAgent !== 'undefined' \u0026\u0026 __NEXT_DATA__.props.pageProps.config.userAgent === 'OhDear\\.app'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __NEXT_DATA__.props.pageProps.config.userAgent !== 'undefined';",
+          "version": "try { return String(__NEXT_DATA__.props.pageProps.config.userAgent || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "The all-in-one monitoring tool for your entire website. Oh Dear monitors uptime, SSL certificates, broken links, scheduled tasks, application health, DNS, domain expiry and more.",
+      "website": "https://ohdear.app",
+      "icon": "Oh Dear.svg"
+    },
+    "Phabricator": {
+      "cats": [
+        13,
+        47
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c[^\u003e]+(?:class|id)=\"phabricator-"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/phabricator/[a-f0-9]{8}/rsrc/js/phui/[a-z-]+\\.js$"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Phabricator is a suite of web-based software development collaboration tools, including the Differential code review tool, the Diffusion repository browser, the Herald change monitoring tool, the Maniphest bug tracker and the Phriction wiki. Phabricator integrates with Git, Mercurial, and Subversion.",
+      "website": "https://phacility.com",
+      "icon": "Phabricator.png"
+    },
+    "Pingdom Uptime Monitoring": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']title[\"'][^\u003e]+content=[\"']^pingdom public reports overview$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Pingdom Uptime Monitoring is a feature provided by the Pingdom website monitoring and performance testing service. It allows you to monitor the uptime and availability of your website.",
+      "website": "https://www.pingdom.com/product/uptime-monitoring/",
+      "icon": "Pingdom.svg"
+    },
+    "Planio": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.plan\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Planio is a platform that offers issue tracking, project management, version control, help desk functionality, wikis, and team chat in a unified environment.",
+      "website": "https://plan.io",
+      "icon": "Planio.svg"
+    },
+    "RapidSpike": {
+      "cats": [
+        13,
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.rapidspike\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rspike_timing !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rspike_timing !== 'undefined';"
+        }
+      ],
+      "description": "RapidSpike is an uptime and performance monitoring service for web sites and applications.",
+      "website": "https://www.rapidspike.com",
+      "icon": "RapidSpike.svg"
+    },
+    "Redmine": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "Ruby on Rails"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "powered by \u003ca href=\"[^\u003e]+redmine"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']description[\"'][^\u003e]+content=[\"']redmine[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Redmine is a free and open-source, web-based project management and issue tracking tool.",
+      "website": "https://www.redmine.org",
+      "icon": "Redmine.png",
+      "cpe": "cpe:2.3:a:redmine:redmine:*:*:*:*:*:*:*:*"
+    },
+    "Rollbar": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*rollbar\\.js/([0-9.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://rollbar.com/",
+      "icon": "Rollbar.svg"
+    },
+    "SOPlanning": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']email[\"'][^\u003e]+content=[\"']^support@soplanning\\.org$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "SOPlanning is an online project management software that enhances team visibility and facilitates task coordination through a centralized platform.",
+      "website": "https://www.soplanning.org/en/",
+      "icon": "SOPlanning.svg"
+    },
+    "Sentry": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]*\u003e\\s*raven\\.config\\('[^']*', \\{\\s+release: '([0-9\\.]+)'\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]*src=\"[^\"]*browser\\.sentry\\-cdn\\.com/([0-9.]+)/bundle(?:\\.tracing)?(?:\\.min)?\\.js\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*browser\\.sentry\\-cdn\\.com/([0-9.]+)/bundle(?:\\.tracing)?(?:\\.min)?\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Raven !== 'undefined' \u0026\u0026 typeof Raven.config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Raven.config !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Sentry !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Sentry.SDK_VERSION !== 'undefined';",
+          "version": "try { return String(Sentry.SDK_VERSION || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __SENTRY__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ravenOptions.whitelistUrls !== 'undefined';"
+        }
+      ],
+      "description": "Sentry is an open-source platform for workflow productivity, aggregating errors from across the stack in real time.",
+      "website": "https://sentry.io/",
+      "icon": "Sentry.svg"
+    },
+    "Sleekplan": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sleekplan\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Sleekplan is a customer feedback and product management platform that enables businesses to collect, analyse, and act upon user feedback, prioritise feature requests, track bugs, and collaborate on product development.",
+      "website": "https://sleekplan.com",
+      "icon": "Sleekplan.svg"
+    },
+    "Stackify": {
+      "cats": [
+        13,
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.stackify\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Stackify offers the only solution that fully integrates application performance monitoring with errors and logs.",
+      "website": "https://stackify.com",
+      "icon": "Stackify.svg"
+    },
+    "Statping": {
+      "cats": [
+        13
+      ],
+      "description": "Statping is an open-source status monitoring tool that helps you to monitor and analyse the performance of your websites, applications, and services. It can monitor multiple endpoints such as HTTP, HTTPS, TCP, DNS, and more.",
+      "website": "https://github.com/statping/statping",
+      "icon": "Statping.png"
+    },
+    "Status.io": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.status\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Status.io is a hosted system status page manager with features such as customised incident tracking, subscriber notifications, and more.",
+      "website": "https://status.io",
+      "icon": "Status.io.png"
+    },
+    "StatusCast": {
+      "cats": [
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof statuscast !== 'undefined' \u0026\u0026 typeof statuscast.libs !== 'undefined' \u0026\u0026 typeof statuscast.libs.datatables !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof statuscast.libs.datatables !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof statuscast.ui !== 'undefined';"
+        }
+      ],
+      "description": "StatusCast is a hosted status page management software.",
+      "website": "https://statuscast.com/status-page/",
+      "icon": "StatusCast.svg"
+    },
+    "Statuspal": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//statuspal\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Statuspal is a hosted status page and monitoring software for businesses of all kinds.",
+      "website": "https://statuspal.io",
+      "icon": "Statuspal.svg"
+    },
+    "Staytus": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^staytus/([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Staytus is a free, open-source status site that you can install on your own servers.",
+      "website": "https://staytus.co",
+      "icon": "Staytus.svg"
+    },
+    "Taiga": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "AngularJS",
+        "Django"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof taigaConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof taigaConfig !== 'undefined';"
+        }
+      ],
+      "website": "https://taiga.io",
+      "icon": "Taiga.png"
+    },
+    "TeamLinkt": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^teamlinkt$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Teamlinkt is a software facilitating team management, enabling users to track progress, assign tasks, and coordinate activities.",
+      "website": "https://teamlinkt.com",
+      "icon": "TeamLinkt.svg"
+    },
+    "Trac": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca id=\"tracpowered"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "powered by \u003ca href=\"[^\"]*\"\u003e\u003cstrong\u003etrac(?:[ /]([\\d.]+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://trac.edgewall.org",
+      "icon": "Trac.png"
+    },
+    "Upptime": {
+      "cats": [
+        13
+      ],
+      "description": "Upptime is the open-source uptime monitor and status page, powered entirely by GitHub Actions, Issues, and Pages.",
+      "website": "https://upptime.js.org",
+      "icon": "Upptime.svg"
+    },
+    "UptimeRobot": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.uptimerobot\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.uptimerobot\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "UptimeRobot is a web-based software that is designed to monitor the sites frequently to check whether any site is down owing to server problem or any bug in coding.",
+      "website": "https://uptimerobot.com",
+      "icon": "UptimeRobot.svg"
+    },
+    "UserReport": {
+      "cats": [
+        13,
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.userreport\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "UserReport is an online survey and feedback management platform.",
+      "website": "https://www.userreport.com",
+      "icon": "UserReport.svg"
+    },
+    "UserRules": {
+      "cats": [
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _usrp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _usrp !== 'undefined';"
+        }
+      ],
+      "website": "https://www.userrules.com",
+      "icon": "UserRules.png"
+    },
+    "UserVoice": {
+      "cats": [
+        13,
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.uservoice\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof UserVoice !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof UserVoice !== 'undefined';"
+        }
+      ],
+      "description": "UserVoice is a management to collect and analyse feedback from customers.",
+      "website": "https://uservoice.com",
+      "icon": "UserVoice.svg"
+    },
+    "Usersnap": {
+      "cats": [
+        13,
+        85
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.usersnap\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof onUsersnapCXLoad !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof onUsersnapCXLoad !== 'undefined';"
+        }
+      ],
+      "description": "Usersnap is a user feedback platform for product teams to collect issues, ideas, and surveys, aiding in user testing and product decisions.",
+      "website": "https://usersnap.com",
+      "icon": "Usersnap.svg"
+    },
+    "Vigil": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "Docker",
+        "Rust"
+      ],
+      "description": "Vigil is a microservices status page. Monitors a distributed infrastructure and sends alerts (Slack, SMS, etc.).",
+      "website": "https://github.com/valeriansaliou/vigil",
+      "icon": "default.svg"
+    },
+    "Ybug": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ybug\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Ybug !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Ybug !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ybug_settings !== 'undefined';"
+        }
+      ],
+      "description": "Ybug is a visual feedback and bug tracking tool designed for users and clients, enabling identification and reporting of issues.",
+      "website": "https://ybug.io",
+      "icon": "Ybug.svg"
+    },
+    "YouTrack": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "data-reactid=\"[^\"]+\"\u003eyoutrack ([0-9.]+)\u003c\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "no-title=\"youtrack\"\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "type=\"application/opensearchdescription\\+xml\" title=\"youtrack\"/\u003e"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "YouTrack is a browser-based bug tracker, issue tracking system and project management software.",
+      "website": "https://www.jetbrains.com/youtrack/",
+      "icon": "YouTrack.png"
+    },
+    "cState": {
+      "cats": [
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']cstate v([\\d\\.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "cState is an open-source static (serverless) status page.",
+      "website": "https://github.com/cstate/cstate",
+      "icon": "cState.svg"
+    },
+    "osTicket": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "MySQL",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "website": "https://osticket.com",
+      "icon": "osTicket.png"
+    },
+    "otrs": {
+      "cats": [
+        13
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!--\\s+otrs: copyright"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "otrs ([\\d.]+)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^/otrs-web/js/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://www.otrs.com",
+      "icon": "otrs.png"
+    }
+  }
+}

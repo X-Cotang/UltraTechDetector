@@ -1,0 +1,1681 @@
+{
+  "apps": {
+    "Angular Material": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "AngularJS"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/([\\d.rc-]+)?/angular-material(?:\\.min)?\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ngMaterial !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ngMaterial !== 'undefined';"
+        }
+      ],
+      "description": "Angular Material is a UI component library for Angular JS developers. Angular Material components assist in constructing attractive, consistent, and functional web pages and web applications.",
+      "website": "https://material.angularjs.org",
+      "icon": "AngularJS.svg"
+    },
+    "Animate.css": {
+      "cats": [
+        66
+      ],
+      "description": "Animate.css is a ready-to-use library collection of CSS3 animation effects.",
+      "website": "https://animate.style",
+      "icon": "Animate.css.svg"
+    },
+    "Ant Design": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c[^\u003e]*class=\"ant-(?:btn|col|row|layout|breadcrumb|menu|pagination|steps|select|cascader|checkbox|calendar|form|input-number|input|mention|rate|radio|slider|switch|tree-select|time-picker|transfer|upload|avatar|badge|card|carousel|collapse|list|popover|tooltip|table|tabs|tag|timeline|tree|alert|modal|message|notification|progress|popconfirm|spin|anchor|back-top|divider|drawer)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003ci class=\"anticon anticon-"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof antd !== 'undefined' \u0026\u0026 typeof antd.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return antd.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof antd.version !== 'undefined';",
+          "version": "try { return String(antd.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Ant Design is a UI library that can be used with data flow solutions and application frameworks in any React ecosystem.",
+      "website": "https://ant.design",
+      "icon": "Ant Design.svg"
+    },
+    "Arco Design Vue": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Vue.js"
+      ],
+      "description": "Arco Design is a set of open-source UI Components for Vue, aiming to address experience issues in products.",
+      "website": "https://arco.design",
+      "icon": "ArcoDesign.svg"
+    },
+    "Aura": {
+      "cats": [
+        66
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Aura !== 'undefined' \u0026\u0026 typeof Aura.app !== 'undefined' \u0026\u0026 Aura.app === 'siteforce\\:communityApp'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Aura.app !== 'undefined';",
+          "version": "try { return String(Aura.app || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Aura is an open-source UI framework built by Salesforce for developing dynamic web apps for mobile and desktop devices.",
+      "website": "https://github.com/forcedotcom/aura",
+      "icon": "default.svg"
+    },
+    "Automatic.css": {
+      "cats": [
+        66,
+        87
+      ],
+      "description": "Automatic.css is a CSS framework for WordPress page builders.",
+      "website": "https://automaticcss.com",
+      "icon": "Automatic.css.png"
+    },
+    "Base UI": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*base-ui\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Base UI is an unstyled React component library that provides accessible, high-performance building blocks for creating user interfaces, emphasizing accessibility, performance, and developer experience.",
+      "website": "https://base-ui.com/react/overview/quick-start",
+      "icon": "BaseUI.svg"
+    },
+    "Basil.css": {
+      "cats": [
+        66
+      ],
+      "description": "Basil.css is a responsive and customizable UI framework.",
+      "website": "https://basilcss.com",
+      "icon": "basilcss.svg"
+    },
+    "Bootstrap": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]* href=[^\u003e]*?bootstrap(?:[^\u003e]*?([0-9a-fa-f]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^\u003e-]*?(?:\\.min)?\\.css\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cstyle\u003e\\s+/\\*!\\s+\\* bootstrap v(\\d\\.\\d\\.\\d)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bootstrap(?:[^\u003e]*?([0-9a-fa-f]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^\u003e]*?(?:\\.min)?\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bootstrap !== 'undefined' \u0026\u0026 typeof bootstrap.Alert !== 'undefined' \u0026\u0026 typeof bootstrap.Alert.VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return bootstrap.Alert.VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jQuery.fn.tooltip.Constructor.VERSION !== 'undefined';",
+          "version": "try { return String(jQuery.fn.tooltip.Constructor.VERSION || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bootstrap.Alert.VERSION !== 'undefined';",
+          "version": "try { return String(bootstrap.Alert.VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
+      "website": "https://getbootstrap.com",
+      "icon": "Bootstrap.svg",
+      "cpe": "cpe:2.3:a:getbootstrap:bootstrap:*:*:*:*:*:*:*:*"
+    },
+    "Bulma": {
+      "cats": [
+        66
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Bulma !== 'undefined' \u0026\u0026 typeof Bulma.VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Bulma.VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Bulma.VERSION !== 'undefined';",
+          "version": "try { return String(Bulma.VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Bulma is a free class-based framework for CSS.",
+      "website": "https://bulma.io",
+      "icon": "Bulma.svg"
+    },
+    "Chakra UI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.chakra-ui\\."
+            }
+          }
+        }
+      ],
+      "description": "Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
+      "website": "https://chakra-ui.com",
+      "icon": "Chakra UI.svg"
+    },
+    "CivicTheme": {
+      "cats": [
+        66
+      ],
+      "description": "CivicTheme is an open source, inclusive, and component-based design system. It was created so governments and corporations can rapidly assemble modern, consistent and compliant digital experiences.",
+      "website": "https://www.civictheme.io/",
+      "icon": "civictheme.png"
+    },
+    "Clarity": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Angular"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*clr-angular(?:\\.umd)?(?:\\.min)?\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ClarityIcons !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ClarityIcons !== 'undefined';"
+        }
+      ],
+      "description": "Clarity is an open-source design system that brings together UX guidelines, an HTML/CSS framework, and Angular components.",
+      "website": "https://clarity.design",
+      "icon": "clarity.svg"
+    },
+    "CoreUI": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*webpackjsonp@coreui/coreui"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof coreui !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof coreui !== 'undefined';"
+        }
+      ],
+      "description": "CoreUI provides cloud hosting, web and mobile design, animations, wireframes, and UX testing services.",
+      "website": "https://coreui.io",
+      "icon": "CoreUI.svg"
+    },
+    "DevExtreme": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Angular",
+        "React",
+        "Vue.js",
+        "jQuery"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DevExpress !== 'undefined' \u0026\u0026 typeof DevExpress._DEVEXTREME_BUNDLE_INITIALIZED !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DevExpress._DEVEXTREME_BUNDLE_INITIALIZED !== 'undefined';"
+        }
+      ],
+      "description": "DevExtreme is a collection of JavaScript UI components designed for Angular, React, Vue, and jQuery, developed by DevExpress.",
+      "website": "https://js.devexpress.com",
+      "icon": "DevExtreme.svg"
+    },
+    "Devup UI": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*devup-ui"
+            }
+          }
+        }
+      ],
+      "description": "Devup UI is a tool for analyzing CSS-in-JS scenarios, delivering fast styling with optimal performance.",
+      "website": "https://devup-ui.com",
+      "icon": "DevupUI.svg"
+    },
+    "Dorik AI": {
+      "cats": [
+        66
+      ],
+      "description": "Dorik is an AI website-building platform that requires no design or coding experience.",
+      "website": "https://dorik.com",
+      "icon": "DorikAI.svg"
+    },
+    "EasyUI": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/jquery\\.easyui\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "EasyUI is a UI framework that provides a set of customizable components and widgets for building interactive web applications.",
+      "website": "https://jeasyui.com"
+    },
+    "Element UI": {
+      "cats": [
+        66
+      ],
+      "description": "Element UI is an open-source component library specifically designed for Vue.js, offering a collection of pre-designed UI components such as buttons, forms, tables, and modals.",
+      "website": "https://element.eleme.io/",
+      "icon": "ElementUI.svg"
+    },
+    "Elm-ui": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Elm"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cstyle\u003e[\\s\\s]*\\.explain \u003e \\.s[\\s\\s]*\\.explain \u003e \\.ctr \u003e \\.s"
+            }
+          }
+        }
+      ],
+      "description": "Elm-UI is a library for creating user interfaces in Elm programming language. It provides a set of functions and abstractions for building responsive and reusable UI components, such as buttons, forms, and layouts, in a declarative and type-safe way.",
+      "website": "https://github.com/mdgriffith/elm-ui",
+      "icon": "elm.svg"
+    },
+    "Flat UI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Bootstrap"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003clink[^\u003e]* href=[^\u003e]+flat-ui(?:\\.min)?\\.css"
+            }
+          }
+        }
+      ],
+      "website": "https://designmodo.github.io/Flat-UI/",
+      "icon": "Flat UI.png"
+    },
+    "Flowbite": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Tailwind CSS"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/flowbite(?:@([\\d\\.]+)/|\\.bundle\\.js)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Flowbite is an open-source library of UI components based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.",
+      "website": "https://github.com/themesberg/flowbite",
+      "icon": "Flowbite.svg"
+    },
+    "Flutter": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Dart"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']id[\"'][^\u003e]+content=[\"']^flutterweb-theme$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _flutter !== 'undefined' \u0026\u0026 typeof _flutter.loader !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _flutter.loader !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _flutter_web_set_location_strategy !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof flutterCanvasKit !== 'undefined';"
+        }
+      ],
+      "description": "Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.",
+      "website": "https://flutter.dev",
+      "icon": "Flutter.svg"
+    },
+    "Flyvi": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.flyvi\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Flyvi is a platform that generates visually engaging graphics optimized for social media.",
+      "website": "https://flyvi.io",
+      "icon": "Flyvi.svg"
+    },
+    "GOV.UK Elements": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "GOV.UK Toolkit"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cdiv[^\u003e]+govuk-box-highlight\\;confidence:25"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cdiv[^\u003e]+phase-banner-alpha\\;confidence:25"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cdiv[^\u003e]+phase-banner-beta\\;confidence:25"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+elements-page[^\u003e\"]+css\\;confidence:25"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://github.com/alphagov/govuk_elements/",
+      "icon": "govuk.png"
+    },
+    "GOV.UK Frontend": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca[^\u003e]+govuk-link\\;confidence:10"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cbody[^\u003e]+govuk-template__body\\;confidence:80"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]* href=[^\u003e]*?govuk-frontend(?:[^\u003e]*?([0-9a-fa-f]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^\u003e]*?(?:\\.min)?\\.css\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*govuk-frontend(?:[^\u003e]*?([0-9a-fa-f]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^\u003e]*?(?:\\.min)?\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GOVUKFrontend !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GOVUKFrontend !== 'undefined';"
+        }
+      ],
+      "website": "https://design-system.service.gov.uk/",
+      "icon": "govuk.png"
+    },
+    "GOV.UK Template": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+govuk-template-ie6[^\u003e\"]+css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+govuk-template-ie7[^\u003e\"]+css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+govuk-template-ie8[^\u003e\"]+css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+govuk-template-print[^\u003e\"]+css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+govuk-template[^\u003e\"]+css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*govuk-template\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GOVUK !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GOVUK !== 'undefined';"
+        }
+      ],
+      "website": "https://github.com/alphagov/govuk_template/",
+      "icon": "govuk.png"
+    },
+    "GOV.UK Toolkit": {
+      "cats": [
+        66
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GOVUK !== 'undefined' \u0026\u0026 typeof GOVUK.details !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GOVUK.details !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GOVUK.modules !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GOVUK.primaryLinks !== 'undefined';"
+        }
+      ],
+      "website": "https://github.com/alphagov/govuk_frontend_toolkit",
+      "icon": "govuk.png"
+    },
+    "Headless UI": {
+      "cats": [
+        66
+      ],
+      "description": "Headless UI is an unstyled component library for either React.js or Vue.js from the same people that created Tailwind CSS.",
+      "website": "https://headlessui.dev",
+      "icon": "Headless UI.svg"
+    },
+    "HeroUI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*nextui"
+            }
+          }
+        }
+      ],
+      "description": "HeroUI allows you to make beautiful, modern, and fast websites/applications regardless of your design experience, created with React.js and Stitches, based on React Aria and inspired by Vuesax.",
+      "website": "https://nextui.org/",
+      "icon": "HeroUI.svg"
+    },
+    "Hypestyle CSS": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Sass"
+      ],
+      "description": "Hypestyle CSS is a small CSS library build on utility classes and components.",
+      "website": "https://www.hypestylecss.xyz",
+      "icon": "Hypestyle CSS.png"
+    },
+    "IBM Carbon Design System": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.s81c\\.com/common/"
+            }
+          }
+        }
+      ],
+      "description": "IBM Carbon Design System is an open-source design system for building products and digital experiences.",
+      "website": "https://carbondesignsystem.com",
+      "icon": "CarbonDesignSystem.svg"
+    },
+    "Kendo UI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003clink[^\u003e]*\\s+href=[^\u003e]*styles/kendo\\.common(?:\\.min)?\\.css[^\u003e]*/\u003e"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof kendo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kendo !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kendo.version !== 'undefined';",
+          "version": "try { return String(kendo.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Kendo UI is a HTML5 user interface framework for building interactive and high-performance websites and applications.",
+      "website": "https://www.telerik.com/kendo-ui",
+      "icon": "Kendo UI.png"
+    },
+    "Kobalte": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "SolidJS"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Kobalte is a UI toolkit for building accessible web apps and design systems with SolidJS.",
+      "website": "https://kobalte.dev",
+      "icon": "kobalte.svg"
+    },
+    "Layui": {
+      "cats": [
+        66
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof layui !== 'undefined' \u0026\u0026 typeof layui.v !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return layui.v || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof layui.v !== 'undefined';",
+          "version": "try { return String(layui.v || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Layui is an open-source modular front-end UI component library.",
+      "website": "https://layui.gitee.io",
+      "icon": "Layui.png"
+    },
+    "MDBootstrap": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Bootstrap"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:/mdbootstrap/([\\d\\.]+)/)?js/mdb\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mdb !== 'undefined' \u0026\u0026 typeof mdb.ScrollSpy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mdb.ScrollSpy !== 'undefined';"
+        }
+      ],
+      "description": "MDBootstrap (Material Design for Bootstrap) is a complete UI package that can be integrated with other frameworks such as Angular, React, Vue, etc. It is used to design a fully responsive and mobile-friendly layout using various components, plugins, animation.",
+      "website": "https://mdbootstrap.com",
+      "icon": "MDBootstrap.png"
+    },
+    "MDUI": {
+      "cats": [
+        66
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _mduiEventId !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _mduiEventId !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mdui.Drawer !== 'undefined';"
+        }
+      ],
+      "description": "MDUI is a CSS Framework based on material design.",
+      "website": "https://www.mdui.org",
+      "icon": "MDUI.png"
+    },
+    "MUI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "React"
+      ],
+      "description": "MUI(formerly Material UI) is a simple and customisable component library to build faster, beautiful, and more accessible React applications.",
+      "website": "https://mui.com",
+      "icon": "MUI.svg"
+    },
+    "Magic UI": {
+      "cats": [
+        66
+      ],
+      "description": "Magic UI is a UI library featuring open-source animated components built with React, TypeScript, Tailwind CSS, and Framer Motion.",
+      "website": "https://magicui.design/",
+      "icon": "MagicUI.svg"
+    },
+    "Mantine": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "TypeScript"
+      ],
+      "description": "Mantine is an open-source UI framework and component library for React.",
+      "website": "https://mantine.dev",
+      "icon": "Mantine.svg"
+    },
+    "Material Design Lite": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]* href=\"[^\"]*material(?:\\.[\\w]+-[\\w]+)?(?:\\.min)?\\.css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:/([\\d.]+))?/material(?:\\.min)?\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MaterialIconToggle !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MaterialIconToggle !== 'undefined';"
+        }
+      ],
+      "description": "Material Design Lite is a library of components for web developers.",
+      "website": "https://getmdl.io",
+      "icon": "Material Design Lite.png"
+    },
+    "Material UI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*https://mui\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Material UI is a simple and customisable component library to build faster, beautiful, and more accessible React applications.",
+      "website": "https://mui.com",
+      "icon": "MUI.svg"
+    },
+    "Materialize CSS": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*([\\d\\.]+)/.*/materialize\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Materialize CSS is a front-end framework that helps developers create responsive and mobile-first web applications. It is based on Google's Material Design guidelines.",
+      "website": "https://materializecss.com",
+      "icon": "Materialize CSS.svg"
+    },
+    "MetroUI": {
+      "cats": [
+        66
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Metro !== 'undefined' \u0026\u0026 typeof Metro.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Metro.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Metro.version !== 'undefined';",
+          "version": "try { return String(Metro.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "MetroUI is an open-source frontend toolkit inspired by Microsoft Fluent (former Metro) design principles.",
+      "website": "https://github.com/olton/Metro-UI-CSS",
+      "icon": "default.svg"
+    },
+    "Milligram": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003clink[^\u003e]+?href=\"[^\"]+milligram(?:\\.min)?\\.css"
+            }
+          }
+        }
+      ],
+      "website": "https://milligram.io",
+      "icon": "Milligram.png"
+    },
+    "MudBlazor": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Blazor"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*_content/mudblazor/mudblazor\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mudWindow !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mudWindow !== 'undefined';"
+        }
+      ],
+      "description": "MudBlazor is a component library for Blazor implementing Material Design.",
+      "website": "https://mudblazor.com/",
+      "icon": "Mudblazor.svg"
+    },
+    "NSW Design System": {
+      "cats": [
+        66
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof NSW !== 'undefined' \u0026\u0026 typeof NSW.initSite !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NSW.initSite !== 'undefined';"
+        }
+      ],
+      "website": "https://www.digital.nsw.gov.au/digital-design-system",
+      "icon": "NSW Design System.svg"
+    },
+    "Naive UI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "TypeScript",
+        "Vue.js"
+      ],
+      "description": "Naive UI is a Vue.js UI library written in TypeScript, offering more than 80 treeshakable components.",
+      "website": "https://www.naiveui.com",
+      "icon": "Naive UI.svg"
+    },
+    "New UI": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*data-new-ui-theme"
+            }
+          }
+        }
+      ],
+      "description": "New UI is a framework designed for developing user interfaces for SaaS applications and websites.",
+      "website": "https://new-ui.com/",
+      "icon": "NewUI.svg"
+    },
+    "NextUI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "React",
+        "Stitches"
+      ],
+      "description": "NextUI allows you to make beautiful, modern, and fast websites/applications regardless of your design experience, created with React.js and Stitches, based on React Aria and inspired by Vuesax.",
+      "website": "https://nextui.org/",
+      "icon": "NextUI.svg"
+    },
+    "Normalize.css": {
+      "cats": [
+        66
+      ],
+      "description": "Normalize.css is a CSS library that makes browsers render elements according to modern standards by targeting only the styles that require normalization.",
+      "website": "https://csstools.github.io/normalize.css",
+      "icon": "Normalize.svg"
+    },
+    "Nuxt UI": {
+      "cats": [
+        66
+      ],
+      "description": "Nuxt UI is a customizable UI library designed for Nuxt.",
+      "website": "https://ui.nuxt.com",
+      "icon": "Nuxt.js.svg"
+    },
+    "Open-Props": {
+      "cats": [
+        66
+      ],
+      "description": "Open-Props is a collection of CSS custom properties to help accelerate adaptive and consistent design.",
+      "website": "https://open-props.style",
+      "icon": "Open-Props.svg"
+    },
+    "Panda CSS": {
+      "cats": [
+        66
+      ],
+      "description": "Panda is a styling engine that generates styling primitives to author atomic CSS and recipes in a type-safe and readable manner.",
+      "website": "https://panda-css.com/",
+      "icon": "PandaCSS.svg"
+    },
+    "Pico CSS": {
+      "cats": [
+        66
+      ],
+      "description": "Pico CSS is a minimal CSS framework for semantic HTML, without using classes.",
+      "website": "https://picocss.com",
+      "icon": "Pico CSS.svg"
+    },
+    "PlusProComponents": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*plus-pro-components\\.js"
+            }
+          }
+        }
+      ],
+      "description": "PlusProComponents is a collection of page-level front-end components designed to streamline web development and enhance UI consistency.",
+      "website": "https://plus-pro-components.com",
+      "icon": "PlusProComponents.svg"
+    },
+    "Preline UI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Tailwind CSS"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/preline\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Preline UI is an open-source set of prebuilt UI components based on the utility-first Tailwind CSS framework.",
+      "website": "https://preline.co",
+      "icon": "Preline UI.svg"
+    },
+    "PrimeNG": {
+      "cats": [
+        66
+      ],
+      "description": "PrimeNG is a rich set of open-source UI Components for Angular.",
+      "website": "https://www.primefaces.org",
+      "icon": "PrimeNG.svg"
+    },
+    "PrimeReact": {
+      "cats": [
+        66
+      ],
+      "description": "PrimeReact is a rich set of open-source UI Components for React.",
+      "website": "https://www.primefaces.org",
+      "icon": "PrimeReact.svg"
+    },
+    "PrimeVue": {
+      "cats": [
+        66
+      ],
+      "description": "PrimeVue is a rich set of open-source UI Components for Vue.js.",
+      "website": "https://www.primefaces.org",
+      "icon": "PrimeVue.svg"
+    },
+    "Pure CSS": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cdiv[^\u003e]+class=\"[^\"]*pure-u-(?:sm-|md-|lg-|xl-)?\\d-\\d"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+(?:([\\d.])+/)?pure(?:-min)?\\.css\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Pure CSS is a set of small, responsive CSS modules that can be used in web projects.",
+      "website": "https://purecss.io",
+      "icon": "Pure CSS.png"
+    },
+    "Radix UI": {
+      "cats": [
+        66
+      ],
+      "description": "Radix UI is a React-based user interface component library that offers accessible, responsive, and customisable components for building web applications.",
+      "website": "https://www.radix-ui.com",
+      "icon": "Radix UI.svg"
+    },
+    "Semantic UI": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+semantic(?:\\.min)\\.css\""
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/semantic(?:-([\\d.]+))?(?:\\.min)?\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Semantic UI is a front-end development framework, powered by LESS and jQuery.",
+      "website": "https://semantic-ui.com/",
+      "icon": "Semantic-ui.png"
+    },
+    "Shapecss": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]* href=\"[^\"]*shapecss(?:\\.min)?\\.css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/([\\d.]+)/shapecss(?:\\.min)?\\.js\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*shapecss.*\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*shapecss[-.]([\\d.]*\\d)[^/]*\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Shapecss !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Shapecss !== 'undefined';"
+        }
+      ],
+      "website": "https://shapecss.com",
+      "icon": "Shapecss.svg"
+    },
+    "Shoelace": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/npm/@shoelace-style/shoelace@([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Shoelace is an open-source, framework-agnostic component for building accessible web applications.",
+      "website": "https://shoelace.style",
+      "icon": "Shoelace.svg"
+    },
+    "Simple.css": {
+      "cats": [
+        66
+      ],
+      "description": "Simple.css is a CSS template.",
+      "website": "https://simplecss.org",
+      "icon": "Simple.css.svg"
+    },
+    "Socraft-UI": {
+      "cats": [
+        66
+      ],
+      "description": "Socraft-UI is an open-source components library designed for building user interfaces with reusable and customizable elements.",
+      "website": "https://socraft-public.github.io/socraft-ui",
+      "icon": "SocraftUI.svg"
+    },
+    "Spatie Media Library Pro": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Laravel"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*media\\-library\\-pro\\-core"
+            }
+          }
+        }
+      ],
+      "description": "Spatie Media Library Pro is a set of customizable UI components for Spatie Media Library.",
+      "website": "https://medialibrary.pro",
+      "icon": "Spatie Media Library Pro.svg"
+    },
+    "Storefront UI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Vue.js"
+      ],
+      "description": "Storefront UI is an independent, Vue. js-based, library of UI components.",
+      "website": "https://vuestorefront.io/storefront-ui",
+      "icon": "Storefront UI.svg"
+    },
+    "SvelteKit": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Node.js",
+        "Svelte",
+        "Vite"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']sveltekit[\"']"
+            }
+          }
+        }
+      ],
+      "description": "SvelteKit is the official Svelte framework for building web applications with a flexible filesystem-based routing.",
+      "website": "https://kit.svelte.dev",
+      "icon": "Svelte.svg"
+    },
+    "TDesign": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tdesign\\.gtimg\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "TDesign launched by Tencent contains rich and reusable design component resources, such as color system, text system, motion design, etc.",
+      "website": "https://tdesign.tencent.com",
+      "icon": "TDesign.svg"
+    },
+    "Tachyons": {
+      "cats": [
+        66
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunkgatsby_starter_blog_tachyons !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkgatsby_starter_blog_tachyons !== 'undefined';"
+        }
+      ],
+      "description": "Tachyons is a functional CSS framework.",
+      "website": "https://tachyons.io",
+      "icon": "Tachyons.svg"
+    },
+    "Tailwind CSS": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tailwindcss(?:tailwind-config-cdn)?\\.(?:com|js)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof tailwind !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tailwind !== 'undefined';"
+        }
+      ],
+      "description": "Tailwind is a utility-first CSS framework.",
+      "website": "https://tailwindcss.com/",
+      "icon": "tailwindcss.svg"
+    },
+    "UIKit": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c[^\u003e]+class=\"[^\"]*(?:uk-container|uk-section)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*uikit.*\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "UIKit is the framework used for developing iOS applications.",
+      "website": "https://getuikit.com",
+      "icon": "UIKit.svg"
+    },
+    "USWDS": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\buswds\\b"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof uswdsPresent !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof uswdsPresent !== 'undefined';"
+        }
+      ],
+      "description": "USWDS is a design system for the federal government.",
+      "website": "https://designsystem.digital.gov",
+      "icon": "USWDS.svg"
+    },
+    "UnoCSS": {
+      "cats": [
+        66
+      ],
+      "description": "UnoCSS is instant on-demand Atomic CSS engine.",
+      "website": "https://uno.antfu.me/",
+      "icon": "UnoCSS.svg"
+    },
+    "VKUI": {
+      "cats": [
+        66
+      ],
+      "description": "VKUI is a set of React components with which you can create interfaces that are visually indistinguishable from our iOS and Android applications.",
+      "website": "https://vkcom.github.io/VKUI",
+      "icon": "vk.svg"
+    },
+    "Vant": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "TypeScript"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof vant !== 'undefined' \u0026\u0026 typeof vant.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return vant.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vant.version !== 'undefined';",
+          "version": "try { return String(vant.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Vant is a lightweight, customisable Vue UI library for mobile web apps.",
+      "website": "https://github.com/youzan/vant",
+      "icon": "Vant.png"
+    },
+    "Vuetify": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Vue.js"
+      ],
+      "description": "Vuetify is a reusable semantic component framework for Vue.js that aims to provide clean, semantic and reusable components.",
+      "website": "https://vuetifyjs.com",
+      "icon": "Vuetify.svg"
+    },
+    "W3.CSS": {
+      "cats": [
+        66
+      ],
+      "description": "W3.CSS is a CSS framework developed by the World Wide Web Consortium (W3C), the main international standards organisation for the World Wide Web.",
+      "website": "https://www.w3schools.com/w3css/",
+      "icon": "W3.CSS.svg"
+    },
+    "XtrixUI": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*xtrixui"
+            }
+          }
+        }
+      ],
+      "description": "XtrixUI is a CrossFramework UI library designed for building WebApps, regardless of design experience.",
+      "website": "https://xtrixui.vercel.app",
+      "icon": "XtrixUI.svg"
+    },
+    "Yamada UI": {
+      "cats": [
+        66
+      ],
+      "description": "Yamada UI is a versatile React component library.",
+      "website": "https://yamada-ui.com",
+      "icon": "YamadaUI.svg"
+    },
+    "ZURB Foundation": {
+      "cats": [
+        66
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cdiv [^\u003e]*class=\"[^\"]*(?:small|medium|large)-\\d{1,2} columns"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+foundation[^\u003e\"]+css"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Foundation !== 'undefined' \u0026\u0026 typeof Foundation.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Foundation.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Foundation.version !== 'undefined';",
+          "version": "try { return String(Foundation.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Zurb Foundation is used to prototype in the browser. Allows rapid creation of websites or applications while leveraging mobile and responsive technology. The front end framework is the collection of HTML, CSS, and Javascript containing design patterns.",
+      "website": "https://foundation.zurb.com",
+      "icon": "ZURB Foundation.png"
+    },
+    "augmented-ui": {
+      "cats": [
+        66
+      ],
+      "description": "augmented-ui is a UI framework inspired by cyberpunk and sci-fi.",
+      "website": "https://augmented-ui.com",
+      "icon": "augmented-ui.png"
+    },
+    "daisyUI": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Tailwind CSS"
+      ],
+      "description": "daisyUI is a customisable Tailwind CSS component library that prevents verbose markup in frontend applications. With a focus on customising and creating themes for user interfaces, daisyUI uses pure CSS and Tailwind utility classes, allowing developers to write clean HTML.",
+      "website": "https://daisyui.com",
+      "icon": "daisyUI.png"
+    },
+    "shadcn-svelte": {
+      "cats": [
+        66
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "return typeof sessionStorage.sveltekit:snapshot !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sessionStorage.sveltekit:scroll !== 'undefined';"
+        }
+      ],
+      "description": "Shadcn-svelte is an adaptation of shadcn/ui for Svelte, offering accessible and customisable components.",
+      "website": "https://www.shadcn-svelte.com",
+      "icon": "ShadCnSvelte.svg"
+    },
+    "shadcn/ui": {
+      "cats": [
+        66
+      ],
+      "implies": [
+        "Radix UI",
+        "Tailwind CSS"
+      ],
+      "description": "shadcn/ui is a component system built with Radix UI and Tailwind CSS.",
+      "website": "https://ui.shadcn.com",
+      "icon": "shadcn-ui.svg"
+    },
+    "siimple": {
+      "cats": [
+        66
+      ],
+      "description": "siimple is a minimal CSS toolkit for building flat, clean and responsive web designs.",
+      "website": "https://siimple.xyz",
+      "icon": "siimple.svg"
+    }
+  }
+}

@@ -1,0 +1,532 @@
+{
+  "apps": {
+    "Adobe GoLive": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']adobe golive(?:\\s([\\d.]+))?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Adobe GoLive is a WYSIWYG HTML editor and web site management application.",
+      "website": "https://www.adobe.com/products/golive",
+      "icon": "Adobe GoLive.png",
+      "cpe": "cpe:2.3:a:adobe:golive:*:*:*:*:*:*:*:*"
+    },
+    "Amaya": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']amaya(?: v?([\\d.]+[a-z]))?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Amaya is an open-source web browser editor to create and update documents on the web.",
+      "website": "https://www.w3.org/Amaya",
+      "icon": "Amaya.png"
+    },
+    "BannerBoo": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.bannerboo\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "BannerBoo is a graphic design software that enables users to create display banners in various sizes.",
+      "website": "https://bannerboo.com",
+      "icon": "BannerBoo.svg"
+    },
+    "Bluefish": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']bluefish(?:\\s([\\d.]+))?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Bluefish is a free software text editor with a variety of tools for programming in general and the development of websites.",
+      "website": "https://sourceforge.net/projects/bluefish",
+      "icon": "Bluefish.png"
+    },
+    "CodeMirror": {
+      "cats": [
+        20
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CodeMirror !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CodeMirror !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CodeMirror.version !== 'undefined';",
+          "version": "try { return String(CodeMirror.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "CodeMirror is a JavaScript component that provides a code editor in the browser.",
+      "website": "https://codemirror.net",
+      "icon": "CodeMirror.png"
+    },
+    "Draft.js": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*draft-js(@|/)([\\d.]+)\\;version:\\2"
+            }
+          }
+        }
+      ],
+      "description": "Draft.js is a JavaScript rich text editor framework, built for React.",
+      "website": "https://draftjs.org/",
+      "icon": "draftjs.png"
+    },
+    "DreamWeaver": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- #begintemplate\\s\"[\\d_\\w/]+\\.dwt"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003c!--[^\u003e]*(?:instancebegineditable|dreamweaver([^\u003e]+)target|dwlayoutdefaulttable)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MM_preloadImages !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MM_showMenu !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MM_preloadImages !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MM_showHideLayers !== 'undefined';"
+        }
+      ],
+      "description": "Dreamweaver is a development tool for creating, publishing, and managing websites and mobile content.",
+      "website": "https://www.adobe.com/products/dreamweaver.html",
+      "icon": "DreamWeaver.png",
+      "cpe": "cpe:2.3:a:adobe:dreamweaver:*:*:*:*:*:*:*:*"
+    },
+    "EditPlus": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^editplus$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "EditPlus is a text, HTML, PHP, and Java editor with a Hex Viewer for Windows, offering Notepad replacement capabilities along with features for web authors and programmers.",
+      "website": "https://www.editplus.com",
+      "icon": "EditPlus.svg"
+    },
+    "FrontPage": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']microsoft frontpage(?:\\s((?:express )?[\\d.]+))?\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']progid[\"'][^\u003e]+content=[\"']^frontpage\\.[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "FrontPage is a program for developing and maintaining websites.",
+      "website": "https://office.microsoft.com/frontpage",
+      "icon": "FrontPage.png",
+      "cpe": "cpe:2.3:a:microsoft:frontpage:*:*:*:*:*:*:*:*"
+    },
+    "Microsoft Excel": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:\u003chtml [^\u003e]*xmlns:w=\"urn:schemas-microsoft-com:office:excel\"|\u003c!--\\s*(?:start|end) of output from excel publish as web page wizard\\s*--\u003e|\u003cdiv [^\u003e]*x:publishsource=\"?excel\"?)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']microsoft excel( [\\d.]+)?\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']progid[\"'][^\u003e]+content=[\"']^excel\\.[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Microsoft Excel is an electronic spreadsheet program used for storing, organizing, and manipulating data.",
+      "website": "https://office.microsoft.com/excel",
+      "icon": "Microsoft Excel.svg",
+      "cpe": "cpe:2.3:a:microsoft:excel:*:*:*:*:*:*:*:*"
+    },
+    "Microsoft PowerPoint": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:\u003chtml [^\u003e]*xmlns:w=\"urn:schemas-microsoft-com:office:powerpoint\"|\u003clink rel=\"?presentation-xml\"? href=\"?[^\"]+\\.xml\"?\u003e|\u003co:presentationformat\u003e[^\u003c]+\u003c/o:presentationformat\u003e[^!]+\u003co:slides\u003e\\d+\u003c/o:slides\u003e(?:[^!]+\u003co:version\u003e([\\d.]+)\u003c/o:version\u003e)?)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']microsoft powerpoint ( [\\d.]+)?\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']progid[\"'][^\u003e]+content=[\"']^powerpoint\\.[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Microsoft PowerPoint is a tool to create presentations using simple drag and drop tools.",
+      "website": "https://office.microsoft.com/powerpoint",
+      "icon": "Microsoft PowerPoint.svg",
+      "cpe": "cpe:2.3:a:microsoft:powerpoint:*:*:*:*:*:*:*:*"
+    },
+    "Microsoft Publisher": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:\u003chtml [^\u003e]*xmlns:w=\"urn:schemas-microsoft-com:office:publisher\"|\u003c!--[if pub]\u003e\u003cxml\u003e)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']microsoft publisher( [\\d.]+)?\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']progid[\"'][^\u003e]+content=[\"']^publisher\\.[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Microsoft Publisher is an application that allows you to create professional documents such as newsletters, postcards, flyers, invitations, brochures.",
+      "website": "https://office.microsoft.com/publisher",
+      "icon": "Microsoft Publisher.svg",
+      "cpe": "cpe:2.3:a:microsoft:publisher:*:*:*:*:*:*:*:*"
+    },
+    "Microsoft Word": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:\u003chtml [^\u003e]*xmlns:w=\"urn:schemas-microsoft-com:office:word\"|\u003cw:worddocument\u003e|\u003cdiv [^\u003e]*class=\"?wordsection1[\" \u003e]|\u003cstyle[^\u003e]*\u003e[^\u003e]*@page wordsection1)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']microsoft word( [\\d.]+)?\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']progid[\"'][^\u003e]+content=[\"']^word\\.[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "MS Word is a word-processing program used primarily for creating documents.",
+      "website": "https://office.microsoft.com/word",
+      "icon": "Microsoft Word.svg",
+      "cpe": "cpe:2.3:a:microsoft:word:*:*:*:*:*:*:*:*"
+    },
+    "Powtoon": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.powtoon\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Powtoon is a digital platform that integrates animation with modern design to enable the creation of dynamic visual presentations.",
+      "website": "https://www.powtoon.com",
+      "icon": "Powtoon.svg"
+    },
+    "Summernote": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/(?:s|s)ummernote(?:\\.min)?\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/summernote(?:@|-)([\\d\\.]+)/\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Summernote is an open-source JavaScript library that offers a feature-rich WYSIWYG editor for web applications, allowing users to create and edit formatted content in a familiar word processor-like interface.",
+      "website": "https://summernote.org",
+      "icon": "Summernote.svg"
+    },
+    "Tiptap": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tiptap\\.dev"
+            }
+          }
+        }
+      ],
+      "description": "Tiptap is a headless, open-source editor framework designed for flexible and customizable text editing.",
+      "website": "https://tiptap.dev/",
+      "icon": "Tiptap.svg"
+    },
+    "Unbounce": {
+      "cats": [
+        20,
+        51
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-unbounce-pageid": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ubembed\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Unbounce is a tool to build landing pages.",
+      "website": "https://unbounce.com",
+      "icon": "Unbounce.png"
+    },
+    "WEBDEV": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- [a-za-z0-9_]+ [\\d/]+ [\\d:]+ webdev \\d\\d ([\\d.]+) --\u003e\\;version:\\1"
+                }
+              },
+              {
+                "headers.webdevsrc": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^webdev$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "WEBDEV is a tool to develop internet and intranet sites and applications that support data and processes",
+      "website": "https://www.windev.com/webdev/index.html",
+      "icon": "webdev.png"
+    },
+    "Web Stories for WordPress": {
+      "cats": [
+        20,
+        87
+      ],
+      "implies": [
+        "Web Stories"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']amp-story-generator-name[\"'][^\u003e]+content=[\"']^web stories for wordpress$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']amp-story-generator-version[\"'][^\u003e]+content=[\"']^(.+)$\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Web Stories for WordPress is a visual editor for creating Web Stories.",
+      "website": "https://wp.stories.google",
+      "icon": "Web-Stories.svg"
+    },
+    "WebSite X5": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']incomedia website x5 (\\w+ [\\d.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "WebSite X5 is a tools to create and publish websites.",
+      "website": "https://websitex5.com",
+      "icon": "WebSite X5.png"
+    },
+    "iWeb": {
+      "cats": [
+        20
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^iweb( [\\d.]+)?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "iWeb is a web site creation tool.",
+      "website": "https://apple.com/ilife/iweb",
+      "icon": "iWeb.png"
+    }
+  }
+}

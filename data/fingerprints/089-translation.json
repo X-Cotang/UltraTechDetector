@@ -1,0 +1,256 @@
+{
+  "apps": {
+    "Bablic": {
+      "cats": [
+        89
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bablic !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bablic !== 'undefined';"
+        }
+      ],
+      "description": "Bablic is a localisation solution to translate your website.",
+      "website": "https://www.bablic.com/",
+      "icon": "bablic.png"
+    },
+    "ConveyThis": {
+      "cats": [
+        89
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.conveythis\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ConveyThis is a website translation service.",
+      "website": "https://www.conveythis.com/",
+      "icon": "ConveyThis.png"
+    },
+    "Conword": {
+      "cats": [
+        89
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.conword\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Conword is a platform that provides automatic translations for websites, enabling multilingual content delivery without manual intervention.",
+      "website": "https://conword.io",
+      "icon": "Conword.svg"
+    },
+    "Crowdin": {
+      "cats": [
+        89
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.app\\.crowdin\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Crowdin is a localization management platform that streamlines the process of translating, organizing, and maintaining multilingual content for software, websites, and other digital products.",
+      "website": "https://crowdin.com",
+      "icon": "Crowdin.svg"
+    },
+    "Easyling": {
+      "cats": [
+        89
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.easyling\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Easyling is a website translation solution that provides tools for localizing websites through multiple methods.",
+      "website": "https://www.easyling.com",
+      "icon": "Easyling.svg"
+    },
+    "Linguise": {
+      "cats": [
+        89
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/modules/mod_linguise/assets/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof linguise_configs !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof linguise_configs !== 'undefined';"
+        }
+      ],
+      "description": "Linguise is an automatic translation service with a front-end translation editor.",
+      "website": "https://www.linguise.com",
+      "icon": "Linguise.svg"
+    },
+    "Pluglin": {
+      "cats": [
+        89
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.pluglin\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Pluglin is a platform that provides website translation services to support multilingual content.",
+      "website": "https://www.pluglin.com",
+      "icon": "Pluglin.svg"
+    },
+    "Smartling": {
+      "cats": [
+        89
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.smartling\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof populateSmartlingDdl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof populateSmartlingDdl !== 'undefined';"
+        }
+      ],
+      "description": "Smartling is a cloud-based translation management system.",
+      "website": "https://www.smartling.com",
+      "icon": "Smartling.svg"
+    },
+    "Transcy": {
+      "cats": [
+        89,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _transcy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _transcy !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof transcy_apiURI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof transcy_shopifyLocales !== 'undefined';"
+        }
+      ],
+      "description": "Transcy is a Shopify translation app. Transcy allows you to translate your whole store content into target languages to reach different nation shoppers.",
+      "website": "https://transcy.io",
+      "icon": "Transcy.png"
+    },
+    "Weglot": {
+      "cats": [
+        89
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.weglot-translated": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.weglot\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wp-content/plugins/weglot"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://www.weglot.com",
+      "icon": "Weglot.png"
+    },
+    "langify": {
+      "cats": [
+        89
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Langify !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Langify !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof langify !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof langify.settings.switcher.version !== 'undefined';",
+          "version": "try { return String(langify.settings.switcher.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "langify translate your shop into multiple languages. langify comes with a visual configurator that allows you to add language switchers that integrate seamlessly into your existing design.",
+      "website": "https://langify-app.com",
+      "icon": "langify.png"
+    }
+  }
+}

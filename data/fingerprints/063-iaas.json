@@ -1,0 +1,141 @@
+{
+  "apps": {
+    "Alibaba Cloud Object Storage Service": {
+      "cats": [
+        63
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-oss-object-type": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-oss-request-id": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-oss-storage-class": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Alibaba Cloud Object Storage Service (OSS) is a cloud-based object storage service provided by Alibaba Cloud, which allows users to store and access large amounts of data in the cloud.",
+      "website": "https://www.alibabacloud.com/product/object-storage-service",
+      "icon": "Alibaba Cloud.svg"
+    },
+    "Amazon ECS": {
+      "cats": [
+        63
+      ],
+      "implies": [
+        "Amazon Web Services",
+        "Docker"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^ecs"
+            }
+          }
+        }
+      ],
+      "website": "https://aws.amazon.com/ecs/",
+      "icon": "Amazon ECS.svg"
+    },
+    "Clientacquisition": {
+      "cats": [
+        63
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.clientacquisition\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Clientacquisition is a provider of tailored infrastructure solutions that drive growth.",
+      "website": "https://www.clientacquisition.io",
+      "icon": "Clientacquisition.svg"
+    },
+    "Dweet": {
+      "cats": [
+        63
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof dweetCallback !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dweetCallback !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dweet_script_loader !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dweetio.dweet !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dweetioThing !== 'undefined';"
+        }
+      ],
+      "description": "Dweet is a platform enabling data sharing across Internet of Things(IoT).",
+      "website": "https://dweet.io",
+      "icon": "Dweet.svg"
+    },
+    "Google Cloud": {
+      "cats": [
+        63
+      ],
+      "description": "Google Cloud is a suite of cloud computing services.",
+      "website": "https://cloud.google.com",
+      "icon": "Google Cloud.svg",
+      "cpe": "cpe:2.3:a:google:cloud_platform:*:*:*:*:*:*:*:*"
+    },
+    "Leaseweb": {
+      "cats": [
+        63,
+        88
+      ],
+      "description": "Leaseweb is an Infrastructure-as-a-Service (IaaS) provider offering dedicated servers, CDN, cloud hosting and hybrid cloud on a global network.",
+      "website": "https://www.leaseweb.com",
+      "icon": "Leaseweb.svg"
+    },
+    "Parmin Cloud": {
+      "cats": [
+        63
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^parmincloud$"
+            }
+          }
+        }
+      ],
+      "description": "Parmin Cloud operates in the field of cloud services.",
+      "website": "https://parmin.cloud",
+      "icon": "Parmin Cloud.svg"
+    }
+  }
+}

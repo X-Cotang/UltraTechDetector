@@ -1,0 +1,733 @@
+{
+  "apps": {
+    "AccessiBe": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*acsbapp?\\.com/.*/acsb\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof acsb !== 'undefined' \u0026\u0026 acsb === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof acsb !== 'undefined';",
+          "version": "try { return String(acsb || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof acsbJS !== 'undefined';",
+          "version": "try { return String(acsbJS || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "AccessiBe is an accessibility overlay which claims to provide ADA and WCAG compliance. The system scans and analyzes a website, and applies adjustments which they claim make your website ADA and WCAG 2.1 compliant.",
+      "website": "https://accessibe.com",
+      "icon": "AccessiBe.svg"
+    },
+    "Accessibility Toolbar Plugin": {
+      "cats": [
+        68
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MicAccessTool !== 'undefined' \u0026\u0026 typeof MicAccessTool.prototype !== 'undefined' \u0026\u0026 typeof MicAccessTool.prototype.openCloseBoxKeyboard !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MicAccessTool.prototype.openCloseBoxKeyboard !== 'undefined';"
+        }
+      ],
+      "description": "Accessibility Toolbar Plugin is an accessibility component without dependencies (clean javascript), including a variety of tools.",
+      "website": "https://webworks.ga/acc_toolbar",
+      "icon": "Accessibility Toolbar Plugin.png"
+    },
+    "Accessible360": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/accessible360/accessible-slick/slick/slick\\.min\\.js\\?v=([\\d\\.]+)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/npm/@accessible360/accessible-slick@([\\d\\.]+)/\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Accessible360 is a web accessibility company based in Edina, Minnesota.",
+      "website": "https://accessible360.com",
+      "icon": "Accessible360.png"
+    },
+    "Accessibly": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*accessibly\\.onthemapmarketing\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof accessibilityWidget !== 'undefined' \u0026\u0026 typeof accessibilityWidget.name !== 'undefined' \u0026\u0026 accessibilityWidget.name === 'bound'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof accessibilityWidget.name !== 'undefined';",
+          "version": "try { return String(accessibilityWidget.name || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Accessibly is an app which is designed to assist with meeting certain requirements of WCAG 2.1 using an overlay solution.",
+      "website": "https://www.onthemapmarketing.com/accessibly/",
+      "icon": "Accessibly.svg"
+    },
+    "AdaSiteCompliance": {
+      "cats": [
+        68
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ADASTOOLBOXAPPSTATE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ADASTOOLBOXAPPSTATE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof adascHelper !== 'undefined';"
+        }
+      ],
+      "description": "AdaSiteCompliance is a web accessibility solution, making websites compliant and accessible to WCAG 2.1 and section 508 compliance standards.",
+      "website": "https://adasitecompliance.com",
+      "icon": "AdaSiteCompliance.png"
+    },
+    "Adally": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cloudfront\\.net/.*/adally\\.js"
+            }
+          }
+        }
+      ],
+      "website": "https://adally.com/",
+      "icon": "Adally.png"
+    },
+    "All in One Accessibility": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.skynettechnologies\\.com/accessibility/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof aiao_modal_footer_height !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof aiao_modal_footer_height !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof aioa_accessibility_profiles_STATUS !== 'undefined';"
+        }
+      ],
+      "description": "All in One Accessibility is a website accessibility widget developed by Skynet Technologies to enhance compliance with WCAG 2.0, 2.1, 2.2, and ADA accessibility standards.",
+      "website": "https://www.skynettechnologies.com/all-in-one-accessibility",
+      "icon": "Skynet Technologies.svg"
+    },
+    "Allyable": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*portal\\.allyable\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Allyable is an automated web accessibility solution with an AI engine.",
+      "website": "https://allyable.com",
+      "icon": "Allyable.png"
+    },
+    "Allyant": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/accessible360/accessible-slick/slick/slick\\.min\\.js\\?v=([\\d\\.]+)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/npm/@accessible360/accessible-slick@([\\d\\.]+)/\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Allyant is a company specializing in accessibility solutions for digital and print documents to ensure compliance with accessibility standards.",
+      "website": "https://accessible360.com",
+      "icon": "Allyant.svg"
+    },
+    "AudioEye": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:\\.)?audioeye\\.com/(?:ae\\.js)?"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $ae !== \"undefined\"; } catch(e){ return ''; }",
+          "version": "try { return window.AudioEye.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $ae.attrHooks !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof window.AudioEye.version !== 'undefined';",
+          "version": "try { return String(window.AudioEye.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "AudioEye is an accessibility overlay which claims to provide ADA and WCAG accessibility compliance.",
+      "website": "https://www.audioeye.com",
+      "icon": "AudioEye.svg"
+    },
+    "Droxit": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/droxit-a11y/js/activator\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Droxit is an automated web accessibility solution.",
+      "website": "https://www.droxit.com",
+      "icon": "Droxit.png"
+    },
+    "Enable": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.enable\\.co\\.il/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof enable_toolbar !== 'undefined' \u0026\u0026 typeof enable_toolbar.is_premium !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof enable_toolbar.is_premium !== 'undefined';"
+        }
+      ],
+      "description": "Enable is a web accessibility plugin by uPress.",
+      "website": "https://www.enable.co.il",
+      "icon": "Enable.png"
+    },
+    "EqualWeb": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.equalweb\\.com.*\\.js"
+            }
+          }
+        }
+      ],
+      "description": "EqualWeb provides a web accessibility overlay, and helps some people with disabilities access digital information.",
+      "website": "https://www.equalweb.com/",
+      "icon": "EqualWeb.png"
+    },
+    "Facil-iti": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ws\\.facil-iti\\.com/tag/faciliti-tag\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Facil-iti is a web accessibility overlay which provides support for some people with disabilities and seniors.",
+      "website": "https://www.facil-iti.com/",
+      "icon": "Facil-iti.svg"
+    },
+    "Handtalk": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.handtalk\\.me"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HandTalk !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HandTalk !== 'undefined';"
+        }
+      ],
+      "description": "Handtalk is an accessiblity plug-in which uses sign language to make sites accessible.",
+      "website": "https://www.handtalk.me/",
+      "icon": "Handtalk.png"
+    },
+    "HikeOrders": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*hikeorders\\.com/main/assets/js/hko-accessibility\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "HikeOrders is a web accessibility overlay that claims to make your site disability friendly.",
+      "website": "https://hikeorders.com/",
+      "icon": "HikeOrders.png"
+    },
+    "Level Access": {
+      "cats": [
+        68
+      ],
+      "description": "Level Access, formerly eSSENTIAL Accessibility, is a leading digital accessibility solutions provider offering tools and services to ensure compliance with standards such as ADA, Section 508, and WCAG​ ",
+      "website": "https://www.levelaccess.com",
+      "icon": "Level Access.svg"
+    },
+    "Magixite": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*acc\\.magixite\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Magixite offers the Web Content Accessibility Guidelines (WCAG), a set of guidelines and requirements designed to help designers and developers improve the accessibility of web content, ensuring it can be effectively used by individuals with disabilities.",
+      "website": "https://acc.magixite.com",
+      "icon": "Magixite.png"
+    },
+    "Make-Sense": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mk-sense\\.com/aweb\\?license"
+            }
+          }
+        }
+      ],
+      "website": "https://mk-sense.com/",
+      "icon": "Make-Sense.png"
+    },
+    "Marshal": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.usemarshal\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Marshal is a platform that ensures businesses achieve compliance and accessibility.",
+      "website": "https://usemarshal.co",
+      "icon": "Marshal.svg"
+    },
+    "Nagich": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.nagich\\.co(?:m|\\.il)/core/([\\d.]+)/accessibility\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof interdeal !== 'undefined' \u0026\u0026 typeof interdeal.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return interdeal.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof interdeal.version !== 'undefined';",
+          "version": "try { return String(interdeal.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Nagich is a website accessibility overlay provider from Israel.",
+      "website": "https://www.nagich.co.il",
+      "icon": "Nagich.svg"
+    },
+    "NagishLi": {
+      "cats": [
+        68
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $NagishLi !== \"undefined\"; } catch(e){ return ''; }",
+          "version": "try { return nagishli_commons.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $NagishLi !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initNagishLi !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof nagishli_commons.version !== 'undefined';",
+          "version": "try { return String(nagishli_commons.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "NagishLi is a free accessibility plugin from Localize*, created to provide an equal oppurtunity for webmasters to make their website accessible and make the internet more accessible for people with disability.",
+      "website": "https://www.nagish.li",
+      "icon": "NagishLi.png"
+    },
+    "Piman": {
+      "cats": [
+        68
+      ],
+      "description": "Piman is an open-source accessibility UI framework create by Blueplanet Inc.",
+      "website": "https://piman.cc",
+      "icon": "Piman.svg"
+    },
+    "Pojo.me": {
+      "cats": [
+        68
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PojoA11yOptions !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PojoA11yOptions !== 'undefined';"
+        }
+      ],
+      "description": "Pojo.me provides a Accessibility overlay plug-in for any WordPress Theme or Page Builder.",
+      "website": "https://pojo.me/plugins/accessibility/",
+      "icon": "Pojo.me.png"
+    },
+    "Poloda AI": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.polodaai\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Poloda AI is an accessibility solution designed to ensure compliance with accessibility standards and regulations.",
+      "website": "https://www.polodaai.com",
+      "icon": "PolodaAI.svg"
+    },
+    "Recite Me": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.reciteme\\.com/asset/js"
+            }
+          }
+        }
+      ],
+      "description": "Recite Me is a web accessibility overlay that claims to allow website visitors to customize a site in a way that works for them.",
+      "website": "https://reciteme.com/",
+      "icon": "Recite Me.png"
+    },
+    "Silktide": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.silktide\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof silktide !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof silktide !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof silktideInstance !== 'undefined';"
+        }
+      ],
+      "description": "Silktide is a platform that automatically detects and resolves accessibility, content, and user experience issues on websites.",
+      "website": "https://silktide.com",
+      "icon": "Silktide.svg"
+    },
+    "Texthelp": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*browsealoud\\.com/.*/browsealoud\\.js"
+            }
+          }
+        }
+      ],
+      "description": "TextHelp is a literacy, accessibility and dyslexia software developer for people with reading and writing difficulties.",
+      "website": "https://www.texthelp.com/en-gb/products/browsealoud/",
+      "icon": "Texthelp.svg"
+    },
+    "UsableNet": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.usablenet\\.com/pt/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof enableUsableNetAssistive !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof enableUsableNetAssistive !== 'undefined';"
+        }
+      ],
+      "description": "UsableNet is a technology for web accessibility and digital transformation, providing end-to-end services.",
+      "website": "https://usablenet.com",
+      "icon": "UsableNet.png"
+    },
+    "User Accessibility": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//system\\.user-a\\.co\\.il/"
+            }
+          }
+        }
+      ],
+      "description": "User Accessibility is a solution incorporating automated site scanning and machine learning for future updates, while utilising JS to conform to WECAG standards for improved website and application accessibility.",
+      "website": "https://user-a.co.il",
+      "icon": "User Accessibility.svg"
+    },
+    "UserWay": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.userway\\.org/widget.*\\.js"
+            }
+          }
+        }
+      ],
+      "description": "UserWay is a web accessibility overlay for websites that claims to improve compliance with accessibility standards.",
+      "website": "https://userway.org/",
+      "icon": "UserWay.svg"
+    },
+    "Voice Intuitive": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.voiceintuitive\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Voice Intuitive is a platform that enhances web content accessibility by providing voice and translation services, supporting multiple languages.",
+      "website": "https://voiceintuitive.com/en/voice-intuitive-tm/",
+      "icon": "VoiceIntuitive.svg"
+    },
+    "eSSENTIAL Accessibility": {
+      "cats": [
+        68
+      ],
+      "description": "eSSENTIAL Accessibility is a digital accessibility-as-a-service platform.",
+      "website": "https://www.essentialaccessibility.com",
+      "icon": "eSSENTIAL Accessibility.png"
+    },
+    "uRemediate": {
+      "cats": [
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*fecdn\\.user1st\\.info/loader/head"
+            }
+          }
+        }
+      ],
+      "description": "uRemediate provides web accessibility testing tools and accessibility overlays.",
+      "website": "https://www.user1st.com/uremediate/",
+      "icon": "User1st.png"
+    }
+  }
+}

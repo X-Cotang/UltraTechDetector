@@ -1,0 +1,2177 @@
+{
+  "apps": {
+    "ARCaptcha": {
+      "cats": [
+        16
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof arcaptcha !== 'undefined' \u0026\u0026 typeof arcaptcha.checkboxCreatorRegistered !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof arcaptcha.checkboxCreatorRegistered !== 'undefined';"
+        }
+      ],
+      "description": "ARCaptcha is a CAPTCHA system designed to enhance online security by preventing automated bots from accessing websites.",
+      "website": "https://arcaptcha.co",
+      "icon": "ARCaptcha.svg"
+    },
+    "AWS WAF Captcha": {
+      "cats": [
+        16
+      ],
+      "implies": [
+        "Amazon Web Services"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-amzn-waf-action": {
+                  "$regex": "^captcha$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*captcha\\.awswaf\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "AWS WAF Captcha helps block unwanted bot traffic by requiring users to successfully complete challenges before their web request are allowed to reach AWS WAF protected resources.",
+      "website": "https://docs.aws.amazon.com/waf/latest/developerguide/waf-captcha.html",
+      "icon": "AWS WAF Captcha.svg"
+    },
+    "Accertify": {
+      "cats": [
+        16
+      ],
+      "description": "Accertify is a platform specialising in fraud prevention and chargeback management.",
+      "website": "https://www.accertify.com/",
+      "icon": "Accertify.svg"
+    },
+    "Akamai Bot Manager": {
+      "cats": [
+        16
+      ],
+      "implies": [
+        "Akamai"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Akamai Bot Manager detect bots using device fingerprinting bot signatures.",
+      "website": "https://www.akamai.com/us/en/products/security/bot-manager.jsp",
+      "icon": "Akamai.svg"
+    },
+    "Akamai Web Application Protector": {
+      "cats": [
+        16
+      ],
+      "implies": [
+        "Akamai"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*aksb\\.min\\.js\\;confidence:50"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ds-aksb-a\\.akamaihd\\.net/aksb.min.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AKSB !== 'undefined' \u0026\u0026 AKSB === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AKSB !== 'undefined';",
+          "version": "try { return String(AKSB || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Akamai Web Application Protector is designed for companies looking for a more automated approach to web application firewall (WAF) and distributed denial-of-service (DDoS) security.",
+      "website": "https://www.akamai.com/us/en/products/security/web-application-protector-enterprise-waf-firewall-ddos-protection.jsp",
+      "icon": "Akamai.svg"
+    },
+    "Alibaba Cloud Verification Code": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cf\\.aliyun\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Alibaba Cloud Verification Code is a security feature provided by Alibaba Cloud to help protect user accounts from unauthorised access.",
+      "website": "https://help.aliyun.com/document_detail/193141.html",
+      "icon": "Alibaba Cloud.svg"
+    },
+    "Altcha": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*altcha\\.(org|js)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ALTCHA_WIDGET_ATTRS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ALTCHA_WIDGET_ATTRS !== 'undefined';"
+        }
+      ],
+      "description": "Altcha is a spam and abuse protection solution for websites and apps, offering a privacy-friendly Captcha and other tools designed with GDPR compliance to provide strong security while safeguarding user privacy.",
+      "website": "https://altcha.org",
+      "icon": "Altcha.svg"
+    },
+    "AntiBot.Cloud": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']antibot\\.cloud\\sv\\.\\s([\\d\\.]+)\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/antibot8/static/peel\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "AntiBot.Cloud is a PHP script and cloud service to protect websites from bots and junk traffic.",
+      "website": "https://antibot.cloud"
+    },
+    "Arkose Labs": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.arkoselabs\\.com"
+                }
+              },
+              {
+                "headers.content-security-policy-report-only": {
+                  "$regex": "\\.arkoselabs\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Arkose Labs is a toolkit for fraud prevention that provides solutions to detect and mitigate malicious activity across digital platforms.",
+      "website": "https://www.arkoselabs.com",
+      "icon": "ArkoseLabs.svg"
+    },
+    "Basic": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.www-authenticate": {
+              "$regex": "^basic"
+            }
+          }
+        }
+      ],
+      "description": "Basic is an authetication method used by some web servers.",
+      "website": "https://tools.ietf.org/html/rfc7617"
+    },
+    "Blue Triangle": {
+      "cats": [
+        16,
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.btttag\\.com/btt\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _bttUtil !== 'undefined' \u0026\u0026 typeof _bttUtil.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return _bttUtil.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _bttUtil.version !== 'undefined';",
+          "version": "try { return String(_bttUtil.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Blue Triangle is a connected view of marketing, web performance, and third-party tag analytics while constantly monitoring website code for security vulnerabilities.",
+      "website": "https://bluetriangle.com",
+      "icon": "Blue Triangle.png"
+    },
+    "Bugcrowd": {
+      "cats": [
+        16
+      ],
+      "description": "Bugcrowd is a crowdsourced cybersecurity platform.",
+      "website": "https://www.bugcrowd.com",
+      "icon": "Bugcrowd.svg"
+    },
+    "BuySafe": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*seal\\.buysafe\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof buySAFE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof buySAFE !== 'undefined';"
+        }
+      ],
+      "description": "BuySafe is a website seal that signifies adherence to stringent safety standards, ensuring secure online transactions and safeguarding user data.",
+      "website": "https://www.buysafe.com",
+      "icon": "BuySafe.svg"
+    },
+    "Captch Me": {
+      "cats": [
+        16,
+        36
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^https?://api\\.captchme\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Captchme !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Captchme !== 'undefined';"
+        }
+      ],
+      "website": "https://captchme.com",
+      "icon": "Captch Me.svg"
+    },
+    "CleanTalk": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*moderate\\.cleantalk\\.org/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ctAjaxSetupAddCleanTalkDataBeforeSendAjax !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ctAjaxSetupAddCleanTalkDataBeforeSendAjax !== 'undefined';"
+        }
+      ],
+      "description": "CleanTalk is an anti-spam plugin system that provides spam protection for various types of websites.",
+      "website": "https://cleantalk.org",
+      "icon": "CleanTalk.svg"
+    },
+    "Clear": {
+      "cats": [
+        16
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ClearMe !== 'undefined' \u0026\u0026 typeof ClearMe.Environments !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ClearMe.Environments !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof clearMeClientID !== 'undefined';"
+        }
+      ],
+      "description": "Clear is a platform that offers secure identity verification.",
+      "website": "https://www.clearme.com",
+      "icon": "Clear.svg"
+    },
+    "ClickCease": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.clickcease\\.com/monitor/"
+            }
+          }
+        }
+      ],
+      "description": "ClickCease is an ad fraud and click-fraud detection and protection service software.",
+      "website": "https://www.clickcease.com",
+      "icon": "ClickCease.svg"
+    },
+    "ClickReport": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*service\\.clickreport\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ClickReport is a platform that provides PPC click fraud prevention by detecting and blocking invalid or malicious ad traffic.",
+      "website": "https://www.clickreport.com",
+      "icon": "ClickReport.svg"
+    },
+    "Cloudflare Bot Management": {
+      "cats": [
+        16
+      ],
+      "implies": [
+        "Cloudflare"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Cloudflare bot management solution identifies and mitigates automated traffic to protect websites from bad bots.",
+      "website": "https://www.cloudflare.com/en-gb/products/bot-management/",
+      "icon": "CloudFlare.svg"
+    },
+    "Cloudflare Challenge": {
+      "cats": [
+        16
+      ],
+      "implies": [
+        "Cloudflare"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/"
+                }
+              },
+              {
+                "headers.cf-mitigated": {
+                  "$regex": "challenge"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Cloudflare Challenge is an anti-bot verification system that requires users to complete a challenge before accessing protected content.",
+      "website": "https://www.cloudflare.com/products/turnstile",
+      "icon": "CloudFlare.svg"
+    },
+    "Cloudflare Turnstile": {
+      "cats": [
+        16
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof turnstile !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof turnstile !== 'undefined';"
+        }
+      ],
+      "description": "Turnstile is Cloudflare's smart CAPTCHA alternative.",
+      "website": "https://www.cloudflare.com/products/turnstile",
+      "icon": "CloudFlare.svg"
+    },
+    "CoinHive Captcha": {
+      "cats": [
+        16,
+        56
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*https?://authedmine\\.com/(?:lib/captcha|captcha)"
+            }
+          }
+        }
+      ],
+      "description": "Coinhive Captcha provides captcha service that is simple to integrate, where your users’ devices need to solve a number of hashes, adjustable by you, in order to login or post a comment to your site.",
+      "website": "https://coinhive.com",
+      "icon": "CoinHive.svg"
+    },
+    "Combahton FlowShield": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "antiddos/flowproxy"
+                }
+              },
+              {
+                "headers.x-flowproxy-author": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Combahton FlowShield is a network security solution designed to protect networks and servers from various cyber threats, including DDoS attacks, malware, and other types of malicious traffic.",
+      "website": "https://combahton.net",
+      "icon": "Combahton.svg"
+    },
+    "Confiant": {
+      "cats": [
+        16
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof confiant !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof confiant !== 'undefined';"
+        }
+      ],
+      "description": "Confiant is a cybersecurity company specialising in ad security and ad quality assurance for digital publishers, programmatic platforms, and advertisers.",
+      "website": "https://www.confiant.com",
+      "icon": "Confiant.svg"
+    },
+    "Covery": {
+      "cats": [
+        16
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof handleCoveryFpKey !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof handleCoveryFpKey !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sendCoveryFpKey !== 'undefined';"
+        }
+      ],
+      "description": "Covery is a risk management platform that provides KYC and device fingerprinting fraud detection tools to prevent identity theft and fraudulent transactions.",
+      "website": "https://covery.ai",
+      "icon": "Covery.svg"
+    },
+    "DDoS-Guard": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^ddos-guard$"
+            }
+          }
+        }
+      ],
+      "description": "DDoS-Guard is a Russian Internet infrastructure company which provides DDoS protection, content delivery network services, and web hosting services.",
+      "website": "https://ddos-guard.net",
+      "icon": "DDoS-Guard.svg"
+    },
+    "DataDome": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^datadome$"
+                }
+              },
+              {
+                "headers.x-datadome": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-datadome-cid": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^https://ct\\.datadome\\.co/[a-z]\\.js$"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "DataDome is a cybersecurity platform that specialises in bot protection and mitigation, offering advanced solutions to safeguard websites and mobile applications against malicious bot traffic, credential stuffing, scraping, and other automated threats.",
+      "website": "https://datadome.co",
+      "icon": "DataDome.svg"
+    },
+    "Dataships": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.dataships\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Dataships is a platform that ensures compliance with global data privacy regulations, helping businesses manage and protect customer data according to international standards.",
+      "website": "https://dataships.io",
+      "icon": "Dataships.svg"
+    },
+    "Detectify": {
+      "cats": [
+        16
+      ],
+      "description": "Detectify is an automated scanner that checks your web application for vulnerabilities.",
+      "website": "https://detectify.com/",
+      "icon": "Detectify.svg"
+    },
+    "Digest": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.www-authenticate": {
+              "$regex": "^digest"
+            }
+          }
+        }
+      ],
+      "description": "Digest is an authentication method based on a MD5 hash used by web servers.",
+      "website": "https://tools.ietf.org/html/rfc7616"
+    },
+    "Drata": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']drata inc.[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']copyright[\"'][^\u003e]+content=[\"']drata inc.[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunkdrata_web !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkdrata_web !== 'undefined';"
+        }
+      ],
+      "description": "Drata is an automated site compliance system designed to streamline and manage security and privacy requirements.",
+      "website": "https://drata.com",
+      "icon": "Drata.svg"
+    },
+    "DutchIS": {
+      "cats": [
+        16
+      ],
+      "description": "DutchIS is a web application front service that monitors, protects, cleans, and secures web traffic for websites.",
+      "website": "https://dutchis.net",
+      "icon": "DutchIS.svg"
+    },
+    "FOCUS WebWall": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/focus_webwall/.*?/focus-webwall\\.js$"
+            }
+          }
+        }
+      ],
+      "description": "FOCUS WebWall is a zero-overhead security layer designed for websites using Cloudflare.",
+      "website": "https://appsphere.app",
+      "icon": "FOCUSWebWall.svg"
+    },
+    "FUGU": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.fugu-it\\.com"
+            }
+          }
+        }
+      ],
+      "description": "FUGU is a payment fraud prevention solution that analyzes transactions both before and after checkout.",
+      "website": "https://www.fugu-it.com",
+      "icon": "FUGU.svg"
+    },
+    "Forter": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*forter\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ftr__startScriptLoad !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ftr__startScriptLoad !== 'undefined';"
+        }
+      ],
+      "description": "Forter is a SaaS company that provides fraud prevention technology for online retailers and marketplaces.",
+      "website": "https://www.forter.com",
+      "icon": "Forter.svg"
+    },
+    "Fortinet FortiGate": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cf-icon class=\"ftnt-fortinet-grid icon-xl\"\u003e"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Fortinet FortiGate is a family of network security appliances that provide firewall, VPN, intrusion prevention, antivirus, web filtering, and other security features to protect and secure networks and data.",
+      "website": "https://www.fortinet.com/products/next-generation-firewall",
+      "icon": "Fortinet.svg"
+    },
+    "Fraud Blocker": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*monitor\\.fraudblocker\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fraudblocker\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Fraud Blocker is an all-in-one solution designed to reduce costs by preventing bots, competitor clicks, fake leads, and other forms of digital ad fraud.",
+      "website": "https://fraudblocker.com",
+      "icon": "FraudBlocker.svg"
+    },
+    "FraudLabs Pro": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fraudlabspro\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FraudLabsProAgent !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FraudLabsProAgent !== 'undefined';"
+        }
+      ],
+      "description": "FraudLabs Pro is a fraud prevention service offered by the company FraudLabs Pro, which specialises in online fraud detection and risk management for businesses.",
+      "website": "https://www.fraudlabspro.com",
+      "icon": "FraudLabs Pro.png"
+    },
+    "Friendly Captcha": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*x-frc-client\",\"js-(\\d+(\\.\\d+)+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Friendly Captcha is a proof-of-work based solution in which the user’s device does all the work.",
+      "website": "https://friendlycaptcha.com",
+      "icon": "FriendlyCaptcha.svg"
+    },
+    "FunCaptcha": {
+      "cats": [
+        16
+      ],
+      "description": "FunCaptcha is a type of CAPTCHA, which is a security measure used to protect websites and online services from spam, bots, and other forms of automated abuse.",
+      "website": "https://www.arkoselabs.com/arkose-matchkey/",
+      "icon": "fun_captcha.svg"
+    },
+    "GeeTest": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.geetest\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.geetest\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "GeeTest is a CAPTCHA and bot management provider, protects websites, mobile apps, and APIs from automated bot-driven attacks, like ATO, credential stuffing, web scalping, etc.",
+      "website": "https://www.geetest.com",
+      "icon": "GeeTest.svg"
+    },
+    "HSTS": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.strict-transport-security": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "HTTP Strict Transport Security (HSTS) informs browsers that the site should only be accessed using HTTPS.",
+      "website": "https://www.rfc-editor.org/rfc/rfc6797#section-6.1"
+    },
+    "Hanko": {
+      "cats": [
+        16
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _hankoStyle !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _hankoStyle !== 'undefined';"
+        }
+      ],
+      "description": "Hanko is a passwordless authentication solution offering secure login integration.",
+      "website": "https://www.hanko.io",
+      "icon": "Hanko.svg"
+    },
+    "Human Presence": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/.*\\.humanpresence\\.(?:io|app)/"
+            }
+          }
+        }
+      ],
+      "description": "Human Presence is a bot detection and spam protection software for WordPress and Shopify.",
+      "website": "https://www.humanpresence.io",
+      "icon": "human_presence.svg"
+    },
+    "Imperva": {
+      "cats": [
+        16,
+        31
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-cdn": {
+                  "$regex": "^imperva"
+                }
+              },
+              {
+                "headers.x-iinfo": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/_incapsula_resource"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Imperva is a cyber security software and services company for networking, data, and application security.",
+      "website": "https://www.imperva.com/",
+      "icon": "Imperva.svg"
+    },
+    "Imunify360": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "imunify360-webshield/([\\d\\.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Imunify360 is a comprehensive security platform for Linux web servers which utilises machine learning technology and other advanced techniques to provide protection against various types of cyber threats, such as malware, viruses, and other attacks.",
+      "website": "https://www.imunify360.com",
+      "icon": "Imunify360.svg"
+    },
+    "Jumio": {
+      "cats": [
+        16
+      ],
+      "description": "Jumio is an online mobile payments and identity verification company that provides card and ID scanning and validation products for mobile and web transactions.",
+      "website": "https://www.jumio.com",
+      "icon": "Jumio.svg"
+    },
+    "Kasada": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KPSDK !== 'undefined' \u0026\u0026 typeof KPSDK.configure !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KPSDK.configure !== 'undefined';"
+        }
+      ],
+      "description": "Kasada is a cybersecurity company that provides a platform to protect websites and web applications from bot attacks and malicious activities.",
+      "website": "https://www.kasada.io",
+      "icon": "Kasada.svg"
+    },
+    "Kerberos": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.www-authenticate": {
+              "$regex": "^kerberos"
+            }
+          }
+        }
+      ],
+      "description": "Kerberos is an authentication method commonly used by Windows servers",
+      "website": "https://tools.ietf.org/html/rfc4559"
+    },
+    "Keybase": {
+      "cats": [
+        16
+      ],
+      "description": "Keybase is for keeping everyone's chats and files safe, from families to communities to companies. MacOS, Windows, Linux, iPhone, and Android.",
+      "website": "https://keybase.io/",
+      "icon": "Keybase.svg"
+    },
+    "Konduto": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.k-analytix\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Konduto !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Konduto !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof getKondutoID !== 'undefined';"
+        }
+      ],
+      "description": "Konduto is a fraud detection service for ecommerce.",
+      "website": "https://www.konduto.com",
+      "icon": "Konduto.png"
+    },
+    "MTCaptcha": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*service(?:2)?\\.mtcaptcha\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mtcaptcha !== 'undefined' \u0026\u0026 typeof mtcaptcha.getVerifiedToken !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mtcaptcha.getVerifiedToken !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mtcaptchaConfig.sitekey !== 'undefined';"
+        }
+      ],
+      "description": "MTCaptcha is a captcha service that is GDPR and WCAG compliant, providing the confidence of privacy and accessibility.",
+      "website": "https://www.mtcaptcha.com",
+      "icon": "MTCaptcha.png"
+    },
+    "Mollom": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cimg[^\u003e]+\\.mollom\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mollom(?:\\.min)?\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://mollom.com",
+      "icon": "Mollom.png",
+      "cpe": "cpe:2.3:a:acquia:mollom:*:*:*:*:*:*:*:*"
+    },
+    "NTLM": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.www-authenticate": {
+              "$regex": "^ntlm"
+            }
+          }
+        }
+      ],
+      "description": "NTLM is an authentication method commonly used by Windows servers",
+      "website": "https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-ntht/"
+    },
+    "Negate": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sapi\\.negate\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Negate is a security service that provides premium bot protection for websites, blocking malicious bots in real time.",
+      "website": "https://negate.io",
+      "icon": "Negate.svg"
+    },
+    "NexusPIPE": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^nexuspipe.com"
+            }
+          }
+        }
+      ],
+      "description": "NexusPIPE is a ADC and DDoS mitigation Company.",
+      "website": "https://nexuspipe.com",
+      "icon": "NexusPIPE.png"
+    },
+    "NoFraud": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*services\\.nofraud\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "NoFraud is a fraud prevention solution for ecommerce businesses.",
+      "website": "https://www.nofraud.com",
+      "icon": "NoFraud.svg"
+    },
+    "Norton Shopping Guarantee": {
+      "cats": [
+        16
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*nsg\\.symantec\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DO_NORTON_SHOPPING !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DO_NORTON_SHOPPING !== 'undefined';"
+        }
+      ],
+      "description": "Norton Shopping Guarantee offering a third-party shopping guarantee to customers provides added protection and validation that you are safe to buy from.",
+      "website": "https://norton.buysafe.com",
+      "icon": "Norton Shopping Guarantee.svg"
+    },
+    "Onfido": {
+      "cats": [
+        16,
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "(?:api|sync)\\.onfido\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Onfido is a technology company that helps businesses verify people's identities using a photo-based identity document, a selfie and artificial intelligence algorithms.",
+      "website": "https://onfido.com",
+      "icon": "Onfido.svg"
+    },
+    "PerimeterX": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*client\\.a\\.pxi\\.pub/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _pxAppId !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _pxAppId !== 'undefined';"
+        }
+      ],
+      "description": "PerimeterX is a provider of scalable, behavior-based threat protection technology for the web, cloud, and mobile.",
+      "website": "https://www.perimeterx.com",
+      "icon": "PerimeterX.svg"
+    },
+    "Picatcha": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.picatcha\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.picatcha\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Picatcha is a CAPTCHA technology designed to provide a usable and secure way to verify human users and prevent automated access.",
+      "website": "https://picatcha.com",
+      "icon": "Picatcha.svg"
+    },
+    "Preeco": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.preeco\\.de"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PreecoWidgets !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PreecoWidgets !== 'undefined';"
+        }
+      ],
+      "description": "Preeco is a software solution for data protection, information security, and whistleblower reporting systems.",
+      "website": "https://www.preeco.de",
+      "icon": "Preeco.svg"
+    },
+    "Proxmox Mail Gateway": {
+      "cats": [
+        16
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pmg-mail-tracker !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pmg-mail-tracker !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pmg-spam-archive !== 'undefined';"
+        }
+      ],
+      "description": "Proxmox Mail Gateway is a mail security and anti-spam solution designed to protect email servers and ensure secure and reliable email communication.",
+      "website": "https://proxmox.com/en/proxmox-mail-gateway",
+      "icon": "Proxmox.svg"
+    },
+    "RapidSec": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.rapidsec\\.net"
+                }
+              },
+              {
+                "headers.content-security-policy-report-only": {
+                  "$regex": "\\.rapidsec\\.net"
+                }
+              },
+              {
+                "headers.report-to": {
+                  "$regex": "\\.rapidsec\\.net"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "RapidSec offers automated client-side security and monitoring.",
+      "website": "https://rapidsec.com",
+      "icon": "RapidSec.svg"
+    },
+    "Really Simple SSL \u0026 Security": {
+      "cats": [
+        16
+      ],
+      "description": "Really Simple SSL \u0026 Security is an easy to install and performant security solution for WordPress.",
+      "website": "https://really-simple-ssl.com",
+      "icon": "really-simple-ssl.png"
+    },
+    "Regula": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*unpkg\\.com/@regulaforensics/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Regula !== 'undefined' \u0026\u0026 typeof Regula.AuthenticityResultType !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Regula.AuthenticityResultType !== 'undefined';"
+        }
+      ],
+      "description": "Regula is a provider of identity verification and document authentication solutions for various industries.",
+      "website": "https://regulaforensics.com",
+      "icon": "Regula.svg"
+    },
+    "SPNEGO": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.www-authenticate": {
+              "$regex": "^negotiate"
+            }
+          }
+        }
+      ],
+      "description": "SPNEGO is an authentication method commonly used in Windows servers to allow NTLM or Kerberos authentication.",
+      "website": "https://tools.ietf.org/html/rfc4559"
+    },
+    "SafeBase": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.safebase\\.io"
+            }
+          }
+        }
+      ],
+      "description": "SafeBase is a platform that simplifies security reviews by enabling teams to share and automate access to essential security, compliance, and privacy information.",
+      "website": "https://safebase.io",
+      "icon": "SafeBase.svg"
+    },
+    "Sardine": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.sardine\\.ai"
+            }
+          }
+        }
+      ],
+      "description": "Sardine is a system designed to stop fraud and increase revenue by enhancing transaction monitoring and risk management.",
+      "website": "https://www.sardine.ai",
+      "icon": "Sardine.svg"
+    },
+    "SecureMetrics": {
+      "cats": [
+        16
+      ],
+      "description": "SecurityMetrics is a platform that provides website security assessments and vulnerability testing to identify and address potential threats.",
+      "website": "https://www.securitymetrics.com",
+      "icon": "SecurityMetrics.svg"
+    },
+    "Securiti": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.securiti\\.ai"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.securiti\\.ai"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Securiti is a centralized platform that ensures the secure utilization of data and generative AI.",
+      "website": "https://securiti.ai",
+      "icon": "Securiti.svg"
+    },
+    "Seon": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.seon\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof seon !== 'undefined' \u0026\u0026 typeof seon.appIdentifier !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof seon.appIdentifier !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof waitForSeon !== 'undefined';"
+        }
+      ],
+      "description": "Seon is a global fraud prevention solution designed to combat fraud and money laundering by identifying and blocking threats at all stages of the customer journey.",
+      "website": "https://seon.io",
+      "icon": "Seon.svg"
+    },
+    "SiteLock": {
+      "cats": [
+        16
+      ],
+      "description": "SiteLock is a security service that protects websites from hackers, malware, and other threats.",
+      "website": "https://www.sitelock.com",
+      "icon": "SiteLock.svg"
+    },
+    "Skyflow": {
+      "cats": [
+        16
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Skyflow !== 'undefined' \u0026\u0026 typeof Skyflow.ElementType !== 'undefined' \u0026\u0026 typeof Skyflow.ElementType.CARD_NUMBER !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Skyflow.ElementType.CARD_NUMBER !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Skyflow.ValidationRuleType !== 'undefined';"
+        }
+      ],
+      "description": "Skyflow is a company that provides a secure data privacy platform and API.",
+      "website": "https://www.skyflow.com",
+      "icon": "Skyflow.svg"
+    },
+    "Slider Captcha": {
+      "cats": [
+        16
+      ],
+      "implies": [
+        "jQuery"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sliderCaptcha !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sliderCaptcha !== 'undefined';"
+        }
+      ],
+      "description": "Slider Captcha is a free service that helps protect websites from spam and abuse.",
+      "website": "https://github.com/ArgoZhang/SliderCaptcha",
+      "icon": "default.svg"
+    },
+    "SnapHost": {
+      "cats": [
+        16
+      ],
+      "description": "SnapHost is a solution offering anti-spam CAPTCHA web form protection.",
+      "website": "https://snaphost.com"
+    },
+    "Solve Media": {
+      "cats": [
+        16,
+        36
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^https?://api\\.solvemedia\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ACPuzzle !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _ACPuzzle !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _adcopy-puzzle-image-image !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof adcopy-puzzle-image-image !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ACPuzzle !== 'undefined';"
+        }
+      ],
+      "website": "https://solvemedia.com",
+      "icon": "Solve Media.png"
+    },
+    "Sqreen": {
+      "cats": [
+        16,
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-protected-by": {
+              "$regex": "^sqreen$"
+            }
+          }
+        }
+      ],
+      "description": "Sqreen is the application security platform for the modern enterprise. Acquired by Datadog in Apr 2021.",
+      "website": "https://sqreen.io",
+      "icon": "Sqreen.svg"
+    },
+    "StarTest": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.startest\\.top"
+            }
+          }
+        }
+      ],
+      "description": "StarTest is a CAPTCHA provider that safeguards websites, mobile apps, and APIs from automated bot-driven attacks.",
+      "website": "https://startest.top",
+      "icon": "StarTest.svg"
+    },
+    "Testflow": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.testflow\\.eu"
+            }
+          }
+        }
+      ],
+      "description": "Testflow is a platform that digitizes manual workflows for test centers while ensuring secure patient data management in compliance with data protection regulations.",
+      "website": "https://testflow.eu",
+      "icon": "Testflow.svg"
+    },
+    "ThreatMetrix": {
+      "cats": [
+        16,
+        83
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.online-metrix\\.net"
+            }
+          }
+        }
+      ],
+      "description": "LexisNexis ThreatMetrix is an enterprise solution for online risk and fraud protection ('digital identity intelligence and digital authentication').",
+      "website": "https://risk.lexisnexis.com/products/threatmetrix",
+      "icon": "threatmetrix.png"
+    },
+    "Token of Trust": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.tokenoftrust\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.tokenoftrust\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Token of Trust is a compliance and anti-fraud platform designed to help ecommerce businesses mitigate risk and support growth through end-to-end verification tools.",
+      "website": "https://tokenoftrust.com",
+      "icon": "TokenOfTrust.svg"
+    },
+    "TrafficGuard": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tgtag\\.io"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*trafficguard\\.ai"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "TrafficGuard is an ad fraud and click-fraud detection software.",
+      "website": "https://www.trafficguard.ai/",
+      "icon": "TrafficGuard.png"
+    },
+    "Trezor": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*connect\\.trezor\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TrezorConnect !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TrezorConnect !== 'undefined';"
+        }
+      ],
+      "description": "Trezor is a digital wallet that provides offline storage for cryptocurrency, protecting digital assets from online threats and unauthorized access.",
+      "website": "https://trezor.io",
+      "icon": "Trezor.svg"
+    },
+    "TruValidate": {
+      "cats": [
+        16,
+        83
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ci-mpsnare\\.iovation\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mpsnare\\.iesnare\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "TransUnion TruValidate (previously ReputationShield/IDVision from iovation) is an online risk and fraud detection platform.",
+      "website": "https://www.transunion.com/solution/truvalidate",
+      "icon": "TruValidate.svg"
+    },
+    "VAPTCHA": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.vaptcha\\.com/v([\\d\\.]+)\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof vaptcha !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vaptcha !== 'undefined';"
+        }
+      ],
+      "description": "VAPTCHA is the abbreviation of (Variation Analysis based Public Turing Test to Tell Computers and Humans Apart), also known as gesture verification code, is a human-machine verification solution based on artificial intelligence and big data.",
+      "website": "https://en.vaptcha.com",
+      "icon": "VAPTCHA.svg"
+    },
+    "Vanta": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.vanta\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Vanta is a compliance automation platform for SOC 2, HIPAA, ISO 27001, PCI, and GDPR.",
+      "website": "https://www.vanta.com",
+      "icon": "Vanta.svg"
+    },
+    "Variti": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-variti-ccr": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "Variti is a network security solutions firm that blocks bad bots, protects users from various automated abuse, attacks and fraud techniques.",
+      "website": "https://variti.io",
+      "icon": "Variti.png"
+    },
+    "VentryShield": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-ventryshield-cache-status": {
+                  "$regex": "no-cache"
+                }
+              },
+              {
+                "headers.x-ventryshield-sid": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "VentryShield offers DDoS Protected VPS and Web Hosting.",
+      "website": "https://ventryshield.net",
+      "icon": "ventry_shield.png"
+    },
+    "Very Good Security": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.verygoodvault\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.verygoodvault\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VGSCollect !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VGSCollect !== 'undefined';"
+        }
+      ],
+      "description": "Very Good Security (VGS) is a data security and compliance platform that enables developers to securely handle sensitive data by encrypting, tokenising, and transmitting it through an intermediary service.",
+      "website": "https://www.verygoodsecurity.com",
+      "icon": "Very Good Security.svg"
+    },
+    "WAR.PE": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//war\\.pe/warp\\.js"
+            }
+          }
+        }
+      ],
+      "description": "WAR.PE is a platform designed to enhance the web experience by promoting user privacy and security.",
+      "website": "https://war.pe",
+      "icon": "WARPE.svg"
+    },
+    "Yandex SmartCaptcha": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-yandex-captcha": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "Yandex SmartCaptcha is a service for verifying queries to identify user requests and block bots.",
+      "website": "https://cloud.yandex.com/en/services/smartcaptcha",
+      "icon": "yandex_smartcaptcha.svg"
+    },
+    "adCAPTCHA": {
+      "cats": [
+        16
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof adCAPTCHA !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof adCAPTCHA !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof adcaptcha_vars !== 'undefined';"
+        }
+      ],
+      "description": "adCAPTCHA is a security tool that integrates marketing and user experience to block bots while enhancing brand visibility, using dynamic content for varied challenges without collecting user data.",
+      "website": "https://adcaptcha.com",
+      "icon": "adCAPTCHA.svg"
+    },
+    "c/side": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cside\\.dev"
+            }
+          }
+        }
+      ],
+      "description": "c/side is a security solution that protects organizations from advanced client-side threats, including script injection, data skimming, and browser-based attacks.",
+      "website": "https://cside.dev",
+      "icon": "cside.svg"
+    },
+    "hCaptcha": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "(?:\\.|//)hcaptcha\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*hcaptcha\\.com/([\\d]+?)/api\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hcaptcha !== 'undefined' \u0026\u0026 typeof hcaptcha.getRespKey !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hcaptcha.getRespKey !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hcaptchaOnLoad !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hcaptcha_sitekey !== 'undefined';"
+        }
+      ],
+      "description": "hCaptcha is an anti-bot solution that protects user privacy and rewards websites.",
+      "website": "https://www.hcaptcha.com",
+      "icon": "hCaptcha.svg"
+    },
+    "reCAPTCHA": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/recaptcha/(?:api|enterprise)\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api-secure\\.recaptcha\\.net"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*recaptcha_ajax\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/recaptcha/api\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Recaptcha !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Recaptcha !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof recaptcha !== 'undefined';"
+        }
+      ],
+      "description": "reCAPTCHA is a free service from Google that helps protect websites from spam and abuse.",
+      "website": "https://www.google.com/recaptcha/",
+      "icon": "reCAPTCHA.svg"
+    },
+    "v4Guard Checkpoint": {
+      "cats": [
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.v4guard\\.io/checkpoint"
+            }
+          }
+        }
+      ],
+      "description": "Checkpoint is a product of v4Guard that verifies website users and prevents fraudulent access to sensitive areas, by checking for any use of anonymisation services with a captcha-like widget.",
+      "website": "https://v4guard.io",
+      "icon": "v4Guard.svg"
+    }
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "apps": {
+    "Amazon Aurora": {
+      "cats": [
+        34
+      ],
+      "implies": [
+        "Amazon Web Services"
+      ],
+      "description": "Amazon Aurora is a relational database service developed and offered by Amazon Web Services.",
+      "website": "https://aws.amazon.com/rds/aurora",
+      "icon": "Amazon Aurora.svg"
+    },
+    "Claris FileMaker": {
+      "cats": [
+        34
+      ],
+      "description": "Claris FileMaker is a cross-platform relational database application from Claris International.",
+      "website": "https://www.claris.com/filemaker",
+      "icon": "Claris.svg"
+    },
+    "Cloudera": {
+      "cats": [
+        34
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "cloudera"
+            }
+          }
+        }
+      ],
+      "description": "Cloudera is a software platform for data engineering, data warehousing, machine learning and analytics that runs in the cloud or on-premises.",
+      "website": "https://www.cloudera.com",
+      "icon": "Cloudera.png"
+    },
+    "Dimensions AI": {
+      "cats": [
+        34
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.dimensions\\.ai"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __dimensions_badge_config_loaded__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __dimensions_badge_config_loaded__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __dimensions_badge_server !== 'undefined';"
+        }
+      ],
+      "description": "Dimensions AI is an advanced research database linking grants, publications, datasets, clinical trials, patents, and policy documents to support efficient translation from idea to impact.",
+      "website": "https://www.dimensions.ai",
+      "icon": "Dimensions.svg"
+    },
+    "Firebase": {
+      "cats": [
+        34,
+        47
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.vary": {
+                  "$regex": "x-fh-requested-host"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/(?:([\\d.]+)/)?firebase(?:\\.min)?\\.js\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/firebasejs/([\\d.]+)/firebase\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.gstatic\\.com/firebasejs/([\\d\\.]+)/\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*firebase(?:config|io\\.com)"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof firebase !== 'undefined' \u0026\u0026 typeof firebase.SDK_VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return firebase.SDK_VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof firebase.SDK_VERSION !== 'undefined';",
+          "version": "try { return String(firebase.SDK_VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Firebase is a Google-backed application development software that enables developers to develop iOS, Android and Web apps.",
+      "website": "https://firebase.google.com",
+      "icon": "Firebase.svg",
+      "cpe": "cpe:2.3:a:google:firebase_cloud_messaging:*:*:*:*:*:*:*:*"
+    },
+    "Lucene": {
+      "cats": [
+        34
+      ],
+      "implies": [
+        "Java"
+      ],
+      "description": "Lucene is a free and open-source search engine software library.",
+      "website": "https://lucene.apache.org/core/",
+      "icon": "Lucene.png",
+      "cpe": "cpe:2.3:a:apache:lucene:*:*:*:*:*:*:*:*"
+    },
+    "MariaDB": {
+      "cats": [
+        34
+      ],
+      "description": "MariaDB is an open-source relational database management system compatible with MySQL.",
+      "website": "https://mariadb.org",
+      "icon": "mariadb.svg",
+      "cpe": "cpe:2.3:a:mariadb_project:mariadb:*:*:*:*:*:*:*:*"
+    },
+    "MongoDB": {
+      "cats": [
+        34
+      ],
+      "description": "MongoDB is a document-oriented NoSQL database used for high volume data storage.",
+      "website": "https://www.mongodb.org",
+      "icon": "MongoDB.png",
+      "cpe": "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*"
+    },
+    "MySQL": {
+      "cats": [
+        34
+      ],
+      "description": "MySQL is an open-source relational database management system.",
+      "website": "https://mysql.com",
+      "icon": "MySQL.svg",
+      "cpe": "cpe:2.3:a:mysql:mysql:*:*:*:*:*:*:*:*"
+    },
+    "Percona": {
+      "cats": [
+        34
+      ],
+      "description": "Percona server is an opensource, fully compatible, enhanced drop-in replacement for MySQL, providing superior performance, scalability, and instrumentation.",
+      "website": "https://www.percona.com",
+      "icon": "percona.svg"
+    },
+    "PostgreSQL": {
+      "cats": [
+        34
+      ],
+      "description": "PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.",
+      "website": "https://www.postgresql.org/",
+      "icon": "PostgreSQL.png",
+      "cpe": "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+    },
+    "PouchDB": {
+      "cats": [
+        34
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/js/pouchdb\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PouchDB !== 'undefined' \u0026\u0026 typeof PouchDB.adapter !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PouchDB.adapter !== 'undefined';"
+        }
+      ],
+      "description": "PouchDB is an open-source NoSQL database written in JavaScript.",
+      "website": "https://pouchdb.com",
+      "icon": "PouchDB.svg"
+    },
+    "Qiyeku": {
+      "cats": [
+        34
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.qiyeku\\.cn"
+            }
+          }
+        }
+      ],
+      "description": "Qiyeku is a Chinese enterprise database that provides business information, company listings, and industry resources for market research and trade connections.",
+      "website": "https://www.qiyeku.cn",
+      "icon": "Qiyeku.svg"
+    },
+    "Redis": {
+      "cats": [
+        34
+      ],
+      "description": "Redis is an in-memory data structure project implementing a distributed, in-memory key–value database with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indexes.",
+      "website": "https://redis.io",
+      "icon": "Redis.svg",
+      "cpe": "cpe:2.3:a:redislabs:redis:*:*:*:*:*:*:*:*"
+    },
+    "SQLite": {
+      "cats": [
+        34
+      ],
+      "website": "https://www.sqlite.org",
+      "icon": "SQLite.png",
+      "cpe": "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
+    },
+    "Solr": {
+      "cats": [
+        34
+      ],
+      "implies": [
+        "Lucene"
+      ],
+      "description": "Solr is an open-source enterprise-search platform, written in Java.",
+      "website": "https://lucene.apache.org/solr/",
+      "icon": "Solr.png",
+      "cpe": "cpe:2.3:a:apache:solr:*:*:*:*:*:*:*:*"
+    },
+    "Virtuoso": {
+      "cats": [
+        34
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "virtuoso/?([0-9.]+)?\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']copyright[\"'][^\u003e]+content=[\"']^copyright \u0026copy; \\d{4} openlink software[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']keywords[\"'][^\u003e]+content=[\"']^openlink virtuoso sparql[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://virtuoso.openlinksw.com/"
+    }
+  }
+}

@@ -1,0 +1,534 @@
+{
+  "apps": {
+    "Akamai mPulse": {
+      "cats": [
+        78
+      ],
+      "implies": [
+        "Boomerang"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript\u003e[\\s\\s]*?go-mpulse\\.net\\/boomerang[\\s\\s]*?\u003c/script\u003e"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BOOMR_API_key !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BOOMR_API_key !== 'undefined';"
+        }
+      ],
+      "description": "Akamai mPulse is a real user monitoring (RUM) solution that enables companies to monitor, find, and fix website and application performance issues.",
+      "website": "https://developer.akamai.com/akamai-mpulse-real-user-monitoring-solution",
+      "icon": "Akamai.svg"
+    },
+    "Amazon CloudWatch RUM": {
+      "cats": [
+        78
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AwsRum !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AwsRum !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AwsRumClient !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AwsRumClient.v !== 'undefined';",
+          "version": "try { return String(AwsRumClient.v || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AwsRumConfig !== 'undefined';"
+        }
+      ],
+      "description": "Amazon CloudWatch RUM is a real-user monitoring capability that helps you identify and debug issues in the client-side on web applications and enhance end user's digital experience.",
+      "website": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM.html",
+      "icon": "Amazon CloudWatch.svg"
+    },
+    "Atatus": {
+      "cats": [
+        78,
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/atatus\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof atatus !== 'undefined' \u0026\u0026 typeof atatus.VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return atatus.VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof atatus.VERSION !== 'undefined';",
+          "version": "try { return String(atatus.VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Atatus is a full-stack observability tool that let you identify the performance bottlenecks and helps you optimise your application at the right time.",
+      "website": "https://www.atatus.com",
+      "icon": "Atatus.svg"
+    },
+    "Datadog": {
+      "cats": [
+        78,
+        10
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.datadoghq-browser-agent\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DD_LOGS !== 'undefined' \u0026\u0026 DD_LOGS === '\\;confidence:1'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DD_LOGS !== 'undefined';",
+          "version": "try { return String(DD_LOGS || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DD_RUM !== 'undefined';",
+          "version": "try { return String(DD_RUM || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Datadog is a SaaS-based monitoring and analytics platform for large-scale applications and infrastructure.",
+      "website": "https://www.datadoghq.com",
+      "icon": "Datadog.svg"
+    },
+    "Dynatrace RUM": {
+      "cats": [
+        78
+      ],
+      "implies": [
+        "Dynatrace"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/ruxitagentjs_(?:.+)_(?:.+)\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Dynatrace RUM is a AI powered, full stack, automated real user monutoring platform built by Dynatrace.",
+      "website": "https://www.dynatrace.com/platform/real-user-monitoring",
+      "icon": "Dynatrace.svg"
+    },
+    "Eggplant": {
+      "cats": [
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.eggplant\\.cloud"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.eggplant\\.cloud/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Eggplant is a software testing and monitoring company.",
+      "website": "https://www.eggplantsoftware.com",
+      "icon": "Eggplant.svg"
+    },
+    "Microsoft Application Insights": {
+      "cats": [
+        78
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof appInsights !== 'undefined' \u0026\u0026 typeof appInsights.SeverityLevel !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof appInsights.SeverityLevel !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof appInsights.addTelemetryInitializer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof appInsightsSDK !== 'undefined';",
+          "version": "try { return String(appInsightsSDK || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Microsoft Application Insights is a feature of Azure Monitor that provides extensible application performance management (APM) and monitoring for live web apps.",
+      "website": "https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview",
+      "icon": "Microsoft.svg"
+    },
+    "New Relic": {
+      "cats": [
+        78
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof NREUM !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NREUM !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof newrelic !== 'undefined';"
+        }
+      ],
+      "description": "New Relic is a SaaS offering that focuses on performance and availability monitoring.",
+      "website": "https://newrelic.com",
+      "icon": "New Relic.svg"
+    },
+    "Pingdom RUM": {
+      "cats": [
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*rum-static\\.pingdom\\.net"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _prum !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _prum !== 'undefined';"
+        }
+      ],
+      "description": "Pingdom RUM(Real User Monitoring) is a feature of the Pingdom website monitoring and performance testing service. RUM enables you to collect and analyse data on how real users are experiencing your website.",
+      "website": "https://www.pingdom.com/real-user-monitoring/",
+      "icon": "Pingdom.svg"
+    },
+    "Quanta": {
+      "cats": [
+        78,
+        10
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.quanta\\.io/(?:.+/quanta-rum-v([\\d\\.]+)\\.min\\.js)?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof QUANTA !== 'undefined' \u0026\u0026 typeof QUANTA.app_id !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof QUANTA.app_id !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof QuantaTagRUMSpeedIndex !== 'undefined';"
+        }
+      ],
+      "description": "Quanta is web performance management solution. Quanta offers the only analytics solution specifically designed to enable business and technical members of ecommerce teams to collaborate effectively with the end in mind: use web performance to directly impact online revenue at all times.",
+      "website": "https://www.quanta.io",
+      "icon": "Quanta.svg"
+    },
+    "Raygun": {
+      "cats": [
+        78,
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.raygun\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Raygun !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Raygun !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof raygunEnabled !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof raygunFactory !== 'undefined';"
+        }
+      ],
+      "description": "Raygun is a cloud-based networking monitoring and bug tracking application.",
+      "website": "https://raygun.com",
+      "icon": "Raygun.svg"
+    },
+    "Rumvision": {
+      "cats": [
+        78
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rumv_config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rumv_config !== 'undefined';"
+        }
+      ],
+      "description": "Rumvision is a front-end performance monitoring service",
+      "website": "https://www.rumvision.com/",
+      "icon": "Rumvision.png"
+    },
+    "Sematext Experience": {
+      "cats": [
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sematext\\.com/experience\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Sematext Experience for Real User Monitoring Analyze data collected from real-user sessions, detect anomalies, send alerts in real-time, and enhance overall customer digital experience.",
+      "website": "https://sematext.com/experience",
+      "icon": "Sematext.svg"
+    },
+    "Site24x7": {
+      "cats": [
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.site24x7rum\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof S247RumQueueImpl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof S247RumQueueImpl !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof s247RUM !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof site24x7RumError !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof site24x7rum !== 'undefined';"
+        }
+      ],
+      "description": "Site24x7 is a cloud-based website and server monitoring platform.",
+      "website": "https://www.site24x7.com",
+      "icon": "Site24x7.png"
+    },
+    "SpeedCurve": {
+      "cats": [
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.speedcurve\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LUX !== 'undefined' \u0026\u0026 typeof LUX.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return LUX.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LUX.version !== 'undefined';",
+          "version": "try { return String(LUX.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LUX_t_end !== 'undefined';",
+          "version": "try { return String(LUX_t_end || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LUX_t_start !== 'undefined';",
+          "version": "try { return String(LUX_t_start || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "SpeedCurve is a front-end performance monitoring service.",
+      "website": "https://www.speedcurve.com",
+      "icon": "SpeedCurve.svg"
+    },
+    "Splunk RUM": {
+      "cats": [
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*browser\\.plumbr\\.io/pa(?:-early)?\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PLUMBR !== 'undefined' \u0026\u0026 typeof PLUMBR._core !== 'undefined' \u0026\u0026 typeof PLUMBR._core.selfURL !== 'undefined' \u0026\u0026 PLUMBR._core.selfURL === 'browser\\.plumbr\\.io/pa(?:-early)?\\.js'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PLUMBR._core.selfURL !== 'undefined';",
+          "version": "try { return String(PLUMBR._core.selfURL || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PLUMBR._core.version !== 'undefined';",
+          "version": "try { return String(PLUMBR._core.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Splunk RUM is a real-time, front-end user monitoring and troubleshooting.",
+      "website": "https://www.splunk.com/en_us/observability/real-user-monitoring.html",
+      "icon": "Splunk.svg"
+    },
+    "Uptrends": {
+      "cats": [
+        78,
+        13
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.uptrendsdata\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof UTBOOMR !== 'undefined' \u0026\u0026 typeof UTBOOMR.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return UTBOOMR.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof UTBOOMR.version !== 'undefined';",
+          "version": "try { return String(UTBOOMR.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Uptrends is a website and web performance monitoring solution.",
+      "website": "https://www.uptrends.com",
+      "icon": "Uptrends.svg"
+    },
+    "Wakav Performance Monitoring": {
+      "cats": [
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*rum\\.wakav\\.ir/"
+            }
+          }
+        }
+      ],
+      "description": "Wakav Performance Monitoring is a real user monitoring (RUM), Web/App performance and availability test platform.",
+      "website": "https://www.wakav.ir",
+      "icon": "Wakav Performance Monitoring.png"
+    }
+  }
+}

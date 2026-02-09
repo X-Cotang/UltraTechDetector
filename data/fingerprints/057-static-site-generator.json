@@ -1,0 +1,739 @@
+{
+  "apps": {
+    "Adobe Muse": {
+      "cats": [
+        57
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Muse !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Muse !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof museConfigLoadedAndExecuted !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof muse_init !== 'undefined';"
+        }
+      ],
+      "description": "Adobe Muse is a no code offline website builder used to create fixed, fluid, or adaptive websites, without the need to write code.",
+      "website": "https://helpx.adobe.com/muse/kb/adobe-muse-end-of-service.html",
+      "icon": "AdobeMuse.svg"
+    },
+    "Astro": {
+      "cats": [
+        57,
+        12
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^astro\\sv([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Astro !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Astro !== 'undefined';"
+        }
+      ],
+      "description": "Astro is a new JavaScript-based static site builder.",
+      "website": "https://astro.build",
+      "icon": "Astro.svg"
+    },
+    "Bridgetown": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Ruby"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^/_bridgetown/static/.+\\.js$"
+            }
+          }
+        }
+      ],
+      "description": "Bridgetown is an open-source static site generator built with Ruby, facilitating the creation of fast and efficient websites by generating static HTML and CSS files.",
+      "website": "https://www.bridgetownrb.com",
+      "icon": "Bridgetown.svg"
+    },
+    "Cecil": {
+      "cats": [
+        57
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^cecil(?: ([0-9.]+))?$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Cecil is a CLI application, powered by PHP, that merge plain text files (written in Markdown), images and Twig templates to generate a static website.",
+      "website": "https://cecil.app",
+      "icon": "Cecil.svg"
+    },
+    "Eleventy": {
+      "cats": [
+        57
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^eleventy\\sv([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Eleventy (11ty) a simpler static site generator.",
+      "website": "https://www.11ty.dev",
+      "icon": "Eleventy.svg"
+    },
+    "Gatsby": {
+      "cats": [
+        57,
+        12
+      ],
+      "implies": [
+        "React",
+        "Webpack"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^gatsby(?: ([0-9.]+))?$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Gatsby is a React-based open-source framework with performance, scalability and security built-in.",
+      "website": "https://www.gatsbyjs.org/",
+      "icon": "Gatsby.svg"
+    },
+    "Gridsome": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Vue.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^gridsome v([\\d.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Gridsome is a free and open-source Vue-powered static site generator for building static websites.",
+      "website": "https://gridsome.org",
+      "icon": "Gridsome.svg"
+    },
+    "Hexo": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "powered by \u003ca href=\"https?://hexo\\.io/?\"[^\u003e]*\u003ehexo\u003c/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']hexo(?: v?([\\d.]+))?\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Hexo is a blog framework powered by Node.js.",
+      "website": "https://hexo.io",
+      "icon": "Hexo.png"
+    },
+    "Hugo": {
+      "cats": [
+        57
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']hugo ([\\d.]+)?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Hugo is an open-source static site generator written in Go.",
+      "website": "https://gohugo.io",
+      "icon": "Hugo.svg"
+    },
+    "Jekyll": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Ruby"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- begin jekyll seo tag"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003c!-- created with jekyll now -"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "powered by \u003ca href=\"https?://jekyllrb\\.com\"[^\u003e]*\u003ejekyll\u003c/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']jekyll\\sv([\\d.]+)?\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SimpleJekyllSearch !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SimpleJekyllSearch !== 'undefined';"
+        }
+      ],
+      "description": "Jekyll is a blog-aware, static site generator for personal, project, or organisation sites.",
+      "website": "https://jekyllrb.com",
+      "icon": "Jekyll.svg",
+      "cpe": "cpe:2.3:a:jekyllrb:jekyll:*:*:*:*:*:*:*:*"
+    },
+    "Lume": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Deno"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^lume\\sv([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Lume is a static site generator based on Deno.",
+      "website": "https://lume.land",
+      "icon": "Lume.svg"
+    },
+    "Mintlify": {
+      "cats": [
+        57,
+        4
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __NEXT_DATA__ !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps.favicons !== 'undefined' \u0026\u0026 typeof __NEXT_DATA__.props.pageProps.favicons.browserconfig !== 'undefined' \u0026\u0026 __NEXT_DATA__.props.pageProps.favicons.browserconfig === 'mintlify\\..+\\.amazonaws\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __NEXT_DATA__.props.pageProps.favicons.browserconfig !== 'undefined';",
+          "version": "try { return String(__NEXT_DATA__.props.pageProps.favicons.browserconfig || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Mintlify is a platform that enables developers to create and maintain documentation for their projects using Markdown format and automatically generate and deploy static websites via a continuous integration and deployment system.",
+      "website": "https://mintlify.com",
+      "icon": "Mintlify.svg"
+    },
+    "Next.js Page Router SSG": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Next.js"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof  !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof .__NEXT_DATA__.autoExport !== 'undefined';",
+          "version": "try { return String(.__NEXT_DATA__.autoExport || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof .__NEXT_DATA__.gsp !== 'undefined';",
+          "version": "try { return String(.__NEXT_DATA__.gsp || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof .__NEXT_DATA__.nextExport !== 'undefined';",
+          "version": "try { return String(.__NEXT_DATA__.nextExport || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Next.js Static Site Generation.",
+      "website": "https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation",
+      "icon": "Next.js.svg"
+    },
+    "Nextra": {
+      "cats": [
+        57
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __nextra_internal__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __nextra_internal__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __nextra_pageContext__ !== 'undefined';"
+        }
+      ],
+      "description": "Nextra is Next.js based static site generator.",
+      "website": "https://nextra.site/",
+      "icon": "Nextra.svg"
+    },
+    "Octopress": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Jekyll"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "powered by \u003ca href=\"http://octopress\\.org\"\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']octopress[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/octopress\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Octopress is a static blogging framework.",
+      "website": "https://octopress.org",
+      "icon": "octopress.png"
+    },
+    "Pelican": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "powered by \u003ca href=\"[^\u003e]+getpelican\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "powered by \u003ca href=\"https?://pelican\\.notmyidea\\.org"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://blog.getpelican.com/",
+      "icon": "pelican.png"
+    },
+    "Phenomic": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c[^\u003e]+id=\"phenomic(?:root)?\""
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/phenomic\\.browser\\.[a-f0-9]+\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Phenomic is a modular website compiler.",
+      "website": "https://phenomic.io/",
+      "icon": "Phenomic.svg"
+    },
+    "Publii": {
+      "cats": [
+        57
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof publiiDetectLoadedImages !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof publiiDetectLoadedImages !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof publiiThemeMenuConfig !== 'undefined';"
+        }
+      ],
+      "description": "Publii is a SEO- and privacy-focused website generator designed for creating static websites.",
+      "website": "https://getpublii.com",
+      "icon": "Publii.svg"
+    },
+    "Quarto": {
+      "cats": [
+        57
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^quarto-([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof quartoOpenSearch !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof quartoOpenSearch !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof quartoToggleHeadroom !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof quartoToggleReader !== 'undefined';"
+        }
+      ],
+      "description": "Quarto is an open-source technical publishing system.",
+      "website": "https://quarto.org",
+      "icon": "Quarto.svg"
+    },
+    "Retype": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']retype\\s([\\d\\.]+)?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Retype is an open-source static site generator built with Node.js that allows users to create and manage websites with ease using Markdown as the primary content format.",
+      "website": "https://retype.com",
+      "icon": "retype.svg"
+    },
+    "Rspress": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Rspack"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']rspress\\sv([\\d\\.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Rspress is a static site generator built on Rspack, offering features like MDX support, full-text search, internationalization, and customizable themes​.",
+      "website": "https://rspress.dev",
+      "icon": "Rspress.svg"
+    },
+    "Saber": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Vue.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cdiv [^\u003e]*id=\"_saber\""
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^saber v([\\d.]+)$\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Saber is a framework for building static websites.",
+      "website": "https://saber.land/",
+      "icon": "Saber.svg"
+    },
+    "Scully": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Angular"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^scully\\s([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ScullyIO !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ScullyIO !== 'undefined';"
+        }
+      ],
+      "description": "Scully is a static site generator for Angular projects looking to embrace the Jamstack.",
+      "website": "https://scully.io",
+      "icon": "Scully.svg"
+    },
+    "SitePad": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^sitepad(?:\\s([\\d\\.]+))?$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "SitePad is a WYSIWYG drag and drop website building and maintenance program.",
+      "website": "https://sitepad.com",
+      "icon": "SitePad.png"
+    },
+    "Surge": {
+      "cats": [
+        57
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*surge\\.sh(?:\\/[-\\w]{0,40})?\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.surge\\.sh"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Surge is a static web publishing platform designed for front-end developers to deploy projects.",
+      "website": "https://surge.sh",
+      "icon": "Surge.svg"
+    },
+    "VitePress": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Vite",
+        "Vue.js"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __VP_HASH_MAP__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __VP_HASH_MAP__ !== 'undefined';"
+        }
+      ],
+      "description": "VitePress is a Vite \u0026 Vue Powered Static Site Generator.",
+      "website": "https://vitepress.vuejs.org/",
+      "icon": "vite.svg"
+    },
+    "VuePress": {
+      "cats": [
+        57
+      ],
+      "implies": [
+        "Vue.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^vuepress(?: ([0-9.]+)(-[a-z]+.[0-9]+)?)?$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __VUEPRESS__ !== 'undefined' \u0026\u0026 typeof __VUEPRESS__.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return __VUEPRESS__.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __VUEPRESS__.version !== 'undefined';",
+          "version": "try { return String(__VUEPRESS__.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "VuePress is a static site generator with a Vue-powered theming system, and a default theme for writing technical documentation.",
+      "website": "https://vuepress.vuejs.org/",
+      "icon": "VuePress.svg"
+    },
+    "Zola": {
+      "cats": [
+        57
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^zola(?:\\s[\\d\\.]+)?$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getzola\\.org"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Zola is a static site engine that consolidates essential features in a single binary.",
+      "website": "https://www.getzola.org/",
+      "icon": "Zola.svg"
+    }
+  }
+}

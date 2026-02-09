@@ -1,0 +1,1109 @@
+{
+  "apps": {
+    "Adobe RoboHelp": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^adobe robohelp(?: ([\\d]+))?\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:wh(?:utils|ver|proxy|lang|topic|msg)|ehlpdhtm)\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof gbWhLang !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gbWhLang !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gbWhMsg !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gbWhProxy !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gbWhUtil !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gbWhVer !== 'undefined';"
+        }
+      ],
+      "description": "Adobe RoboHelp is a Help Authoring Tool (HAT) that allows you to create help systems, e-learning content and knowledge bases.",
+      "website": "https://adobe.com/products/robohelp.html",
+      "icon": "Adobe RoboHelp.svg",
+      "cpe": "cpe:2.3:a:adobe:robohelp:*:*:*:*:*:*:*:*"
+    },
+    "Apigee": {
+      "cats": [
+        4,
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/profiles/apigee"
+            }
+          }
+        }
+      ],
+      "description": "Apigee is an API gateway management tool to exchange data across cloud services and applications",
+      "website": "https://cloud.google.com/apigee/",
+      "icon": "Apigee.svg"
+    },
+    "Asciidoctor": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "Ruby"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^asciidoctor\\s([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Asciidoctor is an open-source text processor and publishing toolchain, written in Ruby, for converting AsciiDoc content to HTML 5, DocBook 5, and other formats.",
+      "website": "https://github.com/asciidoctor/asciidoctor",
+      "icon": "Asciidoctor.png"
+    },
+    "BetterDocs": {
+      "cats": [
+        4
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof betterdocs !== 'undefined' \u0026\u0026 typeof betterdocs.FEEDBACK !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof betterdocs.FEEDBACK !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof betterdocs_pro.FEEDBACK !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof betterdocspublic.post_id !== 'undefined';"
+        }
+      ],
+      "description": "BetterDocs is an advanced documentation and knowledge base plugin for WordPress and Shopify.",
+      "website": "https://betterdocs.co",
+      "icon": "BetterDocs.png"
+    },
+    "BookStack": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "Laravel",
+        "MySQL",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "BookStack is a simple, open-source, self-hosted, easy-to-use platform for organising and storing information.",
+      "website": "https://www.bookstackapp.com",
+      "icon": "BookStack.svg",
+      "cpe": "cpe:2.3:a:bookstackapp:bookstack:*:*:*:*:*:*:*:*"
+    },
+    "Bump": {
+      "cats": [
+        4
+      ],
+      "description": "Bump is an API contract management platform that helps document and track APIs by identifying changes in API structure, and keeping developers informed through an elegant documentation.",
+      "website": "https://bump.sh",
+      "icon": "Bump.svg"
+    },
+    "ClickHelp": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy-report-only": {
+              "$regex": "\\.clickhelp\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ClickHelp is an AI-powered all-in-one documentation tool designed to create, manage, and publish technical content.",
+      "website": "https://clickhelp.com",
+      "icon": "ClickHelp.svg"
+    },
+    "ClickUp": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/app-cdn\\.clickup\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof clickupCanBootstrapPromise !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof clickupCanBootstrapPromise !== 'undefined';"
+        }
+      ],
+      "description": "ClickUp is a project management software suitable for businesses of all sizes and industries.",
+      "website": "https://clickup.com",
+      "icon": "ClickUp.svg"
+    },
+    "DocFX": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']docfx:navrel[\"'][^\u003e]+content=[\"']toc.html[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']docfx:tocrel[\"'][^\u003e]+content=[\"']toc.html[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']docfx\\s([\\d\\.]+)\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "DocFX is a tool for building and publishing API documentation for .NET projects.",
+      "website": "https://github.com/dotnet/docfx",
+      "icon": "DocFX.svg"
+    },
+    "Docsify": {
+      "cats": [
+        4
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Docsify !== 'undefined' \u0026\u0026 typeof Docsify.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Docsify.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Docsify.version !== 'undefined';",
+          "version": "try { return String(Docsify.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DocsifyCompiler !== 'undefined';"
+        }
+      ],
+      "description": "Docsify is an open-source documentation generator for creating user-friendly documentation websites.",
+      "website": "https://docsify.js.org",
+      "icon": "Docsify.svg"
+    },
+    "Doctave": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^doctave$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Doctave is a platform for creating modern Markdown and OpenAPI-based developer documentation portals using a Git-friendly docs-as-code workflow.",
+      "website": "https://www.doctave.com",
+      "icon": "Doctave.svg"
+    },
+    "Docusaurus": {
+      "cats": [
+        4,
+        57
+      ],
+      "implies": [
+        "React",
+        "Webpack"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^docusaurus(?: v(.+))?$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __DOCUSAURUS_INSERT_BASEURL_BANNER !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __DOCUSAURUS_INSERT_BASEURL_BANNER !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof docusaurus !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof search.indexName !== 'undefined';"
+        }
+      ],
+      "description": "Docusaurus is a tool for teams to publish documentation websites.",
+      "website": "https://docusaurus.io/",
+      "icon": "docusaurus.svg"
+    },
+    "Doxygen": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:\u003c!-- generated by doxygen ([\\d.]+)|\u003clink[^\u003e]+doxygen\\.css)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']doxygen ([\\d.]+)\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Doxygen is a documentation generator, a tool for writing software reference documentation.",
+      "website": "https://www.doxygen.nl/",
+      "icon": "Doxygen.png",
+      "cpe": "cpe:2.3:a:doxygen:doxygen:*:*:*:*:*:*:*:*"
+    },
+    "Furo": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static/scripts/furo\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Furo is a customizable Sphinx documentation theme designed to provide a clean, responsive, and user-friendly layout for technical and project documentation.",
+      "website": "https://pradyunsg.me/furo",
+      "icon": "Furo.svg"
+    },
+    "GetTerms": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.getterms\\.io"
+            }
+          }
+        }
+      ],
+      "description": "GetTerms is a tool that generates privacy policies for web platforms.",
+      "website": "https://getterms.io",
+      "icon": "GetTerms.svg"
+    },
+    "GitBook": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']gitbook ([\\d.]+)?\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __GITBOOK_INITIAL_PROPS__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __GITBOOK_INITIAL_PROPS__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __GITBOOK_INITIAL_STATE__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __GITBOOK_LAZY_MODULES__ !== 'undefined';"
+        }
+      ],
+      "description": "GitBook is a command-line tool for creating documentation using Git and Markdown.",
+      "website": "https://www.gitbook.com",
+      "icon": "GitBook.png"
+    },
+    "Haddock": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cp\u003eproduced by \u003ca href=\"http://www\\.haskell\\.org/haddock/\"\u003ehaddock\u003c/a\u003e version ([0-9.]+)\u003c/p\u003e\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*haddock-util\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Haddock is a tool for automatically generating documentation from annotated Haskell source code.",
+      "website": "https://www.haskell.org/haddock/"
+    },
+    "HelpDocs": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.helpdocs\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HDAnalytics !== 'undefined' \u0026\u0026 HDAnalytics === '\\;confidence:25'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HDAnalytics !== 'undefined';",
+          "version": "try { return String(HDAnalytics || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HDUtils !== 'undefined';",
+          "version": "try { return String(HDUtils || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hd_instant_search !== 'undefined';",
+          "version": "try { return String(hd_instant_search || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "HelpDocs is an knowledge management system.",
+      "website": "https://www.helpdocs.io",
+      "icon": "HelpDocs.svg"
+    },
+    "Intercom Articles": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003ca href=\"https://www.intercom.com/intercom-link[^\"]+solution=customer-support[^\u003e]+\u003ewe run on intercom"
+            }
+          }
+        }
+      ],
+      "description": "Intercom Articles is a tool to create, organise and publish help articles.",
+      "website": "https://www.intercom.com/articles",
+      "icon": "Intercom.svg"
+    },
+    "Javadoc": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!-- generated by javadoc --\u003e"
+            }
+          }
+        }
+      ],
+      "description": "Javadoc is a tool used for generating Java code documentation in HTML format from Java source code.",
+      "website": "https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html",
+      "icon": "Java.svg"
+    },
+    "Manula": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.manula\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ManulaWebProductVersionCookiePath !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return ManulaWebProductVersionCookiePath || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ManulaWebProductVersionCookiePath !== 'undefined';"
+        }
+      ],
+      "description": "Manula is an online software for creating user manuals.",
+      "website": "https://www.manula.com",
+      "icon": "Manula.svg"
+    },
+    "MkDocs": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^mkdocs-([\\d.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "MkDocs is a static site generator, used for building project documentation.",
+      "website": "https://www.mkdocs.org/",
+      "icon": "mkdocs.png"
+    },
+    "Obsidian Publish": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "PIXIjs",
+        "Prism"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof siteInfo !== 'undefined' \u0026\u0026 typeof siteInfo.host !== 'undefined' \u0026\u0026 siteInfo.host === '\\.obsidian\\.md'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof siteInfo.host !== 'undefined';",
+          "version": "try { return String(siteInfo.host || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Obsidian Publish is an official, paid plugin for Obsidian that allows users to post selected notes to a directory on the publish.obsidian.md domain.",
+      "website": "https://obsidian.md/publish",
+      "icon": "Obsidian Publish.svg"
+    },
+    "Postman API Documentation": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^postman documenter$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PostmanRunObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PostmanRunObject !== 'undefined';"
+        }
+      ],
+      "description": "Postman is an API design and documentation platform.",
+      "website": "https://www.postman.com",
+      "icon": "PostmanAPIDocumentation.svg"
+    },
+    "RDoc": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "Ruby"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+href=\"[^\"]*rdoc-style\\.css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "generated by \u003ca href=\"https:\\/\\/ruby\\.github\\.io\\/rdoc\\/\"\u003erdoc\u003c\\/a\u003e ([\\d.]*\\d)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "generated by \u003ca[^\u003e]+href=\"https?://rdoc\\.rubyforge\\.org[^\u003e]+\u003erdoc\u003c/a\u003e ([\\d.]*\\d)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rdoc_rel_prefix !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rdoc_rel_prefix !== 'undefined';"
+        }
+      ],
+      "description": "RDoc produces HTML and command-line documentation for Ruby projects.",
+      "website": "https://github.com/ruby/rdoc",
+      "icon": "RDoc.png",
+      "cpe": "cpe:2.3:a:dave_thomas:rdoc:*:*:*:*:*:*:*:*"
+    },
+    "Raneto": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/scripts/raneto\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Raneto is a Markdown-powered open-source Knowledgebase for Node.js that uses static files to manage and serve structured documentation.",
+      "website": "https://raneto.com",
+      "icon": "Raneto.svg"
+    },
+    "ReDoc": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003credoc "
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/redoc\\.(?:min\\.)?js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Redoc !== 'undefined' \u0026\u0026 typeof Redoc.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Redoc.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Redoc.version !== 'undefined';",
+          "version": "try { return String(Redoc.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Redoc is an open-source tool that generates API documentation from OpenAPI specifications.",
+      "website": "https://github.com/Rebilly/ReDoc",
+      "icon": "redoc.png"
+    },
+    "ReadMe": {
+      "cats": [
+        4,
+        1
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']readme-deploy[\"'][^\u003e]+content=[\"']^[\\d\\.]+$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']readme-version[\"'][^\u003e]+content=[\"']^[\\d\\.]+$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/cdn\\.readme\\.io/js/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "ReadMe is a content management system that businesses use to create and manage technical or API documentation.",
+      "website": "https://readme.com",
+      "icon": "readme.svg"
+    },
+    "Released": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.released\\.so/"
+            }
+          }
+        }
+      ],
+      "description": "Released is a tool that generates release notes from Jira tickets, reducing the time required to craft and publish release notes.",
+      "website": "https://www.released.so",
+      "icon": "Released.svg"
+    },
+    "Scalar": {
+      "cats": [
+        4,
+        47
+      ],
+      "implies": [
+        "TypeScript",
+        "Vue.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/npm/@scalar/api-reference@(\\d+\\.\\d+\\.\\d+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Scalar is a platform that offers tools for API documentation, testing, and discovery, with strong support for OpenAPI standards.",
+      "website": "https://scalar.com",
+      "icon": "Scalar.svg"
+    },
+    "Speca": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^speca$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/js/speca\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Speca is a platform for API design and documentation.",
+      "website": "https://speca.io",
+      "icon": "Speca.svg"
+    },
+    "Sphinx": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "created using \u003ca href=\"https?://(?:www\\.)?sphinx-doc\\.org/\"\u003esphinx\u003c/a\u003e ([0-9.]+)\\.\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DOCUMENTATION_OPTIONS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DOCUMENTATION_OPTIONS !== 'undefined';"
+        }
+      ],
+      "description": "Sphinx is a tool that makes it easy to create documentation.",
+      "website": "https://www.sphinx-doc.org/",
+      "icon": "Sphinx.svg"
+    },
+    "Starlight": {
+      "cats": [
+        4,
+        57
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^starlight\\sv([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Starlight is a documentation website builder for the Astro framework.",
+      "website": "https://starlight.astro.build/",
+      "icon": "Starlight.svg"
+    },
+    "Stoplight": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//stoplight\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Stoplight is a company that offers a platform for API design, documentation, testing, and collaboration throughout the API development lifecycle.",
+      "website": "https://stoplight.io",
+      "icon": "Stoplight.svg"
+    },
+    "Support Hero": {
+      "cats": [
+        4,
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof supportHeroWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof supportHeroWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof supporthero !== 'undefined';"
+        }
+      ],
+      "description": "Support Hero is a knowledge base solution to reduce inbound support requests.",
+      "website": "https://www.supporthero.com/",
+      "icon": "Support Hero.png"
+    },
+    "Swagger UI": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:/([\\d.]+))?/swagger-ui-bundle\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SwaggerUIBundle !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SwaggerUIBundle !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SwaggerUIStandalonePreset !== 'undefined';"
+        }
+      ],
+      "description": "Swagger UI is a collection of HTML, JavaScript, and CSS assets that dynamically generate documentation from a Swagger-compliant API.",
+      "website": "https://swagger.io/tools/swagger-ui",
+      "icon": "Swagger UI.svg"
+    },
+    "TechTarget": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.techtarget\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof loadTechTarget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loadTechTarget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof techtargetic.client !== 'undefined';"
+        }
+      ],
+      "description": "TechTarget is a resource providing technology professionals and buyers with the technical information required to perform in their roles.",
+      "website": "https://www.techtarget.com",
+      "icon": "TechTarget.svg"
+    },
+    "TypeDoc": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "TypeScript"
+      ],
+      "description": "TypeDoc is an API documentation generator for TypeScript projects.",
+      "website": "https://typedoc.org",
+      "icon": "TypeDoc.png"
+    },
+    "Wiki.js": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WIKI !== 'undefined' \u0026\u0026 typeof WIKI.$_apolloInitData !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WIKI.$_apolloInitData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WIKI.$apolloProvider !== 'undefined';"
+        }
+      ],
+      "description": "Wiki.js is a wiki engine running on Node.js and written in JavaScript.",
+      "website": "https://js.wiki",
+      "icon": "Wiki.js.png"
+    },
+    "YUI Doc": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "(?:\u003chtml[^\u003e]* yuilibrary\\.com/rdf/[\\d.]+/yui\\.rdf|\u003cbody[^\u003e]+class=\"yui3-skin-sam)"
+            }
+          }
+        }
+      ],
+      "description": "UIDoc is a Node.js application used at build time to generate API documentation.",
+      "website": "https://developer.yahoo.com/yui/yuidoc",
+      "icon": "Yahoo.svg"
+    },
+    "Zendesk": {
+      "cats": [
+        4,
+        13,
+        52
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-zendesk-user-id": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.zdassets\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Zendesk !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Zendesk !== 'undefined';"
+        }
+      ],
+      "description": "Zendesk is a cloud-based help desk management solution offering customizable tools to build customer service portal, knowledge base and online communities.",
+      "website": "https://zendesk.com",
+      "icon": "Zendesk.svg"
+    },
+    "mdBook": {
+      "cats": [
+        4
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*localstorage\\.getitem\\('mdbook-(?:sidebar|theme)'\\)"
+            }
+          }
+        }
+      ],
+      "description": "mdBook is a utility to create modern online books from Markdown files.",
+      "website": "https://github.com/rust-lang/mdBook",
+      "icon": "mdBook.svg"
+    },
+    "phpDocumentor": {
+      "cats": [
+        4
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!-- generated by phpdocumentor"
+            }
+          }
+        }
+      ],
+      "description": "phpDocumentor is an open-source documentation generator written in PHP.",
+      "website": "https://www.phpdoc.org",
+      "icon": "phpDocumentor.png"
+    }
+  }
+}

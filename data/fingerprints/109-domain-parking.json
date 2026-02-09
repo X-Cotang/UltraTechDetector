@@ -1,0 +1,56 @@
+{
+  "apps": {
+    "Arsys Domain Parking": {
+      "cats": [
+        109
+      ],
+      "description": "Arsys is a Spanish domain registrar.",
+      "website": "https://www.arsys.es",
+      "icon": "arsys.png"
+    },
+    "GoDaddy Domain Parking": {
+      "cats": [
+        109
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wsimg\\.com/parking-lander"
+            }
+          }
+        }
+      ],
+      "description": "GoDaddy is used as a web host and domain registrar.",
+      "website": "https://www.godaddy.com",
+      "icon": "GoDaddy.svg"
+    },
+    "JS.org": {
+      "cats": [
+        109
+      ],
+      "description": "JS.org is a provider of free subdomains for JavaScript-based projects.",
+      "website": "https://js.org",
+      "icon": "JSOrg.svg"
+    },
+    "Verisign": {
+      "cats": [
+        109
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*seal\\.verisign\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Verisign is a provider of internet infrastructure services, known for its secure domain name registry.",
+      "website": "https://www.verisign.com",
+      "icon": "Verisign.svg"
+    }
+  }
+}

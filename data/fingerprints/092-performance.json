@@ -1,0 +1,741 @@
+{
+  "apps": {
+    "AiSpeed": {
+      "cats": [
+        92,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*aispeed\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof aispeed_init !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof aispeed_init !== 'undefined';"
+        }
+      ],
+      "description": "AiSpeed is a shopify app focused on improving site speed.",
+      "website": "https://apps.shopify.com/aispeed",
+      "icon": "AiSpeed.png"
+    },
+    "Blitz": {
+      "cats": [
+        92
+      ],
+      "implies": [
+        "Craft CMS"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- cached by blitz on"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^blitz$"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Blitz !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Blitz !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof blitzReplace !== 'undefined';"
+        }
+      ],
+      "description": "Blitz provides intelligent static page caching for creating lightning-fast sites with Craft CMS.",
+      "website": "https://putyourlightson.com/plugins/blitz",
+      "icon": "Blitz.svg"
+    },
+    "Cloudflare Rocket Loader": {
+      "cats": [
+        92
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __cfQR !== 'undefined' \u0026\u0026 typeof __cfQR.done !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __cfQR.done !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __cfRLUnblockHandlers !== 'undefined';"
+        }
+      ],
+      "description": "Cloudflare Rocket Loader is responsible for prioritising over website's content by delaying the loading of Javascript until rendering.",
+      "website": "https://support.cloudflare.com/hc/en-us/articles/200168056-Understanding-Rocket-Loader",
+      "icon": "CloudFlare.svg"
+    },
+    "Cloudflare Zaraz": {
+      "cats": [
+        92
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof zaraz !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zaraz !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zarazData !== 'undefined';"
+        }
+      ],
+      "description": "Cloudflare Zaraz gives you complete control over third-party tools and services for your website, and allows you to offload them to Cloudflare’s edge, improving the speed and security of your website.",
+      "website": "https://www.cloudflare.com/products/zaraz/",
+      "icon": "CloudFlare.svg"
+    },
+    "Cronitor": {
+      "cats": [
+        92
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cronitor !== 'undefined' \u0026\u0026 typeof cronitor.q !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cronitor.q !== 'undefined';"
+        }
+      ],
+      "description": "Cronitor is a monitoring tool for developers that tracks status, performance, and uptime of cron jobs, websites, APIs, and other services.",
+      "website": "https://cronitor.io",
+      "icon": "Cronitor.svg"
+    },
+    "Edgemesh": {
+      "cats": [
+        92
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof edgemesh !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof edgemesh !== 'undefined';"
+        }
+      ],
+      "description": "Edgemesh is web acceleration platform for e-commerce brands",
+      "website": "https://edgemesh.com/",
+      "icon": "Edgemesh.png"
+    },
+    "Fasterize": {
+      "cats": [
+        92
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof fstrz !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fstrz !== 'undefined';"
+        }
+      ],
+      "description": "Fasterize is a website accelerator service.",
+      "website": "https://www.fasterize.com/",
+      "icon": "Fasterize.svg"
+    },
+    "Google Cloud Trace": {
+      "cats": [
+        92
+      ],
+      "implies": [
+        "Google Cloud"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-cloud-trace-context": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "Google Cloud Trace is a distributed tracing system that collects latency data from applications and displays it in the Google Cloud Console.",
+      "website": "https://cloud.google.com/trace",
+      "icon": "google-cloud-trace.svg"
+    },
+    "Gumlet": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.gumlet\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof gumlet !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gumlet !== 'undefined';"
+        }
+      ],
+      "description": "Gumlet is a solution to optimize images.",
+      "website": "https://www.gumlet.com/",
+      "icon": "Gumlet.png"
+    },
+    "Hyperspeed": {
+      "cats": [
+        92,
+        100
+      ],
+      "implies": [
+        "Instant.Page",
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shopify\\.com/.+/assets/hs-(?:instantload|lazysizes)\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hyperscripts !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hyperscripts !== 'undefined';"
+        }
+      ],
+      "description": "Hyperspeed is the most advanced speed booster for Shopify.",
+      "website": "https://www.hyperspeed.me",
+      "icon": "Hyperspeed.png"
+    },
+    "Intersection Observer": {
+      "cats": [
+        92,
+        59
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/assets/(?:.+)?intersection-observer\\.[\\d\\w\\.]+\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.jsdelivr\\.net/npm/intersection-observer@([\\d\\.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Intersection Observer is a browser API that provides a way to observe the visibility and position of a DOM element relative to the containing root element or viewport.",
+      "website": "https://www.w3.org/TR/intersection-observer",
+      "icon": "W3C.png"
+    },
+    "Jumbo": {
+      "cats": [
+        92
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mt\\.tryjumbo\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Jumbo is a page speed optimizer app for Shopify based sites.",
+      "website": "https://www.tryjumbo.com/",
+      "icon": "Jumbo.png"
+    },
+    "Loadify": {
+      "cats": [
+        92,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.loadifyapp\\.ninety9\\.dev"
+            }
+          }
+        }
+      ],
+      "description": "Loadify is a shopify app which helps merchants deploy performance techniques like loading screen, transitions \u0026 lazy Load.",
+      "website": "https://apps.shopify.com/loadify",
+      "icon": "Loadify.png"
+    },
+    "Naver RUA": {
+      "cats": [
+        92,
+        78
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*rua-api\\.ncloud\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Naver RUA (Real User Analytics) collects performance data from real users to analyze the speed of your website by country, operating system, and browser.",
+      "website": "https://analytics.naver.com",
+      "icon": "Naver.svg"
+    },
+    "Nostra": {
+      "cats": [
+        92
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Nostra !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Nostra !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NostraEventManager !== 'undefined';"
+        }
+      ],
+      "description": "Nostra is a web performance optimisation solution.",
+      "website": "https://www.nostra.ai/",
+      "icon": "Nostra.png"
+    },
+    "Partytown": {
+      "cats": [
+        92
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof partytown !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof partytown !== 'undefined';"
+        }
+      ],
+      "description": "Partytown is a lazy-loaded library to help relocate resource intensive scripts into a web worker, and off of the main thread.",
+      "website": "https://partytown.builder.io/",
+      "icon": "Partytown.svg"
+    },
+    "Piio": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.piiojs\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Piio is a tool designed to optimise images for websites, enhancing loading speeds and user experience.",
+      "website": "https://piio.co",
+      "icon": "Piio.svg"
+    },
+    "Priority Hints": {
+      "cats": [
+        92
+      ],
+      "description": "Priority Hints exposes a mechanism for developers to signal a relative priority for browsers to consider when fetching resources.",
+      "website": "https://wicg.github.io/priority-hints/",
+      "icon": "Priority Hints.svg"
+    },
+    "Prometheus Node Exporter": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ch2\u003ePrometheus Node Exporter\u003c/h2\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cdiv\u003e\\s*Version:\\s*\\(version=([\\d.]+)[^)]*\\)\\s*\u003c/div\u003e\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Prometheus Node Exporter is a Prometheus exporter for hardware and OS metrics exposed by *NIX kernels.",
+      "website": "https://prometheus.io/docs/guides/node-exporter/",
+      "icon": "Prometheus.svg"
+    },
+    "QUIC.cloud": {
+      "cats": [
+        92,
+        23,
+        31
+      ],
+      "description": "QUIC.cloud is a content delivery network (CDN) and optimisation service that uses the QUIC protocol, a next-generation internet transport protocol developed by Google, to deliver content faster and more securely over the internet.",
+      "website": "https://www.quic.cloud",
+      "icon": "QUIC.cloud.svg"
+    },
+    "Queue-it": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.queue-it\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof QueueIt !== 'undefined' \u0026\u0026 typeof QueueIt.Javascript !== 'undefined' \u0026\u0026 typeof QueueIt.Javascript.Version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return QueueIt.Javascript.Version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof QueueIt.Javascript.Version !== 'undefined';",
+          "version": "try { return String(QueueIt.Javascript.Version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof queueit_clientside_config !== 'undefined';"
+        }
+      ],
+      "description": "Queue-it is a virtual waiting room platform designed to protect your website and mobile app from slowdowns or crashes during end-user peaks.",
+      "website": "https://queue-it.com",
+      "icon": "Queue-it.png"
+    },
+    "Quicq": {
+      "cats": [
+        92
+      ],
+      "description": "Quicq is an image optimisation tool by Afosto.",
+      "website": "https://afosto.com/apps/quicq",
+      "icon": "Quicq.svg"
+    },
+    "Render Better": {
+      "cats": [
+        92,
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof renderbetter !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof renderbetter !== 'undefined';"
+        }
+      ],
+      "description": "Render Better is automated site speed and core web vital optimisation platform for Shopify.",
+      "website": "https://www.renderbetter.com",
+      "icon": "renderbetter.svg"
+    },
+    "Request Metrics": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.requestmetrics\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.requestmetrics\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Request Metrics is a tool that tracks and analyzes website performance, measuring speed, uptime, and overall responsiveness.",
+      "website": "https://requestmetrics.com",
+      "icon": "RequestMetrics.svg"
+    },
+    "Sections.design Shopify App Optimization": {
+      "cats": [
+        92,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "description": "Sections.design Shopify App Optimization is a Shopify section written in liquid for the purpose of improving performance of Shopify stores by optimizing how Shopify app loads.",
+      "website": "https://github.com/mirceapiturca/Sections/tree/master/App%20Optimization",
+      "icon": "Sections-Design.png"
+    },
+    "Speed Kit": {
+      "cats": [
+        92
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof speedKit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof speedKit !== 'undefined';"
+        }
+      ],
+      "description": "Speed Kit develops a performance add-on that uses caching algorithms to minimize loading times of ecommerce websites.",
+      "website": "https://www.speedkit.com",
+      "icon": "Speed Kit.svg"
+    },
+    "SpeedOf.Me": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*speedof\\.me/api/"
+            }
+          }
+        }
+      ],
+      "description": "SpeedOf.Me is a client-based bandwidth test API that measures internet speed without requiring plugins, using HTML5 and JavaScript for real-time results.",
+      "website": "https://speedof.me/api.html",
+      "icon": "SpeedOfMe.svg"
+    },
+    "SpeedSize": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/speedsize(?:-sw)?\\.js\\;confidence:90"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.speedsize\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*data-speedsize-(?:srcset|src|params)?"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SpeedSize is an AI-based media-compression technology that can auto-detect and compress all of a website's images and videos down to 99% of their original size without lowering the image quality.",
+      "website": "https://speedsize.com",
+      "icon": "SpeedSize.svg"
+    },
+    "Speedimize": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shopify\\.com/.+/assets/speedimize\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Speedimize is a Shopify agency that focuses on website speed optimisation and performance issues.",
+      "website": "https://speedimize.io",
+      "icon": "Speedimize.svg"
+    },
+    "StatusCake": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.statuscake\\.com"
+            }
+          }
+        }
+      ],
+      "description": "StatusCake is a website monitoring service that sends alerts when a website goes down or experiences technical issues, such as slow loading times.",
+      "website": "https://www.statuscake.com",
+      "icon": "StatusCake.svg"
+    },
+    "Superspeed": {
+      "cats": [
+        92
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*superspeed\\.gadget-edge\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Superspeed is a page speed optimizer app for Shopify based sites.",
+      "website": "https://apps.shopify.com/superspeed-free-speed-boost",
+      "icon": "Superspeed.png"
+    },
+    "Turbo": {
+      "cats": [
+        92
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Turbo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Turbo !== 'undefined';"
+        }
+      ],
+      "description": "Turbo is a JavaScript framework for building fast web applications.",
+      "website": "https://turbo.hotwired.dev/",
+      "icon": "Turbo.svg"
+    },
+    "Turbolinks": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*turolinks\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Turbolinks !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Turbolinks !== 'undefined';"
+        }
+      ],
+      "description": "Turbolinks is a Rails feature, available as a gem and enabled by default in new Rails apps. It is intended to speed up navigating between pages of your application.",
+      "website": "https://github.com/turbolinks/turbolinks"
+    },
+    "Website Speedy": {
+      "cats": [
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*websitespeedy\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Website Speedy is a tool that improves website speed by identifying and optimizing render-blocking elements, enabling asynchronous resource loading for better performance.",
+      "website": "https://websitespeedy.com/",
+      "icon": "WebsiteSpeedy.svg"
+    }
+  }
+}

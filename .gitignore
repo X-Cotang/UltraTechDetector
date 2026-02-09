@@ -1,0 +1,10 @@
+*.txt
+*.exe
+*.log
+# Environment variables
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp

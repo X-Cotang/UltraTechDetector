@@ -1,0 +1,367 @@
+{
+  "apps": {
+    "Ace": {
+      "cats": [
+        24
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ace !== 'undefined' \u0026\u0026 typeof ace.EditSession !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ace.EditSession !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ace.Editor !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ace.version !== 'undefined';",
+          "version": "try { return String(ace.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Ace is an embeddable code editor written in JavaScript.",
+      "website": "https://github.com/ajaxorg/ace",
+      "icon": "Ace.png"
+    },
+    "CKEditor": {
+      "cats": [
+        24
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CKEDITOR !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return CKEDITOR_VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CKEDITOR_VERSION !== 'undefined';",
+          "version": "try { return String(CKEDITOR_VERSION || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apex.libVersions.ckeditor5 !== 'undefined';",
+          "version": "try { return String(apex.libVersions.ckeditor5 || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CKEDITOR !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CKEDITOR.version !== 'undefined';",
+          "version": "try { return String(CKEDITOR.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CKEDITOR_BASEPATH !== 'undefined';"
+        }
+      ],
+      "description": "CKEditor is a WYSIWYG rich text editor which enables writing content directly inside of web pages or online applications. Its core code is written in JavaScript and it is developed by CKSource. CKEditor is available under open-source and commercial licenses.",
+      "website": "https://ckeditor.com",
+      "icon": "CKEditor.png",
+      "cpe": "cpe:2.3:a:ckeditor:ckeditor:*:*:*:*:*:*:*:*"
+    },
+    "Edit-in-Place": {
+      "cats": [
+        24
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/jquery\\.editinplace\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Edit-in-Place is a tool that enables text editing directly on the page using AJAX-style updates without requiring a full page reload.",
+      "website": "https://24ways.org/2005/edit-in-place-with-ajax"
+    },
+    "Editor.js": {
+      "cats": [
+        24
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof EditorJS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EditorJS !== 'undefined';"
+        }
+      ],
+      "description": "Editor.js is a Javascript library which allows developers to implement a block base text editor with plugins on their page.",
+      "website": "https://editorjs.io",
+      "icon": "Editor.js.png"
+    },
+    "Etherpad": {
+      "cats": [
+        24
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^etherpad"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/ep_etherpad-lite/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof padeditbar !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof padeditbar !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof padimpexp !== 'undefined';"
+        }
+      ],
+      "description": "Etherpad is an open-source, web-based collaborative real-time editor, allowing authors to simultaneously edit a text document, and see all of the participants' edits in real-time, with the ability to display each author's text in their own colour.",
+      "website": "https://etherpad.org",
+      "icon": "etherpad.png",
+      "cpe": "cpe:2.3:a:etherpad:etherpad:*:*:*:*:*:*:*:*"
+    },
+    "FreeTextBox": {
+      "cats": [
+        24
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!-- \\* freetextbox v\\d \\((\\d+\\.\\d+\\.\\d+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FTB_API !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FTB_API !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FTB_AddEvent !== 'undefined';"
+        }
+      ],
+      "description": "FreeTextBox is a free open-source HTML Editor.",
+      "website": "https://freetextbox.com",
+      "icon": "FreeTextBox.png"
+    },
+    "Froala Editor": {
+      "cats": [
+        24
+      ],
+      "implies": [
+        "Font Awesome",
+        "jQuery"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FroalaEditor !== 'undefined' \u0026\u0026 typeof FroalaEditor.VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return FroalaEditor.VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FroalaEditor.VERSION !== 'undefined';",
+          "version": "try { return String(FroalaEditor.VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Froala Editor is a WYSIWYG HTML Editor written in Javascript that enables rich text editing capabilities for applications.",
+      "website": "https://froala.com/wysiwyg-editor",
+      "icon": "Froala.svg"
+    },
+    "Monaco Editor": {
+      "cats": [
+        24
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MonacoEnvironment !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return apex.libVersions.monacoEditor || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MonacoEnvironment !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apex.libVersions.monacoEditor !== 'undefined';",
+          "version": "try { return String(apex.libVersions.monacoEditor || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof monaco.editor !== 'undefined';"
+        }
+      ],
+      "description": "Monaco Editor is the code editor that powers VS Code. Monaco Editor is a tool in the text editor category of a tech stack.",
+      "website": "https://microsoft.github.io/monaco-editor/",
+      "icon": "Microsoft.svg"
+    },
+    "N1ED": {
+      "cats": [
+        24
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.public\\.n1ed\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "N1ED is an editor for Bootstrap websites that enables block-by-block content building.",
+      "website": "https://n1ed.com",
+      "icon": "N1ED.svg"
+    },
+    "PSPad": {
+      "cats": [
+        24
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^pspad editor, www.pspad.com$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "PSPad is a feature-rich text editor designed for developers and professionals working with text, offering tools for coding, syntax highlighting, and project management.",
+      "website": "https://www.pspad.com",
+      "icon": "PSPad.svg"
+    },
+    "Quill": {
+      "cats": [
+        24
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Quill !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Quill !== 'undefined';"
+        }
+      ],
+      "description": "Quill is a free open-source WYSIWYG editor.",
+      "website": "https://quilljs.com",
+      "icon": "Quill.svg"
+    },
+    "TinyMCE": {
+      "cats": [
+        24
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/tiny_?mce(?:\\.min)?\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof tinyMCE !== 'undefined' \u0026\u0026 typeof tinyMCE.majorVersion !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return tinyMCE.majorVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tinymce !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tinyMCE.majorVersion !== 'undefined';",
+          "version": "try { return String(tinyMCE.majorVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "TinyMCE is an online rich-text editor released as open-source software. TinyMCE is designed to integrate with JavaScript libraries, Vue.js, and AngularJS as well as content management systems such as Joomla!, and WordPress.",
+      "website": "https://www.tiny.cloud/tinymce/",
+      "icon": "TinyMCE.svg",
+      "cpe": "cpe:2.3:a:tiny:tinymce:*:*:*:*:*:*:*:*"
+    },
+    "Trix": {
+      "cats": [
+        24
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Trix !== 'undefined' \u0026\u0026 typeof Trix.VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Trix.VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Trix.VERSION !== 'undefined';",
+          "version": "try { return String(Trix.VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Trix is an open-source project from Basecamp, the creators of Ruby on Rails.",
+      "website": "https://trix-editor.org",
+      "icon": "trix.png"
+    },
+    "WysiBB": {
+      "cats": [
+        24
+      ],
+      "implies": [
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/jquery\\.wysibb\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "WysiBB very simple and functional open-source WYSIWYG BBCode editor based on jQuery.",
+      "website": "https://wysibb.com",
+      "icon": "WysiBB.svg"
+    }
+  }
+}

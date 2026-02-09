@@ -1,0 +1,240 @@
+{
+  "apps": {
+    "AlternC": {
+      "cats": [
+        9
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js/alternc\\.js"
+            }
+          }
+        }
+      ],
+      "description": "AlternC is a set of software management on Linux shared hosting.",
+      "website": "https://alternc.com",
+      "icon": "AlternC.png"
+    },
+    "BILLmanager": {
+      "cats": [
+        9
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof binary !== 'undefined' \u0026\u0026 binary === '/manager/billmgr'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pageInfo.binary !== 'undefined';",
+          "version": "try { return String(pageInfo.binary || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof binary !== 'undefined';",
+          "version": "try { return String(binary || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "BILLmanager is a hosting billing panel used to manage service provisioning, invoicing, and client accounts for hosting providers.",
+      "website": "https://www.ispsystem.ru/billmanager-host",
+      "icon": "BILLmanager.svg"
+    },
+    "Creoline": {
+      "cats": [
+        9
+      ],
+      "description": "Creoline is a provider of scalable cloud solutions and application domain services.",
+      "website": "https://www.creoline.com",
+      "icon": "Creoline.svg"
+    },
+    "DirectAdmin": {
+      "cats": [
+        9
+      ],
+      "implies": [
+        "Apache HTTP Server",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca[^\u003e]+\u003edirectadmin\u003c/a\u003e web control panel"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "directadmin daemon v([\\d.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "DirectAdmin is a graphical web-based web hosting control panel designed to make administration of websites easier.",
+      "website": "https://www.directadmin.com",
+      "icon": "DirectAdmin.png",
+      "cpe": "cpe:2.3:a:directadmin:directadmin:*:*:*:*:*:*:*:*"
+    },
+    "Plesk": {
+      "cats": [
+        9
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^plesk(?:l|w)in"
+                }
+              },
+              {
+                "headers.x-powered-by-plesk": {
+                  "$regex": "^plesk"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*common\\.js\\?plesk"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Plesk !== 'undefined' \u0026\u0026 typeof Plesk.Form !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Plesk.Form !== 'undefined';"
+        }
+      ],
+      "description": "Plesk is a web hosting and server data centre automation software with a control panel developed for Linux and Windows-based retail hosting service providers.",
+      "website": "https://www.plesk.com",
+      "icon": "Plesk.svg",
+      "cpe": "cpe:2.3:a:parallels:parallels_plesk_panel:*:*:*:*:*:*:*:*"
+    },
+    "Pterodactyl Panel": {
+      "cats": [
+        9
+      ],
+      "implies": [
+        "Go",
+        "Laravel",
+        "PHP",
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Pterodactyl Panel is a free, open-source game server management panel built with PHP, React, and Go.",
+      "website": "https://pterodactyl.io",
+      "icon": "Pterodactyl Panel.svg"
+    },
+    "TCAdmin": {
+      "cats": [
+        9
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TCAdmin !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TCAdmin !== 'undefined';"
+        }
+      ],
+      "description": "TCAdmin is the game hosting control panel.",
+      "website": "https://www.tcadmin.com",
+      "icon": "TCAdmin.png"
+    },
+    "Tencent Waterproof Wall": {
+      "cats": [
+        9,
+        16
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/tcaptcha\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*captcha\\.qq\\.com/.*"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://007.qq.com/",
+      "icon": "TencentWaterproofWall.png"
+    },
+    "cPanel": {
+      "cats": [
+        9
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- cpanel"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "cpsrvd/([\\d.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "cPanel is a web hosting control panel. The software provides a graphical interface and automation tools designed to simplify the process of hosting a website.",
+      "website": "https://www.cpanel.net",
+      "icon": "cPanel.png",
+      "cpe": "cpe:2.3:a:cpanel:cpanel:*:*:*:*:*:*:*:*"
+    },
+    "i-MSCP": {
+      "cats": [
+        9
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^i-mscp$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "i-MSCP (internet Multi Server Control Panel) is a software for shared hosting environments management on Linux servers.",
+      "website": "https://github.com/i-MSCP/imscp",
+      "icon": "i-MSCP.png"
+    }
+  }
+}

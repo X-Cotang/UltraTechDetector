@@ -1,0 +1,5327 @@
+{
+  "apps": {
+    "Agile CRM": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AgileCRMTracker !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AgileCRMTracker !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Agile_API !== 'undefined';"
+        }
+      ],
+      "description": "Agile CRM is a software for Customer Relationship Management (CRM) that provides sales and marketing automation features for businesses.",
+      "website": "https://www.agilecrm.com",
+      "icon": "AgileCRM.svg"
+    },
+    "Aidbase": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AIDBASE_CHATBOT_ID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AIDBASE_CHATBOT_ID !== 'undefined';"
+        }
+      ],
+      "description": "Aidbase is an AI-driven support ecosystem designed to enhance user experiences.",
+      "website": "https://www.aidbase.ai",
+      "icon": "Aidbase.svg"
+    },
+    "Airship CRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.airship\\.co\\.uk/"
+            }
+          }
+        }
+      ],
+      "description": "Airship CRM is a hospitality-focused platform that centralizes data, enables tailored email communication, and enhances visit frequency.",
+      "website": "https://airship.co.uk",
+      "icon": "AirshipCRM.svg"
+    },
+    "Aiva": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hireaiva\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __AivaLiveChat !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __AivaLiveChat !== 'undefined';"
+        }
+      ],
+      "description": "Aiva is a real estate lead conversion platform that qualifies and engages leads 24/7.",
+      "website": "https://hireaiva.com",
+      "icon": "Aiva.svg"
+    },
+    "Alumni Channel": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']alumni channel - www.alumnichannel.com[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Alumni Channel is a platform facilitating organization and communication with alumni and members.",
+      "website": "https://alumnichannel.com",
+      "icon": "AlumniChannel.svg"
+    },
+    "Amilia": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^amilia$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AMILIA !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AMILIA !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AMILIA_APP !== 'undefined';"
+        }
+      ],
+      "description": "Amilia is a membership management software.",
+      "website": "https://www.amilia.com",
+      "icon": "Amilia.svg"
+    },
+    "Anexis": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cloud\\.anex\\.is"
+            }
+          }
+        }
+      ],
+      "description": "Anexis is a software provider offering tools that streamline communication, sales, and management processes for lodging businesses.",
+      "website": "https://anex.is",
+      "icon": "Anexis.svg"
+    },
+    "Anthology Encompass": {
+      "cats": [
+        53
+      ],
+      "description": "Anthology Encompass is a constituent engagement management provider or educational institutions that provides modules to help you manage events, websites and content, data, and more.",
+      "website": "https://www.anthology.com/products/lifecycle-engagement/alumni-and-advancement/anthology-encompass",
+      "icon": "Anthology.svg"
+    },
+    "Apodle": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.apodle\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.apodle\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Apodle is a generic business management solution designed to support a range of operational and administrative functions across various industries.",
+      "website": "https://apodle.com",
+      "icon": "Apodle.svg"
+    },
+    "Arketa": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.arketa\\.co"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ArketaChatbot !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ArketaChatbot !== 'undefined';"
+        }
+      ],
+      "description": "Arketa is a business platform for the fitness and wellness industry, providing tools to manage operations and support business growth.",
+      "website": "https://www.arketa.com",
+      "icon": "Arketa.svg"
+    },
+    "Arnica": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.arnica\\.pro"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof arnicaBooking !== 'undefined' \u0026\u0026 typeof arnicaBooking.init !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof arnicaBooking.init !== 'undefined';"
+        }
+      ],
+      "description": "Arnica is a CRM system that consolidates customer relationship processes into a single platform.",
+      "website": "https://arnica.pro",
+      "icon": "Arnica.svg"
+    },
+    "AroSoftware": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^arosoftware pty ltd$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "AroSoftware provides real estate CRM and website design solutions.",
+      "website": "https://www.arosoftware.com",
+      "icon": "AroSoftware.svg"
+    },
+    "Astute Solutions": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.iperceptions\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Astute Solutions is a customer engagement software.",
+      "website": "https://astutesolutions.com",
+      "icon": "Astute Solutions.svg"
+    },
+    "AutoVitals": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*docs\\.autovitals\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "AutoVitals is a shop productivity, acquisition, and retention tool designed for the automotive industry.",
+      "website": "https://www.autovitals.com",
+      "icon": "AutoVitals.svg"
+    },
+    "Automabots": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.automabots\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof automabots !== 'undefined' \u0026\u0026 typeof automabots.appRoot !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof automabots.appRoot !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof automabotsWebpackJsonp !== 'undefined';"
+        }
+      ],
+      "description": "Automabots is an automated intelligent workforce designed to match home buyers with suitable properties.",
+      "website": "https://automabots.com",
+      "icon": "Automabots.svg"
+    },
+    "Avizi": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.avizi\\.fr"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.avizi\\.fr"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Avizi is a tourism CRM system from France designed to manage customer relationships, bookings, and marketing for travel businesses.",
+      "website": "https://www.avizi.fr",
+      "icon": "Avizi.svg"
+    },
+    "Backbase": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof backbase_com_2013_aurora !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof backbase_com_2013_aurora !== 'undefined';"
+        }
+      ],
+      "description": "Backbase is an engagement banking platform, facilitating the modernization of core customer interactions and the restructuring of business operations with a customer-centric approach.",
+      "website": "https://www.backbase.com",
+      "icon": "Backbase.svg"
+    },
+    "Batchbook": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.batchbook\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Batchbook is a customer relationship management (CRM) tool designed for small businesses.",
+      "website": "https://batchbook.com"
+    },
+    "Beddy": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.beddy\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Beddy is a hospitality management software designed to streamline operations, enhance guest experiences, and improve efficiency in hotels and other hospitality establishments.",
+      "website": "https://www.beddy.io",
+      "icon": "Beddy.svg"
+    },
+    "Bettermode": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bettermode\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Bettermode is an all-in-one community engagement platform designed to help businesses streamline the customer experience and build better relationships.",
+      "website": "https://bettermode.com",
+      "icon": "Bettermode.svg"
+    },
+    "Bevy": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _BEVY_LANGUAGE_ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _BEVY_LANGUAGE_ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _BEVY_SETTINGS_ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _BEVY_STYLES_ !== 'undefined';"
+        }
+      ],
+      "description": "Bevy is a platform designed to elevate communities by transforming engagement into measurable enterprise return on investment (ROI).",
+      "website": "https://bevy.com",
+      "icon": "Bevy.svg"
+    },
+    "Bigin": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.bigin\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BIGIN_SDK_API !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof biginCafe24DisableOptions !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bigin_search !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BIGIN_SDK_API !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bigin._checkDataSize !== 'undefined';"
+        }
+      ],
+      "description": "Bigin is a cloud-based customer relationship management (CRM) software.",
+      "website": "https://en.bigin.io",
+      "icon": "Bigin.png"
+    },
+    "Bitrix24": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.bitrix24\\..+/bitrix/js/crm/form_loader\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.bitrix24\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Bitrix24FormLoader !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Bitrix24FormLoader !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Bitrix24FormObject !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof b24Tracker !== 'undefined';"
+        }
+      ],
+      "description": "Bitrix24 is a set of tools for the organization and management of business processes.",
+      "website": "https://www.bitrix24.com",
+      "icon": "Bitrix24.svg"
+    },
+    "Bnovo": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Bnovo_Widget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _bnovo_widget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Bnovo_Widget !== 'undefined';"
+        }
+      ],
+      "description": "Bnovo is a hotel industry management system.",
+      "website": "https://bnovo.ru",
+      "icon": "Bnovo.svg"
+    },
+    "Bonsai": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']apple-mobile-web-app-title[\"'][^\u003e]+content=[\"']^bonsai$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Bonsai is a platform that creates, sends, and tracks proposals online for streamlined client communication and project management.",
+      "website": "https://www.hellobonsai.com",
+      "icon": "Bonsai.svg"
+    },
+    "Bookboost": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*web-messenger\\.bookboost\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BookboostWebMessengerObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BookboostWebMessengerObject !== 'undefined';"
+        }
+      ],
+      "description": "Bookboost is a CRM designed to manage hotel guest interactions and improve guest retention.",
+      "website": "https://www.bookboost.io",
+      "icon": "Bookboost.svg"
+    },
+    "Bookster": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.booksterhq\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bookster !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bookster !== 'undefined';"
+        }
+      ],
+      "description": "Bookster is a property management software designed for holiday rental owners and managers.",
+      "website": "https://www.booksterhq.com",
+      "icon": "Bookster.svg"
+    },
+    "Bowtie": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bowtieDataToken !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bowtieDataToken !== 'undefined';"
+        }
+      ],
+      "description": "Bowtie is an AI-powered messaging platform for businesses that lets customers book appointments, buy products, and ask questions.",
+      "website": "https://www.bowtie.ai",
+      "icon": "Bowtie.png"
+    },
+    "Buz Club": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*secure\\.buzclubsoftware\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Buz Club is a provider of private club management software featuring real-time integration.",
+      "website": "https://buzsoftware.com",
+      "icon": "BuzClub.svg"
+    },
+    "CAPYS": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*crmapi\\.capys\\.com\\.br"
+            }
+          }
+        }
+      ],
+      "description": "CAPYS is a CRM system designed to support builders in Brazil by managing client relationships, projects, and operational data.",
+      "website": "https://capys.com.br",
+      "icon": "CAPYS.svg"
+    },
+    "CDK Global": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.connectcdk\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "CDK Global offered a range of software and digital marketing solutions designed to help automotive businesses manage their operations, improve customer engagement, and enhance their online presence. Their services included dealership management systems (DMS), customer relationship management (CRM) software, website and digital marketing services, and various other tools tailored to the automotive industry.",
+      "website": "https://www.cdkglobal.com",
+      "icon": "CDK Global.svg"
+    },
+    "CRM+": {
+      "cats": [
+        53
+      ],
+      "implies": [
+        "MariaDB",
+        "Sentry",
+        "Vtiger",
+        "amCharts"
+      ],
+      "description": "CRM+ is a German CRM software product building on Vtiger with GDPR-compliant extensions and improvements.",
+      "website": "https://www.brainformatik.com",
+      "icon": "CRM+.png"
+    },
+    "CRMBOOST": {
+      "cats": [
+        53
+      ],
+      "description": "CRMBOOST is a customer relationship management (CRM) platform that helps businesses organize, track, and manage interactions with clients and leads.",
+      "website": "https://www.crmboost.com",
+      "icon": "CRMBOOST.svg"
+    },
+    "CareCloud": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*community\\.carecloud\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CareCloud !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CareCloud !== 'undefined';"
+        }
+      ],
+      "description": "CareCloud is a platform that provides healthcare providers with a set of tools designed to enhance clinical workflows, improve patient outcomes, and streamline daily business operations.",
+      "website": "https://www.carecloud.com/",
+      "icon": "CareCloud.svg"
+    },
+    "Casafari": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']casafaricrm\\.com[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']publisher[\"'][^\u003e]+content=[\"']^casafari crm$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*admin\\.casafaricrm\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Casafari is a real estate CRM platform designed for professionals to manage content, properties, tasks, and client relationships.",
+      "website": "https://casafaricrm.com",
+      "icon": "Casafari.svg"
+    },
+    "Centium": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bookings\\.centiumsoftware\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Centium is a provider of technology solutions specializing in property and event management software for the hospitality industry, landmark world events, and the aviation sector.",
+      "website": "http://centiumsoftware.com",
+      "icon": "Centium.svg"
+    },
+    "Chefpreneur": {
+      "cats": [
+        53
+      ],
+      "description": "Chefpreneur is a platform providing solutions for starting or enhancing personal chef businesses.",
+      "website": "https://chefpreneur.com",
+      "icon": "Chefpreneur.svg"
+    },
+    "CiviCRM": {
+      "cats": [
+        53
+      ],
+      "description": "CiviCRM is a web-based suite of internationalised open-source software for constituency relationship management.",
+      "website": "https://civicrm.org",
+      "icon": "CiviCRM.png"
+    },
+    "Civic Champs": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.civicchamps\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Civic Champs is a volunteer management platform that streamlines event coordination, tracks volunteer hours, and simplifies communication between organizations and their volunteers.",
+      "website": "https://www.civicchamps.com",
+      "icon": "CivicChamps.svg"
+    },
+    "CleanCore": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.cleancore\\.io"
+            }
+          }
+        }
+      ],
+      "description": "CleanCore is an AI-driven CRM designed to automate operations for cleaning companies.",
+      "website": "https://cleancore.io",
+      "icon": "CleanCore.svg"
+    },
+    "Clevy": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof clevyWidget !== 'undefined' \u0026\u0026 typeof clevyWidget.showIframe !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof clevyWidget.showIframe !== 'undefined';"
+        }
+      ],
+      "description": "Clevy is a platform that automates internal processes and queries within organizations, streamlining operations and improving efficiency.",
+      "website": "https://www.clevy.io",
+      "icon": "Clevy.svg"
+    },
+    "ClinicSense": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.clinicsense\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ClinicSense is a practice management software solution that reduces administrative costs and workload in healthcare clinics.",
+      "website": "https://clinicsense.com",
+      "icon": "ClinicSense.svg"
+    },
+    "Clio": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.clio\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Clio is a legal software platform for managing clients, cases, and billing within law practices.",
+      "website": "https://www.clio.com",
+      "icon": "Clio.svg"
+    },
+    "Conexa": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.conexa\\.ai"
+            }
+          }
+        }
+      ],
+      "description": "Conexa is a business scaling technology partner platform designed to support growth through strategic solutions and automation.",
+      "website": "https://conexa.ai",
+      "icon": "Conexa.svg"
+    },
+    "Convert and Flow": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.convertandflow\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Convert and Flow is a customer relationship management tool designed to manage customer relationships and enhance customer satisfaction.",
+      "website": "https://convertandflow.com",
+      "icon": "ConvertAndFlow.svg"
+    },
+    "Cosmedcloud": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cosmedcloud\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Cosmedcloud is cloud-based practice management software tailored for cosmetic and aesthetic medicine clinics.",
+      "website": "https://www.cosmedcloud.com",
+      "icon": "CosmedCloud.svg"
+    },
+    "DX1": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.dx1app\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Dx1 !== 'undefined' \u0026\u0026 typeof Dx1.Dnn !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Dx1.Dnn !== 'undefined';"
+        }
+      ],
+      "description": "DX1 is an entirely cloud-based dealership management system for the motorcycle and powersports industry. Offering DMS, website, CRM and marketing tools.",
+      "website": "https://www.dx1app.com",
+      "icon": "DX1.png"
+    },
+    "Daktela Omnichannel": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.daktela\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof daktelaCli !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof daktelaCli !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof daktelaGuiConfig !== 'undefined';"
+        }
+      ],
+      "description": "Daktela Omnichannel is a unified platform that streamlines customer interactions across multiple channels to enhance satisfaction and support business growth.",
+      "website": "https://daktela.com",
+      "icon": "Daktela.svg"
+    },
+    "Datascape": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DatacomSphere !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DatacomSphere !== 'undefined';"
+        }
+      ],
+      "description": "Datascape is a cloud-based ERP solution that enables councils to manage services while supporting transparent and collaborative communication.",
+      "website": "https://datacom.com/nz/en/products/datascape/digital-experience/my-datascape",
+      "icon": "Datascape.svg"
+    },
+    "Demandforce": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.demandforce\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Demandforce is an AI-powered patient communication platform that helps healthcare practices attract and retain patients.",
+      "website": "https://www.demandforce.com",
+      "icon": "Demandforce.svg"
+    },
+    "DenGro": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof dengro !== 'undefined' \u0026\u0026 typeof dengro.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return dengro.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dengro.version !== 'undefined';",
+          "version": "try { return String(dengro.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "DenGro is a software solution tailored for dental practitioners, facilitating streamlined practice operations.",
+      "website": "https://dengro.com",
+      "icon": "DenGro.svg"
+    },
+    "Deskero": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.deskero\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof deskeroUser !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof deskeroWidget.init !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof deskeroUser !== 'undefined';"
+        }
+      ],
+      "description": "Deskero is a customizable cloud-based help desk software and support ticket system designed to manage customer service.",
+      "website": "https://www.deskero.com/",
+      "icon": "Deskero.svg"
+    },
+    "Didar": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']apple-mobile-web-app-title[\"'][^\u003e]+content=[\"']^didar crm$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunkdidarx !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkdidarx !== 'undefined';"
+        }
+      ],
+      "description": "Didar is a platform offering tools for managing relationships and enhancing sales.",
+      "website": "https://didar.me",
+      "icon": "Didar.svg"
+    },
+    "Dito": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*storage\\.googleapis\\.com/dito/sdk\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof dito !== 'undefined' \u0026\u0026 typeof dito.AppSettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dito.AppSettings !== 'undefined';"
+        }
+      ],
+      "description": "Dito is a tool that centralizes and manages the relationship between brands and their customers.",
+      "website": "https://www.dito.com.br",
+      "icon": "Dito.svg"
+    },
+    "Dixa": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.dixa\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _dixa_ !== 'undefined' \u0026\u0026 typeof _dixa_.addListener !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _dixa_.addListener !== 'undefined';"
+        }
+      ],
+      "description": "Dixa is a customer experience platform designed for consumer brands, enabling management of customer interactions across channels.",
+      "website": "https://www.dixa.com",
+      "icon": "Dixa.svg"
+    },
+    "Docket": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*dockethosting\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DocketPay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DocketPay !== 'undefined';"
+        }
+      ],
+      "description": "Docket is a waste management and dumpster rental software, helping businesses manage assets, invoices, accounting, and communication.",
+      "website": "https://www.yourdocket.com",
+      "icon": "Docket.svg"
+    },
+    "DoorLoop": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.doorloop\\.com"
+            }
+          }
+        }
+      ],
+      "description": "DoorLoop is a property management software designed to streamline tasks such as leasing, accounting, maintenance tracking, and tenant communication.",
+      "website": "https://www.doorloop.com",
+      "icon": "DoorLoop.svg"
+    },
+    "EZLynx": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^ezlynx$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ezlynx\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "EZLynx is a cloud-based software offering real-time comparative insurance rating, integrating with over 330 carriers for automated quoting and policy management​.",
+      "website": "https://www.ezlynx.com",
+      "icon": "EZLynx.svg"
+    },
+    "EasyBroker": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.easybroker\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "EasyBroker is a property management platform facilitating sharing of properties through WhatsApp and email.",
+      "website": "https://www.easybroker.com",
+      "icon": "EasyBroker.svg"
+    },
+    "Edrone": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _edrone !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _edrone.version !== 'undefined';",
+          "version": "try { return String(_edrone.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _edrone_send_handler !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _edrone !== 'undefined';"
+        }
+      ],
+      "description": "Edrone is a purpose-built ecommerce CRM that includes marketing automation and voice commerce features.",
+      "website": "https://edrone.me",
+      "icon": "Edrone.svg"
+    },
+    "Elenore": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.elenore\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Elenore is an all-in-one business management software platform designed to streamline operations and support business growth.",
+      "website": "https://elenore.io",
+      "icon": "Elenore.svg"
+    },
+    "Ellucian CRM Recruit": {
+      "cats": [
+        53,
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Ellucian !== 'undefined' \u0026\u0026 typeof Ellucian.Recruit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Ellucian.Recruit !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ellucianAddressChooseLabel !== 'undefined';"
+        }
+      ],
+      "description": "Ellucian CRM Recruit is a comprehensive solution that supports your entire recruiting and admissions lifecycle.",
+      "website": "https://www.ellucian.com/solutions/ellucian-crm-recruit",
+      "icon": "Ellucian CRM Recruit.svg"
+    },
+    "Elromco": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.elromco\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ElromcoAPI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ElromcoAPI !== 'undefined';"
+        }
+      ],
+      "description": "Elromco is a software platform that provides moving companies with a CRM and management solution.",
+      "website": "https://www.elromco.com",
+      "icon": "Elromco.svg"
+    },
+    "Entresoft": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.entresoft\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Entresoft is a platform that offers CRM and pipeline management tools for business operations.",
+      "website": "https://entresoft.com",
+      "icon": "Entresoft.svg"
+    },
+    "Erxes": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*.app\\.erxes\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Erxes !== 'undefined' \u0026\u0026 typeof Erxes.showMessenger !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Erxes.showMessenger !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof erxesEnv !== 'undefined';"
+        }
+      ],
+      "description": "Erxes is a platform that provides tools for marketing, sales, and customer service management.",
+      "website": "https://erxes.io",
+      "icon": "Erxes.svg"
+    },
+    "EspoCRM": {
+      "cats": [
+        53
+      ],
+      "implies": [
+        "Backbone.js",
+        "Handlebars"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*espo(?:\\.min)?\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Espo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Espo !== 'undefined';"
+        }
+      ],
+      "description": "EspoCRM is an open-source CRM software solution designed for businesses of all sizes.",
+      "website": "https://www.espocrm.com",
+      "icon": "EspoCRM.svg",
+      "cpe": "cpe:2.3:a:espocrm:espocrm:*:*:*:*:*:*:*:*"
+    },
+    "Facilita": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.appfacilita\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof facilitaFormTrackerFnc !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof facilitaFormTrackerFnc !== 'undefined';"
+        }
+      ],
+      "description": "Facilita is a CRM designed for the real estate market, providing tools to manage client interactions, listings, and transactions.",
+      "website": "https://www.appfacilita.com",
+      "icon": "Facilita.svg"
+    },
+    "FlareLane": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FlareLane !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FlareLane !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof flarelane_state !== 'undefined';"
+        }
+      ],
+      "description": "FlareLane is a customer engagement platform that enables businesses to send personalized notifications through multiple channels such as mobile push, web push, SMS, email, and in-app messaging, with features for automation, A/B testing, and real-time analytics.",
+      "website": "https://www.flarelane.com",
+      "icon": "FlareLane.svg"
+    },
+    "Fleetee": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.fleetee\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Fleetee is a platform that enables users to develop and manage rental operations.",
+      "website": "https://en.fleetee.io",
+      "icon": "Fleetee.svg"
+    },
+    "Flipping Pro CRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.flippingpro\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Flipping Pro is an all-in-one real estate marketing CRM offering essential tools to help real estate business owners grow their operations.",
+      "website": "https://flippingpro.com",
+      "icon": "FlippingPro.svg"
+    },
+    "Fluro": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $flurosite !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $flurosite !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __FLUROSITE__ !== 'undefined';"
+        }
+      ],
+      "description": "Fluro is an automation platform designed to support operational growth and management for expanding churches.",
+      "website": "https://www.fluro.io",
+      "icon": "Fluro.svg"
+    },
+    "Follow Up Boss": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.followupboss\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Follow Up Boss is a real estate CRM system that manages leads, tracks client interactions, and organizes sales processes for real estate professionals.",
+      "website": "https://www.followupboss.com/customer-results/debra-beagle",
+      "icon": "FollowUpBoss.svg"
+    },
+    "Freshworks CRM": {
+      "cats": [
+        53,
+        32,
+        74
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.freshmarketer\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.zarget\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ZargetForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ZargetForm !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zarget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zargetAPI !== 'undefined';"
+        }
+      ],
+      "description": "Freshworks CRM is a cloud-based customer relationship management (CRM) solution. Key features include one-click phone, sales lead tracking, sales management, event tracking and more.",
+      "website": "https://www.freshworks.com/crm",
+      "icon": "Freshworks CRM.svg"
+    },
+    "Fullbay": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.fullbay\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Fullbay is heavy-duty repair shop software that provides a clear view of ongoing activities in your repair shop while enhancing staff productivity.",
+      "website": "https://www.fullbay.com",
+      "icon": "Fullbay.svg"
+    },
+    "Fuzey Channels": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.fuzey\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Fuzey Channels is an AI-powered communication platform designed specifically for the automotive industry to streamline customer interactions.",
+      "website": "https://www.getfuzey.com/features/channels",
+      "icon": "Fuzey.svg"
+    },
+    "Gallabox": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof gbwawc !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gbwawc !== 'undefined';"
+        }
+      ],
+      "description": "Gallabox is a tool that transforms WhatsApp into a web chat widget, facilitating management of leads, bookings, deals, and orders.",
+      "website": "https://gallabox.com",
+      "icon": "Gallabox.svg"
+    },
+    "Gestim": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*stats\\.gestim\\.biz"
+            }
+          }
+        }
+      ],
+      "description": "Gestim is an Italian real estate management system.",
+      "website": "https://www.gestim.it",
+      "icon": "Gestim.svg"
+    },
+    "Giveffect": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.giveffect\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.giveffect\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Giveffect is a not-for-profit customer relationship management system designed to support organizational operations and engagement.",
+      "website": "https://www.giveffect.com",
+      "icon": "Giveffect.svg"
+    },
+    "Gloo": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.gloo\\.us/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __GLOO_ONLINE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __GLOO_ONLINE !== 'undefined';"
+        }
+      ],
+      "description": "Gloo is a platform designed to help churches develop a more connected ministry.",
+      "website": "https://www.gloo.us",
+      "icon": "Gloo.svg"
+    },
+    "GlueUp": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.glueup\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "GlueUp is an all-in-one CRM platform.",
+      "website": "https://www.glueup.com",
+      "icon": "GlueUp.svg"
+    },
+    "Gorilla Dash": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//gorilladash\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.gorilladash\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Gorilla Dash is a tool for franchises and businesses with multiple locations, providing management and operational support.",
+      "website": "https://gorilladash.com",
+      "icon": "GorillaDash.svg"
+    },
+    "GreenRope": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.greenrope\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bfpd !== 'undefined' \u0026\u0026 bfpd === 'app\\.greenrope\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bfpd !== 'undefined';",
+          "version": "try { return String(bfpd || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "GreenRope is an all-in-one CRM platform that integrates sales, marketing, and operational tools into a single system for business management.",
+      "website": "https://www.greenrope.com",
+      "icon": "GreenRope.svg"
+    },
+    "Hapana": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hapana\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Hapana is a gym and fitness studio management platform designed to streamline operations.",
+      "website": "https://www.hapana.com",
+      "icon": "Hapana.svg"
+    },
+    "HappyFox Helpdesk": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.happyfox\\.com/media/"
+            }
+          }
+        }
+      ],
+      "description": "HappyFox is a help desk ticketing system that is hosted on cloud, supporting multiple customer support channels like email, voice and live chat.",
+      "website": "https://www.happyfox.com/customer-service-software/",
+      "icon": "HappyFox.svg"
+    },
+    "Helpwise": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.helpwise\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Helpwise is a customer service platform that helps you manage all customer communication from a single place.",
+      "website": "https://helpwise.io",
+      "icon": "Helpwise.svg"
+    },
+    "Hesk": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof heskKBquery !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hesk_window !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof heskKBquery !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hesk_rate !== 'undefined';"
+        }
+      ],
+      "description": "Hesk is a helpdesk and customer support system.",
+      "website": "https://www.hesk.com",
+      "icon": "Hesk.svg"
+    },
+    "Hi Platform": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hiplatform\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Hi Platform provider of an online customer relationship platform.",
+      "website": "https://www.hiplatform.com",
+      "icon": "Hi Platform.svg"
+    },
+    "HiBob": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.hibob\\.com"
+            }
+          }
+        }
+      ],
+      "description": "HiBob is a modern HR platform designed to enhance productivity, employee engagement, and retention for businesses.",
+      "website": "https://www.hibob.com",
+      "icon": "HiBob.svg"
+    },
+    "Hikari CS": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.hikarics\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Hicari CS is a solution that helps webshops increase sales and customer loyalty with excellent customer service.",
+      "website": "https://www.hikarics.com",
+      "icon": "HikariCS.svg"
+    },
+    "Hiver": {
+      "cats": [
+        53,
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*chat-widget\\.hiverhq\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $hiverChatWidget !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $hiverChatWidget !== 'undefined';"
+        }
+      ],
+      "description": "Hiver is a tool that transforms Gmail into a collaboration and customer support system.",
+      "website": "https://hiverhq.com",
+      "icon": "Hiver.svg"
+    },
+    "Hoowla": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.hoowla\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.hoowla\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hoowlainit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hoowlainit !== 'undefined';"
+        }
+      ],
+      "description": "Hoowla is a case management software designed to organize, track, and manage legal workflows and client information for law firms.",
+      "website": "https://www.hoowla.com",
+      "icon": "Hoowla.svg"
+    },
+    "Hubtiger": {
+      "cats": [
+        53,
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^hubtiger$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Hubtiger offers rental and workshop management software solutions to help businesses elevate their operations and efficiency.",
+      "website": "https://hubtiger.com",
+      "icon": "Hubtiger.svg"
+    },
+    "ICE": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.enterice\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ICE is integrated customer engagement software designed to streamline communication, support, and interaction across multiple channels for businesses.",
+      "website": "https://www.enterice.com/web/",
+      "icon": "Enterice.svg"
+    },
+    "Infor": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cloud\\.infor\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Infor is a resource planning solution designed to streamline operations, manage workflows, and support data-driven decision-making across various business functions.",
+      "website": "https://www.infor.com",
+      "icon": "Infor.svg"
+    },
+    "Insightly CRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.insightly\\.services/"
+            }
+          }
+        }
+      ],
+      "description": "Insightly CRM is a cloud-based customer relationship management software, helps businesses manage leads, contacts, and opportunities, track customer interactions, create custom reports, automate workflows, and integrate with third-party applications, improving customer engagement and streamlining business processes.",
+      "website": "https://www.insightly.com/crm/",
+      "icon": "Insightly.svg"
+    },
+    "Join It": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.joinit\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Join It is a membership management platform that helps nonprofits, clubs, and growing organizations manage members, track payments, and streamline administrative tasks.",
+      "website": "https://joinit.com",
+      "icon": "JoinIt.svg"
+    },
+    "Jonas Club Software": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jonasPrivacyPolicy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jonasPrivacyPolicy !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jonasPrivacyPolicyClassName !== 'undefined';"
+        }
+      ],
+      "description": "Jonas Club Software is a provider of club management solutions, facilitating relationship building with members, revenue growth, and cost reduction.",
+      "website": "https://jonasclub.com",
+      "icon": "Jonas.svg"
+    },
+    "Keap": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.infusionsoft\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Keap offers an email marketing and sales platform for small businesses, including products to manage customers, customer relationship management, marketing, and ecommerce.",
+      "website": "https://keap.com",
+      "icon": "Keap.svg"
+    },
+    "Kenect": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof toggleKenectWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof toggleKenectWidget !== 'undefined';"
+        }
+      ],
+      "description": "Kenect is a platform that provides reputation management and business texting solutions for customer engagement and feedback collection.",
+      "website": "https://www.kenect.com",
+      "icon": "Kenect.svg"
+    },
+    "Kicksite": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Kicksite is a gym and martial arts member management software with attendance tracking, automated billing, free texting, lead capture forms and more.",
+      "website": "https://kicksite.com",
+      "icon": "Kicksite.png"
+    },
+    "Kintone": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof kintoneappHost !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kintoneappHost !== 'undefined';"
+        }
+      ],
+      "description": "Kintone is a versatile cloud-based platform offering business data management, CRM, and custom app development.",
+      "website": "https://kintone.cybozu.co.jp",
+      "icon": "Kintone.png"
+    },
+    "Kundo": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static-chat\\.kundo\\.se"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $kundo_chat !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $kundo_chat.DEFAULT_AVATAR_URL !== 'undefined';"
+        }
+      ],
+      "description": "Kundo is a customer service system for all digital channels, enhanced with AI and automation to resolve inquiries.",
+      "website": "https://www.kundo.se",
+      "icon": "Kundo.svg"
+    },
+    "LEVERADE": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.leverade\\.com"
+            }
+          }
+        }
+      ],
+      "description": "LEVERADE is a sports management and monetization system designed to organize, track, and optimize sporting events and related financial operations.",
+      "website": "https://leverade.com",
+      "icon": "LEVERADE.svg"
+    },
+    "Lasso CRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.lassocrm\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LassoAnalytics !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LassoAnalytics !== 'undefined';"
+        }
+      ],
+      "description": "Lasso CRM is a new home sales CRM solution for builders, developers, and new homes agencies.",
+      "website": "https://www.ecisolutions.com/products/lasso-crm",
+      "icon": "LassoCRM.svg"
+    },
+    "Lawmatics": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*navi\\.lawmatics\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Lawmatics is a growth platform for law firms that streamlines client intake, marketing automation, and workflow management.",
+      "website": "https://www.lawmatics.com",
+      "icon": "Lawmatics.svg"
+    },
+    "Laylo": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.laylo\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof layloSdkLoading !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof layloSdkLoading !== 'undefined';"
+        }
+      ],
+      "description": "Laylo is a drop CRM platform that enables artists to notify fans when merchandise, tickets, or content becomes available.",
+      "website": "https://laylo.com",
+      "icon": "Laylo.svg"
+    },
+    "Lead Generated": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.leadgenerated\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Lead Generated is a marketing CRM tool that centralizes customer data, tracks engagement, and automates marketing campaigns.",
+      "website": "https://leadgenerated.com",
+      "icon": "LeadGenerated.svg"
+    },
+    "LeadChat": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?://|\\.)chatsystem\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "LeadChat offers live-operators and CRM solutions that utilise LiveChat chat software to facilitate real-time engagement with website visitors for businesses.",
+      "website": "https://www.leadchat.com",
+      "icon": "LeadChat.svg"
+    },
+    "LeadSimple": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets2\\.leadsimple\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "LeadSimple is a platform that allows property managers to automate their sales and operational processes.",
+      "website": "https://www.leadsimple.com",
+      "icon": "LeadSimple.svg"
+    },
+    "Leadific": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.leadific\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Leadific is a customer relationship management platform designed to help digital agencies manage clients, track communications, and streamline workflows in a single system.",
+      "website": "https://leadific.co",
+      "icon": "Leadific.svg"
+    },
+    "LeanData": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LDBookItPopup !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LDBookItPopup !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LDBookItV2 !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LDCalendaring !== 'undefined';"
+        }
+      ],
+      "description": "LeanData is a platform that enhances demand management by providing lead-to-account matching and intelligent lead routing.",
+      "website": "https://www.leandata.com",
+      "icon": "LeanData.svg"
+    },
+    "Lenus": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^lenus$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Lenus is a platform that develops healthcare optimization systems designed to improve operational efficiency.",
+      "website": "https://lenushealth.com",
+      "icon": "Lenus.svg"
+    },
+    "Ligna": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ligna\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Ligna is a sales, marketing, and enablement platform offering features to close clients, manage content, oversee projects, and track details, providing an all-in-one solution for business operations.",
+      "website": "https://www.ligna.io",
+      "icon": "Ligna.svg"
+    },
+    "Liine": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Liine !== 'undefined' \u0026\u0026 typeof Liine.addURLChangeListener !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Liine.addURLChangeListener !== 'undefined';"
+        }
+      ],
+      "description": "Liine is an all-in-one platform for monitoring, optimizing, and incentivizing the management of new patient calls.",
+      "website": "https://www.liine.com",
+      "icon": "Liine.svg"
+    },
+    "Linear": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof linearFrontend !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof linearFrontend !== 'undefined';"
+        }
+      ],
+      "description": "Linear is a platform for collecting payments and managing business operations, offering sales and marketing tools for real estate agents, extending beyond a traditional brokerage system.",
+      "website": "https://linear.fi/hinnasto",
+      "icon": "Linear.svg"
+    },
+    "MDS Brand": {
+      "cats": [
+        53
+      ],
+      "description": "MDS Brand is a provider of website, CRM, vrtual BDC, SEO, PPC, and live chat solutions for Marine, RV, Powersports, and automotive industries.",
+      "website": "https://mdsbrand.com",
+      "icon": "MDS Brand.png"
+    },
+    "MRI Box and Dice": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.boxdice\\.com\\.au"
+            }
+          }
+        }
+      ],
+      "description": "MRI Box and Dice is a CRM platform designed for real estate agencies, providing tools for managing client relationships, property listings, and transactions.",
+      "website": "https://www.mrisoftware.com/au/products/box-and-dice/",
+      "icon": "MRISoftware.svg"
+    },
+    "MRI Eagle": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.eaglesoftware\\.com\\.au"
+            }
+          }
+        }
+      ],
+      "description": "MRI Eagle is a technology solution catering to real estate firms, offering efficiency and cost-saving benefits.",
+      "website": "https://www.mrisoftware.com/au/products/eagle",
+      "icon": "MRISoftware.svg"
+    },
+    "Mashore Method": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.mashoremethod\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Mashore Method is a CRM software designed for real estate businesses to manage customer relationships in one centralized platform.",
+      "website": "https://mashoremethod.com",
+      "icon": "MashoreMethod.svg"
+    },
+    "Mazrica": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.mazrica\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Mazrica is a sales support tool that leverages organizational knowledge, using AI algorithms to analyze accumulated sales data and evaluate success and failure cases.",
+      "website": "https://mazrica.com",
+      "icon": "Mazrica.svg"
+    },
+    "Mimiran": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.mimiran\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mimiran_widget_show !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mimiran_widget_show !== 'undefined';"
+        }
+      ],
+      "description": "Mimiran is a CRM system designed for managing customer relationships.",
+      "website": "https://www.mimiran.com",
+      "icon": "Mimiran.svg"
+    },
+    "Mintox": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^mintox[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MintoxJS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mintoxPaging !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mintoxTrim !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MintoxJS !== 'undefined';"
+        }
+      ],
+      "description": "Mintox is a business software designed to streamline operations and enhance efficiency.",
+      "website": "https://www.mintox.com",
+      "icon": "Mintox.svg"
+    },
+    "Mirai": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.mirai\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Mirai !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Mirai !== 'undefined';"
+        }
+      ],
+      "description": "Mirai is a hotel management system.",
+      "website": "https://www.mirai.com",
+      "icon": "Mirai.svg"
+    },
+    "Molin AI": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.molin\\.ai/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __INIT_MOLIN_SHOP_AI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __INIT_MOLIN_SHOP_AI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __INIT_MOLIN_SHOP_AI_OPTIONS !== 'undefined';"
+        }
+      ],
+      "description": "Molin AI is a multilingual tool that reduces support volume by 70%, recommends relevant products to shoppers, and uses up-to-date information from client websites to enhance store revenue.",
+      "website": "https://molin.ai",
+      "icon": "MolinAI.svg"
+    },
+    "Moyklass": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.moyklass\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Moyklass is a Russian customer relationship management platform designed to help schools manage student data, track performance, and organize administrative tasks.",
+      "website": "https://moyklass.com",
+      "icon": "Moyklass.svg"
+    },
+    "MyAlice": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.myalice\\.ai"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MyAliceWebChat !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MyAliceWebChat !== 'undefined';"
+        }
+      ],
+      "description": "MyAlice is a customer support platform designed for ecommerce brands to manage and streamline customer service operations.",
+      "website": "https://www.myalice.ai",
+      "icon": "MyAlice.svg"
+    },
+    "Neon CRM": {
+      "cats": [
+        53,
+        111
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _neoncrm_ga !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _neoncrm_ga !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof neonPayCard !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof neoncrm_email_ajax_object !== 'undefined';"
+        }
+      ],
+      "description": "Neon CRM, a Neon One company, is a cloud-based customer relationship management (CRM) software suite for nonprofits of all sizes. Applications include fundraising management, donor management, membership management, event registration and management, customised reporting, and more.",
+      "website": "https://neonone.com",
+      "icon": "Neon One.svg"
+    },
+    "NoPaperForms": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*track\\.nopaperforms\\.com"
+            }
+          }
+        }
+      ],
+      "description": "NoPaperForms is a cloud-based platform that automates and manages student enrollment processes.",
+      "website": "https://www.nopaperforms.com",
+      "icon": "NoPaperForms.svg"
+    },
+    "Northstar Club Management": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.portal": {
+              "$regex": "^northstar connect"
+            }
+          }
+        }
+      ],
+      "description": "Northstar Club Management is a platform that integrates membership, accounting, reservations, events, and communication tools to streamline daily operations for private clubs and associations.",
+      "website": "https://www.globalnorthstar.com",
+      "icon": "NorthstarClubManagement.svg"
+    },
+    "OperateBeyond": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//dealer-cdn\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "OperateBeyond is a software development company that offers website design, automated inventory management, CRM, dealer websites, and DMS.",
+      "website": "https://operatebeyond.com/dealer-websites-marketing",
+      "icon": "OperateBeyond.png"
+    },
+    "PTminder": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ptminder_clients_auth !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ptminder_jsonp_sign_up !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ptminder_clients_auth !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ptminder_jsonp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ptminder_jsonp_forgot_password !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ptminder_jsonp_keep_logged !== 'undefined';"
+        }
+      ],
+      "description": "PTminder is a business management platform designed for personal trainers.",
+      "website": "https://www.ptminder.com",
+      "icon": "PTMinder.svg"
+    },
+    "Pepper Cloud": {
+      "cats": [
+        53
+      ],
+      "description": "Pepper Cloud is a SaaS provider offering CRM solutions for small and middle scale companies across multiple industries.",
+      "website": "https://peppercloud.com",
+      "icon": "PepperCloud.svg"
+    },
+    "Percy": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/npm/@percy\\.ai/"
+            }
+          }
+        }
+      ],
+      "description": "Percy is a platform that uses behavioral data to help real estate agents and mortgage loan officers connect effectively with each other and their clients to increase transactions.",
+      "website": "https://percy.ai",
+      "icon": "Percy.svg"
+    },
+    "Perfect Storm": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.perfectstormnow\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Perfect Storm is an all-in-one platform for real estate lead generation and customer relationship management, designed to support business scaling.",
+      "website": "https://www.perfectstormnow.com",
+      "icon": "PerfectStorm.svg"
+    },
+    "Perfex CRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/assets/themes/perfex/js/global\\.min\\.js(?:\\?v=(\\d+(?:\\.\\d+)+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Perfex CRM is self hosted customer relationship management software that is a great fit for almost any company, freelancer or many other uses.",
+      "website": "https://www.perfexcrm.com",
+      "icon": "Perfex CRM.png"
+    },
+    "Phorest": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*booking-widget\\.phorestcdn\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Phorest software is an all-in-one solution for managing and growing businesses in the hair, beauty, barber, and spa industries.",
+      "website": "https://www.phorest.com",
+      "icon": "Phorest.svg"
+    },
+    "Pico": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.pico\\.tools"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Pico !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pico !== 'undefined';"
+        }
+      ],
+      "website": "https://trypico.com",
+      "icon": "pico.svg"
+    },
+    "Piperun": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.crmpiperun\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.pipe\\.run/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Piperun is a CRM designed to automate and enhance sales performance for companies managing complex sales processes and channel partnerships.",
+      "website": "https://crmpiperun.com",
+      "icon": "Piperun.svg"
+    },
+    "Plait": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.plaithealth\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $plait !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $plait !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof plaitSDK !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof plaitSettings !== 'undefined';"
+        }
+      ],
+      "description": "Plait is a productivity software for health practices that supports team collaboration with patients to enhance efficiency and drive business growth.",
+      "website": "http://plaithealth.com",
+      "icon": "Plait.svg"
+    },
+    "Plannit": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.plannit\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PlannitCallTracking !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PlannitCallTracking !== 'undefined';"
+        }
+      ],
+      "description": "Plannit is a task management home services network.",
+      "website": "https://plannit.io",
+      "icon": "Plannit.svg"
+    },
+    "Plutio": {
+      "cats": [
+        53
+      ],
+      "description": "Plutio is an all-in-one platform for business management, team collaboration, and client interaction.",
+      "website": "https://www.plutio.com",
+      "icon": "Plutio.svg"
+    },
+    "Podio": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//podio\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _podioWebForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _podioWebForm !== 'undefined';"
+        }
+      ],
+      "description": "Podio is a customizable social work platform for collaboration with co-workers and clients, enabling task management and communication.",
+      "website": "https://www.podio.com",
+      "icon": "Podio.svg"
+    },
+    "Popcorn CRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.popcorn\\.email"
+            }
+          }
+        }
+      ],
+      "description": "Popcorn CRM is a visual CRM providing essential tools to manage customer relationships and support business growth.",
+      "website": "https://popcorncrm.co.uk",
+      "icon": "PopcornCRM.svg"
+    },
+    "Popmix": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.popmixcrm\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Popmix CRM is a customer relationship management platform designed to manage sales, marketing, and recruitment activities through unified tools for tracking, communication, and performance analysis.",
+      "website": "https://popmixcrm.com",
+      "icon": "PopmixCRM.svg"
+    },
+    "Power CRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.powercrm\\.com\\.br"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PowerCRM !== 'undefined' \u0026\u0026 typeof PowerCRM.init !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PowerCRM.init !== 'undefined';"
+        }
+      ],
+      "description": "Power CRM is a platform tailored for vehicle protection associations, offering support to meet operational needs.",
+      "website": "https://site.powercrm.com.br",
+      "icon": "PowerCRM.svg"
+    },
+    "Practice Perfect": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.practiceperfectemr\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Practice Perfect is a cloud-based EMR and practice management application that integrates scheduling, billing, documentation, and reporting for healthcare providers.",
+      "website": "https://practiceperfectemr.com",
+      "icon": "PracticePerfect.svg"
+    },
+    "Praedium": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PraediumFilters !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PraediumFilters !== 'undefined';"
+        }
+      ],
+      "website": "https://praedium.com.br",
+      "icon": "Praedium.svg"
+    },
+    "ProdPad": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.prodpad\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ProdPad is a product management software platform enabling teams to gather ideas, set priorities, and create adaptable product roadmaps.",
+      "website": "https://www.prodpad.com",
+      "icon": "ProdPad.svg"
+    },
+    "Profeat": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.profeat\\.team/"
+            }
+          }
+        }
+      ],
+      "description": "Profeat is a CRM software enabling integration of WhatsApp and Instagram.",
+      "website": "https://profeat.team",
+      "icon": "Profeat.svg"
+    },
+    "PropFlo": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.propflo\\.ai"
+            }
+          }
+        }
+      ],
+      "description": "PropFlo is an AI-powered real estate CRM designed for developers and channel partners to streamline customer relationship management and enhance sales processes.",
+      "website": "https://www.propflo.ai",
+      "icon": "PropFlo.svg"
+    },
+    "Property Shell": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.propertyshell\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.propertyshell\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Property Shell is a real estate CRM solution to manage, develop, and drive the selling of residential and commercial property, and more.",
+      "website": "https://propertyshell.com",
+      "icon": "PropertyShell.svg"
+    },
+    "Proposify": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.proposify\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Proposify is a proposal software that provides sales leaders with control and visibility over key stages of the sales process.",
+      "website": "https://www.proposify.com",
+      "icon": "Proposify.svg"
+    },
+    "Prostoy": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.prostoy\\.ru"
+            }
+          }
+        }
+      ],
+      "description": "Prostoy is a business CRM system designed for small and medium businesses to manage customer relationships and streamline operations.",
+      "website": "https://www.prostoy.ru",
+      "icon": "Prostoy.svg"
+    },
+    "Proto AICX": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Proto !== 'undefined' \u0026\u0026 typeof Proto.close !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Proto.close !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof protoSettings !== 'undefined';"
+        }
+      ],
+      "description": "Proto AICX is a provider of inclusive CX automation and multilingual contact center solutions, enabling deployment of AI chatbots, live chat, ticketing systems, and CRM for businesses and governments.",
+      "website": "https://www.proto.cx",
+      "icon": "ProtoAICX.svg"
+    },
+    "Pubfunnels": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.pubfunnels\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Pubfunnels is a business hub designed for publishers and authors to manage, promote, and grow their publishing operations.",
+      "website": "https://pubfunnels.com",
+      "icon": "Pubfunnels.svg"
+    },
+    "Q4": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof q4App !== 'undefined' \u0026\u0026 typeof q4App.a11yAnnouncement !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof q4App.a11yAnnouncement !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof q4Defaults.fancySignup !== 'undefined';"
+        }
+      ],
+      "description": "Q4 is a SaaS platform that provides communication and intelligence solutions to investor relations professionals.",
+      "website": "https://www.q4inc.com/products/investor-relations-websites/default.aspx",
+      "icon": "Q4.png"
+    },
+    "Qomon": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*scripts\\.qomon\\.org"
+            }
+          }
+        }
+      ],
+      "description": "Qomon is a Saas software and citizen engagement platform and mobile app for NGOs, movements, campaigns, advocacy groups, and citizen-driven organisations.",
+      "website": "https://qomon.com",
+      "icon": "Qomon.svg"
+    },
+    "Rapid Active CRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.rapidactivecrm\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Rapid Active CRM is an all-in-one sales and marketing automation platform designed to drive business growth.",
+      "website": "https://rapidactivecrm.com",
+      "icon": "RapidActiveCRM.svg"
+    },
+    "Rent Syst": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RentsystFrame !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RentsystFrame !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Rentsyst_Activate !== 'undefined';"
+        }
+      ],
+      "description": "Rent Syst is a CRM system designed to manage customer relationships, bookings, and communication for car rental businesses.",
+      "website": "https://rentsyst.com",
+      "icon": "RentSyst.svg"
+    },
+    "RentCafe": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.rentcafe\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "RentCafe is a residential rent management platform.",
+      "website": "https://www.rentcafe.com",
+      "icon": "RentCafe.svg"
+    },
+    "Reviews Up": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.getreviewsup\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ReviewsUpWidgets !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ReviewsUpWidgets !== 'undefined';"
+        }
+      ],
+      "description": "Reviews Up is a platform that collects and displays user ratings and feedback to evaluate products, services, or experiences.",
+      "website": "https://reviewsup.com",
+      "icon": "ReviewsUp.svg"
+    },
+    "Richpanel": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.richpanel\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Richpanel !== 'undefined' \u0026\u0026 typeof Richpanel.PLUGIN_API_URL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Richpanel.PLUGIN_API_URL !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RichpanelAppProxy !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof richpanel_messenger_url !== 'undefined';"
+        }
+      ],
+      "description": "Richpanel is a purpose-built CRM and customer support platform for ecommerce and DTC brands.",
+      "website": "https://www.richpanel.com",
+      "icon": "Richpanel.svg"
+    },
+    "Rinsed": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.app\\.rinsed\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof isRinsedScriptLoaded !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof isRinsedScriptLoaded !== 'undefined';"
+        }
+      ],
+      "description": "Rinsed is a customer relationship management software tailored for the car wash industry.",
+      "website": "https://www.rinsed.com",
+      "icon": "Rinsed.svg"
+    },
+    "Roller": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RollerCheckout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RollerCheckout !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RollerConstants !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rollerDL !== 'undefined';"
+        }
+      ],
+      "description": "Roller is an all-in-one software that helps operators boost revenue and deliver a better guest experience.",
+      "website": "https://www.roller.software",
+      "icon": "Roller.svg"
+    },
+    "Rollick": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.rollick\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Rollick is a lead management solution that connects manufacturers and dealers in the powersports, RV, marine, and industrial equipment industries.",
+      "website": "https://rollick.io",
+      "icon": "Rollick.svg"
+    },
+    "Rubic": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.rubic\\.no"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.rubic\\.no"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Rubic is an association management software designed to support organizations in handling membership, events, and administrative tasks.",
+      "website": "https://rubic.no",
+      "icon": "Rubic.svg"
+    },
+    "SAP": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "sap netweaver application server"
+            }
+          }
+        }
+      ],
+      "website": "https://sap.com",
+      "icon": "SAP.svg",
+      "cpe": "cpe:2.3:a:sap:netweaver_application_server:*:*:*:*:*:*:*:*"
+    },
+    "SM Sold": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^smsold$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.smsold\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SM Sold is a platform providing integrated solutions for real estate agents and brokers to manage listings, client interactions, and transactions.",
+      "website": "https://smsold.com",
+      "icon": "SMSold.svg"
+    },
+    "SOTA CRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.sotacrm\\.com"
+            }
+          }
+        }
+      ],
+      "description": "SOTA CRM is a software solution designed to help businesses manage customer relationships and related data.",
+      "website": "https://sotacrm.com",
+      "icon": "SOTACRM.svg"
+    },
+    "Saabu": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.saabu\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Saabu is a CRM automation platform designed to streamline sales processes and support the growth of sales teams.",
+      "website": "https://saabu.io",
+      "icon": "Saabu.svg"
+    },
+    "SabeeApp": {
+      "cats": [
+        53,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ibe\\.sabeeapp\\.com/v(\\d+)/scripts\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webhome !== 'undefined' \u0026\u0026 webhome === 'ibe\\.sabeeapp\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webhome !== 'undefined';",
+          "version": "try { return String(webhome || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "SabeeApp is a property management system for hoteliers, managing reservations, controlling online distribution platforms, handling payments, and engaging with guests.",
+      "website": "https://www.sabeeapp.com",
+      "icon": "SabeeApp.svg"
+    },
+    "SalesCandy": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.salescandy\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.salescandy\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SalesCandy is a sales performance improvement solution designed to optimize sales team efficiency through automated lead distribution, real-time tracking, and actionable insights.",
+      "website": "https://www.salescandy.com",
+      "icon": "SalesCandy.svg"
+    },
+    "SalesMatch": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.salesmatch\\.ai/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof salesmatchSettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof salesmatchSettings !== 'undefined';"
+        }
+      ],
+      "description": "SalesMatch is a business automation platform that streamlines operations through integrated applications, optimizing process management and growth.",
+      "website": "https://salesmatch.ai",
+      "icon": "SalesMatch.svg"
+    },
+    "Salesforce": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c[^\u003e]+=\"brandquaternaryfgrs\""
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SFDCApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SFDCSessionVars !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SFDCApp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SFDCCmp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SFDCPage !== 'undefined';"
+        }
+      ],
+      "description": "Salesforce is a cloud computing service software (SaaS) that specializes in customer relationship management (CRM).",
+      "website": "https://www.salesforce.com",
+      "icon": "Salesforce.svg",
+      "cpe": "cpe:2.3:a:salesforce:*:*:*:*:*:*:*:*:*"
+    },
+    "Salesforce Desk": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^/s/sfsites/aurafw/"
+            }
+          }
+        }
+      ],
+      "description": "Salesforce Desk(Desk.com) is software as a service (SaaS) tool on the help desk.",
+      "website": "https://www.salesforce.com/solutions/small-business-solutions/help-desk-software/",
+      "icon": "Salesforce.svg"
+    },
+    "Salesforce Experience Cloud": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^/s/sfsites/aurafw/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof lwcRuntimeFlags !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lwcRuntimeFlags !== 'undefined';"
+        }
+      ],
+      "description": "Salesforce Experience Cloud is a CRM-powered SaaS solution for creating external portals and communities connected to Salesforce data and workflows.",
+      "website": "https://www.salesforce.com/ca/products/community-cloud/solutions/",
+      "icon": "Salesforce.svg"
+    },
+    "Salesmachine": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.salesmachine\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof salesmachine !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof salesmachine !== 'undefined';"
+        }
+      ],
+      "description": "Salesmachine is a platform that boosts sales, enhances performance, and supports customer retention through data-driven strategies.",
+      "website": "https://salesmachine.io",
+      "icon": "Salesmachine.svg"
+    },
+    "Salespype": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.salespype\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.salespype\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Salespype is a CRM platform with integrated marketing automation tools to streamline customer relationship management and marketing processes.",
+      "website": "https://salespype.com",
+      "icon": "Salespype.svg"
+    },
+    "SberCRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.macro\\.sbercrm\\.com"
+            }
+          }
+        }
+      ],
+      "description": "SberCRM is a customer relationship management system designed to help businesses manage leads, track customer interactions, and convert prospects into sales.",
+      "website": "https://sbercrm.com",
+      "icon": "SberCRM.svg"
+    },
+    "Sellsy": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sellsy\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SellsySnippet !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SellsySnippet !== 'undefined';"
+        }
+      ],
+      "description": "Sellsy is a cloud-based sales management solution for small to midsize businesses",
+      "website": "https://go.sellsy.com",
+      "icon": "Sellsy.svg"
+    },
+    "ServiceCore": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.servicecorecms\\.wpengine\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ServiceCore is a software solution for portable toilet, septic, and dumpster businesses that manages jobs, optimizes routes, tracks inventory, and automates billing to improve operational efficiency.",
+      "website": "https://servicecore.com",
+      "icon": "ServiceCore.svg"
+    },
+    "ServiceM8": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*platform\\.servicem8\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ServiceM8 is a field service management application that enables job dispatch, staff location, and communication with employees and clients without phone calls.",
+      "website": "https://www.servicem8.com",
+      "icon": "ServiceM8.svg"
+    },
+    "Sherlock": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Sherlock_favourite_properties !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Sherlock_favourite_properties !== 'undefined';"
+        }
+      ],
+      "description": "Sherlock is a platform that offers specialized real estate property management software, including trust accounting, for residential, commercial, sales, and holiday properties.",
+      "website": "https://sherlocksoftware.com",
+      "icon": "Sherlock.svg"
+    },
+    "Showdigs": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.showdigs\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.showdigs\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Showdigs is an AI-backed leasing automation platform designed to streamline the entire rental funnel.",
+      "website": "https://www.showdigs.com",
+      "icon": "Showdigs.svg"
+    },
+    "Sierra Interactive": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.sierrainteractive\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SI_BASE_URL_CAA !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SI_BASE_URL_CAA !== 'undefined';"
+        }
+      ],
+      "description": "Sierra Interactive is a real estate platform that enables brand differentiation and personalized lead nurturing for property professionals.",
+      "website": "https://www.sierrainteractive.com",
+      "icon": "SierraInteractive.svg"
+    },
+    "Simbla": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Simbla !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Simbla !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof createSimblaObj !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof isSimblaObject !== 'undefined';"
+        }
+      ],
+      "description": "Simbla is an AI-powered CRM platform.",
+      "website": "https://www.simbla.com",
+      "icon": "Simbla.svg"
+    },
+    "Sinch": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SinchClient !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SinchClient !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SinchSdk !== 'undefined';"
+        }
+      ],
+      "description": "Sinch is a platform that connects businesses and customers through tools that enable personal engagement.",
+      "website": "https://www.sinch.com",
+      "icon": "Sinch.svg"
+    },
+    "Slate": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*slate-technolutions-net\\.cdn\\.technolutions\\.net/"
+            }
+          }
+        }
+      ],
+      "description": "Slate is a CRM system designed specifically for higher education institutions, which helps them to manage student interactions, track admissions, and analyze student data in a flexible and user-friendly way.",
+      "website": "https://technolutions.com",
+      "icon": "Slate.svg"
+    },
+    "SniperCRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.snipercrm\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "SniperCRM is a platform designed to automate, manage, and scale ecommerce operations.",
+      "website": "https://snipercrm.io",
+      "icon": "SniperCRM.svg"
+    },
+    "SoftwareSuggest": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*trk\\.softwaresuggest\\.com"
+            }
+          }
+        }
+      ],
+      "description": "SoftwareSuggest is a platform assisting businesses in locating suitable software solutions.",
+      "website": "https://www.softwaresuggest.com",
+      "icon": "SoftwareSuggest.svg"
+    },
+    "SolutionReach": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*chat\\.solutionreach\\.com"
+            }
+          }
+        }
+      ],
+      "description": "SolutionReach is a patient engagement and retention platform that helps healthcare providers maintain contact with patients from initial appointment through final payment.",
+      "website": "https://www.solutionreach.com",
+      "icon": "SolutionReach.svg"
+    },
+    "Sonar": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SonarChatWidget !== 'undefined' \u0026\u0026 typeof SonarChatWidget.display !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SonarChatWidget.display !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mySonar.ajaxProtocol !== 'undefined';"
+        }
+      ],
+      "description": "Sonar is a fully integrated system offering loan origination and point-of-sale solutions, combined with customer relationship management capabilities.",
+      "website": "https://sendsonar.com",
+      "icon": "Sonar.svg"
+    },
+    "Spektrix": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.spektrix\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Spektrix is a cloud-based ticketing, marketing, and fundraising CRM system putting audience insight at your fingertips.",
+      "website": "https://www.spektrix.com",
+      "icon": "Spektrix.svg"
+    },
+    "Spoki": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.spoki\\.it/"
+            }
+          }
+        }
+      ],
+      "description": "Spoki is a WhatsApp conversational platform designed to provide marketing, sales, and customer support.",
+      "website": "https://spoki.it",
+      "icon": "Spoki.svg"
+    },
+    "Sprinklr": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sprinklr\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sprChat !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sprChat !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sprChatSettings !== 'undefined';"
+        }
+      ],
+      "description": "Sprinklr is a customer experience management platform that unifies front-office teams, tools, and touchpoints using AI technology.",
+      "website": "https://www.sprinklr.com",
+      "icon": "Sprinklr.svg"
+    },
+    "Spruce": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget-api\\.sprucehealth\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __SPRUCE_WIDGET_CONFIG__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __SPRUCE_WIDGET_CONFIG__ !== 'undefined';"
+        }
+      ],
+      "description": "Spruce is a digital healthcare platform that provides virtual medical services and tools for managing patient care.",
+      "website": "https://sprucehealth.com",
+      "icon": "Spruce.svg"
+    },
+    "Strolid": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof STROLID !== 'undefined' \u0026\u0026 typeof STROLID.strolid_chat_widget_url !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof STROLID.strolid_chat_widget_url !== 'undefined';"
+        }
+      ],
+      "description": "Strolid is an automotive BDC that integrates with various industry CRMs, enabling dealerships to automate workflows.",
+      "website": "https://strolid.com",
+      "icon": "Strolid.svg"
+    },
+    "Subscribfy": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app1\\.subscribfy\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SUBSCRIBFYFASTMODE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SUBSCRIBFYFASTMODE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SUBSCRIBFY_CLR !== 'undefined';"
+        }
+      ],
+      "description": "Subscribfy is a platform that enables users to organize, track, and manage their subscriptions in one place.",
+      "website": "https://subscribfy.ai",
+      "icon": "Subscribfy.svg"
+    },
+    "SuiteCRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*themes/suitep/js/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SuiteCRM is an open-source alternative to proprietary software such as Salesforce and Dynamics, offering customer relationship management features.",
+      "website": "https://suitecrm.com",
+      "icon": "SuiteCRM.svg"
+    },
+    "Swapcard": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.swapcard\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Swapcard is a platform that helps convert event engagement into revenue by connecting attendees, enhancing interaction, and providing monetization tools for organizers.",
+      "website": "https://www.swapcard.com",
+      "icon": "Swapcard.svg"
+    },
+    "Swat.io": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.swat\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Swat.io is a platform offering social media management solutions for teams.",
+      "website": "https://swat.io",
+      "icon": "Swat.svg"
+    },
+    "TDO Software": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tdosites\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "TDO is a practice management software designed for endodontists to build a modern office environment.",
+      "website": "https://wwww.tdo4endo.com",
+      "icon": "TDOSoftware.svg"
+    },
+    "TRIBUS": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.mytribus\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MyTribusEmbed !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MyTribusEmbed !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MyTribusEmbedInstance !== 'undefined';"
+        }
+      ],
+      "description": "TRIBUS is a custom platform designed for real estate brokerages, offering tailored tools and features to support business operations and client management.",
+      "website": "https://tribus.com",
+      "icon": "TRIBUS.svg"
+    },
+    "Talentegy": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.talentegy\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Talentegy is an employee management system.",
+      "website": "https://www.talentegy.com",
+      "icon": "Talentegy.svg"
+    },
+    "TeamUnify": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^teamunify$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TeamUnifyUpdateSubsystem !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TeamUnifyUpdateSubsystem !== 'undefined';"
+        }
+      ],
+      "description": "TeamUnify is an all-in-one swim platform that simplifies swim team management.",
+      "website": "https://www.teamunify.com",
+      "icon": "TeamUnify.svg"
+    },
+    "Tebra": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.tebra\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Tebra is an all-in-one EHR solution designed to streamline practice operations, improve patient care, and support financial performance.",
+      "website": "https://www.tebra.com",
+      "icon": "Tebra.svg"
+    },
+    "Tender Support": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tenderapp\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Tender !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Tender !== 'undefined';"
+        }
+      ],
+      "description": "Tender Support is a customer service software offering essential tools to enhance customer support.",
+      "website": "https://tenderapp.com",
+      "icon": "TenderSupport.svg"
+    },
+    "Tessitura": {
+      "cats": [
+        53
+      ],
+      "implies": [
+        "IIS",
+        "Microsoft ASP.NET",
+        "Windows Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!--[^\u003e]+tessitura version: (\\d*\\.\\d*\\.\\d*)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://www.tessituranetwork.com",
+      "icon": "tessitura.svg"
+    },
+    "Textline": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.textline\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Textline is a business texting platform designed for customer support, sales, marketing, and logistics teams to streamline communication and improve workflow efficiency.",
+      "website": "https://www.textline.com",
+      "icon": "Textline.svg"
+    },
+    "Tiled": {
+      "cats": [
+        53
+      ],
+      "description": "Tiled is a microapp platform proven to drive engagement and deliver insight.",
+      "website": "https://www.tiled.co",
+      "icon": "Tiled.svg"
+    },
+    "Tint Wiz": {
+      "cats": [
+        53
+      ],
+      "description": "Tint Wiz is a customer management platform designed to streamline operations, increase sales and provide exceptional service to customers.",
+      "website": "https://tintwiz.com",
+      "icon": "TintWiz.svg"
+    },
+    "Top Producer": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.topproducerwebsite\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Top Producer is an all-in-one business management platform, tailored for real estate as a CRM solution.",
+      "website": "https://www.topproducer.com",
+      "icon": "TopProducer.svg"
+    },
+    "TravPRO": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*data\\.travpromobile\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*data\\.travpromobile\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "TravPRO is a mobile sales solution designed to support travel agents in managing bookings and client interactions.",
+      "website": "https://travpromobile.com",
+      "icon": "TravPRO.svg"
+    },
+    "Tula": {
+      "cats": [
+        53,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Tula !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Tula !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TulaSpinner !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TulaUtil !== 'undefined';"
+        }
+      ],
+      "description": "Tula is a web-based yoga studio software facilitating management of payments, memberships, calendar sharing, registrations, credit tracking, attendance recording, and more for studio owners.",
+      "website": "https://tulasoftware.com",
+      "icon": "TulaSoftware.svg"
+    },
+    "Twyne": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.twyne\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof twyne !== 'undefined' \u0026\u0026 typeof twyne.alreadyLoadAnura !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof twyne.alreadyLoadAnura !== 'undefined';"
+        }
+      ],
+      "description": "Twyne is an advanced lead management, lead optimization, lead distribution and monetization platform with analytics.",
+      "website": "https://twyne.io",
+      "icon": "Twyne.svg"
+    },
+    "Universe Soft": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.universe-soft\\.ru/"
+            }
+          }
+        }
+      ],
+      "description": "Universe-Soft is a business automation platform for salons, clinics, and fitness centers in Russia.",
+      "website": "https://universe-soft.ru",
+      "icon": "UniverseSoft.svg"
+    },
+    "Unless": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.unless\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof unlessComponentCleanUp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof unlessComponentCleanUp !== 'undefined';"
+        }
+      ],
+      "description": "Unless is an AI-driven solution to enhance customer success.",
+      "website": "https://unless.com/",
+      "icon": "Unless.svg"
+    },
+    "Uplifter": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.uplifterinc\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof UPLIFTER_STRTOTIME_SETTINGS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof UPLIFTER_STRTOTIME_SETTINGS !== 'undefined';"
+        }
+      ],
+      "description": "Uplifter is a membership management software that organizes member data, tracks participation, processes payments, and supports communication within organizations.",
+      "website": "https://www.uplifterinc.com",
+      "icon": "Uplifter.svg"
+    },
+    "Vantaca": {
+      "cats": [
+        53
+      ],
+      "description": "Vantaca is a community management performance software that enables owners, operators, community management teams, accounting teams, and association boards to improve business performance.",
+      "website": "https://www.vantaca.com/",
+      "icon": "Vantaca.svg"
+    },
+    "Veloce": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*velocesolutions\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Veloce is a provider of CRM, marketing, and website services designed for healthcare practices to improve patient engagement and operational efficiency.",
+      "website": "https://www.velocesolutions.net",
+      "icon": "Veloce.svg"
+    },
+    "Velocify": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.velocify\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Velocify is a conversion optimization sales tool designed to improve sales processes and increase lead conversion rates.",
+      "website": "https://mortgagetech.ice.com/products/velocify"
+    },
+    "Vepaar": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.vepaar\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Vepaar is a software solution designed to help boost online businesses, providing features such as WhatsApp CRM, an online store, and a WhatsApp poll.",
+      "website": "https://vepaar.com",
+      "icon": "Vepaar.svg"
+    },
+    "Virtuagym": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VGTutorial !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VGTutorial !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof open_vg_custom_modal !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof trigger_vg_neutral_message !== 'undefined';"
+        }
+      ],
+      "description": "Virtuagym is a cloud-based membership management and coaching platform designed for personal trainers and fitness businesses of all sizes.",
+      "website": "https://business.virtuagym.com",
+      "icon": "Virtuagym.svg"
+    },
+    "Vtiger": {
+      "cats": [
+        53
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Vtiger !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Vtiger !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Vtiger_Base_Js !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Vtiger_Helper_Js !== 'undefined';"
+        }
+      ],
+      "description": "Vtiger is a cloud-based suite of marketing, sales and help desk offerings, which can be deployed separately or as an integrated, all-in-one ecosystem.",
+      "website": "https://www.vtiger.com",
+      "icon": "Vtiger.svg",
+      "cpe": "cpe:2.3:a:vtiger:vtiger_crm:*:*:*:*:*:*:*:*"
+    },
+    "WORKetc": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.worketc\\.com"
+            }
+          }
+        }
+      ],
+      "description": "WORKetc is an all-in-one cloud computing platform offering web-based CRM, project management, and collaboration tools.",
+      "website": "https://www.worketc.com",
+      "icon": "WORKetc.svg"
+    },
+    "Wabi": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wabi-app\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Wabi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Wabi !== 'undefined';"
+        }
+      ],
+      "description": "Wabi is a platform facilitating customer engagement through WhatsApp.",
+      "website": "https://wabi-app.com",
+      "icon": "Wabi.svg"
+    },
+    "Wati": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wati-integration-prod-service\\.clare\\.ai/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof wati_options !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wati_options !== 'undefined';"
+        }
+      ],
+      "description": "Wati is a WhatsApp Business API platform facilitating multiple-agent customer support.",
+      "website": "https://www.wati.io",
+      "icon": "Wati.svg"
+    },
+    "Wise Agent": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wiseagent\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Wise Agent is a real estate CRM platform that helps manage contacts and automate workflows.",
+      "website": "https://wiseagent.com",
+      "icon": "WiseAgent.svg"
+    },
+    "Wodify": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wodify\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof validateWodifyLeadForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof validateWodifyLeadForm !== 'undefined';"
+        }
+      ],
+      "description": "Wodify is a gym management software.",
+      "website": "https://www.wodify.com",
+      "icon": "Wodify.svg"
+    },
+    "WoowUp": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets-cdn\\.woowup\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WU !== 'undefined' \u0026\u0026 typeof WU._trackProductVTEXField !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WU._trackProductVTEXField !== 'undefined';"
+        }
+      ],
+      "description": "WoowUp is a tool of CRM and predictive marketing.",
+      "website": "https://www.woowup.com",
+      "icon": "WoowUp.png"
+    },
+    "Workadu": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.workadu\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Workadu is a business management system designed to simplify operations and streamline processes for businesses.",
+      "website": "https://www.workadu.com",
+      "icon": "Workadu.svg"
+    },
+    "Workbooks": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*secure\\.workbooks\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Workbooks is a platform that helps manage sales leads, automate tasks, and track marketing efforts from advertisements to invoices.",
+      "website": "https://www.workbooks.com",
+      "icon": "Workbooks.svg"
+    },
+    "Workday": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.myworkday\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof workday !== 'undefined' \u0026\u0026 typeof workday.appRoot !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof workday.appRoot !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof workdayMessages !== 'undefined';"
+        }
+      ],
+      "description": "Workday is an enterprise cloud platform that provides solutions for finance, human resources, and business planning.",
+      "website": "https://www.workday.com",
+      "icon": "Workday.svg"
+    },
+    "YogaTrail": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.yogatrail\\.com"
+            }
+          }
+        }
+      ],
+      "description": "YogaTrail is a software platform for managing yoga businesses.",
+      "website": "https://www.buzzwoo.de/projekte-kunden/yogatrail",
+      "icon": "YogaTrail.svg"
+    },
+    "Zenu": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.zenu\\.com\\.au"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof zenuDebug !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zenuDebug !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zenuHp !== 'undefined';"
+        }
+      ],
+      "description": "Zenu is an all-in-one CRM solution designed to manage real estate operations, including client interactions, property listings, and sales processes.",
+      "website": "https://www.zenu.com.au",
+      "icon": "Zenu.svg"
+    },
+    "Zoho": {
+      "cats": [
+        53
+      ],
+      "description": "Zoho is a web-based online office suite.",
+      "website": "https://www.zoho.com/",
+      "icon": "Zoho.svg"
+    },
+    "amoCRM": {
+      "cats": [
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.amocrm\\.(?:ru|com)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AMOCRM !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AMOCRM !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AMO_PIXEL_CLIENT !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof amoFormsWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof amoSocialButton !== 'undefined';"
+        }
+      ],
+      "description": "amoCRM is a web-based customer relationship management software solution.",
+      "website": "https://www.amocrm.com",
+      "icon": "amoCRM.svg"
+    },
+    "eShopCRM": {
+      "cats": [
+        53
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*eshopcrm\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "eShopCRM is an ecommerce CRM for Shopify.",
+      "website": "https://eshopcrm.com",
+      "icon": "eShopCRM.png"
+    },
+    "vcita": {
+      "cats": [
+        53,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widgets\\.vcdnita\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.vcita\\.com/widgets/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LiveSite !== 'undefined' \u0026\u0026 typeof LiveSite.btCheckout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LiveSite.btCheckout !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Vcita !== 'undefined';"
+        }
+      ],
+      "description": "vcita is an all-in-one customer service and business management software designed for service providers.",
+      "website": "https://www.vcita.com",
+      "icon": "vcita.svg"
+    }
+  }
+}

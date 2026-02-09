@@ -1,0 +1,368 @@
+{
+  "apps": {
+    "Adobe Fonts": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink [^\u003e]*href=\"[^\"]+use\\.typekit\\.(?:net|com)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*use\\.typekit\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Typekit !== 'undefined' \u0026\u0026 typeof Typekit.config !== 'undefined' \u0026\u0026 typeof Typekit.config.js !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Typekit.config.js || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Typekit.config.js !== 'undefined';",
+          "version": "try { return String(Typekit.config.js || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Adobe Fonts is a web-based service providing access to a vast library of high-quality fonts for web and print design.",
+      "website": "https://fonts.adobe.com",
+      "icon": "Adobe Fonts.svg"
+    },
+    "Bootstrap Icons": {
+      "cats": [
+        17
+      ],
+      "description": "Bootstrap Icons is a growing library of SVG icons that are designed by @mdo and maintained by the Bootstrap Team.",
+      "website": "https://icons.getbootstrap.com",
+      "icon": "Bootstrap Icons.svg"
+    },
+    "Bunny Fonts": {
+      "cats": [
+        17
+      ],
+      "implies": [
+        "Bunny"
+      ],
+      "description": "Bunny Fonts is an open-source, privacy-first web font platform designed to put privacy back into the internet.",
+      "website": "https://fonts.bunny.net",
+      "icon": "Bunny.svg"
+    },
+    "Cufon": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cufon-yui\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Cufon !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Cufon !== 'undefined';"
+        }
+      ],
+      "description": "Cufon is a tool used to overlap real text with an image.",
+      "website": "https://cufon.shoqolate.com",
+      "icon": "Cufon.png"
+    },
+    "Emfont": {
+      "cats": [
+        17
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof emfont !== 'undefined' \u0026\u0026 typeof emfont.Emfont !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof emfont.Emfont !== 'undefined';"
+        }
+      ],
+      "description": "Emfont is an open-source CJK webfont service that enables self-hosted, cache-efficient, and privacy-conscious distribution of open-source fonts.",
+      "website": "https://font.emtech.cc",
+      "icon": "Emfont.svg"
+    },
+    "Font Awesome": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:f|f)o(?:n|r)t-?(?:a|a)wesome(?:.*?([0-9a-fa-f]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fontawesome\\.com/([0-9a-z]+).js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FontAwesomeCdnConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FontAwesomeCdnConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ___FONT_AWESOME___ !== 'undefined';"
+        }
+      ],
+      "description": "Font Awesome is a font and icon toolkit based on CSS and Less.",
+      "website": "https://fontawesome.com/",
+      "icon": "Font Awesome.svg"
+    },
+    "FontServer": {
+      "cats": [
+        17
+      ],
+      "description": "FontServer is a online font delivery network service-provider for websites.",
+      "website": "https://fontserver.ir",
+      "icon": "FontServer.svg"
+    },
+    "Fork Awesome": {
+      "cats": [
+        17
+      ],
+      "description": "Fork Awesome is now a community effort based on Font Awesome by Dave Gandy.",
+      "website": "https://forkaweso.me",
+      "icon": "Fork Awesome.png"
+    },
+    "Glyphicons": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "(?:\u003clink[^\u003e]* href=[^\u003e]+glyphicons(?:\\.min)?\\.css|\u003cimg[^\u003e]* src=[^\u003e]+glyphicons)"
+            }
+          }
+        }
+      ],
+      "description": "Glyphicons are icon fonts which you can use in your web projects.",
+      "website": "https://glyphicons.com",
+      "icon": "Glyphicons.png"
+    },
+    "Google Font API": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*googleapis\\.com/.+webfont"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WebFonts !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WebFonts !== 'undefined';"
+        }
+      ],
+      "description": "Google Font API is a web service that supports open-source font files that can be used on your web designs.",
+      "website": "https://google.com/fonts",
+      "icon": "Google Font API.svg"
+    },
+    "Hoefler\u0026Co": {
+      "cats": [
+        17
+      ],
+      "description": "Hoefler\u0026Co is a digital type foundry (font design studio) in Woburn, Massachusetts (formerly New York City), founded by type designer Jonathan Hoefler. Hoefler\u0026Co designs typefaces for clients and for retail on its website.",
+      "website": "https://www.typography.com",
+      "icon": "Hoefler\u0026Co.svg"
+    },
+    "Ionicons": {
+      "cats": [
+        17
+      ],
+      "description": "Ionicons is an open-source icon set crafted for web, iOS, Android, and desktop apps.",
+      "website": "https://ionicons.com",
+      "icon": "Ionicons.svg"
+    },
+    "Lucide": {
+      "cats": [
+        17
+      ],
+      "description": "Lucide is an open-source icon library that provides 1000+ vector (svg) files for displaying icons and symbols in digital and non-digital projects.",
+      "website": "https://lucide.dev",
+      "icon": "Lucide.svg"
+    },
+    "MyFonts": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.myfonts\\.net"
+            }
+          }
+        }
+      ],
+      "description": "MyFonts is a digital fonts distributor, based in Woburn, Massachusetts.",
+      "website": "https://www.myfonts.com",
+      "icon": "MyFonts.svg"
+    },
+    "Symbolset": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.symbolset\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Symbolset is a tool that converts words into icons by utilizing font technology, enabling visual representation of text-based content for various applications.",
+      "website": "https://symbolset.com",
+      "icon": "Symbolset.svg"
+    },
+    "Twitter Emoji (Twemoji)": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*twemoji(?:\\.min)?\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof twemoji !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof twemoji !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof twemoji.base !== 'undefined';",
+          "version": "try { return String(twemoji.base || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Twitter Emoji is a set of open-source emoticons and emojis for Twitter, TweetDeck, and also for Android and iOS versions of the application.",
+      "website": "https://twitter.github.io/twemoji/"
+    },
+    "Typekit": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink [^\u003e]*href=\"[^\"]+use\\.typekit\\.(?:net|com)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*use\\.typekit\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Typekit !== 'undefined' \u0026\u0026 typeof Typekit.config !== 'undefined' \u0026\u0026 typeof Typekit.config.js !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Typekit.config.js || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Typekit.config.js !== 'undefined';",
+          "version": "try { return String(Typekit.config.js || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Typekit is an online service which offers a subscription library of fonts.",
+      "website": "https://typekit.com",
+      "icon": "Typekit.png"
+    },
+    "i30con": {
+      "cats": [
+        17
+      ],
+      "description": "i30con is an icon toolkit based on CSS and JavaScript.",
+      "website": "https://30nama.com/",
+      "icon": "30namaPlayer.png"
+    },
+    "sIFR": {
+      "cats": [
+        17
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sifr\\.js"
+            }
+          }
+        }
+      ],
+      "description": "sIFR is a JavaScript and Adobe Flash dynamic web fonts implementation.",
+      "website": "https://www.mikeindustries.com/blog/sifr",
+      "icon": "sIFR.png"
+    }
+  }
+}

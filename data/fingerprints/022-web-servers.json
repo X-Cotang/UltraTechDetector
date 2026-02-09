@@ -1,0 +1,1699 @@
+{
+  "apps": {
+    "AOLserver": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "aolserver/?([\\d.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://aolserver.com",
+      "icon": "AOLserver.png",
+      "cpe": "cpe:2.3:a:aol:aolserver:*:*:*:*:*:*:*:*"
+    },
+    "Amazon EC2": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Amazon Web Services"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "\\(amazon\\)"
+            }
+          }
+        }
+      ],
+      "description": "Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform, Amazon Web Services, that allows users to rent virtual computers on which to run their own computer applications.",
+      "website": "https://aws.amazon.com/ec2/",
+      "icon": "Amazon EC2.svg"
+    },
+    "Angie": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "C",
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^angie(?:/([\\d\\.]+))?$\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Angie is a drop-in replacement for the Nginx web server aiming to extend the functionality of the original version.",
+      "website": "https://angie.software/en/",
+      "icon": "default.svg"
+    },
+    "Apache APISIX": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^apisix(?:/([\\d\\.]+))?$\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-apisix-upstream-status": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Apache APISIX is an open-source, cloud-native API gateway developed by the Apache Software Foundation. It provides a scalable and high-performance solution for managing and securing API traffic.",
+      "website": "https://apisix.apache.org",
+      "icon": "Apache APISIX.svg",
+      "cpe": "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    },
+    "Apache HTTP Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "(?:apache(?:$|/([\\d.]+)|[^/-])|(?:^|\\b)httpd)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Apache is a free and open-source cross-platform web server software.",
+      "website": "https://httpd.apache.org/",
+      "icon": "Apache.svg",
+      "cpe": "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    },
+    "Apache Tomcat": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "h1,\\s*h2,\\s*h3,\\s*b\\s*\\{color:white;background-color:#525D76"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "font-family:Tahoma,Arial,sans-serif[^}]*}\\s*h1,\\s*h2,\\s*h3,\\s*b\\s*\\{[^}]*background-color:#525D76"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "\\btomcat\\b(?:-([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "^apache-coyote"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Apache Tomcat is an open-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.",
+      "website": "https://tomcat.apache.org",
+      "icon": "Apache Tomcat.svg",
+      "cpe": "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*"
+    },
+    "Apache Traffic Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "ats/?([\\d.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Apache Traffic Server is an open-source caching and proxying server that serves as an HTTP/1.1 and HTTP/2 reverse proxy with caching capabilities, load balancing, request routing, SSL termination, and support for advanced HTTP features.",
+      "website": "https://trafficserver.apache.org/",
+      "icon": "Apache Traffic Server.svg",
+      "cpe": "cpe:2.3:a:apache:traffic_server:*:*:*:*:*:*:*:*"
+    },
+    "Artifactory Web Server": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Artifactory"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "artifactory(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://jfrog.com/open-source/#os-arti",
+      "icon": "Artifactory.svg",
+      "cpe": "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:*:*:*"
+    },
+    "CactiveCloud": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^cactive$"
+            }
+          }
+        }
+      ],
+      "description": "CactiveCloud is a freemium based cloud provider and web server for static deployments of websites with HTML builds and serverless functions.",
+      "website": "https://cactivecloud.com",
+      "icon": "CactiveCloud.svg"
+    },
+    "Caddy": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^caddy$"
+            }
+          }
+        }
+      ],
+      "website": "https://caddyserver.com",
+      "icon": "caddy.svg",
+      "cpe": "cpe:2.3:a:caddyserver:caddy:*:*:*:*:*:*:*:*"
+    },
+    "Centminmod": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "CentOS",
+        "Nginx",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "centminmod"
+            }
+          }
+        }
+      ],
+      "website": "https://centminmod.com",
+      "icon": "centminmod.png"
+    },
+    "Cherokee": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^cherokee(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://www.cherokee-project.com",
+      "icon": "Cherokee.png",
+      "cpe": "cpe:2.3:a:cherokee-project:cherokee:*:*:*:*:*:*:*:*"
+    },
+    "CherryPy": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "cherrypy(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "CherryPy is an object-oriented web application framework using the Python programming language.",
+      "website": "https://cherrypy.org/",
+      "icon": "CherryPy.svg"
+    },
+    "CouchDB": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "couchdb/([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://couchdb.apache.org",
+      "icon": "CouchDB.png",
+      "cpe": "cpe:2.3:a:apache:couchdb:*:*:*:*:*:*:*:*"
+    },
+    "Cowboy": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Erlang"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^cowboy$"
+            }
+          }
+        }
+      ],
+      "description": "Cowboy is a small, fast, modular HTTP server written in Erlang.",
+      "website": "https://github.com/ninenines/cowboy",
+      "icon": "Cowboy.png"
+    },
+    "Daphne": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Python",
+        "TwistedWeb",
+        "Zope"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "daphne"
+            }
+          }
+        }
+      ],
+      "website": "https://github.com/django/daphne",
+      "icon": "daphne.svg"
+    },
+    "Deno": {
+      "cats": [
+        22
+      ],
+      "description": "A modern runtime for JavaScript and TypeScript.",
+      "website": "https://deno.land",
+      "icon": "deno.svg"
+    },
+    "ELOG HTTP": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "ELOG"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "elog http ?([\\d.-]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://midas.psi.ch/elog",
+      "icon": "ELOG.png"
+    },
+    "EZproxy": {
+      "cats": [
+        22,
+        64
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^ezproxy$"
+            }
+          }
+        }
+      ],
+      "description": "EZproxy is a web server and a reverse proxy that is usually used by libraries as a reverse proxy in front of electronic educational resources databases (e.g.: Scopus, PubMed, or Web of Science) in order to provide authentication and protect privacy.",
+      "website": "https://www.oclc.org/en/ezproxy.html",
+      "icon": "default.svg"
+    },
+    "EmbedThis Appweb": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mbedthis-appweb(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://embedthis.com/appweb",
+      "icon": "Embedthis.png",
+      "cpe": "cpe:2.3:a:embedthis:appweb:*:*:*:*:*:*:*:*"
+    },
+    "Ferron": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^ferron$"
+                }
+              },
+              {
+                "headers.x-ferron-cache": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Ferron is a web server offering automatic TLS certificate management, configuration, and security for online operations.",
+      "website": "https://ferron.sh",
+      "icon": "Ferron.svg"
+    },
+    "GlassFish": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "glassfish(?: server)?(?: open source edition)?(?: ?/?([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://glassfish.java.net",
+      "icon": "GlassFish.png",
+      "cpe": "cpe:2.3:a:oracle:glassfish_server:*:*:*:*:*:*:*:*"
+    },
+    "GoAhead": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "goahead"
+            }
+          }
+        }
+      ],
+      "website": "https://embedthis.com/products/goahead/index.html",
+      "icon": "GoAhead.png",
+      "cpe": "cpe:2.3:a:embedthis:goahead:*:*:*:*:*:*:*:*"
+    },
+    "Google App Engine": {
+      "cats": [
+        22
+      ],
+      "website": "https://cloud.google.com/appengine",
+      "icon": "Google App Engine.svg"
+    },
+    "Google Web Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "gws"
+            }
+          }
+        }
+      ],
+      "website": "https://en.wikipedia.org/wiki/Google_Web_Server",
+      "icon": "Google.svg",
+      "cpe": "cpe:2.3:a:google:web_server:*:*:*:*:*:*:*:*"
+    },
+    "H2O": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "C",
+        "HTTP/2"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^h2o(?:/)?([\\d\\.]+)?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "H2O is a fast and secure HTTP/2 server written in C by Kazuho Oku.",
+      "website": "https://github.com/h2o/h2o",
+      "icon": "default.svg"
+    },
+    "HCL Domino": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^lotus-domino$"
+            }
+          }
+        }
+      ],
+      "description": "HCL Domino, formerly called IBM Domino (1995) and Lotus Domino (1989), is an enterprise server application development platform.",
+      "website": "https://www.hcltechsw.com/domino",
+      "icon": "HCL Domino.svg",
+      "cpe": "cpe:2.3:a:ibm:lotus_domino:*:*:*:*:*:*:*:*"
+    },
+    "HHVM": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "PHP\\;confidence:75"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "hhvm/?([\\d.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://hhvm.com",
+      "icon": "HHVM.png",
+      "cpe": "cpe:2.3:a:facebook:hhvm:*:*:*:*:*:*:*:*"
+    },
+    "HP Compact Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "hp_compact_server(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://hp.com",
+      "icon": "HP.svg"
+    },
+    "HP iLO": {
+      "cats": [
+        22,
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "hp-ilo-server(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "HP iLO is a tool that provides multiple ways to configure, update, monitor, and run servers remotely.",
+      "website": "https://hp.com",
+      "icon": "HP.svg",
+      "cpe": "cpe:2.3:h:hp:integrated_lights-out:*:*:*:*:*:*:*:*"
+    },
+    "Hiawatha": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "hiawatha v([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://hiawatha-webserver.org",
+      "icon": "Hiawatha.png"
+    },
+    "Hypercorn": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "hypercorn"
+            }
+          }
+        }
+      ],
+      "website": "https://pgjones.gitlab.io/hypercorn/",
+      "icon": "hypercorn.png"
+    },
+    "IBM HTTP Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "ibm_http_server(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://ibm.com/software/webservers/httpservers",
+      "icon": "IBM.svg",
+      "cpe": "cpe:2.3:a:ibm:http_server:*:*:*:*:*:*:*:*"
+    },
+    "IIS": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Windows Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "(?i)^(?:microsoft-)?iis(?:/([\\d.]+))?\\;version:\\1"
+            }
+          },
+          "extract_version": [
+            {
+              "headers.server": "(?i)^(?:microsoft-)?iis/([\\d.]+)"
+            }
+          ]
+        }
+      ],
+      "description": "Internet Information Services (IIS) is an extensible web server software created by Microsoft for use with the Windows NT family.",
+      "website": "https://www.iis.net",
+      "icon": "Microsoft.svg",
+      "cpe": "cpe:2.3:a:microsoft:internet_information_server:*:*:*:*:*:*:*:*"
+    },
+    "Indy": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "indy(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://indyproject.org"
+    },
+    "Intel Active Management Technology": {
+      "cats": [
+        22,
+        46
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "intel\\(r\\) active management technology(?: ([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Intel Active Management Technology (AMT) is a proprietary remote management and control system for personal computers with Intel CPUs.",
+      "website": "https://intel.com",
+      "icon": "Intel Active Management Technology.png",
+      "cpe": "cpe:2.3:a:intel:active_management_technology:*:*:*:*:*:*:*:*"
+    },
+    "JBoss Application Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "jboss(?:-([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://jboss.org/jbossas.html",
+      "icon": "JBoss Application Server.png",
+      "cpe": "cpe:2.3:a:redhat:jboss_application_server:*:*:*:*:*:*:*:*"
+    },
+    "JBoss Web": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "JBoss Application Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "jbossweb(?:-([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://jboss.org/jbossweb",
+      "icon": "JBoss Web.png",
+      "cpe": "cpe:2.3:a:redhat:jbossweb:*:*:*:*:*:*:*:*"
+    },
+    "JBoss-EAP": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Java",
+        "JBoss Application Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^jboss-eap(?:/([\\d.]+))?$\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "JBoss Enterprise Application Platform (EAP) is a Jakarta EE-based application server runtime platform developed by Red Hat for building, deploying, and hosting Java applications and services.",
+      "website": "https://www.redhat.com/en/technologies/jboss-middleware/application-platform",
+      "icon": "JBoss Application Server.png",
+      "cpe": "cpe:2.3:a:redhat:jboss_enterprise_application_platform:*:*:*:*:*:*:*:*"
+    },
+    "Jetty": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "jetty(?:\\(([\\d\\.]*\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://www.eclipse.org/jetty",
+      "icon": "Jetty.png"
+    },
+    "Kangle": {
+      "cats": [
+        22,
+        64
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^kangle(?:/([\\d\\.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-cache": {
+                  "$regex": "^miss from (?:[\\w\u0026 ]+ )?kangle\\b"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Kangle is an open-source web server and reverse proxy software widely used in Chinese hosting environments for HTTP caching and virtual hosting.",
+      "website": "https://kangle.org",
+      "icon": "Kangle.svg"
+    },
+    "Kestrel": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^kestrel"
+            }
+          }
+        }
+      ],
+      "website": "https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel",
+      "icon": "kestrel.svg"
+    },
+    "LiteSpeed": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^litespeed$"
+            }
+          }
+        }
+      ],
+      "description": "LiteSpeed is a high-scalability web server.",
+      "website": "https://litespeedtech.com",
+      "icon": "LiteSpeed.svg",
+      "cpe": "cpe:2.3:a:litespeedtech:litespeed_web_server:*:*:*:*:*:*:*:*"
+    },
+    "LlamaLink Cloud Server": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Nginx"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^llamalink"
+            }
+          }
+        }
+      ],
+      "description": "LlamaLink Cloud Server is a custom dynamic web server based on Nginx Web server that load balance user traffic between hosting nodes and allows fast and cached experience to web and app users.",
+      "website": "https://llamalink.net",
+      "icon": "LlamaLink.png"
+    },
+    "Microsoft HTTPAPI": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "microsoft-httpapi(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Microsoft HTTPAPI is a kernel-mode HTTP driver in the Windows operating system responsible for handling HTTP requests and responses with efficiency, scalability, and security.",
+      "website": "https://learn.microsoft.com/en-us/windows/win32/http/http-api-start-page",
+      "icon": "Microsoft.svg"
+    },
+    "MiniServ": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Webmin"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "miniserv/([\\d\\.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://github.com/webmin/webmin/blob/master/miniserv.pl"
+    },
+    "MochiWeb": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mochiweb(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://github.com/mochi/mochiweb",
+      "cpe": "cpe:2.3:a:mochiweb_project:mochiweb:*:*:*:*:*:*:*:*"
+    },
+    "Mongrel": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Ruby"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mongrel"
+            }
+          }
+        }
+      ],
+      "website": "https://mongrel2.org",
+      "icon": "Mongrel.png",
+      "cpe": "cpe:2.3:a:zed_shaw:mongrel:*:*:*:*:*:*:*:*"
+    },
+    "Monkey HTTP Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "monkey/?([\\d.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://monkey-project.com",
+      "icon": "Monkey HTTP Server.png"
+    },
+    "Next.js Page Router SSR": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Next.js"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof  !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof .__NEXT_DATA__.gip !== 'undefined';",
+          "version": "try { return String(.__NEXT_DATA__.gip || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof .__NEXT_DATA__.gssp !== 'undefined';",
+          "version": "try { return String(.__NEXT_DATA__.gssp || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Next.js Server-Side Rendering.",
+      "website": "https://nextjs.org/docs/pages/building-your-application/rendering/server-side-rendering",
+      "icon": "Next.js.svg"
+    },
+    "Nginx": {
+      "cats": [
+        22,
+        64
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ccenter\u003enginx\u003c/center\u003e"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "nginx(?:/([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-fastcgi-cache": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.",
+      "website": "https://nginx.org/en",
+      "icon": "Nginx.svg",
+      "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*"
+    },
+    "OpenBSD httpd": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^openbsd httpd"
+            }
+          }
+        }
+      ],
+      "website": "https://man.openbsd.org/httpd.8",
+      "icon": "OpenBSD httpd.svg",
+      "cpe": "cpe:2.3:a:openbsd:openbsd:*:*:*:*:*:*:*:*"
+    },
+    "OpenGSE": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "gse"
+            }
+          }
+        }
+      ],
+      "description": "OpenGSE is a test suite used for testing servlet compliance. It is deployed by using WAR files that are deployed on the server engine.",
+      "website": "https://code.google.com/p/opengse",
+      "icon": "Google.svg"
+    },
+    "OpenResty": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Nginx"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "openresty(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "OpenResty is a web platform based on nginx which can run Lua scripts using its LuaJIT engine.",
+      "website": "https://openresty.org",
+      "icon": "OpenResty.svg"
+    },
+    "Oracle Application Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "oracle[- ]application[- ]server(?: containers for j2ee)?(?:[- ](\\d[\\da-z./]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://www.oracle.com/technetwork/middleware/ias/overview/index.html",
+      "icon": "Oracle.svg",
+      "cpe": "cpe:2.3:a:oracle:application_server:*:*:*:*:*:*:*:*"
+    },
+    "Oracle HTTP Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "oracle-http-server(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://oracle.com",
+      "icon": "Oracle.svg",
+      "cpe": "cpe:2.3:a:oracle:http_server:*:*:*:*:*:*:*:*"
+    },
+    "Oracle WebLogic Server": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Java"
+      ],
+      "description": "Oracle WebLogic Server is a Java-based application server that provides a platform for developing, deploying, and running enterprise-level Java applications.",
+      "website": "https://www.oracle.com/java/weblogic/",
+      "icon": "Oracle.svg",
+      "cpe": "cpe:2.3:a:bea:weblogic_server:*:*:*:*:*:*:*:*"
+    },
+    "Phusion Passenger": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "phusion passenger ([\\d.]+)\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "phusion passenger(?:\\(r\\))? ?([\\d.]+)?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Phusion Passenger is a free web server and application server with support for Ruby, Python and Node.js.",
+      "website": "https://phusionpassenger.com",
+      "icon": "Phusion Passenger.png",
+      "cpe": "cpe:2.3:a:phusionpassenger:phusion_passenger:*:*:*:*:*:*:*:*"
+    },
+    "RX Web Server": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "rx-web"
+            }
+          }
+        }
+      ],
+      "website": "https://developers.rokitax.co.uk/projects/rxweb",
+      "icon": "RXWeb.svg"
+    },
+    "Resin": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^resin(?:/(\\s*))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://caucho.com",
+      "icon": "Resin.png",
+      "cpe": "cpe:2.3:a:caucho:resin:*:*:*:*:*:*:*:*"
+    },
+    "RoadRunner": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "roadrunner"
+            }
+          }
+        }
+      ],
+      "description": "RoadRunner is a high-performance PHP application server, load balancer, and process manager written in Golang.",
+      "website": "https://roadrunner.dev",
+      "icon": "RoadRunner.svg"
+    },
+    "SimpleHTTP": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "simplehttp(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://example.com"
+    },
+    "Starlet": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^plack::handler::starlet"
+            }
+          }
+        }
+      ],
+      "website": "https://metacpan.org/pod/Starlet",
+      "icon": "Starlet.png"
+    },
+    "Tengine": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "tengine"
+            }
+          }
+        }
+      ],
+      "description": "Tengine is a web server which is based on the Nginx HTTP server.",
+      "website": "https://tengine.taobao.org",
+      "icon": "Tengine.png"
+    },
+    "TornadoServer": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "tornadoserver(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://tornadoweb.org",
+      "icon": "TornadoServer.png"
+    },
+    "TwistedWeb": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "twistedweb(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://twistedmatrix.com/trac/wiki/TwistedWeb",
+      "icon": "TwistedWeb.png"
+    },
+    "Undertow": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^undertow$"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^undertow(?:/([\\d.]+))?$\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Undertow is a flexible, high-performance web server written in Java, providing both blocking and non-blocking APIs based on NIO.",
+      "website": "https://undertow.io/",
+      "icon": "JBoss Application Server.png",
+      "cpe": "cpe:2.3:a:redhat:undertow:*:*:*:*:*:*:*:*"
+    },
+    "Uvicorn": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "uvicorn"
+            }
+          }
+        }
+      ],
+      "website": "https://www.uvicorn.org/",
+      "icon": "uvicorn.png"
+    },
+    "WEBrick": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^webrick/([\\d\\.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "WEBrick is a lightweight HTTP server library in Ruby, included in the standard library, primarily used for local development and testing of Ruby web applications.",
+      "website": "https://docs.ruby-lang.org/en/2.4.0/WEBrick.html",
+      "icon": "Ruby.png",
+      "cpe": "cpe:2.3:a:ruby-lang:webrick:*:*:*:*:*:*:*:*"
+    },
+    "Warp": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Haskell"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^warp/(\\d+(?:\\.\\d+)+)?$\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://www.stackage.org/package/warp",
+      "icon": "Warp.png"
+    },
+    "WebSphere": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "website": "https://www.ibm.com/products/websphere-application-server",
+      "icon": "websphere.svg",
+      "cpe": "cpe:2.3:a:ibm:websphere_application_server:-:*:*:*:*:*:*:*"
+    },
+    "Weblogic Server": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "JavaServer Pages"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^weblogic\\sserver\\s([\\d\\.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "WebLogic Server is an Application Server that runs on a middle tier, between back-end databases and related applications and browser-based thin clients.",
+      "website": "https://www.oracle.com/java/weblogic",
+      "icon": "Oracle.svg"
+    },
+    "Winstone Servlet Container": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "winstone(?:\\/([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "winstone servlet (?:container|engine) v?([\\d.]+)?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://winstone.sourceforge.net"
+    },
+    "XAMPP": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Apache HTTP Server",
+        "MySQL",
+        "PHP",
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ctitle\u003exampp(?: version ([\\d\\.]+))?\u003c/title\u003e\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']kai oswald seidler\\;confidence:10[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://www.apachefriends.org/en/xampp.html",
+      "icon": "XAMPP.png"
+    },
+    "Xitami": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "xitami(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://xitami.com",
+      "icon": "Xitami.png"
+    },
+    "Yaws": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "yaws(?: ([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Yaws (Yet Another Web Server) is an open-source web server designed to deliver dynamic content efficiently. It was developed by Claes (klacke) Wikström and is written in Erlang, a functional programming language.",
+      "website": "https://github.com/erlyaws/yaws",
+      "icon": "Yaws.png"
+    },
+    "Zend": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "zend(?:server)?(?:[\\s/]?([0-9.]+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://zend.com",
+      "icon": "Zend.png",
+      "cpe": "cpe:2.3:a:zend:zend_server:*:*:*:*:*:*:*:*"
+    },
+    "Zope": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^zope/"
+            }
+          }
+        }
+      ],
+      "website": "https://zope.org",
+      "icon": "Zope.png"
+    },
+    "gunicorn": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "gunicorn(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://gunicorn.org",
+      "icon": "gunicorn.png"
+    },
+    "libwww-perl-daemon": {
+      "cats": [
+        22
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "libwww-perl-daemon(?:/([\\d\\.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://metacpan.org/pod/HTTP::Daemon",
+      "icon": "libwww-perl-daemon.png"
+    },
+    "lighttpd": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "(?:l|l)ight(?:y)?(?:tpd)?(?:/([\\d\\.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Lighttpd is an open-source web server optimised for speed-critical environment.",
+      "website": "https://www.lighttpd.net",
+      "icon": "lighttpd.svg"
+    },
+    "mini_httpd": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mini_httpd(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://acme.com/software/mini_httpd",
+      "icon": "mini_httpd.png"
+    },
+    "nghttpx - HTTP/2 proxy": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "nghttpx nghttp2/?([\\d.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://nghttp2.org"
+    },
+    "thttpd": {
+      "cats": [
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "\\bthttpd(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://acme.com/software/thttpd",
+      "icon": "thttpd.png",
+      "cpe": "cpe:2.3:a:acme:thttpd:*:*:*:*:*:*:*:*"
+    }
+  }
+}

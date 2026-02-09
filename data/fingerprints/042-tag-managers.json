@@ -1,0 +1,269 @@
+{
+  "apps": {
+    "Adobe DTM": {
+      "cats": [
+        42
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _satellite !== 'undefined' \u0026\u0026 typeof _satellite.buildDate !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _satellite.buildDate !== 'undefined';"
+        }
+      ],
+      "description": "Dynamic Tag Management (DTM) is a tag management solution for Adobe Experience Cloud applications and others.",
+      "website": "https://marketing.adobe.com/resources/help/en_US/dtm/c_overview.html",
+      "icon": "adobedtm.png"
+    },
+    "Adobe Experience Platform Launch": {
+      "cats": [
+        42
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _satellite !== 'undefined' \u0026\u0026 typeof _satellite.buildInfo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _satellite.buildInfo !== 'undefined';"
+        }
+      ],
+      "description": "Adobe Experience Cloud Launch is an extendable tag management solution for Adobe Experience Cloud, Adobe Experience Platform, and other applications.",
+      "website": "https://docs.adobelaunch.com/getting-started",
+      "icon": "Adobe Experience Platform.svg"
+    },
+    "Commanders Act TagCommander": {
+      "cats": [
+        42
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tagcommander\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof tc_vars !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tc_vars !== 'undefined';"
+        }
+      ],
+      "description": "Commanders Act TagCommander is a European company providing a tag management product designed to handle website tags.",
+      "website": "https://www.commandersact.com/en/solutions/tagcommander/",
+      "icon": "Commanders Act.svg"
+    },
+    "Ensighten": {
+      "cats": [
+        42
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//nexus\\.ensighten\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Ensighten is a solution that enables secure management, implementation and control of website technologies.",
+      "website": "https://success.ensighten.com/hc/en-us",
+      "icon": "ensighten.png"
+    },
+    "Facebook Pixel Advanced Matching": {
+      "cats": [
+        42
+      ],
+      "implies": [
+        "Facebook Pixel"
+      ],
+      "description": "Facebook Pixel Advanced Matching is a feature that allows the optimization of Meta ads by sending hashed customer information with Meta Pixel events, aiding in improved conversion attribution and broader audience reach.",
+      "website": "https://www.facebook.com/business/help/611774685654668?id=1205376682832142",
+      "icon": "Meta.svg"
+    },
+    "Google Tag Manager": {
+      "cats": [
+        42
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- (?:end )?google tag manager --\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "googletagmanager\\.com/ns\\.html[^\u003e]+\u003e\u003c/iframe\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*googletagmanager\\.com/gtm\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof googletag !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof googletag !== 'undefined';"
+        }
+      ],
+      "description": "Google Tag Manager is a tag management system (TMS) that allows you to quickly and easily update measurement codes and related code fragments collectively known as tags on your website or mobile app.",
+      "website": "https://www.google.com/tagmanager",
+      "icon": "Google Tag Manager.svg"
+    },
+    "Matomo Tag Manager": {
+      "cats": [
+        42
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MatomoTagManager !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MatomoTagManager !== 'undefined';"
+        }
+      ],
+      "description": "Matomo Tag Manager manages tracking and marketing tags.",
+      "website": "https://developer.matomo.org/guides/tagmanager/introduction",
+      "icon": "Matomo.svg"
+    },
+    "TagPro": {
+      "cats": [
+        42
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tagpro\\.adpromedia\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof initAdproTags !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initAdproTags !== 'undefined';"
+        }
+      ],
+      "description": "TagPro is software that updates and allows you to manage tags within websites, identifying various types of variables to optimise loads for advertising.",
+      "website": "https://tagpro.adpromedia.net",
+      "icon": "TagPro.png"
+    },
+    "Tealium": {
+      "cats": [
+        42,
+        97
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/tealium/utag\\.js$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^(?:https?:)?//tags\\.tiqcdn\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TEALIUMENABLED !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TEALIUMENABLED !== 'undefined';"
+        }
+      ],
+      "description": "Tealium provides a sales enterprise tag management system and marketing software.",
+      "website": "https://tealium.com",
+      "icon": "Tealium.png"
+    },
+    "Yahoo! Tag Manager": {
+      "cats": [
+        42
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- (?:end )?yahoo! tag manager --\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*b\\.yjtag\\.jp/iframe"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://tagmanager.yahoo.co.jp/",
+      "icon": "Yahoo.svg"
+    },
+    "Yottaa": {
+      "cats": [
+        42,
+        74,
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.yottaa\\.\\w+/"
+            }
+          }
+        }
+      ],
+      "description": "Yottaa is an ecommerce optimisation platform that helps with conversions, performance and security.",
+      "website": "https://www.yottaa.com",
+      "icon": "Yottaa.svg"
+    }
+  }
+}

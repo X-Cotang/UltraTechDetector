@@ -1,0 +1,82 @@
+{
+  "apps": {
+    "AWS Certificate Manager": {
+      "cats": [
+        70
+      ],
+      "implies": [
+        "Amazon Web Services"
+      ],
+      "description": "AWS Certificate Manager is a service that lets you easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources.",
+      "website": "https://aws.amazon.com/certificate-manager/",
+      "icon": "AWS Certificate Manager.svg"
+    },
+    "DigiCert": {
+      "cats": [
+        70
+      ],
+      "website": "https://www.digicert.com/",
+      "icon": "DigiCert.svg"
+    },
+    "Entrust": {
+      "cats": [
+        70
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*seal\\.entrust\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof goEntrust !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof goEntrust !== 'undefined';"
+        }
+      ],
+      "description": "Entrust is a provider of SSL certificate badge for websites.",
+      "website": "https://www.entrust.com/products/digital-certificates",
+      "icon": "Entrust.svg"
+    },
+    "Identrust": {
+      "cats": [
+        70
+      ],
+      "description": "denTrust is a digital identity authentication solution.",
+      "website": "https://www.identrust.com/",
+      "icon": "Identrust.svg"
+    },
+    "Let's Encrypt": {
+      "cats": [
+        70
+      ],
+      "description": "Let's Encrypt is a free, automated, and open certificate authority.",
+      "website": "https://letsencrypt.org/",
+      "icon": "Lets Encrypt.svg"
+    },
+    "Sectigo": {
+      "cats": [
+        70
+      ],
+      "description": "Sectigo provides SSL certificate and computer security products.",
+      "website": "https://sectigo.com/",
+      "icon": "Sectigo.svg"
+    },
+    "Thawte": {
+      "cats": [
+        70
+      ],
+      "description": "Thawte is a provider of SSL certificates, offering a site seal as a visual indicator of website security.",
+      "website": "https://www.thawte.com",
+      "icon": "Thawte.svg"
+    }
+  }
+}

@@ -1,0 +1,1484 @@
+{
+  "apps": {
+    "A8.net": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*statics\\.a8\\.net"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof A8salesCookieRepository !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof A8salesCookieRepository !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof a8sales !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof map_A8 !== 'undefined';"
+        }
+      ],
+      "description": " A8.net is an affiliate marketing network.",
+      "website": "https://www.a8.net",
+      "icon": "A8.net.png"
+    },
+    "AWIN": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*dwin1\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AWIN !== 'undefined' \u0026\u0026 typeof AWIN.Tracking !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AWIN.Tracking !== 'undefined';"
+        }
+      ],
+      "description": "AWIN is a global affiliate marketing network.",
+      "website": "https://www.awin.com",
+      "icon": "AWIN.svg"
+    },
+    "AccessTrade": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*accesstrade\\.net/js/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*click\\.accesstra\\.de/js/nct/lp\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "AccessTrade is an affiliate marketing platform based on the CPA model developed by Interspace Co.",
+      "website": "https://accesstrade.global/",
+      "icon": "AccessTrade.png"
+    },
+    "Admitad": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*artfut\\.com/static/(?:tracking|crossdevice)\\.min\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.admitad\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ADMITAD !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ADMITAD !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof admitad !== 'undefined';"
+        }
+      ],
+      "description": "Admitad is an affiliate network that acts as an intermediary between advertisers and publishers.",
+      "website": "https://www.admitad.com",
+      "icon": "Admitad.svg"
+    },
+    "Affilae": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.affilae\\.com/(?:.+v([\\d\\.]+)|.+)?\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Affilae is an affiliate marketing platform that enables brands to connect, collaborate with influencers and affiliates.",
+      "website": "https://affilae.com",
+      "icon": "Affilae.png"
+    },
+    "Affiliate B": {
+      "cats": [
+        71,
+        36
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*t\\.afi-b\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Affiliate B is an advertising system that allows site operators (HP, blogs, e-mail newsletters, etc.) to place advertiser advertisements on their own sites.",
+      "website": "https://affiliate-b.com",
+      "icon": "Affiliate B.svg"
+    },
+    "Affiliate Future": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tags\\.affiliatefuture\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Affiliate Future is a provider of advertisers with marketing solution through its affiliate network and tools.",
+      "website": "https://affiliatefuture.com",
+      "icon": "Affiliate Future.png"
+    },
+    "Affiliatly": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.affiliatly\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Affiliatly is an affiliate marketing software for ecommerce store owners.",
+      "website": "https://www.affiliatly.com",
+      "icon": "Affiliatly.png"
+    },
+    "Affilio": {
+      "cats": [
+        71
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Affilio !== 'undefined' \u0026\u0026 typeof Affilio.widget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Affilio.widget !== 'undefined';"
+        }
+      ],
+      "description": "Affilio is an Iranian affiliate marketing platform.",
+      "website": "https://affilio.ir",
+      "icon": "Affilio.png"
+    },
+    "Affilo": {
+      "cats": [
+        71,
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//affilo\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Affilo is an all-in-one solution for referrals and affiliate marketing.",
+      "website": "https://affilo.io",
+      "icon": "Affilo.png"
+    },
+    "Amazon Associates": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.associates-amazon\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Amazon Associates is an affiliate marketing program that allows website owners and bloggers to create links and earn referral fees when customers click through and buy products from Amazon.",
+      "website": "https://affiliate-program.amazon.com",
+      "icon": "Amazon.svg"
+    },
+    "Backstage": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.yourbackstage\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Backstage is a provider of premium marketing templates designed for affiliates, offering ready-made emails, videos, and funnels to streamline campaign performance.",
+      "website": "https://yourbackstage.io",
+      "icon": "Backstage.svg"
+    },
+    "Booking.com": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*aff\\.bstatic\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Booking.com is one of the largest ecommerce travel companies in the world. As an affiliate member, you can make up to 40% commission.",
+      "website": "https://www.booking.com/affiliate-program/v2/selfmanaged.html",
+      "icon": "Booking.com.svg"
+    },
+    "CPABuild": {
+      "cats": [
+        71
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CPABuildLock !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CPABuildLock !== 'undefined';"
+        }
+      ],
+      "description": "CPABuild is a next generation CPA network with integrated template building and sharing functionality.",
+      "website": "https://cpabuild.com",
+      "icon": "CPABuild.png"
+    },
+    "Cellxpert": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cellxpert\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Cellxpert is a SaaS platform for affiliate and partner program management, providing tools for tracking, reporting, and optimizing performance-based marketing campaigns.",
+      "website": "https://www.cellxpert.com",
+      "icon": "Cellxpert.svg"
+    },
+    "Clickbank": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*r\\.wdfl\\.co"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cbtb !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cbtb !== 'undefined';"
+        }
+      ],
+      "website": "https://www.clickbank.com/",
+      "icon": "Clickbank.svg"
+    },
+    "Convertiser": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.convertiser\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.convertiser\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Convertiser is a website monetization platform from Poland that helps publishers and advertisers optimize revenue through performance-based marketing solutions.",
+      "website": "https://convertiser.com",
+      "icon": "Convertiser.svg"
+    },
+    "Digistore24": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*digistore/digistore\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.digistore24\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DIGISTORE_LINK_ID_KEY !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DIGISTORE_LINK_ID_KEY !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DIGISTORE_VENDORKEY !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof getTheSourceForDigistoreLinks !== 'undefined';"
+        }
+      ],
+      "description": "Digistore24 is a German digital reselling and affiliate marketing platform.",
+      "website": "https://www.digistore24.com",
+      "icon": "Digistore24.svg"
+    },
+    "Dovetale": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*dttrk\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Dovetale !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Dovetale !== 'undefined';"
+        }
+      ],
+      "description": "Dovetale (Acquired by Shopify) helps e-commerce stores recruit, manage, \u0026 grow their sales with communities of people who love their products.",
+      "website": "https://dovetale.com/",
+      "icon": "Dovetale.png"
+    },
+    "Duel": {
+      "cats": [
+        71
+      ],
+      "implies": [
+        "Angular",
+        "MongoDB",
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.duel\\.me/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DUEL !== 'undefined' \u0026\u0026 typeof DUEL.apiURL !== 'undefined' \u0026\u0026 DUEL.apiURL === 'api\\.duel\\.me'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DUEL.apiURL !== 'undefined';",
+          "version": "try { return String(DUEL.apiURL || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Duel is a customer advocacy marketing platform.",
+      "website": "https://www.duel.tech",
+      "icon": "Duel.svg"
+    },
+    "Effiliation": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.effiliation\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Effiliation is a performance marketing platform and affiliate network that facilitates partnerships between advertisers and publishers for commission-based promotion of products and services.",
+      "website": "https://www.effiliation.com",
+      "icon": "Effiliation.png"
+    },
+    "Evermos": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.evermos\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Evermos is a connected commerce platform that enables resellers and drop shippers to earn commissions.",
+      "website": "https://evermos.com",
+      "icon": "Evermos.svg"
+    },
+    "FinanceAds": {
+      "cats": [
+        71
+      ],
+      "description": "FinanceAds is a performance marketing agency that has grown affiliate network for the financial sector.",
+      "website": "https://www.financeads.com",
+      "icon": "Financeads.png"
+    },
+    "FirstPromoter": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.firstpromoter\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FirstPromoterAPI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FirstPromoterAPI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fprom_obj_ !== 'undefined';"
+        }
+      ],
+      "description": "FirstPromoter is a software platform that helps businesses to create, manage and track their affiliate marketing programs.",
+      "website": "https://firstpromoter.com",
+      "icon": "FirstPromoter.svg"
+    },
+    "GoAffPro": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.goaffpro\\.com/loader\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof gfp_api_server !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gfp_api_server !== 'undefined';"
+        }
+      ],
+      "description": "Goaffpro is an affiliate marketing solution for ecommerce stores.",
+      "website": "https://goaffpro.com/",
+      "icon": "GoAffPro.svg"
+    },
+    "Hotmart": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hotmart\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HotmartLauncherObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HotmartLauncherObject !== 'undefined';"
+        }
+      ],
+      "description": "HotMart is a Brazilian-based affiliate marketing system.",
+      "website": "https://hotmart.com",
+      "icon": "Hotmart.svg"
+    },
+    "Impact": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*d\\.impactradius-event\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ImpactRadiusEvent !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof irEvent !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ImpactRadiusEvent !== 'undefined';"
+        }
+      ],
+      "description": "Impact helps businesses contract and pay partners.",
+      "website": "https://impact.com/",
+      "icon": "Impact.svg"
+    },
+    "JANet": {
+      "cats": [
+        71
+      ],
+      "description": "JANet is an affiliate marketing network.",
+      "website": "https://j-a-net.jp",
+      "icon": "JANet.png"
+    },
+    "Klook": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.klook\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Klook is a travel affiliate system designed to connect users with various travel services and experiences.",
+      "website": "https://www.klook.com",
+      "icon": "Klook.svg"
+    },
+    "LeadDyno": {
+      "cats": [
+        71,
+        10
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LeadDyno !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LeadDyno !== 'undefined';"
+        }
+      ],
+      "description": "LeadDyno is a platform that provides affiliate marketing and tracking services, allowing businesses to set up, manage, and analyse their affiliate programs.",
+      "website": "https://www.leaddyno.com",
+      "icon": "LeadDyno.svg"
+    },
+    "Line2": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//line2text\\.me/s/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Line2_W_OBJ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Line2_W_OBJ !== 'undefined';"
+        }
+      ],
+      "description": "Line2 is an affiliate network that enables travel-related publishers and partners to monetize web traffic through targeted travel offers and commissions.",
+      "website": "https://www.line2.com",
+      "icon": "Line2.svg"
+    },
+    "Moshimo": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.moshimo\\.com/af/"
+            }
+          }
+        }
+      ],
+      "description": "Moshimo is a free affiliate service for individuals.",
+      "website": "https://af.moshimo.com",
+      "icon": "Moshimo.png"
+    },
+    "Narrativ": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.narrativ\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Narrativ is a subscription technology platform for brands to acquire new customers through trusted creators.",
+      "website": "https://narrativ.com/",
+      "icon": "Narrativ.png"
+    },
+    "OSI Tracker": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ositracker\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "OSI Tracker is an affiliate marketing and tracking software.",
+      "website": "https://ositracker.com",
+      "icon": "OSITracker.svg"
+    },
+    "Optimise": {
+      "cats": [
+        71,
+        36
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*track\\.omguk\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OMID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OMID !== 'undefined';",
+          "version": "try { return String(OMID || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Optimise Media Group is a UK-based performance advertising network.",
+      "website": "https://www.optimisemedia.com",
+      "icon": "Optimise.svg"
+    },
+    "Partner Driven": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.partnerdriven\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Partner Driven is a real estate investment approach that involves partnerships between investors to pool resources and share risks, aimed at maximizing returns through collaborative efforts.",
+      "website": "https://partnerdriven.com",
+      "icon": "PartnerDriven.svg"
+    },
+    "PartnerStack": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.growsumo\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.partnerstack\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof growsumo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof growsumo !== 'undefined';"
+        }
+      ],
+      "description": "PartnerStack is a platform facilitating SaaS brand growth through streamlined partner management.",
+      "website": "https://partnerstack.com",
+      "icon": "PartnerStack.svg"
+    },
+    "Partnerize": {
+      "cats": [
+        71
+      ],
+      "description": "Partnerize is the only partnership management solution for marketers seeking high quality, scalable subsidies to primary channels.",
+      "website": "https://prf.hn",
+      "icon": "Partnerize.png"
+    },
+    "Partnero": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.partnero\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Partnero is a partnership management platform designed for relationship-building.",
+      "website": "https://www.partnero.com",
+      "icon": "Partnero.svg"
+    },
+    "Pepperjam": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.pepperjam\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Pepperjam !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pepperjam !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PepperjamTracking !== 'undefined';"
+        }
+      ],
+      "description": "Pepperjam is an affiliate marketing solutions provider.",
+      "website": "https://www.pepperjam.com",
+      "icon": "Pepperjam.png"
+    },
+    "Post Affiliate Pro": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:affiliate|associate)\\..+/scripts/trackjs\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*postaffiliatepro\\.com/scripts/trackjs\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PostAffAction !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PostAffAction !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PostAffCookie !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PostAffInfo !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PostAffTracker !== 'undefined';"
+        }
+      ],
+      "description": "Post Affiliate Pro is a software built for online stores and ecommerce websites that need to track and monitor their affiliate network.",
+      "website": "https://www.postaffiliatepro.com",
+      "icon": "Post Affiliate Pro.svg"
+    },
+    "Rakuten": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.linksynergy\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tag\\.rmp\\.rakuten\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rakutenRanMID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rakutenRanMID !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rakutenSource !== 'undefined';"
+        }
+      ],
+      "description": "Rakuten (formerly Ebates) allows you to earn cash-back rewards.",
+      "website": "https://www.rakuten.com/",
+      "icon": "Rakuten.svg"
+    },
+    "Reditus": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getreditus\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Reditus is a partner management tool for B2B SaaS companies.",
+      "website": "https://www.getreditus.com",
+      "icon": "Reditus.svg"
+    },
+    "Refersion": {
+      "cats": [
+        71,
+        36
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.refersion\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Refersion is an affiliate management app.",
+      "website": "https://refersion.com",
+      "icon": "Refersion.svg"
+    },
+    "RevenueHunt": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*admin\\.revenuehunt\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "RevenueHunt is an affiliate marketing and advertising company specializing in paid surveys and cost per lead campaigns.",
+      "website": "https://revenuehunt.com",
+      "icon": "RevenueHunt.png"
+    },
+    "Rewardful": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*r\\.wdfl\\.co"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Rewardful !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Rewardful !== 'undefined';"
+        }
+      ],
+      "description": "Rewardful is a way for SaaS companies to setup affiliate and referral programs with Stripe.",
+      "website": "https://www.getrewardful.com/",
+      "icon": "Rewardful.svg"
+    },
+    "ShoutOut": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.shoutout\\.global/"
+            }
+          }
+        }
+      ],
+      "description": "ShoutOut is a multi-level marketing SaaS solution that allows tracking of affiliates.",
+      "website": "https://www.shoutout.global",
+      "icon": "ShoutOut.png"
+    },
+    "Skimlinks": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.skimresources\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __SKIM_JS_GLOBAL__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __SKIM_JS_GLOBAL__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof addSkimlinks !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof skimlinksAPI !== 'undefined';"
+        }
+      ],
+      "description": "Skimlinks is a content monetization platform for online publishers.",
+      "website": "https://skimlinks.com",
+      "icon": "Skimlinks.svg"
+    },
+    "Social Snowball": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof snowballTrackScript !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof snowballTrackScript !== 'undefined';"
+        }
+      ],
+      "description": "Social Snowball is an affiliate and referral marketing platform tailored for ecommerce brands.",
+      "website": "https://socialsnowball.io",
+      "icon": "SocialSnowball.svg"
+    },
+    "Sovrn//Commerce": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:^[^/]*//[^/]*viglink\\.com/api/|vglnk\\.js)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof vglnk !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vglnk !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vl_cB !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vl_disable !== 'undefined';"
+        }
+      ],
+      "description": "Sovrn//Commerce is  a content monetization tool for publishers.",
+      "website": "https://www.sovrn.com/publishers/commerce/",
+      "icon": "Sovrn.png"
+    },
+    "TSA Commerce": {
+      "cats": [
+        71
+      ],
+      "description": "TSA Commerce is a Turbo SEO Affiliate Commerce plugin for WordPress that integrates search engine optimization with affiliate marketing to enhance site monetization.",
+      "website": "https://tsacommerce.com",
+      "icon": "TSACommerce.svg"
+    },
+    "Tapfiliate": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tapfiliate\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TapfiliateObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TapfiliateObject !== 'undefined';"
+        }
+      ],
+      "description": "Tapfiliate is a cloud-based affiliate marketing software that helps businesses to create, track, and optimise their own affiliate marketing programs.",
+      "website": "https://tapfiliate.com",
+      "icon": "Tapfiliate.svg"
+    },
+    "The Rave": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*scripts\\.therave\\.co"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof raveStateManager !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof raveStateManager !== 'undefined';"
+        }
+      ],
+      "description": "The Rave is a platform offering affiliate, referral, and user-generated content tools to set up post-purchase incentives.",
+      "website": "https://therave.co",
+      "icon": "TheRave.svg"
+    },
+    "Tolt": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tolt\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof toltAPI !== 'undefined' \u0026\u0026 toltAPI === '\\.tolt\\.io/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof toltAPI !== 'undefined';",
+          "version": "try { return String(toltAPI || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tolt_referral !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof toltio !== 'undefined';"
+        }
+      ],
+      "description": "Tolt is an affiliate marketing software designed for SaaS startups.",
+      "website": "https://tolt.io",
+      "icon": "Tolt.svg"
+    },
+    "Tradedoubler": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*swrap\\.tradedoubler\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Tradedoubler is a global affiliate marketing network.",
+      "website": "https://www.tradedoubler.com/",
+      "icon": "Tradedoubler.svg"
+    },
+    "TravelPayouts": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.travelpayouts\\.com"
+            }
+          }
+        }
+      ],
+      "description": "TravelPayouts is a global affiliate network that helps monetize travel-related web traffic through partnerships with airlines, hotels, and other travel service providers.",
+      "website": "https://www.travelpayouts.com",
+      "icon": "TravelPayouts.svg"
+    },
+    "Upfluence": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.upfluence\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Upfluence is the all-in-one affiliate and influencer marketing platform for ecommerce and direct-to-consumer brands.",
+      "website": "https://www.upfluence.com",
+      "icon": "Upfluence.svg"
+    },
+    "ValueCommerce": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.valuecommerce\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ValueCommerce is a pay-per-performance advertising affiliate marketing network.",
+      "website": "https://www.valuecommerce.co.jp",
+      "icon": "ValueCommerce.png"
+    },
+    "Webgains": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.webgains\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ITCLKQ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ITCLKQ !== 'undefined';"
+        }
+      ],
+      "description": "Webgains is an affiliate marketing network.",
+      "website": "https://www.webgains.com/",
+      "icon": "Webgains.svg"
+    },
+    "eBay Partner Network": {
+      "cats": [
+        71,
+        94
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*epnt\\.ebay\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "eBay Partner Network is an online referral program where eBay pays commissions to referrers on sales generated by customers they’ve referred.",
+      "website": "https://partnernetwork.ebay.com",
+      "icon": "eBay.svg"
+    },
+    "eBay Store": {
+      "cats": [
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^ebay server$"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $ebay !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $ebay.tracking !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ebay.gadgetMonitoring !== 'undefined';"
+        }
+      ],
+      "description": "eBay is a platform that either redirects users to eBay or displays a link to an eBay store.",
+      "website": "https://www.ebay.com",
+      "icon": "eBay.svg"
+    }
+  }
+}

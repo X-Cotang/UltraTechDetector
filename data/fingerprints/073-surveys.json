@@ -1,0 +1,915 @@
+{
+  "apps": {
+    "Bestie": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.bestie\\.ai"
+            }
+          }
+        }
+      ],
+      "description": "Bestie is a platform that provides AI-powered post-purchase surveys for Shopify brands, automating the survey creation process.",
+      "website": "https://www.bestie.ai",
+      "icon": "Bestie.svg"
+    },
+    "Brandquiz": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.brandquiz\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof brandquizEmbed !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof brandquizEmbed !== 'undefined';"
+        }
+      ],
+      "description": "Brandquiz is a platform for creating quizzes and surveys to capture leads, collect feedback, and engage audiences.",
+      "website": "https://www.brandquiz.io",
+      "icon": "Brandquiz.svg"
+    },
+    "Clicktools": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.clicktools\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Clicktools is a feedback system developed by CallidusCloud for collecting and analyzing customer input across various channels.",
+      "website": "https://clicktools.com"
+    },
+    "Crowdsignal": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*secure\\.polldaddy\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Crowdsignal is an online tool formerly known as Polldaddy that enables the creation of free polls for embedding on websites.",
+      "website": "https://crowdsignal.com",
+      "icon": "Crowdsignal.svg"
+    },
+    "CustomerSure": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*resources\\.customersure\\.com"
+            }
+          }
+        }
+      ],
+      "description": "CustomerSure is a software platform designed to gather, manage, and respond to customer feedback, enhancing satisfaction and driving sales growth.",
+      "website": "https://www.customersure.com",
+      "icon": "CustomerSure.svg"
+    },
+    "Delighted": {
+      "cats": [
+        73
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _delighted !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _delighted !== 'undefined';"
+        }
+      ],
+      "description": "Delighted is a feedback collection and analysis SaaS, offering a web and mobile solution that uses the Net Promoter System (NPS) to gauge and score customer experience.",
+      "website": "https://delighted.com",
+      "icon": "Delighted.svg"
+    },
+    "Doorbell": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.doorbell\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Doorbell !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Doorbell !== 'undefined';"
+        }
+      ],
+      "description": "Doorbell is a platform that enables the collection, management, and analysis of customer feedback.",
+      "website": "https://doorbell.io",
+      "icon": "Doorbell.svg"
+    },
+    "EasyPolls": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.easypolls\\.net"
+            }
+          }
+        }
+      ],
+      "description": "EasyPolls is a tool that allows poll creation and sharing across websites, Facebook, Twitter, or via a direct link to the poll, enabling users to engage audiences across multiple platforms.",
+      "website": "https://easypolls.net",
+      "icon": "EasyPolls.svg"
+    },
+    "Emojicom": {
+      "cats": [
+        73
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $emojicom !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $emojicom !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EMOJICOM_BASE_PATH !== 'undefined';",
+          "version": "try { return String(EMOJICOM_BASE_PATH || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof emojicom !== 'undefined';"
+        }
+      ],
+      "description": "Emojicom is a tool for collecting feedback through emojis, enabling the capture of visitors' emotions.",
+      "website": "https://emojicom.io",
+      "icon": "Emojicom.svg"
+    },
+    "Enalyzer": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*surveys\\.enalyzer\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Enalyzer is an online survey creation platform.",
+      "website": "https://www.enalyzer.com",
+      "icon": "Enalyzer.svg"
+    },
+    "FeedbackAutomatic": {
+      "cats": [
+        73
+      ],
+      "description": "FeedbackAutomatic is a platform that enables businesses to collect customer feedback through surveys, generating more online reviews to enhance their online reputation.",
+      "website": "https://feedbackautomatic.com",
+      "icon": "FeedbackAutomatic.svg"
+    },
+    "Guest Suite": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.guestapp\\.me"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof guestsuite !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof guestsuite !== 'undefined';"
+        }
+      ],
+      "description": "Guest Suite is a tool that collects customer opinions during their stay, directly from the reception of the establishment.",
+      "website": "https://guestapp.me",
+      "icon": "GuestSuite.svg"
+    },
+    "Hotjar Incoming Feedback": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hotjar\\.com/preact-incoming-feedback"
+            }
+          }
+        }
+      ],
+      "description": "Hotjar Incoming Feedback is a widget that sits at the edge of a page.",
+      "website": "https://www.hotjar.com",
+      "icon": "Hotjar.svg"
+    },
+    "HulkApps Form Builder": {
+      "cats": [
+        73,
+        100,
+        110
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*formbuilder\\.hulkapps\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "HulkApps Form Builder is an application that creates customizable, job-specific forms for unit needs.",
+      "website": "https://www.hulkapps.com/products/form-builder-shopify",
+      "icon": "HulkApps.svg"
+    },
+    "Impressure": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*events\\.impressure\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Impressure !== 'undefined' \u0026\u0026 typeof Impressure.commands !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Impressure.commands !== 'undefined';"
+        }
+      ],
+      "description": "Impressure is a platform for creating and publishing offer paths, dynamic forms, and surveys through a user-friendly interface.",
+      "website": "https://impressure.io",
+      "icon": "Impressure.svg"
+    },
+    "Iterate": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.iteratehq\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Iterate !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Iterate !== 'undefined';"
+        }
+      ],
+      "description": "Iterate is a customer insights manager (CIM) system, facilitating website and email surveys to harness customer insights across your entire business.",
+      "website": "https://iteratehq.com",
+      "icon": "Iterate.svg"
+    },
+    "KnoCommerce": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.knocdn\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Kno !== 'undefined' \u0026\u0026 typeof Kno.survey !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Kno.survey !== 'undefined';"
+        }
+      ],
+      "description": "KnoCommerce is a post-purchase surveys system designed to collect customer feedback.",
+      "website": "https://knocommerce.com",
+      "icon": "KnoCommerce.svg"
+    },
+    "Marquiz": {
+      "cats": [
+        73,
+        110
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunkmarquiz_quiz !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkmarquiz_quiz !== 'undefined';"
+        }
+      ],
+      "description": "Marquiz is an online tool designed for creating user-friendly forms, quizzes, and surveys tailored for digital marketing.",
+      "website": "https://marquiz.io",
+      "icon": "Marquiz.svg"
+    },
+    "Mosio": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*chat\\.mosio\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Mosio is a text messaging software solution for research that supports participant communication and data collection.",
+      "website": "https://www.mosio.com",
+      "icon": "Mosio.svg"
+    },
+    "OpinionBar": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.opinionbar\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.opinionbar\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "OpinionBar is a platform offering feedback forms and surveys that provide cash payments.",
+      "website": "https://www.opinionbar.com",
+      "icon": "OpinionBar.svg"
+    },
+    "OpinionLab": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.foresee\\.com/code/([\\d.]+)-oo/oo_engine\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OOo !== 'undefined' \u0026\u0026 typeof OOo.Browser !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OOo.version !== 'undefined';",
+          "version": "try { return String(OOo.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OOo.Browser !== 'undefined';"
+        }
+      ],
+      "description": "OpinionLab is a omnichannel customer feedback solution provider.",
+      "website": "https://www.opinionlab.com",
+      "icon": "OpinionLab.png"
+    },
+    "Poll Everywhere": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.polleverywhere\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Poll Everywhere is a tool that transforms presentations, meetings, and classes into immersive, interactive experiences, enabling audience engagement through real-time participation.",
+      "website": "https://www.polleverywhere.com",
+      "icon": "PollEverywhere.svg"
+    },
+    "Pollster": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.pollster\\.pl"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.pollster\\.pl"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Pollster is a feedback and research system based in Poland that collects and analyses survey data.",
+      "website": "https://pollster.pl",
+      "icon": "Pollster.svg"
+    },
+    "Pulse Insights": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.pulseinsights\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Pulse Insights is a customer feedback platform that helps enterprises gather and analyze insights to understand customer needs and improve decision-making.",
+      "website": "https://www.pulseinsights.com",
+      "icon": "PulseInsights.svg"
+    },
+    "Qualaroo": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.qualaroo\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof QUALAROO_DNT !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof QUALAROO_DNT !== 'undefined';"
+        }
+      ],
+      "description": "Qualaroo provides surveys on websites and apps to get user feedback.",
+      "website": "https://qualaroo.com",
+      "icon": "Qualaroo.svg"
+    },
+    "Qualtrics": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.qualtrics\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof QSI !== 'undefined' \u0026\u0026 typeof QSI.ClientSideTargeting !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof QSI.ClientSideTargeting !== 'undefined';"
+        }
+      ],
+      "description": "Qualtrics is an cloud-based platform for creating and distributing web-based surveys.",
+      "website": "https://www.qualtrics.com",
+      "icon": "Qualtrics.svg"
+    },
+    "Refiner": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.refiner\\.io/v([\\d]+)/client\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _refiner !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _refiner !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _refinerAlreadyBooted !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _refinerQueue !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _refinerTracker !== 'undefined';"
+        }
+      ],
+      "description": "Refiner provides a survey solution designed to help SaaS companies get more survey responses and gain a better understanding of their users.",
+      "website": "https://refiner.io",
+      "icon": "Refiner.svg"
+    },
+    "Riddle": {
+      "cats": [
+        73
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof riddleAPI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof riddleAPI !== 'undefined';"
+        }
+      ],
+      "description": "Riddle is a platform enabling creation of lists, polls, and quizzes.",
+      "website": "https://www.riddle.com",
+      "icon": "Riddle.svg"
+    },
+    "Segmanta": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*pge\\.segmanta\\.com/widget_embed_js(?:/widgetembed-v([\\d.]+)\\.min\\.js)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SEGMANTA__DYNAMIC_EMBED_CONFIG !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SEGMANTA__DYNAMIC_EMBED_CONFIG !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SEGMANTA__USER_METADATA !== 'undefined';"
+        }
+      ],
+      "description": "Segmanta is a mobile-first survey platform designed for product feedback, brand awareness and concept testing research.",
+      "website": "https://segmanta.com",
+      "icon": "Segmanta.png"
+    },
+    "Service Management Group": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.smg\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof smgETrackParams !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof smgETrackParams !== 'undefined';"
+        }
+      ],
+      "description": "Service Management Group offers customer experience measurement, employee engagement, social monitoring, publishing, and brand research services.",
+      "website": "https://www.smg.com",
+      "icon": "Service Management Group.png"
+    },
+    "SimpleSat": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.simplesat\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "SimpleSat is a customer satisfaction survey tool designed for service businesses to collect feedback from their customers in an engaging manner.",
+      "website": "https://www.simplesat.io",
+      "icon": "SimpleSat.svg"
+    },
+    "Sprig": {
+      "cats": [
+        73,
+        10
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.userleap\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof UserLeap !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof UserLeap !== 'undefined';"
+        }
+      ],
+      "description": "Sprig is a UX analysis and management tool to understand what motivates customers to sign up, engage, and remain loyal to products.",
+      "website": "https://sprig.com",
+      "icon": "Sprig.png"
+    },
+    "Survicate": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "api\\.survicate\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.survicate\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof survicate !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof survicate !== 'undefined';"
+        }
+      ],
+      "description": "Survicate is an all-in-one customer feedback tool that allows you collect feedback.",
+      "website": "https://survicate.com",
+      "icon": "Survicate.svg"
+    },
+    "Tally": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//tally\\.so/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Tally !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Tally !== 'undefined';"
+        }
+      ],
+      "description": "Tally is the simplest way to create free forms \u0026 surveys. Create any type of form in seconds, without knowing how to code, and for free.",
+      "website": "https://tally.so/",
+      "icon": "Tally.svg"
+    },
+    "Typeform": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.typeform\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof tf !== 'undefined' \u0026\u0026 typeof tf.createPopover !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tf.createPopover !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tf.createWidget !== 'undefined';"
+        }
+      ],
+      "description": "Typeform is a Spanish online software as a service (SaaS) company that specialises in online form building and online surveys.",
+      "website": "https://www.typeform.com",
+      "icon": "Typeform.png"
+    },
+    "Userback": {
+      "cats": [
+        73,
+        13
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Userback !== 'undefined' \u0026\u0026 typeof Userback.access_token !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Userback.access_token !== 'undefined';"
+        }
+      ],
+      "description": "Userback is a platform offering visual feedback and bug tracking solutions for websites and web applications, allowing users to provide feedback through screenshots and annotations.",
+      "website": "https://userback.io",
+      "icon": "Userback.svg"
+    },
+    "Wufoo": {
+      "cats": [
+        73
+      ],
+      "description": "Wufoo is an online form builder that creates forms including contact forms, online payments, online surveys and event registrations.",
+      "website": "https://www.wufoo.com",
+      "icon": "Wufoo.svg"
+    },
+    "Yay! Forms": {
+      "cats": [
+        73,
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.yayforms\\.link"
+            }
+          }
+        }
+      ],
+      "description": "Yay! Forms is an AI-powered tool for creating forms and surveys designed to capture audience sentiments.",
+      "website": "https://yayforms.com",
+      "icon": "YayForms.svg"
+    },
+    "coUrbanize": {
+      "cats": [
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.courbanize\\.com"
+            }
+          }
+        }
+      ],
+      "description": "coUrbanize is a platform that assists real estate development and planning teams in conducting community engagement online.",
+      "website": "https://www.courbanize.com",
+      "icon": "coUrbanize.svg"
+    }
+  }
+}

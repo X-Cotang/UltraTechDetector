@@ -1,0 +1,584 @@
+{
+  "apps": {
+    "Adobe Dynamic Media Classic": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.scene7\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Adobe Dynamic Media Classic is a platform that enables customers to manage, enhance, publish, and deliver dynamic rich media content and personal experiences to consumers across all channels and devices, including web, print material, email campaigns, desktops, social, and mobile.",
+      "website": "https://business.adobe.com/uk/products/experience-manager/scene7-login.html",
+      "icon": "Adobe Experience Platform.svg"
+    },
+    "Aprimo": {
+      "cats": [
+        95
+      ],
+      "description": "Aprimo is a United States-based company that develops and sells marketing automation software and digital asset management technology.",
+      "website": "https://www.aprimo.com",
+      "icon": "Aprimo.png"
+    },
+    "Aryeo": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.aryeo\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ARYEO_COMPANY_API_V1_BASE_URL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ARYEO_COMPANY_API_V1_BASE_URL !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ARYEO_ENVIRONMENT !== 'undefined';"
+        }
+      ],
+      "description": "Aryeo is an all-in-one platform designed to manage, deliver, and organize media for real estate photographers.",
+      "website": "https://www.aryeo.com",
+      "icon": "Aryeo.svg"
+    },
+    "Blippa": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-servedby": {
+                  "$regex": "^blippa1$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*blippa\\.constants"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Blippa is a platform for digital product passports, enabling no-code product lifecycle management and integration with smart services and data.",
+      "website": "https://blippa.com",
+      "icon": "Blippa.svg"
+    },
+    "Bluestone PIM": {
+      "cats": [
+        95
+      ],
+      "description": "Bluestone PIM is primarily a product information management (PIM) solution, which is focused on managing and distributing product data across multiple channels. However, it also includes some features that are typically associated with digital asset management (DAM), such as the ability to manage and store product images, videos, and other digital assets.",
+      "website": "https://www.bluestonepim.com",
+      "icon": "Bluestone PIM.svg"
+    },
+    "Brandfolder": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.brandfolder\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Brandfolder !== 'undefined' \u0026\u0026 typeof Brandfolder.account !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Brandfolder.account !== 'undefined';"
+        }
+      ],
+      "description": "Brandfolder is a cloud-based digital asset management platform.",
+      "website": "https://brandfolder.com",
+      "icon": "Brandfolder.svg"
+    },
+    "Bynder": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Bynder !== 'undefined' \u0026\u0026 typeof Bynder.cloudfront !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Bynder.cloudfront || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Bynder.cloudfront !== 'undefined';",
+          "version": "try { return String(Bynder.cloudfront || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Bynder is a cloud-based marketing platform where brands create, find, and use all their digital content.",
+      "website": "https://www.bynder.com",
+      "icon": "Bynder.svg"
+    },
+    "Canto": {
+      "cats": [
+        95
+      ],
+      "description": "Canto is a digital asset management solution.",
+      "website": "https://www.canto.com",
+      "icon": "Canto.svg"
+    },
+    "Celum": {
+      "cats": [
+        95
+      ],
+      "description": "Celum is a software developer that specialises in enterprise digital asset management and marketing content management systems.",
+      "website": "https://www.celum.com",
+      "icon": "Celum.svg"
+    },
+    "Censhare": {
+      "cats": [
+        95
+      ],
+      "description": "Censhare is a commercial digital experience platform in the form of an enterprise content management system.",
+      "website": "https://www.censhare.com",
+      "icon": "Censhare.svg"
+    },
+    "CollectiveAccess": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "CollectiveAccess is a free, open-source software for cataloguing and publishing museum and archival collections.",
+      "website": "https://collectiveaccess.org",
+      "icon": "CollectiveAccess.svg"
+    },
+    "Corebook": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.corebook\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Corebook is a platform for brand guidelines, designed to assist creators of brilliant brands in managing their brand.",
+      "website": "https://www.corebook.io",
+      "icon": "CoreBook.svg"
+    },
+    "Digizuite": {
+      "cats": [
+        95
+      ],
+      "description": "Digizuite is a Digital Asset Management software for enterprises.",
+      "website": "https://www.digizuite.com",
+      "icon": "Digizuite.svg"
+    },
+    "Dropbox": {
+      "cats": [
+        95
+      ],
+      "website": "https://www.dropbox.com",
+      "icon": "Dropbox.svg"
+    },
+    "Frontify": {
+      "cats": [
+        95
+      ],
+      "description": "Frontify is a cloud-based brand management platform for creators and collaborators of brands.",
+      "website": "https://www.frontify.com",
+      "icon": "Frontify.svg"
+    },
+    "GraphicsFlow": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.set-cookie": {
+              "$regex": "graphicsflowprodapi\\.azurewebsites\\.net"
+            }
+          }
+        }
+      ],
+      "description": "GraphicsFlow is an online tool that enables print shops to create, manage, and approve customer artwork.",
+      "website": "https://www.graphicsflow.com",
+      "icon": "GraphicsFlow.svg"
+    },
+    "Image Relay": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.imagerelay\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ImageRelay !== 'undefined' \u0026\u0026 typeof ImageRelay.accounts !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ImageRelay.accounts !== 'undefined';"
+        }
+      ],
+      "description": "Image Relay is a digital asset management system that allows organizations to upload, manage, organize, monitor and track their digital assets.",
+      "website": "https://www.imagerelay.com",
+      "icon": "Image Relay.svg"
+    },
+    "Mirador": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.miradorfin\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Mirador is a platform designed to enhance customer acquisition, streamline digital loan applications, and enable intelligent product routing and digitization.",
+      "website": "https://www.miradortech.com",
+      "icon": "Mirador.svg"
+    },
+    "Nextcloud": {
+      "cats": [
+        95,
+        19
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof oc_config !== 'undefined' \u0026\u0026 typeof oc_config.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return oc_config.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof oc_config.version !== 'undefined';",
+          "version": "try { return String(oc_config.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Nextcloud is a suite of client-server software for creating and using file hosting services.",
+      "website": "https://nextcloud.com",
+      "icon": "Nextcloud.svg",
+      "cpe": "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:*:*:*"
+    },
+    "Optimole": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.i\\.optimole\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof optimoleData !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof optimoleData !== 'undefined';"
+        }
+      ],
+      "description": "Optimole is a cloud-based platform that provides media optimization, real-time image transformations, and digital asset management for improved website performance and delivery.",
+      "website": "https://optimole.com",
+      "icon": "Optimole.svg"
+    },
+    "PhotoShelter for Brands": {
+      "cats": [
+        95
+      ],
+      "description": "PhotoShelter for Brands is a cloud-based media management system for companies and organizations.",
+      "website": "https://brands.photoshelter.com",
+      "icon": "PhotoShelter.png"
+    },
+    "Picturepark": {
+      "cats": [
+        95
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pictureparkConfiguration !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pictureparkConfiguration !== 'undefined';"
+        }
+      ],
+      "description": "Picturepark is designed to facilitate your DAM policies by storing, tagging, searching and delivering files in an automated and controlled way.",
+      "website": "https://picturepark.com",
+      "icon": "Picturepark.svg"
+    },
+    "Plytix": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.plytix\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PlytixAnalyticsObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PlytixAnalyticsObject !== 'undefined';"
+        }
+      ],
+      "description": "Plytix is an AI-powered product information management platform that provides tools for managing and organizing product content.",
+      "website": "https://www.plytix.com",
+      "icon": "Plytix.svg"
+    },
+    "Salsify": {
+      "cats": [
+        95
+      ],
+      "description": "Salsify is a product experience management platform which connects digital asset management, content syndication, and digital catalog capabilities.",
+      "website": "https://www.salsify.com",
+      "icon": "Salsify.svg"
+    },
+    "THRON": {
+      "cats": [
+        95
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof THRONPlayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof THRONPlayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof thronHlsJs !== 'undefined';"
+        }
+      ],
+      "description": "THRON is a digital asset management platform that provides a centralised hub for storing, organising, and distributing digital assets like images, videos, and documents.",
+      "website": "https://www.thron.com",
+      "icon": "THRON.png"
+    },
+    "Transloadit": {
+      "cats": [
+        95
+      ],
+      "description": "Transloadit is a service for file uploading, conversion, and processing across various formats.",
+      "website": "https://transloadit.com",
+      "icon": "Transloadit.svg",
+      "cpe": "cpe:2.3:a:transloadit:uppy:*:*:*:*:*:*:*:*"
+    },
+    "Vestico": {
+      "cats": [
+        95
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof vesticoReportingDisabled !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vesticoReportingDisabled !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunk_vestico_widget !== 'undefined';"
+        }
+      ],
+      "description": "Vestico is a digital asset management platform for organizing, managing, and distributing digital content.",
+      "website": "https://vestico.co",
+      "icon": "Vestico.svg"
+    },
+    "Widen": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets/\\d+-\\d+/stack/en/widenjs\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WidenSessionTimer !== 'undefined' \u0026\u0026 WidenSessionTimer === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WidenUI !== 'undefined';",
+          "version": "try { return String(WidenUI || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WidenSessionTimer !== 'undefined';",
+          "version": "try { return String(WidenSessionTimer || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Widen is a digital asset management and product information management solutions provider.",
+      "website": "https://www.widen.com",
+      "icon": "Widen.svg"
+    },
+    "Zmags Creator": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*c(?:reator)?\\.zmags\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __zmags !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __zmags !== 'undefined';"
+        }
+      ],
+      "description": "Zmags Creator enables marketers to design and publish endless types of interactive digital experiences without coding.",
+      "website": "https://www.creatorbyzmags.com",
+      "icon": "Zmags Creator.png"
+    },
+    "iPaper": {
+      "cats": [
+        95
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embeds\\.ipaper\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof iPaper !== 'undefined' \u0026\u0026 typeof iPaper.API !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof iPaper.API !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof iPaperDebugger !== 'undefined';"
+        }
+      ],
+      "description": "iPaper is a platform that converts printed materials into interactive digital catalogs designed to enhance customer engagement and support sales.",
+      "website": "https://www.ipaper.io",
+      "icon": "iPaper.svg"
+    },
+    "keep. archeevo": {
+      "cats": [
+        95
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ArcheevoSnippets !== 'undefined' \u0026\u0026 typeof ArcheevoSnippets.mostviewedDocumentsURL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ArcheevoSnippets.mostviewedDocumentsURL !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof embedArcheevoBasicSearch !== 'undefined';"
+        }
+      ],
+      "description": "keep. archeevo is an archival management software that aims to support all the functional areas of an archival institution, covering activities ranging from archival description to employee performance assessment.",
+      "website": "https://www.keep.pt/en/produts/archeevo-archival-management-software",
+      "icon": "keep. archeevo.png"
+    }
+  }
+}

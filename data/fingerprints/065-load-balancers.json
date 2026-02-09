@@ -1,0 +1,113 @@
+{
+  "apps": {
+    "Amazon ALB": {
+      "cats": [
+        65
+      ],
+      "implies": [
+        "Amazon Web Services"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Amazon Application Load Balancer (ALB) distributes incoming application traffic to increase availability and support content-based routing.",
+      "website": "https://aws.amazon.com/elasticloadbalancing/",
+      "icon": "Amazon ELB.svg"
+    },
+    "Amazon ELB": {
+      "cats": [
+        65
+      ],
+      "implies": [
+        "Amazon Web Services"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "awselb"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "AWS ELB is a network load balancer service provided by Amazon Web Services for distributing traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions.",
+      "website": "https://aws.amazon.com/elasticloadbalancing/",
+      "icon": "Amazon ELB.svg"
+    },
+    "Application Request Routing": {
+      "cats": [
+        65
+      ],
+      "implies": [
+        "IIS"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^arr/([\\d\\.]+)$\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Application Request Routing (ARR) is an extension to Internet Information Server (IIS), which enables an IIS server to function as a load balancer.",
+      "website": "https://www.iis.net/downloads/microsoft/application-request-routing",
+      "icon": "Microsoft.svg"
+    },
+    "Azure Front Door": {
+      "cats": [
+        65
+      ],
+      "implies": [
+        "Azure"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-azure-ref": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Azure Front Door is a scalable and secure entry point for fast delivery of your global web applications.",
+      "website": "https://docs.microsoft.com/en-us/azure/frontdoor/",
+      "icon": "Azure.svg"
+    },
+    "Google Cloud Load Balancing": {
+      "cats": [
+        65
+      ],
+      "implies": [
+        "Google Cloud"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^google frontend$"
+            }
+          }
+        }
+      ],
+      "description": "Google Cloud Load Balancing is a scalable, fully managed global load balancing service using Google Frontend.",
+      "website": "https://cloud.google.com/load-balancing",
+      "icon": "Google Cloud.svg"
+    }
+  }
+}

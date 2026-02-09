@@ -1,0 +1,187 @@
+{
+  "apps": {
+    "8base": {
+      "cats": [
+        3,
+        62
+      ],
+      "description": "8base is a low-code development platform for building and running enterprise-grade digital products including SaaS solutions, marketplaces and other go-to-market applications.",
+      "website": "https://8base.com",
+      "icon": "8base.svg"
+    },
+    "Adminer": {
+      "cats": [
+        3
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "adminer\u003c/a\u003e \u003cspan class=\"version\"\u003e([\\d.]+)\u003c/span\u003e\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "onclick=\"bodyclick\\(event\\);\" onload=\"verifyversion\\('([\\d.]+)'\\);\"\u003e\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://www.adminer.org",
+      "icon": "adminer.png",
+      "cpe": "cpe:2.3:a:adminer:adminer:*:*:*:*:*:*:*:*"
+    },
+    "Knack": {
+      "cats": [
+        3,
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*loader\\.knack\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Knack !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Knack !== 'undefined';"
+        }
+      ],
+      "description": "Knack is a tool designed to build online databases and web applications, providing a platform for creating custom applications without extensive programming knowledge.",
+      "website": "https://www.knack.com",
+      "icon": "Knack.svg"
+    },
+    "SQL Buddy": {
+      "cats": [
+        3
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "(?:\u003ctitle\u003esql buddy\u003c/title\u003e|\u003c[^\u003e]+onclick=\"sidemainclick\\(\"home\\.php)"
+            }
+          }
+        }
+      ],
+      "description": "SQL Buddy is an open-source web-based application written in PHP to handle the administration of MySQL and SQLite with the use of a Web browser.",
+      "website": "https://www.sqlbuddy.com",
+      "icon": "SQL Buddy.png"
+    },
+    "Xano": {
+      "cats": [
+        3
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof XanoBaseStorage !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof XanoBaseStorage !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof XanoClient !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof XanoCookieStorage !== 'undefined';"
+        }
+      ],
+      "description": "Xano is a no-code backend development platform that allows users to build and manage databases, APIs, and server-side logic without writing code.",
+      "website": "https://www.xano.com",
+      "icon": "Xano.svg"
+    },
+    "phpMyAdmin": {
+      "cats": [
+        3
+      ],
+      "implies": [
+        "MySQL",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "!\\[cdata\\[[^\u003c]*pma_version:\\\"([\\d.]+)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "(?: \\| phpmyadmin ([\\d.]+)\u003c\\/title\u003e|pma_sendheaderlocation\\(|\u003clink [^\u003e]*href=\"[^\"]*phpmyadmin\\.css\\.php)\\;version:\\1"
+                }
+              },
+              {
+                "headers.set-cookie": {
+                  "$regex": "phpmyadmin_https"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pma_absolute_uri !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pma_absolute_uri !== 'undefined';"
+        }
+      ],
+      "description": "PhpMyAdmin is a free and open-source administration tool for MySQL and MariaDB.",
+      "website": "https://www.phpmyadmin.net",
+      "icon": "phpMyAdmin.png",
+      "cpe": "cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:*:*:*"
+    },
+    "phpPgAdmin": {
+      "cats": [
+        3
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "(?:\u003ctitle\u003ephppgadmin\u003c/title\u003e|\u003cspan class=\"appname\"\u003ephppgadmin)"
+            }
+          }
+        }
+      ],
+      "website": "https://phppgadmin.sourceforge.net",
+      "icon": "phpPgAdmin.png",
+      "cpe": "cpe:2.3:a:phppgadmin_project:phppgadmin:*:*:*:*:*:*:*:*"
+    }
+  }
+}

@@ -1,0 +1,4127 @@
+{
+  "apps": {
+    "Adyen": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof adyen !== 'undefined' \u0026\u0026 typeof adyen.encrypt !== 'undefined' \u0026\u0026 typeof adyen.encrypt.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return adyen.encrypt.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof adyen.encrypt.version !== 'undefined';",
+          "version": "try { return String(adyen.encrypt.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Adyen allows businesses to accept ecommerce, mobile, and point-of-sale payments.",
+      "website": "https://www.adyen.com",
+      "icon": "Adyen.svg"
+    },
+    "Affirm": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.affirm\\.com/js/v([\\d\\.]+)/affirm\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _affirm_config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof affirm.Rollbar !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _affirm_config !== 'undefined';"
+        }
+      ],
+      "description": "Affirm is a loan company that allows users to buy goods or services offered by online merchants and pay off those purchases in fixed monthly payments.",
+      "website": "https://www.affirm.com",
+      "icon": "Affirm.svg"
+    },
+    "Afterpay": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*afterpay-products\\.min\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.stripe\\.com/v3/fingerprinted/js/elements-afterpay-clearpay-message-.+\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*portal\\.afterpay\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*present-afterpay\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.afterpay\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Afterpay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AfterpayWidgetHtml !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof afterpay_product !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof checkout.enabledpayments.afterpay !== 'undefined';",
+          "version": "try { return String(checkout.enabledpayments.afterpay || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Afterpay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Afterpay.version !== 'undefined';",
+          "version": "try { return String(Afterpay.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AfterpayAttractWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AfterpayGenericErrorHtml !== 'undefined';"
+        }
+      ],
+      "description": "Afterpay is a 'buy now, pay later' platform that makes it possible to pay off purchased goods in fortnightly instalments.",
+      "website": "https://www.afterpay.com/",
+      "icon": "afterpay.png",
+      "cpe": "cpe:2.3:a:afterpay:afterpay:*:*:*:*:*:*:*:*"
+    },
+    "Amazon Pay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']id[\"'][^\u003e]+content=[\"']amazon-payments-metadata[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/amazonpayments(?:\\.min)?\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.payments-amazon\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AmazonPayments !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AmazonPayments !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OffAmazonPayments !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof enableAmazonPay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof onAmazonPaymentsReady !== 'undefined';"
+        }
+      ],
+      "description": "Amazon Pay is an online payments processing service that is owned by Amazon. It lets you use the payment methods associated with your Amazon account to make payments for goods and services.",
+      "website": "https://pay.amazon.com",
+      "icon": "Amazon Pay.svg"
+    },
+    "American Express": {
+      "cats": [
+        41
+      ],
+      "description": "American Express, also known as Amex, facilitates electronic funds transfers throughout the world, most commonly through branded credit cards, debit cards and prepaid cards.",
+      "website": "https://www.americanexpress.com",
+      "icon": "Amex.svg"
+    },
+    "Amex Express Checkout": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*aexp-static\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Amex Express Checkout is a service that simplifies the checkout experience by auto-filling necessary cardholder payment data into merchant checkout fields.",
+      "website": "https://www.americanexpress.com/us/express-checkout/",
+      "icon": "amex.png"
+    },
+    "Aplazame": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*aplazame\\.com/static/aplazame\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.aplazame\\.com/aplazame\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof aplazame !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof aplazame !== 'undefined';"
+        }
+      ],
+      "description": "Aplazame is a consumer credit company that provides instant financing service for online purchases. It combines an overtime payment method integrated at the ecommerce checkout with marketing tools to enable ecommerce to use financing as a promotional lever to boost sales.",
+      "website": "https://aplazame.com",
+      "icon": "Aplazame.svg"
+    },
+    "Apple Pay": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ApplePay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof enableApplePay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ApplePay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof applePayButtonClicked !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof braintree.applePay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof checkout.enabledpayments.applepay !== 'undefined';",
+          "version": "try { return String(checkout.enabledpayments.applepay || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dw.applepay !== 'undefined';"
+        }
+      ],
+      "description": "Apple Pay is a mobile payment and digital wallet service by Apple that allows users to make payments in person, in iOS apps, and on the web.",
+      "website": "https://www.apple.com/apple-pay",
+      "icon": "Apple.svg"
+    },
+    "Apxium": {
+      "cats": [
+        41
+      ],
+      "description": "Apxium is a software solution designed for automating accounts payable processes.",
+      "website": "https://www.apxium.com",
+      "icon": "Apxium.svg"
+    },
+    "Auxilia": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.theauxilia\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Auxilia is a software solution designed to streamline donor management processes for nonprofits.",
+      "website": "https://www.theauxilia.com/",
+      "icon": "Auxilia.svg"
+    },
+    "Barion": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*pixel\\.barion\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BarionAnalyticsObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BarionAnalyticsObject !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof barion_pixel_id !== 'undefined';"
+        }
+      ],
+      "description": "Barion is a payment gateway and card acceptance system facilitating secure online transactions for businesses and consumers.",
+      "website": "https://www.barion.com",
+      "icon": "Barion.svg"
+    },
+    "Binance Pay": {
+      "cats": [
+        41
+      ],
+      "description": "Binance Pay is a contactless, borderless, and secure cryptocurrency payment technology designed by Binance.",
+      "website": "https://pay.binance.com",
+      "icon": "Binance.svg"
+    },
+    "BitPay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bitpay"
+            }
+          }
+        }
+      ],
+      "description": "BitPay is a payment processing platform that enables websites to accept bitcoins as a form of payment.",
+      "website": "https://www.bitpay.com",
+      "icon": "BitPay.svg"
+    },
+    "Bitcoin": {
+      "cats": [
+        41
+      ],
+      "description": "Bitcoin is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries.",
+      "website": "https://en.wikipedia.org/wiki/Bitcoin",
+      "icon": "Bitcoin.svg"
+    },
+    "Bolt Payments": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*account\\.bolt\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*connect\\.bolt\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BoltCheckout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BoltCheckout !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BoltPopup !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BoltTrack !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bolt_callbacks !== 'undefined';"
+        }
+      ],
+      "description": "Bolt powers a checkout experience designed to convert shoppers.",
+      "website": "https://www.bolt.com/",
+      "icon": "Bolt.svg"
+    },
+    "Bontii": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.bontii\\.dk/"
+            }
+          }
+        }
+      ],
+      "description": "Bontii is a subscription module facilitating integration between webshop and payment solutions.",
+      "website": "https://bontii.dk",
+      "icon": "Bontii.svg"
+    },
+    "Bootpay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.bootpay\\.co\\.kr/"
+            }
+          }
+        }
+      ],
+      "description": "Bootpay is a payment integration service from Korea that enables businesses to process online transactions.",
+      "website": "https://www.bootpay.co.kr",
+      "icon": "Bootpay.svg"
+    },
+    "Braintree": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.braintreegateway\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Braintree !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Braintree !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Braintree.version !== 'undefined';",
+          "version": "try { return String(Braintree.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Braintree, a division of PayPal, specializes in mobile and web payment systems for ecommerce companies. Braintree provides clients with a merchant account and a payment gateway.",
+      "website": "https://www.braintreepayments.com",
+      "icon": "Braintree.svg"
+    },
+    "Bread": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getbread\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BreadCalc !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BreadError !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BreadLoaded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BreadShopify !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bread.appHost !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BreadCalc !== 'undefined';"
+        }
+      ],
+      "description": "Bread is a buy now, pay later platform for ecommerce websites.",
+      "website": "https://www.breadpayments.com",
+      "icon": "Bread.svg"
+    },
+    "BridgerPay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.bridgerpay\\.com"
+            }
+          }
+        }
+      ],
+      "description": "BridgerPay is a payment operations platform designed to scale with businesses of any size.",
+      "website": "https://bridgerpay.com",
+      "icon": "BridgerPay.svg"
+    },
+    "Briqpay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.briqpay\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _briqpay !== 'undefined' \u0026\u0026 typeof _briqpay.checkout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _briqpay.checkout !== 'undefined';"
+        }
+      ],
+      "description": "Briqpay is a payment optimization platform that streamlines business payment processes through its Payments Unleashed solution.",
+      "website": "https://briqpay.com",
+      "icon": "Briqpay.svg"
+    },
+    "Catch": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Catch !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Catch !== 'undefined';"
+        }
+      ],
+      "description": "Catch is a payment solution which allows merchants to use payments via bank payments instead of credit/debit cards.",
+      "website": "https://www.getcatch.com/",
+      "icon": "Catch.svg"
+    },
+    "ChargeAfter": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.chargeafter\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ChargeAfter !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ChargeAfter !== 'undefined';"
+        }
+      ],
+      "description": "ChargeAfter is a platform that connects retailers and lenders to offer consumers personalized Point of Sale Financing options at checkout from multiple lenders. ",
+      "website": "https://chargeafter.com/",
+      "icon": "ChargeAfter.svg"
+    },
+    "Chargebee": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.chargebee\\.com/v([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Chargebee !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Chargebee !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof chargebeeTrackFunc !== 'undefined';"
+        }
+      ],
+      "description": "Chargebee is a PCI Level 1 certified recurring billing platform for SaaS and subscription-based businesses.",
+      "website": "https://www.chargebee.com",
+      "icon": "Chargebee.svg"
+    },
+    "Chatt": {
+      "cats": [
+        41,
+        52,
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*getchatt\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Chatt is an all-in-one platform that provides businesses with reviews, messaging, and payment solutions.",
+      "website": "https://getchatt.com",
+      "icon": "Chatt.svg"
+    },
+    "Checkout.com": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.checkout\\.com/js/.+js(?:\\?ver=)?([\\d\\.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Checkout.com is an international payment platform that processes different payment methods across a variety of currencies.",
+      "website": "https://www.checkout.com",
+      "icon": "Checkout.com.svg"
+    },
+    "CitrusPay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*checkout-static\\.citruspay\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "CitrusPay provides payement gateway and wallet services.",
+      "website": "https://consumers.citruspay.com/",
+      "icon": "citruspay.png"
+    },
+    "Coinbase Commerce": {
+      "cats": [
+        41
+      ],
+      "description": "Coinbase Commerce is a platform that enables merchants to accept cryptocurrency payments.",
+      "website": "https://commerce.coinbase.com/",
+      "icon": "Coinbase.svg"
+    },
+    "Conekta": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.conekta\\.\\w+/js/(?:v([\\d.]+)|)\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*conektaapi/v([\\d.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Conekta is a Mexican payment platform.",
+      "website": "https://conekta.com",
+      "icon": "Conekta.svg"
+    },
+    "Convertim": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof convertimSetup !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof convertimSetup !== 'undefined';"
+        }
+      ],
+      "description": "Convertim is an ecommerce checkout platform.",
+      "website": "https://www.convertim.com",
+      "icon": "Convertim.svg"
+    },
+    "Culqi": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.culqi\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Culqi3DS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Culqi3DS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CulqiCheckout !== 'undefined';"
+        }
+      ],
+      "description": "Culqi is a payment processing platform that enables businesses to accept card payments and receive funds on the same day.",
+      "website": "https://culqi.com",
+      "icon": "Culqi.svg"
+    },
+    "Cybersource": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cybersource\\..+\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Cybersource is an ecommerce credit card payment system solution.",
+      "website": "https://www.cybersource.com/",
+      "icon": "cybersource.png"
+    },
+    "DEUNA": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DeunaCDL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DeunaCDL !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DunaCheckout !== 'undefined';"
+        }
+      ],
+      "description": "DEUNA is an AI-powered platform that orchestrates global payments and enhances commerce performance.",
+      "website": "https://www.deuna.com",
+      "icon": "DEUNA.svg"
+    },
+    "DivideBuy": {
+      "cats": [
+        41,
+        91
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof display_dividebuy_modal !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof display_dividebuy_modal !== 'undefined';"
+        }
+      ],
+      "description": "Dividebuy provides retailer financing solutions.",
+      "website": "https://dividebuy.co.uk/",
+      "icon": "DivideBuy.png"
+    },
+    "Divido": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.divido\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Divio is a Buy now pay later solution. Divido provided whitelabel platform connects lenders, retailers and channel partners at the point of sale",
+      "website": "https://www.divido.com/",
+      "icon": "Divido.png"
+    },
+    "Dwolla": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.dwolla\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Dwolla is a payment platform that enables businesses to transfer funds electronically through the Automated Clearing House (ACH) network.",
+      "website": "https://www.dwolla.com",
+      "icon": "Dwolla.svg"
+    },
+    "Facebook Pay": {
+      "cats": [
+        41
+      ],
+      "description": "Facebook pay is a payment solution which can be used on any site or app outside Facebook ecosystem.",
+      "website": "https://pay.facebook.com/",
+      "icon": "Facebook.svg"
+    },
+    "Fat Zebra": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c(?:iframe)[^\u003e]+fatzebraframe"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003c(?:iframe|img|form)[^\u003e]+paynow\\.pmnts\\.io"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*paynow\\.pmnts\\.io"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Fat Zebra provides a process of accepting credit card payments online.",
+      "website": "https://www.fatzebra.com/",
+      "icon": "fatzebra.png"
+    },
+    "Feroot": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*pg\\.feroot\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Feroot is a platform for creating PCI DSS 4.0.1–compliant payment pages that ensure safe handling of transaction and customer data.",
+      "website": "https://www.feroot.com",
+      "icon": "Feroot.svg"
+    },
+    "Flip-Pay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.flip-pay\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof flipPay !== 'undefined' \u0026\u0026 typeof flipPay.getCustomerAcessStatus !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof flipPay.getCustomerAcessStatus !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof flipPayConfig !== 'undefined';"
+        }
+      ],
+      "description": "Flip-Pay is a platform that provides advanced content monetization solutions, offering end-to-end paywall services for publishers and digital businesses.",
+      "website": "https://www.flip-pay.com",
+      "icon": "FlipPay.svg"
+    },
+    "Forte": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*checkout\\.forte\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Forte, a CSG Company offers merchants and partners a broad range of payment solutions.",
+      "website": "https://www.forte.net",
+      "icon": "Forte.svg"
+    },
+    "Four": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*scripts\\.paywithfour\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Four !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Four !== 'undefined';"
+        }
+      ],
+      "description": "Pay with four is a Buy now pay later solution.",
+      "website": "https://paywithfour.com/",
+      "icon": "Four.svg"
+    },
+    "Google Pay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*pay\\.google\\.com/([a-z/]+)/pay\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Google Pay is a digital wallet platform and online payment system developed by Google to power in-app and tap-to-pay purchases on mobile devices, enabling users to make payments with Android phones, tablets or watches.",
+      "website": "https://pay.google.com",
+      "icon": "Google.svg"
+    },
+    "Google Wallet": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*checkout\\.google\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wallet\\.google\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://wallet.google.com",
+      "icon": "Google Wallet.png"
+    },
+    "Grab Pay Later": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*grab-paylater\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GrabWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GrabWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof grab_widget_money_format !== 'undefined';"
+        }
+      ],
+      "description": "Grab Pay Later is a buy now pay later solution offered by Grab.",
+      "website": "https://www.grab.com/sg/finance/pay-later/",
+      "icon": "Grab.svg"
+    },
+    "Heartland Payment Systems": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.heartlandportico\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Heartland Payment Systems is a US-based payment processing and technology provider.",
+      "website": "https://www.heartlandpaymentsystems.com",
+      "icon": "Heartland Payment Systems.svg"
+    },
+    "HiPay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hipay\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HiPay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HiPay !== 'undefined';"
+        }
+      ],
+      "description": "HiPay is a payment gateway provider and payment orchestration platform.",
+      "website": "https://hipay.com/",
+      "icon": "HiPay.svg"
+    },
+    "Iamport": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.iamport\\.kr/js/iamport\\.payment-([\\d\\.]+)\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof IMP !== 'undefined' \u0026\u0026 typeof IMP.request_pay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof IMP.request_pay !== 'undefined';"
+        }
+      ],
+      "description": "Iamport is an information technology company based in South Korea.",
+      "website": "https://www.iamport.kr",
+      "icon": "Iamport.png"
+    },
+    "Instamojo": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof INITIAL_STATE !== 'undefined' \u0026\u0026 typeof INITIAL_STATE.seller !== 'undefined' \u0026\u0026 typeof INITIAL_STATE.seller.avatar !== 'undefined' \u0026\u0026 INITIAL_STATE.seller.avatar === '\\.instamojo\\.com/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof INITIAL_STATE.seller.avatar !== 'undefined';",
+          "version": "try { return String(INITIAL_STATE.seller.avatar || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Instamojo !== 'undefined';"
+        }
+      ],
+      "description": "Instamojo is a Bangalore-based company that provides a platform for selling digital goods and collecting payment online.",
+      "website": "https://www.instamojo.com/",
+      "icon": "instamojo.svg"
+    },
+    "JUST": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*checkout-button-.+/just-pay-button\\.js"
+            }
+          }
+        }
+      ],
+      "description": "JUST is a one-click payment solution for online business and online shoppers.",
+      "website": "https://www.getjusto.com",
+      "icon": "JUST.svg"
+    },
+    "Juspay": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Juspay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Juspay !== 'undefined';"
+        }
+      ],
+      "description": "Juspay is a developer of an online platform designed to be used for mobile-based payments.",
+      "website": "https://juspay.in",
+      "icon": "juspay.svg"
+    },
+    "Klarna Checkout": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.klarna(?:cdn|services)\\.(?:net|com)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.klarnaservices\\.com/lib\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KlarnaOnsiteService !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KlarnaOnsiteService !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _klarnaCheckout !== 'undefined';"
+        }
+      ],
+      "description": "Klarna Checkout is a complete payment solution where Klarna handles a store's entire checkout.",
+      "website": "https://www.klarna.com/international/",
+      "icon": "Klarna.svg"
+    },
+    "Klasha": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*klasha-integration\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KlashaClient !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KlashaClient !== 'undefined';"
+        }
+      ],
+      "description": "Klasha is a payment solution provider that handles a store's entire checkout.",
+      "website": "https://www.klasha.com/",
+      "icon": "Klasha.svg"
+    },
+    "Knit pay": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof knit_pay_payment_button_ajax_object !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof knit_pay_payment_button_ajax_object !== 'undefined';"
+        }
+      ],
+      "description": "Knit Pay is a platform designed for collecting payments and managing businesses while ensuring customer data security.",
+      "website": "https://www.knockcrm.com",
+      "icon": "Knitpay.svg"
+    },
+    "KueskiPay": {
+      "cats": [
+        41,
+        91
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.kueskipay\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof kueskypushhead !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kueskypushhead !== 'undefined';"
+        }
+      ],
+      "description": "KueskiPay is a buy-now-pay-later solution.",
+      "website": "https://kueskipay.com/",
+      "icon": "KueskiPay.svg"
+    },
+    "Laterpay": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']laterpay:connector:callbacks:on_user_has_access[\"'][^\u003e]+content=[\"']deobfuscatetext[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*https?://connectormwi\\.laterpay\\.net/([0-9.]+)[a-za-z-]*/live/[\\w-]+\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Laterpay is a service that simplifies payments on the Internet. In addition to the classic immediate purchase option, Laterpay also allows you to buy digital content such as articles or videos now and pay later.",
+      "website": "https://www.laterpay.net/",
+      "icon": "laterpay.png"
+    },
+    "LawPay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\b(?:lawpay)\\b"
+            }
+          }
+        }
+      ],
+      "description": "Payment for law firms.",
+      "website": "https://www.lawpay.com",
+      "icon": "Lawpay.svg"
+    },
+    "LayUp": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*layup\\.co\\.za"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LayUpCheckoutButton !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LayUpCheckoutButton !== 'undefined';"
+        }
+      ],
+      "description": "LayUp is a payment technology platform enabling customers to pay for goods and services over time.",
+      "website": "https://layup.co.za",
+      "icon": "LayUp.svg"
+    },
+    "Lemon Squeezy": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LemonSqueezy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LemonSqueezy !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lemonSqueezyAffiliateConfig !== 'undefined';"
+        }
+      ],
+      "description": "Lemon Squeezy is a platform designed for SaaS businesses, providing functionalities such as payment processing, subscription management, global tax compliance, fraud prevention, multi-currency support, failed payment recovery, and integration with PayPal, with the aim of facilitating the operational management of software businesses.",
+      "website": "https://www.lemonsqueezy.com",
+      "icon": "Lemon Squeezy.svg"
+    },
+    "Liberapay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//liberapay\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Liberapay is a non-profit organisation subscription payment platform.",
+      "website": "https://liberapay.com/",
+      "icon": "Liberapay.svg"
+    },
+    "Mastercard": {
+      "cats": [
+        41
+      ],
+      "description": "MasterCard facilitates electronic funds transfers throughout the world, most commonly through branded credit cards, debit cards and prepaid cards.",
+      "website": "https://www.mastercard.com",
+      "icon": "Mastercard.svg"
+    },
+    "Midtrans": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app(?:\\.sandbox)?\\.midtrans\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Midtrans is a payment gateway system from Indonesia.",
+      "website": "https://midtrans.com",
+      "icon": "Midtrans.svg"
+    },
+    "Mintpay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/mintpay/"
+            }
+          }
+        }
+      ],
+      "description": "Mintpay is a system that allows purchases to be made immediately and paid for later in installments.",
+      "website": "https://mintpay.lk",
+      "icon": "Mintpay.svg"
+    },
+    "Mokka": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*revoiframe\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Mokka is a Buy Now Pay Later solution that connects target customer acquisition and settlement costs through marketing and promotion.",
+      "website": "https://mokka.ro",
+      "icon": "Mokka.svg"
+    },
+    "Mollie": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/mollie-payments-for-woocommerce/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Mollie !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Mollie !== 'undefined';"
+        }
+      ],
+      "description": "Mollie is a payment provider for Belgium and the Netherlands, offering payment methods such as credit card, iDEAL, Bancontact/Mister cash, PayPal, SCT, SDD, and others.",
+      "website": "https://www.mollie.com",
+      "icon": "Mollie.svg"
+    },
+    "Moneris": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.moneris\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof initialServerData !== 'undefined' \u0026\u0026 typeof initialServerData.monerisConfiguration !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initialServerData.monerisConfiguration !== 'undefined';"
+        }
+      ],
+      "description": "Moneris (formerly Moneris Solutions) is Canada's largest financial technology company that specialises in payment processing.",
+      "website": "https://www.moneris.com",
+      "icon": "Moneris.svg"
+    },
+    "Mul-Pay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.mul-pay\\.jp/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Multipayment !== 'undefined' \u0026\u0026 typeof Multipayment.config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Multipayment.config !== 'undefined';"
+        }
+      ],
+      "description": "Mul-Pay is a payment gateway platform from Japan.",
+      "website": "https://static.mul-pay.jp"
+    },
+    "Omise": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.omise\\.co"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Omise !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OmiseCard !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Omise !== 'undefined';"
+        }
+      ],
+      "description": "Omise is a payment gateway for Thailand, Japan and Singapore. Providing both online and offline payment solutions to merchants.",
+      "website": "https://www.omise.co",
+      "icon": "Omise.svg"
+    },
+    "OpenPay": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*openpay\\.com.\\au"
+            }
+          }
+        }
+      ],
+      "description": "Openpay is an innovative online and in-store payment solution enabling you to purchase now and pay later, with no interest.",
+      "website": "https://www.openpay.com.au/",
+      "icon": "openpay.png"
+    },
+    "Ordergroove": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.ordergroove\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ordergroove\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Ordergroove provides a SaaS (Software as a Service) based subscription and membership commerce platform.",
+      "website": "https://www.ordergroove.com/",
+      "icon": "ordergroove.svg"
+    },
+    "PAYTR": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.paytr\\.com"
+            }
+          }
+        }
+      ],
+      "description": "PAYTR is a platform that enables secure remote management of all payment transactions.",
+      "website": "https://www.paytr.com",
+      "icon": "PAYTR.svg"
+    },
+    "PCI Proxy": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.datatrans\\.(?:com|biz)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.datatrans\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "PCI Proxy is a tokenization platform that enables organisations worldwide to embrace a modern approach to payment flexibility and data security.",
+      "website": "https://www.pci-proxy.com",
+      "icon": "PCI Proxy.svg"
+    },
+    "POLi Payment": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof wc_ga_pro !== 'undefined' \u0026\u0026 typeof wc_ga_pro.available_gateways !== 'undefined' \u0026\u0026 typeof wc_ga_pro.available_gateways.poli !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wc_ga_pro.available_gateways.poli !== 'undefined';"
+        }
+      ],
+      "description": "POLi Payment(formerly known as Centricom) is an online payment service in Australia and New Zealand.",
+      "website": "https://www.polipayments.com",
+      "icon": "POLi Payment.svg"
+    },
+    "Pace": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*pay\\.pacenow\\.co"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pacePay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rely_month_installment !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rely_shop_currency !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rely_shop_money_format !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pacePay !== 'undefined';"
+        }
+      ],
+      "description": "PacePay offers a BNPL (Buy now pay later) solution for merchants.",
+      "website": "https://pacenow.co/",
+      "icon": "Pace.svg"
+    },
+    "Paddle": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.paddle\\.com/paddle/paddle\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Paddle !== 'undefined' \u0026\u0026 typeof Paddle.Checkout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Paddle.Checkout !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PaddleScriptLocation !== 'undefined';"
+        }
+      ],
+      "description": "Paddle is a billing and payment gateway for B2B SaaS companies.",
+      "website": "https://paddle.com/",
+      "icon": "Paddle.svg"
+    },
+    "PagSeguro": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.pagseguro\\.uol\\.com\\.br/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PagSeguroDirectPayment !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PagSeguroDirectPayment !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _PagSeguroDirectPayment !== 'undefined';"
+        }
+      ],
+      "description": "PagSeguro is an online or mobile payment-based ecommerce service for commercial operations.",
+      "website": "https://pagseguro.uol.com.br",
+      "icon": "PagSeguro.svg"
+    },
+    "Pagar.me": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.pagar\\.me/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PagarMeCheckout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pagarme.balance !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PagarMeCheckout !== 'undefined';"
+        }
+      ],
+      "description": "Pagar.me is a Portuguese-language online payments solution for businesses in Brazil.",
+      "website": "https://pagar.me",
+      "icon": "Pagar.me.svg"
+    },
+    "Paidy": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*apps\\.paidy\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Constants !== 'undefined' \u0026\u0026 typeof Constants.paidy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Constants.paidy !== 'undefined';"
+        }
+      ],
+      "description": "Paidy is basically a two-sided payments service, acting as a middleman between consumers and merchants in Japan.",
+      "website": "https://paidy.com",
+      "icon": "Paidy.png"
+    },
+    "Partial.ly": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*partial\\.ly"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PartiallyButton !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PartiallyButton !== 'undefined';"
+        }
+      ],
+      "description": "Partial.ly payment plan software lets businesses offer customizable payment plans to their customers.",
+      "website": "https://partial.ly/",
+      "icon": "Partially.png"
+    },
+    "Pay.": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PaynlLabel !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PaynlLabel !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paynl_gateways !== 'undefined';"
+        }
+      ],
+      "description": "Pay. is an all-in-one payment provider offering integrated solutions for processing online and in-store transactions.",
+      "website": "https://www.pay.nl",
+      "icon": "PayNL.svg"
+    },
+    "PayBright": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.paybright\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _paybright_config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _paybright_config !== 'undefined';"
+        }
+      ],
+      "description": "PayBright is a Canadian fintech company that offers short-term interest-free installment loans for online shopping to consumers at checkout.",
+      "website": "https://paybright.com",
+      "icon": "PayBright.png"
+    },
+    "PayFast": {
+      "cats": [
+        41
+      ],
+      "description": "PayFast is a payments processing service for South Africans \u0026 South African websites.",
+      "website": "https://www.payfast.co.za/",
+      "icon": "Payfast.svg"
+    },
+    "PayGreen": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof paygreenjs !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paygreenjs !== 'undefined';"
+        }
+      ],
+      "description": "PayGreen is a French payment processor.",
+      "website": "https://www.paygreen.io",
+      "icon": "PayGreen.svg"
+    },
+    "PayHere": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.payhere\\.co"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "PayHere is a platform that provides payment links to facilitate online payment collection.",
+      "website": "https://payhere.co",
+      "icon": "PayHere.svg"
+    },
+    "PayPal": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.paypal\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']id[\"'][^\u003e]+content=[\"']in-context-paypal-metadata[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*paypalobjects\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PAYPAL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PAYPAL !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __paypal_global__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof checkout.enabledpayments.paypal !== 'undefined';",
+          "version": "try { return String(checkout.enabledpayments.paypal || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof enablePaypal !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paypal !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paypalClientId !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paypalJs !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wc_ga_pro.available_gateways.paypal !== 'undefined';"
+        }
+      ],
+      "description": "PayPal is an online payments system that supports online money transfers and serves as an electronic alternative to traditional paper methods like checks and money orders.",
+      "website": "https://paypal.com",
+      "icon": "PayPal.svg",
+      "cpe": "cpe:2.3:a:paypal:paypal:*:*:*:*:*:*:*:*"
+    },
+    "PayU Payment": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.payu\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.payu\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OpenPayU !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OpenPayU !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PayU !== 'undefined';"
+        }
+      ],
+      "description": "PayU is a provider of financial solutions for ecommerce, facilitating online payments and related transaction services.",
+      "website": "https://corporate.payu.com",
+      "icon": "PayU.svg"
+    },
+    "PayWhirl": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof paywhirlForShopifySettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paywhirlForShopifySettings !== 'undefined';"
+        }
+      ],
+      "description": "PayWhirl provides widgets and tools to handle recurring payments.",
+      "website": "https://app.paywhirl.com/",
+      "icon": "paywhirl.png"
+    },
+    "Paydock": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.paydock\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Paydock is a tool for managing payments and transactions across multiple platforms.",
+      "website": "https://paydock.com",
+      "icon": "Paydock.svg"
+    },
+    "Payflex": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*partpayassets\\.blob\\.core\\.windows\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Payflex offers an online payment gateway solution to South African merchants that allows shoppers to pay over 6 weeks, interest-free.",
+      "website": "https://payflex.co.za/",
+      "icon": "Payflex.png"
+    },
+    "Payl8r": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*payl8r\\.com"
+            }
+          }
+        }
+      ],
+      "description": "PayL8r.com offers repayment plans and online finance which allow you to purchase products online.",
+      "website": "https://payl8r.com/",
+      "icon": "Payl8r.svg"
+    },
+    "Paymentus": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.paymentus\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PaymentusFeedback !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PaymentusFeedback !== 'undefined';"
+        }
+      ],
+      "description": "Paymentus is a platform that provides a complete electronic billing and payment solution for businesses and organizations.",
+      "website": "https://www.paymentus.com",
+      "icon": "Paymentus.svg"
+    },
+    "Payoneer": {
+      "cats": [
+        41
+      ],
+      "description": "Payoneer is an online payment processing platform tailored for digital businesses.",
+      "website": "https://www.payoneer.com",
+      "icon": "Payoneer.svg"
+    },
+    "Payplug": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PAYPLUG_DOMAIN !== 'undefined' \u0026\u0026 PAYPLUG_DOMAIN === '\\.payplug\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PAYPLUG_DOMAIN !== 'undefined';",
+          "version": "try { return String(PAYPLUG_DOMAIN || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof payplug.card !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof payplug_ajax_url !== 'undefined';"
+        }
+      ],
+      "description": "Payplug is a French omnichannel payment solution dedicated to merchants.",
+      "website": "https://www.payplug.com",
+      "icon": "Payplug.svg"
+    },
+    "Payrexx": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.payrexx\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Payrexx is an online payment solution facilitating receipt of payments across various platforms.",
+      "website": "https://payrexx.com",
+      "icon": "Payrexx.svg"
+    },
+    "Paysafe": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/hosted\\.paysafe\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof paysafe !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paysafe !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paysafe.checkout !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paysafe.fields !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof paysafe.threedsecure !== 'undefined';"
+        }
+      ],
+      "description": "Paysafe is a payment platform that enables businesses and consumers to connect and transact by payment processing, digital wallet, and online cash solutions.",
+      "website": "https://www.paysafe.com/en",
+      "icon": "paysafe.svg"
+    },
+    "Paysera": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.paysera\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Paysera is a platform that provides money transfer and payment services.",
+      "website": "https://www.paysera.com",
+      "icon": "Paysera.svg"
+    },
+    "Pelcro": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.pelcro\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Pelcro !== 'undefined' \u0026\u0026 typeof Pelcro.adblock !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pelcro.adblock !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PelcroEventsAlreadyFired !== 'undefined';"
+        }
+      ],
+      "description": "Pelcro is a subscription and membership management software.",
+      "website": "https://www.get.pelcro.com",
+      "icon": "Pelcro.svg"
+    },
+    "Pesapal": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pesapalIframe !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pesapalIframe !== 'undefined';"
+        }
+      ],
+      "description": "Pesapal is an online payment platform catering to various online businesses, including ecommerce, subscription services, online platforms, and marketplaces.",
+      "website": "https://www.pesapal.com",
+      "icon": "Pesapal.svg"
+    },
+    "Pin Payments": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.pinpayments\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Pin Payments is an all-in-one online payment system. It offers merchants a simple JSON API, secure credit card storage, multi-currency capabilities, bank account compatibility, onsite payment processing and automatic fund transfer to specified bank accounts.",
+      "website": "https://www.pinpayments.com/",
+      "icon": "pinpayments.png"
+    },
+    "Plaid": {
+      "cats": [
+        41,
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "cdn\\.plaid\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.plaid\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Plaid !== 'undefined' \u0026\u0026 typeof Plaid.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Plaid.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Plaid.version !== 'undefined';",
+          "version": "try { return String(Plaid.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Plaid is a fintech company that facilitates communication between financial services apps and users' banks and credit card providers.",
+      "website": "https://plaid.com",
+      "icon": "Plaid.svg"
+    },
+    "Plenigo": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.plenigo\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof plenigo !== 'undefined' \u0026\u0026 typeof plenigo.Checkout !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof plenigo.Checkout !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof plenigoStartCheckout !== 'undefined';"
+        }
+      ],
+      "description": "Plenigo is a subscription management platform designed for modern reader financing.",
+      "website": "https://plenigo.com",
+      "icon": "Plenigo.svg"
+    },
+    "Prive": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tryprive\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PRIVE_SHOPPER_PORTAL_WIDGET !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PRIVE_SHOPPER_PORTAL_WIDGET !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PRIVE_WIDGET !== 'undefined';"
+        }
+      ],
+      "description": "Prive is a subscription service that enables users to register for multiple services.",
+      "website": "https://www.tryprive.com",
+      "icon": "Prive.svg"
+    },
+    "ProcessOut": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.processout\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ProcessOut !== 'undefined' \u0026\u0026 typeof ProcessOut.ActionFlow !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ProcessOut.ActionFlow !== 'undefined';"
+        }
+      ],
+      "description": "ProcessOut is a payment infrastructure platform that provides payment analytics to analyze and report on an entire payment ecosystem.",
+      "website": "https://www.processout.com",
+      "icon": "ProcessOut.svg"
+    },
+    "Prommt": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.prommt\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Prommt !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Prommt !== 'undefined';"
+        }
+      ],
+      "description": "Prommt is a payment request service that helps businesses collect payments from customers through card and bank transfer.",
+      "website": "https://www.prommt.com",
+      "icon": "Prommt.svg"
+    },
+    "Razorpay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*checkout\\.razorpay\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Razorpay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Razorpay !== 'undefined';"
+        }
+      ],
+      "description": "Razorpay is a provider of an online payment gateway that allows businesses to accept, process, and disburse payments.",
+      "website": "https://razorpay.com/",
+      "icon": "Razorpay.svg"
+    },
+    "Recharge": {
+      "cats": [
+        41
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.rechargecdn\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*rechargeassets-bootstrapheroes-rechargeapps\\.netdna-ssl\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ReChargeWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ReChargeWidget !== 'undefined';"
+        }
+      ],
+      "description": "Recharge is the a subscription payments platform designed for merchants to set up and manage dynamic recurring billing across web and mobile.",
+      "website": "https://rechargepayments.com",
+      "icon": "Recharge.svg"
+    },
+    "Recurly": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cinput[^\u003e]+data-recurly"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.recurly\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof recurly !== 'undefined' \u0026\u0026 typeof recurly.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return recurly.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof recurly.version !== 'undefined';",
+          "version": "try { return String(recurly.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Recurly provides enterprise-class subscription billing and recurring payment management for thousands of businesses worldwide.",
+      "website": "https://recurly.com",
+      "icon": "Recurly.png"
+    },
+    "RevCent": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.revcent\\.com"
+            }
+          }
+        }
+      ],
+      "description": "RevCent is a payment processing solution designed to manage and facilitate online transactions for businesses across various platforms.",
+      "website": "https://revcent.com",
+      "icon": "RevCent.svg"
+    },
+    "Scalapay": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.scalapay\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Scalapay is a payment method for e-commerce merchants in Europe that allows customers to buy now and pay later (BNPL).",
+      "website": "https://www.scalapay.com/",
+      "icon": "Scalapay.svg"
+    },
+    "SendOwl": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*transactions\\.sendowl\\.com"
+            }
+          }
+        }
+      ],
+      "description": "SendOwl is a platform that provides payment links and sales page tools needed to sell products online.",
+      "website": "https://www.sendowl.com",
+      "icon": "SendOwl.svg"
+    },
+    "Service Provider Pro": {
+      "cats": [
+        41,
+        53
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']server[\"'][^\u003e]+content=[\"']app.spp.co[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.spp\\.io/js/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js/spp_clients\\.js\\;confidence:50"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sppOrderform !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sppOrderform !== 'undefined';"
+        }
+      ],
+      "description": "Service Provider Pro is a client management \u0026 billing software for productized service agencies.",
+      "website": "https://spp.co",
+      "icon": "Service Provider Pro.svg"
+    },
+    "Sezzle": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.sezzle\\.(?:in|com)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AwesomeSezzle !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AwesomeSezzle !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof renderSezzleIframe !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sezzle_footer_images !== 'undefined';"
+        }
+      ],
+      "description": "Sezzle offers a buy-now-pay-later solution.",
+      "website": "https://sezzle.com/",
+      "icon": "Sezzle.svg"
+    },
+    "Shop Pay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shopify\\.com/shopifycloud/shopify-js/shop-pay-payment-request\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shopify\\.com/shopifycloud/shopify_pay/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ShopPay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ShopPay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ShopifyPay.apiHost !== 'undefined';"
+        }
+      ],
+      "description": "Shop Pay is an accelerated checkout that lets customers save their email address, credit card, and shipping and billing information so they can complete their transaction faster the next time they are directed to the Shopify checkout.",
+      "website": "https://shop.app",
+      "icon": "Shop Pay.svg"
+    },
+    "Shopflo": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Shopflo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Shopflo !== 'undefined';"
+        }
+      ],
+      "description": "Shopflo is a platform that enables easy checkout experience for ecommerce brands.",
+      "website": "https://shopflo.com",
+      "icon": "Shopflo.svg"
+    },
+    "Shoppable": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.shoppable\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ShoppableApi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ShoppableApi !== 'undefined';"
+        }
+      ],
+      "description": "Shoppable is a multi-retailer checkout technology.",
+      "website": "https://about.shoppable.com",
+      "icon": "Shoppable.svg"
+    },
+    "Simpl": {
+      "cats": [
+        41,
+        91
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof simplSettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof simplSettings !== 'undefined';"
+        }
+      ],
+      "description": "Simpl is a fintech company that offers a cardless payment network with multiple solutions for merchants and consumers.",
+      "website": "https://getsimpl.com",
+      "icon": "Simpl.svg"
+    },
+    "SkyVerge": {
+      "cats": [
+        41
+      ],
+      "implies": [
+        "WooCommerce"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sv-wc-payment-gateway-payment-form\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sv_wc_payment_gateway_payment_form_param !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sv_wc_payment_gateway_payment_form_param !== 'undefined';"
+        }
+      ],
+      "description": "SkyVerge  is a company which develop extension tools for WooCommerce stores.",
+      "website": "https://www.skyverge.com",
+      "icon": "SkyVerge.svg"
+    },
+    "Sogecommerce": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/woo-sogecommerce-payment/"
+            }
+          }
+        }
+      ],
+      "description": "Sogecommerce is an online payment system provided by Societe Generale for processing digital transactions securely.",
+      "website": "https://sogecommerce.societegenerale.eu",
+      "icon": "Sogecommerce.svg"
+    },
+    "SplitIt": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.production\\.splitit\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Splitit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Splitit !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wc_ga_pro.available_gateways.splitit !== 'undefined';"
+        }
+      ],
+      "description": "SplitIt is a payment solution that divides a purchase into smaller monthly installments.",
+      "website": "https://www.splitit.com",
+      "icon": "SplitIt.svg"
+    },
+    "SpotOn": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cdn\\.spoton\\.com"
+            }
+          }
+        }
+      ],
+      "description": "SpotOn is a provider of point-of-sale systems and payment processing software tailored to fit your workflow.",
+      "website": "https://www.spoton.com",
+      "icon": "SpotOn.svg"
+    },
+    "Spotii": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.spotii\\.me"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof spotiiConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof spotiiConfig !== 'undefined';"
+        }
+      ],
+      "description": "Spotii is a tech-enabled payments platform where anyone can Shop Now and Pay Later with absolutely zero interest or cost.",
+      "website": "https://www.spotii.com/",
+      "icon": "Spotii.svg"
+    },
+    "SpurIT Partial Payments App": {
+      "cats": [
+        41,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn-spurit\\.com/shopify-apps/split-payments/"
+            }
+          }
+        }
+      ],
+      "description": "SpurIT Partial Payments App allow your customers to pay for the order in several ways or to share a payment with other people.",
+      "website": "https://spur-i-t.com/shopify-apps/split-partial-payments/",
+      "icon": "SpurIT.svg"
+    },
+    "SpurIT Recurring Payments App": {
+      "cats": [
+        41,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn-spurit\\.com/shopify-apps/recurring-invoices/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Spurit !== 'undefined' \u0026\u0026 typeof Spurit.recurringInvoices !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Spurit.recurringInvoices !== 'undefined';"
+        }
+      ],
+      "description": "SpurIT Recurring Payments App is a simple way to create a system of bill payment,subscriptions and invoicing.",
+      "website": "https://spur-i-t.com/shopify-apps/recurring-order-subscription",
+      "icon": "SpurIT.svg"
+    },
+    "Square": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.squareup\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SqPaymentForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SqPaymentForm !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Square.Analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __BOOTSTRAP_STATE__.storeInfo.square_application_id !== 'undefined';"
+        }
+      ],
+      "description": "Square is a mobile payment company that offers business software, payment hardware products and small business services.",
+      "website": "https://squareup.com/",
+      "icon": "Square.svg"
+    },
+    "Stax": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*staxjs\\.staxpayments\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof StaxJs !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof StaxJs !== 'undefined';"
+        }
+      ],
+      "description": "Stax is a subscription-based platform offering integrated payment technology.",
+      "website": "https://staxpayments.com",
+      "icon": "Stax.svg"
+    },
+    "Stripe": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cinput[^\u003e]+data-stripe"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.stripe\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Stripe !== 'undefined' \u0026\u0026 typeof Stripe.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Stripe.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Stripe.version !== 'undefined';",
+          "version": "try { return String(Stripe.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __NEXT_DATA__.props.pageProps.appSettings.STRIPE_API_PUBLIC_KEY !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof checkout.enabledpayments.stripe !== 'undefined';",
+          "version": "try { return String(checkout.enabledpayments.stripe || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Stripe offers online payment processing for internet businesses as well as fraud prevention, invoicing and subscription management.",
+      "website": "https://stripe.com",
+      "icon": "Stripe.svg"
+    },
+    "SumUp": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SumUpCard !== 'undefined' \u0026\u0026 typeof SumUpCard.debug !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SumUpCard.debug !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SumUpPayment.debug !== 'undefined';"
+        }
+      ],
+      "description": "SumUp is a provider of payment acceptance solutions.",
+      "website": "https://www.sumup.com",
+      "icon": "SumUp.svg"
+    },
+    "T1 Pagos": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^t1pagos$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "T1 Pagos is a payment processing platform.",
+      "website": "https://www.t1pagos.com",
+      "icon": "T1 Pagos.svg"
+    },
+    "TNS Payments": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*secure\\.ap\\.tnspayments\\.com"
+            }
+          }
+        }
+      ],
+      "description": "TNS Payments, is designed to deliver payment transaction information to banks, merchants, processors and other payment institutions.",
+      "website": "https://tnsi.com/products/payments/",
+      "icon": "tnsi.png"
+    },
+    "Tabby": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*checkout\\.tabby\\.ai"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Tabby !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TabbyPromo !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Tabby !== 'undefined';"
+        }
+      ],
+      "description": "Tabby is a Buy now pay later solution from Middle East.",
+      "website": "https://tabby.ai/",
+      "icon": "Tabby.svg"
+    },
+    "Tamara": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.tamara\\.co"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TamaraProductWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TamaraProductWidget !== 'undefined';"
+        }
+      ],
+      "description": "Tamara ia a BNPL (Buy now pay later) provider in Saudi Arabia.",
+      "website": "https://tamara.co/",
+      "icon": "Tamara.svg"
+    },
+    "Tap Payments": {
+      "cats": [
+        41
+      ],
+      "description": "Tap Payments is a company based in KSA provides payment services to merchants.",
+      "website": "https://www.tap.company",
+      "icon": "Tap Payments.svg"
+    },
+    "Venmo": {
+      "cats": [
+        41
+      ],
+      "description": "Venmo is a mobile payment service owned by PayPal. Venmo account holders can transfer funds to others via a mobile phone app.",
+      "website": "https://venmo.com",
+      "icon": "Venmo.svg"
+    },
+    "Verifone 2Checkout": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*2checkout\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Verifone is an American multinational corporation headquartered in Coral Springs, Florida, that provides technology for electronic payment transactions and value-added services at the point-of-sale.",
+      "website": "https://www.2checkout.com",
+      "icon": "Verifone.svg"
+    },
+    "Visa": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof visaApi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof visaApi !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof visaImage !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof visaSrc !== 'undefined';"
+        }
+      ],
+      "website": "https://www.visa.com",
+      "icon": "Visa.svg"
+    },
+    "Visa Checkout": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*secure\\.checkout\\.visa\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Visa facilitates electronic funds transfers throughout the world, most commonly through Visa-branded credit cards, debit cards and prepaid cards.",
+      "website": "https://checkout.visa.com",
+      "icon": "Visa.svg"
+    },
+    "Voltage": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*btcpay0\\.voltageapp\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Voltage is a payments platform that enables users to send bitcoin globally through a secure network.",
+      "website": "https://www.voltage.cloud",
+      "icon": "Voltage.svg"
+    },
+    "WAY4 Application": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$and": [
+              {
+                "body": {
+                  "$regex": "(?i)Application Serve"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "(?i)Server-side applications Middleware Platform"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "(?i)Century Gothic"
+                }
+              }
+            ],
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?i)Way4 Server-side applications Middleware Platform"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "(?i)WAY4 Application Server"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "WAY4 is a comprehensive payment processing and card management platform developed by OpenWay Group for banks and financial institutions.",
+      "website": "http://www.openwaygroup.com",
+      "icon": "WAY4.svg"
+    },
+    "WEBXPAY": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WEBXPAY !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WEBXPAY !== 'undefined';"
+        }
+      ],
+      "description": "WEBXPAY is a specialised online payment gateway that expedites buying and selling in a highly secured environment.",
+      "website": "https://webxpay.com",
+      "icon": "WEBXPAY.png"
+    },
+    "Wallkit": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wallkit\\.net/js/integration/latest/wallkit-integration-library\\.min\\.js\\?ver=([\\d\\.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WALLKIT_CDN_URL !== 'undefined' \u0026\u0026 WALLKIT_CDN_URL === '\\.wallkit\\.net'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WALLKIT_CDN_URL !== 'undefined';",
+          "version": "try { return String(WALLKIT_CDN_URL || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Wallkit is a plug-and-play subscription management system.",
+      "website": "https://wallkit.net",
+      "icon": "Wallkit.svg"
+    },
+    "WayForPay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*secure\\.wayforpay\\.com"
+            }
+          }
+        }
+      ],
+      "description": "WayForPay is a payment processing service provider based in Europe.",
+      "website": "https://wayforpay.com",
+      "icon": "WayForPay.svg"
+    },
+    "Wepay": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wepay\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WePay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WePay !== 'undefined';"
+        }
+      ],
+      "description": "Wepay is a provider of integrated payments processing solutions tailored for platforms, facilitating transaction management across diverse service offerings.",
+      "website": "https://go.wepay.com",
+      "icon": "WePay.svg"
+    },
+    "Wirecard": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wirecard\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WirecardHPP !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WirecardHPP !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WirecardPaymentPage !== 'undefined';"
+        }
+      ],
+      "description": "Wirecard is a defunct German payment processor and financial services provider.",
+      "website": "https://www.wirecard.com",
+      "icon": "Wirecard.svg"
+    },
+    "WorldPay": {
+      "cats": [
+        41
+      ],
+      "description": "WorldPay is a merchant services and payment processing provider offering a payment gateway for online transactions.",
+      "website": "https://online.worldpay.com",
+      "icon": "WorldPay.svg"
+    },
+    "Xpresslane": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*apps\\.xpresslane\\.in/"
+            }
+          }
+        }
+      ],
+      "description": "Xpresslane is a checkout platform for ecommerce that focuses on increasing conversion during the checkout process.",
+      "website": "https://www.xpresslane.in",
+      "icon": "Xpresslane.png"
+    },
+    "Xsolla": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.xsolla\\.(com|net)"
+            }
+          }
+        }
+      ],
+      "description": "Xsolla is a video game business system offering payment solutions and store management.",
+      "website": "https://xsolla.com",
+      "icon": "Xsolla.svg"
+    },
+    "Yampi Checkout": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof yampiCheckoutUrl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof yampiCheckoutUrl !== 'undefined';"
+        }
+      ],
+      "description": "Yampi Checkout is an payment processor from Brazil.",
+      "website": "https://www.yampi.com.br/checkout",
+      "icon": "Yampi.svg"
+    },
+    "Yever": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.yever\\.com\\.br"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof currentUrlYever !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof currentUrlYever !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof getUtmsUrlYever !== 'undefined';"
+        }
+      ],
+      "description": "Yever is a digital payment and checkout platform that enables secure online transactions for businesses and customers.",
+      "website": "https://www.yever.com.br",
+      "icon": "Yever.svg"
+    },
+    "YooMoney": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.yoomoney\\.ru"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.yoomoney\\.ru/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "YooMoney is an IT company working with electronic payments on the Internet, creating and supporting financial services for individuals and businesses.",
+      "website": "https://yoomoney.ru",
+      "icon": "YooMoney.svg"
+    },
+    "YouCan Pay": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof YCPay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof YCPay !== 'undefined';"
+        }
+      ],
+      "description": "YouCan Pay is a developed electronic payment platform that provides effective solutions for the payment gatways issue in ecommerce in Morocco.",
+      "website": "https://youcanpay.com",
+      "icon": "YouCan Pay.svg"
+    },
+    "Yuno": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk-web\\.y\\.uno"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Yuno !== 'undefined' \u0026\u0026 typeof Yuno.threeDSecure !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Yuno.threeDSecure !== 'undefined';"
+        }
+      ],
+      "description": "Yuno is a global payment orchestrator used by checkout platforms to optimize payment processing and enhance transaction performance.",
+      "website": "https://y.uno/",
+      "icon": "Yuno.svg"
+    },
+    "Zip": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*quadpay\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.zipmoney\\.com\\.au"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*zip\\.co"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof QuadPayShopify !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof QuadPayShopify !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof checkout.enabledpayments.zip !== 'undefined';",
+          "version": "try { return String(checkout.enabledpayments.zip || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof quadpayID !== 'undefined';"
+        }
+      ],
+      "description": "Zip is a payment service that lets you receive your purchase now and spread the total cost over a interest-free payment schedule.",
+      "website": "https://www.zip.co/",
+      "icon": "zip_pay.svg"
+    },
+    "Zuora": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.zuora\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Zuora is a platform that offers subscription billing management software.",
+      "website": "https://www.zuora.com",
+      "icon": "Zuora.svg"
+    },
+    "authorize.net": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.authorize\\.net\\s"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.authorize\\.net/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof config !== 'undefined' \u0026\u0026 typeof config.authorizenet_public_client_key !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof config.authorizenet_public_client_key !== 'undefined';"
+        }
+      ],
+      "description": "Authorize.net is a secure online payment gateway service that enables businesses to accept payments through various channels, such as ecommerce websites, mobile devices, and retail stores, providing a trusted platform for processing credit card and electronic cheque payments.",
+      "website": "https://www.authorize.net",
+      "icon": "authorize.net.svg"
+    },
+    "bSecure": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bsecure_js_object !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bsecure_js_object !== 'undefined';"
+        }
+      ],
+      "description": "bSecure is a one-click checkout solution for selling your products all across the globe instantly.",
+      "website": "https://www.bsecure.pk",
+      "icon": "bSecure.svg"
+    },
+    "eWAY Payments": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cimg [^\u003e]*src=\"[^/]*//[^/]*eway\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*secure\\.ewaypayments\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "eWAY is a global omnichannel payment provider. The company processes secure credit card payments for merchants. eWay works through eCommerce.",
+      "website": "https://www.eway.com.au/",
+      "icon": "eway.png"
+    },
+    "iugu": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.iugu\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Iugu !== 'undefined' \u0026\u0026 typeof Iugu.CreditCard !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Iugu.CreditCard !== 'undefined';"
+        }
+      ],
+      "description": "iugu is a financial management platform that enables businesses to handle payments, billing, and invoicing through a unified system.",
+      "website": "https://www.iugu.com",
+      "icon": "iugu.svg"
+    },
+    "iyzico": {
+      "cats": [
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof iyz !== 'undefined' \u0026\u0026 typeof iyz.ideaSoft !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof iyz.ideaSoft !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof iyz.position !== 'undefined';"
+        }
+      ],
+      "description": "iyzico is a payment receipt system management platform that offers ePayment solutions.",
+      "website": "https://www.iyzico.com",
+      "icon": "iyzico.svg"
+    },
+    "jQuery Payment": {
+      "cats": [
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/jquery-payment/jquery\\.payment\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "jQuery Payment is a general-purpose library for building credit card forms, validating input fields, and formatting card numbers.",
+      "website": "https://plugins.jquery.com/payment",
+      "icon": "jQuery.svg"
+    },
+    "mobicred": {
+      "cats": [
+        41,
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.mobicredwidget\\.co\\.za"
+            }
+          }
+        }
+      ],
+      "description": "Mobicred is a credit facility that allows you to safely shop online with our participating retailers.",
+      "website": "https://mobicred.co.za/",
+      "icon": "Mobicred.png"
+    },
+    "Wirecard Terminal Management System": {
+      "cats": [
+        41
+      ],
+      "implies": [
+        "Microsoft ASP.NET",
+        "Bootstrap",
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "<title>\\s*(?:Error - )?Terminal Management System\\s*</title>"
+                }
+              },
+              {
+                "$and": [
+                  {
+                    "body": {
+                      "$regex": "Terminal Management System"
+                    }
+                  },
+                  {
+                    "headers.set-cookie": {
+                      "$regex": "ASP.NET_SessionId"
+                    }
+                  },
+                  {
+                    "body": {
+                      "$regex": "__VIEWSTATE"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "path": "/error/error.aspx",
+          "detect": {
+            "$and": [
+              {
+                "body": {
+                  "$regex": "Terminal Management System"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "Microsoft-IIS"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Wirecard Terminal Management System (TMS) is a payment terminal management platform built on ASP.NET for managing and configuring payment terminals and transaction processing infrastructure.",
+      "website": "https://www.wirecard.com",
+      "icon": "Wirecard.svg"
+    }
+  }
+}

@@ -1,0 +1,494 @@
+{
+  "apps": {
+    "Adobe Flash": {
+      "cats": [
+        27
+      ],
+      "description": "Adobe Flash is a multimedia software platform used for production of animations, rich web applications and embedded web browser video players.",
+      "website": "https://www.adobe.com/products/flashplayer",
+      "icon": "Adobe Flash.svg",
+      "cpe": "cpe:2.3:a:adobe:flash:*:*:*:*:*:*:*:*"
+    },
+    "C": {
+      "cats": [
+        27
+      ],
+      "description": "C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.",
+      "website": "https://www.open-std.org/jtc1/sc22/wg14/",
+      "icon": "C.png"
+    },
+    "CFML": {
+      "cats": [
+        27
+      ],
+      "description": "ColdFusion Markup Language (CFML), is a scripting language for web development that runs on the JVM, the .NET framework, and Google App Engine.",
+      "website": "https://adobe.com/products/coldfusion-family.html",
+      "icon": "CFML.png"
+    },
+    "Dart": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/(?:\\.)?(?:dart)(?:\\.js)?/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $__dart_deferred_initializers__ !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $__dart_deferred_initializers__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ___dart__$dart_dartObject_ZxYxX_0_ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ___dart_dispatch_record_ZxYxX_0_ !== 'undefined';"
+        }
+      ],
+      "description": "Dart is an open-source, general-purpose, object-oriented programming language developed by Google.",
+      "website": "https://dart.dev",
+      "icon": "Dart.svg"
+    },
+    "Dragon": {
+      "cats": [
+        27
+      ],
+      "implies": [
+        "Apache HTTP Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "dragon native ([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Dragon is a general-purpose programming language.",
+      "website": "https://dragon-lang.org",
+      "icon": "Dragon.png"
+    },
+    "Elixir": {
+      "cats": [
+        27
+      ],
+      "implies": [
+        "Erlang"
+      ],
+      "description": "Elixir is a dynamic, functional language designed for building scalable and maintainable applications.",
+      "website": "https://elixir-lang.org",
+      "icon": "Elixir.svg"
+    },
+    "Elm": {
+      "cats": [
+        27,
+        12
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Elm !== 'undefined' \u0026\u0026 typeof Elm.Main !== 'undefined' \u0026\u0026 typeof Elm.Main.embed !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Elm.Main.embed || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Elm.Main.init !== 'undefined';",
+          "version": "try { return String(Elm.Main.init || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Elm.Main.embed !== 'undefined';",
+          "version": "try { return String(Elm.Main.embed || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Elm is a statically typed functional programming language created by Evan Czaplicki in 2012 for building web applications.",
+      "website": "https://elm-lang.org/",
+      "icon": "elm.svg"
+    },
+    "Erlang": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "erlang( otp/(?:[\\d.abr-]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Erlang is a general-purpose, concurrent, functional programming language, and a garbage-collected runtime system.",
+      "website": "https://www.erlang.org",
+      "icon": "Erlang.png",
+      "cpe": "cpe:2.3:a:erlang:erlang%2fotp:*:*:*:*:*:*:*:*"
+    },
+    "GeneXus": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+?id=\"gxtheme_css_reference\""
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/static/gxgral\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/static/gxtimezone\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof gx !== 'undefined' \u0026\u0026 typeof gx.gxVersion !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return gx.gxVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gx.gxVersion !== 'undefined';",
+          "version": "try { return String(gx.gxVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "website": "https://www.genexus.com/",
+      "icon": "GeneXus.png"
+    },
+    "Go": {
+      "cats": [
+        27
+      ],
+      "website": "https://golang.org",
+      "icon": "Go.svg",
+      "cpe": "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    },
+    "GraphQL": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']store-config[\"'][^\u003e]+content=[\"']graphqlmethod[\"']"
+            }
+          }
+        }
+      ],
+      "description": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.",
+      "website": "https://graphql.org",
+      "icon": "GraphQL.svg"
+    },
+    "Haskell": {
+      "cats": [
+        27
+      ],
+      "website": "https://wiki.haskell.org/Haskell",
+      "icon": "Haskell.png"
+    },
+    "Imba": {
+      "cats": [
+        27
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Imba !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Imba !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Imba.VERSION !== 'undefined';",
+          "version": "try { return String(Imba.VERSION || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof imba !== 'undefined';"
+        }
+      ],
+      "description": "Imba is a Web programming language that compiles to performant JavaScript, providing language-level support for defining, extending, subclassing, and instantiating.",
+      "website": "https://imba.io",
+      "icon": "Imba.svg"
+    },
+    "Java": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+      "website": "https://java.com",
+      "icon": "Java.svg",
+      "cpe": "cpe:2.3:a:oracle:jre:*:*:*:*:*:*:*:*"
+    },
+    "KPHP": {
+      "cats": [
+        27
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^kphp/([\\d\\.]+)$\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "KPHP (kPHP or KittenPHP) is a free PHP-to- C++ source-to-source translator, developed by VKontakte.",
+      "website": "https://vkcom.github.io/kphp",
+      "icon": "default.svg"
+    },
+    "Kotlin": {
+      "cats": [
+        27
+      ],
+      "description": "Kotlin is a general purpose, free, open-source, statically typed “pragmatic” programming language initially designed for the JVM (Java Virtual Machine) and Android that combines object-oriented and functional programming features.",
+      "website": "https://kotlinlang.org",
+      "icon": "Kotlin.svg",
+      "cpe": "cpe:2.3:a:jetbrains:kotlin:*:*:*:*:*:*:*:*"
+    },
+    "Lua": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "\\blua(?: ([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Lua is a multi-paradigm programming language designed primarily for embedded use in applications.",
+      "website": "https://www.lua.org",
+      "icon": "Lua.png",
+      "cpe": "cpe:2.3:a:lua:lua:*:*:*:*:*:*:*:*"
+    },
+    "Node.js": {
+      "cats": [
+        27
+      ],
+      "description": "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.",
+      "website": "https://nodejs.org",
+      "icon": "Node.js.svg",
+      "cpe": "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    },
+    "PHP": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "php/?([\\d.]+)?\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^php/?([\\d.]+)?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "PHP is a general-purpose scripting language used for web development.",
+      "website": "https://php.net",
+      "icon": "PHP.svg",
+      "cpe": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    },
+    "Perl": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "\\bperl\\b(?: ?/?v?([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Perl is a family of two high-level, general-purpose, interpreted, dynamic programming languages.",
+      "website": "https://perl.org",
+      "icon": "Perl.png",
+      "cpe": "cpe:2.3:a:perl:perl:*:*:*:*:*:*:*:*"
+    },
+    "Python": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "(?:^|\\s)python(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Python is an interpreted and general-purpose programming language.",
+      "website": "https://python.org",
+      "icon": "Python.png",
+      "cpe": "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    },
+    "Ruby": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "(?:mongrel|ruby(?:/([\\d\\.]+))?)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Ruby is an open-source object-oriented programming language.",
+      "website": "https://ruby-lang.org",
+      "icon": "Ruby.png",
+      "cpe": "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*"
+    },
+    "Rust": {
+      "cats": [
+        27
+      ],
+      "description": "Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.",
+      "website": "https://www.rust-lang.org",
+      "icon": "Rust.svg"
+    },
+    "Sass": {
+      "cats": [
+        27
+      ],
+      "description": "Sass is an extension of CSS that enables you to use things like variables, nested rules, inline imports and more.",
+      "website": "https://sass-lang.com",
+      "icon": "Sass.svg"
+    },
+    "Scala": {
+      "cats": [
+        27
+      ],
+      "description": "Scala is a general-purpose programming language providing support for both object-oriented programming and functional programming.",
+      "website": "https://www.scala-lang.org",
+      "icon": "Scala.png"
+    },
+    "TypeScript": {
+      "cats": [
+        27
+      ],
+      "description": "TypeScript is an open-source language which builds on JavaScript  by adding static type definitions.",
+      "website": "https://www.typescriptlang.org",
+      "icon": "TypeScript.svg"
+    },
+    "WebAssembly": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-type": {
+                  "$regex": "application/wasm"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wasm_exec\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof wasmBinary !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wasmBinary !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wasmBinaryFile !== 'undefined';"
+        }
+      ],
+      "description": "WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications.",
+      "website": "https://webassembly.org/",
+      "icon": "WebAssembly.svg"
+    },
+    "XSLT": {
+      "cats": [
+        27
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cxsl[^\u003e]* version=\"(.+)\"\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "XSLT is designed for use as part of XSL, which is a stylesheet language for XML.",
+      "website": "https://www.w3.org/TR/xslt-10",
+      "icon": "W3C.png"
+    }
+  }
+}

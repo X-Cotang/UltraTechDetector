@@ -1,0 +1,847 @@
+{
+  "apps": {
+    "Addi": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*s3\\.amazonaws\\.com/widgets\\.addi\\.com/bundle\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Addi is a service that allows users to make purchases and pay for them in installments over time",
+      "website": "https://co.addi.com/",
+      "icon": "addi.png"
+    },
+    "Atome": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*gateway\\.apaylater\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof atomeWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof atomeWidget !== 'undefined';"
+        }
+      ],
+      "description": "Atome is a brand that allows users to purchase products online and pay for them in monthly installments.",
+      "website": "https://www.atome.sg/",
+      "icon": "atome.png"
+    },
+    "Deko": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*secure\\.dekopay\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Deko is a retail finance technology platform used by UK merchants, formerly known as Pay4Later.",
+      "website": "https://www.dekopay.com",
+      "icon": "Deko.svg"
+    },
+    "Fundiin": {
+      "cats": [
+        91
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof websiteEnableSuggestFundiin !== 'undefined' \u0026\u0026 websiteEnableSuggestFundiin === 'true'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof websiteEnableSuggestFundiin !== 'undefined';",
+          "version": "try { return String(websiteEnableSuggestFundiin || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof websiteMaximumSuggestFundiinWithPrediction !== 'undefined';"
+        }
+      ],
+      "description": "Fundiin is the BNPL leader in Vietnam in providing zero-cost buy-now-pay-later facilities.",
+      "website": "https://fundiin.vn",
+      "icon": "Fundiin.svg"
+    },
+    "HeyLight": {
+      "cats": [
+        91
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof closePagodilModal !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof openPagodilModal !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pagodilLang !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pagodilSprintf !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof closePagodilModal !== 'undefined';"
+        }
+      ],
+      "description": "HeyLight is a BNPL system allowing instalment payments for online purchases.",
+      "website": "https://heylight.com/it/it",
+      "icon": "HeyLight.svg"
+    },
+    "Humm": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/oxipay-payment-gateway/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widgets\\.shophumm\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof checkout !== 'undefined' \u0026\u0026 typeof checkout.enabledpayments !== 'undefined' \u0026\u0026 typeof checkout.enabledpayments.humm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof checkout.enabledpayments.humm !== 'undefined';",
+          "version": "try { return String(checkout.enabledpayments.humm || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Humm (formerly Flexigroup) is a buy now pay later service operating in Australia.",
+      "website": "https://www.shophumm.com",
+      "icon": "Humm.svg"
+    },
+    "LatitudePay": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.latitudepayapps\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof checkout !== 'undefined' \u0026\u0026 typeof checkout.enabledpayments !== 'undefined' \u0026\u0026 typeof checkout.enabledpayments.latitudepay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wc_ga_pro.available_gateways.latitudepay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof checkout.enabledpayments.latitudepay !== 'undefined';",
+          "version": "try { return String(checkout.enabledpayments.latitudepay || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "LatitudePay is an interest-free, buy now, pay later solution.",
+      "website": "https://www.latitudepay.com",
+      "icon": "LatitudePay.svg"
+    },
+    "LayBuy": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/woo-laybuy/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.laybuy\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LaybuyHelper !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LaybuyHelper !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof checkout.enabledpayments.laybuy !== 'undefined';",
+          "version": "try { return String(checkout.enabledpayments.laybuy || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof laybuyEnableCart !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof laybuyMoneyOverides !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wc_ga_pro.available_gateways.laybuy !== 'undefined';"
+        }
+      ],
+      "description": "Laybuy is a payment service that lets you receive your purchase now and spread the total cost over 6 weekly automatic payments interest free.",
+      "website": "https://www.laybuy.com",
+      "icon": "LayBuy.svg"
+    },
+    "Limepay": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/limepay-installment-show\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/limepay-v\\d+/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LimepayIdentity !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wc_ga_pro.available_gateways.limepay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LimepayIdentity !== 'undefined';"
+        }
+      ],
+      "description": "Limepay is a buy now, pay later platform that's fully integrated with the merchant's payment platform.",
+      "website": "https://www.limepay.com.au",
+      "icon": "Limepay.svg"
+    },
+    "Octane": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.octane\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Octane is a financing solution for motorcycles, ATVs, mowers, and other power sports and outdoor equipment.",
+      "website": "https://octane.co",
+      "icon": "Octane.svg"
+    },
+    "Oney": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/modules/oney(?:/)?/views/js/front\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OneyMarketplace !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof openOneyLayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OneyMarketplace !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof isOneyActive !== 'undefined';"
+        }
+      ],
+      "description": "Oney is an app that gives consumers back the power over their spending and makes split payments universal.",
+      "website": "https://www.oney.com",
+      "icon": "Oney.svg"
+    },
+    "Pagolight": {
+      "cats": [
+        91
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof closePagodilModal !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pagodilSprintf !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof closePagodilModal !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof openPagodilModal !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pagodilLang !== 'undefined';"
+        }
+      ],
+      "description": "Pagolight is a BNPL system allowing instalment payments for online purchases.",
+      "website": "https://pagolight.it",
+      "icon": "Pagolight.svg"
+    },
+    "Pay It Later": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/payitlater-gateway-for-woocommerce/(?:.+\\?ver=([\\d\\.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof payitlater !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof payitlater !== 'undefined';"
+        }
+      ],
+      "description": "Pay It Later collect payments in weekly instalments from you when you make a purchase online, so you can buy now and pay it later.",
+      "website": "https://www.payitlater.com.au",
+      "icon": "Pay It Later.png"
+    },
+    "PayJustNow": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.payjustnow\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "PayJustNow is a buy now, pay later checkout option for ecommerce sites.",
+      "website": "https://payjustnow.com",
+      "icon": "PayJustNow.svg"
+    },
+    "PayPal Credit": {
+      "cats": [
+        91
+      ],
+      "implies": [
+        "PayPal"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.paypalobjects\\.com/.+/smart-credit-message@([\\d\\.]+)\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PaypalOffersObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof payPalCreditPopover !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PaypalOffersObject !== 'undefined';"
+        }
+      ],
+      "description": "PayPal Credit is a reusable line of credit that lets you pay for online purchases over time.",
+      "website": "https://www.paypal.com/uk/webapps/mpp/paypal-virtual-credit",
+      "icon": "PayPal.svg"
+    },
+    "Postpay": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.postpay\\.io/(?:.+\\?ver=([\\d\\.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PostpayJsConfig !== 'undefined' \u0026\u0026 PostpayJsConfig === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PostpayJsConfig !== 'undefined';",
+          "version": "try { return String(PostpayJsConfig || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof postpay !== 'undefined';",
+          "version": "try { return String(postpay || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wc_postpay_init_params !== 'undefined';",
+          "version": "try { return String(wc_postpay_init_params || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Postpay is a payment solution that allows you to split your purchase amount into instalments.",
+      "website": "https://postpay.io",
+      "icon": "Postpay.svg"
+    },
+    "PowerPay": {
+      "cats": [
+        91
+      ],
+      "description": "PowerPay is a financing and loan provider offering lower-than-average interest rates.",
+      "website": "https://getpowerpay.com",
+      "icon": "PowerPay.svg"
+    },
+    "Prospa": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.prospa\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Prospa is a platform that enables small businesses to pay for purchases over time with an interest-free repayment solution.",
+      "website": "https://www.prospa.com",
+      "icon": "Prospa.svg"
+    },
+    "ResolvePay": {
+      "cats": [
+        91
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof as_resolveEnvironmentURL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof as_resolveEnvironmentURL !== 'undefined';"
+        }
+      ],
+      "description": "Resolve Pay is a platform that provides 30 to 60 day net terms financing for B2B merchants and buyers.",
+      "website": "https://resolvepay.com/b2b-payments",
+      "icon": "ResolvePay.svg"
+    },
+    "SeQura": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*live\\.sequracdn\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Sequra !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SequraConfiguration !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sequraProducts !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Sequra !== 'undefined';"
+        }
+      ],
+      "description": "SeQura is a FinTech company based in Barcelona, providing digital flexible payment solutions, with a geographical focus on Southern Europe and Latin America.",
+      "website": "https://www.sequra.es",
+      "icon": "SeQura.svg"
+    },
+    "Shop Pay Installments": {
+      "cats": [
+        91
+      ],
+      "implies": [
+        "Affirm",
+        "Shop Pay"
+      ],
+      "description": "Shop Pay Installments allows customers to pay for orders between 50 USD and 3,000 USD in 4 interest-free installments.",
+      "website": "https://shoppay.affirm.com",
+      "icon": "Shop Pay.svg"
+    },
+    "Soisy": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.soisy\\.it/"
+            }
+          }
+        }
+      ],
+      "description": "Soisy is a buy now, pay later solution provider.",
+      "website": "https://www.soisy.it",
+      "icon": "Soisy.png"
+    },
+    "SplittyPay": {
+      "cats": [
+        91
+      ],
+      "description": "SplittyPay is an alternative payment platform designed for group reservations and purchases.",
+      "website": "https://www.splittypay.com",
+      "icon": "SplittyPay.png"
+    },
+    "Stage Try": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.stagetry\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof stage_cart_change_events !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof stage_cart_change_events !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof stage_cart_total_price !== 'undefined';"
+        }
+      ],
+      "description": "Stage Try is an end-to-end ecommerce platform amplifying AOV and conversions of online stores.",
+      "website": "https://stagetry.com",
+      "icon": "Stage Try.svg"
+    },
+    "TryNow": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.trynow\\.net/shopify/([\\d\\.]+)/\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TryNowConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TryNowConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tryNowCheckout !== 'undefined';"
+        }
+      ],
+      "description": "TryNow is an ecommerce platform designed to offer a try before you buy experience for shoppers.",
+      "website": "https://www.trynow.io",
+      "icon": "TryNow.svg"
+    },
+    "ViaBill": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.viabill\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof viabillOptions !== 'undefined' \u0026\u0026 typeof viabillOptions.state !== 'undefined' \u0026\u0026 typeof viabillOptions.state.subscriptions !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof viabillOptions.state.subscriptions !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof viabillPricetagInternal.conf.productsByLocale !== 'undefined';"
+        }
+      ],
+      "description": "ViaBill is a cloud-based payment management solution designed to help small to midsize retailers and webshops.",
+      "website": "https://viabill.com",
+      "icon": "ViaBill.svg"
+    },
+    "Wizpay": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wp-content/plugins/creditcorp-wizardpay/.+\\?ver=([\\d\\.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Wizpay is a buy now pay later solution.",
+      "website": "https://www.wizpay.com.au",
+      "icon": "Wizpay.png"
+    },
+    "ZestMoney": {
+      "cats": [
+        91
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ZestMoneyWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ZestMoneyWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zestBind !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zestMerchant !== 'undefined';"
+        }
+      ],
+      "description": "ZestMoney is a fintech company that uses digital EMI without the need for a credit card or a credit score.",
+      "website": "https://www.zestmoney.in",
+      "icon": "ZestMoney.png"
+    },
+    "ZoodPay": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wp-content/plugins/zoodpay/(?:.+\\?ver=([\\d\\.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://www.zoodpay.com",
+      "icon": "ZoodPay.png"
+    },
+    "cashew": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.cashewpayments\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cashewpayments\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Cashew is a buy now, pay later platform that allows its customers to shop now and pay later in equal monthly installments.",
+      "website": "https://www.cashewpayments.com",
+      "icon": "cashew.svg"
+    },
+    "etika": {
+      "cats": [
+        91
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof EtikaProductJsHelper !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EtikaProductJsHelper !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof etikaBannerInject !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof etikaGlobal !== 'undefined';"
+        }
+      ],
+      "description": "etika is a fintech company based in Manchester which provide buy now pay later solution.",
+      "website": "https://etika.com",
+      "icon": "etika.svg"
+    },
+    "hoolah": {
+      "cats": [
+        91
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*merchant\\.cdn\\.hoolah\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hoolah !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hoolah !== 'undefined';"
+        }
+      ],
+      "description": "hoolah is Asia's omni-channel buy now pay later platform.",
+      "website": "https://www.hoolah.co",
+      "icon": "hoolah.png"
+    }
+  }
+}

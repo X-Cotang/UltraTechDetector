@@ -1,0 +1,92 @@
+{
+  "apps": {
+    "1C-Bitrix": { // Technology name (unique key)
+      "cats": [
+        1,
+        6
+      ], // Category IDs of this technology
+      "implies": [
+        "PHP"
+      ], // Technologies implied if this one is detected
+      "paths": [ // HTTP probes grouped by request path (engine will dedupe paths globally)
+        {
+          "path": "/", // Request path (used as grouping key)
+          "request": { // Optional request overrides (default: GET with engine defaults)
+            "method": "POST",
+            "headers": {
+              "content-type": "application/json",
+              "accept": "application/json"
+            },
+            "body": {
+              "ping": true
+            } // Request body (engine serializes based on content-type)
+          },
+          "detect": { // Detection conditions evaluated on this path response. Like MongoDB query
+            "$or": [
+              {
+                "headers.set-cookie": {
+                  "$regex": "bitrix_"
+                }
+              },
+              {
+                "headers.x-powered-cms": {
+                  "$regex": "bitrix site manager"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "Bitrix Site Manager"
+                }
+              }
+            ]
+          },
+          "extract_version": [ // Version extraction rules (run only if tech detected AND version not yet known)
+            {
+              "body": "Bitrix-(\\d{4}-\\d{2}\\.\\d+\\.\\d+\\.\\d+)"
+            }, // Shorthand: { "<field>": "<regex>" } (engine captures group 1 if present)
+            {
+              "headers.app": "Bitrix2-(\\d{4}-\\d{2}\\.\\d+\\.\\d+\\.\\d+)"
+            }
+          ]
+          // Engine notes for this entry:
+          // - If detection fails, extract_version is skipped.
+          // - If version is already extracted earlier, subsequent extract_version rules for this tech are skipped.
+        },
+        {
+          "path": "/version", // Another path probe
+          "detect": {
+            "body": {
+              "$regex": "bitrix site manager"
+            }
+          }, // Detection on /version response
+          "extract_version": [
+            {
+              "body": "([0-9]+\\.[0-9]+\\.[0-9]+)"
+            } // Extract semantic version if available
+          ]
+          // Engine notes for this entry:
+          // - This probe is useful when "/" doesn't expose a version.
+          // - If tech+version already known from previous path probes, engine can skip evaluating this entry entirely.
+          // - If tech already detected AND this entry only provides version, engine may still run it (only if version missing).
+        }
+      ],
+      "browser": [ // Browser probes (JS runtime) grouped by path (engine will dedupe paths globally)
+        {
+          "path": "/", // Browser navigation path
+          "detection": "return typeof Bitrix !== 'undefined';", // JS that must return boolean (tech present?)
+          "version": "try { return String(Bitrix.version || Bitrix.VERSION || ''); } catch(e){ return ''; }"
+          // JS that returns version string or "" (run only when needed)
+        }
+        // Engine notes for browser stage:
+        // - Browser paths are also visited once per unique path across ALL apps (dedup), then all browser probes for that path are evaluated.
+        // - If tech+version already detected from HTTP stage, browser probe can be skipped.
+        // - If tech detected from HTTP stage but version missing:
+        //     - run browser probe ONLY if it is capable of extracting version (i.e., 'version' exists and is non-empty when executed).
+        // - If HTTP stage already detected tech AND this browser probe has no version capability, skip it.
+      ],
+      "description": "...", // Human-readable description
+      "website": "https://www.1c-bitrix.ru",
+      "icon": "1C-Bitrix.svg"
+    }
+  }
+}

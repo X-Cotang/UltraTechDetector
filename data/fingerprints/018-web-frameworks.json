@@ -1,0 +1,2382 @@
+{
+  "apps": {
+    "ABP Framework": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof abp !== 'undefined' \u0026\u0026 typeof abp.timing !== 'undefined' \u0026\u0026 typeof abp.timing.timeZone !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof abp.timing.timeZone !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof abp.version !== 'undefined';",
+          "version": "try { return String(abp.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "ABP Framework is a complete infrastructure to create modern web applications by following the best practices and conventions of software development.",
+      "website": "https://abp.io/",
+      "icon": "abp.svg"
+    },
+    "ASP.NET Boilerplate": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof abp !== 'undefined' \u0026\u0026 typeof abp.aspnetboilerplate !== 'undefined' \u0026\u0026 typeof abp.aspnetboilerplate.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return abp.aspnetboilerplate.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof abp.aspnetboilerplate.version !== 'undefined';",
+          "version": "try { return String(abp.aspnetboilerplate.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof abp.timing.utcClockProvider !== 'undefined';"
+        }
+      ],
+      "description": "ASP.NET Boilerplate is a general purpose application framework especially designed for new modern web applications. It uses already familiar tools and implements best practices around them to provide you a SOLID development experience.",
+      "website": "https://www.aspnetboilerplate.com",
+      "icon": "aspnetboilerplate.png"
+    },
+    "Adobe ColdFusion": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "CFML"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- start headertags\\.cfm"
+                }
+              },
+              {
+                "headers.cookie": {
+                  "$regex": "cftoken="
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/cfajax/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _cfEmails !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _cfEmails !== 'undefined';"
+        }
+      ],
+      "website": "https://adobe.com/products/coldfusion-family.html",
+      "icon": "Adobe ColdFusion.svg",
+      "cpe": "cpe:2.3:a:adobe:coldfusion:*:*:*:*:*:*:*:*"
+    },
+    "AdonisJS": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "website": "https://adonisjs.com",
+      "icon": "AdonisJS.png"
+    },
+    "Akka HTTP": {
+      "cats": [
+        18,
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "akka-http(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://akka.io",
+      "icon": "akka-http.png",
+      "cpe": "cpe:2.3:a:lightbend:akka_http:*:*:*:*:*:*:*:*"
+    },
+    "Amber": {
+      "cats": [
+        18,
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^amber$"
+            }
+          }
+        }
+      ],
+      "website": "https://amberframework.org",
+      "icon": "amber.png"
+    },
+    "AngularDart": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Dart"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ngTestabilityRegistries !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ngTestabilityRegistries !== 'undefined';"
+        }
+      ],
+      "website": "https://webdev.dartlang.org/angular/",
+      "icon": "AngularDart.svg"
+    },
+    "Apache Wicket": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Java"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Wicket !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Wicket !== 'undefined';"
+        }
+      ],
+      "description": "Apache Wicket is an open-source Java web application framework for building scalable and maintainable web applications.",
+      "website": "https://wicket.apache.org",
+      "icon": "Apache Wicket.svg",
+      "cpe": "cpe:2.3:a:apache:wicket:*:*:*:*:*:*:*:*"
+    },
+    "Arwes": {
+      "cats": [
+        18
+      ],
+      "description": "Arwes is a futuristic sci-fi UI web framework.",
+      "website": "https://arwes.dev",
+      "icon": "Arwes.svg"
+    },
+    "Aseqbase": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']product[\"'][^\u003e]+content=[\"']www\\.aseqbase\\.ir[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']framwork[\"'][^\u003e]+content=[\"']^aseqbase$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Aseqbase is a sequence-based web development framework designed to create robust websites.",
+      "website": "https://aseqbase.mimfa.net",
+      "icon": "Aseqbase.svg"
+    },
+    "Blade": {
+      "cats": [
+        18,
+        22
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "blade-([\\w.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://lets-blade.com",
+      "icon": "Blade.png"
+    },
+    "Blazor": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*blazor\\.host\\.min\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*blazor\\.server\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*blazor\\.webassembly\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor",
+      "icon": "Blazor.png"
+    },
+    "Blitz.js": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Next.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^blitz\\.js?([0-9.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __BLITZ_MIDDLEWARE_HOOKS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __BLITZ_SUSPENSE_ENABLED !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __BLITZ_MIDDLEWARE_HOOKS !== 'undefined';"
+        }
+      ],
+      "description": "Blitz.js is a web development framework that uses Next.js and React and includes features for authentication, authorization, and database integration to simplify the creation of high-performance and scalable web applications.",
+      "website": "https://blitzjs.com",
+      "icon": "blitzjs.svg"
+    },
+    "Bonfire": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "CodeIgniter"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "powered by \u003ca[^\u003e]+href=\"https?://(?:www\\.)?cibonfire\\.com[^\u003e]*\u003ebonfire v([^\u003c]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://cibonfire.com",
+      "icon": "Bonfire.png"
+    },
+    "CakePHP": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']cakephp[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "CakePHP is an open-source web framework. It follows the model–view–controller (MVC) approach and is written in PHP.",
+      "website": "https://cakephp.org",
+      "icon": "CakePHP.svg",
+      "cpe": "cpe:2.3:a:cakephp:cakephp:*:*:*:*:*:*:*:*"
+    },
+    "Chicago Boss": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Erlang"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Chicago Boss is a web framework for Erlang.",
+      "website": "https://github.com/ChicagoBoss/ChicagoBoss",
+      "icon": "Chicago Boss.svg"
+    },
+    "CodeIgniter": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cinput[^\u003e]+name=\"ci_csrf_token\"\\;version:2+"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://codeigniter.com",
+      "icon": "CodeIgniter.png",
+      "cpe": "cpe:2.3:a:codeigniter:codeigniter:*:*:*:*:*:*:*:*"
+    },
+    "Dancer": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "perl dancer ([\\d.]+)\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "perl dancer ([\\d.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Mono.net delivers the a Software-as-a-Service (SaaS) platform to build and sell websites and other digital products.",
+      "website": "https://perldancer.org",
+      "icon": "Dancer.png"
+    },
+    "Django": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "(?:powered by \u003ca[^\u003e]+\u003edjango ?([\\d.]+)?\u003c\\/a\u003e|\u003cinput[^\u003e]*name=[\"']csrfmiddlewaretoken[\"'][^\u003e]*\u003e)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __admin_media_prefix__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __admin_media_prefix__ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof django !== 'undefined';"
+        }
+      ],
+      "description": "Django is a Python-based free and open-source web application framework.",
+      "website": "https://djangoproject.com",
+      "icon": "Django.png",
+      "cpe": "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*"
+    },
+    "Express": {
+      "cats": [
+        18,
+        22
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^express(?:$|,)"
+            }
+          }
+        }
+      ],
+      "description": "Express is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.",
+      "website": "https://expressjs.com",
+      "icon": "Express.svg",
+      "cpe": "cpe:2.3:a:expressjs:express:*:*:*:*:*:*:*:*"
+    },
+    "FarCry": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof farcryForgotPassword !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof farcryForgotPassword !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof farcryLogin !== 'undefined';"
+        }
+      ],
+      "description": "FarCry is a web application framework that helps CFML developers build tailor-made content solutions.",
+      "website": "https://www.farcrycore.org",
+      "icon": "FarCry.svg"
+    },
+    "FastAPI": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Python"
+      ],
+      "description": "FastAPI is a web framework for building APIs with Python, utilizing standard Python type hints.",
+      "website": "https://fastapi.tiangolo.com",
+      "icon": "FastAPI.svg"
+    },
+    "Fat-Free Framework": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^fat-free framework$"
+            }
+          }
+        }
+      ],
+      "website": "https://fatfreeframework.com",
+      "icon": "Fat-Free Framework.png"
+    },
+    "Flask": {
+      "cats": [
+        18,
+        22
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "werkzeug/?([\\d\\.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Flask is a Python micro web framework ideal for rapidly constructing web applications, offering minimalism, flexibility, and modularity.",
+      "website": "https://github.com/pallets/flask/",
+      "icon": "Flask.svg",
+      "cpe": "cpe:2.3:a:palletsprojects:flask:*:*:*:*:*:*:*:*"
+    },
+    "Frappe": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "MariaDB",
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^frappe$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof frappe !== 'undefined' \u0026\u0026 typeof frappe.avatar !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof frappe.avatar !== 'undefined';"
+        }
+      ],
+      "description": "Frappe is a full stack, batteries-included, web framework written in Python and Javascript.",
+      "website": "https://frappeframework.com",
+      "icon": "Frappe.png"
+    },
+    "Fresh": {
+      "cats": [
+        18,
+        22
+      ],
+      "implies": [
+        "Deno",
+        "Preact"
+      ],
+      "description": "Fresh is a full stack modern web framework for JavaScript and TypeScript developers, designed to make it trivial to create high-quality, performant, and personalized web applications.",
+      "website": "https://fresh.deno.dev",
+      "icon": "Fresh.svg"
+    },
+    "GLPI": {
+      "cats": [
+        18,
+        53
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//.*glpi.+common\\.min\\.js\\?v=(\\d+\\.\\d+\\.\\d+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof glpiUnsavedFormChanges !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof glpiUnsavedFormChanges !== 'undefined';"
+        }
+      ],
+      "description": "GLPI is an open-source IT Asset Management, issue tracking and service desk system.",
+      "website": "https://glpi-project.org",
+      "icon": "GLPI.png",
+      "cpe": "cpe:2.3:a:glpi-project:glpi:*:*:*:*:*:*:*:* "
+    },
+    "Google Web Toolkit": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Java"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __gwt_ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __gwt_isKnownPropertyValue !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __gwt_stylesLoaded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __gwtlistener !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __gwt_ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __gwt_activeModules !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __gwt_getMetaProperty !== 'undefined';"
+        }
+      ],
+      "description": "Google Web Toolkit (GWT) is an open-source Java software development framework that makes writing AJAX applications.",
+      "website": "https://developers.google.com/web-toolkit",
+      "icon": "Google Web Toolkit.png",
+      "cpe": "cpe:2.3:a:google:web_toolkit:*:*:*:*:*:*:*:*"
+    },
+    "Hamechio": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']hamech\\.io/[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Hamechio is a web application framework.",
+      "website": "https://hamech.io",
+      "icon": "Hamechio.svg"
+    },
+    "HeliumWeb": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "adrikikicp development"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*helium/src/helium.js/helium_web.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*http://maven.enriquitomcfh.ml/helium.js/helium_web.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*http://maven.enriquitomcfh.ml/helium.js/helium_web.min.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof helium !== 'undefined' \u0026\u0026 typeof helium.js !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof helium.js !== 'undefined';"
+        }
+      ],
+      "description": "HeliumWeb is a server-side (backend) web framework written in PHP \u0026 JavaScript",
+      "website": "https://heliumweb.adrikikicp-development.ml"
+    },
+    "Helix Ultimate": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Joomla"
+      ],
+      "description": "Helix Ultimate a free template framework for Joomla.",
+      "website": "https://www.joomshaper.com/joomla-templates/helixultimate",
+      "icon": "HelixUltimate.svg"
+    },
+    "Hono": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "hono"
+            }
+          }
+        }
+      ],
+      "description": "Hono is a small, simple, and ultrafast web framework for the Edge.",
+      "website": "https://hono.dev",
+      "icon": "Hono.png"
+    },
+    "Includable": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-includable-version": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "website": "https://includable.com",
+      "icon": "Includable.svg"
+    },
+    "Ionic": {
+      "cats": [
+        18
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Ionic !== 'undefined' \u0026\u0026 typeof Ionic.config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Ionic.config !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Ionic.version !== 'undefined';",
+          "version": "try { return String(Ionic.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Ionic is an open-source framework that enables developers to create cross-platform mobile, web, and desktop applications using web technologies like HTML, CSS, and JavaScript.",
+      "website": "https://ionicframework.com",
+      "icon": "Ionic.svg"
+    },
+    "Java Servlet": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "servlet(?:\\/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://www.oracle.com/technetwork/java/index-jsp-135475.html",
+      "icon": "Java.svg"
+    },
+    "JavaServer Faces": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "jsf(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://javaserverfaces.java.net",
+      "icon": "JavaServer Faces.png"
+    },
+    "JavaServer Pages": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "jsp(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://www.oracle.com/technetwork/java/javaee/jsp/index.html",
+      "icon": "Java.svg"
+    },
+    "Kemal": {
+      "cats": [
+        18,
+        22
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "kemal"
+            }
+          }
+        }
+      ],
+      "website": "https://kemalcr.com",
+      "icon": "kemalcr.png"
+    },
+    "Koa": {
+      "cats": [
+        18,
+        22
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^koa$"
+            }
+          }
+        }
+      ],
+      "website": "https://koajs.com",
+      "icon": "Koa.png"
+    },
+    "Kohana": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "kohana framework ([\\d.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://kohanaframework.org",
+      "icon": "Kohana.png",
+      "cpe": "cpe:2.3:a:kohanaframework:kohana:*:*:*:*:*:*:*:*"
+    },
+    "Ktor": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Kotlin"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^ktor/debug$"
+                }
+              },
+              {
+                "headers.x-engine": {
+                  "$regex": "^ktor$"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Ktor is a Kotlin framework that allow developers to write asynchronous clients and servers applications, in Kotlin.",
+      "website": "https://ktor.io",
+      "icon": "Ktor.svg",
+      "cpe": "cpe:2.3:a:jetbrains:ktor:*:*:*:*:*:*:*:*"
+    },
+    "Laravel": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Laravel !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Laravel !== 'undefined';"
+        }
+      ],
+      "description": "Laravel is a free, open-source PHP web framework.",
+      "website": "https://laravel.com",
+      "icon": "Laravel.svg",
+      "cpe": "cpe:2.3:a:laravel:laravel:*:*:*:*:*:*:*:*"
+    },
+    "Leptos": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Rust"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!--hk=_.*"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*export function microtask\\(f\\)\\;confidence:75"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __LEPTOS_PENDING_RESOURCES !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __LEPTOS_PENDING_RESOURCES !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __LEPTOS_RESOLVED_RESOURCES !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __LEPTOS_RESOURCE_RESOLVERS !== 'undefined';"
+        }
+      ],
+      "description": "Leptos is a full-stack, isomorphic Rust web framework leveraging fine-grained reactivity to build declarative user interfaces.",
+      "website": "https://leptos.dev",
+      "icon": "Leptos.svg"
+    },
+    "Lift": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Scala"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-lift-version": {
+              "$regex": "(.+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://liftweb.net",
+      "icon": "Lift.png",
+      "cpe": "cpe:2.3:a:liftweb:lift:*:*:*:*:*:*:*:*"
+    },
+    "Livewire": {
+      "cats": [
+        18,
+        19
+      ],
+      "implies": [
+        "Laravel"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c[^\u003e]{1,512}\\bwire:"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*livewire(?:\\.min)?\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof livewire !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof livewire !== 'undefined';"
+        }
+      ],
+      "description": "Livewire is a full-stack Laravel framework for building dynamic interfaces.",
+      "website": "https://laravel-livewire.com",
+      "icon": "Livewire.svg"
+    },
+    "Luana": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PWA"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^luana\\sframework\\s([\\d\\.]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof luanaframework !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof luanaframework !== 'undefined';"
+        }
+      ],
+      "description": "Luana is a web framework that uses web browser APIs and features to make a cross-platform web app look like a Native one and bring the same experience.",
+      "website": "https://luanaframework.github.io",
+      "icon": "Luana.png"
+    },
+    "Macaron": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Go"
+      ],
+      "description": "Macaron is a high productive and modular web framework in Go.",
+      "website": "https://go-macaron.com",
+      "icon": "Macaron.png"
+    },
+    "Marko": {
+      "cats": [
+        18,
+        66
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.marko(\\.js)?"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof markoComponent !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof markoSections !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof markoVars !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof markoComponent !== 'undefined';"
+        }
+      ],
+      "description": "Marko is HTML re-imagined as a language for building dynamic and reactive user interfaces.",
+      "website": "https://markojs.com",
+      "icon": "Marko.svg"
+    },
+    "MasterkinG32 Framework": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-framework": {
+                  "$regex": "masterking(?:)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^masterking(?:)[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "MasterkinG32 framework.",
+      "website": "https://masterking32.com",
+      "icon": "Masterking32.png"
+    },
+    "Microsoft ASP.NET": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cinput[^\u003e]+name=\"__viewstate"
+                }
+              },
+              {
+                "headers.set-cookie": {
+                  "$regex": "\\.aspnetcore"
+                }
+              },
+              {
+                "headers.x-aspnet-version": {
+                  "$regex": "(.+)\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^asp\\.net"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "ASP.NET is an open-source, server-side web-application framework designed for web development to produce dynamic web pages.",
+      "website": "https://www.asp.net",
+      "icon": "Microsoft ASP.NET.svg",
+      "cpe": "cpe:2.3:a:microsoft:asp.net:*:*:*:*:*:*:*:*"
+    },
+    "Mojolicious": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^mojolicious"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "mojolicious"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://mojolicio.us",
+      "icon": "Mojolicious.png"
+    },
+    "Mono": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "mono"
+            }
+          }
+        }
+      ],
+      "website": "https://mono-project.com",
+      "icon": "Mono.png",
+      "cpe": "cpe:2.3:a:mono:mono:*:*:*:*:*:*:*:*"
+    },
+    "Neos Flow": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-flow-powered": {
+              "$regex": "flow/?(.+)?$\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://flow.neos.io",
+      "icon": "Neos.svg"
+    },
+    "Nette Framework": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cdiv[^\u003e]+id=\"snippet-"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cinput[^\u003e]+data-nette-rules"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cinput[^\u003e]+id=\"frm-"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^nette framework"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Nette !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Nette !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Nette.version !== 'undefined';",
+          "version": "try { return String(Nette.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "website": "https://nette.org",
+      "icon": "Nette Framework.png"
+    },
+    "Nordcraft": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^nordcraft$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^nordcraft$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Nordcraft is a platform that integrates a visual design tool with a web framework, enabling the creation of web applications and websites in a unified environment.",
+      "website": "https://nordcraft.com",
+      "icon": "Nordcraft.svg"
+    },
+    "Oat++": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^oatpp/?([\\d.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Oat++ is an open source C++ Web Framework.",
+      "website": "https://oatpp.io",
+      "icon": "Oat.svg"
+    },
+    "OpenSwoole": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "openswoole(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "OpenSwoole is a high-performance, asynchronous, event-driven, coroutine-based PHP framework.",
+      "website": "https://openswoole.com",
+      "icon": "OpenSwoole.svg"
+    },
+    "Parse Platform": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.parsecdn\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Parse Platform is a backend framework offering built-in support for object and file storage, user authentication, push notifications, and a customizable dashboard.",
+      "website": "https://parseplatform.org",
+      "icon": "ParsePlatform.svg"
+    },
+    "Phoenix": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Node.js",
+        "React",
+        "Webpack"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^phoenix[\"']"
+            }
+          }
+        }
+      ],
+      "website": "https://github.com/Sazito/phoenix/",
+      "icon": "sazito-phoenix.png"
+    },
+    "Phoenix Framework": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Elixir"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Phoenix !== 'undefined' \u0026\u0026 typeof Phoenix.Channel !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Phoenix.Channel !== 'undefined';"
+        }
+      ],
+      "description": "Phoenix Framework is an open-source web application framework built using the Elixir programming language.",
+      "website": "https://www.phoenixframework.org",
+      "icon": "Phoenix Framework.svg"
+    },
+    "Phoenix LiveView": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Phoenix Framework"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof liveSocket !== 'undefined' \u0026\u0026 typeof liveSocket.socket !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof liveSocket.socket !== 'undefined';"
+        }
+      ],
+      "description": "Phoenix LiveView is a library that brings live, interactive, real-time user experiences to your Phoenix applications.",
+      "website": "https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html",
+      "icon": "Phoenix Framework.svg"
+    },
+    "Play": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Scala"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "website": "https://www.playframework.com",
+      "icon": "Play.svg",
+      "cpe": "cpe:2.3:a:playframework:play_framework:*:*:*:*:*:*:*:*"
+    },
+    "PyWebIO": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/js/pywebio\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "PyWebIO is a browser-based framework that transforms the browser into a rich text terminal, allowing developers to create simple web or GUI applications using input and print functions without needing HTML or JavaScript knowledge.",
+      "website": "https://pywebio.readthedocs.io/en/latest/",
+      "icon": "PyWebIO.svg"
+    },
+    "Qwik": {
+      "cats": [
+        18
+      ],
+      "description": "Qwik is designed for the fastest possible page load time, by delivering pure HTML with near 0 JavaScript.",
+      "website": "https://qwik.builder.io",
+      "icon": "Qwik.svg"
+    },
+    "Reflex": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^reflex$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __reflex !== 'undefined' \u0026\u0026 typeof __reflex.react !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __reflex.react !== 'undefined';"
+        }
+      ],
+      "description": "Reflex is an open-source framework to build and deploy web apps.",
+      "website": "https://reflex.dev",
+      "icon": "Reflex.svg"
+    },
+    "Remix": {
+      "cats": [
+        18,
+        22
+      ],
+      "implies": [
+        "React",
+        "React Router"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __remixContext !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __remixContext !== 'undefined';"
+        }
+      ],
+      "description": "Remix is a React framework used for server-side rendering (SSR).",
+      "website": "https://remix.run/",
+      "icon": "Remix.svg"
+    },
+    "Revel": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Go"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "website": "https://revel.github.io",
+      "icon": "Revel.png"
+    },
+    "Ruby on Rails": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Ruby"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "mod_(?:rails|rack)"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "mod_(?:rails|rack)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']csrf-param[\"'][^\u003e]+content=[\"']^authenticity_token$\\;confidence:50[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/assets/application-[a-z\\d]{32}/\\.js\\;confidence:50"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ReactOnRails !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _rails_loaded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ReactOnRails !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __REACT_ON_RAILS_EVENT_HANDLERS_RAN_ONCE__ !== 'undefined';"
+        }
+      ],
+      "description": "Ruby on Rails is a server-side web application framework written in Ruby under the MIT License.",
+      "website": "https://rubyonrails.org",
+      "icon": "Ruby on Rails.svg",
+      "cpe": "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:*:*:*"
+    },
+    "Sails.js": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Express"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "^sails(?:$|[^a-z0-9])"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://sailsjs.org",
+      "icon": "Sails.js.svg"
+    },
+    "Sapper": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Node.js",
+        "Svelte"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]*\u003e__sapper__"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __SAPPER__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __SAPPER__ !== 'undefined';"
+        }
+      ],
+      "website": "https://sapper.svelte.dev",
+      "icon": "Sapper.svg"
+    },
+    "Seosphera": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.seosphera\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Seosphera is a web development platform designed to build, manage, and deploy websites and web applications.",
+      "website": "https://seosphera.com",
+      "icon": "Seosphera.svg"
+    },
+    "Shiny": {
+      "cats": [
+        18
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Shiny !== 'undefined' \u0026\u0026 typeof Shiny.addCustomMessageHandler !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Shiny.addCustomMessageHandler !== 'undefined';"
+        }
+      ],
+      "website": "https://shiny.rstudio.com",
+      "icon": "Shiny.png"
+    },
+    "Shopify Web Components": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shopify\\.com/storefront/web-components\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Storefront Web Components let you bring Shopify-powered commerce capabilities to any website.",
+      "website": "https://shopify.dev/docs/api/storefront-web-components",
+      "icon": "Shopify.svg"
+    },
+    "Snap": {
+      "cats": [
+        18,
+        22
+      ],
+      "implies": [
+        "Haskell"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "snap/([.\\d]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "website": "https://snapframework.com",
+      "icon": "Snap.png"
+    },
+    "SockJS": {
+      "cats": [
+        18,
+        59
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:((?:\\d+\\.)+\\d+)\\/)?sockjs(?:\\.min)?\\.js\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sockjs(?:-((?:\\d+\\.)+\\d+))?(?:\\.min)?\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SockJS is a browser JavaScript library that provides a WebSocket-like object.",
+      "website": "https://sockjs.org",
+      "icon": "SockJS.png"
+    },
+    "SolidStart": {
+      "cats": [
+        18,
+        22
+      ],
+      "implies": [
+        "SolidJS"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _$HY !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _$HY.init !== 'undefined';"
+        }
+      ],
+      "description": "SolidStart is the Solid app framework.",
+      "website": "https://start.solidjs.com",
+      "icon": "SolidJS.svg"
+    },
+    "Spring": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-application-context": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "website": "https://spring.io/",
+      "icon": "Spring.png"
+    },
+    "Stencil": {
+      "cats": [
+        18
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof stencil !== 'undefined' \u0026\u0026 typeof stencil.inspect !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof stencil.inspect !== 'undefined';"
+        }
+      ],
+      "description": "Stenciljs is an open-source web component compiler that enables developers to create reusable, interoperable UI components that can work across different frameworks and platforms.",
+      "website": "https://stenciljs.com",
+      "icon": "Stencil.svg"
+    },
+    "StimulusReflex": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Ruby on Rails",
+        "Stimulus"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.stimulate"
+            }
+          }
+        }
+      ],
+      "description": "StimulusReflex lets you create reactive web interfaces with Ruby on Rails.",
+      "website": "https://docs.stimulusreflex.com",
+      "icon": "stimulus-reflex-logo.svg"
+    },
+    "Streamlit": {
+      "cats": [
+        18
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof streamlitDebug !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof streamlitDebug !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunk_streamlit_app !== 'undefined';"
+        }
+      ],
+      "description": "Streamlit is an open-source Python framework enabling data scientists and AI/ML engineers to create data applications with minimal coding requirements.",
+      "website": "https://streamlit.io",
+      "icon": "Streamlit.svg"
+    },
+    "Symfony": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Sfjs !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Sfjs !== 'undefined';"
+        }
+      ],
+      "description": "Symfony is a PHP web application framework and a set of reusable PHP components/libraries.",
+      "website": "https://symfony.com",
+      "icon": "Symfony.svg",
+      "cpe": "cpe:2.3:a:sensiolabs:symfony:*:*:*:*:*:*:*:*"
+    },
+    "The.com": {
+      "cats": [
+        18,
+        51
+      ],
+      "implies": [
+        "Amazon S3",
+        "React"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*the-dotcom-public-cdn\\.s3\\.amazonaws\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "The.com is a low-code website building platform with community-created components that you can share and own.",
+      "website": "https://www.the.com",
+      "icon": "The.com.svg"
+    },
+    "ThinkPHP": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "thinkphp"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "ThinkPHP is an open-source PHP framework with MVC structure developed and maintained by Shanghai Topthink Company.",
+      "website": "https://www.thinkphp.cn",
+      "icon": "ThinkPHP.png",
+      "cpe": "cpe:2.3:a:thinkphp:thinkphp:*:*:*:*:*:*:*:*"
+    },
+    "TwistPHP": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "twistphp"
+            }
+          }
+        }
+      ],
+      "website": "https://twistphp.com",
+      "icon": "TwistPHP.png"
+    },
+    "Vaadin": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*vaadinbootstrap\\.js(?:\\?v=([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof vaadin !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vaadin !== 'undefined';"
+        }
+      ],
+      "description": "Vaadin is an open-source framework for building user interfaces and single-page applications using Java and TypeScript.",
+      "website": "https://vaadin.com",
+      "icon": "Vaadin.svg"
+    },
+    "Web2py": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Python",
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "web2py"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^web2py[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*web2py\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://web2py.com",
+      "icon": "Web2py.png"
+    },
+    "Wt": {
+      "cats": [
+        18
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Wt !== 'undefined' \u0026\u0026 typeof Wt.WT !== 'undefined' \u0026\u0026 typeof Wt.WT.$ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Wt.WT.$ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WtOnLoad !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WtSignalEmit !== 'undefined';"
+        }
+      ],
+      "description": "Wt is a C++ library for developing web applications.",
+      "website": "https://www.webtoolkit.eu/wt",
+      "icon": "Wt.svg"
+    },
+    "Xeora": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cinput type=\"hidden\" name=\"_sys_bind_\\d+\" id=\"_sys_bind_\\d+\" /\u003e"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "xeoraengine"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "xeoracube"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/_bi_sps_v.+\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://www.xeora.org",
+      "icon": "xeora.png"
+    },
+    "Yii": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!\\[cdata\\[yii-block-(?:head|body-begin|body-end)\\]"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cinput type=\"hidden\" value=\"[a-za-z0-9]{40}\" name=\"yii_csrf_token\" \\/\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "powered by \u003ca href=\"http://www\\.yiiframework\\.com/\" rel=\"external\"\u003eyii framework\u003c/a\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/assets/[a-za-z0-9]{8}\\/yii\\.js$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/yii\\.(?:validation|activeform)\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Yii is an open-source, object-oriented, component-based MVC PHP web application framework.",
+      "website": "https://www.yiiframework.com",
+      "icon": "Yii.png"
+    },
+    "ZK Framework": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$and": [
+              {
+                "body": {
+                  "$regex": "zk\\.wpd"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "/zkau/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "ZK is an open-source Ajax web application framework written in Java that enables creation of rich graphical user interfaces for web applications with little programming.",
+      "website": "https://www.zkoss.org/",
+      "icon": "ZK.png"
+    },
+    "actionhero.js": {
+      "cats": [
+        18,
+        22
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "actionhero api"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*actionheroclient\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof actionheroClient !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof actionheroClient !== 'undefined';"
+        }
+      ],
+      "website": "https://www.actionherojs.com",
+      "icon": "actionhero.js.png"
+    },
+    "pinoox": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pinoox !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pinoox !== 'undefined';"
+        }
+      ],
+      "website": "https://pinoox.com",
+      "icon": "pinoox.png"
+    },
+    "total.js": {
+      "cats": [
+        18
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "^total\\.js"
+            }
+          }
+        }
+      ],
+      "website": "https://totaljs.com",
+      "icon": "total.js.png"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "apps": {
+    "Amazon EFS": {
+      "cats": [
+        48
+      ],
+      "implies": [
+        "Amazon Web Services"
+      ],
+      "description": "Amazon Elastic File System is a cloud storage service provided by Amazon Web Services.",
+      "website": "https://aws.amazon.com/efs/",
+      "icon": "Amazon EFS.svg"
+    },
+    "IPFS": {
+      "cats": [
+        48
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-cf-ipfs-cache-status": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ipfs-datasize": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ipfs-lb-pop": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ipfs-roots": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ipfs-gateway-host": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ipfs-path": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ipfs-pop": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ipfs-root": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ipfs-root-cid": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "IPFS is a peer-to-peer hypermedia protocol that provides a distributed hypermedia web.",
+      "website": "https://ipfs.tech/",
+      "icon": "IPFS.svg"
+    },
+    "Red Hat Gluster": {
+      "cats": [
+        48
+      ],
+      "description": "Gluster is a free and open source scalable network filesystem.",
+      "website": "https://www.gluster.org",
+      "icon": "gluster.png"
+    },
+    "Synology DiskStation": {
+      "cats": [
+        48
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cnoscript\u003e\u003cdiv class='syno-no-script'"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']synology diskstation[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']description[\"'][^\u003e]+content=[\"']^diskstation provides a full-featured network attached storage[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*webapi/entry\\.cgi\\?api=syno\\.(?:core|filestation)\\.desktop\\."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "DiskStation provides a full-featured network attached storage.",
+      "website": "https://synology.com",
+      "icon": "Synology DiskStation.svg"
+    }
+  }
+}

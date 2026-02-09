@@ -1,0 +1,2433 @@
+{
+  "apps": {
+    "A2Z Events": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.a2zinc\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof a2z !== 'undefined' \u0026\u0026 typeof a2z.Widget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof a2z.Widget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof a2zAnalytics !== 'undefined';"
+        }
+      ],
+      "description": "A2Z Events is an event management solution designed by and for event professionals.",
+      "website": "https://mya2zevents.com",
+      "icon": "A2ZEvents.svg"
+    },
+    "Acceptd": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^acceptd application$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getacceptd\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Acceptd is a premier application and audition management platform designed to streamline the submission, review, and selection process for organizations and educational institutions.",
+      "website": "https://getacceptd.com",
+      "icon": "Acceptd.svg"
+    },
+    "Acuity Scheduling": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.acuityscheduling\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ACUITY_MODAL_INIT !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ACUITY_MODAL_INIT !== 'undefined';"
+        }
+      ],
+      "description": "Acuity Scheduling is a cloud-based appointment scheduling software solution.",
+      "website": "https://acuityscheduling.com",
+      "icon": "Acuity Scheduling.png"
+    },
+    "AddEvent": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//addevent\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "AddEvent is used to Add to Calendar and event tools for websites and newsletters.",
+      "website": "https://www.addevent.com",
+      "icon": "addevent.png"
+    },
+    "Aimy": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.meetaimy\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MeetAimyMeta !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MeetAimyMeta !== 'undefined';"
+        }
+      ],
+      "description": "Aimy is a salon management platform that provides scheduling tools, a virtual assistant, and calendar maintenance features to streamline salon operations.",
+      "website": "https://meetaimy.com",
+      "icon": "Aimy.svg"
+    },
+    "Allbookable": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.allbookable\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Allbookable is an online booking solution that enables users to book services through a digital platform.",
+      "website": "https://allbookable.com",
+      "icon": "Allbookable.svg"
+    },
+    "Appointedd": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Appointedd !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Appointedd !== 'undefined';"
+        }
+      ],
+      "description": "Appointedd is an online booking technology.",
+      "website": "https://www.appointedd.com",
+      "icon": "Appointedd.svg"
+    },
+    "Appointo": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/appointo-14/assets/appointo_bundle.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.appointo\\.me"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof onRefreshAppointoWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof onRefreshAppointoWidget !== 'undefined';"
+        }
+      ],
+      "description": "Appointo is a Shopify based booking engine from Sidepanda.",
+      "website": "https://www.sidepanda.com/appointo",
+      "icon": "Appointo.svg"
+    },
+    "Appointy": {
+      "cats": [
+        72
+      ],
+      "description": "Appointy is a cloud-based scheduling solution that helps professionals and businesses to manage their appointment scheduling activities and routines.",
+      "website": "https://www.appointy.com/",
+      "icon": "Appointy.png"
+    },
+    "Arlo": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy-report-only": {
+              "$regex": "\\.arlocdn\\.net"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ArloST !== 'undefined' \u0026\u0026 typeof ArloST.apiClient !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ArloST.apiClient !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ArloStarterTemplate !== 'undefined';"
+        }
+      ],
+      "description": "Arlo is an event management tool that helps organize, schedule, and track events.",
+      "website": "https://www.arlo.co",
+      "icon": "Arlo.svg"
+    },
+    "AutoOps": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AutoOps !== 'undefined' \u0026\u0026 typeof AutoOps.addSourceTracking !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AutoOps.addSourceTracking !== 'undefined';"
+        }
+      ],
+      "description": "AutoOps is an online scheduling tool that integrates with shop management softwares for auto shops.",
+      "website": "https://www.autoops.com/",
+      "icon": "AutoOps.svg"
+    },
+    "BLiNK AI": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.blinkai\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BlinkAI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BlinkAI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof blinkai.autoOpen !== 'undefined';"
+        }
+      ],
+      "description": "BLiNK AI is a platform that assists businesses in automating service scheduling and marketing operations for dealerships.",
+      "website": "https://blinkai.com",
+      "icon": "BLiNKAI.svg"
+    },
+    "BookVisit": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*online\\.bookvisit\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "BookVisit is an IT services and IT consulting, recreation, and hotel company located in Goteborg,Sweden.",
+      "website": "https://bookvisit.com",
+      "icon": "BookVisit.png"
+    },
+    "Bookafy": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bookafyPopup !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bookafyPopup !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof openBookafyPopup !== 'undefined';"
+        }
+      ],
+      "description": "Bookafy is a service that offers appointment scheduling and booking solutions for businesses and professionals.",
+      "website": "https://bookafy.com",
+      "icon": "Bookafy.svg"
+    },
+    "Booked": {
+      "cats": [
+        72
+      ],
+      "description": "Booked is a scheduling solution designed for organizational use.",
+      "website": "https://www.bookedscheduler.com/",
+      "icon": "Booked.svg"
+    },
+    "Bookeo": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bookeo_start !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bookeo_start !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bookeo_startMobileLabel !== 'undefined';"
+        }
+      ],
+      "description": "Bookeo is a cloud-based booking and reservation solution that caters to tour operators, travel agencies, schools, therapists, photographers and event organizers.",
+      "website": "https://www.bookeo.com",
+      "icon": "Bookeo.svg"
+    },
+    "Bookero": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.bookero\\.pl"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bookero_config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bookero_config !== 'undefined';"
+        }
+      ],
+      "description": "Bookero is online booking system for you website or Facebook page.",
+      "website": "https://www.bookero.org",
+      "icon": "Bookero.svg"
+    },
+    "Bookitit": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.bookitit\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Bookitit is an online scheduling system.",
+      "website": "https://www.bookitit.com",
+      "icon": "Bookitit.svg"
+    },
+    "Bookly": {
+      "cats": [
+        72,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/bookly-responsive-appointment-booking-tool/.+\\.js(?:\\?ver=(\\d+(?:\\.\\d+)+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BooklyL10n !== 'undefined' \u0026\u0026 typeof BooklyL10n.daysShort !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BooklyL10n.daysShort !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bookly !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof booklyCustomerProfile !== 'undefined';"
+        }
+      ],
+      "description": "Bookly is a WordPress scheduling plugin that allows you to accept online reservations on your website and automate your booking system.",
+      "website": "https://www.booking-wp-plugin.com",
+      "icon": "bookly.png"
+    },
+    "Booxi": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/bxe_core\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof booxi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof booxi !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof booxiController !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bxe_core !== 'undefined';"
+        }
+      ],
+      "description": "Booxi is a cloud-based appointment management platform for small to midsize businesses.",
+      "website": "https://www.booxi.com",
+      "icon": "Booxi.svg"
+    },
+    "Boulevard": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.joinboulevard\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Boulevard is a business management platform tailored to streamline appointment-based operations, specifically designed for the wellness industry.",
+      "website": "https://www.joinblvd.com",
+      "icon": "Boulevard.svg"
+    },
+    "CalendarHero": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ZOOMAI !== 'undefined' \u0026\u0026 typeof ZOOMAI.VARS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ZOOMAI.VARS !== 'undefined';"
+        }
+      ],
+      "description": "CalendarHero (formerly Zoom.ai) is meeting scheduling software that helps you book meetings automatically.",
+      "website": "https://calendarhero.com",
+      "icon": "CalendarHero.png"
+    },
+    "CalendarWiz": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.calendarwiz\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "CalendarWiz is an online scheduling calendar.",
+      "website": "https://www.calendarwiz.com/",
+      "icon": "CalendarWiz.svg"
+    },
+    "Calendly": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.calendly\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Calendly !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Calendly !== 'undefined';"
+        }
+      ],
+      "description": "Calendly is an app for scheduling appointments, meetings, and events.",
+      "website": "https://calendly.com/",
+      "icon": "Calendly.svg"
+    },
+    "Calenso": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.calenso\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Calenso is an online enterprise scheduling solution that helps companies in consulting-intensive industries organize appointments.",
+      "website": "https://calenso.com",
+      "icon": "Calenso.svg"
+    },
+    "Cfixé": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cfixe\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Cfixé is a scheduling platform that enables online booking for everyday services and allows professionals to embed a scheduling widget directly on their website.",
+      "website": "https://cfixe.com",
+      "icon": "Cfixe.svg"
+    },
+    "Chili Piper": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.chilipiper\\.com/marketing\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ChiliPiper !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ChiliPiper !== 'undefined';"
+        }
+      ],
+      "description": "Chili Piper is a suite of automated scheduling tools that help revenue teams convert leads.",
+      "website": "https://www.chilipiper.com/",
+      "icon": "Chili Piper.svg"
+    },
+    "ClassCreator": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.classcreator\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ClassCreator is a school class reunion planning tool that helps organize events, manage guest lists, and track RSVPs, streamlining the coordination of reunions.",
+      "website": "https://www.classcreator.com",
+      "icon": "ClassCreator.svg"
+    },
+    "ClassFit": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.classfit\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.classfit\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "ClassFit is a provider of a booking and scheduling software for fitness centers.",
+      "website": "https://classfit.com",
+      "icon": "ClassFit.svg"
+    },
+    "Client Diary": {
+      "cats": [
+        72
+      ],
+      "description": "Client Diary is a scheduling and booking system used to manage appointments, track availability, and organize client interactions in one platform.",
+      "website": "https://clientdiary.com",
+      "icon": "ClientDiary.svg"
+    },
+    "Cloudbeds": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cloudbeds\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CloudBeds_widget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CloudBeds_widget !== 'undefined';"
+        }
+      ],
+      "description": "Cloudbeds is a cloud-based hotel management platform which includes tools for managing reservations, availability, rates, distribution channels, payments, guests, housekeeping, and more.",
+      "website": "https://www.cloudbeds.com",
+      "icon": "Cloudbeds.svg"
+    },
+    "Counseling Kit": {
+      "cats": [
+        72
+      ],
+      "description": "Counseling Kit is a HIPAA-compliant platform offering professional online tools designed specifically for therapists to support virtual therapy sessions.",
+      "website": "https://counselingkit.com",
+      "icon": "CounselingKit.svg"
+    },
+    "Cvent": {
+      "cats": [
+        72,
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cvent-assets\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CVENT !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Cvent_findElement !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CVENT !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CVENT.version !== 'undefined';",
+          "version": "try { return String(CVENT.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Cvent is an event management software that offers a platform for managing in-person, virtual, and hybrid events.",
+      "website": "https://www.cvent.com",
+      "icon": "Cvent.svg"
+    },
+    "DearDoc": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ai\\.getdeardoc\\.com"
+            }
+          }
+        }
+      ],
+      "description": "DearDoc is an appointment scheduling system that organizes, manages, and tracks appointments to streamline booking processes.",
+      "website": "https://www.getdeardoc.com",
+      "icon": "DearDoc.svg"
+    },
+    "EasyWeek": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.easyweek\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof EasyWeekWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EasyWeekWidget !== 'undefined';"
+        }
+      ],
+      "description": "EasyWeek is a software platform that enables appointment scheduling for businesses across various industries.",
+      "website": "https://easyweek.io",
+      "icon": "EasyWeek.svg"
+    },
+    "Etermio": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $eTermio !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof etermio_handler !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $eTermio !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof eTermio_autoOpenWindow !== 'undefined';"
+        }
+      ],
+      "description": "Etermio is an automated system for online appointment scheduling.",
+      "website": "https://www.etermio.com",
+      "icon": "Etermio.svg"
+    },
+    "EventOn": {
+      "cats": [
+        72,
+        87
+      ],
+      "description": "EventON is event calendar for WordPress.",
+      "website": "https://www.myeventon.com",
+      "icon": "eventon.png"
+    },
+    "Eventlink": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof eventlink !== 'undefined' \u0026\u0026 typeof eventlink.organizationID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof eventlink.organizationID !== 'undefined';"
+        }
+      ],
+      "description": "Eventlink is a platform for managing events, offering tools for registration, communication, and collaboration in a unified interface.",
+      "website": "https://eventlink.com",
+      "icon": "Eventlink.svg"
+    },
+    "Evvnt": {
+      "cats": [
+        72,
+        104
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof evvnt_require !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof evvnt_require !== 'undefined';"
+        }
+      ],
+      "description": "Evvnt is a digital events marketing and management platform.",
+      "website": "https://evvnt.com",
+      "icon": "Evvnt.svg"
+    },
+    "Fitssey": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.fitssey\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FitsseyWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FitsseyWidget !== 'undefined';"
+        }
+      ],
+      "description": "Fitssey is a booking software designed to manage studio appointments and scheduling.",
+      "website": "https://fitssey.com",
+      "icon": "Fitssey.svg"
+    },
+    "Fresha": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fresha\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FRESHA_VARS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FRESHA_VARS !== 'undefined';"
+        }
+      ],
+      "description": "Fresha is a leading marketplace enabling consumers to discover, book, and pay for local beauty and wellness services.",
+      "website": "https://www.fresha.com",
+      "icon": "Fresha.svg"
+    },
+    "Full Slate": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fullslate\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Full Slate is an appointment scheduling software designed to help businesses manage bookings, client information, and availability.",
+      "website": "https://www.fullslate.com",
+      "icon": "FullSlate.svg"
+    },
+    "FullSeats": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*apps\\.fullseats\\.com"
+            }
+          }
+        }
+      ],
+      "description": "FullSeats is a booking system designed to streamline scheduling and support business growth through reservation management.",
+      "website": "https://www.fullseats.com",
+      "icon": "FullSeats.svg"
+    },
+    "GBooking": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.gbooking\\.ru"
+            }
+          }
+        }
+      ],
+      "description": "GBooking is an online platform that provides booking and business management services for scheduling, reservations, and operational organization.",
+      "website": "https://gbooking.ru",
+      "icon": "GBooking.svg"
+    },
+    "GReminders": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.greminders\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "GReminders is an end-to-end meeting management platform designed for professionals to schedule, organize, and manage meetings.",
+      "website": "https://www.greminders.com",
+      "icon": "GReminders.svg"
+    },
+    "GetYourGuide": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getyourguide\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "GetYourGuide is a Berlin-based online travel agency and online marketplace for tour guides and excursions.",
+      "website": "https://partner.getyourguide.com",
+      "icon": "GetYourGuide.svg"
+    },
+    "GlampManager": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bookings\\.glampmanager\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*glampmanager"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "GlampManager is a booking and management software designed to streamline reservations, scheduling, and operational tasks for hospitality businesses.",
+      "website": "https://www.glampmanager.com",
+      "icon": "GlampManager.svg"
+    },
+    "Glofox": {
+      "cats": [
+        72
+      ],
+      "description": "Glofox is a fitness management platform that assists gyms and fitness studios in managing memberships, class scheduling, and other business operations.",
+      "website": "https://www.glofox.com",
+      "icon": "Glofox.svg"
+    },
+    "HotDoc": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.hotdoc\\.com\\.au"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hotdoc !== 'undefined' \u0026\u0026 typeof hotdoc.assetsURL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hotdoc.assetsURL !== 'undefined';"
+        }
+      ],
+      "description": "HotDoc is a platform for booking healthcare appointments, providing patients with access to medical practitioners and clinics.",
+      "website": "https://www.hotdoc.com.au",
+      "icon": "HotDoc.svg"
+    },
+    "Housecall Pro": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.housecallpro\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*housecallpro\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Housecall Pro is a platform that enables businesses to schedule, dispatch, invoice, and receive online bookings from customers.",
+      "website": "https://www.housecallpro.com",
+      "icon": "HousecallPro.svg"
+    },
+    "Jameda": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn1\\.jameda-elements\\.de/"
+            }
+          }
+        }
+      ],
+      "description": "Jameda is an online appointment scheduling system for doctors, enabling patients to book medical consultations.",
+      "website": "https://www.jameda.de",
+      "icon": "Jameda.svg"
+    },
+    "Kalix": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.kalixhealth\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Kalix is a HIPAA-compliant electronic medical record, practice management, and telehealth platform designed for dietitians, nutritionists, and other healthcare professionals.",
+      "website": "https://kalixhealth.com",
+      "icon": "Kalix.svg"
+    },
+    "Limecall": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.limecall\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof limeCallClient !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof limeCallClient !== 'undefined';"
+        }
+      ],
+      "description": "Limecall is a software platform that facilitates instant callback requests and manages call scheduling to enhance customer engagement and lead generation processes.",
+      "website": "https://limecall.com",
+      "icon": "Limecall.svg"
+    },
+    "MIYN Online Appointment": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MIYNLive !== 'undefined' \u0026\u0026 typeof MIYNLive.settings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MIYNLive.settings !== 'undefined';"
+        }
+      ],
+      "description": "MIYN Online Appointment is an advanced cloud-based online appointment scheduling software.",
+      "website": "https://miyn.app/online-appointment",
+      "icon": "MIYN.svg"
+    },
+    "Mainboard": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mainboard\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Mainboard is a software platform designed to manage, schedule, and book talent.",
+      "website": "https://www.mainboard.com",
+      "icon": "Mainboard.svg"
+    },
+    "Matchi": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.matchi\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Matchi is a platform for racket sports enthusiasts to search, book, and play tennis, badminton, table tennis, squash, or padel.",
+      "website": "https://www.matchi.se",
+      "icon": "Matchi.svg"
+    },
+    "Meetup Express": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Meetup Express is an appointment scheduling system designed to simplify booking and managing meetings.",
+      "website": "https://meetupexpress.com",
+      "icon": "MeetupExpress.svg"
+    },
+    "Mews": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.mews\\.li/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Mews !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Mews !== 'undefined';"
+        }
+      ],
+      "description": "Mews is a hospitalitions service that enables hotels to track their bookings.",
+      "website": "https://www.mews.com",
+      "icon": "Mews.png"
+    },
+    "Momence": {
+      "cats": [
+        72,
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//momence\\.com/plugin/"
+            }
+          }
+        }
+      ],
+      "description": "Momence is an all-in-one toolbox for gyms and studios, enabling scheduling of online and in-person classes, events, appointments, and experiences.",
+      "website": "https://momence.com",
+      "icon": "Momence.svg"
+    },
+    "Momice": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^momice$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunkmomice_eventsite_new !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkmomice_eventsite_new !== 'undefined';"
+        }
+      ],
+      "description": "Momice is an event management platform that offers tools for organising and managing events.",
+      "website": "https://www.momice.com/nl/welkom",
+      "icon": "Momice.svg"
+    },
+    "Motion": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*segmentcdn\\.usemotion\\.com/next-integrations/integrations/vendor/commons\\.[a-z0-9]+\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Motion is an AI-powered tool that helps users manage their calendars, meetings, and projects.",
+      "website": "https://www.usemotion.com",
+      "icon": "Motion.svg"
+    },
+    "MyTime": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.mytime\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof myTimeWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof myTimeWidget !== 'undefined';"
+        }
+      ],
+      "description": "MyTime is a scheduling and customer engagement platform that streamlines appointment management and client interactions for businesses.",
+      "website": "https://mytime.com",
+      "icon": "MyTime.svg"
+    },
+    "Need Street": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*data\\.needstreet\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Need Street is a web and mobile platform that connects healthcare providers with patients, enabling digital communication and management of healthcare services.",
+      "website": "https://www.needstreet.com",
+      "icon": "NeedStreet.svg"
+    },
+    "NightsBridge": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunkNightsbridgeBookingForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkNightsbridgeBookingForm !== 'undefined';"
+        }
+      ],
+      "description": "NightsBridge is a SaaS platform that provides booking and channel management tools for accommodation providers.",
+      "website": "https://site.nightsbridge.com",
+      "icon": "NightsBridge.svg"
+    },
+    "Nookal": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.access-control-allow-origin": {
+                  "$regex": "bookings\\.nookal\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*nookal\\.bookings\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof nookal !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof nookal !== 'undefined';"
+        }
+      ],
+      "description": "Nookal is a practice management software that organizes and manages medical appointments.",
+      "website": "https://www.nookal.com",
+      "icon": "Nookal.svg"
+    },
+    "Occasion": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.getoccasion\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OCCSN !== 'undefined' \u0026\u0026 typeof OCCSN.stack !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof occsnMerchantToken !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OCCSN.stack !== 'undefined';"
+        }
+      ],
+      "description": "Occasion is an online booking system.",
+      "website": "https://www.getoccasion.com",
+      "icon": "Occasion.png"
+    },
+    "Otto": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof otto !== 'undefined' \u0026\u0026 typeof otto.id !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ottoCareMicrosite !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof otto.id !== 'undefined';"
+        }
+      ],
+      "description": "Otto is a veterinary workflow platform that streamlines scheduling, communication, and payment processes in a single system.",
+      "website": "https://otto.vet/otto-flow",
+      "icon": "Otto.svg"
+    },
+    "Periodic": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/integrations/embed/periodic-embed-resize\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Periodic is a white-label scheduling system.",
+      "website": "https://periodic.is",
+      "icon": "Periodic.svg"
+    },
+    "Planfy": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.planfy\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.planfy\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Planfy is a booking system for businesses designed to streamline appointment scheduling and customer management.",
+      "website": "https://www.planfy.com",
+      "icon": "Planfy.svg"
+    },
+    "Planway": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.planway\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Planway is an online booking system that allows businesses to manage appointments, schedule services, and streamline client reservations through a digital platform.",
+      "website": "https://planway.com",
+      "icon": "Planway.svg"
+    },
+    "Pluralo": {
+      "cats": [
+        72
+      ],
+      "description": "Pluralo is an online booking platform that enables users to schedule and manage reservations across various services.",
+      "website": "https://pluralo.com",
+      "icon": "Pluralo.svg"
+    },
+    "Practo": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.practo\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Practo is an appointment system designed for health practitioners to manage and schedule patient appointments.",
+      "website": "https://www.practo.com",
+      "icon": "Practo.svg"
+    },
+    "Resova": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof baseUrl !== 'undefined' \u0026\u0026 baseUrl === '\\.resova\\.(?:us|eu|co\\.uk)'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof baseUrl !== 'undefined';",
+          "version": "try { return String(baseUrl || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initResova !== 'undefined';"
+        }
+      ],
+      "description": "Resova is an online booking software.",
+      "website": "https://resova.com",
+      "icon": "Resova.svg"
+    },
+    "RideBits": {
+      "cats": [
+        72,
+        104
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ridebitsapp\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "RideBits is a provider of trip booking apps for ground transportation companies, offering solutions for managing bookings.",
+      "website": "https://ridebits.com",
+      "icon": "RideBits.svg"
+    },
+    "Salonist": {
+      "cats": [
+        72
+      ],
+      "description": "Salonist is a salon management software.",
+      "website": "https://salonist.io",
+      "icon": "Salonist.png"
+    },
+    "SavvyCal": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SavvyCal !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SavvyCal !== 'undefined';"
+        }
+      ],
+      "description": "SavvyCal is a meeting scheduling tool.",
+      "website": "https://savvycal.com",
+      "icon": "SavvyCal.svg"
+    },
+    "Sched": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sched\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sched\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Sched is an AI-powered platform that provides an all-in-one toolkit for event planning.",
+      "website": "https://sched.com",
+      "icon": "Sched.svg"
+    },
+    "ScheduleAnyone": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.scheduleanyone\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Schedule Anyone is a business management system designed to streamline operations with a focus on automation.",
+      "website": "https://www.scheduleanyone.com",
+      "icon": "ScheduleAnyone.svg"
+    },
+    "Shore": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*connect\\.shore\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ShoreBookingButtonAlreadyLoaded !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ShoreBookingButtonAlreadyLoaded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof shoreBookingSettings !== 'undefined';"
+        }
+      ],
+      "description": "Shore is an appointment management software designed to streamline scheduling and organization for businesses.",
+      "website": "https://shore.com",
+      "icon": "Shore.svg"
+    },
+    "SimplyBook.me": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.simplybook\\.(?:asia|it|me)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof configSoinSimplyPush !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof configSoinSimplyPush !== 'undefined';"
+        }
+      ],
+      "description": "SimplyBook.me is an online appointment scheduling and booking software.",
+      "website": "https://simplybook.me",
+      "icon": "SimplyBook.me.svg"
+    },
+    "Sirvoy": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SirvoyBookingWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SirvoyBookingWidget !== 'undefined';"
+        }
+      ],
+      "description": "Sirvoy is a cloud-based hotel management software that streamlines various hotel operations, including reservation management, channel management, online booking, and property management.",
+      "website": "https://sirvoy.com",
+      "icon": "Sirvoy.svg"
+    },
+    "Skedify": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*plugin\\.skedify\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Skedify !== 'undefined' \u0026\u0026 typeof Skedify.Plugin !== 'undefined' \u0026\u0026 typeof Skedify.Plugin.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Skedify.Plugin.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Skedify.Plugin.version !== 'undefined';",
+          "version": "try { return String(Skedify.Plugin.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Skedify is an appointment booking solution created for enterprises.",
+      "website": "https://calendly.com/",
+      "icon": "Skedify.svg"
+    },
+    "Slotti": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Slotti !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Slotti !== 'undefined';"
+        }
+      ],
+      "description": "Slotti is a cloud-based appointment booking and checkout system tailored for service companies.",
+      "website": "https://slotti.fi",
+      "icon": "Slotti.svg"
+    },
+    "Smile Virtual": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.smilevirtual\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.smilevirtual\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Smile Virtual is a platform that enables patients to consult with a dentist remotely to explore options for enhancing their smile from home.",
+      "website": "https://www.smilevirtual.com",
+      "icon": "SmileVirtual.svg"
+    },
+    "Sonline": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//sonline\\.su/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof showSonlineWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof showSonlineWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sonlineWidgetOptions !== 'undefined';"
+        }
+      ],
+      "description": "Sonline is a beauty salon software developed in Russia.",
+      "website": "https://sonline.su",
+      "icon": "Sonline.svg"
+    },
+    "Squire": {
+      "cats": [
+        72,
+        53,
+        41
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SquireWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SquireWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _squireQueryClient !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _squireWidgetConfig !== 'undefined';"
+        }
+      ],
+      "description": "Squire is a business management platform for barbershops, offering appointment scheduling, payment processing, and customer relationship management tools​.",
+      "website": "https://getsquire.com",
+      "icon": "Squire.svg"
+    },
+    "SuperHote": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.superhote\\.com"
+            }
+          }
+        }
+      ],
+      "description": "SuperHote is a hotel management software designed to streamline hotel bookings, reservations, and other management tasks.",
+      "website": "https://www.superhote.com",
+      "icon": "SuperHote.svg"
+    },
+    "Swoogo": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.swoogo\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof swoogoUrl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof swoogoUrl !== 'undefined';"
+        }
+      ],
+      "description": "Swoogo is an event management software.",
+      "website": "https://swoogo.events",
+      "icon": "Swoogo.svg"
+    },
+    "SynBird": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.synbird\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "SynBird is a software tool that streamlines user-community interactions through online appointments, agendas, queues, and GRU services.",
+      "website": "https://www.synbird.com",
+      "icon": "SynBird.svg"
+    },
+    "TeamUp": {
+      "cats": [
+        72
+      ],
+      "description": "TeamUp is fitness management software catering to boutique gyms, studios, and fitness boxes worldwide.",
+      "website": "https://goteamup.com",
+      "icon": "TeamUp.svg"
+    },
+    "TerMed": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.termed\\.de"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.termed\\.de"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "TerMed is a platform that simplifies online booking of medical appointments.",
+      "website": "https://www.termed.de",
+      "icon": "TerMed.svg"
+    },
+    "Timify": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.timify\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TimifyWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TimifyWidget !== 'undefined';"
+        }
+      ],
+      "description": "Timify is an online scheduling and resource management software for small, medium and large businesses.",
+      "website": "https://www.timify.com",
+      "icon": "Timify.svg"
+    },
+    "Timma": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^timma[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.timma\\.no"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Timma is a hair and salon booking system that enables users to schedule appointments with salons and stylists through an online platform.",
+      "website": "https://timma.no",
+      "icon": "Timma.svg"
+    },
+    "TravelJoy": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*traveljoy\\.com"
+            }
+          }
+        }
+      ],
+      "description": "TravelJoy is an all-in-one platform for travel advisors, providing tools for managing client bookings, payments, and communication.",
+      "website": "https://traveljoy.com",
+      "icon": "TravelJoy.svg"
+    },
+    "Trumba": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $Trumba !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $Trumba.version !== 'undefined';",
+          "version": "try { return String($Trumba.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Trumba !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $Trumba !== 'undefined';"
+        }
+      ],
+      "description": "Trumba offers web-hosted event calendar software for publishing online, interactive, calendars of events.",
+      "website": "https://www.trumba.com",
+      "icon": "Trumba.png"
+    },
+    "TuCalendi": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tucalendi\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Tucalendi !== 'undefined' \u0026\u0026 typeof Tucalendi.initConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Tucalendi.initConfig !== 'undefined';"
+        }
+      ],
+      "description": "TuCalendi is an online appointment scheduling tool for meetings.",
+      "website": "https://www.tucalendi.com",
+      "icon": "TuCalendi.svg"
+    },
+    "Vello": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.vello\\.fi/"
+            }
+          }
+        }
+      ],
+      "description": "Vello is an online booking tool that automates business bookings.",
+      "website": "https://www.vello.fi",
+      "icon": "Vello.svg"
+    },
+    "Wherewolf": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wherewolf\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Wherewolf is a platform that offers capture waivers, facilitates drive bookings, and automates review processes to streamline business operations.",
+      "website": "https://getwherewolf.com",
+      "icon": "Wherewolf.svg"
+    },
+    "Whova": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "whova\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//whova\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Whova is an all-in-one event management platform supporting in-person, hybrid, and virtual events.",
+      "website": "https://whova.com",
+      "icon": "Whova.svg"
+    },
+    "X.ai": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:cdn)?x\\.ai/.*/xdotai-embed\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof xdotaiAction !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof xdotaiAction !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof xdotaiButton !== 'undefined';"
+        }
+      ],
+      "description": "X.ai is a scheduling tool that organizes meeting times and improves lead conversion by adding embedded booking buttons to websites or within live chat applications.",
+      "website": "https://x.ai",
+      "icon": "X.ai.png"
+    },
+    "Xtime": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.access-control-allow-origin": {
+                  "$regex": "\\.xtime\\.net"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.xtime\\.com/scheduling"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof xtime !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof xtime !== 'undefined';"
+        }
+      ],
+      "description": "Xtime is a company that provides automotive service scheduling and management solutions primarily for car dealerships and automotive service centers.",
+      "website": "https://xtime.com",
+      "icon": "Xtime.svg"
+    },
+    "YachtSys": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*apps\\.yachtsys\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "YachtSys is a booking management system.",
+      "website": "https://www.yachtsys.com",
+      "icon": "YachtSys.svg"
+    },
+    "YoPlanning": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*booking\\.yoplanning\\.pro"
+            }
+          }
+        }
+      ],
+      "description": "YoPlanning is an online software designed for booking and planning activities.",
+      "website": "https://yoplanning.pro",
+      "icon": "YoPlanning.svg"
+    },
+    "Zen Planner": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.zenplanner\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof zenplanner !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zenplanner !== 'undefined';"
+        }
+      ],
+      "description": "Zen Planner is a software platform designed for fitness and wellness businesses, offering features such as membership management, class scheduling, and billing automation.",
+      "website": "https://zenplanner.com",
+      "icon": "Zen Planner.svg"
+    },
+    "ZenMaid": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.zenmaid\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ZenMaid is a residential cleaning scheduling software that helps manage appointments.",
+      "website": "https://get.zenmaid.com",
+      "icon": "ZenMaid.svg"
+    },
+    "Zenbooker": {
+      "cats": [
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Zenbooker !== 'undefined' \u0026\u0026 typeof Zenbooker.BadgeWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Zenbooker.BadgeWidget !== 'undefined';"
+        }
+      ],
+      "description": "Zenbooker is a system that enables users to book appointments or reservations online.",
+      "website": "https://zenbooker.com",
+      "icon": "Zenbooker.svg"
+    },
+    "Zenoti": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^zenoti$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.zenoti\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Zenoti is a cloud-based business software for spas, salons, and medspas, providing tools for managing appointment books, employee scheduling, and enabling online booking.",
+      "website": "https://www.zenoti.com/",
+      "icon": "Zenoti.svg"
+    },
+    "Zocdoc": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*offsiteschedule\\.zocdoc\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Zocdoc is a New York City-based company offering an online service that allows people to find and book in-person or telemedicine appointments for medical or dental care.",
+      "website": "https://www.zocdoc.com",
+      "icon": "Zocdoc.svg"
+    },
+    "iClose": {
+      "cats": [
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.iclosed\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "iClose is an appointment scheduling tool that helps businesses streamline lead generation and meeting coordination without additional advertising expenses.",
+      "website": "https://iclosed.io",
+      "icon": "iClosed.svg"
+    }
+  }
+}

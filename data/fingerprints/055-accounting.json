@@ -1,0 +1,205 @@
+{
+  "apps": {
+    "Akaunting": {
+      "cats": [
+        55
+      ],
+      "implies": [
+        "Laravel"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+akaunting-green\\.css"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "powered by akaunting: \u003ca [^\u003e]*href=\"https?://(?:www\\.)?akaunting\\.com[^\u003e]+\u003e"
+                }
+              },
+              {
+                "headers.x-akaunting": {
+                  "$regex": "^free accounting software$"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Akaunting is a free and online accounting software.",
+      "website": "https://akaunting.com",
+      "icon": "akaunting.svg"
+    },
+    "Carta": {
+      "cats": [
+        55
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.carta\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Carta is an equity management platform.",
+      "website": "https://carta.com",
+      "icon": "Carta.svg"
+    },
+    "Epicor": {
+      "cats": [
+        55
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Epicor_Common !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Epicor_Common !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Epicor_SalesrepPricing !== 'undefined';"
+        }
+      ],
+      "description": "Epicor is an enterprise resource planning software suite built to support manufacturing, distribution, retail, and service industries.",
+      "website": "https://www.epicor.com",
+      "icon": "Epicor.svg"
+    },
+    "FPT eInvoice": {
+      "cats": [
+        55
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ctitle\u003eHóa đơn điện tử: Tra cứu hóa đơn\u003c/title\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003ctitle\u003eHóa đơn điện tử FPT.eINVOICE\u003c/title\u003e"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "FPT eInvoice is an electronic invoicing system developed by FPT Corporation for invoice lookup and management in Vietnam.",
+      "website": "https://einvoice.fpt.com.vn",
+      "icon": "FPT.svg"
+    },
+    "Ignition": {
+      "cats": [
+        55
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.practiceignition\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Ignition is an all-in-one platform streamlining proposals, billing, payments, and workflows for accounting and professional services firms.",
+      "website": "https://www.ignitionapp.com",
+      "icon": "Ignition.svg"
+    },
+    "Iress": {
+      "cats": [
+        55
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof IRESSWebToolbox !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof IRESSWebToolbox !== 'undefined';"
+        }
+      ],
+      "description": "Iress is a platform that provides software solutions for the financial services industry.",
+      "website": "https://www.iress.com",
+      "icon": "Iress.svg"
+    },
+    "Lendi": {
+      "cats": [
+        55
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.access-control-allow-origin": {
+                  "$regex": "www\\.lendi\\.pl"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.lendi\\.pl"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Lendi is a Poland-based provider of loan system solutions designed to support financial operations and lending processes.",
+      "website": "https://www.lendi.pl",
+      "icon": "Lendi.svg"
+    },
+    "Taxdome": {
+      "cats": [
+        55
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.taxdome\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Taxdome is a practice management software designed for tax and accounting firms to streamline workflows, manage clients, and organize documents.",
+      "website": "https://taxdome.com",
+      "icon": "Taxdome.svg"
+    },
+    "Tiller": {
+      "cats": [
+        55
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.by\\.tiller\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Tiller is a tool that automatically tracks your spending, balances, and budgets in flexible spreadsheets owned by you.",
+      "website": "https://www.tillerhq.com",
+      "icon": "Tiller.svg"
+    }
+  }
+}

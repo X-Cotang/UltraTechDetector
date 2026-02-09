@@ -1,0 +1,385 @@
+{
+  "apps": {
+    "Apache JSPWiki": {
+      "cats": [
+        8
+      ],
+      "implies": [
+        "Apache Tomcat"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003chtml[^\u003e]* xmlns:jspwiki="
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jspwiki"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Apache JSPWiki is an open-source Wiki engine, built around standard JEE components (Java, servlets, JSP).",
+      "website": "https://jspwiki.org",
+      "icon": "Apache.svg",
+      "cpe": "cpe:2.3:a:apache:jspwiki:*:*:*:*:*:*:*:*"
+    },
+    "Atlassian Confluence": {
+      "cats": [
+        8
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-confluence-request-time": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "Atlassian Confluence is a web-based collaboration wiki tool.",
+      "website": "https://www.atlassian.com/software/confluence/overview/team-collaboration-software",
+      "icon": "Atlassian Confluence.svg",
+      "cpe": "cpe:2.3:a:atlassian:confluence:*:*:*:*:*:*:*:*"
+    },
+    "DokuWiki": {
+      "cats": [
+        8
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^dokuwiki( release [\\d-]+)?\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DOKU_TPL !== 'undefined' \u0026\u0026 DOKU_TPL === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DOKU_TPL !== 'undefined';",
+          "version": "try { return String(DOKU_TPL || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof doku_edit_text_content !== 'undefined';",
+          "version": "try { return String(doku_edit_text_content || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "DokuWiki is a free open-source wiki software.",
+      "website": "https://www.dokuwiki.org",
+      "icon": "DokuWiki.png",
+      "cpe": "cpe:2.3:a:dokuwiki:dokuwiki:*:*:*:*:*:*:*:*"
+    },
+    "Foswiki": {
+      "cats": [
+        8
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cdiv class=\"foswiki(?:copyright|page|main)\"\u003e"
+                }
+              },
+              {
+                "headers.x-foswikiaction": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-foswikiuri": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof foswiki !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof foswiki !== 'undefined';"
+        }
+      ],
+      "description": "Foswiki is a free open-source collaboration platform.",
+      "website": "https://foswiki.org",
+      "icon": "foswiki.png",
+      "cpe": "cpe:2.3:a:foswiki:foswiki:*:*:*:*:*:*:*:*"
+    },
+    "MediaWiki": {
+      "cats": [
+        8
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c(?:a|img)[^\u003e]+\u003epowered by mediawiki\u003c/a\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003ca[^\u003e]+/special:whatlinkshere/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cbody[^\u003e]+class=\"mediawiki\""
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^mediawiki ?(.+)$\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mw !== 'undefined' \u0026\u0026 typeof mw.util !== 'undefined' \u0026\u0026 typeof mw.util.toggleToc !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return wgVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mw.util.toggleToc !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wgTitle !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wgVersion !== 'undefined';",
+          "version": "try { return String(wgVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "MediaWiki is a free and open-source wiki engine.",
+      "website": "https://www.mediawiki.org",
+      "icon": "MediaWiki.svg",
+      "cpe": "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    },
+    "MoinMoin": {
+      "cats": [
+        8
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*moin(?:_static(\\d)(\\d)(\\d)|.+)/common/js/common\\.js\\;version:\\1.\\2.\\3"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof show_switch2gui !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof show_switch2gui !== 'undefined';"
+        }
+      ],
+      "description": "MoinMoin is a wiki engine implemented in Python.",
+      "website": "https://moinmo.in",
+      "icon": "MoinMoin.png",
+      "cpe": "cpe:2.3:a:moinmo:moinmoin:*:*:*:*:*:*:*:*"
+    },
+    "PukiWiki": {
+      "cats": [
+        8
+      ],
+      "description": "PukiWiki is a web-based WikiEngine that enables collaborative editing by allowing anyone to modify pages.",
+      "website": "https://pukiwiki.sourceforge.io",
+      "icon": "PukiWiki.svg"
+    },
+    "TWiki": {
+      "cats": [
+        8
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cimg [^\u003e]*(?:title|alt)=\"this site is powered by the twiki collaboration platform"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:twikijavascripts|twikilib(?:\\.min)?\\.js)"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "TWiki is an open-source wiki and application platform.",
+      "website": "https://twiki.org",
+      "icon": "TWiki.png"
+    },
+    "WikkaWiki": {
+      "cats": [
+        8
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "powered by \u003ca href=\"[^\u003e]+wikkawiki"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']wikkawiki[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "WikkaWiki is an open-source wiki application written in PHP.",
+      "website": "https://wikkawiki.org",
+      "icon": "WikkaWiki.png"
+    },
+    "XWiki": {
+      "cats": [
+        8
+      ],
+      "implies": [
+        "Java\\;confidence:99"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003chtml[^\u003e]data-xwiki-[^\u003e]\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']wiki[\"'][^\u003e]+content=[\"']xwiki[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "XWiki is a free wiki software platform written in Java.",
+      "website": "https://www.xwiki.org",
+      "icon": "xwiki.png"
+    },
+    "YesWiki": {
+      "cats": [
+        8
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*javascripts/yeswiki-base\\.js"
+            }
+          }
+        }
+      ],
+      "description": "YesWiki is a collaborative website creation and management Free Software under the AGPL license, enabling any web user to create, delete, edit, or comment on site pages with unlimited editors or pages.",
+      "website": "https://yeswiki.net",
+      "icon": "YesWiki.svg"
+    },
+    "ikiwiki": {
+      "cats": [
+        8
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca href=\"/(?:cgi-bin/)?ikiwiki\\.cgi\\?do="
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink rel=\"alternate\" type=\"application/x-wiki\" title=\"edit this page\" href=\"[^\"]*/ikiwiki\\.cgi"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "ikiwiki is a free and open-source wiki application.",
+      "website": "https://ikiwiki.info",
+      "icon": "ikiwiki.png"
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "apps": {
+    "Engintron": {
+      "cats": [
+        33
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-server-powered-by": {
+              "$regex": "^engintron$"
+            }
+          }
+        }
+      ],
+      "description": "Engintron is a plugin that integrates Nginx to cPanel/WHM server.",
+      "website": "https://github.com/engintron/engintron",
+      "icon": "engintron.png"
+    },
+    "OpenSSL": {
+      "cats": [
+        33
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "openssl(?:/([\\d.]+[a-z]?))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "OpenSSL is a software library for applications that secure communications over computer networks against eavesdropping or need to identify the party at the other end.",
+      "website": "https://openssl.org",
+      "icon": "OpenSSL.png",
+      "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*"
+    },
+    "Shelf": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Dart"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "dart:io with shelf"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "dart with package:shelf"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Shelf is a server framework for Dart.",
+      "website": "https://pub.dev/packages/shelf",
+      "icon": "Dart.svg"
+    },
+    "mod_auth_pam": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mod_auth_pam(?:/([\\d\\.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Mod_auth_pam is used to configure ways for authenticating users.",
+      "website": "https://pam.sourceforge.net/mod_auth_pam",
+      "icon": "Apache.svg"
+    },
+    "mod_dav": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "\\b(?:mod_)?dav\\b(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Mod_dav is an Apache module to provide WebDAV capabilities for your Apache web server. It is an open-source module, provided under an Apache-style license.",
+      "website": "https://webdav.org/mod_dav",
+      "icon": "Apache.svg"
+    },
+    "mod_fastcgi": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mod_fastcgi(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Mod_fcgid is a high performance alternative to mod_cgi or mod_cgid, which starts a sufficient number instances of the CGI program to handle concurrent requests, and these programs remain running to handle further incoming requests.",
+      "website": "https://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html",
+      "icon": "Apache.svg"
+    },
+    "mod_jk": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server",
+        "Apache Tomcat"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mod_jk(?:/([\\d\\.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Mod_jk is an Apache module used to connect the Tomcat servlet container with web servers such as Apache, iPlanet, Sun ONE (formerly Netscape) and even IIS using the Apache JServ Protocol. A web server waits for client HTTP requests.",
+      "website": "https://tomcat.apache.org/tomcat-3.3-doc/mod_jk-howto.html",
+      "icon": "Apache.svg"
+    },
+    "mod_perl": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server",
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mod_perl(?:/([\\d\\.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Mod_perl is an optional module for the Apache HTTP server. It embeds a Perl interpreter into the Apache server. In addition to allowing Apache modules to be written in the Perl programming language, it allows the Apache web server to be dynamically configured by Perl programs.",
+      "website": "https://perl.apache.org",
+      "icon": "mod_perl.png",
+      "cpe": "cpe:2.3:a:apache:mod_perl:*:*:*:*:*:*:*:*"
+    },
+    "mod_python": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server",
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mod_python(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Mod_python is an Apache HTTP Server module that integrates the Python programming language with the server. It is intended to provide a Python language binding for the Apache HTTP Server. ",
+      "website": "https://www.modpython.org",
+      "icon": "mod_python.png",
+      "cpe": "cpe:2.3:a:apache:mod_python:*:*:*:*:*:*:*:*"
+    },
+    "mod_rack": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server",
+        "Ruby on Rails\\;confidence:50"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "mod_rack(?:/([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "mod_rack(?:/([\\d.]+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Mod_rack is a free web server and application server with support for Ruby, Python and Node.js.",
+      "website": "https://phusionpassenger.com",
+      "icon": "Phusion Passenger.png"
+    },
+    "mod_rails": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server",
+        "Ruby on Rails\\;confidence:50"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "mod_rails(?:/([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "mod_rails(?:/([\\d.]+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Mod_rails is a free web server and application server with support for Ruby, Python and Node.js.",
+      "website": "https://phusionpassenger.com",
+      "icon": "Phusion Passenger.png"
+    },
+    "mod_ssl": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "mod_ssl(?:/([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "mod_ssl is an optional module for the Apache HTTP Server. It provides strong cryptography for the Apache web server via the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) cryptographic protocols by the help of the open-source SSL/TLS toolkit OpenSSL.",
+      "website": "https://modssl.org",
+      "icon": "mod_ssl.png",
+      "cpe": "cpe:2.3:a:modssl:mod_ssl:*:*:*:*:*:*:*:*"
+    },
+    "mod_wsgi": {
+      "cats": [
+        33
+      ],
+      "implies": [
+        "Apache HTTP Server",
+        "Python\\;confidence:50"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "mod_wsgi(?:/([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "mod_wsgi(?:/([\\d.]+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "mod_wsgi is an Apache HTTP Server module that provides a WSGI compliant interface for hosting Python based web applications under Apache.",
+      "website": "https://code.google.com/p/modwsgi",
+      "icon": "mod_wsgi.png",
+      "cpe": "cpe:2.3:a:modwsgi:mod_wsgi:*:*:*:*:*:*:*:*"
+    }
+  }
+}

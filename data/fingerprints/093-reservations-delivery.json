@@ -1,0 +1,1700 @@
+{
+  "apps": {
+    "Aspio": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/aspio-io-customer/public/js/aspio-io-customer-public\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Aspio is a platform that streamlines bookings and manages sales.",
+      "website": "https://aspio.io",
+      "icon": "Aspio.svg"
+    },
+    "Bobonus": {
+      "cats": [
+        93,
+        6
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "https\\://bobonus\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Bobonus is an ecommerce platform for restaurants.",
+      "website": "https://bobonus.com",
+      "icon": "Bobonus.svg"
+    },
+    "BookDinners": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bookdinners\\.nl/widget\\.js"
+            }
+          }
+        }
+      ],
+      "description": "BookDinners is a restaurant table booking widget.",
+      "website": "https://www.bookdinners.nl",
+      "icon": "BookDinners.svg"
+    },
+    "Bookatable": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bda\\.bookatable\\.com/deploy/lbui\\.direct\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Bookatable is a restaurant table booking widget.",
+      "website": "https://www.bookatable.co.uk",
+      "icon": "Bookatable.svg"
+    },
+    "Booking Experts": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn-cms\\.bookingexperts\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Booking Experts is an all-in-one reservation management system that integrates booking, availability, and pricing into a single platform.",
+      "website": "https://www.bookingexperts.com",
+      "icon": "BookingExperts.svg"
+    },
+    "Booking Factory": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.thebookingbutton\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Booking Factory is an all-in-one hotel management system that facilitates management of hotel operations.",
+      "website": "https://bookingfactory.io",
+      "icon": "BookingFactory.svg"
+    },
+    "Bookteq": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.bookteq\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Bookteq is a sports facility booking software that enables schools, clubs, and councils to manage reservations online.",
+      "website": "https://www.bookteq.com",
+      "icon": "Bookteq.svg"
+    },
+    "Bottle": {
+      "cats": [
+        93
+      ],
+      "implies": [
+        "Stripe",
+        "Vue.js"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunkbottle_merchant_vue !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkbottle_merchant_vue !== 'undefined';"
+        }
+      ],
+      "description": "Bottle is an all-in-one software for meal delivery businesses, enhancing operational efficiency and customer management.",
+      "website": "https://bottle.com",
+      "icon": "Bottle.svg"
+    },
+    "Clock PMS": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.clock-software\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof clock_pms_iframe !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof clock_pms_iframe !== 'undefined';"
+        }
+      ],
+      "description": "Clock PMS is a hotel booking software designed to streamline reservations, manage guest information, and optimise hotel operations.",
+      "website": "https://www.clock-software.com",
+      "icon": "ClockPMS.svg"
+    },
+    "Clorder": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.clorder\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Clorder is a digital platform for ordering and marketing designed to reduce costs and enhance sales for businesses.",
+      "website": "https://www.clorder.com",
+      "icon": "Clorder.svg"
+    },
+    "CoverManager": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.covermanager\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "CoverManager is a restaurant table booking widget.",
+      "website": "https://www.covermanager.com",
+      "icon": "CoverManager.svg"
+    },
+    "Cubilis": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.cubilis\\.eu/"
+            }
+          }
+        }
+      ],
+      "description": "Cubilis is a management and reservation system for all types of accommodation, such as hotels, B\u0026Bs and hostels.",
+      "website": "https://www.cubilis.com",
+      "icon": "Cubilis.svg"
+    },
+    "DISH": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.dish\\.co"
+            }
+          }
+        }
+      ],
+      "description": "DISH is a platform that allows restaurants to independently manage online reservations and customer orders.",
+      "website": "https://www.dish.co/XX",
+      "icon": "DISH.svg"
+    },
+    "Easy Rez": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^easy-rez$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.easy-rez\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Easy Rez is a hotel property management and booking system designed to streamline reservations, room management, and guest services.",
+      "website": "https://www.easy-rez.com",
+      "icon": "EasyRez.svg"
+    },
+    "EatStreet": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.eatstreet\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "EatStreet is a food booking platform that enables users to browse restaurants, place meal orders, and schedule deliveries or pickups through an online or mobile interface.",
+      "website": "https://eatstreet.com",
+      "icon": "EatStreet.svg"
+    },
+    "Eatself": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.eatself\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Eatself is an online platform that facilitates meal ordering and delivery services.",
+      "website": "https://www.eatself.com",
+      "icon": "Eatself.svg"
+    },
+    "Elina PMS": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.elinapms\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof elinaGlobalConst !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof elinaGlobalConst !== 'undefined';"
+        }
+      ],
+      "description": "Elina PMS is a software suite that includes a channel manager, booking engine, and property management system for handling reservations, availability, and operations.",
+      "website": "https://www.elinapms.com",
+      "icon": "Elina.svg"
+    },
+    "Findigs": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.findigs\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Findigs is an all-in-one renting platform that streamlines the entire process from application to approval.",
+      "website": "https://www.findigs.com",
+      "icon": "Findigs.svg"
+    },
+    "Firefly Reservations": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.fireflyreservations\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Firefly Reservations is a management platform that provides tools for handling campground reservations.",
+      "website": "https://fireflyreservations.com",
+      "icon": "FireflyReservations.svg"
+    },
+    "Fleksa": {
+      "cats": [
+        93
+      ],
+      "implies": [
+        "Next.js",
+        "Node.js"
+      ],
+      "description": "Fleksa is an online ordering system for restaurants and delivery.",
+      "website": "https://fleksa.com",
+      "icon": "Fleksa.svg"
+    },
+    "Flipdish": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.web\\.flipdish\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Flipdish is an all-in-one technology solution designed to streamline restaurant operations.",
+      "website": "https://www.flipdish.com",
+      "icon": "Flipdish.svg"
+    },
+    "Flybook": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Flybook is specialized reservation software designed to manage bookings, availability, and operations for businesses in the adventure, tours, and rentals industry.",
+      "website": "https://www.theflybook.com",
+      "icon": "Flybook.svg"
+    },
+    "FoodBooking": {
+      "cats": [
+        93
+      ],
+      "implies": [
+        "GloriaFood"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.(?:fbgcdn|foodbooking)\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "FoodBooking is a virtual food court based on a curated list of restaurants that use the GloriaFood ordering system.",
+      "website": "https://www.foodbooking.com",
+      "icon": "FoodBooking.png"
+    },
+    "Foodomaa": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Foodomaa is a multi-restaurant food ordering and restaurant membership system.",
+      "website": "https://foodomaa.com",
+      "icon": "Foodomaa.svg"
+    },
+    "Foratable": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.foratable\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Foratable is a reservation system for restaurants that manages table bookings, customer scheduling, and availability tracking.",
+      "website": "https://go.foratable.com",
+      "icon": "Foratable.svg"
+    },
+    "Formitable": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.formitable\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*formitable\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Formitable is an reservation management system for restaurants.",
+      "website": "https://formitable.com",
+      "icon": "Formitable.svg"
+    },
+    "Funbutler Booking": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*booking\\.funbutler\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof funbutlerAPI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof funbutlerAPI !== 'undefined';"
+        }
+      ],
+      "description": "Funbutler Booking is a booking and operations system designed for activity centers and entertainment venues to manage reservations and streamline daily operations.",
+      "website": "https://business.funbutler.com",
+      "icon": "FunbutlerBooking.svg"
+    },
+    "Gastronaut": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.gastronaut\\.ai/"
+            }
+          }
+        }
+      ],
+      "description": "Gastronaut is a reservation system designed to automate the booking process, streamlining operations to enhance sales efficiency.",
+      "website": "https://get.gastronaut.ai",
+      "icon": "Gastronaut.svg"
+    },
+    "GlobRes": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.globres\\.io"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.globres\\.io"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "GlobRes is a hospitality management solution designed to streamline operations, reservations, and customer service for hotels and other lodging providers.",
+      "website": "https://globres.com",
+      "icon": "GlobRes.svg"
+    },
+    "GloriaFood": {
+      "cats": [
+        93
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof glfBindButtons !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof glfBindButtons !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof glfWidget !== 'undefined';"
+        }
+      ],
+      "description": "GloriaFood is an online ordering and food delivery platform that helps restaurant owners manage orders and streamline point-of-sale operations.",
+      "website": "https://www.gloriafood.com",
+      "icon": "Oracle.svg"
+    },
+    "GoPrep": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "GoPrep is a meal prep software tailored for the Meal Preparation \u0026 Delivery industry.",
+      "website": "https://goprep.com",
+      "icon": "GoPrep.svg"
+    },
+    "Growcer": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.yogrowcer\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Growcer is an online marketplace for grocery ordering and delivery, connecting customers with local stores for convenient shopping.",
+      "website": "https://www.yogrowcer.com",
+      "icon": "Growcer.svg"
+    },
+    "Guestonline": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ib\\.guestonline\\.\\w+"
+            }
+          }
+        }
+      ],
+      "description": "Guestonline is a restaurant table booking widget.",
+      "website": "https://www.guestonline.io",
+      "icon": "Guestonline.svg"
+    },
+    "Guesty": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Guesty is a cloud-based platform, designed exclusively for Airbnb and vacation rental managers.",
+      "website": "https://www.guesty.com/",
+      "icon": "Guesty.svg"
+    },
+    "HomHero": {
+      "cats": [
+        93
+      ],
+      "description": "Homhero is a platform that offers a range of tools and services to help vacation rental owners manage their properties and bookings.",
+      "website": "https://homhero.com.au",
+      "icon": "HomHero.svg"
+    },
+    "Hostmeapp": {
+      "cats": [
+        93,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tables\\.hostmeapp\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Hostmeapp is an restaurant software. Includes reservation, waitlist, guestbook and marketing tools.",
+      "website": "https://www.hostmeapp.com",
+      "icon": "Hostmeapp.svg"
+    },
+    "KoobCamp": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.koobcamp\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KOOBCAMP_WIDGETS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KOOBCAMP_WIDGETS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KoobCampWidgets !== 'undefined';"
+        }
+      ],
+      "description": "KoobCamp is a provider of camping, village, and glamping holiday solutions.",
+      "website": "https://www.koobcamp.com/en/home-page",
+      "icon": "KoobCamp.svg"
+    },
+    "Kross Booking": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*data\\.krossbooking\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Kross Booking is a booking management system that automates reservations, scheduling, and resource allocation to streamline operational workflows.",
+      "website": "https://www.krossbooking.com",
+      "icon": "KrossBooking.svg"
+    },
+    "Little Hotelier": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Little Hotelier is an all-in-one property management solution designed for small accomodation businesses.",
+      "website": "https://www.littlehotelier.com",
+      "icon": "LittleHotelier.svg"
+    },
+    "LobbyPMS": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.lobbypms\\.com"
+            }
+          }
+        }
+      ],
+      "description": "LobbyPMS is a platform developed to streamline daily accommodation management.",
+      "website": "https://lobbypms.com",
+      "icon": "LobbyPMS.svg"
+    },
+    "Lodgify": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.lodgify\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Lodgify is a platform facilitating vacation rentals and bookings.",
+      "website": "https://www.lodgify.com",
+      "icon": "Lodgify.svg"
+    },
+    "Loopi": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.loopi-velo\\.fr/"
+            }
+          }
+        }
+      ],
+      "description": "Loopi is a digital ecosystem offering tools, integrations, and resources for tourism professionals to create, manage, and distribute multimodal tourist circuits.",
+      "website": "https://www.loopi.fr",
+      "icon": "Loopi.svg"
+    },
+    "Lumit": {
+      "cats": [
+        93
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof injectLumit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof injectLumit !== 'undefined';"
+        }
+      ],
+      "description": "Lumit is an online ordering system for restaurants.",
+      "website": "https://lumit.app/se",
+      "icon": "Lumit.svg"
+    },
+    "Maxxton": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.maxxton\\.net"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.maxxton\\.net"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Maxxton is a reservation and property management system.",
+      "website": "https://maxxton.com",
+      "icon": "Maxxton.svg"
+    },
+    "Menufy Online Ordering": {
+      "cats": [
+        93
+      ],
+      "description": "Menufy is an online and mobile meal ordering service.",
+      "website": "https://restaurant.menufy.com",
+      "icon": "Menufy.png"
+    },
+    "Moder": {
+      "cats": [
+        93
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Moder !== 'undefined' \u0026\u0026 typeof Moder.$attrs !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Moder.$attrs !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ModerSettings.property !== 'undefined';"
+        }
+      ],
+      "description": "Moder is a PMS system for hotels and resorts to manage and grow their tourism businesses.",
+      "website": "https://moder.fi",
+      "icon": "Moder.svg"
+    },
+    "MyRest": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.myrest\\.io"
+            }
+          }
+        }
+      ],
+      "description": "MyRest is a reservation system for restaurants that incorporates updated guidelines for gastro marketing.",
+      "website": "https://myrest.io/",
+      "icon": "MyRest.svg"
+    },
+    "Namastay": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.namastay\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof closeNamastay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof closeNamastay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initNamastay !== 'undefined';"
+        }
+      ],
+      "description": "Namastay is an optimized booking engine that simplifies the online guest journey to increase direct bookings.",
+      "website": "https://www.namastay.io",
+      "icon": "Namastay.svg"
+    },
+    "Octorate": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.octorate\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof octorate !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof octorate !== 'undefined';"
+        }
+      ],
+      "description": "Octorate is a hotel booking system and channel manager, facilitating management of reservations across various platforms.",
+      "website": "https://octorate.com",
+      "icon": "Octorate.svg"
+    },
+    "Oddle": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*oddle-pass-wrapper\\.s3\\.ap-southeast-1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Oddle is an online ordering system designed to streamline restaurant operations.",
+      "website": "https://oddle.me",
+      "icon": "Oddle.svg"
+    },
+    "OpenTable": {
+      "cats": [
+        93
+      ],
+      "description": "OpenTable is an online restaurant-reservation service company founded by Sid Gorham, Eric Moe and Chuck Templeton on 2 July 1998 and is based in San Francisco, California.",
+      "website": "https://restaurant.opentable.com",
+      "icon": "OpenTable.svg"
+    },
+    "Ordering": {
+      "cats": [
+        93
+      ],
+      "description": "Ordering is a multi-store online ordering and delivery platform providing marketing and loyalty tools, along with native apps for businesses.",
+      "website": "https://www.ordering.co",
+      "icon": "Ordering.svg"
+    },
+    "Overfull": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.overfull\\.fr"
+            }
+          }
+        }
+      ],
+      "description": "Overfull is a reservation management system designed for restaurants to handle bookings, manage tables, and streamline guest scheduling.",
+      "website": "https://www.overfull.fr",
+      "icon": "Overfull.svg"
+    },
+    "ParkFlow": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.parkflow\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "ParkFlow is a system for managing bookings at airport parking facilities, enabling streamlined scheduling, allocation, and tracking of parking reservations.",
+      "website": "https://parkflow.io",
+      "icon": "ParkFlow.svg"
+    },
+    "Planyo": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.planyo\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Planyo is a flexible reservation system designed to manage bookings for various services and resources across different industries.",
+      "website": "https://www.planyo.com",
+      "icon": "Planyo.svg"
+    },
+    "Quandoo": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*booking-widget\\.quandoo\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Quandoo is a platform that allows users to find and reserve restaurants.",
+      "website": "https://www.quandoo.co.uk",
+      "icon": "Quandoo.svg"
+    },
+    "Reconline": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.reconline\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Reconline is a cloud-based online reservation system designed for hotels and hotel groups to manage bookings and availability.",
+      "website": "http://reconline.com",
+      "icon": "Reconline.svg"
+    },
+    "ResDiary": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.resdiary\\.\\w+/"
+            }
+          }
+        }
+      ],
+      "description": "ResDiary, is a online reservation system for hospitality operators.",
+      "website": "https://www.resdiary.com",
+      "icon": "ResDiary.svg"
+    },
+    "Resengo": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.resengo\\.\\w+"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof wpJsonpResengoReservationWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wpJsonpResengoReservationWidget !== 'undefined';"
+        }
+      ],
+      "description": "Resengo is a restaurant table booking widget.",
+      "website": "https://wwc.resengo.com",
+      "icon": "Resengo.svg"
+    },
+    "Reservio": {
+      "cats": [
+        93,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.reservio\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Reservio is a cloud-based appointment scheduling and online booking solution.",
+      "website": "https://www.reservio.com",
+      "icon": "Reservio.svg"
+    },
+    "Resmio": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.resmio\\.\\w+/static/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ResmioButton !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ResmioButton !== 'undefined';"
+        }
+      ],
+      "description": "Resmio is a restaurant table booking widget.",
+      "website": "https://www.resmio.com",
+      "icon": "Resmio.svg"
+    },
+    "Resy": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widgets\\.resy\\.\\w+"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof resyWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof resyWidget !== 'undefined';"
+        }
+      ],
+      "description": "Resy is an technology and media company that provides an app and back-end management software for restaurant reservations.",
+      "website": "https://resy.com",
+      "icon": "Resy.svg"
+    },
+    "Revinate": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*contact-api\\.inguest\\.com/.*/revinate-form\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*contact-api\\.inguest\\.com/.*/revinate-form\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Revinate is a direct booking platform used in the hospitality industry to help hotels increase reservations and manage guest engagement.",
+      "website": "https://www.revinate.com",
+      "icon": "Revinate.svg"
+    },
+    "Roompot": {
+      "cats": [
+        93
+      ],
+      "description": "Roompot is a provider of holiday parks, specialising in the management and operation of parks and campsites.",
+      "website": "https://www.roompot.com",
+      "icon": "Roompot.svg"
+    },
+    "Simplotel": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.simplotel\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof validateform_simplotel !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof validateform_simplotel !== 'undefined';"
+        }
+      ],
+      "description": "Simplotel is a hotel booking engine.",
+      "website": "https://www.simplotel.com",
+      "icon": "Simplotel.svg"
+    },
+    "Skiperformance": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.skiperformance\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Skiperformance is an online platform that provides solutions for selling lift tickets and ski passes, tailored to the needs of the ski industry.",
+      "website": "https://www.skiperformance.com",
+      "icon": "Skiperformance.svg"
+    },
+    "Slice": {
+      "cats": [
+        93
+      ],
+      "description": "Slice is an online food ordering platform for independent pizzerias.",
+      "website": "https://slicelife.com/owners",
+      "icon": "Slice.svg"
+    },
+    "Straiv": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.straiv\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Straiv is a hotel software platform that digitalizes the guest journey, offering features such as check-in, guest directory, registration forms, messaging, and more.",
+      "website": "https://straiv.io",
+      "icon": "Straiv.svg"
+    },
+    "TableBooker": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*reservations\\.tablebooker\\.\\w+/"
+            }
+          }
+        }
+      ],
+      "description": "Tablebooker is an online reservation system for restaurants.",
+      "website": "https://www.tablebooker.com",
+      "icon": "TableBooker.svg"
+    },
+    "TableCheck": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tc_widget\\.js"
+            }
+          }
+        }
+      ],
+      "description": "TableCheck is a restaurant table booking widget.",
+      "website": "https://www.tablecheck.com",
+      "icon": "TableCheck.svg"
+    },
+    "TableFever": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tablefever\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tablefever\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "TableFever is a platform that helps locate top restaurants, make reservations, and explore nearby dining options for a curated culinary experience.",
+      "website": "https://www.tablefever.com",
+      "icon": "TableFever.svg"
+    },
+    "Tableo": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.tableo\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Tableo is a platform that streamlines restaurant reservation management, optimizing booking schedules and improving table utilization.",
+      "website": "https://tableo.com",
+      "icon": "Tableo.svg"
+    },
+    "Tashi": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*meet\\.tashi\\.travel"
+            }
+          }
+        }
+      ],
+      "description": "Tashi is a web-based booking software that enables accommodation providers and tour operators to manage reservations and schedules.",
+      "website": "https://tashi.travel",
+      "icon": "Tashi.svg"
+    },
+    "Thefork": {
+      "cats": [
+        93
+      ],
+      "description": "Thefork is a restaurant booking, managing system.",
+      "website": "https://www.thefork.com",
+      "icon": "Thefork.svg"
+    },
+    "TourCMS": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mp\\.tourcms\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mp\\.tourcms\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "TourCMS is a platform designed for tour and activity operators, offering solutions for managing online and offline bookings and distribution.",
+      "website": "https://www.tourcms.com",
+      "icon": "TourCMS.svg"
+    },
+    "Tripleseat": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.tripleseat\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Tripleseat is an event management platform that streamlines venue booking, guest communication, and event coordination for restaurants, hotels, and hospitality teams.",
+      "website": "https://tripleseat.com",
+      "icon": "Tripleseat.svg"
+    },
+    "Triptease": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.triptease\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Triptease is a SaaS that provides digital tools that create better experiences and relationships between hotels and guests.",
+      "website": "https://www.triptease.com",
+      "icon": "Triptease.svg"
+    },
+    "Typo 00": {
+      "cats": [
+        93
+      ],
+      "description": "Typo00 is a digital ordering system designed for restaurants to streamline order management.",
+      "website": "https://www.typo00.com",
+      "icon": "Typo00.svg"
+    },
+    "Uplisting": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "uplisting"
+            }
+          }
+        }
+      ],
+      "description": "Uplisting is a property management system for Vacation Rental owners, operators and managers.",
+      "website": "https://www.uplisting.io",
+      "icon": "Uplisting.svg"
+    },
+    "Upserve": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.upserve\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Upserve is a restaurant management solution featuring an Android or iOS-based point-of-sale system, online ordering, contactless payments, automated inventory management, sales analytics, and more.",
+      "website": "https://onlineordering.upserve.com",
+      "icon": "Upserve.svg"
+    },
+    "Vacation Labs": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.vacationlabs\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.vacationlabs\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Vacation Labs is a travel management platform with a fully integrated booking engine that is mobile responsive.",
+      "website": "https://www.vacationlabs.com",
+      "icon": "VacationLabs.svg"
+    },
+    "WINEAROUND": {
+      "cats": [
+        93
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _winearoundDefaultLanguage !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _winearoundDefaultLanguage !== 'undefined';"
+        }
+      ],
+      "description": "WINEAROUND is a booking software that enables businesses to manage online and offline reservations, schedule appointments, streamline operations, and enhance customer service for guided tours and activities.",
+      "website": "https://winearound.com",
+      "icon": "WineAround.svg"
+    },
+    "WeeBnB": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^weebnb$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "WeeBnB is a rental optimization platform that provides a website for managing and promoting vacation rentals.",
+      "website": "https://www.weebnb.com",
+      "icon": "WeeBnB.svg"
+    },
+    "Witbooking": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.witbooking\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Witbooking is a hotel booking engine that enables the management of reservations, availability, and pricing through an online platform.",
+      "website": "https://www.witbooking.com",
+      "icon": "Witbooking.svg"
+    },
+    "WuBook": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//wubook\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _WuBook !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wbWuBookUrl !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _WuBook !== 'undefined';"
+        }
+      ],
+      "description": "WuBook is a software platform that allows efficient management of rooms and rates for hospitality operations.",
+      "website": "https://wubook.net",
+      "icon": "WuBook.svg"
+    },
+    "Yelp Reservations": {
+      "cats": [
+        93
+      ],
+      "description": "Yelp Reservations is a cloud-based restaurant management system.",
+      "website": "https://yelp.com",
+      "icon": "Yelp.svg"
+    },
+    "Zenchef": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.zenchef\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Zenchef is a restaurant management software solution that simplifies the customer restaurant experience.",
+      "website": "https://www.zenchef.com",
+      "icon": "Zenchef.svg"
+    },
+    "Zonal Bookings": {
+      "cats": [
+        93
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.reservationdetails\\.zonalbookingreference"
+            }
+          }
+        }
+      ],
+      "description": "Zonal Bookings is a reservations platform that enables hospitality businesses to centralize and manage all booking activities without charging commissions.",
+      "website": "https://www.zonal.co.uk/products/bookings",
+      "icon": "Zonal.svg"
+    },
+    "Zuppler": {
+      "cats": [
+        93
+      ],
+      "description": "Zuppler is a complete and branded online ordering solution for restaurants and caterers with multi-locations.",
+      "website": "https://www.zuppler.com",
+      "icon": "Zuppler.png"
+    }
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "apps": {
+    "Apizee": {
+      "cats": [
+        103
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Apizee !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Apizee !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apizee !== 'undefined';"
+        }
+      ],
+      "description": "Apizee is a platform for easy, real-time, multi-device video interaction services.",
+      "website": "https://www.apizee.com",
+      "icon": "Apizee.svg"
+    },
+    "Bambuser": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.bambuser\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BambuserLiveShopping !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BambuserLiveShopping !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _bambuser !== 'undefined';"
+        }
+      ],
+      "description": "Bambuser is a SaaS company based in Stockholm that provides live video shopping technology.",
+      "website": "https://bambuser.com",
+      "icon": "Bambuser.png"
+    },
+    "BigMarker": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.bigmarker\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "BigMarker is a platform for hosting webinars, virtual, and hybrid events, providing tools for presentations, audience engagement, and event management in one solution.",
+      "website": "https://www.bigmarker.com",
+      "icon": "BigMarker.svg"
+    },
+    "Confer With": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.conferwith\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Confer With triggers live streaming video calls between shoppers and instore experts from a website, or outside a store.",
+      "website": "https://conferwith.io",
+      "icon": "Confer With.svg"
+    },
+    "Dyte": {
+      "cats": [
+        103
+      ],
+      "implies": [
+        "WebRTC"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof triggerDyteRecording !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof triggerDyteRecording !== 'undefined';"
+        }
+      ],
+      "description": "Dyte is a developer-friendly, real-time audio and video communication software development kit (SDK).",
+      "website": "https://dyte.io",
+      "icon": "Dyte.svg"
+    },
+    "EasyWebinar": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.easywebinar\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "EasyWebinar is a webinar platform designed for marketing and growing businesses.",
+      "website": "https://easywebinar.com",
+      "icon": "EasyWebinar.svg"
+    },
+    "Firework": {
+      "cats": [
+        103
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _fwn !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _fwnPerformance !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fwnPolyfillPromise !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _fwn !== 'undefined';"
+        }
+      ],
+      "description": "Firework is a video commerce solution for brands, retailers, and publishers, enhancing digital storefronts with interactive livestream and shoppable video features.",
+      "website": "https://firework.com",
+      "icon": "Firework.svg"
+    },
+    "Go Instore": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.goinstore\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//gis\\.goinstore\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GISAPP !== 'undefined' \u0026\u0026 typeof GISAPP.videoJsCtrl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GISAPP.videoJsCtrl !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gisAppLib.postRobot !== 'undefined';"
+        }
+      ],
+      "description": "Go Instore uses high-definition live video to connect online customers with in-store product experts.",
+      "website": "https://goinstore.com",
+      "icon": "Go Instore.svg"
+    },
+    "Hero": {
+      "cats": [
+        103
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.usehero\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HeroWebPluginSettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HeroWebPluginSettings !== 'undefined';"
+        }
+      ],
+      "description": "Hero is a virtual shopping platform for ecommerce and retail stores.",
+      "website": "https://www.usehero.com/",
+      "icon": "Hero.png"
+    },
+    "HeySummit": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^heysummit$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof heySummitAnimationItems !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof prepHeySummitAnimationParent !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof resetHeySummitAnimation !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof startHeySummitAnimation !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof startHeySummitAnimationLoadTop !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof stopHeySummitAnimation !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof heySummitAnimationItems !== 'undefined';"
+        }
+      ],
+      "description": "HeySummit is a platform facilitating the organization of virtual summits.",
+      "website": "https://heysummit.com",
+      "icon": "HeySummit.svg"
+    },
+    "Klarna Virtual Shopping": {
+      "cats": [
+        103
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.usehero\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HeroWebPluginSettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HeroWebPluginSettings !== 'undefined';"
+        }
+      ],
+      "description": "Klarna Virtual Shopping is a service that allows online shoppers to interact with in-store retail experts via live chats and video calls, providing real-time advice and product demonstrations to enhance the online shopping experience.",
+      "website": "https://www.klarna.com/us/business/marketing-solutions/",
+      "icon": "Klarna.svg"
+    },
+    "Loom": {
+      "cats": [
+        103
+      ],
+      "website": "https://www.loom.com",
+      "icon": "Loom.svg"
+    },
+    "MediaPlatform": {
+      "cats": [
+        103
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mediaPlatformLoginUrl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mediaPlatformLoginUrl !== 'undefined';"
+        }
+      ],
+      "description": "MediaPlatform is enterprise video and webcasting software designed for corporate communications.",
+      "website": "https://www.mediaplatform.com",
+      "icon": "MediaPlatform.svg"
+    },
+    "Ocular": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.ocularsolution\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Ocular is a video ecommerce and live commerce platform facilitating transactions and shopping experiences through live broadcasts and interactive features.",
+      "website": "https://ocularsolution.com/",
+      "icon": "Ocular.svg"
+    },
+    "Plaza": {
+      "cats": [
+        103
+      ],
+      "description": "Plaza is a ecommerce platform that allows brands and retailers to communicate with customers via live video.",
+      "website": "https://www.useplaza.com",
+      "icon": "Plaza.svg"
+    },
+    "Trovo": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tag\\.trovo-tag\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Trovo is a platform for live streaming and connecting with others through gaming, music, and other interactive content.",
+      "website": "https://trovo.live",
+      "icon": "Trovo.svg"
+    },
+    "Viloud": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.viloud\\.tv"
+            }
+          }
+        }
+      ],
+      "description": "Viloud is a platform that enables the creation of online TV channels for brands, allowing scheduled or on-demand content streaming.",
+      "website": "https://viloud.tv",
+      "icon": "Viloud.svg"
+    },
+    "Vonage Video API": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.opentok\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Vonage Video API platform makes it easy to embed real-time, high-quality interactive video, messaging, screen-sharing, and more into web and mobile apps.",
+      "website": "https://www.vonage.com/communications-apis/video/",
+      "icon": "Vonage.svg"
+    },
+    "Webinato": {
+      "cats": [
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.webinato\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Webinato is a webinar automation software that schedules, manages, and streams online seminars for businesses and educational purposes.",
+      "website": "https://www.webinato.com",
+      "icon": "Webinato.svg"
+    }
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "apps": {
+    "AlmaLinux": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "almalinux"
+            }
+          }
+        }
+      ],
+      "description": "AlmaLinux is an open-source, community-driven Linux operating system that fills the gap left by the discontinuation of the CentOS Linux stable release.",
+      "website": "https://almalinux.org",
+      "icon": "AlmaLinux.svg"
+    },
+    "Alpine Linux": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "alpine"
+            }
+          }
+        }
+      ],
+      "description": "Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.",
+      "website": "https://www.alpinelinux.org",
+      "icon": "Alpine Linux.svg",
+      "cpe": "cpe:2.3:o:alpinelinux:alpine_linux:*:*:*:*:*:*:*:*"
+    },
+    "CentOS": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "centos"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "centos"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "CentOS is a Linux distribution that provides a free, community-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux (RHEL).",
+      "website": "https://centos.org",
+      "icon": "CentOS.svg",
+      "cpe": "cpe:2.3:o:centos:centos:*:*:*:*:*:*:*:*"
+    },
+    "Darwin": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "darwin"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "darwin"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Darwin is the open-source operating system from Apple that forms the basis for macOS.",
+      "website": "https://opensource.apple.com",
+      "icon": "Apple.svg"
+    },
+    "Debian": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "debian"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "(?:debian|dotdeb|(potato|woody|sarge|etch|lenny|squeeze|wheezy|jessie|stretch|buster|sid))\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Debian is a Linux software which is a free open-source software.",
+      "website": "https://debian.org",
+      "icon": "Debian.png",
+      "cpe": "cpe:2.3:o:debian:debian_linux:*:*:*:*:*:*:*:*"
+    },
+    "Fedora": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "fedora"
+            }
+          }
+        }
+      ],
+      "description": "Fedora is a free open-source Linux-based operating system.",
+      "website": "https://fedoraproject.org",
+      "icon": "Fedora.png",
+      "cpe": "cpe:2.3:o:fedoraproject:fedora:*:*:*:*:*:*:*:*"
+    },
+    "FreeBSD": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "freebsd(?: ([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "FreeBSD is a free and open-source Unix-like operating system.",
+      "website": "https://freebsd.org",
+      "icon": "FreeBSD.png",
+      "cpe": "cpe:2.3:o:freebsd:freebsd:*:*:*:*:*:*:*:*"
+    },
+    "Gentoo": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "gentoo"
+            }
+          }
+        }
+      ],
+      "description": "Gentoo is a free operating system based on Linux.",
+      "website": "https://www.gentoo.org",
+      "icon": "Gentoo.png",
+      "cpe": "cpe:2.3:o:gentoo:linux:*:*:*:*:*:*:*:*"
+    },
+    "Hirschmann HiOS": {
+      "cats": [
+        28
+      ],
+      "description": "Hirschmann HiOS is an operating system for industrial network equipment.",
+      "website": "https://hirschmann.com/",
+      "icon": "hirschmann_OS.png",
+      "cpe": "cpe:2.3:o:belden:hirschmann_hios:*:*:*:*:*:*:*:*"
+    },
+    "Raspbian": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-powered-by": {
+                  "$regex": "raspbian"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "raspbian"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Raspbian is a free operating system for the Raspberry Pi hardware.",
+      "website": "https://www.raspbian.org/",
+      "icon": "Raspbian.svg"
+    },
+    "Red Hat": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "red hat"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "red hat"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Red Hat is an open-source Linux operating system.",
+      "website": "https://www.redhat.com",
+      "icon": "Red Hat.svg",
+      "cpe": "cpe:2.3:o:redhat:linux:*:*:*:*:*:*:*:*"
+    },
+    "SUSE": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "suse(?:/?\\s?-?([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "suse(?:/?\\s?-?([\\d.]+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SUSE is a Linux-based server operating system.",
+      "website": "https://suse.com",
+      "icon": "SUSE.png"
+    },
+    "Scientific Linux": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "scientific linux"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "scientific linux"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Scientific Linux (SL) is a free open-source operating system based on Red Hat Enterprise Linux.",
+      "website": "https://scientificlinux.org",
+      "icon": "Scientific Linux.png"
+    },
+    "SunOS": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "sunos( [\\d\\.]+)?\\;version:\\1"
+                }
+              },
+              {
+                "headers.servlet-engine": {
+                  "$regex": "sunos( [\\d\\.]+)?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SunOS is a Unix-branded operating system developed by Sun Microsystems for their workstation and server computer systems.",
+      "website": "https://oracle.com/solaris",
+      "icon": "Oracle.svg",
+      "cpe": "cpe:2.3:o:oracle:sunos:*:*:*:*:*:*:*:*"
+    },
+    "UNIX": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "unix"
+            }
+          }
+        }
+      ],
+      "description": "Unix is a family of multitasking, multiuser computer operating systems.",
+      "website": "https://unix.org",
+      "icon": "UNIX.png"
+    },
+    "Ubuntu": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "ubuntu"
+                }
+              },
+              {
+                "headers.x-powered-by": {
+                  "$regex": "ubuntu"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Ubuntu is a free and open-source operating system on Linux for the enterprise server, desktop, cloud, and IoT.",
+      "website": "https://www.ubuntu.com/server",
+      "icon": "Ubuntu.svg",
+      "cpe": "cpe:2.3:o:canonical:ubuntu_linux:*:*:*:*:*:*:*:*"
+    },
+    "UniFi OS": {
+      "cats": [
+        28
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof unifiConstant !== 'undefined' \u0026\u0026 typeof unifiConstant.VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return unifiConstant.VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof unifiConstant.VERSION !== 'undefined';",
+          "version": "try { return String(unifiConstant.VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "UniFi OS is the operating system for UniFi products, which provides a user interface.",
+      "website": "https://www.ui.com/",
+      "icon": "UniFi_OS.png"
+    },
+    "Windows CE": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "\\bwince\\b"
+            }
+          }
+        }
+      ],
+      "description": "Windows CE is an operating system designed for small footprint devices or embedded systems.",
+      "website": "https://microsoft.com",
+      "icon": "Microsoft.svg"
+    },
+    "Windows Server": {
+      "cats": [
+        28
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "win32|win64"
+            }
+          }
+        }
+      ],
+      "description": "Windows Server is a brand name for a group of server operating systems.",
+      "website": "https://microsoft.com/windowsserver",
+      "icon": "WindowsServer.png"
+    },
+    "YunoHost": {
+      "cats": [
+        28
+      ],
+      "implies": [
+        "Debian"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/ynh_portal\\.js"
+            }
+          }
+        }
+      ],
+      "description": "YunoHost is a server operating system that is free and open-source, allowing users to host their own web applications, email services, and other online tools. It is based on Debian GNU/Linux.",
+      "website": "https://yunohost.org",
+      "icon": "YunoHost.svg",
+      "cpe": "cpe:2.3:o:yunohost:yunohost:*:*:*:*:*:*:*:*"
+    }
+  }
+}

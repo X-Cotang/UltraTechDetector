@@ -1,0 +1,232 @@
+{
+  "apps": {
+    "Envoy": {
+      "cats": [
+        64
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-envoy-upstream-service-time": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-envoy-decorator-operation": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "^envoy$"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Envoy is an open-source edge and service proxy, designed for cloud-native applications.",
+      "website": "https://www.envoyproxy.io/",
+      "icon": "Envoy.png",
+      "cpe": "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    },
+    "F5 BigIP": {
+      "cats": [
+        64
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^big-?ip$"
+                }
+              },
+              {
+                "headers.set-cookie": {
+                  "$regex": "BIGip(?:Server|Cookie)"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "F5's BIG-IP is a family of products covering software and hardware designed around application availability, access control, and security solutions.",
+      "website": "https://www.f5.com/products/big-ip-services",
+      "icon": "F5.png",
+      "cpe": "cpe:2.3:a:f5:big-ip:*:*:*:*:*:*:*:*"
+    },
+    "Hydra-Shield": {
+      "cats": [
+        64
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "^hydra-shield\\sv([\\d\\.]+)$\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Hydra-Shield is an anti-DDoS protection reverse proxy that filters and mitigates malicious traffic to safeguard servers from distributed denial-of-service attacks.",
+      "website": "https://hydra-shield.fr",
+      "icon": "Hydra-Shield.png"
+    },
+    "IBM DataPower": {
+      "cats": [
+        64
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-global-transaction-id": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-backside-transport": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "IBM DataPower Gateway is a single multi-channel gateway designed to help provide security, control, integration and optimized access to a full range of mobile, web, application programming interface (API), service-oriented architecture (SOA), B2B and cloud workloads.",
+      "website": "https://www.ibm.com/products/datapower-gateway",
+      "icon": "DataPower.png",
+      "cpe": "cpe:2.3:a:ibm:datapower_gateway:*:*:*:*:*:*:*:*"
+    },
+    "Istio": {
+      "cats": [
+        64
+      ],
+      "implies": [
+        "Envoy"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.server": {
+                  "$regex": "^istio-envoy$"
+                }
+              },
+              {
+                "headers.x-envoy-upstream-service-time": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-envoy-decorator-operation": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Istio is an open-source service mesh platform that provides traffic management, security, and observability for microservices. It uses Envoy as its data plane proxy.",
+      "website": "https://istio.io/",
+      "icon": "Istio.svg"
+    },
+    "Kong": {
+      "cats": [
+        64
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.via": {
+              "$regex": "^kong/([\\d\\.]+)(?:.+)?$\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Kong is an open-source API gateway and platform that acts as middleware between compute clients and the API-centric applications.",
+      "website": "https://konghq.com",
+      "icon": "Kong.svg"
+    },
+    "MATORI.NET": {
+      "cats": [
+        64
+      ],
+      "implies": [
+        "OpenResty"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-powered-by": {
+              "$regex": "matori.net"
+            }
+          }
+        }
+      ],
+      "description": "MATORI.NET is a fully managed reverse proxy.",
+      "website": "https://matori.net"
+    },
+    "Microsoft Azure Application Proxy": {
+      "cats": [
+        64
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-ms-proxy-app-id": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ms-proxy-service-name": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-ms-proxy-data-center": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Microsoft Azure Application Proxy (also known as Microsoft Entra Application Proxy) is a reverse proxy service that provides secure remote access to on-premises web applications through Azure AD authentication.",
+      "website": "https://learn.microsoft.com/en-us/entra/identity/app-proxy/",
+      "icon": "Microsoft.svg"
+    },
+    "Urllo": {
+      "cats": [
+        64
+      ],
+      "description": "Urllo is a URL redirection service designed for businesses to manage and streamline link forwarding.",
+      "website": "https://www.urllo.com",
+      "icon": "Urllo.svg"
+    },
+    "V2Board": {
+      "cats": [
+        64
+      ],
+      "description": "V2Board is a multi-agent protocol management system with an interface for managing multiple proxy protocols.",
+      "website": "https://v2board.com",
+      "icon": "V2Board.png"
+    }
+  }
+}

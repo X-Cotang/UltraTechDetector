@@ -1,0 +1,596 @@
+{
+  "apps": {
+    "\u003cmodel-viewer\u003e": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/model-viewer/dist/model-viewer\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "\u003cmodel-viewer\u003e is an open-source web component developed by Google and maintained through GitHub. \u003cmodel-viewer\u003e aims at putting 3D content on the web easily with a few lines of HTML code. This was first introduced with Chrome 72 in July 2019 and enables users to view 3D in the browser and mobile devices.",
+      "website": "https://modelviewer.dev",
+      "icon": "model-viewer.svg"
+    },
+    "Auglio": {
+      "cats": [
+        105
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VirtooalApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VirtooalApp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loadVirtooalScript !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof virtooal_logger !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof virtooal_script_loaded !== 'undefined';"
+        }
+      ],
+      "description": "Auglio is a virtual try-on tool enabling customers to try products using camera and augmented reality before the purchase.",
+      "website": "https://auglio.com",
+      "icon": "Auglio.svg"
+    },
+    "Cylindo": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*viewer-cdn\\.cylindo\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Cylindo is a provider of automated content creation for 3D assets and photorealistic images, facilitating product visualization that can be utilized in various settings.",
+      "website": "https://www.cylindo.com",
+      "icon": "Cylindo.svg"
+    },
+    "DeepAR": {
+      "cats": [
+        105
+      ],
+      "description": "DeepAR is SDK that integrates AR face filters, 3D masks, effects, and background removal into websites, apps, or games.",
+      "website": "https://www.deepar.ai",
+      "icon": "DeepAR.svg"
+    },
+    "Expivi": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.expivi\\.(?:com|net)/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ExpiviComponent !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ExpiviComponent !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof expivi !== 'undefined';"
+        }
+      ],
+      "description": "Expivi specialises in 3D visualisation technology for ecommerce stores.",
+      "website": "https://www.expivi.com",
+      "icon": "Expivi.svg"
+    },
+    "Fittingbox": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fittingbox\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FitMix !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FitMix !== 'undefined';"
+        }
+      ],
+      "description": "Fittingbox is a software provider of augmented reality and 3D solutions designed for the eyewear industry.",
+      "website": "https://www.fittingbox.com",
+      "icon": "Fittingbox.svg"
+    },
+    "Floori": {
+      "cats": [
+        105
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunkfloori !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkfloori !== 'undefined';"
+        }
+      ],
+      "description": "Floori is an online tool designed to help users visualize different types of flooring in their home.",
+      "website": "https://floori.io",
+      "icon": "Floori.svg"
+    },
+    "Levar": {
+      "cats": [
+        105
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof levARActivationHelper !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof levARActivationHelper !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof levar.session_info !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof levar_onload_variant_id !== 'undefined';"
+        }
+      ],
+      "description": "Levar specialises in 3D visualisation technology for ecommerce stores.",
+      "website": "https://levar.io",
+      "icon": "Levar.png"
+    },
+    "Luna": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "bsdk\\.api\\.ditto.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Ditto !== 'undefined' \u0026\u0026 typeof Ditto.__esModule !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Ditto.__esModule !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dittoIdLifetime !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof globalDittoKey !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof globalDittoServer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jstextmap.DittoSdkUrl !== 'undefined';"
+        }
+      ],
+      "description": "Luna is a company that sells software that aids eyewear companies sell their products online using virtual fitting.",
+      "website": "https://luna.io",
+      "icon": "Luna.svg"
+    },
+    "Modelo": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']febu[\"'][^\u003e]+content=[\"']^modelo-site-cmty-home$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof @pub/modelo-site-cmty-micros-common-dialogs !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ModeloCommonDialogs !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof @pub/modelo-site-cmty-micros-common-dialogs !== 'undefined';"
+        }
+      ],
+      "description": "Modelo is a 3D viewer and model platform that allows users to edit, share, and collaborate on digital models.",
+      "website": "https://modelo.io",
+      "icon": "Modelo.svg"
+    },
+    "ModiFace": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.modiface\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.modiface\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof initModiface !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initModiface !== 'undefined';"
+        }
+      ],
+      "description": "ModiFace is a provider of Augmented Reality technology for the beauty industry.",
+      "website": "https://modiface.com",
+      "icon": "ModiFace.svg"
+    },
+    "Ocuco FitMix": {
+      "cats": [
+        105
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FitMix !== 'undefined' \u0026\u0026 typeof FitMix.WIDGET_BASE_URL !== 'undefined' \u0026\u0026 FitMix.WIDGET_BASE_URL === 'static\\.fittingbox\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FitMix.WIDGET_BASE_URL !== 'undefined';",
+          "version": "try { return String(FitMix.WIDGET_BASE_URL || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Ocuco is now offering its customers FittingBox's FitMix, a virtual frame try-on tool.",
+      "website": "https://www.ocuco.com/fitmix",
+      "icon": "Ocuco.png"
+    },
+    "Perfect Corp": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*plugins-media\\.perfectcorp\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Perfect Corp is a beauty augmented reality company and makeup AR technology platform that develops virtual try-on solutions for cosmetics brands.",
+      "website": "https://www.perfectcorp.com/business",
+      "icon": "PerfectCorp.svg"
+    },
+    "Plattar": {
+      "cats": [
+        105
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PlattarARAdapter !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PlattarARAdapter !== 'undefined';"
+        }
+      ],
+      "description": "Plattar is a 3D and augmented reality platform for businesses that facilitates product customization to help retailers increase sales and reduce returns.",
+      "website": "https://www.plattar.com",
+      "icon": "Plattar.svg"
+    },
+    "Prime AI": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.primeai\\.co\\.uk"
+            }
+          }
+        }
+      ],
+      "description": "Prime AI is a platform that uses AI-powered technology to match customers' body shapes with garment SKU specifications, helping them choose the best-fitting clothing size.",
+      "website": "https://www.primeai.co.uk",
+      "icon": "PrimeAI.svg"
+    },
+    "SightCall": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sightcall\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SightcallConsole !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SightcallConsole !== 'undefined';"
+        }
+      ],
+      "description": "SightCall is a platform that provides real-time AR and AI-powered guidance to help service teams resolve issues quicker.",
+      "website": "https://sightcall.com",
+      "icon": "SightCall.svg"
+    },
+    "Tangiblee": {
+      "cats": [
+        105
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof globalTangiblee !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof globalTangiblee !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tangiblee !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tangibleeScriptLoaded !== 'undefined';"
+        }
+      ],
+      "description": "Tangiblee is an enterprise-ready, immersive shopping and augmented reality ecommerce platform.",
+      "website": "https://www.tangiblee.com",
+      "icon": "Tangiblee.svg"
+    },
+    "Threekit": {
+      "cats": [
+        105,
+        95
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof threekit !== 'undefined' \u0026\u0026 typeof threekit.configuratorForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof threekit.configuratorForm !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof threekitAR !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof threekitPlayer !== 'undefined';"
+        }
+      ],
+      "description": "Threekit is a visual customer experience solution that enables brands to create, manage and scale photorealistic images and 3D product visuals, all from a single design file.",
+      "website": "https://www.threekit.com",
+      "icon": "Threekit.svg"
+    },
+    "Thridify": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']thridify\\.com[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.thridify\\.store"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof getThridifyFrame !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof thridifyData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof getThridifyFrame !== 'undefined';"
+        }
+      ],
+      "description": "Thirdify is a tool that enables businesses to convert browsers into buyers using 3D and AR technologies, with no app installation or coding required.",
+      "website": "https://www.thridify.store",
+      "icon": "Thridify.svg"
+    },
+    "Vectary": {
+      "cats": [
+        105
+      ],
+      "description": "Vectary is fully-featured 3D modeling tool with photorealistic real-time rendering, augmented reality, interactions and animations.",
+      "website": "https://www.vectary.com",
+      "icon": "vectary.svg"
+    },
+    "Virtooal": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.virtooal\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Virtooal allows shoppers to try on and combine decorative cosmetics, sunglasses, contact lenses, jewellery and fashion accessories using models, their own photo or a live webcam feed.",
+      "website": "https://try.virtooal.com",
+      "icon": "Virtooal.svg"
+    },
+    "Vntana": {
+      "cats": [
+        105
+      ],
+      "description": "Vntana (stylised as VNTANA) is an American social augmented reality company.",
+      "website": "https://www.vntana.com",
+      "icon": "Vntana.png"
+    },
+    "YouCam Makeup": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*plugins-media\\.(?:perfectcorp|makeupar)\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof YMK !== 'undefined' \u0026\u0026 typeof YMK.applyMakeupByLook !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof YMK.calDeltaE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof YMK.applyMakeupByLook !== 'undefined';"
+        }
+      ],
+      "description": "YouCam Makeup is a cross-platform virtual makeup solution for omnichannel ecommerce.",
+      "website": "https://www.perfectcorp.com/business/products/virtual-makeup",
+      "icon": "YouCam Makeup.png"
+    },
+    "Zieny": {
+      "cats": [
+        105
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ar-view-zieny\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Zieny is a platform that enables businesses to integrate 3D and augmented reality (AR) into websites, providing an interactive product experience without complex implementation.",
+      "website": "https://zieny.com",
+      "icon": "Zieny.svg"
+    },
+    "mirrAR": {
+      "cats": [
+        105
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof initMirrarUI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initMirrarUI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loadmirrAR !== 'undefined';"
+        }
+      ],
+      "description": "mirrAR is a real-time augmented reality platform for retail brands that enables consumers to virtually try on products and experience how it feels to own them before the actual purchase, both in-store and online.",
+      "website": "https://www.mirrar.com",
+      "icon": "mirrAR.png"
+    }
+  }
+}

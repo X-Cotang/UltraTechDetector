@@ -1,0 +1,290 @@
+{
+  "apps": {
+    "Apple iCloud Mail": {
+      "cats": [
+        30
+      ],
+      "description": "Apple iCloud Mail is a webmail service provided by Apple, Inc.",
+      "website": "https://www.apple.com/icloud/",
+      "icon": "Apple.svg"
+    },
+    "CrossBox": {
+      "cats": [
+        30
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "cbx-ws"
+            }
+          }
+        }
+      ],
+      "description": "CrossBox is a webmail client.",
+      "website": "https://crossbox.io",
+      "icon": "CrossBox.png"
+    },
+    "Google Workspace": {
+      "cats": [
+        30,
+        75
+      ],
+      "description": "Google Workspace, formerly G Suite, is a collection of cloud computing, productivity and collaboration tools.",
+      "website": "https://workspace.google.com/",
+      "icon": "Google.svg"
+    },
+    "Microsoft 365": {
+      "cats": [
+        30,
+        75
+      ],
+      "description": "Microsoft 365 is a line of subscription services offered by Microsoft as part of the Microsoft Office product line.",
+      "website": "https://www.microsoft.com/microsoft-365",
+      "icon": "Microsoft 365.svg"
+    },
+    "Open-Xchange App Suite": {
+      "cats": [
+        30,
+        75
+      ],
+      "implies": [
+        "Java"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ox !== 'undefined' \u0026\u0026 typeof ox.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return ox.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ox.version !== 'undefined';"
+        }
+      ],
+      "description": "Open-Xchange is a web-based communication, collaboration and office productivity software suite.",
+      "website": "https://www.open-xchange.com/",
+      "icon": "openxchange.svg",
+      "cpe": "cpe:2.3:a:open-xchange:app_suite:*:*:*:*:*:*:*:*"
+    },
+    "Outlook Web App": {
+      "cats": [
+        30
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+/owa/auth/([\\d\\.]+)/themes/resources\\;version:\\1"
+                }
+              },
+              {
+                "headers.x-owa-version": {
+                  "$regex": "([\\d\\.]+)?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof IsOwaPremiumBrowser !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof IsOwaPremiumBrowser !== 'undefined';"
+        }
+      ],
+      "description": "Outlook on the web is an information manager web app. It includes a web-based email client, a calendar tool, a contact manager, and a task manager.",
+      "website": "https://help.outlook.com",
+      "icon": "Outlook.svg",
+      "cpe": "cpe:2.3:a:microsoft:outlook_web_access:*:*:*:*:*:*:*:*"
+    },
+    "Proton Mail": {
+      "cats": [
+        30
+      ],
+      "description": "Proton Mail is the world’s largest secure email service with over 70 million users. Available on Web, iOS, Android, and desktop. Protected by Swiss privacy law.",
+      "website": "https://proton.me/mail",
+      "icon": "Proton Mail.svg"
+    },
+    "RainLoop": {
+      "cats": [
+        30
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]href=\"rainloop/v/([0-9.]+)/static/apple-touch-icon\\.png/\u003e\\;version:\\1"
+                }
+              },
+              {
+                "headers.server": {
+                  "$regex": "^rainloop"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']rlappversion[\"'][^\u003e]+content=[\"']^([0-9.]+)$\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^rainloop/v/([0-9.]+)/\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rainloop !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rainloop !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rainloopI18N !== 'undefined';"
+        }
+      ],
+      "description": "RainLoop is a web-based email client.",
+      "website": "https://www.rainloop.net/",
+      "icon": "RainLoop.png"
+    },
+    "RoundCube": {
+      "cats": [
+        30
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003ctitle\u003eroundcube"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rcmail !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rcmail !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof roundcube !== 'undefined';"
+        }
+      ],
+      "description": "RoundCube is free and open-source web-based IMAP email client.",
+      "website": "https://roundcube.net",
+      "icon": "RoundCube.png",
+      "cpe": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*"
+    },
+    "SquirrelMail": {
+      "cats": [
+        30
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003csmall\u003esquirrelmail version ([.\\d]+)[^\u003c]*\u003cbr \\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof squirrelmail_loginpage_onload !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof squirrelmail_loginpage_onload !== 'undefined';"
+        }
+      ],
+      "description": "SquirrelMail is an open-source web-mail package that is based on PHP language. It provides a web-based-email client and a proxy server for IMAP protocol.",
+      "website": "https://squirrelmail.org",
+      "icon": "SquirrelMail.png",
+      "cpe": "cpe:2.3:a:squirrelmail:squirrelmail:*:*:*:*:*:*:*:*"
+    },
+    "Sympa": {
+      "cats": [
+        30
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca href=\"https?://www\\.sympa\\.org\"\u003e\\s*powered by sympa\\s*\u003c/a\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^sympa$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Sympa is an open-source mailing list management (MLM) software.",
+      "website": "https://www.sympa.org/",
+      "icon": "sympa.png"
+    },
+    "Zimbra": {
+      "cats": [
+        30
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "website": "https://www.zimbra.com/",
+      "icon": "Zimbra.png",
+      "cpe": "cpe:2.3:a:zimbra:zimbra:*:*:*:*:*:*:*:*"
+    }
+  }
+}

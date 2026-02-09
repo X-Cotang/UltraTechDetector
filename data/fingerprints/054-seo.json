@@ -1,0 +1,664 @@
+{
+  "apps": {
+    "Ahrefs": {
+      "cats": [
+        54,
+        10
+      ],
+      "description": "Ahrefs is an online toolset utilised for search engine optimisation (SEO) and competitor analysis, which permits users to analyse their website's performance, track keyword rankings, identify backlink opportunities, and research competitors' websites, among other features.",
+      "website": "https://ahrefs.com",
+      "icon": "ahrefs.svg"
+    },
+    "All in One SEO": {
+      "cats": [
+        54,
+        87
+      ],
+      "implies": [
+        "WordPress"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- all in one seo ([\\d.]+) \\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003c!-- all in one seo pack ([\\d.]+) \\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003c!-- all in one seo pro ([\\d.]+) \\;version:pro \\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^all in one seo \\(aioseo\\) ([\\d\\.]+)\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^all in one seo pro \\(aioseo\\) ([\\d\\.]+)\\;version:pro \\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "All in One SEO optimizes a WordPress website and its content for search engines.",
+      "website": "https://aioseo.com",
+      "icon": "AIOSEO.svg",
+      "cpe": "cpe:2.3:a:aioseo:all_in_one_seo:*:*:*:*:*:wordpress:*:*"
+    },
+    "All in One SEO Pack": {
+      "cats": [
+        54,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- all in one seo pack ([\\d.]+) \\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^all in one seo \\(aioseo\\)\\s([\\d.]+)$\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "All in One SEO plugin optimizes WordPress website and its content for search engines.",
+      "website": "https://aioseo.com",
+      "icon": "AIOSEO.svg",
+      "cpe": "cpe:2.3:a:aioseo:all_in_one_seo:*:*:*:*:*:wordpress:*:*"
+    },
+    "Alli": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.alliai\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Alli is artificial intelligence for search engine optimisation.",
+      "website": "https://www.alliai.com",
+      "icon": "Alli.png"
+    },
+    "Atomseo": {
+      "cats": [
+        54,
+        92
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.atomseo\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Atomseo is a tool designed to improve website performance by reducing user bounce rates and enhancing search engine visibility.",
+      "website": "https://atomseo.com",
+      "icon": "Atomseo.svg"
+    },
+    "Attracta": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.attracta\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Attracta is a platform offering SEO tools designed to optimize website visibility and improve search engine rankings.",
+      "website": "https://www.attracta.com",
+      "icon": "Attracta.svg"
+    },
+    "Auto HQ": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.autohq\\.co\\.uk"
+            }
+          }
+        }
+      ],
+      "description": "Auto HQ is a provider of custom car dealer websites and SEO services designed to enhance visibility and attract customers.",
+      "website": "https://www.autohq.co.uk",
+      "icon": "AutoHQ.svg"
+    },
+    "BrightEdge": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.brightedge\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BEJSSDK !== 'undefined' \u0026\u0026 typeof BEJSSDK.CLIENT_VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return BEJSSDK.CLIENT_VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BEJSSDK.CLIENT_VERSION !== 'undefined';",
+          "version": "try { return String(BEJSSDK.CLIENT_VERSION || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _bright3.VERSION !== 'undefined';",
+          "version": "try { return String(_bright3.VERSION || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof be_sdk_options !== 'undefined';"
+        }
+      ],
+      "description": "BrightEdge is an SEO solution and content performance marketing platform.",
+      "website": "https://www.brightedge.com",
+      "icon": "BrightEdge.png"
+    },
+    "BrightLocal": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.brightlocal\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "BrightLocal is an all-in-one local SEO dashboard for websites.",
+      "website": "https://www.brightlocal.com",
+      "icon": "BrightLocal.svg"
+    },
+    "Huckabuy": {
+      "cats": [
+        54
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HUCKABUY NAMESPACE !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HUCKABUY NAMESPACE.sd !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hbScriptRerun !== 'undefined';"
+        }
+      ],
+      "description": "Huckabuy is a software product utilising Google's dynamic rendering and structured data initiatives to enhance organic channel growth.",
+      "website": "https://huckabuy.com",
+      "icon": "Huckabuy.svg"
+    },
+    "Linguana": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.linguana\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LINGUANA_MAIN_LANGUAGE_CODE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LINGUANA_MAIN_LANGUAGE_CODE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LINGUANA_SHOW_LANGUAGE_CODE !== 'undefined';"
+        }
+      ],
+      "description": "Linguana is a tool that provides AI-driven multi-language support ensuring SEO performance with translations and translated slugs for seamless multilingual user experiences.",
+      "website": "https://www.linguana.io/",
+      "icon": "Linguana.svg"
+    },
+    "Mieruca": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*hm\\.mieru-ca\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Mieruca is a Japanese SEO analysis tool designed to measure and improve website visibility through data-driven insights.",
+      "website": "https://mieru-ca.com",
+      "icon": "Mieruca.svg"
+    },
+    "Nowfloats": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*nowfloats_position"
+            }
+          }
+        }
+      ],
+      "description": "Nowfloats is a location-based platform that automates SEO for business websites.",
+      "website": "https://www.nowfloats.com",
+      "icon": "Nowfloats.svg"
+    },
+    "On The Map": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.onthemapmarketing\\.com"
+            }
+          }
+        }
+      ],
+      "description": "On The Map is a local business marketing system designed to help companies enhance visibility, manage online presence, and attract nearby customers through targeted digital strategies and data-driven tools.",
+      "website": "https://www.onthemap.com",
+      "icon": "OnTheMap.svg"
+    },
+    "Realist": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.realist\\.gen\\.tr"
+            }
+          }
+        }
+      ],
+      "description": "Realist is a website tracker and link exchange platform designed to monitor site activity and facilitate reciprocal linking between domains.",
+      "website": "https://www.realist.gen.tr"
+    },
+    "RioSEO": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*rlscdn\\.rioseo\\.com"
+            }
+          }
+        }
+      ],
+      "description": "RioSEO is a provider of management and local search marketing solutions operating at a global scale.",
+      "website": "https://www.rioseo.com",
+      "icon": "RioSEO.svg"
+    },
+    "SEOAnt": {
+      "cats": [
+        54
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BlackUrlArray_SEOAnt !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BlackUrlArray_SEOAnt !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SEOAnt_toConsumableArray !== 'undefined';"
+        }
+      ],
+      "description": "SEOAnt is a SEO customization service that provides professional improvement suggestions, aimed at enhancing Google rankings and increasing conversions.",
+      "website": "https://www.seoant.com",
+      "icon": "SEOAnt.svg"
+    },
+    "SEOPress": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/themes/seopress/"
+            }
+          }
+        }
+      ],
+      "description": "SEOPress is a WordPress plugin for SEO.",
+      "website": "https://www.seopress.org",
+      "icon": "SEOPress.svg"
+    },
+    "SEOmatic": {
+      "cats": [
+        54
+      ],
+      "implies": [
+        "Craft CMS"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^seomatic$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "SEOmatic facilitates modern SEO best practices \u0026 implementation for Craft CMS 3.",
+      "website": "https://plugins.craftcms.com/seomatic",
+      "icon": "SEOmatic.svg"
+    },
+    "SEOmator": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//seomator\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "SEOmator is an AI-powered SEO and SEM platform designed for website optimisation.",
+      "website": "https://seomator.com",
+      "icon": "SEOmator.svg"
+    },
+    "Schema App": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.schemaapp\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof schema_highlighter !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof schema_highlighter !== 'undefined';"
+        }
+      ],
+      "description": "Schema App is a tool that converts website content into schema markup, the language of search.",
+      "website": "https://www.schemaapp.com",
+      "icon": "SchemaApp.svg"
+    },
+    "SiteBooster": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/sitebooster\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Site Booster is a tool that publishes business details across major online directories and platforms to enhance visibility.",
+      "website": "https://sitebooster.com",
+      "icon": "SiteBooster.svg"
+    },
+    "Spotzer": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.spotzer\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Spotzer is a platform offering solutions for crafting online content that garners high exposure on search engines and social networks.",
+      "website": "https://spotzerdigital.com",
+      "icon": "Spotzer.svg"
+    },
+    "Submit Express": {
+      "cats": [
+        54
+      ],
+      "description": "Submit Express is a platform that provides tools for search engine optimization and marketing management.",
+      "website": "https://www.submitexpress.com",
+      "icon": "SubmitExpress.svg"
+    },
+    "Synup": {
+      "cats": [
+        54
+      ],
+      "description": "Synup is a platform that provides online business listings management, monitors reputation, and offers local search analytics.",
+      "website": "https://www.synup.com",
+      "icon": "Synup.svg"
+    },
+    "The SEO Framework": {
+      "cats": [
+        54,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!--[^\u003e]+the seo framework by sybre waaijer"
+            }
+          }
+        }
+      ],
+      "description": "The SEO Framework is the only WordPress plugin that can intelligently generate critical SEO meta tags by reading your WordPress environment.",
+      "website": "https://theseoframework.com",
+      "icon": "The SEO Framework.svg"
+    },
+    "Whitespark SEO": {
+      "cats": [
+        54
+      ],
+      "description": "Aims to help improve rankings and drive business via Google Search.",
+      "website": "https://whitespark.ca/seo-services",
+      "icon": "Whitespark.svg"
+    },
+    "WordLift": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cloud\\.wordlift\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "WordLift is an AI tool that analyzes content, identifies key business topics, and enables the insertion of semantic markup without needing technical skills.",
+      "website": "https://wordlift.io",
+      "icon": "WordLift.svg"
+    },
+    "Yoast SEO": {
+      "cats": [
+        54,
+        87
+      ],
+      "implies": [
+        "WordPress"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c!-- this site is optimized with the yoast (?:wordpress )?seo plugin v([^\\s]+) -\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003c!-- this site is optimized with the yoast seo premium plugin v(?:[^\\s]+) \\(yoast seo v([^\\s]+)\\) -\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Yoast SEO is a search engine optimisation plugin for WordPress and other platforms.",
+      "website": "https://yoast.com/wordpress/plugins/seo/",
+      "icon": "Yoast SEO.png"
+    },
+    "Yoast SEO Premium": {
+      "cats": [
+        54
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!-- this site is optimized with the yoast seo premium plugin v([^\\s]+) \\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Yoast SEO Premium is a search engine optimisation plugin for WordPress and other platforms.",
+      "website": "https://yoast.com/wordpress/plugins/seo/",
+      "icon": "Yoast SEO.png"
+    },
+    "Yoast SEO for Shopify": {
+      "cats": [
+        54,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!-- this site is optimized with yoast seo for shopify --\u003e"
+            }
+          }
+        }
+      ],
+      "description": "Yoast SEO for Shopify optimizes Shopify shops.",
+      "website": "https://yoast.com/shopify/apps/yoast-seo/",
+      "icon": "yoast-seo-shopify.png"
+    },
+    "ePublishing": {
+      "cats": [
+        54,
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Ellington !== 'undefined' \u0026\u0026 typeof Ellington.Admin !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EllingtonPlateLoader.cache !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Ellington.Admin !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EllingtonMap !== 'undefined';"
+        }
+      ],
+      "description": "ePublishing is a media tech stack that enhances revenue, productivity, and engagement through AI-powered solutions, SEO dominance, and audience integration.",
+      "website": "https://www.epublishing.com",
+      "icon": "ePublishing.svg"
+    }
+  }
+}

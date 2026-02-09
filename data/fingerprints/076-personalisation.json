@@ -1,0 +1,3584 @@
+{
+  "apps": {
+    "4-Tell": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*4tellcdn\\.azureedge\\.net"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _4TellBoost !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _4TellBoost !== 'undefined';"
+        }
+      ],
+      "description": "4-Tell is an ecommerce software company for retailers with AI-powered personalisation and recommendations products.",
+      "website": "https://4-tell.com",
+      "icon": "4-Tell.png"
+    },
+    "Adaptix": {
+      "cats": [
+        76,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.adaptix\\.ai/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AdaptixFormValidations !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AdaptixFormValidations !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AdaptixLang !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AdaptixSDK !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AdaptixSDKLoaded !== 'undefined';"
+        }
+      ],
+      "description": "Adaptix is a marketing automation platform that uses AI to help businesses create personalized customer experiences.",
+      "website": "https://www.adaptix.ai",
+      "icon": "Adaptix.svg"
+    },
+    "Adnymics": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*trac\\.adnymics\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Adnymics is a platform that enables personalization in ecommerce by tailoring content, recommendations, and experiences to individual users based on their behavior and preferences.",
+      "website": "https://adnymics.com",
+      "icon": "Adnymics.svg"
+    },
+    "Adoric": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.adoric-om\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof IS_ADORIC_LOADED !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof IS_ADORIC_LOADED !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __adoric__ !== 'undefined';"
+        }
+      ],
+      "description": "Adoric is a lead generation tool for personalized website engagement and conversion optimisation (CRO) platform.",
+      "website": "https://adoric.com",
+      "icon": "Adoric.svg"
+    },
+    "Apptus": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.esales\\.apptus\\.com.+(?:apptus-esales-api-([\\d.]+))\\.min\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ApptusEsales !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apptusConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apptusDebug !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ApptusEsales !== 'undefined';"
+        }
+      ],
+      "description": "Apptus is an AI-powered ecommerce optimisation software provider.",
+      "website": "https://www.apptus.com",
+      "icon": "Apptus.svg"
+    },
+    "Attentive": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.attn\\.tv"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __attentive !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __attentive !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __attentive_domain !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof attn_email_save !== 'undefined';"
+        }
+      ],
+      "description": "Attentive is a personalised mobile messaging platform that helps retail \u0026 ecommerce brands acquire, retain, and interact with mobile shoppers.",
+      "website": "https://www.attentivemobile.com",
+      "icon": "Attentive.svg"
+    },
+    "Barilliance": {
+      "cats": [
+        76,
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.barilliance\\.net/"
+            }
+          }
+        }
+      ],
+      "description": "Barilliance is an ecommerce personalisation tools including cart abandonment emails, personalised product recommendations, onsite personalisation, and live notifications.",
+      "website": "https://www.barilliance.com",
+      "icon": "Barilliance.png"
+    },
+    "Beyable": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*msecnd\\.net/api/beyablejsv(\\d+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BEYABLE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BEYABLE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof beYableDomain !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof beYableKey !== 'undefined';"
+        }
+      ],
+      "description": "Beyable is a suite of tools that analyze website traffic to understand visitors' behaviors in real-time, through multi-channel in order to optimise conversion rate.",
+      "website": "https://beyable.com",
+      "icon": "Beyable.png"
+    },
+    "Blueknow": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.blueknow\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Blueknow !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Blueknow !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BlueknowTracker !== 'undefined';"
+        }
+      ],
+      "description": "Blueknow is a ecommerce personalisation software designed to serve enterprises, SMEs.",
+      "website": "https://www.blueknow.com",
+      "icon": "Blueknow.png"
+    },
+    "Bold Commerce": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.boldapps\\.net/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.boldcommerce\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Bold Commerce is a software company that specialises in ecommerce websites and app development.",
+      "website": "https://boldcommerce.com",
+      "icon": "Bold.svg"
+    },
+    "Bounce Commerce": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.bounce-commerce\\.de"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof baBounceManagement !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof baBounceManagement !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bavBounceManagement !== 'undefined';"
+        }
+      ],
+      "description": "Bounce Commerce is a provider of AI-based engagement solutions that enhance conversion rates by assisting customers in finding the right products.",
+      "website": "https://www.bounce-commerce.de",
+      "icon": "BounceCommerce.svg"
+    },
+    "BrainSINS": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cloudfront\\.net/brainsins(?:_v)?(\\d+)\\.js\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mw\\.brainsins\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BrainSINS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof brainsins_token !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof launchBrainSINS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BrainSINS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BrainSINSRecommender !== 'undefined';"
+        }
+      ],
+      "description": "BrainSINS is a personalisation technology and ecommerce analytics services to online retailers.",
+      "website": "https://brainsins.com",
+      "icon": "BrainSINS.png"
+    },
+    "Breinify": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Breinify !== 'undefined' \u0026\u0026 typeof Breinify.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Breinify.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Breinify.version !== 'undefined';",
+          "version": "try { return String(Breinify.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Breinify is a powerful personalisation engine that enables brands to create personalised digital experiences at an individual level across web, e-mail, SMS and app channels.",
+      "website": "https://home.breinify.ai",
+      "icon": "Breinify.png"
+    },
+    "CREMA": {
+      "cats": [
+        76,
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//widgets\\.cre\\.ma/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CremaCryptoJS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof crema.AdTracker !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CremaCryptoJS !== 'undefined';"
+        }
+      ],
+      "description": "CREMA is a platform offering review management, marketing personalisation, and size recommendations to enhance and streamline the consumer journey.",
+      "website": "https://www.cre.ma",
+      "icon": "CREMA.svg"
+    },
+    "Cartful": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.cartfulsolutions\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Cartful is a customer-focused service that assists online shoppers in locating suitable products on a website.",
+      "website": "https://www.cartful.com",
+      "icon": "Cartful.svg"
+    },
+    "Cerkl": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cerklAptly !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cerklAptly !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cerkl_awp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cerkl_subscribe_box !== 'undefined';"
+        }
+      ],
+      "description": "Cerkl is an internal communication software designed to support organizations of any size or structure.",
+      "website": "https://cerkl.com",
+      "icon": "Cerkl.svg"
+    },
+    "Clerk.io": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.clerk\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __clerk_cb_0 !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __clerk_cb_0 !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __clerk_q !== 'undefined';"
+        }
+      ],
+      "description": "Clerk.io is an all-in-one ecommerce personalisation platform.",
+      "website": "https://clerk.io",
+      "icon": "Clerk.io.svg"
+    },
+    "Clinch": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.clinch\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Clinch delivers hyper-personalized creative experiences and consumer intelligence across all channels.",
+      "website": "https://clinch.co/",
+      "icon": "Clinch.png"
+    },
+    "CloudEngage": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cloudengage\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CloudEngage !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CloudEngage !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CloudEngageHead !== 'undefined';"
+        }
+      ],
+      "description": "CloudEngage is a platform enabling no-code personalization for enhanced revenue and customer satisfaction.",
+      "website": "https://cloudengage.com",
+      "icon": "CloudEngage.svg"
+    },
+    "Clubcast": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.clubcast\\.co\\.uk"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ClubcastRegistry !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkclubcast !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ClubcastRegistry !== 'undefined';"
+        }
+      ],
+      "description": "Clubcast is a platform for managing and personalizing content for digital products, designed to enhance fan experiences and support revenue growth.",
+      "website": "https://clubcast.co.uk",
+      "icon": "Clubcast.svg"
+    },
+    "Combeenation": {
+      "cats": [
+        76
+      ],
+      "description": "Combeenation is a powerful cloud-based configurator platform.",
+      "website": "https://www.combeenation.com",
+      "icon": "Combeenation.png"
+    },
+    "Connectif": {
+      "cats": [
+        76,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.connectif\\.cloud/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof connectif !== 'undefined' \u0026\u0026 typeof connectif.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return connectif.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof connectif.version !== 'undefined';",
+          "version": "try { return String(connectif.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof connectifInfo.store !== 'undefined';"
+        }
+      ],
+      "description": "Connectif is a marketing automation and personalisation data-first action platform, powered by AI.",
+      "website": "https://connectif.ai",
+      "icon": "Connectif.svg"
+    },
+    "ConvertBox": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.convertbox\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ConvertBox is a tool that delivers targeted on-site messages based on visitor behavior to generate more leads, sales, and customers.",
+      "website": "https://convertbox.com",
+      "icon": "ConvertBox.svg"
+    },
+    "Cordial": {
+      "cats": [
+        76,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cordial\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CordialJS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Cordial_trackUrl !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CordialJS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CordialObject !== 'undefined';"
+        }
+      ],
+      "description": "Cordial is a cross-channel marketing and customer engagement platform for enterprise brands to send personalized email, SMS, mobile push notifications.",
+      "website": "https://cordial.com",
+      "icon": "Cordial.svg"
+    },
+    "Crall": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.crall\\.io/w/widgets\\.js\\?v=([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _CrallConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _CrallConfig !== 'undefined';"
+        }
+      ],
+      "description": "Crall is a personalized shopping experience system.",
+      "website": "https://crall.io/",
+      "icon": "Crall.svg"
+    },
+    "Cross Sell": {
+      "cats": [
+        76
+      ],
+      "implies": [
+        "Cart Functionality",
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*load\\.csell\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Cross Sell provide recommendations solution for Shopify based sites.",
+      "website": "https://csell.io/",
+      "icon": "CrossSell.png"
+    },
+    "CustomFit": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CustomFit !== 'undefined' \u0026\u0026 typeof CustomFit.CFEvent !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CustomFit.CFEvent !== 'undefined';"
+        }
+      ],
+      "description": "CustomFit is a no-code website personalization platform that enables marketers to increase conversions by customizing content for specific audience segments.",
+      "website": "https://www.customfit.ai",
+      "icon": "CustomFit.svg"
+    },
+    "Customily": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:cdn|app)\\.customily\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof customily !== 'undefined' \u0026\u0026 typeof customily.sticky !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof customily.sticky !== 'undefined';"
+        }
+      ],
+      "description": "Customily is an online product personalisation software.",
+      "website": "https://www.customily.com",
+      "icon": "Customily.png"
+    },
+    "Cxense": {
+      "cats": [
+        76,
+        86
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cxense\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Cxense was an AI-powered data management and intelligent personalisation platform.",
+      "website": "https://www.cxense.com",
+      "icon": "Cxense.png"
+    },
+    "Darwin Pricing": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.darwinpricing\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Darwin Pricing is a data science platform that applies dynamic pricing strategies by analyzing market conditions and customer behavior to optimize revenue and pricing decisions.",
+      "website": "https://www.darwinpricing.com",
+      "icon": "DarwinPriicing.svg"
+    },
+    "Depict": {
+      "cats": [
+        76
+      ],
+      "description": "Depict is an ecommerce personalisation solution for fashion.",
+      "website": "https://depict.ai",
+      "icon": "Depict.svg"
+    },
+    "Dialogue": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DialogueAI !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DialogueAI !== 'undefined';"
+        }
+      ],
+      "description": "Dialogue is an ecommerce personalization platform that helps brands increase sales and conversion rates through AI-driven recommendations.",
+      "website": "https://nowdialogue.com/",
+      "icon": "Dialogue.svg"
+    },
+    "Drapr": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*draprpubsubtest\\.firebaseapp\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof drapr_data !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof drapr_deferLoading !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof drapr_data !== 'undefined';"
+        }
+      ],
+      "description": "Drapr is an ecommerce startup and online application based on technology that enables customers to quickly create 3D avatars and virtually try on clothing.",
+      "website": "https://www.drapr.com",
+      "icon": "Drapr.png"
+    },
+    "Epoq": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.epoq\\.de"
+            }
+          }
+        }
+      ],
+      "description": "Epoq is a platform that leverages artificial intelligence to deliver one-to-one personalization in e-commerce, enhancing product recommendations and user interactions through data-driven insights.",
+      "website": "https://www.epoq.de",
+      "icon": "Epoq.svg"
+    },
+    "Fanplayr": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.fanplayr\\.com/.+/([\\d\\.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof fanplayr !== 'undefined' \u0026\u0026 typeof fanplayr.platform !== 'undefined' \u0026\u0026 typeof fanplayr.platform.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return fanplayr.platform.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fanplayr.platform.version !== 'undefined';",
+          "version": "try { return String(fanplayr.platform.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Fanplayr is a real-time insights platform that provides website optimisation and personalisation solutions for businesses.",
+      "website": "https://fanplayr.com",
+      "icon": "Fanplayr.svg"
+    },
+    "Findmeashoe": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FmasJavaScript !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FmasJavaScript !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fmasGenderSizeTextVariantIdCollection !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fmasUniversalWidgetJsFileName !== 'undefined';"
+        }
+      ],
+      "description": "Findmeashoe is a footwear recommendation portal that aims to improve shopping efficiency and experience of footwear shoppers.",
+      "website": "https://findmeashoe.com",
+      "icon": "Findmeashoe.png"
+    },
+    "Fit Analytics": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fitanalytics\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FitAnalyticsWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FitAnalyticsWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _fitAnalytics !== 'undefined';"
+        }
+      ],
+      "description": "Fit Analytics is a platform that provides clothing size recommendations for online customers by measuring individual dimensions via webcams.",
+      "website": "https://www.fitanalytics.com",
+      "icon": "Fit Analytics.png"
+    },
+    "Fitizzy": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy-report-only": {
+                  "$regex": "\\.fitizzy\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*s\\.ftz\\.io"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Fitizzy is an omnichannel recommendation solution that assists in determining appropriate clothing sizes across various retail platforms.",
+      "website": "https://www.fitizzy.com",
+      "icon": "Fitizzy.svg"
+    },
+    "Fitle": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fitle\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Fitle is a clothes size recommendation system developed in France that helps determine accurate apparel sizing based on user data.",
+      "website": "https://fitle.com",
+      "icon": "Fitle.svg"
+    },
+    "Fresh Relevance": {
+      "cats": [
+        76
+      ],
+      "description": "Fresh Relevance is a personalization platform designed to create cross-channel experiences, enabling businesses to deliver customized customer interactions.",
+      "website": "https://www.freshrelevance.com",
+      "icon": "FreshRelevance.svg"
+    },
+    "Glami": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GlamiTrackerObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GlamiTrackerObject !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GlamiTrackerObjectInstance !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof glami !== 'undefined';"
+        }
+      ],
+      "description": "Glami is a fashion quiz system designed to personalize style recommendations based on user preferences and responses.",
+      "website": "https://www.glami.sk",
+      "icon": "Glami.svg"
+    },
+    "Groobee": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.groobee\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof groobee !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof groobee !== 'undefined';"
+        }
+      ],
+      "description": "Groobee is a solution for personalized ecommerce marketing, offering features to support customer personalization.",
+      "website": "https://groobee.net",
+      "icon": "Groobee.svg"
+    },
+    "Hello Retail": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//helloretailcdn\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HELLO_RETAIL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HELLO_RETAIL !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HelloRetailSwiper !== 'undefined';"
+        }
+      ],
+      "description": "Hello Retail is an AI-driven platform that delivers personalized product recommendations, intelligent search, and email solutions for ecommerce.",
+      "website": "https://helloretail.com",
+      "icon": "HelloRetail.svg"
+    },
+    "HulkApps Infinite Product Options": {
+      "cats": [
+        76,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hulkapps !== 'undefined' \u0026\u0026 typeof hulkapps.po_url !== 'undefined' \u0026\u0026 hulkapps.po_url === 'productoption\\.hulkapps\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hulkapps.po_url !== 'undefined';",
+          "version": "try { return String(hulkapps.po_url || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "HulkApps Infinite Product Options is a unlimited custom options for products. Display variant options as buttons, color and image swatches, and more.",
+      "website": "https://www.hulkapps.com/products/infinite-product-options-shopify",
+      "icon": "HulkApps.svg"
+    },
+    "Jeeng": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.jeeng\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jeeng_attribution !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jeeng_attribution !== 'undefined';"
+        }
+      ],
+      "description": "Jeeng is a personalized notification platform that delivers targeted updates based on user preferences and engagement patterns.",
+      "website": "https://www.jeeng.com",
+      "icon": "Jeeng.svg"
+    },
+    "Jivox": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.jivox\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Jivox is a cloud-based, data-driven platform for delivering personalised digital advertising and marketing experiences at scale.",
+      "website": "https://jivox.com",
+      "icon": "Jivox.svg"
+    },
+    "Jubna": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.jubna\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Jubna is a content recommendation engine that delivers personalized suggestions by analyzing user behavior and preferences.",
+      "website": "https://www.jubna.com",
+      "icon": "Jubna.svg"
+    },
+    "Justuno": {
+      "cats": [
+        76,
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.justuno\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*my\\.jst\\.ai"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof JustunoApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof JustunoApp !== 'undefined';"
+        }
+      ],
+      "description": "Justuno is a visitor conversion optimisation platform.",
+      "website": "https://www.justuno.com",
+      "icon": "Justuno.svg"
+    },
+    "Kaisa": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.freespee\\.com/js/external/fs\\.(?:min\\.)?js"
+            }
+          }
+        }
+      ],
+      "description": "Kaisa is a platform that leverages data to maintain buyer and seller engagement through personalised customer experiences on a large scale.",
+      "website": "https://www.kaisa.io",
+      "icon": "Kaisa.svg"
+    },
+    "Kibo Personalization": {
+      "cats": [
+        76,
+        74
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.baynote\\.net"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.certona\\.net"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BaynoteAPI !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return BaynoteJSVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof certonaRecommendations !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BaynoteAPI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BaynoteJSVersion !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof certona.recommendations !== 'undefined';"
+        }
+      ],
+      "description": "Kibo Personalization is a omnichannel personalisation software powered by machine learning to deliver individualized customer experiences and powered by Monetate and Certona.",
+      "website": "https://kibocommerce.com/personalization-software",
+      "icon": "Kibo.svg"
+    },
+    "Kiwi Sizing": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.static\\.kiwisizing\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KiwiSizing !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KiwiSizing !== 'undefined';"
+        }
+      ],
+      "description": "Kiwi Sizing is a size chart and a recommender plugin on the Shopify platform.",
+      "website": "https://www.kiwisizing.com",
+      "icon": "Kiwi Sizing.png"
+    },
+    "LiftIgniter": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof liftIgniterLoadPromise !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof liftIgniterLoadPromise !== 'undefined';"
+        }
+      ],
+      "description": "LiftIgniter is a personalized content system designed to tailor recommendations and content to individual users based on their preferences and behaviours.",
+      "website": "https://www.liftigniter.com",
+      "icon": "LiftIgniter.svg"
+    },
+    "LimeSpot": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.personalizer\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LimeSpot !== 'undefined' \u0026\u0026 typeof LimeSpot.CartItems !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LimeSpot.CartItems !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LimeSpot.Recommendations !== 'undefined';"
+        }
+      ],
+      "description": "LimeSpot is an AI-powered personalisation platform for marketers and ecommerce professionals.",
+      "website": "https://www.limespot.com",
+      "icon": "LimeSpot.png"
+    },
+    "Lumise": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.lumise\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof lumise !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lumise !== 'undefined';"
+        }
+      ],
+      "description": "Lumise is a solution for personalisation stores, featuring a product designer tool compatible with Woocommerce, PHP, Magento, Opencart, and other CMS platforms.",
+      "website": "https://lumise.com",
+      "icon": "Lumise.svg"
+    },
+    "Mezereon": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.mezereon\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Mezereon is an AI-powered platform that provides search, filters, insights, analytics, personalization, autocomplete, and recommendations to help businesses optimize their user experiences.",
+      "website": "https://www.mezereon.com",
+      "icon": "Mezereon.svg"
+    },
+    "Movable Ink": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MovableInkTrack !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MovableInkTrack !== 'undefined';"
+        }
+      ],
+      "description": "Movable Ink is a technology company that allows marketers to change emails after they have been sent out.",
+      "website": "https://movableink.com",
+      "icon": "Movable Ink.png"
+    },
+    "Mutiny": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mutiny !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mutinyWpJsonp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mutiny !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mutinyData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mutinyEditor !== 'undefined';"
+        }
+      ],
+      "description": "Mutiny is a no-code AI platform designed to aid marketers in converting top-of-funnel demand into revenue without requiring the expertise of engineers.",
+      "website": "https://www.mutinyhq.com",
+      "icon": "Mutiny.svg"
+    },
+    "Navu": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*c\\.navu\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $_navuEmbedded !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $_navuEmbedded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $navuContext !== 'undefined';"
+        }
+      ],
+      "description": "Navu is a platform that uses AI to enhance B2B websites by delivering targeted messages to visitors, helping improve lead conversion through personalized user engagement.",
+      "website": "https://navu.co",
+      "icon": "Navu.svg"
+    },
+    "Nosto": {
+      "cats": [
+        76,
+        74
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']nosto-version[\"'][^\u003e]+content=[\"']([\\d.]+)\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*connect\\.nosto\\.\\w+/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof nosto !== 'undefined' \u0026\u0026 nosto === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof nosto !== 'undefined';",
+          "version": "try { return String(nosto || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof nostojs !== 'undefined';",
+          "version": "try { return String(nostojs || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Nosto is an ecommerce platform providing product recommendations based on individual behavioral data.",
+      "website": "https://www.nosto.com",
+      "icon": "Nosto.svg"
+    },
+    "Nuqlium": {
+      "cats": [
+        76,
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.nuqlium\\.com/api"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof nuqliumObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof nuqliumObject !== 'undefined';"
+        }
+      ],
+      "description": "Nuqlium is an integrated cloud-based online merchandising platform.",
+      "website": "https://www.nuqlium.com",
+      "icon": "Nuqlium.png"
+    },
+    "Outfindo": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.outfindo\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof outfindoCatalogGuideData !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof outfindoCatalogGuideData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof outfindoCatalogGuideMapFailed !== 'undefined';"
+        }
+      ],
+      "description": "Outfindo is a platform that provides product selection guides for websites to improve customer shopping experiences and boost conversions.",
+      "website": "https://www.outfindo.com",
+      "icon": "Outfindo.svg"
+    },
+    "Ownpage": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*script\\.ownpage\\.fr/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*loadownpagescript"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Ownpage is a technology services provider that enables publishers to personalize their newsletters, websites, and applications, enhancing content delivery for media platforms.",
+      "website": "https://www.ownpage.fr",
+      "icon": "Ownpage.svg"
+    },
+    "ParticularAudience": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.particularaudience\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ParticularAudience is a platform utilizing AI for item-based personalization services, emphasizing privacy in a connected commerce landscape to enhance revenue streams.",
+      "website": "https://particularaudience.com",
+      "icon": "ParticularAudience.svg"
+    },
+    "Peerius": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.peerius\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PeeriusCallbacks !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PeeriusCallbacks !== 'undefined';"
+        }
+      ],
+      "description": "Peerius is a platform that analyzes individual visitor behavior on websites to optimize the checkout process.",
+      "website": "https://www.peerius.com"
+    },
+    "PersonaClick": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.personaclick\\.com/v([\\d.]+)\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof personaclick !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof personaclick !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof personaclick_callback !== 'undefined';"
+        }
+      ],
+      "description": "PersonaClick is a provide personalisation, recommandation and multi channel services.",
+      "website": "https://www.personaclick.com",
+      "icon": "PersonaClick.png"
+    },
+    "Personizely": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.personizely\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Personizely !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Personizely !== 'undefined';"
+        }
+      ],
+      "description": "Personizely is a conversion marketing toolkit which helps websites and ecommerce stores better engage with visitors using website widgets and personalisation.",
+      "website": "https://www.personizely.net",
+      "icon": "Personizely.svg"
+    },
+    "Perzonalization": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.perzonalization\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Perzonalization is a AI powered personalization engine for eCommerce",
+      "website": "https://www.perzonalization.com/",
+      "icon": "Perzonalization.png"
+    },
+    "Piano": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.piano\\.io"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tinypass\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PianoESPConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PianoESPConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gciDataPiano !== 'undefined';"
+        }
+      ],
+      "description": "Piano is a enterprise SaaS company which specializing in advanced media business processes and ecommerce optimisation.",
+      "website": "https://piano.io",
+      "icon": "Piano.png"
+    },
+    "Poloriz": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.poloriz\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Poloriz's technology automatically creates a personalised, full-screen, mobile-first, cross-selling user experience for shoppers.",
+      "website": "https://www.poloriz.com",
+      "icon": "Poloriz.svg"
+    },
+    "Potions": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.get-potions\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof potions !== 'undefined' \u0026\u0026 typeof potions.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return potions.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof potions.version !== 'undefined';",
+          "version": "try { return String(potions.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Potions is a personalisation technology for customising the ecommerce experience for site visitors without the use of cookies.",
+      "website": "https://get-potions.com",
+      "icon": "Potions.svg"
+    },
+    "Prediggo": {
+      "cats": [
+        76,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js/prediggo/(?:[\\w]+)\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Prediggo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Prediggo !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PrediggoSearchFormExternalAc !== 'undefined';"
+        }
+      ],
+      "description": "Prediggo is an ecommerce personalisation and marketing automation software provider.",
+      "website": "https://prediggo.com",
+      "icon": "Prediggo.png"
+    },
+    "Preezie": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ui-widgets\\.preezie\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PREEZIE_GUIDE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof preeziePageScriptExecuted !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PREEZIE_GUIDE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof preezieJsonpFunction !== 'undefined';"
+        }
+      ],
+      "description": "Preezie is a provider of tools and education that enables retailers to implement an online sales assistant through a guided conversion and product discovery platform.",
+      "website": "https://preezie.com",
+      "icon": "Preezie.svg"
+    },
+    "Primeleads": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.primeleads\\.de/"
+            }
+          }
+        }
+      ],
+      "description": "Primeleads is a tool that identifies visitors on your site and personalises the website experience for each individual visitor.",
+      "website": "https://primeleads.de",
+      "icon": "Primeleads.svg"
+    },
+    "Printful": {
+      "cats": [
+        76
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.cdn\\.printful\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Printful offers print-on-demand drop shipping solution for ecommerce sites.",
+      "website": "https://www.printful.com/",
+      "icon": "Printful.png"
+    },
+    "Prooven": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.prooven\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Prooven is a platform designed to build credibility and increase conversion through trust-driven solutions.",
+      "website": "https://prooven.io",
+      "icon": "Prooven.svg"
+    },
+    "Provely": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof provely !== 'undefined' \u0026\u0026 typeof provely.bindFields !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof provely.bindFields !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof provelys !== 'undefined';"
+        }
+      ],
+      "description": "Provely is a conversion software that displays verified social proof on webpages to help online businesses increase leads, signups, and sales.",
+      "website": "https://provely.io",
+      "icon": "Provely.svg"
+    },
+    "PureClarity": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*pcs\\.pureclarity\\.net"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PureClarityObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PureClarityObject !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PureClarityType !== 'undefined';"
+        }
+      ],
+      "description": "PureClarity is a platform that enables personalized upselling and delivers targeted content to increase customer engagement and sales.",
+      "website": "https://www.pureclarity.com",
+      "icon": "PureClarity.svg"
+    },
+    "Qstomizer": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/qsmz-scripttag/qstomizer_st(?:\\.min)?\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jQueryQSMZ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jQueryQSMZ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loadScript_qsmz !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof qstomizer_script !== 'undefined';"
+        }
+      ],
+      "description": "Qstomizer app is the app for Shopify and Woocomerce that allows you to add a visual custom product designer to your shop.",
+      "website": "https://www.qstomizer.com",
+      "icon": "Qstomizer.png"
+    },
+    "Raptor": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.raptorsmartadvisor\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*msecnd\\.net/script/raptor-([\\d.]+)\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Raptor !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof onRaptorLoaded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof raptorBase64 !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Raptor !== 'undefined';"
+        }
+      ],
+      "description": "Raptor is a personalisation engine based on machine learning that analyses and learns about the user's behavior and unique browser history.",
+      "website": "https://raptorsmartadvisor.com",
+      "icon": "Raptor.png"
+    },
+    "Rebuy": {
+      "cats": [
+        76,
+        100
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*rebuyengine\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rebuyConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rebuyConfig !== 'undefined';"
+        }
+      ],
+      "description": "Rebuy offers personlisation solutions for ecommerce sites.",
+      "website": "https://rebuyengine.com/",
+      "icon": "Rebuy.png"
+    },
+    "Recolize": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Recolize !== 'undefined' \u0026\u0026 typeof Recolize.Recommendation !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Recolize.Recommendation !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RecolizeParameters !== 'undefined';"
+        }
+      ],
+      "description": "Recolize is a system that provides personalized product recommendations for ecommerce stores based on customer behavior and preferences.",
+      "website": "https://www.recolize.com",
+      "icon": "Recolize.svg"
+    },
+    "Recombee": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof obsPostRecombee !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof obsRecombee !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof recombee !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof recombeeClient !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof obsPostRecombee !== 'undefined';"
+        }
+      ],
+      "description": "Recombee is a Recommender as a Service offering a RESTful API and SDKs, custom-tailored by data scientists.",
+      "website": "https://www.recombee.com",
+      "icon": "Recombee.svg"
+    },
+    "RecoverMyCart": {
+      "cats": [
+        76,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.recovermycart\\.com"
+            }
+          }
+        }
+      ],
+      "description": "RecoverMyCart is a Shopify app for abandoned basket recovery.",
+      "website": "https://app.recovermycart.com/",
+      "icon": "RecoverMyCart.png"
+    },
+    "Reelevant": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.reelevant\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof reel !== 'undefined' \u0026\u0026 typeof reel.companyId !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof reel.companyId !== 'undefined';"
+        }
+      ],
+      "description": "Reelevant is a visual content platform that helps businesses to create on-demand content for their viewers in order to increase conversion rates.",
+      "website": "https://try.reelevant.com",
+      "icon": "Reelevant.svg"
+    },
+    "Reflektion": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cloudfront\\.net/js/reflektion\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RFK_DEPLOY_TIME !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RFK_DEPLOY_TIME !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RfkParams !== 'undefined';"
+        }
+      ],
+      "description": "Reflektion is a customer centric personalisation platform that optimizes customer experiences on an individual basis in real time.",
+      "website": "https://reflektion.com",
+      "icon": "Reflektion.png"
+    },
+    "Relewise": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof relewiseConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof relewiseConfig !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof relewiseTracking !== 'undefined';"
+        }
+      ],
+      "description": "Relewise is a platform that uses personalisation technology to provide customised online experiences through personalised search and recommendations.",
+      "website": "https://relewise.com",
+      "icon": "Relewise.svg"
+    },
+    "Retail Rocket": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.retailrocket\\.net"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof retailrocket !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof retailrocket !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rrAddToBasket !== 'undefined';",
+          "version": "try { return String(rrAddToBasket || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rrApiOnReady !== 'undefined';",
+          "version": "try { return String(rrApiOnReady || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rrLibrary !== 'undefined';",
+          "version": "try { return String(rrLibrary || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rrPartnerId !== 'undefined';",
+          "version": "try { return String(rrPartnerId || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Retail Rocket is a big data-based personalisation platform for ecommerce websites.",
+      "website": "https://retailrocket.net",
+      "icon": "Retail Rocket.png"
+    },
+    "RevLifter": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.revlifter\\.io"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RevLifterObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RevLifterObject !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof revlifter !== 'undefined';"
+        }
+      ],
+      "description": "RevLifter is an AI-powered coupon technology which allows brands to offer personalised incentives to their customers based on real-time basket data.",
+      "website": "https://www.revlifter.com",
+      "icon": "RevLifter.png"
+    },
+    "Revieve": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Revieve !== 'undefined' \u0026\u0026 typeof Revieve.__esModule !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Revieve.__esModule !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof revieveConfig.onClickProduct !== 'undefined';"
+        }
+      ],
+      "description": "Revieve is a technology company delivering consumer-centric personalised digital brand experiences powered by AI/AR.",
+      "website": "https://www.revieve.com",
+      "icon": "Revieve.svg"
+    },
+    "RichRelevance": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.richrelevance\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RR !== 'undefined' \u0026\u0026 typeof RR.U !== 'undefined' \u0026\u0026 RR.U === '\\;confidence:50'; } catch(e){ return ''; }",
+          "version": "try { return rr_v || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RR.U !== 'undefined';",
+          "version": "try { return String(RR.U || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rr_v !== 'undefined';",
+          "version": "try { return String(rr_v || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "RichRelevance is a cloud-based omnichannel personalisation platform built to help Retailers, B2B, financial services, travel and hospitality, and branded manufacturers personalise their customer experiences.",
+      "website": "https://richrelevance.com",
+      "icon": "RichRelevance.png"
+    },
+    "RightMessage": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tag\\.rightmessage\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "RightMessage is a real-time content personalization tool.",
+      "website": "https://rightmessage.com",
+      "icon": "RightMessage.svg"
+    },
+    "Rokt": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.rokt\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.rokt\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Rokt is an ecommerce marketing technology that gives customers a personalised and relevant experience while buying online.",
+      "website": "https://www.rokt.com",
+      "icon": "Rokt.svg"
+    },
+    "Rtoaster": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.rtoaster\\.jp"
+            }
+          }
+        }
+      ],
+      "description": "Rtoaster is a high-precision personalization platform developed in Japan that enables tailored user experiences across digital channels.",
+      "website": "https://www.brainpad.co.jp/rtoaster",
+      "icon": "Rtoaster.svg"
+    },
+    "Ryzeo": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ryzeoSubmit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ryzeoSubmit !== 'undefined';"
+        }
+      ],
+      "description": "Ryzeo is an AI-powered platform that delivers personalized product recommendations to help convert website visitors into customers.",
+      "website": "https://ryzeo.com",
+      "icon": "Ryzeo.svg"
+    },
+    "SaleCycle": {
+      "cats": [
+        76
+      ],
+      "description": "SaleCycle is a UK based global behavioral marketing firm.",
+      "website": "https://www.salecycle.com",
+      "icon": "salecycle.svg"
+    },
+    "SalesFire": {
+      "cats": [
+        76,
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.salesfire\\.co\\.uk/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof loadSalesfire !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loadSalesfire !== 'undefined';"
+        }
+      ],
+      "description": "SalesFire is a SaaS company specialising in conversion rate optimisation, intelligent personalisation and on-site search solutions.",
+      "website": "https://www.salesfire.co.uk",
+      "icon": "SalesFire.svg"
+    },
+    "Salesforce Interaction Studio": {
+      "cats": [
+        76,
+        86
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.evgnet\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Evergage !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Evergage !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof evergageHideSections !== 'undefined';"
+        }
+      ],
+      "description": "Salesforce Interaction Studio (formerly Evergage) is a cloud-based software that allows users to collect, analyze, and respond to user behavior on their websites and web applications in real-time.",
+      "website": "https://www.salesforce.com/products/marketing-cloud/customer-interaction",
+      "icon": "Salesforce.svg"
+    },
+    "Samsung Food": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WhiskLoading !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WhiskLoading !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof whisk-jsp.push !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof whisk.analytics !== 'undefined';"
+        }
+      ],
+      "description": "Samsung Food is an all-in-one app for recipe saving, meal planning, grocery shopping, and recipe sharing.",
+      "website": "https://samsungfood.com",
+      "icon": "SamsungFood.svg"
+    },
+    "Sendpad": {
+      "cats": [
+        76
+      ],
+      "description": "Sendpad is a platform that enables automated audience engagement through personalization to support loyalty growth.",
+      "website": "https://www.sendtex.com",
+      "icon": "Sendtex.svg"
+    },
+    "Shoefitr.io": {
+      "cats": [
+        76
+      ],
+      "description": "Shoefitr.io is data-based shoe size advice service where we measure the length, width, ball, and instep.",
+      "website": "https://www.shoefitr.io",
+      "icon": "Shoefitr.io.svg"
+    },
+    "Shopbox AI": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.shopbox\\.ai"
+            }
+          }
+        }
+      ],
+      "description": "Shopbox AI is a tool that helps online retailers improve customer engagement, increase conversion rates, and enhance retention through data-driven insights.",
+      "website": "https://www.shopbox.ai",
+      "icon": "ShopboxAI.svg"
+    },
+    "SizeMe": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.api\\.sizemeai\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\api\\.sizemeai\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SizeMe is a platform that helps customers consistently find the correct size and fit for products.",
+      "website": "https://www.sizemeai.com",
+      "icon": "SizeMe.svg"
+    },
+    "Sizebay": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Sizebay !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Sizebay !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SizebayParams !== 'undefined';"
+        }
+      ],
+      "description": "Sizebay is a virtual fitting room that helps ecommerce and even brick-and-mortar stores provide their shoppers with a personalised shopping.",
+      "website": "https://sizebay.com",
+      "icon": "Sizebay.svg"
+    },
+    "Skeep": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof skeep !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof skeep !== 'undefined';"
+        }
+      ],
+      "description": "Skeep is a tool that uses automated Generative AI quizzes to guide visitors to suitable products, helping boost conversions without requiring any setup.",
+      "website": "https://www.skeep.io",
+      "icon": "Skeep.svg"
+    },
+    "SmartHint": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*service\\.smarthint\\.co"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof countInitSmartHint !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof countInitSmartHint !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof smarthintkey !== 'undefined';"
+        }
+      ],
+      "description": "SmartHint is an ecommerce recommendation system that uses customer behavior data to suggest relevant products and improve shopping experience.",
+      "website": "https://www.smarthint.co",
+      "icon": "SmartLink.svg"
+    },
+    "Storyly": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*web-story\\.storyly\\.io/v(\\d+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof StorylyWeb !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof StorylyWeb !== 'undefined';"
+        }
+      ],
+      "description": "Storyly is a platform that enables the creation of personalized, shoppable experiences for apps and websites.",
+      "website": "https://www.storyly.io",
+      "icon": "Storyly.svg"
+    },
+    "Strands": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.strands\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Strands is a personalization, recommendation, and segmentation engine designed to tailor content and services based on user data.",
+      "website": "https://strands.com",
+      "icon": "Strands.svg"
+    },
+    "Streamoid": {
+      "cats": [
+        76
+      ],
+      "description": "Streamoid is a fashion AI optimization and personalization solution, enhancing user experiences through tailored recommendations.",
+      "website": "https://www.streamoid.com",
+      "icon": "Streamoid.svg"
+    },
+    "StrutFit": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rerenderStrutfit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rerenderStrutfit !== 'undefined';"
+        }
+      ],
+      "description": "StrutFit is an online sizing platform for footwear retailers.",
+      "website": "https://www.strut.fit",
+      "icon": "StrutFit.svg"
+    },
+    "Systema": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.systema\\.ai"
+            }
+          }
+        }
+      ],
+      "description": "Systema is an anonymous personalization platform designed for retailers to deliver tailored experiences without using personal identifiers.",
+      "website": "https://systema.ai",
+      "icon": "Systema.svg"
+    },
+    "Syte": {
+      "cats": [
+        76,
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.syteapi\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SyteApi !== 'undefined' \u0026\u0026 typeof SyteApi.getBinImageBB !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SyteApi.getBinImageBB !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SyteApp.Analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SytePixel !== 'undefined';"
+        }
+      ],
+      "description": "Syte is a provider of visual AI technology that aims to improve retailers' site navigation, product discovery, and user experience by powering solutions that engage and convert shoppers.",
+      "website": "https://www.syte.ai",
+      "icon": "Syte.svg"
+    },
+    "Target2Sell": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.target2sell\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Target2Sell is a personalisation solution for ecommerce sites.",
+      "website": "https://www.target2sell.com/",
+      "icon": "Target2Sell.png"
+    },
+    "Teeinblue": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.teeinblue\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TEEINBLUE_LOADED !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof teeinblue !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof teeinblueShop !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TEEINBLUE_LOADED !== 'undefined';"
+        }
+      ],
+      "description": "Teeinblue is a personalization tool tailored for print-on-demand merchants using Shopify.",
+      "website": "https://teeinblue.com",
+      "icon": "TeeinBlue.svg"
+    },
+    "Things Solver": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.thingsolver\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Things Solver is a business platform that improves customer experience by delivering personalized content and recommendations on its website.",
+      "website": "https://thingsolver.com",
+      "icon": "ThingsSolver.svg"
+    },
+    "Trendemon": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.trendemon\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Trendemon is a web personalization and account-based orchestration solution.",
+      "website": "https://trendemon.com",
+      "icon": "Trendemon.svg"
+    },
+    "Triggerbee": {
+      "cats": [
+        76,
+        10
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*t\\.myvisitors\\.se"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof triggerbee !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof triggerbee !== 'undefined';"
+        }
+      ],
+      "description": "Triggerbee is an onsite personalisation platform that lets you use customer and behavioral data to build and launch personalised campaigns.",
+      "website": "https://triggerbee.com",
+      "icon": "Triggerbee.svg"
+    },
+    "True Fit": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.truefitcorp\\.com/(?:.+/([\\d\\.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "True Fit is a data-driven personalisation platform for footwear and apparel retailers.",
+      "website": "https://www.truefit.com",
+      "icon": "True Fit.png"
+    },
+    "Twik": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.twik\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TWIK_ID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TWIK_ID !== 'undefined';"
+        }
+      ],
+      "description": "Twik provides a automated, no-configuration business intelligence \u0026 personalization automation engine.",
+      "website": "https://www.twik.io/",
+      "icon": "Twik.svg"
+    },
+    "Unbxd": {
+      "cats": [
+        76,
+        29
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cloudfront\\.net/unbxdanalytics\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*unbxd\\.s\\d\\.amazonaws\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Unbxd !== 'undefined' \u0026\u0026 typeof Unbxd.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Unbxd.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Unbxd.version !== 'undefined';",
+          "version": "try { return String(Unbxd.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Unbxd is an ecommerce product discovery platform that applies artificial intelligence and advanced data sciences to connect shoppers to the products they are most likely to buy.",
+      "website": "https://unbxd.com",
+      "icon": "Unbxd.svg"
+    },
+    "Upsy": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _upsyAbTest !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _upsyAbTest !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof parseUpsyQuery !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof upsy_sdk.getCookie !== 'undefined';"
+        }
+      ],
+      "description": "Upsy is a platform that provides personalized product recommendations for ecommerce stores.",
+      "website": "https://upsyshopping.com",
+      "icon": "Upsy.svg"
+    },
+    "Usizy": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.usizy\\.es/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof uSizyUniversal !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof uSizyUniversal !== 'undefined';"
+        }
+      ],
+      "description": "Usizy is the top size recommendation and prediction solution for ecommerce using machine learning, big data, and isomoprhic algorythms.",
+      "website": "https://usizy.com",
+      "icon": "Usizy.svg"
+    },
+    "VerifyPress": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.verifypress\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.verifypress\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "VerifyPress is a social proof app that enables implementation of pop-up notifications, HelloBar alerts, and social proof elements using a single line of code.",
+      "website": "https://verifypress.com",
+      "icon": "VerifyPress.svg"
+    },
+    "Virtusize": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.virtusize\\.jp/"
+            }
+          }
+        }
+      ],
+      "description": "Virtusize is a personalisation service that provides size and product recommendations specific to a user's size and trend preferences.",
+      "website": "https://www.virtusize.com",
+      "icon": "Virtusize.svg"
+    },
+    "Visitor.js": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.visitorjs\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Visitor.js is a tool that personalizes website content to optimize user engagement and improve conversion rates.",
+      "website": "https://www.visitorjs.com",
+      "icon": "Visitor.svg"
+    },
+    "Vue.ai": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*vue_ai\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*vuex\\.vue\\.ai"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof getVueUrlSegments !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof getVueUrlSegments !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vuex !== 'undefined';"
+        }
+      ],
+      "description": "Vue.ai is an AI-powered experience management suite which combines the power of product, customer and business intelligence using computer vision and NLP.",
+      "website": "https://vue.ai",
+      "icon": "Vue.ai.svg"
+    },
+    "Wair": {
+      "cats": [
+        76,
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*getwair\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PredictV3 !== 'undefined' \u0026\u0026 typeof PredictV3.default !== 'undefined' \u0026\u0026 typeof PredictV3.default.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return PredictV3.default.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PredictV3.default.version !== 'undefined';",
+          "version": "try { return String(PredictV3.default.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof predictWidget !== 'undefined';"
+        }
+      ],
+      "description": "Wair is the widget to personalised fit.",
+      "website": "https://getwair.com",
+      "icon": "Wair.png"
+    },
+    "Webeo": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __webeoEventQueue !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __webeoScriptStart !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __webeoStarted !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __webeoUnmask !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __webeoVisitData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __webeoEventQueue !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __webeoGlobals !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __webeoRunPersonalisation !== 'undefined';"
+        }
+      ],
+      "description": "Webeo is a platform that enables website owners to customize the content on their website for each individual visitor, creating a unique experience for them.",
+      "website": "https://www.webeo.com",
+      "icon": "Webeo.svg"
+    },
+    "Webyn": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*files\\.webyn\\.ai/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WebynInstance !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WebynInstance !== 'undefined';"
+        }
+      ],
+      "description": "Webyn is a SaaS platform employing AI to analyse website traffic and implement automated, personalised enhancements aimed at improving user experience and potentially increasing conversions for clients.",
+      "website": "https://www.webyn.ai",
+      "icon": "Webyn.svg"
+    },
+    "Wiqhit": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wiqhit\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Wiqhit is an online personalization tool that customizes website content to engage visitors and increase conversions through tailored user experiences.",
+      "website": "https://www.wiqhit.com",
+      "icon": "Wiqhit.svg"
+    },
+    "WiserNotify": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof wiser !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wiser !== 'undefined';"
+        }
+      ],
+      "description": "WiserNotify is a platform offering social proof and FOMO features for ecommerce sites.",
+      "website": "https://wisernotify.com",
+      "icon": "WiserNotify.svg"
+    },
+    "Wishi": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.wishi\\.me"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Wishi !== 'undefined' \u0026\u0026 typeof Wishi.analytics !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return WishiSDKVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Wishi.analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WishiAPI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WishiSDKVersion !== 'undefined';",
+          "version": "try { return String(WishiSDKVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Wishi is a curation and personalization platform that enhances online sales by providing embedded personal styling at scale.",
+      "website": "https://wishi.me",
+      "icon": "Wishi.svg"
+    },
+    "XGen Ai": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//assets\\.xgen\\.dev/"
+            }
+          }
+        }
+      ],
+      "description": "XGen Ai is a cloud-based customer journey mapping tool that helps businesses manage product recommendations via artificial intelligence (AI).",
+      "website": "https://xgen.ai",
+      "icon": "XGen Ai.svg"
+    },
+    "Yieldify": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.yieldify\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _yieldify !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _yieldify !== 'undefined';"
+        }
+      ],
+      "description": "Yieldify is a customer journey optimisation platform that brings personalisation to the full customer journey.",
+      "website": "https://www.yieldify.com",
+      "icon": "Yieldify.svg"
+    },
+    "Zakeke": {
+      "cats": [
+        76
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof zakekeBoot !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zakekeLoading !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zakekeProductPage !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zakekeBoot !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zakekeCustomizeLabel !== 'undefined';"
+        }
+      ],
+      "description": "Zakeke is a product customisation tool compatible with services and apps mostly used to manage ecommerce store.",
+      "website": "https://www.zakeke.com",
+      "icon": "Zakeke.png"
+    },
+    "bluebarry": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bluebarrycdn\\.blob\\.core"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof barry !== 'undefined' \u0026\u0026 typeof barry.baseUrl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof barry.baseUrl !== 'undefined';"
+        }
+      ],
+      "description": "bluebarry is a tool that helps increase customer retention by guiding shoppers to relevant products.",
+      "website": "https://bluebarry.ai",
+      "icon": "bluebarry.svg"
+    },
+    "iGoDigital": {
+      "cats": [
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.igodigital\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "iGoDigital provides web-based commerce tools, personalisation, and product recommendations designed to increase customer interaction.",
+      "website": "https://www.igodigital.com",
+      "icon": "default.svg"
+    }
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "apps": {
+    "BigDataCloud IP Geolocation": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bigdatacloud\\.net"
+            }
+          }
+        }
+      ],
+      "description": "BigDataCloud IP Geolocation API provides detailed and accurate locality and security metrics of an IP address.",
+      "website": "https://www.bigdatacloud.com/packages/ip-geolocation",
+      "icon": "BigDataCloud-IPGeolocation.svg"
+    },
+    "Bullseye": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.bullseyelocations\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bullseyeTracking !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bullseyeTracking !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bullseyelistener !== 'undefined';"
+        }
+      ],
+      "description": "Bullseye is a store locator software designed for location marketers, providing tools to help customers find nearby stores easily.",
+      "website": "https://www.bullseyelocations.com",
+      "icon": "Bullseye.svg"
+    },
+    "Geo Targetly": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*geotargetly\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Geo Targetly is a website geo personalisation software.",
+      "website": "https://geotargetly.com",
+      "icon": "Geo Targetly.svg"
+    },
+    "Geobytes": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*gd\\.geobytes\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Geobytes is a geolocation service that enables redirection of users and provides statistics on their geographic origin.",
+      "website": "https://geobytes.com"
+    },
+    "IP2Location.io": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "IP2Location.io is a web service that provides geolocation data based on IP addresses through its API, allowing developers to integrate accurate physical location information into their applications.",
+      "website": "https://www.ip2location.io",
+      "icon": "IP2Location.io.svg"
+    },
+    "IPInfoDB": {
+      "cats": [
+        79
+      ],
+      "description": "IPInfoDB is the API that returns the location of an IP address.",
+      "website": "https://www.ipinfodb.com/",
+      "icon": "IPInfoDB.png"
+    },
+    "IPinfo": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ipinfo\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "IPinfo is an IP address data provider.",
+      "website": "https://ipinfo.io",
+      "icon": "IPinfo.svg"
+    },
+    "MaxMind": {
+      "cats": [
+        79,
+        83
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:device|js)\\.maxmind\\.com/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*geoip-js\\.com/.+/v([\\d\\.]+)/\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*geoip\\.maxmind\\.min\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "MaxMind is a provider of geolocation and online fraud detection tools.",
+      "website": "https://www.maxmind.com",
+      "icon": "MaxMind.png"
+    },
+    "Radar": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.radar\\.com/v([\\d.]+)/radar\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof IsRadarInitialized !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof IsRadarInitialized !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Radar.autocomplete !== 'undefined';"
+        }
+      ],
+      "description": "Radar is an all-in-one platform that integrates geofencing, maps, and geolocation.",
+      "website": "https://radar.com",
+      "icon": "Radar.svg",
+      "cpe": "cpe:2.3:a:f-secure:radar:*:*:*:*:*:*:*:*"
+    },
+    "StoreRocket": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.storerocket\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof StoreRocket !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof StoreRocket !== 'undefined';"
+        }
+      ],
+      "description": "StoreRocket is a fully customizable store locator for websites, requiring no coding skills.",
+      "website": "https://storerocket.io",
+      "icon": "StoreRocket.svg"
+    },
+    "db-ip": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.db-ip\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ENV !== 'undefined' \u0026\u0026 typeof ENV.dbip !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ENV.dbip !== 'undefined';"
+        }
+      ],
+      "description": "dbip is a geolocation API and database.",
+      "website": "https://db-ip.com/",
+      "icon": "db-ip.png"
+    },
+    "ip-api": {
+      "cats": [
+        79
+      ],
+      "website": "https://ip-api.com/",
+      "icon": "ip-api.png"
+    },
+    "ipapi": {
+      "cats": [
+        79
+      ],
+      "description": "ipapi is a real-time geolocation and reverse IP lookup REST API.",
+      "website": "https://ipapi.com",
+      "icon": "ipapi.png"
+    },
+    "ipapi.co": {
+      "cats": [
+        79
+      ],
+      "description": "ipapi.co is a web analytics provider with IP address lookup and location API.",
+      "website": "https://ipapi.co",
+      "icon": "ipapi.co.png"
+    },
+    "ipbase": {
+      "cats": [
+        79
+      ],
+      "description": "ipbase offers an API that supports both IPv4 and IPv6 and provides precise location data from IP addresses.",
+      "website": "https://ipbase.com",
+      "icon": "ipbase.svg"
+    },
+    "ipdata": {
+      "cats": [
+        79
+      ],
+      "description": "ipdata is a JSON IP Address Geolocation API that allows to lookup the location of both IPv4 and IPv6.",
+      "website": "https://ipdata.co/",
+      "icon": "ipdata.png"
+    },
+    "ipgeolocation": {
+      "cats": [
+        79
+      ],
+      "description": "ipgeolocation is an IP Geolocation API and Accurate IP Lookup Database.",
+      "website": "https://ipgeolocation.co/",
+      "icon": "ipgeolocation.png"
+    },
+    "ipify": {
+      "cats": [
+        79
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ipify\\.org"
+            }
+          }
+        }
+      ],
+      "description": "ipify is a service which provide public IP address API, IP geolocation API, VPN and Proxy detection API products.",
+      "website": "https://ipify.org",
+      "icon": "ipify.png"
+    },
+    "ipstack": {
+      "cats": [
+        79
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ENV !== 'undefined' \u0026\u0026 typeof ENV.ipStackAccessToken !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ENV.ipStackAccessToken !== 'undefined';"
+        }
+      ],
+      "description": "ipstack is a real-time IP to geolocation API capable of looking at location data and assessing security threats originating from risky IP addresses.",
+      "website": "https://ipstack.com",
+      "icon": "ipstack.png"
+    }
+  }
+}

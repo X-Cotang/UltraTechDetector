@@ -1,0 +1,413 @@
+{
+  "apps": {
+    "CareCart": {
+      "cats": [
+        98,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.carecart\\.io/api/abandoned-cart/"
+            }
+          }
+        }
+      ],
+      "description": "CareCart is a smart app to recover big value carts on all sizes of shopify stores.",
+      "website": "https://carecart.io/abandoned-cart-recovery-app",
+      "icon": "CareCart.png"
+    },
+    "CareCart Cartly Abandoned Cart Recovery": {
+      "cats": [
+        98,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.carecart\\.io/api/abandoned-cart/"
+            }
+          }
+        }
+      ],
+      "description": "Cartly Abandoned Cart Recovery by CareCart is a service that helps ecommerce businesses recover lost sales by sending automated reminders to customers who abandon their shopping carts.",
+      "website": "https://carecart.io/cartly-abandoned-cart-recovery/",
+      "icon": "CareCart.svg"
+    },
+    "CartBot": {
+      "cats": [
+        98,
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn-app\\.cart-bot\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CartBotScriptAppended !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CartBotScriptAppended !== 'undefined';"
+        }
+      ],
+      "description": "CartBot is a tool that automatically adds products or gifts to a customer's cart based on predefined conditions.",
+      "website": "https://apps.shopify.com/cartbot-auto-add-to-cart",
+      "icon": "CartBot.svg"
+    },
+    "CartHook": {
+      "cats": [
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.c\\.carthook\\.com"
+            }
+          }
+        }
+      ],
+      "description": "CartHook is a solution for creating post-purchase upsell offers on Shopify.",
+      "website": "https://carthook.com",
+      "icon": "CartHook.svg"
+    },
+    "CartRocket": {
+      "cats": [
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "CartRocket is a tool for cart abandonment analytics, providing insights into dropped transactions to improve recovery strategies.",
+      "website": "https://cartrocket.com",
+      "icon": "CartRocket.svg"
+    },
+    "CartStack": {
+      "cats": [
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.cartstack\\.\\w+"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _cartstack !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _cartstack !== 'undefined';"
+        }
+      ],
+      "description": "CartStack is a SaaS solution that allows any company with an ecommerce site or reservation system to increase revenue through reminding/encouraging consumers to return to their abandoned cart and complete their purchase.",
+      "website": "https://www.cartstack.com",
+      "icon": "CartStack.svg"
+    },
+    "GetRooster": {
+      "cats": [
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//app\\.getrooster\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _GT_config !== 'undefined' \u0026\u0026 typeof _GT_config.gt_host !== 'undefined' \u0026\u0026 _GT_config.gt_host === '//app\\.getrooster\\.com/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _GT_config.gt_host !== 'undefined';",
+          "version": "try { return String(_GT_config.gt_host || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "GetRooster is a system designed to optimise the conversion of abandoning visitors.",
+      "website": "https://www.getrooster.com"
+    },
+    "Keptify": {
+      "cats": [
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.keptify\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KEPTIFY_BASE_URL !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return _keptify.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KEPTIFY_BASE_URL !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _keptify.version !== 'undefined';",
+          "version": "try { return String(_keptify.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Keptify helps ecommerce sites of any size to increase sales and conversion rates by providing visitors with a personalised shopping experience.",
+      "website": "https://keptify.com",
+      "icon": "Keptify.png"
+    },
+    "OptiMonk": {
+      "cats": [
+        98,
+        77
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.optimonk\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "OptiMonk is an on-site message toolkit used to improve conversions using action-based popups ad bars.",
+      "website": "https://www.optimonk.com",
+      "icon": "OptiMonk.svg"
+    },
+    "PushOwl Web Push Notifications": {
+      "cats": [
+        98,
+        100
+      ],
+      "implies": [
+        "PushOwl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/sdks/pushowl-shopify\\.js"
+            }
+          }
+        }
+      ],
+      "description": "PushOwl Web Push Notifications are a Shopify app which helps recover abandoned carts and market better with web push.",
+      "website": "https://apps.shopify.com/pushowl",
+      "icon": "PushOwl.svg"
+    },
+    "Recapture": {
+      "cats": [
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.recapture\\.io/.+\\?v=\\d+(?:\u0026ver=([\\d\\.]+)?)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Recapture is an abandoned cart recovery and email marketing solution.",
+      "website": "https://recapture.io",
+      "icon": "Recapture.png"
+    },
+    "Recart": {
+      "cats": [
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.recart\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __recart !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __recart !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof recart !== 'undefined';"
+        }
+      ],
+      "description": "Recart is a tool to engage users who abandoned their shopping cart via Facebook Messenger.",
+      "website": "https://recart.com/",
+      "icon": "Recart.svg"
+    },
+    "SpurIT Abandoned Cart Reminder": {
+      "cats": [
+        98,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn-spurit\\.com/shopify-apps/abandoned-cart-reminder/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ACR_SPURIT_Params !== 'undefined' \u0026\u0026 typeof ACR_SPURIT_Params.folderCss !== 'undefined' \u0026\u0026 ACR_SPURIT_Params.folderCss === 'cdn-spurit\\.com/shopify-apps/abandoned-cart-reminder/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ACR_SPURIT_Params.folderCss !== 'undefined';",
+          "version": "try { return String(ACR_SPURIT_Params.folderCss || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "SpurIT Abandoned Cart Reminder bring back your Shopify store visitors who moved to another tab by blinking your store tab.",
+      "website": "https://spur-i-t.com/shopify-apps/abandoned-cart-reminder/",
+      "icon": "SpurIT.svg"
+    },
+    "SweetHelp": {
+      "cats": [
+        98
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sweetHelpBtnLoad !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sweetHelpBtnLoad !== 'undefined';"
+        }
+      ],
+      "description": "SweetHelp is a messaging solution that recovers abandoned carts by sending texts via Whatsapp and SMS.",
+      "website": "https://sweethelp.io",
+      "icon": "SweetHelp.svg"
+    },
+    "UpSellit": {
+      "cats": [
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.upsellit\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof usi_analytics !== 'undefined' \u0026\u0026 usi_analytics === '\\;confidence:25'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof usi_analytics !== 'undefined';",
+          "version": "try { return String(usi_analytics || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof usi_app !== 'undefined';",
+          "version": "try { return String(usi_app || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof usi_commons !== 'undefined';",
+          "version": "try { return String(usi_commons || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof usi_cookies !== 'undefined';",
+          "version": "try { return String(usi_cookies || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "UpSellit is a performance based lead and cart abandonment recovery solutions.",
+      "website": "https://us.upsellit.com",
+      "icon": "UpSellit.png"
+    },
+    "Uptain": {
+      "cats": [
+        98
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.uptain\\.de/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof uptainUpdateUrl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof uptainUpdateUrl !== 'undefined';"
+        }
+      ],
+      "description": "Uptain is a software solution designed to reduce shopping cart abandonment in ecommerce by utilizing AI-based tools like exit-intent popups and trigger emails.",
+      "website": "https://uptain.de",
+      "icon": "Uptain.svg"
+    }
+  }
+}

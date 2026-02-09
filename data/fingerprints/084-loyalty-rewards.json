@@ -1,0 +1,937 @@
+{
+  "apps": {
+    "99minds": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.99minds\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _99mindsDataLayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _99mindsDataLayer !== 'undefined';"
+        }
+      ],
+      "description": "99minds is an online platform for managing and scaling gift cards, store credit, digital wallets, and loyalty programs.",
+      "website": "https://www.99minds.io",
+      "icon": "99minds.svg"
+    },
+    "Antavo": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.antavo\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Antavo !== 'undefined' \u0026\u0026 typeof Antavo.AJAX !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Antavo.AJAX !== 'undefined';"
+        }
+      ],
+      "description": "Antavo is a software platform that provides AI-driven loyalty and promotion management solutions to help businesses design, automate, and analyze customer reward programs.",
+      "website": "https://antavo.com",
+      "icon": "Antavo.svg"
+    },
+    "Appstle": {
+      "cats": [
+        84
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AppstleIncluded !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AppstleIncluded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof appstleInit !== 'undefined';"
+        }
+      ],
+      "description": "Appstle is a platform that boosts ecommerce revenue through retention-focused customer experiences.",
+      "website": "https://appstle.com",
+      "icon": "Appstle.svg"
+    },
+    "BON Loyalty": {
+      "cats": [
+        84,
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.bonloyalty\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bonShopInfo !== 'undefined' \u0026\u0026 typeof bonShopInfo.appearance !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bonShopInfo.appearance !== 'undefined';"
+        }
+      ],
+      "description": "BON Loyalty is a free rewards and referrals app that helps merchants increase customer engagement with captivating points, rewards \u0026 referral program.",
+      "website": "https://bonloyalty.com",
+      "icon": "BON Loyalty.svg"
+    },
+    "Beans": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.trybeans\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Beans3 !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Beans3 !== 'undefined';"
+        }
+      ],
+      "description": "Beans is a provider of ecommerce loyalty programs.",
+      "website": "https://www.trybeans.com/",
+      "icon": "Beans.svg"
+    },
+    "Captain Up": {
+      "cats": [
+        84
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof captain !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof captain !== 'undefined';"
+        }
+      ],
+      "description": "Captain Up is a service that enhances user engagement and retention by utilising gamification, social, and communication tools to maximise user engagement and lifetime value.",
+      "website": "https://captainup.com",
+      "icon": "CaptainUp.svg"
+    },
+    "CleverInsight": {
+      "cats": [
+        84
+      ],
+      "description": "CleverInsight is a tool that helps businesses measure customer satisfaction and design loyalty programs to improve customer retention.",
+      "website": "https://clever-insight.com",
+      "icon": "CleverInsight.svg"
+    },
+    "Eber": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.eber\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Eber !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Eber !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EberVars.channelId !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof intervalEberJQuery !== 'undefined';"
+        }
+      ],
+      "description": "Eber is a consumer engagement management platform for retail, F\u0026B, hotels, and more.",
+      "website": "https://eber.co",
+      "icon": "Eber.svg"
+    },
+    "Fondue": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*public\\.getfondue\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Fondue !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Fondue !== 'undefined';"
+        }
+      ],
+      "description": "Fondue is a platform that helps businesses drive profitable growth by ditching discount codes and giving cash back instead.",
+      "website": "https://www.getfondue.com",
+      "icon": "Fondue.svg"
+    },
+    "Gameball": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.gameball\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GbSdk !== 'undefined' \u0026\u0026 typeof GbSdk.settings !== 'undefined' \u0026\u0026 typeof GbSdk.settings.shop !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GbSdk.settings.shop !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gbReferralCodeInput !== 'undefined';"
+        }
+      ],
+      "description": "Gameball is a loyalty \u0026 retention platform that offers gamified customer engagement tools for customers such as rewards, points, and referrals.",
+      "website": "https://www.gameball.co",
+      "icon": "Gameball.svg"
+    },
+    "Glow": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.glowloyalty\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Glow is a rewards platform that helps businesses increase repeat sales by encouraging one-time buyers to return through structured customer retention programs.",
+      "website": "https://glowloyalty.com",
+      "icon": "Glow.svg"
+    },
+    "HeyPongo": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.heypongo\\.com"
+            }
+          }
+        }
+      ],
+      "description": "HeyPongo is a platform that helps merchants convert visitors into loyal customers and boost revenue through customer engagement tools.",
+      "website": "https://www.heypongo.com",
+      "icon": "HeyPongo.svg"
+    },
+    "Inveterate": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.inveterate\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Inveterate !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Inveterate !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof inveterate !== 'undefined';"
+        }
+      ],
+      "description": "Inveterate is a loyalty platform designed to support flexible, scalable loyalty programs across various industries.",
+      "website": "https://www.inveterate.com",
+      "icon": "Inveterate.svg"
+    },
+    "Kangaroo Rewards": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.kangaroorewards\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof KangarooApps !== 'undefined' \u0026\u0026 typeof KangarooApps.Loyalties !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof KangarooApps.Loyalties !== 'undefined';"
+        }
+      ],
+      "description": "Kangaroo Rewards is a platform designed to help businesses grow by fostering customer loyalty and enhancing brand recognition.",
+      "website": "https://loyalty.kangaroorewards.com",
+      "icon": "KangarooRewards.svg"
+    },
+    "Lily": {
+      "cats": [
+        84
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof lilyCustomerId !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lilyHash !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lilyPl !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lilyCustomerId !== 'undefined';"
+        }
+      ],
+      "description": "Lily is a BigCommerce app that rewards customers with loyalty points for making purchases, signing up, following or sharing on social media, and more.",
+      "website": "https://www.getlily.io",
+      "icon": "Lily.svg"
+    },
+    "Loloyal": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.loloyal\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.loloyal\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LOLOYAL_ONSITE !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LOLOYAL_ONSITE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LOLOYAL_ONSITE_ALL_LOCALE !== 'undefined';"
+        }
+      ],
+      "description": "Loloyal is a loyalty and rewards program for Shopify that helps small businesses increase customer engagement and retention through user-friendly features.",
+      "website": "https://www.loloyal.com",
+      "icon": "Loloyal.svg"
+    },
+    "Lootly": {
+      "cats": [
+        84,
+        94
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*lootly\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Lootly !== 'undefined' \u0026\u0026 typeof Lootly.config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Lootly.config !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lootlyWidgetInit !== 'undefined';"
+        }
+      ],
+      "description": "Lootly is a loyalty and referral marketing automation software suite for ecommerce businesses.",
+      "website": "https://lootly.io",
+      "icon": "Lootly.png"
+    },
+    "Loyalis": {
+      "cats": [
+        84
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof loyalisOptions !== 'undefined' \u0026\u0026 typeof loyalisOptions.key !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loyalisOptions.key !== 'undefined';"
+        }
+      ],
+      "description": "Loyalis is a loyalty program for ecommerce that enables businesses to reward customers based on purchases and engagement.",
+      "website": "https://www.loyalis.nl"
+    },
+    "LoyaltyLion": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.loyaltylion\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof loyaltylion !== 'undefined' \u0026\u0026 typeof loyaltylion.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return loyaltylion.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loyaltylion.version !== 'undefined';",
+          "version": "try { return String(loyaltylion.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "LoyaltyLion is a data-driven ecommerce loyalty and engagement platform.",
+      "website": "https://loyaltylion.com",
+      "icon": "LoyaltyLion.svg"
+    },
+    "Loyalzoo": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.loyalzoo\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Loyalzoo is a platform that enables businesses to manage customer loyalty, marketing campaigns, and subscription services.",
+      "website": "https://loyalzoo.com",
+      "icon": "Loyalzoo.svg"
+    },
+    "Loyoly": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.loyoly\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Loyoly is a loyalty and referral platform integrating user-generated content and reviews, enabling customer engagement with brands.",
+      "website": "https://www.loyoly.io",
+      "icon": "Loyoly.svg"
+    },
+    "Marsello": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.marsello\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Marsello is an omnichannel loyalty platform that integrates with sales channels, enhancing customer engagement and retention by providing a unified experience across various points of sale.",
+      "website": "https://www.marsello.com",
+      "icon": "Marsello.svg"
+    },
+    "Nift": {
+      "cats": [
+        84
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof NiftAnalytics !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NiftAnalytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NiftJS !== 'undefined';"
+        }
+      ],
+      "description": "Nift is a marketing program for pools of local businesses. Businesses give Nift gift cards to thank and reward their customers for taking actions, like signing up for a newsletter, referring a friend, or making a purchase.",
+      "website": "https://www.gonift.com",
+      "icon": "Nift.png"
+    },
+    "Piggy": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.piggy\\.eu/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PiggyWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PiggyWidget !== 'undefined';"
+        }
+      ],
+      "description": "Piggy is a loyalty program management platform.",
+      "website": "https://www.piggy.eu",
+      "icon": "Piggy.svg"
+    },
+    "Pobuca": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.loyalty\\.pobuca\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.loyalty\\.pobuca\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Pobuca is a cloud-based software platform for managing customer loyalty programs and engagement initiatives.",
+      "website": "https://pobuca.com",
+      "icon": "Pobuca.svg"
+    },
+    "PunchTab": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.punchtab\\.com"
+            }
+          }
+        }
+      ],
+      "description": "PunchTab is a SaaS-based Consumer Management Platform (CMP) for brands to build and optimize direct consumer relationships.",
+      "website": "http://www.punchtab.com",
+      "icon": "PunchTab.svg"
+    },
+    "Redonner": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.redonner\\.fr/"
+            }
+          }
+        }
+      ],
+      "description": "This company promotes the collection and recycling of textiles by rewarding each donation of clothing made on its website with 'Re' points, allowing you to benefit from advantages and discounts at more than 70 partner brands.",
+      "website": "https://www.redonner.fr",
+      "icon": "Redonner.svg"
+    },
+    "Rise.ai": {
+      "cats": [
+        84,
+        94
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*strn\\.rise-ai\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Rise !== 'undefined' \u0026\u0026 typeof Rise.shop !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Rise.shop !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RiseStoreFront !== 'undefined';"
+        }
+      ],
+      "description": "Rise.ai is a strategic re-engagement solution that provides brands and retailers with a unique currency of their own.",
+      "website": "https://rise.ai",
+      "icon": "Rise.ai.svg"
+    },
+    "Sessionly": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//sessionly\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Sessionly is a loyalty and referral program for Shopware and Shopify merchants, focusing on customer retention and acquisition through rewards and detailed analytics.",
+      "website": "https://sessionly.hubspotpagebuilder.com",
+      "icon": "Sessionly.svg"
+    },
+    "ShopHub": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.tryshophub\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof toggleShopHubWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof toggleShopHubWidget !== 'undefined';"
+        }
+      ],
+      "description": "ShopHub is a platform that helps Shopify store owners grow their businesses by providing loyalty programs, coupons, and email capture services.",
+      "website": "https://www.tryshophub.com",
+      "icon": "ShopHub.svg"
+    },
+    "Smile": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.(?:smile|sweettooth)\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Smile !== 'undefined' \u0026\u0026 typeof Smile.channel_key !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Smile.channel_key !== 'undefined';"
+        }
+      ],
+      "description": "Smile is a provider of ecommerce loyalty programs.",
+      "website": "https://smile.io",
+      "icon": "Smile.svg"
+    },
+    "SpurIT Loyalty App": {
+      "cats": [
+        84,
+        94,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn-spurit\\.com/shopify-apps/loyaltypoints/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Spurit !== 'undefined' \u0026\u0026 typeof Spurit.Loyaltypoints !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Spurit.Loyaltypoints !== 'undefined';"
+        }
+      ],
+      "description": "SpurIT Loyalty App is a turnkey solution allowing you to reward existing customers in a number of ways.",
+      "website": "https://spur-i-t.com/shopify-apps/loyalty-points-manager",
+      "icon": "SpurIT.svg"
+    },
+    "TapMango": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*shopify\\.tapmango\\.com"
+            }
+          }
+        }
+      ],
+      "description": "TapMango is a customizable customer loyalty program and online ordering platform designed to enhance customer engagement and streamline ordering processes.",
+      "website": "https://www.tapmango.com",
+      "icon": "TapMango.svg"
+    },
+    "Thanx": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.thanx\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Thanx is a platform that captures insights, retains loyal fans, sends highly-targeted campaigns, and measures results in real revenue.",
+      "website": "https://www.thanx.com",
+      "icon": "Thanx.svg"
+    },
+    "Vyper": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*vyper\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Vyper is a system for creating and managing giveaways or viral contests to increase engagement and reach.",
+      "website": "https://vyper.io",
+      "icon": "Vyper.svg"
+    },
+    "Warply": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.warp\\.ly"
+            }
+          }
+        }
+      ],
+      "description": "Warply is a customer loyalty platform that enables businesses to manage rewards, track engagement, and enhance customer retention through targeted campaigns.",
+      "website": "https://warp.ly",
+      "icon": "Warply.svg"
+    },
+    "Yotpo Loyalty \u0026 Referrals": {
+      "cats": [
+        84
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn(?:-loyalty)?\\.(?:swellrewards|yotpo)\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SwellConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof swellAPI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SwellConfig !== 'undefined';"
+        }
+      ],
+      "description": "Yotpo is a user-generated content marketing platform.",
+      "website": "https://www.yotpo.com/platform/loyalty/",
+      "icon": "Yotpo.svg"
+    },
+    "Zinrelo": {
+      "cats": [
+        84
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof zrl_mi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zrl_mi !== 'undefined';"
+        }
+      ],
+      "description": "Zinrelo is an enterprise-grade, loyalty rewards platform.",
+      "website": "https://www.zinrelo.com",
+      "icon": "Zinrelo.png"
+    }
+  }
+}

@@ -1,0 +1,2230 @@
+{
+  "apps": {
+    "Alchemer Mobile": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.apptentive\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ApptentiveSDK !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ApptentiveSDK !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ApptentiveSDK.sdk.version !== 'undefined';",
+          "version": "try { return String(ApptentiveSDK.sdk.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Alchemer Mobile, formerly known as Apptentive, is a tool optimized for mobile, consolidating app-store ratings, reviews, in-app customer feedback, emotion data, and key metrics in one dashboard.",
+      "website": "https://www.alchemer.com/mobile/",
+      "icon": "AlchemerMobile.svg"
+    },
+    "Ali Reviews": {
+      "cats": [
+        90,
+        100
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof alireviews_tags !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof alireviews_tags !== 'undefined';"
+        }
+      ],
+      "description": "Ali reviews is a shopify app to collect reviews from customers.",
+      "website": "https://apps.shopify.com/ali-reviews",
+      "icon": "Alireviews.svg"
+    },
+    "Alpha Review": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/alpha_au\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ALPHAREVIEW_FRONT_ALL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ALPHAREVIEW_FRONT_ALL !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof alpha_review_count_update !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof alpha_review_count_update_on !== 'undefined';"
+        }
+      ],
+      "description": "Alpha Review is an in-store ecommerce review tool developed in Korea, designed to gather and display customer feedback directly within retail environments.",
+      "website": "https://alph.kr",
+      "icon": "AlphaReview.svg"
+    },
+    "Appzi": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.appzi\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof appzi !== 'undefined' \u0026\u0026 typeof appzi.At !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof appziSettings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apzbtgtr !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof appzi.At !== 'undefined';"
+        }
+      ],
+      "description": "Appzi is a customer experience software that is a user feedback and bug reporting tool.",
+      "website": "https://www.appzi.com",
+      "icon": "Appzi.svg"
+    },
+    "AskNicely": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.asknice\\.ly/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof askNicelyConversation !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof askNicelyConversation !== 'undefined';"
+        }
+      ],
+      "description": "AskNicely is a platform that measures and improves customer happiness using the Net Promoter Score (NPS) framework.",
+      "website": "https://www.asknicely.com",
+      "icon": "AskNicely.svg"
+    },
+    "Avis Verifies": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.avis-verifies\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof avisVerifies !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof avisVerifies !== 'undefined';"
+        }
+      ],
+      "description": "Avis Verifies is a complete solution for managing your customer reviews.",
+      "website": "https://www.netreviews.com",
+      "icon": "Avis Verifies.png"
+    },
+    "Bazaarvoice Reviews": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*apps\\.bazaarvoice\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BV !== 'undefined' \u0026\u0026 typeof BV.api !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BV.api !== 'undefined';"
+        }
+      ],
+      "description": "Bazaarvoice is a provider of user-generated content solutions like ratings and reviews and Q\u0026A.",
+      "website": "https://www.bazaarvoice.com/products/ratings-and-reviews/",
+      "icon": "Bazaarvoice.png"
+    },
+    "Clutch": {
+      "cats": [
+        90,
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//widget\\.clutch\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "Clutch review widgets are stand-alone applications that you can embed on your website to show your dynamic ratings and reviews.",
+      "website": "https://clutch.co/content/add-review-widget-your-website",
+      "icon": "clutch.svg"
+    },
+    "Contlo": {
+      "cats": [
+        90,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.contlo\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CONTLO_ENV !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CONTLO_ENV !== 'undefined';"
+        }
+      ],
+      "description": "Contlo is an AI powered marketing software.",
+      "website": "https://www.contlo.com",
+      "icon": "Contlo.png"
+    },
+    "Customer Alliance": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.customer-alliance\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Customer Alliance is a cloud-based platform facilitating customer reviews and feedback management and analysis.",
+      "website": "https://www.customer-alliance.com",
+      "icon": "CustomerAlliance.svg"
+    },
+    "Famewall": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.famewall\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Famewall is a tool that converts social media mentions into visually appealing testimonials and automates the process of collecting them from customers using a custom collection feature.",
+      "website": "https://famewall.io",
+      "icon": "Famewall.svg"
+    },
+    "FeatherX": {
+      "cats": [
+        90
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof featherx !== 'undefined' \u0026\u0026 typeof featherx.clientId !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof featherx.clientId !== 'undefined';"
+        }
+      ],
+      "description": "FeatherX captures content from all major reviews and social media channels.",
+      "website": "https://featherx.ai",
+      "icon": "FeatherX.svg"
+    },
+    "Feefo": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.feefo\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof feefoTracker !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof feefoWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof feefoTracker !== 'undefined';"
+        }
+      ],
+      "description": "Feefo is a cloud-based consumer review and rating management software.",
+      "website": "https://www.feefo.com",
+      "icon": "Feefo.svg"
+    },
+    "Fera": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.fera\\.ai"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof fera !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fera !== 'undefined';"
+        }
+      ],
+      "description": "Fera is a product review and social proof application for ecommerce websites.",
+      "website": "https://fera.ai/",
+      "icon": "Fera.svg"
+    },
+    "Flamp": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.flamp\\.ru"
+            }
+          }
+        }
+      ],
+      "description": "Flamp is a city review widget that displays user-generated ratings and reviews of local businesses, helping visitors assess service quality and reputation.",
+      "website": "https://flamp.ru",
+      "icon": "Flamp.svg"
+    },
+    "FlockRocket": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.flockrocket\\.io"
+            }
+          }
+        }
+      ],
+      "description": "FlockRocket is a reviews system designed to collect, manage, and display verified customer feedback.",
+      "website": "https://flockrocket.io",
+      "icon": "FlockRocket.svg"
+    },
+    "Frill": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.frill\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FRILL_ENV !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FRILL_ENV !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Frill.containers !== 'undefined';"
+        }
+      ],
+      "description": "Frill is a platform that connects customers and businesses by enabling customers to provide feedback.",
+      "website": "https://frill.co",
+      "icon": "Frill.svg"
+    },
+    "GetReview": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.getreview\\.pl"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.getreview\\.pl"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "GetReview is a website reviews system designed to collect, manage, and display user feedback.",
+      "website": "https://getreview.pl",
+      "icon": "GetReview.svg"
+    },
+    "GoodReviews": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.goodreviews\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GoodReviewObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GoodReviewObject !== 'undefined';"
+        }
+      ],
+      "description": "GoodReviews is a tool that displays and collects Google reviews to support online reputation management and customer feedback tracking.",
+      "website": "https://goodreviews.io",
+      "icon": "GoodReview.svg"
+    },
+    "Google Customer Reviews": {
+      "cats": [
+        90
+      ],
+      "description": "Google Customer Reviews is a badge on your site that can help users identify your site with the Google brand and can be placed on any page of your site.",
+      "website": "https://support.google.com/merchants/answer/7105655?hl=en",
+      "icon": "Google.svg"
+    },
+    "HulkApps Product Reviews": {
+      "cats": [
+        90,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hulkappsProductReview !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hulkappsProductReview !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hulkappsReviews !== 'undefined';"
+        }
+      ],
+      "description": "HulkApps Product Reviews is a customer product reviews app for building social proof for store.",
+      "website": "https://www.hulkapps.com/products/product-reviews-shopify",
+      "icon": "HulkApps.svg"
+    },
+    "Judge.me": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.judge\\.me"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jdgm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof judgeme !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jdgm !== 'undefined';"
+        }
+      ],
+      "description": "Judge.me is a reviews app that helps you collect and display product reviews and site reviews with photos, videos and Q\u0026A.",
+      "website": "https://judge.me",
+      "icon": "Judge.svg"
+    },
+    "Junip": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.juniphq\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof junipLoaded !== 'undefined' \u0026\u0026 junipLoaded === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof junipLoaded !== 'undefined';",
+          "version": "try { return String(junipLoaded || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkjunip_scripts !== 'undefined';",
+          "version": "try { return String(webpackChunkjunip_scripts || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Junip provider of a ecommerce brand review platform designed to share customers' story, send review requests and display review content.",
+      "website": "https://junip.co",
+      "icon": "Junip.svg"
+    },
+    "Klaviyo Reviews": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.klaviyo\\.com/onsite/js/vendors~reviews"
+            }
+          }
+        }
+      ],
+      "description": "Klaviyo reviews is Klaviyo's customer reivews offering for Shopify and WooCommerce platforms",
+      "website": "https://www.klaviyo.com/product-reviews",
+      "icon": "Klaviyo.svg"
+    },
+    "Konfidency Reviews": {
+      "cats": [
+        90
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof konfidencyCustomer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof konfidencyCustomer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof konfidencyLoader !== 'undefined';"
+        }
+      ],
+      "description": "Konfidency Reviews is a platform that builds trust, boosts organic traffic, and supports purchasing decisions by providing reviews from customers who are familiar with the products.",
+      "website": "https://www.konfidency.com.br",
+      "icon": "KonfidencyReviews.svg"
+    },
+    "Kudobuzz": {
+      "cats": [
+        90
+      ],
+      "implies": [
+        "Svelte"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Kudos !== 'undefined' \u0026\u0026 typeof Kudos.apiServer !== 'undefined' \u0026\u0026 Kudos.apiServer === 'api\\.kudobuzz\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Kudos.apiServer !== 'undefined';",
+          "version": "try { return String(Kudos.apiServer || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Kudobuzz is a tool for collecting and managing customer reviews.",
+      "website": "https://kudobuzz.com/",
+      "icon": "kudobuzz.svg"
+    },
+    "Letro": {
+      "cats": [
+        90,
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*letro\\.jp/tags"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __letroUgcGadget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __letroUgcGadget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof letroUgcSet !== 'undefined';"
+        }
+      ],
+      "description": "Letro is a UGC and review tool for ecommerce platforms.",
+      "website": "https://service.aainc.co.jp/product/letro/",
+      "icon": "Letro.svg"
+    },
+    "LipScore": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.lipscore\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LipscoreSwiper !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LipscoreSwiper !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wcLipscoreInit !== 'undefined';"
+        }
+      ],
+      "description": "LipScore is a ratings and reviews engine.",
+      "website": "https://lipscore.com",
+      "icon": "LipScore.svg"
+    },
+    "Loox": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*loox\\.io/widget"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof loox_global_hash !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loox_global_hash !== 'undefined';"
+        }
+      ],
+      "description": "Loox is a reviews app for Shopify that helps you gather reviews and user-generated photos from your customers.",
+      "website": "https://loox.app",
+      "icon": "Loox.svg"
+    },
+    "LoyaltyLoop": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.loyaltyloop\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LoyaltyLoopEventListenerInitialized !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LoyaltyLoopEventListenerInitialized !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof countOfLoyaltyLoopTestimonialWidgets !== 'undefined';"
+        }
+      ],
+      "description": "LoyaltyLoop is an online review management platform that leverages customer loyalty surveys and Net Promoter Score tracking to enhance business reputation and strengthen customer relationships.",
+      "website": "https://loyaltyloop.com",
+      "icon": "LoyaltyLoop.svg"
+    },
+    "Myli": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn-app\\.myli\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof myli_push !== 'undefined' \u0026\u0026 typeof myli_push.geolocate !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof myli_push.geolocate !== 'undefined';"
+        }
+      ],
+      "description": "Myli is a platform enhancing customer experience, streamlining reputation management, and facilitating consumer acquisition.",
+      "website": "https://www.myli.io",
+      "icon": "Myli.svg"
+    },
+    "Oculizm": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.oculizm\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Oculizm is a conversion optimization tool that utilizes user-generated content and customer reviews to enhance consumer trust for retailers, resulting in increased sales and engagement.",
+      "website": "https://oculizm.com",
+      "icon": "Oculizm.svg"
+    },
+    "Okendo": {
+      "cats": [
+        90,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof okeReviewsWidgetOnInit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof okeWidgetControlInit !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof okendoReviews !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof okeReviewsWidgetOnInit !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof okeWidgetApi !== 'undefined';"
+        }
+      ],
+      "description": "Okendo is a customer marketing platform with product ratings and reviews, customer photos and videos to help personalise experiences.",
+      "website": "https://www.okendo.io",
+      "icon": "Okendo.svg"
+    },
+    "Orankl": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.orankl\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Orankl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof oranklInit !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Orankl !== 'undefined';"
+        }
+      ],
+      "description": "Orankl is a provider email marketing and review services.",
+      "website": "https://www.orankl.com",
+      "icon": "Orankl.png"
+    },
+    "Poll Maker": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*scripts\\.poll-maker\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Poll Maker is a system designed to create and manage online polls, allowing users to gather opinions, feedback, or votes.",
+      "website": "https://www.poll-maker.com",
+      "icon": "PollMaker.svg"
+    },
+    "PowerReviews": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ui\\.powerreviews\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof POWERREVIEWS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof POWERREVIEWS !== 'undefined';"
+        }
+      ],
+      "description": "Powerreviews is a provider of UGC solutions like ratings and reviews.",
+      "website": "https://www.powerreviews.com/",
+      "icon": "PowerReviews.png"
+    },
+    "ProveSource": {
+      "cats": [
+        90
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _provesrcAsyncInit !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _provesrcAsyncInit !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof provesrc.display !== 'undefined';"
+        }
+      ],
+      "description": "ProveSource is a solution to display social proof and boost conversion.",
+      "website": "https://provesrc.com",
+      "icon": "ProveSource.svg"
+    },
+    "PulseM": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/embed-pulsemweb-gsd\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pulsem_button_installed !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pulsem_button_installed !== 'undefined';"
+        }
+      ],
+      "description": "PulseM is an online platform for managing customer reviews and business reputation across digital channels.",
+      "website": "https://pulsem.me",
+      "icon": "PulseM.svg"
+    },
+    "Qualitelis": {
+      "cats": [
+        90
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof InitWidgetQualitelis !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof InitWidgetQualitelis !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof resizeWidgetQualitelis !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof showHideWidgetQualitelis !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof widgetQualitelisFixed !== 'undefined';"
+        }
+      ],
+      "description": "Qualitelis is a hotel guest review system designed to collect, manage, and analyze feedback, helping hospitality providers improve services by addressing customer experiences and satisfaction levels.",
+      "website": "https://www.qualitelis.septeo.com",
+      "icon": "Qualitelis.svg"
+    },
+    "Ratesight": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ratesight\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Ratesight is an online review management software that helps businesses collect and track online reviews.",
+      "website": "https://ratesight.com",
+      "icon": "RateSight.svg"
+    },
+    "RealSatisfied": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.realsatisfied\\.com"
+            }
+          }
+        }
+      ],
+      "description": "RealSatisfied is a platform that enables the collection of client feedback and facilitates its promotion across online channels to enhance credibility and visibility.",
+      "website": "https://www.realsatisfied.com",
+      "icon": "RealSatisfied.svg"
+    },
+    "Reevoo": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.reevoo\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ReevooApi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ReevooApi !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof reevooAccessCode !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof reevooLoader.tracking !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof reevooUrl !== 'undefined';",
+          "version": "try { return String(reevooUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Reevoo is a provider of UGC solutions like reviews.",
+      "website": "https://www.reevoo.com",
+      "icon": "Reevoo.svg"
+    },
+    "Rep.co": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.rep\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Rep.co is a review generation platform that helps businesses and agencies manage their online reputation through automated tools.",
+      "website": "https://rep.co",
+      "icon": "Repco.svg"
+    },
+    "Repuso": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//repuso\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Repuso is a tool that collects, displays, and manages customer reviews across multiple platforms to support brand reputation and engagement.",
+      "website": "https://repuso.com",
+      "icon": "Repuso.svg"
+    },
+    "Reputon": {
+      "cats": [
+        90,
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.reputon\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Reputon is an customer reviews Shopify app.",
+      "website": "https://reputon.com",
+      "icon": "Reputon.svg"
+    },
+    "Reviefy": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.reviefy\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Reviefy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Reviefy !== 'undefined';"
+        }
+      ],
+      "description": "Reviefy is a product review collection solution designed for integration with the MyCashFlow ecommerce platform.",
+      "website": "https://www.reviefy.com",
+      "icon": "Reviefy.svg"
+    },
+    "Review Stars": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.reviewstars\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Review Stars is a digital marketing boutique that assists businesses in enhancing their positive online reputation using review generation technology.",
+      "website": "https://reviewstars.com/",
+      "icon": "ReviewStars.svg"
+    },
+    "Review Wave": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.reviewwave\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RWEmbedJS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RWEmbedJS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _rwReviewEmbed !== 'undefined';"
+        }
+      ],
+      "description": "Review Wave is reputation management software that helps business owners obtain reviews on trusted websites to boost growth.",
+      "website": "https://www.reviewwave.com",
+      "icon": "ReviewWave.svg"
+    },
+    "ReviewForest": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.reviewforest\\.org/"
+            }
+          }
+        }
+      ],
+      "description": "ReviewForest is a service that facilitates the collection of product reviews, contributing to environmental efforts.",
+      "website": "https://reviewforest.org/",
+      "icon": "ReviewForest.svg"
+    },
+    "ReviewLead": {
+      "cats": [
+        90
+      ],
+      "description": "ReviewLead is a platform that boosts reputation by systematically requesting reviews from past customers.",
+      "website": "https://get.reviewlead.com",
+      "icon": "ReviewLead.svg"
+    },
+    "ReviewPro": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sapi\\.reviewpro\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ReviewPro is a hotel guest review system designed to collect and analyze guest feedback.",
+      "website": "https://reviewpro.shijigroup.com",
+      "icon": "ReviewPro.svg"
+    },
+    "ReviewRail": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.reviewrail\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ReviewRail is an online review system designed to collect, manage, and display customer feedback.",
+      "website": "https://reviewrail.com/",
+      "icon": "ReviewRail.svg"
+    },
+    "ReviewSolicitors": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.reviewsolicitors\\.co\\.uk/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rs !== 'undefined' \u0026\u0026 typeof rs.getWidgetHtml !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rs.getWidgetHtml !== 'undefined';"
+        }
+      ],
+      "description": "ReviewSolicitors is a free and independent client-led review platform focusing on the UK legal market.",
+      "website": "https://www.reviewsolicitors.co.uk",
+      "icon": "ReviewSolicitors.svg"
+    },
+    "Reviewdoku": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.reviewdoku\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Reviewdoku is a review management platform that integrates with eCommerce stores to analyze customer feedback and optimize conversion rates.",
+      "website": "https://reviewdoku.com",
+      "icon": "Reviewdoku.svg"
+    },
+    "Reviewgrower": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.reviewgrower\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Reviewgrower is a white-label reputation management platform that provides tools and services to improve online presence, increase reviews, convert prospects, and boost Google rankings.",
+      "website": "https://reviewgrower.com",
+      "icon": "ReviewGrower.svg"
+    },
+    "Reviews.io": {
+      "cats": [
+        90
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof reviewsio_hasVoted !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof reviewsio_hasVoted !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof reviewsio_shareLink !== 'undefined';"
+        }
+      ],
+      "description": "Reviews.io is a review collection tool for companies to collect merchant (company) \u0026 product reviews from genuine customers, then share these on Google.",
+      "website": "https://www.reviews.io",
+      "icon": "Reviews.io.svg"
+    },
+    "Reviewshake": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.reviewshake\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Rails !== 'undefined' \u0026\u0026 typeof Rails.appUrl !== 'undefined' \u0026\u0026 Rails.appUrl === 'app\\.reviewshake\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Rails.appUrl !== 'undefined';",
+          "version": "try { return String(Rails.appUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Reviewshake is an all-in-one reputation management tool that generates reviews, enhances your brand, and monitors your reputation.",
+      "website": "https://www.reviewshake.com/",
+      "icon": "Reviewshake.svg"
+    },
+    "Rockee": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.rockee\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Rockee is a content feedback and performance platform that provides insights into audience perceptions of content.",
+      "website": "https://rockee.io",
+      "icon": "Rockee.svg"
+    },
+    "Ryviu": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.ryviu\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ryviu_global_settings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ryviu_global_settings !== 'undefined';"
+        }
+      ],
+      "description": "Ryviu is customer product reviews app for building social proof for store.",
+      "website": "https://www.ryviu.com/",
+      "icon": "Ryviu.png"
+    },
+    "SafeBuy": {
+      "cats": [
+        90
+      ],
+      "description": "SafeBuy is a platform that reviews consumer feedback, verifies site links, ensures data privacy, and checks legal compliance to generate a reliable Universal Rating for customers.",
+      "website": "https://www.safebuy.org.uk",
+      "icon": "SafeBuy.svg"
+    },
+    "Senja": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.senja\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SenjaAffiliatePoweredBy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SenjaAffiliatePoweredBy !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SenjaBuilderInitialized !== 'undefined';"
+        }
+      ],
+      "description": "Senja is a platform that enables the collection, management, and sharing of social proof to grow businesses.",
+      "website": "https://senja.io",
+      "icon": "Senja.svg"
+    },
+    "Serchen": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.serchen\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Serchen is a platform that enables buyers to search, compare and evaluate a vast quantity of vendors in an ever increasingly diverse range of industries.",
+      "website": "https://www.serchen.com",
+      "icon": "Serchen.svg"
+    },
+    "Shapo": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shapo\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _shapoLoaded !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _shapoLoaded !== 'undefined';"
+        }
+      ],
+      "description": "Shapo is a platform that simplifies the collection, management, and visualization of customer testimonials.",
+      "website": "https://shapo.io/",
+      "icon": "Shapo.svg"
+    },
+    "Shopify Product Reviews": {
+      "cats": [
+        90,
+        100
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*productreviews\\.shopifycdn\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SPR !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SPR !== 'undefined';"
+        }
+      ],
+      "description": "Shopify Product reviews allows you to add a customer review feature to your products.",
+      "website": "https://apps.shopify.com/product-reviews",
+      "icon": "Shopify.svg"
+    },
+    "ShopperApproved": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.shopperapproved\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ShopperApproved is a platform that enhances eCommerce traffic, sales, and conversions by leveraging trust signals, user-generated content, and social proof.",
+      "website": "https://www.shopperapproved.com",
+      "icon": "ShopperApproved.svg"
+    },
+    "Shoutout Testimonial": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.shoutout\\.so"
+            }
+          }
+        }
+      ],
+      "description": "Shoutout Testimonial is a platform that enables businesses to collect customer testimonials and display them on their websites through a simple and streamlined process.",
+      "website": "https://shoutout.io",
+      "icon": "ShoutoutTestimonial.svg"
+    },
+    "SiteJabber": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*biz\\.sitejabber\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Sitejabber is the leading destination for customer ratings and reviews of businesses. Consumers find ratings and read reviews to ensure they buy from the best companies.",
+      "website": "https://www.sitejabber.com/",
+      "icon": "SiteJabber.svg"
+    },
+    "SoTellUs": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//sotellus\\.com/js/sotellus_widget\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SoTellUs is a video review platform.",
+      "website": "https://sotellus.com",
+      "icon": "SoTellUs.svg"
+    },
+    "SocialJuice": {
+      "cats": [
+        90,
+        5
+      ],
+      "description": "SocialJuice is a simple tool to collect video testimonials or textual testimonials from your clients.",
+      "website": "https://socialjuice.io",
+      "icon": "SocialJuice.svg"
+    },
+    "Stamped": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.stamped\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof StampedFn !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof StampedFn !== 'undefined';"
+        }
+      ],
+      "description": "Stamped is a provider of reviews and ratings solution.",
+      "website": "https://stamped.io/",
+      "icon": "Stamped.svg"
+    },
+    "Tagshop": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.taggshop\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Tagshop is a platform that allows ecommerce brands to create, collect, and integrate user-generated content on product pages, social ads, and emails, thereby increasing sales.",
+      "website": "https://tagshop.ai/",
+      "icon": "Tagshop.svg"
+    },
+    "TestFreaks": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.testfreaks\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof applyTestFreaks !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof applyTestFreaks !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof testFreaks !== 'undefined';"
+        }
+      ],
+      "description": "TestFreaks is an impartial source that provides product and seller review content for ecommerce websites.",
+      "website": "https://www.testfreaks.com",
+      "icon": "TestFreaks.svg"
+    },
+    "Testimonial Robot": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.testimonialrobot\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Testimonial Robot is a testimonials and customer review platform.",
+      "website": "https://testimonialrobot.com",
+      "icon": "TestimonialRobot.svg"
+    },
+    "Thimatic": {
+      "cats": [
+        90,
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*thimatic-apps\\.com/product_review/.*?v=([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Thimatic is a Shopify app for product reviews.",
+      "website": "https://thimatic-apps.com/",
+      "icon": "Thimatic.png"
+    },
+    "Trusted Shops": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widgets\\.trustedshops\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Trusted Shops is a company that acts as a 3'rd party representing the common interests of both consumers and retailers.",
+      "website": "https://www.trustedshops.co.uk",
+      "icon": "Trusted Shops.svg"
+    },
+    "Trustify": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.trustify\\.ch"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof badgeGetTrustifyBadgeData !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof badgeGetTrustifyBadgeData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof initTrustifyBadge !== 'undefined';"
+        }
+      ],
+      "description": "Trustify is a platform that collects and generates customer reviews while offering marketing tools to support businesses.",
+      "website": "https://trustify.ch",
+      "icon": "Trustify.svg"
+    },
+    "Trustindex": {
+      "cats": [
+        90
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Trustindex !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Trustindex !== 'undefined';"
+        }
+      ],
+      "description": "Trustindex is a review management tool that helps businesses effectively manage and monitor customer reviews.",
+      "website": "https://www.trustindex.io",
+      "icon": "Trustindex.svg"
+    },
+    "Trustio": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.trustio\\.se"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof createTrustioIcon !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof trustioPoints !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof createTrustioIcon !== 'undefined';"
+        }
+      ],
+      "description": "Trustio is a platform that collects customer reviews on behalf of Swedish e-retailers to provide insights into their business performance.",
+      "website": "https://trustio.se",
+      "icon": "Trustio.svg"
+    },
+    "Trustpilot": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.trustpilot\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Trustpilot !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Trustpilot !== 'undefined';"
+        }
+      ],
+      "description": "Trustpilot is a Danish consumer review website which provide embed stand-alone applications in your website to show your most recent reviews, TrustScore, and star ratings.",
+      "website": "https://business.trustpilot.com",
+      "icon": "Trustpilot.svg"
+    },
+    "Trustspot": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*trustspot\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof trustspot_key !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof trustspot_key !== 'undefined';"
+        }
+      ],
+      "description": "TrustSpot provides a solution to capture ratings \u0026 reviews, video testimonials, photos, social experiences, and product Q\u0026A.",
+      "website": "https://trustspot.io/",
+      "icon": "Trustspot.png"
+    },
+    "Trustvox": {
+      "cats": [
+        90
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TrustvoxCertificateWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _trustvox_shelf_rate !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof trustvox_id !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TrustvoxCertificateWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TrustvoxRatesWidget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _trustvox !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _trustvox_colt !== 'undefined';"
+        }
+      ],
+      "description": "Trustvox collects reviews from customers who purchased ecommerce products and publishes them on product pages with Sincerity Seals.",
+      "website": "https://site.trustvox.com.br",
+      "icon": "Trustvox.png"
+    },
+    "U-KOMI": {
+      "cats": [
+        90
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GetUkomiSliderItemInfo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GetUkomiSliderItemInfo !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ukomiInstaLikeStep01 !== 'undefined';"
+        }
+      ],
+      "description": "U-KOMI is a user generated content review marketing tool.",
+      "website": "https://u-komi.com/en/",
+      "icon": "U-KOMI.svg"
+    },
+    "UGC Creative": {
+      "cats": [
+        90,
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof UgcCreativeReview !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof UgcCreativeReview !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ugcReview.prototype._display_item_count !== 'undefined';"
+        }
+      ],
+      "description": "UGC Creative is a tool that utilises reviews, Instagram, and TikTok user-generated content on websites to enhance conversion rates and customer lifetime value.",
+      "website": "https://ugc-creative.com/"
+    },
+    "VReview": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*script\\.vreview\\.tv/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof vreviewWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof vreviewWidget !== 'undefined';"
+        }
+      ],
+      "description": "VReview is an AI review marketing solution that boosts a shopping mall's purchase conversion rate by utilising customer reviews.",
+      "website": "https://vreview.tv",
+      "icon": "VReview.svg"
+    },
+    "VocalReferences": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widgets\\.vocalreferences\\.com"
+            }
+          }
+        }
+      ],
+      "description": "VocalReferences is a platform offering testimonial, review, and rating tools designed to help online businesses collect and display customer feedback.",
+      "website": "https://www.vocalreferences.com",
+      "icon": "VocalReferences.svg"
+    },
+    "Vouchley": {
+      "cats": [
+        90
+      ],
+      "description": "Vouchley is a review platform designed for freelancers, allowing them to receive and showcase client reviews to build credibility and attract more business.",
+      "website": "https://www.vouchley.com",
+      "icon": "Vouchley.svg"
+    },
+    "Wally": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.getwally\\.net"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof wallyIsEventListenerAdded !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wallyIsEventListenerAdded !== 'undefined';"
+        }
+      ],
+      "description": "Wally is a tool that imports, manages, and displays reviews from platforms like Google and Trustpilot on a website, providing social proof to enhance credibility.",
+      "website": "https://getwally.net",
+      "icon": "Wally.svg"
+    },
+    "WinLocal": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.winlocal\\.ru"
+            }
+          }
+        }
+      ],
+      "description": "WinLocal is a monitoring and feedback collection service that helps businesses track reviews and improve visibility on maps and search results.",
+      "website": "https://winlocal.ru"
+    },
+    "Wiremo": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wapi\\.wiremo\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pluginWiremoIntegration !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pluginWiremoIntegration !== 'undefined';"
+        }
+      ],
+      "description": "Wiremo is a customer review platform designed for eCommerce businesses to collect, manage, and display user-generated feedback.",
+      "website": "https://wiremo.co",
+      "icon": "Wiremo.svg"
+    },
+    "Word of Mouth": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.womo\\.com\\.au/"
+            }
+          }
+        }
+      ],
+      "description": "Word of Mouth is a feedback platform that allows users to compare reviews and ratings for various services and businesses.",
+      "website": "https://www.wordofmouth.com.au",
+      "icon": "WOMO.svg"
+    },
+    "Yotpo Reviews": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?!cdn-loyalty)\\.yotpo\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof yotpo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof yotpo !== 'undefined';"
+        }
+      ],
+      "description": "Yotpo is a user-generated content marketing platform.",
+      "website": "https://www.yotpo.com/platform/reviews/",
+      "icon": "Yotpo.svg"
+    },
+    "Zoorate": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.zoorate\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof zoorate_params !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zoorate_params !== 'undefined';"
+        }
+      ],
+      "description": "Zoorate is a user-generated content sharing service tailored for retailers, facilitating the exchange of customer experiences and feedback.",
+      "website": "https://zoorate.com",
+      "icon": "Zoorate.svg"
+    },
+    "iiQ Check": {
+      "cats": [
+        90
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.iiq-check\\.de"
+            }
+          }
+        }
+      ],
+      "description": "iiQ Check is a system designed to optimize hotel guest communication and manage review distribution.",
+      "website": "https://www.iiq-check.de",
+      "icon": "iiQCheck.svg"
+    }
+  }
+}

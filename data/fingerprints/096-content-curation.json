@@ -1,0 +1,792 @@
+{
+  "apps": {
+    "Bazaarvoice Curation": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.curalate\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*edge\\.curalate\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Bazaarvoice Curation is a content curation service Bazaarvoice provides post it's acquisition of Curalate.",
+      "website": "https://www.bazaarvoice.com/products/visual-and-social-content/",
+      "icon": "Bazaarvoice.png"
+    },
+    "CPEx": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cpexAddCMPCloseButton !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return cpexCmpVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cpexAddCMPCloseButton !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cpexCmpVersion !== 'undefined';",
+          "version": "try { return String(cpexCmpVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "CPEx is a publisher exchange system facilitating content distribution and collaboration among publishers.",
+      "website": "https://www.cpex.cz",
+      "icon": "CPEx.svg"
+    },
+    "Ceros": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ceros\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CerosMath !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cerosContext !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CerosMath !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CerosSDK !== 'undefined';"
+        }
+      ],
+      "description": "Ceros is an interactive, no-code content creation platform designed for marketers and designers to develop engaging digital experiences.",
+      "website": "https://www.ceros.com",
+      "icon": "Ceros.svg"
+    },
+    "Cevoid": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof cevoid !== 'undefined' \u0026\u0026 typeof cevoid.galleries !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cevoid_gallery.load !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cevoid_state.setSessionCookie !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cevoid.galleries !== 'undefined';"
+        }
+      ],
+      "description": "Cevoid is an all-in-one user-generated content (UGC) platform designed for e-commerce brands.",
+      "website": "https://cevoid.com",
+      "icon": "Cevoid.svg"
+    },
+    "ContentBot": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bleeper_api_key !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bleeper_user_ip_address !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bleeper_api_key !== 'undefined';"
+        }
+      ],
+      "description": "ContentBot is an AI-driven platform for creating custom content workflows, processing imports, and generating blog posts with an AI blog writer.",
+      "website": "https://contentbot.ai",
+      "icon": "ContentBot.svg"
+    },
+    "ContentGems": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.contentgems\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ContentGems !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return ContentGemsVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ContentGems !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ContentGemsVersion !== 'undefined';",
+          "version": "try { return String(ContentGemsVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "ContentGems is a no-code content discovery tool designed to help users find and curate relevant content.",
+      "website": "https://contentgems.com",
+      "icon": "ContentGems.svg"
+    },
+    "ContentStudio": {
+      "cats": [
+        96
+      ],
+      "description": "ContentStudio is an integrated cloud-based social media management and content marketing solution.",
+      "website": "https://contentstudio.io",
+      "icon": "ContentStudio.png"
+    },
+    "Contently": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _contently !== 'undefined' \u0026\u0026 typeof _contently.siteId !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _contently.siteId !== 'undefined';"
+        }
+      ],
+      "description": "Contently is a SaaS content marketing platform from the company of the same name headquartered in New York.",
+      "website": "https://contently.com",
+      "icon": "Contently.png"
+    },
+    "Contents": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.contents\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Contents is a generative AI platform that enables businesses to produce high-performing, original, and SEO-optimized content.",
+      "website": "https://www.contents.com",
+      "icon": "Contents.svg"
+    },
+    "Covet.pics": {
+      "cats": [
+        96,
+        100
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.covet\\.pics/"
+            }
+          }
+        }
+      ],
+      "description": "Covet.pics is a customizable Shopify app for Instagram and Lookbook shoppable galleries.",
+      "website": "https://covet.pics",
+      "icon": "Covet.pics.svg"
+    },
+    "Emplifi UGC": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.pixlee\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Pixlee !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pixlee !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pixlee_Analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TurnTo !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof turnToConfig !== 'undefined';"
+        }
+      ],
+      "description": "Emplifi UGC is a platform that helps brands curate, measure, and integrate user-generated content to enhance engagement, authenticity, and ecommerce performance by offering features like product page galleries, social media contests, shoppable content, and detailed analytics.",
+      "website": "https://emplifi.io/products/social-commerce/social-ugc",
+      "icon": "Emplifi.svg"
+    },
+    "FeedMagnet": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.feedmagnet\\.com"
+            }
+          }
+        }
+      ],
+      "description": "FeedMagnet is a platform that merges original content with curated third-party articles and social posts to deliver varied brand experiences.",
+      "website": "https://www.feedmagnet.com",
+      "icon": "FeedMagnet.svg"
+    },
+    "Foleon": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof foleon !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof foleon !== 'undefined';"
+        }
+      ],
+      "description": "Foleon is a content creation platform designed for business teams to produce engaging and intelligent content experiences at scale.",
+      "website": "https://www.foleon.com",
+      "icon": "Foleon.svg"
+    },
+    "Foursixty": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*foursixty\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FoursixtyEmbed !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FoursixtyEmbed !== 'undefined';"
+        }
+      ],
+      "description": "Foursixty is a widget which turns Instagram content and user-generated content into shoppable galleries.",
+      "website": "https://foursixty.com/",
+      "icon": "Foursixty.png"
+    },
+    "Frase": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof frase !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof frase !== 'undefined';"
+        }
+      ],
+      "description": "Frase is a content system powered by AI, designed to streamline content creation processes.",
+      "website": "https://www.frase.io",
+      "icon": "Frase.svg"
+    },
+    "Juicer": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.juicer\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Juicer !== 'undefined' \u0026\u0026 typeof Juicer.Active !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Juicer.Active !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof JuicerBackbone.$ !== 'undefined';"
+        }
+      ],
+      "description": "Juicer is a tool that aggregates brand hashtags and social media posts into a unified feed for websites, enabling moderation and content curation.",
+      "website": "https://www.juicer.io",
+      "icon": "Juicer.svg"
+    },
+    "Klangoo": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.klangoo\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Klangoo is an AI-based audience engagement solution designed to enhance user interaction and optimise content delivery.",
+      "website": "https://klangoo.com",
+      "icon": "Klangoo.svg"
+    },
+    "MadCap Software": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MadCap !== 'undefined' \u0026\u0026 typeof MadCap.Accessibility !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MadCap.Accessibility !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MadCap.DEBUG !== 'undefined';"
+        }
+      ],
+      "description": "MadCap Software is a company that specialises in creating software tools for technical writers to author and publish various types of content, including user manuals, online help systems, and knowledge bases.",
+      "website": "https://www.madcapsoftware.com",
+      "icon": "MadCap Software.svg"
+    },
+    "Miappi": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*web\\.miappi\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Miappi is a user-generated content platform designed to build trust and boost sales for brands.",
+      "website": "https://miappi.com",
+      "icon": "Miappi.svg"
+    },
+    "Natural Intelligence": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.naturalint\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof naturalint_tag !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof naturalint_tag !== 'undefined';"
+        }
+      ],
+      "description": "Natural Intelligence is a platform facilitating product discovery.",
+      "website": "https://www.naturalint.com/",
+      "icon": "NaturalIntelligence.svg"
+    },
+    "Nosto Visual UGC": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.stackla\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Stackla !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Stackla !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof stacklaWidgetJsonp !== 'undefined';"
+        }
+      ],
+      "description": "Nosto Visual UGC (Earlier known as Stackla) is a cloud-based content marketing platform that helps discover, curate, display and engage with user-generated content across all digital marketing platforms.",
+      "website": "https://www.nosto.com/products/visual-ugc/",
+      "icon": "Nosto.svg"
+    },
+    "Octipulse": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^octipulse$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Octipulse is a platform that helps businesses manage and publish tailored content across digital platforms, enabling them to create a personalised cross-channel experience.",
+      "website": "https://www.octipulse.com",
+      "icon": "Octipulse.svg"
+    },
+    "Olapic": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof olapic !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof olapic !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof olapic.version !== 'undefined';",
+          "version": "try { return String(olapic.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Olapic is a content marketing tool specifically focused on visual marketing content.",
+      "website": "https://www.olapic.com",
+      "icon": "Olapic.svg"
+    },
+    "Photoslurp": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Photoslurp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof photoSlurpWidgetSettings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof photoslurp_script !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof photoslurp_wdgts !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Photoslurp !== 'undefined';"
+        }
+      ],
+      "description": "Photoslurp is a visual commerce platform that collects photos and videos of customers using your products from across social networks.",
+      "website": "https://hi.photoslurp.com",
+      "icon": "Photoslurp.svg"
+    },
+    "Pixlee TurnTo": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.pixlee\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Pixlee !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pixlee !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pixlee_Analytics !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TurnTo !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof turnToConfig !== 'undefined';"
+        }
+      ],
+      "description": "Pixlee TurnTo is a social UGC, ratings and reviews, and influencer marketing platform for community-driven brands.",
+      "website": "https://pixlee.com",
+      "icon": "Pixelee TurnTo.png"
+    },
+    "Postano": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.postano\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Postano is a social content management platform that aggregates, curates, and displays user-generated content across digital channels.",
+      "website": "https://www.postano.com",
+      "icon": "Postano.svg"
+    },
+    "Rock Content": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.rockcontent\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Rock Content is a content marketing platform. It provides tools and resources for creating, distributing, and measuring content to help businesses engage their audience and achieve marketing goals.",
+      "website": "https://rockcontent.com",
+      "icon": "RockContent.svg"
+    },
+    "Scoop.it": {
+      "cats": [
+        96
+      ],
+      "description": "Scoop.it is a content marketing software company based in San Francisco which provide content curation platform.",
+      "website": "https://www.scoop.it",
+      "icon": "Scoop.it.svg"
+    },
+    "SnapSea": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.snapsea\\.io"
+            }
+          }
+        }
+      ],
+      "description": "SnapSea is a platform that displays destinations using user-generated content to highlight real-world experiences and local visuals.",
+      "website": "https://www.snapsea.io",
+      "icon": "SnapSea.svg"
+    },
+    "Sniply": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*gosniply\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sniply !== 'undefined' \u0026\u0026 typeof sniply.create_sniply_bar !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sniply.create_sniply_bar !== 'undefined';"
+        }
+      ],
+      "description": "Sniply is a special URL shortener that allows to add a call-to-action to any landing page.",
+      "website": "https://sniply.io",
+      "icon": "Sniply.svg"
+    },
+    "StoryStream": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*apps\\.storystream\\.ai/"
+            }
+          }
+        }
+      ],
+      "description": "StoryStream is a content curation platform that specialises in user generated content.",
+      "website": "https://storystream.ai",
+      "icon": "StoryStream.png"
+    },
+    "Sverve": {
+      "cats": [
+        96
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof svervdiv !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof svervdiv !== 'undefined';"
+        }
+      ],
+      "description": "Sverve is a platform facilitating content curation and social post management with targeted matchmaking services.",
+      "website": "https://www.sverve.com",
+      "icon": "Sverve.svg"
+    },
+    "Tagboard": {
+      "cats": [
+        96
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tagboard\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Tagboard is a platform which allows users to aggregate data from major social networking websites and embed, repost and redisplay it on various media.",
+      "website": "https://tagboard.com",
+      "icon": "Tagboard.svg"
+    },
+    "Tagembed": {
+      "cats": [
+        96,
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//widget\\.tagembed\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TagembedWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TagembedWidget !== 'undefined';"
+        }
+      ],
+      "description": "Tagembed is a social media aggregator that collects and displays engaging user-generated content from any social media network such as Instagram, Facebook, Twitter, Youtube, Tiktok, Google Reviews, Airbnb, and 18+ networks.",
+      "website": "https://tagembed.com",
+      "icon": "Tagembed.svg"
+    }
+  }
+}

@@ -1,0 +1,1309 @@
+{
+  "apps": {
+    "7Shifts": {
+      "cats": [
+        101
+      ],
+      "description": "7Shifts is an all-in-one team management platform designed to streamline restaurant operations, providing tools for scheduling, communication, and task management to simplify day-to-day activities for both managers and staff.",
+      "website": "https://www.7shifts.com",
+      "icon": "7Shifts.svg"
+    },
+    "Agorize": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.fs\\.agorize\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Agorize is a platform that enables businesses to identify and connect with talent through innovation challenges and collaborative programs.",
+      "website": "https://www.agorize.com",
+      "icon": "Agorize.svg"
+    },
+    "Appcast": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*click\\.appcast\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Appcast is a service that allows job advertisements on a 'pay-per-applicant' basis across a network of career and consumer sites, instead of the traditional per-click or per-post charges.",
+      "website": "https://www.appcast.io",
+      "icon": "Appcast.svg"
+    },
+    "ApplicantStack": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.applicantstack\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "ApplicantStack is a full-service applicant tracking system that automates and streamlines all stages of the hiring process.",
+      "website": "https://www.applicantstack.com",
+      "icon": "ApplicantStack.png"
+    },
+    "Avature": {
+      "cats": [
+        101
+      ],
+      "description": "Avature is a talent acquisition and talent management platform that provides solutions for recruitment, onboarding, and employee engagement.",
+      "website": "https://www.avature.net",
+      "icon": "Avature.svg"
+    },
+    "BambooHR": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.bamboohr\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.bamboohr\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof scrollToBambooHR !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof scrollToBambooHR !== 'undefined';"
+        }
+      ],
+      "description": "BambooHR is an American technology company that provides human resources software as a service.",
+      "website": "https://www.bamboohr.com",
+      "icon": "BambooHR.svg"
+    },
+    "Beamery": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.access-control-allow-headers": {
+                  "$regex": "^x-beamery"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.beamery\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Beamery is an AI platform that helps organizations transform their workforce by optimizing talent acquisition, development, and management through data-driven insights and automation.",
+      "website": "https://beamery.com",
+      "icon": "Beamery.svg"
+    },
+    "Breezy HR": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.breezy\\.hr"
+            }
+          }
+        }
+      ],
+      "description": "Breezy HR is a recruiting software and applicant tracking system designed to streamline hiring processes.",
+      "website": "https://breezy.hr",
+      "icon": "BreezyHR.svg"
+    },
+    "CATS": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cp\\.static\\.catsone\\.com"
+            }
+          }
+        }
+      ],
+      "description": "CATS is an applicant tracking system designed to help professional recruiters manage job postings, candidate applications, and hiring workflows.",
+      "website": "https://catsone.com",
+      "icon": "CATS.svg"
+    },
+    "Converzee": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.converzee\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Converzee is a digital platform created to help companies manage their human resource processes.",
+      "website": "https://converzee.com",
+      "icon": "Converzee.svg"
+    },
+    "Dover": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.dover\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Dover is a platform that streamlines recruiting by identifying and scheduling qualified candidates.",
+      "website": "https://www.dover.com",
+      "icon": "Dover.svg"
+    },
+    "DreamApply": {
+      "cats": [
+        101,
+        19
+      ],
+      "implies": [
+        "Facebook Login",
+        "Google Sign-in",
+        "Linkedin Sign-in"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.cdn\\.dreamapply\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "DreamApply is a specialised student application management system designed with and for education institutions.",
+      "website": "https://dreamapply.com",
+      "icon": "DreamApply.png"
+    },
+    "Eploy": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $Eploy !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $Eploy !== 'undefined';"
+        }
+      ],
+      "description": "Eploy is an end-to-end multilingual e-recruitment platform that helps to manage the entire recruitment process from job requisition through to onboarding.",
+      "website": "https://www.eploy.co.uk",
+      "icon": "Eploy.svg"
+    },
+    "Firefish Software": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ffControlSystem !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ffControlSystem !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof firefish !== 'undefined';"
+        }
+      ],
+      "description": "Firefish Software is a recruitment CRM for professional recruiters and recruitment agencies.",
+      "website": "https://www.firefishsoftware.com",
+      "icon": "FireFish.svg"
+    },
+    "Flip": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']apple-mobile-web-app-title[\"'][^\u003e]+content=[\"']^flip$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Flip is an employee app combining top features from popular social media platforms. It enables communication between deskless workers and those with corporate devices, offering chat, newsfeed, shift planning, timesheets, and more.",
+      "website": "https://www.getflip.com",
+      "icon": "Flip.svg"
+    },
+    "Freshteam": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.freshteam\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Freshteam is a cloud-based HR and applicant tracking solution offered by Freshworks.",
+      "website": "https://www.freshworks.com/hrms/",
+      "icon": "Freshteam.svg"
+    },
+    "Getro": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*an\\.getro\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Gentro is an automated job board and private talent network that removes the manual effort of linking individuals and companies within a network.",
+      "website": "https://www.getro.com",
+      "icon": "Getro.svg"
+    },
+    "Greenhouse": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.greenhouse\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof populateGreenhouseJobs !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof populateGreenhouseJobs !== 'undefined';"
+        }
+      ],
+      "description": "Greenhouse is an applicant tracking and hiring tool. Greenhouse features automated workflow, recruitment analytics, CRM, and onboarding.",
+      "website": "https://www.greenhouse.io",
+      "icon": "Greenhouse.svg"
+    },
+    "Hireology": {
+      "cats": [
+        101
+      ],
+      "description": "Hireology is a staffing and hiring platform for the franchise and retail-automotive industries.",
+      "website": "https://hireology.com",
+      "icon": "Hireology.png"
+    },
+    "Homerun": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof homerunI18n !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof homerunI18n !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof homerunPrivacySettings !== 'undefined';"
+        }
+      ],
+      "description": "Homerun is a platform used to organize hiring processes and manage candidate applications.",
+      "website": "https://www.homerun.co",
+      "icon": "Homerun.svg"
+    },
+    "HrFlow.ai": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hrflow\\.ai"
+            }
+          }
+        }
+      ],
+      "description": "HrFlow.ai is an HR data automation API platform.",
+      "website": "https://hrflow.ai",
+      "icon": "HrFlow.ai.svg"
+    },
+    "JBoard": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.jboard\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $JBoardAPI !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $JBoardAPI !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $jBoard.adminUserToken !== 'undefined';"
+        }
+      ],
+      "description": "JBoard is a platform for creating and managing job boards with no coding required, enabling users to post, organize, and maintain job listings.",
+      "website": "https://jboard.io",
+      "icon": "JBoard.svg"
+    },
+    "JazzHR": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.jazz\\.co/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jazzhr"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "JazzHR is SaaS recruiting software to source talent, conduct interviews and hires.",
+      "website": "https://www.jazzhr.com",
+      "icon": "JazzHR.svg"
+    },
+    "Job Board Fire": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jobboardfire\\.twic\\.pics"
+            }
+          }
+        }
+      ],
+      "description": "JobBoardFire is a platform that provides software for managing job boards, connecting entrepreneurs and community members.",
+      "website": "https://www.jobboardfire.com",
+      "icon": "JobBoardFire.svg"
+    },
+    "JobAdder": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.jobadder\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "JobAdder is a cloud-based recruitment management platform for staffing agencies and in-house corporate hiring teams.",
+      "website": "https://jobadder.com",
+      "icon": "JobAdder.png"
+    },
+    "Jobiqo": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']owner[\"'][^\u003e]+content=[\"']^jobiqo$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Jobiqo is a job board platform that enables publishers to expand reach and increase recruitment advertising revenue.",
+      "website": "https://www.jobiqo.com",
+      "icon": "Jobiqo.svg"
+    },
+    "Jobvite": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Jobvite !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Jobvite !== 'undefined';"
+        }
+      ],
+      "description": "Jobvite is an applicant tracking software and recruiting platform.",
+      "website": "https://www.jobvite.com",
+      "icon": "Jobvite.png"
+    },
+    "Jobylon": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.jobylon\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Jobylon is a flexible talent acquisition platform designed to help leading employers streamline recruitment and manage hiring processes.",
+      "website": "https://www.jobylon.com",
+      "icon": "Jobylon.svg"
+    },
+    "Lever": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.lever\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Lever is a software company headquartered in San Francisco, California and Toronto, Canada that provides an applicant tracking system for hiring.",
+      "website": "https://www.lever.co",
+      "icon": "Lever.svg"
+    },
+    "Matchlab": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*matchlabsections"
+            }
+          }
+        }
+      ],
+      "description": "Matchlab is a recruitment platform that enables employers to attract top talent by directly identifying and engaging the best candidates.",
+      "website": "https://match-lab.nl",
+      "icon": "Matchlab.svg"
+    },
+    "Mercer": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*career-analytics\\.mercer\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Mercer is a platform that supports companies in transforming talent, health, retirement, and investment strategies to enhance overall performance and outcomes.",
+      "website": "https://www.mercer.com",
+      "icon": "Mercer.svg"
+    },
+    "Moka HR": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MOKA_RETRY !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MOKA_RETRY !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _MOKA_ENV_ !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __moka__extension__kit !== 'undefined';"
+        }
+      ],
+      "description": "Moka HR is an AI-driven human resources management system offering full-module support for streamlined employee administration.",
+      "website": "https://mokahr.com",
+      "icon": "Moka.svg"
+    },
+    "Nexxt": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.nexxt\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _bydWto !== 'undefined' \u0026\u0026 typeof _bydWto.host !== 'undefined' \u0026\u0026 _bydWto.host === '\\.nexxt\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _bydWto.host !== 'undefined';",
+          "version": "try { return String(_bydWto.host || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Nexxt is a job finder-based system designed to help users search for employment opportunities by matching skills and preferences with job listings across various industries.",
+      "website": "https://www.nexxt.com",
+      "icon": "Nexxt.svg"
+    },
+    "OTYS": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OTYS !== 'undefined' \u0026\u0026 typeof OTYS.siteId !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OTYS.siteId !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof otysSelect !== 'undefined';"
+        }
+      ],
+      "description": "OTYS is a Dutch company that specialises in providing recruitment and staffing agencies with software solutions to manage their workflows, including applicant tracking systems, job board integrations, and candidate sourcing tools.",
+      "website": "https://www.otys.nl",
+      "icon": "OTYS.svg"
+    },
+    "PCRecruiter": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pcrbaseurl !== 'undefined' \u0026\u0026 pcrbaseurl === '\\.pcrecruiter\\.net/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pcrbaseurl !== 'undefined';",
+          "version": "try { return String(pcrbaseurl || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pcrdialog !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pcrframeoptions !== 'undefined';"
+        }
+      ],
+      "description": "PCRecruiter is an ATS/CRM hybrid SaaS solution for recruiting and sourcing professionals.",
+      "website": "https://www.pcrecruiter.net",
+      "icon": "PCRecruiter.png"
+    },
+    "POINT": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//pointapp\\.org(?:/.*)?(?:\\?.*)?$"
+            }
+          }
+        }
+      ],
+      "description": "POINT is a volunteer management platform and app for nonprofits to find and manage volunteers.",
+      "website": "https://pointapp.org",
+      "icon": "POINT.svg"
+    },
+    "PageUp": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*careers-static\\.pageuppeople\\.com/"
+            }
+          }
+        }
+      ],
+      "website": "https://www.pageuppeople.com",
+      "icon": "PageUp.svg"
+    },
+    "Paradox": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _applybase !== 'undefined' \u0026\u0026 _applybase === '\\.paradox\\.ai'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _applybase !== 'undefined';",
+          "version": "try { return String(_applybase || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof oliviaChatBaseUrl !== 'undefined';",
+          "version": "try { return String(oliviaChatBaseUrl || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Paradox is an AI company that helps companies capture and screen candidates, improve conversions, and answer all candidate questions.",
+      "website": "https://www.paradox.ai",
+      "icon": "Paradox.svg"
+    },
+    "Paylocity": {
+      "cats": [
+        101
+      ],
+      "description": "Paylocity is an American company which provides cloud-based payroll and human capital management software.",
+      "website": "https://www.paylocity.com",
+      "icon": "Paylocity.svg"
+    },
+    "Personio": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cdn\\.personio\\."
+            }
+          }
+        }
+      ],
+      "description": "Personio is the all-in-one HR software for small- and medium-sized companies with 10 to 2000 employees.",
+      "website": "https://www.personio.com",
+      "icon": "Personio.svg"
+    },
+    "Phenom": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.phenompeople\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Phenom is a talent relationship marketing platform.",
+      "website": "https://www.phenom.com",
+      "icon": "Phenom.svg"
+    },
+    "Radancy": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.brazenconnect\\.com/js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof brazenTechnologies !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof brazenTechnologies !== 'undefined';"
+        }
+      ],
+      "description": "Radancy is an online platform facilitating virtual hiring events and career fairs.",
+      "website": "https://www.radancy.com",
+      "icon": "Radancy.svg"
+    },
+    "Recooty Job Widget": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jobwidget\\.recooty\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RecootyWidget !== 'undefined' \u0026\u0026 typeof RecootyWidget.init !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RecootyWidget.init !== 'undefined';"
+        }
+      ],
+      "description": "Recooty Job Widget is a web integration tool that allows businesses to embed live job listings directly onto their websites.",
+      "website": "https://recooty.com/job-widget-tool",
+      "icon": "Recooty.svg"
+    },
+    "Recop": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $recop !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $recop.Event !== 'undefined';"
+        }
+      ],
+      "description": "Recop is a recruitment optimization system from Japan.",
+      "website": "https://recop.jp",
+      "icon": "Recop.svg"
+    },
+    "Recruitee": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RtApp !== 'undefined' \u0026\u0026 typeof RtApp.mapBoxToken !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RtApp.mapBoxToken !== 'undefined';"
+        }
+      ],
+      "description": "Recruitee is an integrated cloud-based recruitment management and applicant tracking system.",
+      "website": "https://recruitee.com",
+      "icon": "Recruitee.svg"
+    },
+    "Recruition": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']publisher[\"'][^\u003e]+content=[\"']^recruition[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Recruition is a software platform designed to streamline and manage the recruitment process.",
+      "website": "https://recruition.nl",
+      "icon": "Recruition.svg"
+    },
+    "Refari": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.refari\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof refari !== 'undefined' \u0026\u0026 typeof refari.load !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof refari.load !== 'undefined';"
+        }
+      ],
+      "description": "Refari is a platform that provides digital tools designed to streamline and support recruitment processes for hiring teams and agencies.",
+      "website": "https://www.refari.co",
+      "icon": "Refari.svg"
+    },
+    "Signals": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.getsignals\\.ai"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SignalsSDK !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SignalsSDK !== 'undefined';"
+        }
+      ],
+      "description": "Signals is a cloud-based platform for managing employee pipelines, handling tickets, training new hires, and scaling recruiting operations.",
+      "website": "https://getsignals.ai",
+      "icon": "Signals.svg"
+    },
+    "SmartRecruiters": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.smartrecruiters\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "SmartRecruiters is a web-based talent acquisition platform.",
+      "website": "https://www.smartrecruiters.com",
+      "icon": "SmartRecruiters.png"
+    },
+    "SnapHop": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^snaphop$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.snaphop-analytics\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "SnapHop is a recruitment marketing platform that helps organizations attract, engage, and convert job seekers through targeted employer branding and outreach strategies.",
+      "website": "https://snaphop.com",
+      "icon": "SnapHop.svg"
+    },
+    "Staffbase": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.staffbasestatic\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof staffbase !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return staffbaseIconFontVersion || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkStaffbase !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof staffbase !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof staffbaseIconFontVersion !== 'undefined';"
+        }
+      ],
+      "description": "Staffbase is an internal communications platform provider.",
+      "website": "https://staffbase.com",
+      "icon": "Staffbase.svg"
+    },
+    "Survale": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof survale !== 'undefined' \u0026\u0026 typeof survale.add_event !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof survale_site_ids !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof survale.add_event !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof survale_custom !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof survale_obj !== 'undefined';"
+        }
+      ],
+      "description": "Survale is an employer satisfaction platform.",
+      "website": "https://survale.com",
+      "icon": "Survale.svg"
+    },
+    "Talent Clue": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*careers\\.talentclue\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.talentclue\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Talent Clue is an inbound recruitment tool designed to help organizations connect with top talent.",
+      "website": "https://talentclue.com",
+      "icon": "TalentClue.svg"
+    },
+    "TalentBrew": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tbcdn\\.talentbrew\\.com"
+            }
+          }
+        }
+      ],
+      "description": "TalentBrew is a platform that streamlines the recruitment process.",
+      "website": "https://talentbrewrecruitment.co.uk",
+      "icon": "TalentBrew.svg"
+    },
+    "Talention": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.eu\\.talention\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof myTalentionConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof myTalentionConfig !== 'undefined';"
+        }
+      ],
+      "description": "Talention is a recruitment marketing software designed to help companies attract, engage, and convert job candidates through data-driven strategies and tools.",
+      "website": "https://www.talention.com",
+      "icon": "Talention.svg"
+    },
+    "Teamtailor": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Teamtailor !== 'undefined' \u0026\u0026 typeof Teamtailor.Ziggeo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Teamtailor.Ziggeo !== 'undefined';"
+        }
+      ],
+      "description": "Teamtailor is an applicant tracking system, career site and analytics dashboard combined, mobile friendly, and  all-in-one recruitment platform.",
+      "website": "https://www.teamtailor.com",
+      "icon": "teamtailor.svg"
+    },
+    "Vincere": {
+      "cats": [
+        101
+      ],
+      "description": "Vincere is an all-in-one software for recruitment agencies.",
+      "website": "https://www.vincere.io",
+      "icon": "Vincere.svg"
+    },
+    "Webscribble": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.webscribble\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Webscribble is a career platform for associations that enhances member engagement and drives revenue growth through innovative solutions.",
+      "website": "https://www.webscribble.com",
+      "icon": "Webscribble.svg"
+    },
+    "Workable": {
+      "cats": [
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunk_workable_candidate !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunk_workable_candidate !== 'undefined';"
+        }
+      ],
+      "description": "Workable is the all-in-one hiring solution.",
+      "website": "https://www.workable.com",
+      "icon": "Workable.svg"
+    },
+    "Zoho Recruit": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.zohocdn\\.com/recruit/"
+            }
+          }
+        }
+      ],
+      "description": "Zoho Recruit is a recruitment platform that integrates an applicant tracking system (ATS) with customer relationship management (CRM) functionality.",
+      "website": "https://www.zoho.com/recruit/",
+      "icon": "Zoho.svg"
+    },
+    "Zwayam": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/zwayam\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Zwayam is a recruitment software designed to manage the entire hiring process.",
+      "website": "https://www.zwayam.com",
+      "icon": "Zwayam.svg"
+    },
+    "iCIMS": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*icims\\.com"
+            }
+          }
+        }
+      ],
+      "description": "iCIMS is a talent acquisition and internal mobility platform that delivers solutions to build, retain, and scale your workforce.",
+      "website": "https://www.icims.com",
+      "icon": "iCIMS.svg"
+    },
+    "onlyfy Application Manager": {
+      "cats": [
+        101
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*prescreen\\.io/.*iframewidget\\.js"
+            }
+          }
+        }
+      ],
+      "description": "onlyfy Application Manager is applicant tracking and recruitment software formerly known as Prescreen, designed to manage hiring processes and candidate applications.",
+      "website": "https://recruiting.xing.com/en/products/application-manager",
+      "icon": "Onlyfy.svg"
+    }
+  }
+}

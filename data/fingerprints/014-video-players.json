@@ -1,0 +1,1241 @@
+{
+  "apps": {
+    "30namaPlayer": {
+      "cats": [
+        14
+      ],
+      "description": "30namaPlayer is a modified version of Video.js to work with videos on HTML using javascript.",
+      "website": "https://30nama.com/",
+      "icon": "30namaPlayer.png"
+    },
+    "Aniview Video Ad Player": {
+      "cats": [
+        14
+      ],
+      "implies": [
+        "Aniview Ad Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*player\\.aniview\\.com/script/([\\d\\.]+)/\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Aniview Video Ad Player is a video player technology developed by Aniview, a company that specialises in providing video advertising solutions.",
+      "website": "https://aniview.com/video-ad-player/",
+      "icon": "Aniview.png"
+    },
+    "Artplayer.js": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Artplayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Artplayer !== 'undefined';"
+        }
+      ],
+      "description": "Artplayer.js is an HTML5 video player that supports customizable UI, subtitles, and plugins, offering a flexible and modern video playback solution.",
+      "website": "https://artplayer.org",
+      "icon": "Artplayer.js.svg"
+    },
+    "Asciinema": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003casciinema-player"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*asciinema\\.org/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AsciinemaPlayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AsciinemaPlayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof asciinema !== 'undefined';"
+        }
+      ],
+      "description": "Asciinema is a free and open-source solution for recording terminal sessions and sharing them on the web.",
+      "website": "https://asciinema.org/",
+      "icon": "Asciinema.svg"
+    },
+    "Blinklink": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.blinklink\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Blinklink is a platform that offers enterprises AI-curated short-form video solutions.",
+      "website": "https://blinklink.com",
+      "icon": "Blinklink.svg"
+    },
+    "Brightcove": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*players\\.brightcove\\.net/"
+            }
+          }
+        }
+      ],
+      "description": "Brightcove is a cloud-based online video platform.",
+      "website": "https://www.brightcove.com",
+      "icon": "Brightcove.png"
+    },
+    "Cleeng": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.cleeng\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CleengApi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CleengApi !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cleengStatus !== 'undefined';"
+        }
+      ],
+      "description": "Cleeng is a platform that enables the sale and protection of premium video content through access control and secure streaming features.",
+      "website": "https://cleeng.com",
+      "icon": "Cleeng.svg"
+    },
+    "Clipara": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getclipara\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __clipara !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof cliparaCurrentUrl !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __clipara !== 'undefined';"
+        }
+      ],
+      "description": "Clipara is a platform that helps businesses connect with customers using video by adding video content to websites, emails, and SMS without coding.",
+      "website": "https://www.getclipara.com",
+      "icon": "Clipara.svg"
+    },
+    "Cloudflare Stream": {
+      "cats": [
+        14,
+        103
+      ],
+      "description": "Cloudflare Stream is a serverless live and on-demand video streaming platform.",
+      "website": "https://www.cloudflare.com/products/cloudflare-stream",
+      "icon": "CloudFlare.svg"
+    },
+    "Conviva": {
+      "cats": [
+        14,
+        103
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Conviva !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Conviva !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Conviva.Client !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Conviva.Client.version !== 'undefined';",
+          "version": "try { return String(Conviva.Client.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Conviva is a census, continuous measurement and engagement platform for streaming media.",
+      "website": "https://www.conviva.com",
+      "icon": "conviva.svg"
+    },
+    "DPlayer": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/dplayer\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DPlayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DPlayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DPlayer.version !== 'undefined';",
+          "version": "try { return String(DPlayer.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "DPlayer is an HTML 5 video player that supports pop-up.",
+      "website": "https://dplayer.js.org",
+      "icon": "DPlayer.png"
+    },
+    "Dailymotion": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']name[\"'][^\u003e]+content=[\"']dailymotion-domain-verification[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Dailymotion is a French video-sharing technology platform.",
+      "website": "https://www.dailymotion.com",
+      "icon": "Dailymotion.svg"
+    },
+    "Delight XR": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.delight-vr\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof DelightVR !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof DelightVR !== 'undefined';"
+        }
+      ],
+      "description": "Delight XR is a video platform catering to regular, AR, and VR content with high-quality delivery.",
+      "website": "https://delight-vr.com",
+      "icon": "DelightXR.svg"
+    },
+    "Fleeq": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FleeqSDK !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FleeqSDK !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FleeqSDKLight !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _fleeqBarSettings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _fleeqData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _fleeqWiki !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fleeqBarConfig !== 'undefined';"
+        }
+      ],
+      "description": "Fleeq is a platform facilitating the creation of training videos, followed by tracking, embedding, optimization, localization, and sharing capabilities.",
+      "website": "https://www.fleeq.io",
+      "icon": "Fleeq.svg"
+    },
+    "Flowplayer": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof flowplayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof flowplayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof flowplayer.version !== 'undefined';",
+          "version": "try { return String(flowplayer.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Flowplayer is a scalable, performance-first HTML 5 video player and platform hosting solution for publishers, broadcasters and digital media.",
+      "website": "https://flowplayer.com",
+      "icon": "Flowplayer.svg"
+    },
+    "Fluid Player": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.fluidplayer\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof fluidPlayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof fluidPlayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunkfluid_player !== 'undefined';"
+        }
+      ],
+      "description": "Fluid Player is an open-source HTML5 video player.",
+      "website": "https://www.fluidplayer.com",
+      "icon": "FluidPlayer.svg"
+    },
+    "JW Player": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.jwpcdn\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.jwplayer\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jwDefaults !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackJsonpjwplayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jwDefaults !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jwplayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jwplayerApiUrl !== 'undefined';"
+        }
+      ],
+      "description": "JW Player is a online video player with video engagement analytics, custom video player skins, and live video streaming capability.",
+      "website": "https://www.jwplayer.com",
+      "icon": "JW Player.svg"
+    },
+    "Kaltura": {
+      "cats": [
+        14,
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.kaltura\\.(?:nordu\\.net|com)/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*kalturaplayer"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Kplayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Kplayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kGetKalturaEmbedSettings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kGetKalturaPlayerList !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kalturaIframeEmbed !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof restoreKalturaKDPCallback !== 'undefined';"
+        }
+      ],
+      "description": "Kaltura is a video content management platform that allows users to upload, manage, share, publish, and stream videos.",
+      "website": "https://corp.kaltura.com",
+      "icon": "Kaltura.svg"
+    },
+    "Magisto": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.magisto\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MagistoPlayerFrame !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MagistoPlayerFrame !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof magisto_server !== 'undefined';"
+        }
+      ],
+      "description": "Magisto is a video management solution designed to help marketing professionals, agencies, and businesses of all sizes.",
+      "website": "https://www.magisto.com",
+      "icon": "Magisto.png"
+    },
+    "MediaElement.js": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mejs !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mejs !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mejs.version !== 'undefined';",
+          "version": "try { return String(mejs.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "MediaElement.js is a set of custom Flash plugins that mimic the HTML5 MediaElement API for browsers that don't support HTML5 or don't support the media codecs.",
+      "website": "https://www.mediaelementjs.com",
+      "icon": "MediaElement.js.svg"
+    },
+    "Panda Video": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tv\\.pandavideo\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pandaLoad !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pandaLoad !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pandatag !== 'undefined';"
+        }
+      ],
+      "description": "Panda Video is a video hosting platform that provide streaming, engages viewers, and supports sales growth.",
+      "website": "https://pandavideo.com",
+      "icon": "PandaVideo.svg"
+    },
+    "Plyr": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.plyr\\.io/([0-9.]+)/.+\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Plyr !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Plyr !== 'undefined';"
+        }
+      ],
+      "description": "Plyr is a simple, lightweight, accessible and customizable HTML5, YouTube and Vimeo media player that supports modern browsers.",
+      "website": "https://plyr.io",
+      "icon": "Plyr.png"
+    },
+    "Presto Player": {
+      "cats": [
+        14,
+        87
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof prestoComponents !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof prestoComponents !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof prestoPlayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof prestoPlayer.proVersion !== 'undefined';",
+          "version": "try { return String(prestoPlayer.proVersion || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Presto Player is a WordPress plugin designed for embedding optimised video and audio on WordPress websites.",
+      "website": "https://prestoplayer.com",
+      "icon": "PrestoPlayer.svg"
+    },
+    "Remotion": {
+      "cats": [
+        14
+      ],
+      "implies": [
+        "React"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof remotion_imported !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return remotion_imported || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof remotion_imported !== 'undefined';",
+          "version": "try { return String(remotion_imported || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof remotion_renderReady !== 'undefined';"
+        }
+      ],
+      "description": "Remotion is a software tool that enables the creation of videos through React programming.",
+      "website": "https://remotion.dev",
+      "icon": "Remotion.svg"
+    },
+    "Ruffle": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*[\\/@]?ruffle(?:-rs)?/ruffle\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RufflePlayer !== 'undefined' \u0026\u0026 typeof RufflePlayer.config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RufflePlayer.config !== 'undefined';"
+        }
+      ],
+      "description": "Ruffle is an open-source Flash Player emulator that allows users to view and play Flash content on modern web browsers without requiring the original Adobe Flash Player.",
+      "website": "https://ruffle.rs",
+      "icon": "Ruffle.svg"
+    },
+    "Rumble": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Rumble !== 'undefined' \u0026\u0026 typeof Rumble.gdpr !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Rumble.resize !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Rumble.gdpr !== 'undefined';"
+        }
+      ],
+      "description": "Rumble is a Canadian video-streaming platform that presents itself as an alternative to YouTube.",
+      "website": "https://rumble.com",
+      "icon": "Rumble.svg"
+    },
+    "Shaka Player": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof shaka !== 'undefined' \u0026\u0026 typeof shaka.Player !== 'undefined' \u0026\u0026 typeof shaka.Player.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return shaka.Player.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof shaka.Player.version !== 'undefined';",
+          "version": "try { return String(shaka.Player.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Shaka Player is an open-source JavaScript library for adaptive media.",
+      "website": "https://github.com/shaka-project/shaka-player",
+      "icon": "Shaka Player.png"
+    },
+    "SublimeVideo": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.sublimevideo\\.net/js/[a-z\\d]+\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sublimevideo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sublimevideo !== 'undefined';"
+        }
+      ],
+      "description": "SublimeVideo is a framework for HTML5 Video Player.",
+      "website": "https://sublimevideo.net",
+      "icon": "SublimeVideo.png"
+    },
+    "Syncle": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.videoly\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VideolyWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VideolyWidget !== 'undefined';"
+        }
+      ],
+      "description": "Syncle is a tool that automatically integrates relevant product video reviews from YouTube into online shops.",
+      "website": "https://syncle.com",
+      "icon": "Syncle.svg"
+    },
+    "Twitch Player": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Twitch !== 'undefined' \u0026\u0026 typeof Twitch.Player !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Twitch.Player !== 'undefined';"
+        }
+      ],
+      "description": "Twitch is an American video live streaming service that focuses on video game live streaming, including broadcasts of esports competitions.",
+      "website": "https://dev.twitch.tv/docs/embed/video-and-clips/",
+      "icon": "Twitch.svg"
+    },
+    "Uscreen": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof analyticsHost !== 'undefined' \u0026\u0026 analyticsHost === 'stats\\.uscreen\\.io'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof analyticsHost !== 'undefined';",
+          "version": "try { return String(analyticsHost || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Uscreen is a CMS to monetize VOD and live content. They provide site hosting, video hosting, and a payment gateway for selling video based content.",
+      "website": "https://uscreen.tv/",
+      "icon": "Uscreen.svg"
+    },
+    "VideoJS": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdnjs\\.cloudflare\\.com\\/ajax\\/libs\\/video\\.js\\/([\\d\\.]+)\\/\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*zencdn\\.net/c/video\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VideoJS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof videojs !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof videojs.VERSION !== 'undefined';",
+          "version": "try { return String(videojs.VERSION || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VideoJS !== 'undefined';"
+        }
+      ],
+      "description": "Video.js is a JavaScript and CSS library that makes it easier to work with and build on HTML5 video.",
+      "website": "https://videojs.com",
+      "icon": "VideoJS.svg"
+    },
+    "Videoly": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.videoly\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VideolyWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VideolyWidget !== 'undefined';"
+        }
+      ],
+      "description": "Videoly is a tool that automatically integrates relevant product video reviews from YouTube into online shops.",
+      "website": "https://videoly.co",
+      "icon": "Videoly.svg"
+    },
+    "Videoo.tv": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.videoo\\.tv"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof videooTVCtrlLoaded !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof videooTVCtrlLoaded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof videootv !== 'undefined';"
+        }
+      ],
+      "description": "Videoo.tv is a platform that enhances website performance and user experience through innovative video and display formats, offering advanced tools to maximize revenue generation.",
+      "website": "https://videoo.tv",
+      "icon": "VideooTv.svg"
+    },
+    "Vidjet": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app-api\\.vidjet\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Vidjet !== 'undefined' \u0026\u0026 typeof Vidjet.init !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Vidjet.init !== 'undefined';"
+        }
+      ],
+      "description": "Vidjet is a shoppable-video platform designed for modern ecommerce stores, allowing videos to be embedded on websites and triggered based on visitor actions.",
+      "website": "https://www.vidjet.com",
+      "icon": "Vidjet.svg"
+    },
+    "Vidscrip": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.vidscrip\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof addVidscripWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof addVidscripWidget !== 'undefined';"
+        }
+      ],
+      "description": "Vidscrip is a digital platform that enables physicians to communicate with patients through personalized video content, enhancing patient engagement and improving care coordination.",
+      "website": "https://studio.vidscrip.com",
+      "icon": "Vidscrip.svg"
+    },
+    "Vimeo": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Vimeo !== 'undefined' \u0026\u0026 typeof Vimeo.Player !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Vimeo.Player !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VimeoPlayer !== 'undefined';"
+        }
+      ],
+      "description": "Vimeo is a video hosting, sharing and services platform. Vimeo operation an ad-free basis by providing subscription plans.",
+      "website": "https://vimeo.com",
+      "icon": "Vimeo.svg"
+    },
+    "Vimeo OTT": {
+      "cats": [
+        14
+      ],
+      "implies": [
+        "Vimeo"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VHX !== 'undefined' \u0026\u0026 typeof VHX.config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VHX.config !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _vhx !== 'undefined';"
+        }
+      ],
+      "description": "Vimeo OTT allows brands and creators to launch their own white-label video subscription channels, where subscribers can access video content for free, as a rental, or for purchase.",
+      "website": "https://vimeo.com/ott",
+      "icon": "Vimeo.svg"
+    },
+    "Viqeo": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VIQEO !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VIQEO !== 'undefined';"
+        }
+      ],
+      "description": "Viqeo is a short video platform to make media and ecommerce more visual and interesting.",
+      "website": "https://viqeo.tv",
+      "icon": "Viqeo.svg"
+    },
+    "Widde": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy-report-only": {
+                  "$regex": "\\.widde\\.io"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.widde\\.io"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Widde is a platform that enables the use of interactive ecommerce videos on webpages, enhancing the shopping experience and providing businesses with a competitive advantage.",
+      "website": "https://widde.io",
+      "icon": "Widde.svg"
+    },
+    "Wistia": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.wistia\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Wistia !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wistiaEmbeds !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wistiaUtils !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Wistia !== 'undefined';"
+        }
+      ],
+      "description": "Wistia is designed exclusively to serve companies using video on their websites for marketing, support, and sales.",
+      "website": "https://wistia.com",
+      "icon": "Wistia.svg"
+    },
+    "Wowza Video Player": {
+      "cats": [
+        14
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WowzaPlayer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WowzaPlayer !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WowzaPlayer.jsplayer !== 'undefined';"
+        }
+      ],
+      "description": "Wowza Video Player is a robust, industry standard player that provides HTML5, HLS, MPEG-DASH, and LL-DASH playback.",
+      "website": "https://www.wowza.com/video/player",
+      "icon": "wowza.svg"
+    },
+    "YouTube": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c(?:param|embed|iframe)[^\u003e]+youtube(?:-nocookie)?\\.com/(?:v|embed)"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.youtube\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "YouTube is a video sharing service where users can create their own profile, upload videos, watch, like and comment on other videos.",
+      "website": "https://www.youtube.com",
+      "icon": "YouTube.png"
+    },
+    "jPlayer": {
+      "cats": [
+        14,
+        59
+      ],
+      "implies": [
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/jquery\\.jplayer\\.min\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jquery\\.jplayer\\.min\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jPlayerPlaylist !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jPlayerPlaylist !== 'undefined';"
+        }
+      ],
+      "description": "jPlayer is a cross-browser JavaScript library developed as a jQuery plugin which facilitates the embedding of web based media, notably HTML5 audio and video in addition to Adobe Flash based media.",
+      "website": "https://jplayer.org",
+      "icon": "jPlayer.png"
+    },
+    "thera-LINK": {
+      "cats": [
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.thera-link\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Thera Link is a telehealth video platform designed to facilitate secure virtual sessions between mental health professionals and clients.",
+      "website": "https://www.thera-link.com",
+      "icon": "TheraLink.svg"
+    }
+  }
+}

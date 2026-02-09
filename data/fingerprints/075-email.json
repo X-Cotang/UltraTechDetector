@@ -1,0 +1,559 @@
+{
+  "apps": {
+    "Amazon SES": {
+      "cats": [
+        75
+      ],
+      "implies": [
+        "Amazon Web Services"
+      ],
+      "description": "Amazon Simple Email Service (SES) is an email service that enables developers to send mail from within any application.",
+      "website": "https://aws.amazon.com/ses/",
+      "icon": "Amazon SES.svg"
+    },
+    "Aument": {
+      "cats": [
+        75,
+        98
+      ],
+      "description": "Aument is an ecommerce toolbox with easy to use marketing actions and workflows.",
+      "website": "https://aument.io",
+      "icon": "Aument.svg"
+    },
+    "BIGLIST": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^biglist inc.$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "BIGLIST is an opt-in email newsletter system designed to collect, manage, and distribute email updates to subscribers.",
+      "website": "https://www.biglist.com",
+      "icon": "BIGLIST.svg"
+    },
+    "Clearout": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.clearout\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof clearout !== 'undefined' \u0026\u0026 typeof clearout.$ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof clearout.$ !== 'undefined';"
+        }
+      ],
+      "description": "Clearout is a bulk email validation service designed to clean email lists and improve deliverability.",
+      "website": "https://clearout.io",
+      "icon": "Clearout.svg"
+    },
+    "CleverReach": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.cleverreach\\.com"
+            }
+          }
+        }
+      ],
+      "description": "CleverReach is email marketing software featuring a web form designed for newsletter creation and distribution.",
+      "website": "https://www.cleverreach.com",
+      "icon": "CleverReach.svg"
+    },
+    "Doppler": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//(?:hub|cdn)\\.fromdoppler\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Doppler is an email marketing and transactional email service.",
+      "website": "https://www.fromdoppler.com",
+      "icon": "Doppler.svg"
+    },
+    "EmailJS": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*([\\d\\.]+)?(?:/dist)?/email\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof emailjs !== 'undefined' \u0026\u0026 typeof emailjs.sendForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof emailjs.sendForm !== 'undefined';"
+        }
+      ],
+      "description": "EmailJS is a cloud-based email delivery service that allows you to send emails directly from your client-side JavaScript code without the need for a server-side implementation.",
+      "website": "https://www.emailjs.com",
+      "icon": "EmailJS.svg"
+    },
+    "Emaileri": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.emaileri\\.fi"
+            }
+          }
+        }
+      ],
+      "description": "Emaileri is a platform designed for email marketing and newsletter communications.",
+      "website": "https://www.emaileri.com",
+      "icon": "Emaileri.svg"
+    },
+    "Envoke": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.envoke\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Envoke is a CASL-compliant email marketing software designed for communications professionals in business, education, and the public sector, with a focus on security and compliance.",
+      "website": "https://envoke.com/",
+      "icon": "Envoke.svg"
+    },
+    "Goodbits": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Goodbits is email newsletter creation software designed to help collect and curate content for sending newsletters.",
+      "website": "https://goodbits.io",
+      "icon": "Goodbits.svg"
+    },
+    "INBOX": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.useinbox\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "INBOX is an email marketing system designed to create, manage, and track email campaigns for communication, promotions, or newsletters.",
+      "website": "https://useinbox.com",
+      "icon": "UseInbox.svg"
+    },
+    "Knak": {
+      "cats": [
+        75
+      ],
+      "description": "Knak is a platform that provides customisable email and landing page templates to simplify the creation of visually appealing marketing campaigns.",
+      "website": "https://knak.com",
+      "icon": "Knak.svg"
+    },
+    "Listagram": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.listagram\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LISTAGRAM !== 'undefined' \u0026\u0026 typeof LISTAGRAM.config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LISTAGRAM.config !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LISTAGRAM_CFG.base_api !== 'undefined';",
+          "version": "try { return String(LISTAGRAM_CFG.base_api || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Listagram is a list building tool which increases conversions by turning newsletter signups into a game.",
+      "website": "https://www.listagram.com",
+      "icon": "Listagram.svg"
+    },
+    "LiveIntent": {
+      "cats": [
+        75,
+        36
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.liadm\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LI !== 'undefined' \u0026\u0026 typeof LI.advertiserId !== 'undefined' \u0026\u0026 LI.advertiserId === '\\d+'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LI.advertiserId !== 'undefined';",
+          "version": "try { return String(LI.advertiserId || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "LiveIntent is an email ad monetization platform.",
+      "website": "https://www.liveintent.com",
+      "icon": "LiveIntent.svg"
+    },
+    "MageMail": {
+      "cats": [
+        75
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Mage !== 'undefined' \u0026\u0026 typeof Mage.Cookies !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MageMailData.capture_email !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MageRewards !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Mage.Cookies !== 'undefined';"
+        }
+      ],
+      "description": "MageMail is a triggered email application for Magento that helps online retailers enhance customer engagement and increase revenue.",
+      "website": "https://magemail.co",
+      "icon": "MageMail.svg"
+    },
+    "Mailercloud": {
+      "cats": [
+        75,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.mailercloud\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Mailercloud is an email marketing platform that offers tools for creating, sending, and tracking email campaigns, including automation, contact segmentation, and detailed analytics.",
+      "website": "https://www.mailercloud.com/",
+      "icon": "Mailercloud.svg"
+    },
+    "Mailgun": {
+      "cats": [
+        75
+      ],
+      "description": "Mailgun is a transactional email API service for developers.",
+      "website": "https://www.mailgun.com/",
+      "icon": "Mailgun.svg"
+    },
+    "Mailjet": {
+      "cats": [
+        75
+      ],
+      "description": "Mailjet is an email delivery service for marketing and developer teams.",
+      "website": "https://www.mailjet.com/",
+      "icon": "Mailjet.svg"
+    },
+    "Mailman": {
+      "cats": [
+        75
+      ],
+      "implies": [
+        "Python"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/mailman\\d+/static/.+\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/static/(?:hyperkitty|django-mailman3)/.+\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Mailman is free software for managing electronic mail discussion and e-newsletter lists. Mailman is integrated with the web, making it easy for users to manage their accounts and for list owners to administer their lists. Mailman supports built-in archiving, automatic bounce processing, content filtering, digest delivery, spam filters, and more.",
+      "website": "https://list.org",
+      "icon": "Mailman.svg",
+      "cpe": "cpe:2.3:a:gnu:mailman:*:*:*:*:*:*:*:*"
+    },
+    "Mailmunch": {
+      "cats": [
+        75,
+        32
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MailMunchWidgets !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MailMunchWidgets !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mailmunch !== 'undefined';"
+        }
+      ],
+      "description": "Mailmunch is a lead generation tool that combines landing pages, forms, and email marketing.",
+      "website": "https://www.mailmunch.com",
+      "icon": "Mailmunch.svg"
+    },
+    "Salesforce Marketing Cloud Email Studio": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.exacttarget\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Salesforce Marketing Cloud Email Studio is a powerful tool that allows you to build and send personalised emails.",
+      "website": "https://www.salesforce.com/products/marketing-cloud/email-marketing",
+      "icon": "Salesforce.svg"
+    },
+    "Selzy": {
+      "cats": [
+        75
+      ],
+      "description": "Selzy is an email marketing platform for sending bulk emails, tracking statistics, conducting A/B tests, and automating campaigns.",
+      "website": "https://selzy.com",
+      "icon": "Selzy.svg"
+    },
+    "Sendgrid": {
+      "cats": [
+        75
+      ],
+      "description": "SendGrid is a cloud-based email delivery platform for transactional and marketing emails.",
+      "website": "https://sendgrid.com/",
+      "icon": "SendGrid.svg"
+    },
+    "Sendloop": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.sendloop\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Sendloop is a platform that offers custom-built email marketing solutions designed to meet specific business needs.",
+      "website": "https://sendloop.com",
+      "icon": "Sendloop.svg"
+    },
+    "Sendtex": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.sendpad\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Sendtex is an email marketing platform designed to facilitate the creation, management, and distribution of email campaigns.",
+      "website": "https://sendpad.com",
+      "icon": "Sendpad.svg"
+    },
+    "SmtpJS": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/smtpjs\\.com/(?:v([\\d\\.]+)/)?smtp\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "SmtpJS is a free library you can use for sending emails from JavaScript.",
+      "website": "https://smtpjs.com",
+      "icon": "default.svg"
+    },
+    "SparkPost": {
+      "cats": [
+        75
+      ],
+      "description": "SparkPost is an email infrastructure provider.",
+      "website": "https://www.sparkpost.com/",
+      "icon": "SparkPost.svg"
+    },
+    "Upscribe": {
+      "cats": [
+        75
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Upscribe !== 'undefined' \u0026\u0026 typeof Upscribe.c !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Upscribe.c !== 'undefined';"
+        }
+      ],
+      "description": "Upscribe is a platform offering tools to create newsletter signup forms.",
+      "website": "https://upscribe.net",
+      "icon": "Upscribe.svg"
+    },
+    "Xverify": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.xverify\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof user_xverify_my_domain !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof user_xverify_my_domain !== 'undefined';"
+        }
+      ],
+      "description": "Xverify is an intelligent email verification system that helps marketers eliminate hard bounces, reduce spam complaints, and minimize fraud to improve inbox deliverability.",
+      "website": "https://www.xverify.com",
+      "icon": "Xverify.svg"
+    },
+    "Zoho Mail": {
+      "cats": [
+        75
+      ],
+      "implies": [
+        "Zoho"
+      ],
+      "description": "Zoho Mail is an email hosting service for businesses.",
+      "website": "https://www.zoho.com/mail/",
+      "icon": "Zoho.svg"
+    },
+    "iEntry": {
+      "cats": [
+        75
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.ientry\\.com"
+            }
+          }
+        }
+      ],
+      "description": "iEntry is a full-service email marketing platform offering campaign management, list building, analytics, and targeted messaging for businesses.",
+      "website": "https://www.ientry.com",
+      "icon": "iEntry.svg"
+    }
+  }
+}

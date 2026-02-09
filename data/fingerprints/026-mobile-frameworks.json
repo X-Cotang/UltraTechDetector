@@ -1,0 +1,201 @@
+{
+  "apps": {
+    "Framework7": {
+      "cats": [
+        26
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Framework7 !== 'undefined' \u0026\u0026 typeof Framework7.Component !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Framework7.Component !== 'undefined';"
+        }
+      ],
+      "description": "Framework7 is a mobile HTML framework designed for creating iOS and Android applications with a native-like user experience.",
+      "website": "https://framework7.io",
+      "icon": "Framework7.svg"
+    },
+    "Onsen UI": {
+      "cats": [
+        26
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(/.*onsen.*min\\.js|.*angular-onsenui\\.min\\.js)"
+            }
+          }
+        }
+      ],
+      "description": "Onsen UI is an open-source HTML5 hybrid app framework offering mobile UI components for PhoneGap and Cordova development.",
+      "website": "https://onsen.io",
+      "icon": "OnsenUI.svg"
+    },
+    "Wink": {
+      "cats": [
+        26,
+        12
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:_base/js/base|wink).*\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof wink !== 'undefined' \u0026\u0026 typeof wink.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return wink.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wink.version !== 'undefined';",
+          "version": "try { return String(wink.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Wink Toolkit is a JavaScript toolkit used to build mobile web apps.",
+      "website": "https://winktoolkit.org",
+      "icon": "Wink.png"
+    },
+    "jQTouch": {
+      "cats": [
+        26
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jqtouch.*\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jQT !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jQT !== 'undefined';"
+        }
+      ],
+      "description": "jQTouch is an open-source Zepto/ jQuery plugin with native animations, automatic navigation, and themes for mobile WebKit browsers like iPhone, G1 (Android), and Palm Pre.",
+      "website": "https://jqtouch.com",
+      "icon": "jQTouch.png"
+    },
+    "jQuery Mobile": {
+      "cats": [
+        26
+      ],
+      "implies": [
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jquery[.-]mobile(?:-([\\d.]))?(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1?\\1:\\2"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jQuery !== 'undefined' \u0026\u0026 typeof jQuery.mobile !== 'undefined' \u0026\u0026 typeof jQuery.mobile.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return jQuery.mobile.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jQuery.mobile.version !== 'undefined';",
+          "version": "try { return String(jQuery.mobile.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "jQuery Mobile is a HTML5-based user interface system designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.",
+      "website": "https://jquerymobile.com",
+      "icon": "jQuery Mobile.svg"
+    },
+    "jQuery-pjax": {
+      "cats": [
+        26
+      ],
+      "implies": [
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cdiv[^\u003e]+data-pjax-container"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jquery[.-]pjax(?:-([\\d.]))?(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1?\\1:\\2"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof jQuery !== 'undefined' \u0026\u0026 typeof jQuery.pjax !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof jQuery.pjax !== 'undefined';"
+        }
+      ],
+      "description": "jQuery PJAX is a plugin that uses AJAX and pushState.",
+      "website": "https://github.com/defunkt/jquery-pjax"
+    },
+    "starti.app": {
+      "cats": [
+        26
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof startiapp !== 'undefined' \u0026\u0026 typeof startiapp.App !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof startiapp.App !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof startiappAlternateIcons !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof startiappApp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof startiappUser !== 'undefined';"
+        }
+      ],
+      "description": "starti.app is a subscription-based platform that converts websites into mobile applications.",
+      "website": "https://starti.app",
+      "icon": "StartiApp.svg"
+    }
+  }
+}

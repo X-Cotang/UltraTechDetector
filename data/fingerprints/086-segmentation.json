@@ -1,0 +1,178 @@
+{
+  "apps": {
+    "Adobe Audience Manager": {
+      "cats": [
+        86
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Adobe Audience Manager is a versatile audience data management platform.",
+      "website": "https://business.adobe.com/products/audience-manager/adobe-audience-manager.html",
+      "icon": "Adobe.svg"
+    },
+    "Bloom Labs": {
+      "cats": [
+        86
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.bloom\\.li/"
+            }
+          }
+        }
+      ],
+      "description": "Bloom Labs is a local content targeting system that uses data analytics to distribute content based on geographic relevance.",
+      "website": "https://bloom.li",
+      "icon": "Bloom.svg"
+    },
+    "Omeda": {
+      "cats": [
+        86,
+        97
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*olytics\\.omeda\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Omeda is a platform that enables the creation of new products by starting with accurate audience segmentation and targeting.",
+      "website": "https://www.omeda.com",
+      "icon": "Omeda.svg"
+    },
+    "Oracle BlueKai": {
+      "cats": [
+        86
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tags\\.(?:bluekai|bkrtx)\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bluekaiLoaded !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bluekaiLoaded !== 'undefined';"
+        }
+      ],
+      "description": "Oracle BlueKai is a cloud-based big data platform that enables companies to personalise online, offline, and mobile marketing campaigns.",
+      "website": "https://www.oracle.com/cx/marketing/data-management-platform",
+      "icon": "Oracle.svg"
+    },
+    "Poltio": {
+      "cats": [
+        86
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.poltio\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Poltio is a platform enabling brands to enhance user segment understanding, driving revenue growth and fostering customer relationships.",
+      "website": "https://poltio.com",
+      "icon": "Poltio.svg"
+    },
+    "Salesforce Audience Studio": {
+      "cats": [
+        86,
+        97
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.krxd\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Krux !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Krux !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof updateKruxCookie !== 'undefined';"
+        }
+      ],
+      "description": "Salesforce Audience Studio is a customer data marketplace that only other platform users can access.",
+      "website": "https://www.salesforce.com/products/marketing-cloud/data-management",
+      "icon": "Salesforce.svg"
+    },
+    "Tealium AudienceStream": {
+      "cats": [
+        86
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tealiumiq\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Tealium AudienceStream is an omnichannel customer segmentation and real-time action engine.",
+      "website": "https://tealium.com/products/audiencestream",
+      "icon": "Tealium.png"
+    },
+    "Viafoura": {
+      "cats": [
+        86
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof dfm_viafoura_options !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dfm_viafoura_options !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof viafoura.bootstrap !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof viafoura.core !== 'undefined';"
+        }
+      ],
+      "description": "Viafoura is an audience engagement and social monetisation platform.",
+      "website": "https://viafoura.com",
+      "icon": "viafoura.svg"
+    }
+  }
+}

@@ -1,0 +1,2571 @@
+{
+  "apps": {
+    "Acquia Content Hub": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Acquia Cloud Platform"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "content-hub\\.acquia\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*content-hub\\.acquia\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Acquia Content Hub is a cloud-based, centralized content distribution and syndication service.",
+      "website": "https://www.acquia.com/products/drupal-cloud/content-hub",
+      "icon": "acquia-content-hub.png"
+    },
+    "Acquire Cobrowse": {
+      "cats": [
+        19,
+        103
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.acquire\\.io/cobrowse/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof acquireCobrowseRTC !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof acquireCobrowseRTC !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof acquireCobrowseSettings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof acquireConfigNodeServer !== 'undefined';"
+        }
+      ],
+      "description": "Acquire Cobrowse is a safe and secure method of interacting with a customer's browser without downloading any additional software.",
+      "website": "https://acquire.io/co-browsing",
+      "icon": "Acquire.svg"
+    },
+    "Admiral": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*admiral(?:-engaged|:enabled)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof admiral !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof admiral !== 'undefined';"
+        }
+      ],
+      "description": "Admiral is a Visitor Relationship Management (VRM) platform.",
+      "website": "https://www.getadmiral.com",
+      "icon": "Admiral.svg"
+    },
+    "Azure Edge Network": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.azureedge\\.net"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.azureedge\\.net/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Azure Edge Network is a global network infrastructure provided by Microsoft Azure. It is designed to deliver content, applications, and services to end-users with low latency and high performance. The Azure Edge Network consists of a combination of Azure Content Delivery Network (CDN), Azure Front Door, and Azure Traffic Manager.",
+      "website": "https://learn.microsoft.com/en-us/azure/cdn/cdn-overview",
+      "icon": "Azure.svg"
+    },
+    "Babel": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _babelPolyfill !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _babelPolyfill !== 'undefined';"
+        }
+      ],
+      "description": "Babel is a free and open-source transcompiler for writing next generation JavaScript.",
+      "website": "https://babeljs.io",
+      "icon": "Babel.svg"
+    },
+    "Buildertrend": {
+      "cats": [
+        19
+      ],
+      "website": "https://buildertrend.com",
+      "icon": "Buildertrend.svg"
+    },
+    "Buy with Prime": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Amazon Pay"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*code\\.buywithprime\\.amazon\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof bwp !== 'undefined' \u0026\u0026 typeof bwp.sku !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bwp.sku !== 'undefined';"
+        }
+      ],
+      "description": "Buy with Prime is a feature offered by Amazon that allows Amazon Prime members to make purchases with the benefits associated with their Prime membership.",
+      "website": "https://buywithprime.amazon.com"
+    },
+    "CoConstruct": {
+      "cats": [
+        19
+      ],
+      "website": "https://www.coconstruct.com",
+      "icon": "CoConstruct.png"
+    },
+    "Cocos2d": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CocosEngine !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return CocosEngine || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CocosEngine !== 'undefined';",
+          "version": "try { return String(CocosEngine || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Cocos2d is a mature open source cross-platform game development framework.",
+      "website": "https://www.cocos.com/en/cocos2dx",
+      "icon": "Cocos2d.png"
+    },
+    "CopyPoison": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*copypoison\\.com/cp\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Copypoison is a plagarism protection tool that protects content by replacing text with symbols that are visually similar.",
+      "website": "https://copypoison.com/",
+      "icon": "Copypoison.png"
+    },
+    "DocuSign": {
+      "cats": [
+        19
+      ],
+      "description": "DocuSign allows organisations to manage electronic agreements.",
+      "website": "https://www.docusign.com",
+      "icon": "DocuSign.svg"
+    },
+    "Douban": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*movie\\.douban\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof doubanmovie !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof doubanmovie !== 'undefined';"
+        }
+      ],
+      "description": "Douban is a Chinese social sharing service for recording books, movies, and music.",
+      "website": "https://m.douban.com",
+      "icon": "Douban.svg"
+    },
+    "ELOG": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003ctitle\u003eelog logbook selection\u003c/title\u003e"
+            }
+          }
+        }
+      ],
+      "website": "https://midas.psi.ch/elog",
+      "icon": "ELOG.png"
+    },
+    "EPrints": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']eprints ([\\d.]+)\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof EPJS_menu_template !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EPJS_menu_template !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EPrints !== 'undefined';"
+        }
+      ],
+      "website": "https://www.eprints.org",
+      "icon": "EPrints.png"
+    },
+    "Exo Platform": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof eXo !== 'undefined' \u0026\u0026 typeof eXo.core !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof eXo.core !== 'undefined';"
+        }
+      ],
+      "description": "Exo Platform is a social-collaboration software designed for enterprises.",
+      "website": "https://www.exoplatform.com",
+      "icon": "ExoPlatform.svg"
+    },
+    "Freedom Farmers": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//freedomfarmers\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Freedom Farmers is a micro farm platform designed for individuals interested in growing food, starting an agricultural business, or gaining access to land.",
+      "website": "https://freedomfarmers.com",
+      "icon": "FreedomFarmers.svg"
+    },
+    "GoAnywhere": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "goanywhere"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof appContainer !== 'undefined' \u0026\u0026 appContainer === 'GoAnywhereWebClientContainer'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof appContainer !== 'undefined';",
+          "version": "try { return String(appContainer || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "GoAnywhere by HelpSystems is a Managed File Transfer (MFT) system with sharing and collaboration features",
+      "website": "https://www.goanywhere.com/",
+      "icon": "goanywhere.png"
+    },
+    "GoKwik": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof gokwikBuyNow !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gokwikBuyNow !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gokwikCheckoutApp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gokwikSdk !== 'undefined';"
+        }
+      ],
+      "description": "GoKwik is a platform for solving shopping experience problems on ecommerce websites on the internet.",
+      "website": "https://www.gokwik.co",
+      "icon": "GoKwik.svg"
+    },
+    "Godot": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "WebAssembly"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GODOT_CONFIG !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GODOT_CONFIG !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Godot !== 'undefined';"
+        }
+      ],
+      "description": "Godot is a game engine that supports exporting to HTML5 with WebAssembly compatibility.",
+      "website": "https://godotengine.org",
+      "icon": "Godot.svg"
+    },
+    "Google Cloud Storage": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Google Cloud"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-goog-storage-class": {
+              "$regex": "^\\w+$"
+            }
+          }
+        }
+      ],
+      "description": "Google Cloud Storage allows world-wide storage and retrieval of any amount of data at any time.",
+      "website": "https://cloud.google.com/storage",
+      "icon": "google-cloud-storage.svg"
+    },
+    "Google Code Prettify": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof prettyPrint !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof prettyPrint !== 'undefined';"
+        }
+      ],
+      "website": "https://code.google.com/p/google-code-prettify",
+      "icon": "Google.svg"
+    },
+    "Gravatar": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c[^\u003e]+gravatar\\.com/avatar/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Gravatar !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Gravatar !== 'undefined';"
+        }
+      ],
+      "description": "Gravatar is a service for providing globally unique avatars.",
+      "website": "https://gravatar.com",
+      "icon": "Gravatar.png"
+    },
+    "HTTP/2": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.alt-svc": {
+                  "$regex": "h2"
+                }
+              },
+              {
+                "headers.x-firefox-spdy": {
+                  "$regex": "h2"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "HTTP/2 (originally named HTTP/2.0) is a major revision of the HTTP network protocol used by the World Wide Web.",
+      "website": "https://http2.github.io",
+      "icon": "HTTP2.svg"
+    },
+    "HTTP/3": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-firefox-http3": {
+                  "$regex": "h3"
+                }
+              },
+              {
+                "headers.alt-svc": {
+                  "$regex": "h3"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "HTTP/3 is the third major version of the Hypertext Transfer Protocol used to exchange information on the World Wide Web.",
+      "website": "https://httpwg.org/",
+      "icon": "HTTP3.svg"
+    },
+    "HarborByte": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.access-control-allow-origin": {
+                  "$regex": "harborbyte\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']content-security-policy[\"'][^\u003e]+content=[\"']harborbyte-media-assets\\.pages\\.dev[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^website by harborbyte$[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "HarborByte is a small business website platform that provides templated sites with integrated ecommerce, marketing, and hosting solutions.",
+      "website": "https://harborbyte.com",
+      "icon": "HarborByte.svg"
+    },
+    "Hasura": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "GraphQL"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.hasura\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "Hasura is an open-source engine that enables developers to effortlessly create real-time GraphQL APIs by auto-generating them from existing database schemas.",
+      "website": "https://hasura.io",
+      "icon": "Hasura.svg",
+      "cpe": "cpe:2.3:a:hasura:graphql_engine:*:*:*:*:*:*:*:*"
+    },
+    "History": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/history(@|/)([\\d.]+)(?:/[a-z]+)?/history(?:(.production|.development))?(?:.min)?\\.js\\;version:\\2"
+            }
+          }
+        }
+      ],
+      "description": "Manage session history with JavaScript",
+      "website": "https://github.com/ReactTraining/history"
+    },
+    "IconScout": {
+      "cats": [
+        19
+      ],
+      "description": "IconScout is a platform that offers a diverse collection of high-quality icons and design resources for creative professionals, allowing them to enhance their projects with visually appealing elements.",
+      "website": "https://iconscout.com",
+      "icon": "IconScout.svg"
+    },
+    "Issuu": {
+      "cats": [
+        19,
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.issuu\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof IssuuReaders !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof IssuuReaders !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof issuuPanel !== 'undefined';"
+        }
+      ],
+      "description": "Issuu is a digital discovery and publishing platform.",
+      "website": "https://issuu.com",
+      "icon": "Issuu.svg"
+    },
+    "Jade": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof JADE !== 'undefined' \u0026\u0026 typeof JADE.components !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof JADE.components !== 'undefined';"
+        }
+      ],
+      "description": "Jade is a templating engine primarily used for server-side templating in NodeJS.",
+      "website": "https://jade-lang.com",
+      "icon": "Jade.svg"
+    },
+    "Jive": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-jive-flow-id": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-jive-request-id": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-jive-user-id": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-jsl": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-jive-chrome-wrapped": {
+                  "$exists": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://www.jivesoftware.com",
+      "icon": "Jive.png"
+    },
+    "JobberBase": {
+      "cats": [
+        19,
+        101
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']jobberbase[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Jobber !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Jobber !== 'undefined';"
+        }
+      ],
+      "description": "Jobberbase is an open-source job board platform that enables the creation of job sites.",
+      "website": "https://www.jobberbase.com",
+      "icon": "JobberBase.png"
+    },
+    "K2": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Joomla"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c!--(?: joomlaworks \"k2\"| start k2)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof K2RatingURL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof K2RatingURL !== 'undefined';"
+        }
+      ],
+      "website": "https://getk2.org",
+      "icon": "K2.png"
+    },
+    "Kakao": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.kakao\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Kakao !== 'undefined' \u0026\u0026 typeof Kakao.VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Kakao.VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Kakao.VERSION !== 'undefined';",
+          "version": "try { return String(Kakao.VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Kakao platform provides various services such as Kakao Talk, Kakao Talk Channel, Kakao Story as well as Kakao Pay, Kakao Commerce, Kakao Page provided by the subsidiaries. Users can use all Kakao platform services with a united account called Kakao Account.",
+      "website": "https://developers.kakao.com/product",
+      "icon": "Kakao.svg"
+    },
+    "Klaviyo Customer Hub": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof customerHub !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof customerHub !== 'undefined';"
+        }
+      ],
+      "description": "Klaviyo Customer Hub gives customers a unified signed-in experience to track orders, manage returns, and get help",
+      "website": "https://www.klaviyo.com/products/customer-experience-hub",
+      "icon": "Klaviyo.svg"
+    },
+    "Lengow": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.lengow\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Lengow is an ecommerce automation solution that enables brands and retailers to integrate, structure and optimise their product content across all distribution channels: marketplaces, comparison shopping engines, affiliate platforms, display and retargeting.",
+      "website": "https://www.lengow.com",
+      "icon": "Lengow.svg"
+    },
+    "Less": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003clink[^\u003e]+ rel=\"stylesheet/less\""
+            }
+          }
+        }
+      ],
+      "website": "https://lesscss.org",
+      "icon": "Less.png"
+    },
+    "Libravatar": {
+      "cats": [
+        19
+      ],
+      "description": "Libravatar is a service for fetching avatar images for e-mail addresses and OpenIDs in a privacy respecting way.",
+      "website": "https://www.libravatar.org/",
+      "icon": "libravatar.png"
+    },
+    "Loqate": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof loqateAccountCode !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loqateAccountCode !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pca.platform.productList !== 'undefined';"
+        }
+      ],
+      "description": "Loqate is an address verification solution.",
+      "website": "https://www.loqate.com",
+      "icon": "Loqate.svg"
+    },
+    "LottieFiles": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/dist/lottie-player\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/dist/tgs-player\\.js"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof lottie !== 'undefined' \u0026\u0026 typeof lottie.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return lottie.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lottie.version !== 'undefined';",
+          "version": "try { return String(lottie.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "LottieFiles is an open-source animation file format that's tiny, high quality, interactive, and can be manipulated at runtime.",
+      "website": "https://lottiefiles.com",
+      "icon": "LottieFiles.svg"
+    },
+    "Magewire": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Laravel",
+        "Livewire"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Magewire !== 'undefined' \u0026\u0026 typeof Magewire.connection-author !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Magewire.connection-author !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof magewire !== 'undefined';"
+        }
+      ],
+      "description": "Magewire is a Laravel Livewire port for Magento 2.",
+      "website": "https://github.com/magewirephp/magewire"
+    },
+    "MemberSpace": {
+      "cats": [
+        19,
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*memberspace\\.com(?:\\/widget)?(?:\\/\\w{0,25})?(?:\\/scripts)?(?:\\/widgets)?(?:\\/main)?\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof MemberSpace !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MemberSpace !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof MemberSpaceParams !== 'undefined';"
+        }
+      ],
+      "description": "MemberSpace is a cloud-based membership solution, which allows users to provide role-based access to content.",
+      "website": "https://www.memberspace.com",
+      "icon": "MemberSpace.svg"
+    },
+    "Mentaya": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']mentaya[\"']"
+            }
+          }
+        }
+      ],
+      "description": "Mentaya is a platform that simplifies mental health care by leveraging out-of-network benefits to reduce patient costs while ensuring therapists receive full fees.",
+      "website": "https://www.mentaya.com",
+      "icon": "Mentaya.svg"
+    },
+    "Meticular": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*analytics\\.metikular\\.ch"
+            }
+          }
+        }
+      ],
+      "description": "Meticular is a Swiss platform that provides business solutions and services to support organizational operations.",
+      "website": "https://www.metikular.ch",
+      "icon": "Meticular.svg"
+    },
+    "Microsoft Silverlight": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SILVERLIGHT_SUPPORTED !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SILVERLIGHT_SUPPORTED !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Silverlight.getSilverlight !== 'undefined';"
+        }
+      ],
+      "description": "Microsoft Silverlight is a cross-browser, cross-platform plug-in designed for delivering advanced .NET-based media experiences.",
+      "website": "http://silverlight.net",
+      "icon": "MicrosoftSilverlight.svg"
+    },
+    "Module Federation": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Webpack"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*container initialization failed as it has already been initialized with a different share scope"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*data-webpack\\;confidence:50"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Module Federation is a webpack technology for dynamically loading parts of other independently deployed builds.",
+      "website": "https://webpack.js.org/concepts/module-federation/",
+      "icon": "Webpack.svg"
+    },
+    "Moon Organizer": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.moonorganizer\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Moon Organizer is a platform that tracks lunar cycles, phases, and moon-related events to support planning and provide timely updates.",
+      "website": "https://moonorganizer.com",
+      "icon": "MoonOrganizer.svg"
+    },
+    "MoverBase": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*lead\\.moverbase\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "MoverBase is a software solution that includes features designed to support the management of a moving company.",
+      "website": "https://www.moverbase.com",
+      "icon": "MoverBase.svg"
+    },
+    "NewStore": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.api\\.highstreetapp\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof highstreetBanner !== 'undefined' \u0026\u0026 typeof highstreetBanner.config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof highstreetBanner.config !== 'undefined';"
+        }
+      ],
+      "description": "NewStore is the only integrated platform offering omnichannel solutions for stores and consumers.",
+      "website": "https://www.newstore.com",
+      "icon": "NewStore.png"
+    },
+    "Nido Tecnologia": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^nido tecnologia$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.nidoimovel\\.com\\.br"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Nido Tecnologia is a platform that provides software solutions for the real estate industry in Brazil.",
+      "website": "https://www.nido.com.br",
+      "icon": "NidoTecnologia.svg"
+    },
+    "Nogin": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.nogin\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof nogin !== 'undefined' \u0026\u0026 typeof nogin.wishlist !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof nogin.wishlist !== 'undefined';"
+        }
+      ],
+      "description": "Nogin is a platform operating as Commerce-as-a-Service (CaaS), offering cloud-based ecommerce functionalities and infrastructure for seamless integration and development of ecommerce solutions.",
+      "website": "https://www.nogin.com",
+      "icon": "Nogin.png"
+    },
+    "Open Graph": {
+      "cats": [
+        19
+      ],
+      "description": "Open Graph is a protocol that is used to integrate any web page into the social graph.",
+      "website": "https://ogp.me",
+      "icon": "Open Graph.png"
+    },
+    "OpenGrok": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']opengrok(?: v?([\\d.]+))?\\;version:\\1[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://hub.opensolaris.org/bin/view/Project+opengrok/WebHome",
+      "icon": "OpenGrok.png"
+    },
+    "Oracle Dynamic Monitoring Service": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Oracle WebLogic Server"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-oracle-dms-ecid": {
+              "$exists": true
+            }
+          }
+        }
+      ],
+      "description": "Oracle Dynamic Monitoring Service is a feature of Oracle WebLogic Server that provides real-time monitoring and diagnostic capabilities for Java applications running on the WebLogic Server.",
+      "website": "https://oracle.com",
+      "icon": "Oracle.svg"
+    },
+    "PDF.js": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c\\/div\u003e\\s*\u003c!-- outercontainer --\u003e\\s*\u003cdiv\\s*id=\"printcontainer\"\u003e\u003c\\/div\u003e"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PDFJS !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return pdfjsDistBuildPdf.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PDFJS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PDFJS.version !== 'undefined';",
+          "version": "try { return String(PDFJS.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _pdfjsCompatibilityChecked !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pdfjsDistBuildPdf.version !== 'undefined';",
+          "version": "try { return String(pdfjsDistBuildPdf.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pdfjsLib.version !== 'undefined';",
+          "version": "try { return String(pdfjsLib.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "website": "https://mozilla.github.io/pdf.js/",
+      "icon": "PDF.js.svg"
+    },
+    "PWA": {
+      "cats": [
+        19
+      ],
+      "description": "Progressive Web Apps (PWAs) are web apps built and enhanced with modern APIs to deliver enhanced capabilities, reliability, and installability while reaching anyone, anywhere, on any device, all with a single codebase.",
+      "website": "https://web.dev/progressive-web-apps/",
+      "icon": "PWA.svg"
+    },
+    "ParkingCrew": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*var\\slink\\s=\\s'www\\.parkingcrew\\.net'"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pcrewAdloaded !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pcrewAdloaded !== 'undefined';"
+        }
+      ],
+      "description": "ParkingCrew is a direct navigation monetisation provider.",
+      "website": "https://www.parkingcrew.com",
+      "icon": "ParkingCrew.png"
+    },
+    "Permutive": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.permutive\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof permutive !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof permutive !== 'undefined';"
+        }
+      ],
+      "description": "Permutive is a publisher-focused data management platform.",
+      "website": "https://permutive.com",
+      "icon": "Permutive.png"
+    },
+    "Pixc": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//pixc\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Pixc is human powered image editing platform.",
+      "website": "https://pixc.com",
+      "icon": "Pixc.svg"
+    },
+    "Popper": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/popper(?:\\.min)?\\.js(?:/([0-9.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*popperjs(?:/|-)core(?:@|-)([\\d\\.]+)\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Popper !== 'undefined' \u0026\u0026 typeof Popper.Defaults !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Popper.Defaults !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Popper.applyStyles !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof createPopper !== 'undefined';"
+        }
+      ],
+      "description": "Popper is a positioning engine, its purpose is to calculate the position of an element to make it possible to position it near a given reference element.",
+      "website": "https://popper.js.org",
+      "icon": "Popper.svg"
+    },
+    "Porch": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.porch\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Porch is a moving management system that simplifies moving, insurance, and home improvement processes.",
+      "website": "https://porch.com",
+      "icon": "Porch.svg"
+    },
+    "Prefix-Free": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*prefixfree\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PrefixFree !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PrefixFree !== 'undefined';"
+        }
+      ],
+      "website": "https://leaverou.github.io/prefixfree/",
+      "icon": "Prefix-Free.png"
+    },
+    "Prism": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*prism\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Prism !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return apex.libVersions.prismJs || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Prism !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof apex.libVersions.prismJs !== 'undefined';",
+          "version": "try { return String(apex.libVersions.prismJs || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Prism is an extensible syntax highlighter.",
+      "website": "https://prismjs.com",
+      "icon": "Prism.svg"
+    },
+    "Product Hunt": {
+      "cats": [
+        19
+      ],
+      "description": "Product Hunt is a community-based website that allows makers and marketers to launch their products or services and get in touch with their first real users.",
+      "website": "https://www.producthunt.com",
+      "icon": "Product Hunt.svg"
+    },
+    "Progress MOVEit": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-moveitisapi-version": {
+                  "$regex": "^(.+)$\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']apple-itunes-app[\"'][^\u003e]+content=[\"']app-id=1500056420[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']google-play-app[\"'][^\u003e]+content=[\"']app-id=com\\.progress\\.moveit\\.transfer\\.dev\\.appid[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Progress MOVEit is a managed file transfer solution that enables secure and compliant transfer of sensitive files while providing automation, central management, and auditing capabilities.",
+      "website": "https://www.progress.com/moveit",
+      "icon": "Progress.svg"
+    },
+    "Progress WS_FTP": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/thinclient/(?:wtm|webresource)(?:\\.axd|/public)\\;confidence:60"
+            }
+          }
+        }
+      ],
+      "description": "Progress WS_FTP is a file transfer client software developed by Progress Software Corporation, supporting FTP, FTPS, SFTP, and HTTPS protocols with features like drag-and-drop support, file synchronization, and encrypted data transmission.",
+      "website": "https://www.progress.com/ws_ftp",
+      "icon": "Progress.svg",
+      "cpe": "cpe:2.3:a:progress:ws_ftp_server:*:*:*:*:*:*:*:*"
+    },
+    "PyData Sphinx Theme": {
+      "cats": [
+        19
+      ],
+      "description": "PyData Sphinx Theme is a styling template for Sphinx documentation tailored to PyData projects.",
+      "website": "https://pydata-sphinx-theme.readthedocs.io/",
+      "icon": "PyData Sphinx Theme.svg"
+    },
+    "PyScript": {
+      "cats": [
+        19
+      ],
+      "description": "PyScript is a python script that can be run in the browser using a mix of Python and standard HTML.",
+      "website": "https://pyscript.net",
+      "icon": "PyScript.svg"
+    },
+    "Pygments": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003clink[^\u003e]+pygments\\.css[\"']"
+            }
+          }
+        }
+      ],
+      "website": "https://pygments.org",
+      "icon": "pygments.png",
+      "cpe": "cpe:2.3:a:pygments:pygments:*:*:*:*:*:*:*:*"
+    },
+    "RSS": {
+      "cats": [
+        19
+      ],
+      "description": "RSS is a family of web feed formats used to publish frequently updated works—such as blog entries, news headlines, audio, and video—in a standardized format.",
+      "website": "https://www.rssboard.org/rss-specification",
+      "icon": "RSS.svg"
+    },
+    "Recurate": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\"(?:vendor|title)?\"\\:\"recurate\""
+            }
+          }
+        }
+      ],
+      "description": "Recurate is a tech-enabled resale service that empowers brands \u0026 retailers to establish their own integrated resale platforms directly on their ecommerce sites.",
+      "website": "https://www.recurate.com",
+      "icon": "Recurate.svg"
+    },
+    "ResponsiveVoice": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof responsiveVoice !== 'undefined' \u0026\u0026 typeof responsiveVoice.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return responsiveVoice.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof responsiveVoice.version !== 'undefined';",
+          "version": "try { return String(responsiveVoice.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "ResponsiveVoice is a Text-To-Speech API supported in 51 languages.",
+      "website": "https://responsivevoice.org",
+      "icon": "ResponsiveVoice.png"
+    },
+    "RobixCM Generator": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']robixcm[\"'][^\u003e]+content=[\"']robixcm[\"']"
+            }
+          }
+        }
+      ],
+      "description": "RobixCM Generator is a service specializing in designing, developing, updating, and managing websites and online services.",
+      "website": "https://robixcm.ir",
+      "icon": "Robixcm.png"
+    },
+    "Rspack": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Rust"
+      ],
+      "description": "Rspack is a JavaScript bundler written in Rust, offering faster build times and compatibility with the Webpack ecosystem​.",
+      "website": "https://www.rspack.dev",
+      "icon": "Rspack.svg"
+    },
+    "SOBI 2": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Joomla"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "(?:\u003c!-- start of sigsiu online business index|\u003cdiv[^\u003e]* class=\"sobi2)"
+            }
+          }
+        }
+      ],
+      "website": "https://www.sigsiu.net/sobi2.html",
+      "icon": "SOBI 2.png"
+    },
+    "SPDY": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-firefox-spdy": {
+              "$regex": "\\d\\.\\d"
+            }
+          }
+        }
+      ],
+      "website": "https://chromium.org/spdy",
+      "icon": "SPDY.png"
+    },
+    "SWC": {
+      "cats": [
+        19
+      ],
+      "description": "SWC is an extensible Rust-based platform for the next generation of fast developer tools.",
+      "website": "https://swc.rs",
+      "icon": "swc.svg"
+    },
+    "SWFObject": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*swfobject.*\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SWFObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SWFObject !== 'undefined';"
+        }
+      ],
+      "description": "SWFObject is an open-source JavaScript library used to embed Adobe Flash content onto web pages.",
+      "website": "https://github.com/swfobject/swfobject",
+      "icon": "SWFObject.png"
+    },
+    "Sentara": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.sentara\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Sentara is a nonprofit healthcare system focused on improving health through integrated care delivery.",
+      "website": "https://www.sentara.com",
+      "icon": "Sentara.svg"
+    },
+    "ServiceNow": {
+      "cats": [
+        19
+      ],
+      "description": "ServiceNow is a cloud computing platform to help companies manage digital workflows for enterprise operations.",
+      "website": "https://www.servicenow.com",
+      "icon": "ServiceNow.svg"
+    },
+    "Sharper MMS": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.sharpermms\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Sharper MMS is a provider of marina management services, focusing on operations and maintenance for marina facilities.",
+      "website": "https://sharpermms.com",
+      "icon": "SharperMMS.svg"
+    },
+    "SheerID": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.sheerid\\.com"
+                }
+              },
+              {
+                "headers.content-security-policy-report-only": {
+                  "$regex": "\\.sheerid\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\"sheeridendpoint\":"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SheerID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SheerID !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sheerid !== 'undefined';"
+        }
+      ],
+      "description": "SheerID is a highly specialised solution offering online verification support for retailers, marketers and service providers.",
+      "website": "https://www.sheerid.com/",
+      "icon": "SheerID.png"
+    },
+    "ShoppingFeeder": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sfdrOrderData !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sfdrOrderData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sfdrUniqid !== 'undefined';"
+        }
+      ],
+      "description": "ShoppingFeeder is a feed management solution for online retailers.",
+      "website": "https://sfdr.co",
+      "icon": "ShoppingFeeder.png"
+    },
+    "Slidebean": {
+      "cats": [
+        19
+      ],
+      "description": "Slidebean is an all-in-one pitch deck software designed to streamline the creation, design, and presentation of business pitches.",
+      "website": "https://slidebean.com",
+      "icon": "Slidebean.svg"
+    },
+    "SobiPro": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Joomla"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SobiProUrl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SobiProUrl !== 'undefined';"
+        }
+      ],
+      "website": "https://sigsiu.net/sobipro.html",
+      "icon": "SobiPro.png"
+    },
+    "Splunkd": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.server": {
+              "$regex": "splunkd"
+            }
+          }
+        }
+      ],
+      "description": "Splunkd is the system process that handles indexing, searching, forwarding.",
+      "website": "https://splunk.com",
+      "icon": "Splunk.svg"
+    },
+    "Spotify Web API": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof getSpotifyData !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof spotifyme !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof getSpotifyData !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof spotify_tracks !== 'undefined';"
+        }
+      ],
+      "description": "Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue.",
+      "website": "https://developer.spotify.com/documentation/web-api",
+      "icon": "Spotify.svg"
+    },
+    "Sprig plugin": {
+      "cats": [
+        19
+      ],
+      "description": "Sprig is a free plugin for Craft CMS that allows you to create reactive components from Twig templates ​or PHP classes.",
+      "website": "https://putyourlightson.com/plugins/sprig",
+      "icon": "Sprig plugin.svg"
+    },
+    "SyntaxHighlighter": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c(?:script|link)[^\u003e]*sh(?:core|brush|themedefault)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SyntaxHighlighter !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SyntaxHighlighter !== 'undefined';"
+        }
+      ],
+      "website": "https://github.com/syntaxhighlighter",
+      "icon": "SyntaxHighlighter.png"
+    },
+    "T1 Comercios": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^t1comercios$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "T1 Comercios is an integrator platform with marketplaces(https://www.claroshop.com/,https://www.sears.com.mx/,https://www.sanborns.com.mx/).",
+      "website": "https://www.t1comercios.com",
+      "icon": "T1 Comercios.svg"
+    },
+    "Tapcart": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tapcart\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Tapcart !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tapcartwebBanner !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Tapcart !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof tapcartParams !== 'undefined';"
+        }
+      ],
+      "description": "Tapcart is a mobile commerce SaaS platform that integrates directly with Shopify.",
+      "website": "https://tapcart.com",
+      "icon": "Tapcart.svg"
+    },
+    "Threadles": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^threadles$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*web\\.threadles\\.net/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Threadles is a social networking platform that uses advanced AI-driven algorithms to enhance digital interaction.",
+      "website": "https://threadles.net",
+      "icon": "Threadles.svg"
+    },
+    "TocToc": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.toctoc\\.me/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _toctoc !== 'undefined' \u0026\u0026 typeof _toctoc.close !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _toctoc.close !== 'undefined';"
+        }
+      ],
+      "description": "Tolstoy is a BPM platform enabling the modeling, automation, and optimization of business processes, simplifying workflows and expediting tasks.",
+      "website": "https://www.toctoc.me",
+      "icon": "TocToc.svg"
+    },
+    "Toky": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.toky\\.co/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TokyBase64 !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TokyBase64 !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TokyBusiness !== 'undefined';"
+        }
+      ],
+      "description": "Toky is a phone system that integrates across devices, enabling calls and messages through phone, app, or desktop.",
+      "website": "https://toky.co",
+      "icon": "Toky.svg"
+    },
+    "Track Hospitality Software": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.trackhs\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "TRACK Hospitality Software is a provider of property management and hospitality SaaS solutions for managing operations in the hospitality industry.",
+      "website": "https://trackhs.com",
+      "icon": "TrackHS.svg"
+    },
+    "TripIt": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.tripit\\.com"
+            }
+          }
+        }
+      ],
+      "description": "TripIt is a travel management platform that organizes travel plans and consolidates details in one place.",
+      "website": "https://www.tripit.com",
+      "icon": "TripIt.svg"
+    },
+    "Venly": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']application-name[\"'][^\u003e]+content=[\"']^venly$[\"']"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VenlyConnect !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VenlyConnect !== 'undefined';"
+        }
+      ],
+      "description": "Venly is a blockchain technology provider creating products to help companies succeed in Web3.",
+      "website": "https://www.venly.io",
+      "icon": "Venly.svg"
+    },
+    "Vite": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __vite_is_modern_browser !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __vite_is_modern_browser !== 'undefined';"
+        }
+      ],
+      "description": "Vite is a rapid development tool for modern web projects.",
+      "website": "https://vitejs.dev",
+      "icon": "vite.svg"
+    },
+    "Vue2-animate": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Animate.css",
+        "Sass",
+        "Vue.js"
+      ],
+      "description": "Vue2-animate is a Vue.js port of Animate.css.",
+      "website": "https://github.com/asika32764/vue2-animate",
+      "icon": "vue.svg"
+    },
+    "Waste Connections": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.wasteconnections\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Waste Connections is a provider of waste management solutions, offering trash collection, dumpster rental, and recycling services across the United States.",
+      "website": "https://www.wasteconnections.com",
+      "icon": "WasteConnections.svg"
+    },
+    "Weatherstack": {
+      "cats": [
+        19
+      ],
+      "description": "Weatherstack is a weather API providing JSON and XML data for global locations in a lightweight format.",
+      "website": "https://weatherstack.com",
+      "icon": "Weatherstack.svg"
+    },
+    "WebRTC": {
+      "cats": [
+        19
+      ],
+      "description": "WebRTC is an open-source project that enables real-time voice, text and video communications capabilities between web browsers and devices.",
+      "website": "https://webrtc.org",
+      "icon": "WebRTC.svg"
+    },
+    "WebSocket": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003c(?:link|a)[^\u003e]+href=[\"']wss?://"
+            }
+          }
+        }
+      ],
+      "description": "WebSocket is a communication protocol that provides full-duplex communication channels over a single, long-lived connection, enabling interactive communication between web browsers and servers.",
+      "website": "https://en.wikipedia.org/wiki/WebSocket",
+      "icon": "WebSocket.svg"
+    },
+    "Webmin": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Perl"
+      ],
+      "description": "Webmin is a free, open-source application for Linux server administration.",
+      "website": "https://www.webmin.com",
+      "icon": "Webmin.png"
+    },
+    "Webpack": {
+      "cats": [
+        19
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof webpackChunk !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackChunk !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof webpackJsonp !== 'undefined';"
+        }
+      ],
+      "description": "Webpack is an open-source JavaScript module bundler.",
+      "website": "https://webpack.js.org/",
+      "icon": "Webpack.svg"
+    },
+    "Websocket": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003c(?:link|a)[^\u003e]+href=[\"']wss?://"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003clink[^\u003e]+rel=[\"']web-socket[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://en.wikipedia.org/wiki/WebSocket",
+      "icon": "websocket.png"
+    },
+    "Weekdone": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*weekdone\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Weekdone is a tool for managers and leaders who want to get more insights into their teams and organizations and improve team collaboration and focus.",
+      "website": "https://weekdone.com",
+      "icon": "Weekdone.svg"
+    },
+    "WeltPixel Pearl Theme": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Magento\\;version:2"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Pearl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pearl !== 'undefined';"
+        }
+      ],
+      "description": "Pearl Theme for Magento 2 by WeltPixel. Pearl Theme is following the Magento architecture, layouts and best practice in order to assure highest compatibility with 3rd party extensions.",
+      "website": "https://www.weltpixel.com/magento-2-theme-pearl",
+      "icon": "WeltPixel.svg"
+    },
+    "Zabbix": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cbody[^\u003e]+zbxcallpostscripts"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']zabbix sia\\;confidence:70[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof zbxCallPostScripts !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof zbxCallPostScripts !== 'undefined';"
+        }
+      ],
+      "website": "https://zabbix.com",
+      "icon": "Zabbix.png",
+      "cpe": "cpe:2.3:a:zabbix:zabbix:*:*:*:*:*:*:*:*"
+    },
+    "cgit": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "C",
+        "git"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']^cgit v([\\d.a-z-]+)$\\;version:\\1[\"']"
+            }
+          }
+        }
+      ],
+      "description": "cgit is a web interface (cgi) for Git repositories, written in C. licensed under GPLv2.",
+      "website": "https://git.zx2c4.com/cgit",
+      "icon": "cgit.png"
+    },
+    "eNamad": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cmeta[^\u003e]+name=[\"']enamad[\"'][^\u003e]+content=[\"']^\\d+$[\"']"
+            }
+          }
+        }
+      ],
+      "description": "eNamad is an electronic trust symbol.",
+      "website": "https://enamad.ir/",
+      "icon": "eNamad.png"
+    },
+    "h5ai": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/_h5ai/(?:public|client)/js/scripts\\.js"
+            }
+          }
+        }
+      ],
+      "description": "h5ai is a modern HTTP web server index for Apache httpd, lighttpd, and nginx.",
+      "website": "https://github.com/lrsjng/h5ai",
+      "icon": "default.svg"
+    },
+    "iHomefinder IDX": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.idxhome\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ihfJquery !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ihfJquery !== 'undefined';"
+        }
+      ],
+      "description": "iHomefinder provides IDX property search, built-in CRM, and marketing tools.",
+      "website": "https://www.ihomefinder.com",
+      "icon": "iHomefinder IDX.png"
+    },
+    "nopStation": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "Microsoft ASP.NET"
+      ],
+      "description": "nopStation is a one stop ecommerce solution with custom integrations and custom built plugins based on custom tailored requirements on top of nopCommerce.",
+      "website": "https://www.nop-station.com",
+      "icon": "nopStation.png"
+    },
+    "ownCloud": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ca href=\"https://owncloud\\.com\" target=\"_blank\"\u003eowncloud inc\\.\u003c/a\u003e\u003cbr/\u003eyour cloud, your data, your way!"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']apple-itunes-app[\"'][^\u003e]+content=[\"']app-id=543672169[\"']"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "website": "https://owncloud.org",
+      "icon": "ownCloud.png"
+    },
+    "parcel": {
+      "cats": [
+        19
+      ],
+      "implies": [
+        "SWC"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof parcelRequire !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof parcelRequire !== 'undefined';"
+        }
+      ],
+      "website": "https://parceljs.org/",
+      "icon": "Parcel.png"
+    },
+    "petite-vue": {
+      "cats": [
+        19
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/petite-vue"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/petite-vue@([\\d\\.]+)/\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "petite-vue is an alternative distribution of Vue optimised for progressive enhancement.",
+      "website": "https://github.com/vuejs/petite-vue",
+      "icon": "vue.svg"
+    }
+  }
+}

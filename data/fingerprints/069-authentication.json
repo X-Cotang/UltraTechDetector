@@ -1,0 +1,907 @@
+{
+  "apps": {
+    "Alliance Auth": {
+      "cats": [
+        69
+      ],
+      "implies": [
+        "Bootstrap",
+        "Django",
+        "Font Awesome",
+        "Python",
+        "jQuery"
+      ],
+      "description": "Alliance Auth is an access management platform designed for Eve Online groups. It controls access to applications and services based on in-game memberships.",
+      "website": "https://gitlab.com/allianceauth/allianceauth",
+      "icon": "Alliance Auth.svg"
+    },
+    "Amazon Cognito": {
+      "cats": [
+        69
+      ],
+      "implies": [
+        "Amazon Web Services"
+      ],
+      "description": "Amazon Cognito lets you add user sign-up, sign-in, and access control to your web and mobile apps. Amazon Cognito supports sign-in with social identity providers, such as Apple, Facebook, Google, and Amazon, and enterprise identity providers via SAML 2.0 and OpenID Connect.",
+      "website": "https://aws.amazon.com/cognito/",
+      "icon": "Amazon Cognito.svg"
+    },
+    "Apereo CAS": {
+      "cats": [
+        69
+      ],
+      "implies": [
+        "Java",
+        "PHP"
+      ],
+      "description": "Apereo CAS is an open and well-documented authentication protocol. The primary implementation of the protocol is an open-source Java server component by the same name hosted here, with support for a plethora of additional authentication protocols and features.",
+      "website": "https://www.apereo.org/projects/cas",
+      "icon": "Apereo CAS.png"
+    },
+    "Apple Sign-in": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*appleid\\.auth\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AppleID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AppleID !== 'undefined';"
+        }
+      ],
+      "description": "Apple Sign-in is based on OAuth 2.0 and OpenID Connect, and provides a privacy-friendly way for users to sign in to websites and apps.",
+      "website": "https://developer.apple.com/sign-in-with-apple/",
+      "icon": "Apple.svg"
+    },
+    "Applied CSR24": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.csr24\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*portal\\.csr24\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "CSR24 is a portal login used by insurance agencies and brokerages that allows clients to access and review their policies.",
+      "website": "https://www1.appliedsystems.com/en-us/solutions/for-agents/mobility/applied-csr24/?_gl=1*jl1i3u*_up*MQ..*_gs*MQ..\u0026gclid=CjwKCAiAn9a9BhBtEiwAbKg6fvbF0KJMjT1nWOuoNHScUZDHi_lH5kKLqrnAy0DtTbe6LIIgn-toYRoCp4MQAvD_BwE",
+      "icon": "AppliedCSR24.svg"
+    },
+    "Auth0": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-auth0-requestid": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/auth0(?:-js)?/([\\d.]+)/auth0(?:.min)?\\.js\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/auth0-js@([\\d.]+)/([a-z]+)/auth0\\.min\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Auth0 provides authentication and authorisation as a service.",
+      "website": "https://auth0.github.io/auth0.js/index.html",
+      "icon": "Auth0.svg",
+      "cpe": "cpe:2.3:a:auth0:auth0.js:*:*:*:*:*:node.js:*:*"
+    },
+    "Auth0 Lock": {
+      "cats": [
+        69
+      ],
+      "implies": [
+        "Auth0"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/lock/([\\d.]+)/lock(?:.min)?\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Auth0 Lock enables you to easily add social identity providers, so that your users can log in seamlessly using any desired provider.",
+      "website": "https://auth0.com/docs/libraries/lock",
+      "icon": "Auth0.svg"
+    },
+    "Authy": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.authy\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Authy is a security tool that enables two-factor authentication (2FA) for websites to help protect user accounts from unauthorized access.",
+      "website": "https://www.authy.com",
+      "icon": "Authy.svg"
+    },
+    "Azure AD B2C": {
+      "cats": [
+        69
+      ],
+      "implies": [
+        "Azure"
+      ],
+      "description": "Azure Active Directory B2C is a customer identity access management (CIAM) solution.",
+      "website": "https://azure.microsoft.com/en-us/services/active-directory/external-identities/b2c/",
+      "icon": "AzureADB2C.png"
+    },
+    "Clerk": {
+      "cats": [
+        69
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Clerk !== 'undefined' \u0026\u0026 typeof Clerk.authenticateWithMetamask !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Clerk.authenticateWithMetamask !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Clerk.openSignIn !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Clerk.version !== 'undefined';",
+          "version": "try { return String(Clerk.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Clerk is a user management platform.",
+      "website": "https://clerk.dev",
+      "icon": "Clerk.svg"
+    },
+    "Facebook Login": {
+      "cats": [
+        69
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FB !== 'undefined' \u0026\u0026 typeof FB.getLoginStatus !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FB.getLoginStatus !== 'undefined';"
+        }
+      ],
+      "description": "Facebook Login is a way for people to create accounts and log into your app across multiple platforms.",
+      "website": "https://developers.facebook.com/docs/facebook-login/",
+      "icon": "Facebook.svg"
+    },
+    "GetSocial": {
+      "cats": [
+        69,
+        10
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.at\\.getsocial\\.io"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GETSOCIAL_VERSION !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return GETSOCIAL_VERSION || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GETSOCIAL_VERSION !== 'undefined';",
+          "version": "try { return String(GETSOCIAL_VERSION || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "GetSocial is a social analytics and publishing platform.",
+      "website": "https://getsocial.io",
+      "icon": "GetSocial.png"
+    },
+    "Google Sign-in": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*accounts\\.google\\.com/gsi/client"
+            }
+          }
+        }
+      ],
+      "description": "Google Sign-In is a secure authentication system that reduces the burden of login for users, by enabling them to sign in with their Google account.",
+      "website": "https://developers.google.com/identity/sign-in/web",
+      "icon": "Google.svg"
+    },
+    "JumpCloud": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.jumpcloud\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "JumpCloud is a cloud-based directory services platform offering single sign-on (SSO) and Active Directory-as-a-Service (ADaaS) functionalities.",
+      "website": "https://jumpcloud.com",
+      "icon": "JumpCloud.svg"
+    },
+    "Keycloak": {
+      "cats": [
+        69,
+        16
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ctitle\u003eWelcome to Keycloak\u003c/title\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003ctitle\u003eKeycloak Administration UI\u003c/title\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "Welcome to \u003cstrong\u003eKeycloak\u003c/strong\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "/welcome/keycloak/logo\\.png"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "/admin/keycloak\\.v2/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003ctitle\u003eKeycloak Administration UI\u003c/title\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\"clientId\":\\s*\"security-admin-console\""
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Keycloak is an open-source identity and access management solution providing single sign-on (SSO), identity brokering, user federation, and fine-grained authorization for modern applications and services.",
+      "website": "https://www.keycloak.org/",
+      "icon": "default.svg",
+      "cpe": "cpe:2.3:a:redhat:keycloak:*:*:*:*:*:*:*:*"
+    },
+    "LINE Login": {
+      "cats": [
+        69
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Constants !== 'undefined' \u0026\u0026 typeof Constants.authorization_request_url !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Constants.authorization_request_url || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Constants.authorization_request_url !== 'undefined';",
+          "version": "try { return String(Constants.authorization_request_url || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "LINE Login is an API that allows you to implement a login function into your services, regardless of whether they are web apps or native apps.",
+      "website": "https://developers.line.biz/en/services/line-login/",
+      "icon": "LINE.svg"
+    },
+    "Linkedin Sign-in": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*platform\\.linkedin\\.com/(?:.*)?in\\.js(?:\\?version)?([\\d.]+)?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OnLinkedInAuth !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OnLinkedInAuth !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof onLinkedInLoad !== 'undefined';"
+        }
+      ],
+      "description": "Linkedin Sign-In is an authentication system that reduces the burden of login for users, by enabling them to sign in with their Linkedin account.",
+      "website": "https://www.linkedin.com/developers",
+      "icon": "Linkedin.svg"
+    },
+    "Login with Amazon": {
+      "cats": [
+        69
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof onAmazonLoginReady !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof onAmazonLoginReady !== 'undefined';"
+        }
+      ],
+      "description": "Login with Amazon allows you use your Amazon user name and password to sign into and share information with participating third-party websites or apps.",
+      "website": "https://developer.amazon.com/apps-and-games/login-with-amazon",
+      "icon": "Amazon.svg"
+    },
+    "LoginRadius": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.loginradius\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.lrcontent\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof LoginRadius !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LoginRadius !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LoginRadiusDefaults !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LoginRadiusSDK !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LoginRadiusUtility !== 'undefined';"
+        }
+      ],
+      "description": "LoginRadius is a cloud based SaaS Customer Identity Access Management platform based in Canada.",
+      "website": "https://www.loginradius.com",
+      "icon": "LoginRadius.svg"
+    },
+    "MagicLabs": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.auth\\.magic\\.link"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Magic !== 'undefined' \u0026\u0026 typeof Magic.AuthEventOnReceived !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Magic.AuthEventOnReceived !== 'undefined';"
+        }
+      ],
+      "description": "MagicLabs is a platform that simplifies creating and using Web3 wallets by eliminating the need for seed phrases or downloads, providing a way to build on-chain solutions.",
+      "website": "https://magic.link",
+      "icon": "MagicLabs.svg"
+    },
+    "MetaMap": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.getmati\\.com"
+            }
+          }
+        }
+      ],
+      "description": "MetaMap is an identity verification platform that provides customizable solutions for gaining customer insights and making informed decisions.",
+      "website": "https://www.metamap.com",
+      "icon": "MetaMap.svg"
+    },
+    "Microsoft Authentication": {
+      "cats": [
+        69,
+        59
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Msal !== 'undefined' \u0026\u0026 typeof Msal.Authority !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Msal.Authority !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof msal.authorityInstance !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof msalConfig.auth !== 'undefined';"
+        }
+      ],
+      "description": "The Microsoft Authentication Library for JavaScript enables both client-side and server-side JavaScript applications to authenticate users using Azure AD for work and school accounts (AAD), Microsoft personal accounts (MSA), and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through Azure AD B2C service.",
+      "website": "https://github.com/AzureAD/microsoft-authentication-library-for-js",
+      "icon": "Microsoft.svg"
+    },
+    "NextAuth.js": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "NextAuth.js is a complete open-source authentication solution for Next.js applications.",
+      "website": "https://next-auth.js.org",
+      "icon": "Next-Auth.png"
+    },
+    "Okta": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*oktacdn\\.com/.+/([\\d.]+)/\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OktaAuth !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof okta.locale !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof oktaCurrentSessionUrl !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OktaAuth !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof isOktaEnabled !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof okta.cdnUrlHostname !== 'undefined';"
+        }
+      ],
+      "description": "Okta is a platform in the Identity-as-a-Service (IDaaS) category. Okta features include Provisioning, Single Sign-On (SSO), Active Directory (AD) and LDAP integration, the centralized de-provisioning of users, multi-factor authentication (MFA), mobile identity management.",
+      "website": "https://developer.okta.com",
+      "icon": "Okta.svg",
+      "cpe": "cpe:2.3:a:okta:*:*:*:*:*:*:*:*:*"
+    },
+    "OneAll": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.oneall\\.com/socialize"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof oa_social_login !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof oa_social_login !== 'undefined';"
+        }
+      ],
+      "description": "OneAll is a social login solution enables your users to sign into their accounts on your website or mobile app using their login details from networking sites.",
+      "website": "https://www.oneall.com",
+      "icon": "OneAll.png"
+    },
+    "Oxi Social Login": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*social-login\\.oxiapps\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Oxi Social Login provides one click login with services like Facebook, Google and many more.",
+      "website": "https://www.oxiapps.com/",
+      "icon": "OxiSocialLogin.png"
+    },
+    "Passage": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.1password\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Passage, a feature provided by 1Password, enables easy implementation of passwordless authentication methods on websites and apps.",
+      "website": "https://passage.1password.com",
+      "icon": "Passage.svg"
+    },
+    "Passport.js": {
+      "cats": [
+        69
+      ],
+      "implies": [
+        "Node.js"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Passport !== 'undefined' \u0026\u0026 typeof Passport.Core !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Passport.Core !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Passport.Core.VERSION !== 'undefined';",
+          "version": "try { return String(Passport.Core.VERSION || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PassportHandler !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _passport_html !== 'undefined';"
+        }
+      ],
+      "description": "Passport.js is an authentication middleware for Node.js, supporting various strategies to enable user authentication in web applications.",
+      "website": "https://www.passportjs.org",
+      "icon": "Passport.svg"
+    },
+    "RingCaptcha": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.ringcaptcha\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RingCaptcha !== 'undefined' \u0026\u0026 typeof RingCaptcha.Widget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RingCaptcha.Widget !== 'undefined';"
+        }
+      ],
+      "description": "RingCaptcha is a full stack service that lets you onboard and verify users with SMS.",
+      "website": "https://ringcaptcha.com",
+      "icon": "RingCaptcha.svg"
+    },
+    "SAP Customer Data Cloud Sign-in": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.gigya\\.com/js/gigya\\.js"
+            }
+          }
+        }
+      ],
+      "website": "https://www.sap.com/uk/acquired-brands/what-is-gigya.html",
+      "icon": "SAP.svg"
+    },
+    "SimpleSAMLphp": {
+      "cats": [
+        69
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "SimpleSAMLphp is an open-source PHP authentication application that provides support for SAML 2.0 as a Service Provider (SP) or Identity Provider (IdP).",
+      "website": "https://simplesamlphp.org",
+      "icon": "default.svg"
+    },
+    "Super Socializer": {
+      "cats": [
+        69,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*plugins/super-socializer/.+?ver=([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Super Socializer is a multipurpose social media plugin for WordPress.",
+      "website": "https://super-socializer-wordpress.heateor.com",
+      "icon": "Super Socializer.png"
+    },
+    "Twilio Authy": {
+      "cats": [
+        69
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Authy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Authy !== 'undefined';"
+        }
+      ],
+      "description": "Twilio Authy provides Two-factor authentication (2FA) adds an additional layer of protection beyond passwords.",
+      "website": "https://authy.com",
+      "icon": "twilio_authy.svg"
+    },
+    "Userbase": {
+      "cats": [
+        69
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof userbase !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof userbase !== 'undefined';"
+        }
+      ],
+      "description": "Userbase is a tool facilitating login integration and user data persistence for static websites.",
+      "website": "https://userbase.com",
+      "icon": "Userbase.svg"
+    },
+    "Vouched": {
+      "cats": [
+        69
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Vouched !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Vouched !== 'undefined';"
+        }
+      ],
+      "description": "Vouched is a platform designed to support identity verification across various industries.",
+      "website": "https://www.vouched.id",
+      "icon": "Vouched.svg"
+    },
+    "WWPass": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.wwpass\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WWPass !== 'undefined' \u0026\u0026 typeof WWPass.init !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WWPass.init !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wwpassQRCodeAuth !== 'undefined';"
+        }
+      ],
+      "description": "WWPass is a solution that enables authentication without the use of usernames, simplifying the login process while maintaining security through alternative methods.",
+      "website": "https://www.wwpass.com",
+      "icon": "WWPass.svg"
+    },
+    "authorized.by": {
+      "cats": [
+        69
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.authorized\\.by"
+            }
+          }
+        }
+      ],
+      "description": "authorized.by is a service that enables shops to verify products and confirm their authenticity.",
+      "website": "https://www.authorized.by",
+      "icon": "authorizedby.svg"
+    },
+    "uLogin": {
+      "cats": [
+        69
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof uLogin !== 'undefined' \u0026\u0026 typeof uLogin.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return uLogin.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof uLogin.version !== 'undefined';",
+          "version": "try { return String(uLogin.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "uLogin is a tool that enables its users to get unified access to various Internet services.",
+      "website": "https://ulogin.ru",
+      "icon": "uLogin.png"
+    }
+  }
+}

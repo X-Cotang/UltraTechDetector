@@ -1,0 +1,280 @@
+{
+  "apps": {
+    "AfterShip Returns Center": {
+      "cats": [
+        102
+      ],
+      "description": "AfterShip Returns Center is an interactive self-service return solution.",
+      "website": "https://www.aftership.com/returns",
+      "icon": "AfterShip Returns Center.svg"
+    },
+    "Happy Returns": {
+      "cats": [
+        102
+      ],
+      "description": "Happy Returns is a return software and reverse logistics company, provides a packaging-free, in-person way for customers to return an online purchase for an immediate refund.",
+      "website": "https://happyreturns.com",
+      "icon": "Happy Returns.png"
+    },
+    "Loop Returns": {
+      "cats": [
+        102
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Loop !== 'undefined' \u0026\u0026 typeof Loop.config !== 'undefined' \u0026\u0026 typeof Loop.config.variantParam !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Loop.config.variantParam !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof LoopOnstore !== 'undefined';"
+        }
+      ],
+      "description": "Loop Returns is a return portal that automated all the returns and refunds of products.",
+      "website": "https://www.loopreturns.com",
+      "icon": "Loop.svg"
+    },
+    "Narvar": {
+      "cats": [
+        102,
+        99
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.narvar\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof NARVARJS_URL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NARVARJS_URL !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof narvar !== 'undefined';",
+          "version": "try { return String(narvar || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Narvar is a customer experience platform that helps retailers inspire long-term customer loyalty, at all steps of the post-purchase journey.",
+      "website": "https://corp.narvar.com",
+      "icon": "Narvar.svg"
+    },
+    "ParcelPanel": {
+      "cats": [
+        102
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.parcelpanel\\.com"
+            }
+          }
+        }
+      ],
+      "description": "ParcelPanel is a solution for tracking shipments and managing returns for ecommerce businesses.",
+      "website": "https://www.parcelpanel.com",
+      "icon": "ParcelPanel.svg"
+    },
+    "Refundid": {
+      "cats": [
+        102
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof launchRefundidPopup !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof launchRefundidPopup !== 'undefined';"
+        }
+      ],
+      "description": "Refundid provides ecommerce customers instant refunds for their online returns.",
+      "website": "https://refundid.com",
+      "icon": "Refundid.png"
+    },
+    "Reshop": {
+      "cats": [
+        102
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:https?:)?//[^\"']*/widgets/reshop-tooltip(?:\\.min)?\\.js(?:\\?[^\"']*)?"
+            }
+          }
+        }
+      ],
+      "description": "Reshop is a returns platform that integrates with Shopify to streamline and manage product return processes.",
+      "website": "https://www.reshop.com",
+      "icon": "Reshop.svg"
+    },
+    "ReturnGO": {
+      "cats": [
+        102
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.returngo\\.ai/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof returnGoCanBeRun !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof returnGoCanBeRun !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof returnGoIntegrationData !== 'undefined';"
+        }
+      ],
+      "description": "ReturnGO's AI-driven returns management platform significantly improves customer lifetime value and post-purchase experience.",
+      "website": "https://returngo.ai",
+      "icon": "ReturnGO.png"
+    },
+    "Returnly": {
+      "cats": [
+        102
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Returnly !== 'undefined' \u0026\u0026 typeof Returnly.ContainerSwitcher !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Returnly.InternalEventTracker !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Returnly.ContainerSwitcher !== 'undefined';"
+        }
+      ],
+      "description": "Returnly is the provider of digital return experiences for direct-to-consumer brands.",
+      "website": "https://returnly.com",
+      "icon": "Returnly.svg"
+    },
+    "Seel": {
+      "cats": [
+        102
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.seel\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SeelSDK !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SeelSDK !== 'undefined';"
+        }
+      ],
+      "description": "Seel is a solution for online merchants and marketplaces that enables revenue protection by reducing losses from refunds and returns.",
+      "website": "https://www.seel.com",
+      "icon": "Seel.svg"
+    },
+    "Seko OmniReturns": {
+      "cats": [
+        102
+      ],
+      "implies": [
+        "MySQL",
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//cdn\\.omniparcelreturns\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Seko OmniReturns is an online portal used on ecommerce websites for customers to create returns and shipping labels globally. Seko is a global logistics company offering both the technology and reverse logistics.",
+      "website": "https://www.sekologistics.com/us/global-cross-border-returns",
+      "icon": "Seko OmniReturns.png"
+    },
+    "ShippyPro": {
+      "cats": [
+        102
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ShippyProReturnForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ShippyProReturnForm !== 'undefined';"
+        }
+      ],
+      "description": "ShippyPro is the complete shipping software for ecommerce that helps worldwide merchants to ship, track, and manage returns for their orders.",
+      "website": "https://www.shippypro.com",
+      "icon": "ShippyPro.png"
+    },
+    "Sorted Return": {
+      "cats": [
+        102
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*return\\.clicksit\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof clicksit_window_on_load !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof clicksit_window_on_load !== 'undefined';"
+        }
+      ],
+      "description": "Sorted is a global SaaS company that provides data-driven software for checkouts, warehouses, and shipping.",
+      "website": "https://sorted.com/give-your-customers-a-5-returns-experience/",
+      "icon": "Sorted.svg"
+    }
+  }
+}

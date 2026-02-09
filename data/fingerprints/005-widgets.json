@@ -1,0 +1,4654 @@
+{
+  "apps": {
+    "AccuWeather": {
+      "cats": [
+        5
+      ],
+      "description": "AccuWeather provides weather forecasts and warnings and additional weather products and services.",
+      "website": "https://partners.accuweather.com",
+      "icon": "AccuWeather.svg"
+    },
+    "AddShoppers": {
+      "cats": [
+        5,
+        10
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:cdn\\.)?shop\\.pe/widget/"
+            }
+          }
+        }
+      ],
+      "description": "AddShoppers is the social media marketing command center for small-medium online retailers.",
+      "website": "https://www.addshoppers.com",
+      "icon": "AddShoppers.png"
+    },
+    "AddThis": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*addthis\\.com/js/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof addthis !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof addthis !== 'undefined';"
+        }
+      ],
+      "description": "AddThis is a social bookmarking service that can be integrated into a website with the use of a web widget.",
+      "website": "https://www.addthis.com",
+      "icon": "AddThis.svg"
+    },
+    "AddToAny": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*addtoany\\.com/menu/page\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof a2apage_init !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof a2apage_init !== 'undefined';"
+        }
+      ],
+      "description": "AddToAny is a universal sharing platform that can be integrated into a website by use of a web widget or plugin.",
+      "website": "https://www.addtoany.com",
+      "icon": "AddToAny.svg"
+    },
+    "AirRobe": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof airrobe !== 'undefined' \u0026\u0026 typeof airrobe.app_id !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof airrobe.app_id !== 'undefined';"
+        }
+      ],
+      "description": "AirRobe partners with brands and retailers to power the circular fashion economy.",
+      "website": "https://airrobe.com",
+      "icon": "AirRobe.png"
+    },
+    "Airtable": {
+      "cats": [
+        5
+      ],
+      "description": "Airtable is a low-code platform for building collaborative apps.",
+      "website": "https://www.airtable.com",
+      "icon": "Airtable.svg"
+    },
+    "Algolia DocSearch": {
+      "cats": [
+        5
+      ],
+      "implies": [
+        "Algolia"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof docsearch !== 'undefined' \u0026\u0026 typeof docsearch.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return docsearch.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof docsearch.version !== 'undefined';",
+          "version": "try { return String(docsearch.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Algolia DocSearch is a search widget specifically designed for documentation websites.",
+      "website": "https://docsearch.algolia.com",
+      "icon": "DocSearch.svg"
+    },
+    "AnswerDash": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.answerdash\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof AnswerDash !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AnswerDash.__plugin !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof AnswerDash !== 'undefined';"
+        }
+      ],
+      "description": "AnswerDash is a question and answer platform that serves business customers thereby reducing support costs and revealing customer needs.",
+      "website": "https://www.answerdash.com",
+      "icon": "AnswerDash.png"
+    },
+    "Answerbase": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof loadAnswerbaseCTAWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loadAnswerbaseCTAWidget !== 'undefined';"
+        }
+      ],
+      "description": "Answerbase is a management platform for customer support and ecommerce, allowing users to ask questions, receive answers, and browse content and articles to meet their demand for information about products and services.",
+      "website": "https://answerbase.com",
+      "icon": "Answerbase.svg"
+    },
+    "AppuOnline": {
+      "cats": [
+        5
+      ],
+      "description": "AppuOnline is a tool that provides embeddable stock charts for integration into websites or applications.",
+      "website": "https://www.appuonline.com",
+      "icon": "AppuOnline.svg"
+    },
+    "Arena": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof arenaHub !== 'undefined' \u0026\u0026 typeof arenaHub.arenaIdentify !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof arenaLiveblog !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof arenaim.initializeLiveblog !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof arenaHub.arenaIdentify !== 'undefined';"
+        }
+      ],
+      "description": "Arena widget is an embeddable widget provided by the Arena platform, which allows users to embed live blogs directly on their website.",
+      "website": "https://arena.im",
+      "icon": "Arena.svg"
+    },
+    "Avasize": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^https?://cdn\\.avasize\\.com/"
+            }
+          }
+        }
+      ],
+      "website": "https://www.avasize.com",
+      "icon": "Avasize.png"
+    },
+    "BDOW": {
+      "cats": [
+        5,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sumo(?:me)?\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sumo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sumo !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sumome !== 'undefined';"
+        }
+      ],
+      "description": "BDOW is a plugin offering set of marketing tools to automate a website's growth. These tools help drive extra traffic, engage visitors, increase email subscribers and build community.",
+      "website": "https://bdow.com/",
+      "icon": "Bdow.svg"
+    },
+    "Babylist": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*babylist\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Babylist is a universal wish list.",
+      "website": "https://www.babylist.com",
+      "icon": "Babylist.svg"
+    },
+    "BandsInTown Events Widget": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.bandsintown\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Bandsintown Events Widget is a free widget which makes it simple to embed your event listings and allow fans to buy tickets, RSVP, follow you and join your Email \u0026 SMS lists.",
+      "website": "https://artists.bandsintown.com/support/events-widget",
+      "icon": "BandsInTown.png"
+    },
+    "Beyond": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.getbeyond\\.io"
+            }
+          }
+        }
+      ],
+      "description": "Beyond is a slide-out panels system designed to expand or retract sections within a structure for flexible space management.",
+      "website": "https://www.getbeyond.io",
+      "icon": "Beyond.svg"
+    },
+    "Bokun": {
+      "cats": [
+        5,
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BokunWidgetEmbedder !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BokunWidgetEmbedder !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __bokunWidgets !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bokunBookingChannelUUID !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof bokunSessionId !== 'undefined';"
+        }
+      ],
+      "description": "Bokun is a cloud-based booking management solution which enables small to large travel and tourism businesses manage reservations, products content, images, categorisation, pricing, inventory, and payments.",
+      "website": "https://www.bokun.io",
+      "icon": "Bokun.svg"
+    },
+    "Booking.com widget": {
+      "cats": [
+        5
+      ],
+      "implies": [
+        "Booking.com"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*q\\.bstatic\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Booking.com is one of the largest ecommerce travel companies in the world. As an affiliate member, you can make up to 40% commission.",
+      "website": "https://www.booking.com/affiliate-program/v2/selfmanaged.html",
+      "icon": "Booking.com.svg"
+    },
+    "Bookingkit": {
+      "cats": [
+        5,
+        72
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof BookingKitApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof BookingKitApp !== 'undefined';"
+        }
+      ],
+      "description": "Bookingkit is an online booking management solution. Bookingkit helps its users generate PDF invoices, manage day-to-day scheduling operations, and automatically sync availabilities in real time.",
+      "website": "https://bookingkit.net/",
+      "icon": "Bookingkit.svg"
+    },
+    "Booksy": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*booksy\\.com/widget/code\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof booksy !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof booksy !== 'undefined';"
+        }
+      ],
+      "description": "Booksy is a booking system for people looking to schedule appointments for health and beauty services.",
+      "website": "https://booksy.com/",
+      "icon": "Booksy.svg"
+    },
+    "Browser-Update.org": {
+      "cats": [
+        5,
+        59
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof $bu_ !== \"undefined\"; } catch(e){ return ''; }",
+          "version": "try { return $bu_.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $bu_.version !== 'undefined';",
+          "version": "try { return String($bu_.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof $bu_getBrowser !== 'undefined';"
+        }
+      ],
+      "description": "Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website.",
+      "website": "https://browser-update.org",
+      "icon": "Browser-Update.org.png"
+    },
+    "Buttonizer": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.buttonizer\\.io/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wp-content/plugins/buttonizer-multifunctional-button/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Buttonizer !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Buttonizer !== 'undefined';"
+        }
+      ],
+      "description": "Buttonizer is a widget that enables website owners to incorporate custom and attention-grabbing call-to-action (CTA) buttons into their website design.",
+      "website": "https://buttonizer.pro",
+      "icon": "Buttonizer.svg"
+    },
+    "Buy me a coffee": {
+      "cats": [
+        5,
+        111
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdnjs\\.buymeacoffee\\.com/([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Buy me a coffee is a service for online content creators that they may use to receive tips and donations to support their work.",
+      "website": "https://www.buymeacoffee.com",
+      "icon": "Buy me a coffee.svg"
+    },
+    "Buyee": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.buyee\\.jp"
+            }
+          }
+        }
+      ],
+      "description": "Buyee is a widget that facilitates purchasing products from Japan.",
+      "website": "https://buyee.jp",
+      "icon": "Buyee.svg"
+    },
+    "CTAwidget": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.ctawidget\\.ru"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof get_visible_cta !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof get_visible_cta !== 'undefined';"
+        }
+      ],
+      "description": "CTAwidget is a tool designed to increase website conversion through customizable widgets aimed at enhancing user engagement and optimizing conversion rates.",
+      "website": "https://ctawidget.ru",
+      "icon": "CTAwidget.svg"
+    },
+    "Caast.tv": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.caast\\.tv/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof caast !== 'undefined' \u0026\u0026 typeof caast.open !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof caast.open !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof caastInstance !== 'undefined';"
+        }
+      ],
+      "description": "Caast.tv is a digital commercial animation solution integrated into the ecommerce customer journey.",
+      "website": "https://en.caast.tv",
+      "icon": "Caast.tv.png"
+    },
+    "CallPage": {
+      "cats": [
+        5,
+        32
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof callpage !== 'undefined' \u0026\u0026 typeof callpage.__cp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof callpage.__cp !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof callpage.__cp.version !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof callpageWebpackJsonp !== 'undefined';"
+        }
+      ],
+      "description": "CallPage is a lead capture tool that automatically schedules callbacks and meetings with potential customers, enhancing lead management efficiency.",
+      "website": "https://www.callpage.io",
+      "icon": "CallPage.svg"
+    },
+    "Captivate.fm": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CAPTIVATE_PLAYER_APP_URL !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CAPTIVATE_PLAYER_APP_URL !== 'undefined';"
+        }
+      ],
+      "description": "Captivate.fm is a podcast hosting and analytics platform that provides tools for creating, hosting, and distributing podcasts.",
+      "website": "https://www.captivate.fm",
+      "icon": "Captivate.fm.svg"
+    },
+    "Carbonfact": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.carbonfact\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof carbonfact !== 'undefined' \u0026\u0026 typeof carbonfact.refreshModule !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof carbonfact.refreshModule !== 'undefined';"
+        }
+      ],
+      "description": "Carbonfact is a platform for fashion brands to manage their carbon emissions. It enables the measurement, reporting, and reduction of emissions in the apparel, textile, leather, and luxury sectors.",
+      "website": "https://www.carbonfact.com",
+      "icon": "Carbonfact.svg"
+    },
+    "Chameleon Power": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.chameleonpower\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ChamStats !== 'undefined' \u0026\u0026 typeof ChamStats.addEvent !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ChamStats.addEvent !== 'undefined';"
+        }
+      ],
+      "description": "Chameleon Power is a software platform that enables visualization, design, decoration, and selection of digital images and materials.",
+      "website": "https://chameleonpower.com",
+      "icon": "ChameleonPower.svg"
+    },
+    "Chatango": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*st\\.chatango\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Chatango is a website used for connecting to a large selection of users.",
+      "website": "https://chatango.com",
+      "icon": "Chatango.png"
+    },
+    "Checkfront": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.checkfront\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Checkfront is a cloud-based booking management application and ecommerce platform.",
+      "website": "https://www.checkfront.com",
+      "icon": "Checkfront.svg"
+    },
+    "Cloverly": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*apps\\.cloverly\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof removeCloverly !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof removeCloverly !== 'undefined';"
+        }
+      ],
+      "description": "Cloverly is an API integration for ethical ecommerce brands to help their customers offset the carbon footprint of their online transactions.",
+      "website": "https://www.cloverly.com",
+      "icon": "Cloverly.svg"
+    },
+    "CoconutSoftware": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "description": "Coconut is a cloud-based appointment scheduling solution designed for enterprise financial services organisations such as credit unions, retail banks and more.",
+      "website": "https://www.coconutsoftware.com/",
+      "icon": "CoconutSoftware.svg"
+    },
+    "CodeSandbox": {
+      "cats": [
+        5,
+        20
+      ],
+      "description": "CodeSandbox is an online code editor and prototyping tool that makes creating and sharing web apps faster.",
+      "website": "https://codesandbox.io/",
+      "icon": "CodeSandbox.svg"
+    },
+    "Colbass": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof colbassRunning !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof colbassRunning !== 'undefined';"
+        }
+      ],
+      "description": "Colbass is AI System that transforms text into real-human voiceovers.",
+      "website": "https://colbass.com",
+      "icon": "colbass.png"
+    },
+    "Comeet": {
+      "cats": [
+        5,
+        101
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof COMEET !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof COMEET !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof comeetInit !== 'undefined';"
+        }
+      ],
+      "description": "Comeet is an Collaborative Recruiting, and Applicant Tracking System.",
+      "website": "https://www.comeet.com",
+      "icon": "comeet.svg"
+    },
+    "Community Box": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cfapi\\.communitybox\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Community Box is a tool that allows users to create directories within a website without writing any code.",
+      "website": "https://www.communitybox.co",
+      "icon": "CommunityBox.svg"
+    },
+    "Conditional Fields for Contact Form 7": {
+      "cats": [
+        5,
+        87
+      ],
+      "implies": [
+        "Contact Form 7"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cf7-conditional-fields(?:\\/js)?(?:\\/scripts)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Adds conditional logic to Contact Form 7.",
+      "website": "https://wordpress.org/plugins/cf7-conditional-fields",
+      "icon": "Conditional Fields for Contact Form 7.png"
+    },
+    "ContentViews": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*content-views(?:-pro)?(?:-query-and-display-post-page)?(?:\\/public)?(?:\\/assets)?(?:\\/js)?(?:\\/cv(?:pro)?)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "ContentViews is a lightweight and user-friendly WordPress Plugin, crafted specifically for efficient content management and display. This plugin offers seamless integration with Widgets and enables users to showcase their posts, pages, or custom post types in a highly responsive grid, list, or timeline layout.",
+      "website": "https://wordpress.org/plugins/content-views-query-and-display-post-page/",
+      "icon": "ContentViews.svg"
+    },
+    "Contextual Related Posts": {
+      "cats": [
+        5,
+        87
+      ],
+      "description": "Add related posts to your WordPress site with inbuilt caching.",
+      "website": "https://wordpress.org/plugins/contextual-related-posts/",
+      "icon": "Contextual Related Posts.png"
+    },
+    "Cool Tag Cloud": {
+      "cats": [
+        5,
+        87
+      ],
+      "description": "A simple tag cloud system for WordPress.",
+      "website": "https://wordpress.org/plugins/cool-tag-cloud"
+    },
+    "Cool Timeline": {
+      "cats": [
+        5,
+        87
+      ],
+      "description": "Creates vertical and horizontal history timeline blocks.",
+      "website": "https://wordpress.org/plugins/cool-timeline"
+    },
+    "Countdown Timer Ultimate": {
+      "cats": [
+        5,
+        87
+      ],
+      "description": "Add and display responsive Countdown timer on your website.",
+      "website": "https://wordpress.org/plugins/countdown-timer-ultimate"
+    },
+    "Crayon Syntax Highlighter": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*crayon-syntax-highlighter(?:\\/js)?(?:\\/min)?(?:\\/crayon)?(?:\\.te)?(?:\\.min)?\\.js(?:\\?v(?:er)?=_((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof CrayonSyntaxSettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CrayonSyntaxSettings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CrayonSyntaxStrings !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof CrayonTagEditorSettings !== 'undefined';"
+        }
+      ],
+      "description": "Syntax Highlighter supporting multiple languages, themes, fonts, highlighting from a URL, local file or post text.",
+      "website": "https://wordpress.org/plugins/crayon-syntax-highlighter/"
+    },
+    "Crobox": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.crobox\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof crobox !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof crobox !== 'undefined';"
+        }
+      ],
+      "website": "https://crobox.com/",
+      "icon": "Crobox.svg"
+    },
+    "Custom Twitter Feeds": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*custom-twitter-feeds(?:\\/js)?(?:\\/ctf-scripts)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Custom Twitter Feeds for Wordpress.",
+      "website": "https://wordpress.org/plugins/custom-twitter-feeds"
+    },
+    "Daily Deals": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.dailydeals\\.ai/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ddAddToCheckout !== 'undefined' \u0026\u0026 ddAddToCheckout === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ddAddToCheckout !== 'undefined';",
+          "version": "try { return String(ddAddToCheckout || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ddAddToOrder !== 'undefined';",
+          "version": "try { return String(ddAddToOrder || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Daily Deals is a flash sale, limited-time discounts, countdown timers, and sales analytics solution.",
+      "website": "https://dailydeals.ai",
+      "icon": "Daily Deals.svg"
+    },
+    "DailyKarma": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.dailykarma\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof dkWidgetInit !== 'undefined' \u0026\u0026 dkWidgetInit === '\\;confidence:50'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dkWidgetInit !== 'undefined';",
+          "version": "try { return String(dkWidgetInit || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof dk_widget !== 'undefined';",
+          "version": "try { return String(dk_widget || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "DailyKarma is a turnkey cause marketing solutions for ecommerce merchants.",
+      "website": "https://www.dailykarma.com",
+      "icon": "DailyKarma.png"
+    },
+    "Dynamic Conditions": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*dynamic-conditions-public\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Dynamic Conditions of Widgets is a cutting-edge WordPress plugin that extends the functionality of your website using conditional logic.",
+      "website": "https://wordpress.org/plugins/dynamicconditions"
+    },
+    "EX.CO": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.ex\\.co"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.playbuzz\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __EXCO !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __EXCO !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __EXCO_INTEGRATION_TYPE !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof excoPixelUrl !== 'undefined';"
+        }
+      ],
+      "description": "EX.CO (formerly Playbuzz) is an online publishing platform for publishers, brand agencies, and individual content creators to create content in interactive formats such as polls, quizzes, lists, video snippets, slideshows, and countdowns.",
+      "website": "https://ex.co",
+      "icon": "EX.CO.svg"
+    },
+    "Elementor Addon Elements": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*addon-elements-for-elementor-page-builder(?:\\/assets)?(?:\\/js)?(?:\\/lib)?(?:\\/animated-main)?(?:\\/build)?(?:\\/eae)?(?:\\/iconhelper)?(?:\\/index)?(?:\\/magnific)?(?:\\/particles)?(?:\\/vegas){0,2}(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Widgets and extensions to extend the Elementor Page Builder.",
+      "website": "https://wordpress.org/plugins/addon-elements-for-elementor-page-builder",
+      "icon": "Elementor Addon Elements.png"
+    },
+    "Elfsight": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.elfsight\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Elfsight is an all-in-one platform offering 70+ customisable widgets for websites.",
+      "website": "https://elfsight.com",
+      "icon": "Elfsight.svg"
+    },
+    "Email Encoder for Wordpress": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*email-encoder-bundle(?:\\/core)?(?:\\/includes)?(?:\\/assets)?(?:\\/js)?(?:\\/custom)?(?:\\/encoder-form)?\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Protect email addresses and phone numbers from spambots.",
+      "website": "https://wordpress.org/plugins/email-encoder-bundle",
+      "icon": "Email Encoder for Wordpress.png"
+    },
+    "Embed Any Document": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed-any-document(?:\\/js)?(?:\\/embed-public)?(?:\\/pdfobject)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Embed PDF, DOC, PPT and XLS documents easily on your WordPress website.",
+      "website": "https://wordpress.org/plugins/embed-any-document"
+    },
+    "Embed PDF Viewer": {
+      "cats": [
+        5,
+        87
+      ],
+      "description": "Embed a PDF from the Media Library or elsewhere via oEmbed.",
+      "website": "https://wordpress.org/plugins/embed-pdf-viewer"
+    },
+    "EmbedPress": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embedpress(?:\\/assets)?(?:\\/js)?(?:\\/ads)?(?:\\/pdfobject)?(?:\\/front)?(?:\\/documents-viewer-script)?(?:\\/vimeo-player)?(?:\\/initplyr)?(?:\\/plyr)?(?:\\.polyfilled)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Embed videos, images, posts, audio, maps and upload PDF, DOC, PPT in Wordpress.",
+      "website": "https://wordpress.org/plugins/embedpress",
+      "icon": "EmbedPress.png"
+    },
+    "EmbedSocial": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embedsocial\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof EMBEDSOCIALHASHTAG !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EMBEDSOCIALHASHTAG !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EmbedSocialIframeLightbox !== 'undefined';"
+        }
+      ],
+      "description": "EmbedSocial is a social media management platform.",
+      "website": "https://embedsocial.com",
+      "icon": "EmbedSocial.svg"
+    },
+    "Embedly": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.embedly\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof embedly !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof embedly !== 'undefined';"
+        }
+      ],
+      "description": "Embedly is a service that allows developers to convert URLs into rich previews and embeddable content.",
+      "website": "https://embed.ly",
+      "icon": "Embedly.svg"
+    },
+    "Envybox": {
+      "cats": [
+        5,
+        52
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.saas-support\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof EnvyWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof EnvyWidget !== 'undefined';"
+        }
+      ],
+      "description": "Envybox is a multiservice for increasing sales.",
+      "website": "https://envybox.io",
+      "icon": "Envybox.svg"
+    },
+    "EverWondr": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.everwondr\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.everwondr\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "EverWondr is a network providing a collection of plug-ins, including a calendar, directory, blog, guestbook, gallery, and survey.",
+      "website": "https://everwondr.com",
+      "icon": "EverWondr.svg"
+    },
+    "Eveve": {
+      "cats": [
+        5,
+        72
+      ],
+      "implies": [
+        "PHP"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003ciframe[^\u003e]*[\\w]+\\.eveve\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Eveve is a restaurant table booking widget.",
+      "website": "https://www.eveve.com",
+      "icon": "Eveve.svg"
+    },
+    "FareHarbor": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003ciframe[^\u003e]+fareharbor"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*fareharbor\\.com/embeds/api/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "FareHarbor is an booking and schedule management solution intended for tour and activity companies.",
+      "website": "https://fareharbor.com",
+      "icon": "FareHarbor.svg"
+    },
+    "FeedSpring": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*scripts\\.feedspring\\.co/"
+            }
+          }
+        }
+      ],
+      "description": "FeedSpring is a platform that creates visually appealing social media feeds for websites.",
+      "website": "https://www.feedspring.com",
+      "icon": "FeedSpring.svg"
+    },
+    "FeederNinja": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.feederninja\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "FeederNinja is a tool that allows users to create customizable RSS and social media feed widgets for embedding on websites.",
+      "website": "https://www.feederninja.com"
+    },
+    "FileHippo": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.filehippo\\.com"
+            }
+          }
+        }
+      ],
+      "description": "FileHippo is a widget that provides the latest software updates, allowing users to stay informed about new versions and releases.",
+      "website": "https://filehippo.com",
+      "icon": "FileHippo.svg"
+    },
+    "Fillout": {
+      "cats": [
+        5,
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^https://server\\.fillout\\.com/embed/v(\\d)/\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Fillout is a form builder widget.",
+      "website": "https://www.fillout.com/"
+    },
+    "FitVids.JS": {
+      "cats": [
+        5,
+        14
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*fitvids(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "jQuery plugin for fluid width video embeds",
+      "website": "https://fitvidsjs.com/",
+      "icon": "FitVids.JS.png"
+    },
+    "FlexSlider": {
+      "cats": [
+        5
+      ],
+      "implies": [
+        "jQuery"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*jquery\\.flexslider(?:\\.min)?\\.js$"
+            }
+          }
+        }
+      ],
+      "description": "FlexSlider is a free jQuery slider plugin.",
+      "website": "https://woocommerce.com/flexslider/",
+      "icon": "FlexSlider.png"
+    },
+    "FlippingBook": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*online\\.flippingbook\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __flippingbook_csrf__ !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __flippingbook_csrf__ !== 'undefined';"
+        }
+      ],
+      "description": "FlippingBook is a web-based software platform that enables users to create, publish, and share digital publications such as magazines, brochures, catalogs, and presentations.",
+      "website": "https://flippingbook.com",
+      "icon": "FlippingBook.svg"
+    },
+    "Flockler": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.flockler\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FLOCKLER_EMBEDS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FLOCKLER_EMBEDS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _flocklerOverride !== 'undefined';"
+        }
+      ],
+      "description": "Flockler is a social hub content integration system that aggregates and displays social media content from multiple platforms onto websites or digital screens.",
+      "website": "https://flockler.com",
+      "icon": "Flockler.svg"
+    },
+    "Forethought Solve": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*solve-widget\\.forethought\\.ai/"
+            }
+          }
+        }
+      ],
+      "description": "Forethought Solve is a live-chat widget that uses generative AI to automate responses for common questions across all channels.",
+      "website": "https://forethought.ai/platform/solve/",
+      "icon": "Forethought Solve.svg"
+    },
+    "FoxPush": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.foxpush\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof _foxpush !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _foxpush !== 'undefined';"
+        }
+      ],
+      "description": "FoxPush is a platform that supports pushing of notifications through the browser.",
+      "website": "https://www.foxpush.com",
+      "icon": "FoxPush.svg"
+    },
+    "FullCalendar": {
+      "cats": [
+        5
+      ],
+      "implies": [
+        "TypeScript"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/fullcalendar\\.min\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof FullCalendar !== 'undefined' \u0026\u0026 typeof FullCalendar.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return FullCalendar.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof FullCalendar.version !== 'undefined';",
+          "version": "try { return String(FullCalendar.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "FullCalendar is a full-sized drag and drop JavaScript event calendar.",
+      "website": "https://fullcalendar.io",
+      "icon": "FullCalendar.png"
+    },
+    "GetButton": {
+      "cats": [
+        5,
+        52
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getbutton\\.io/"
+            }
+          }
+        }
+      ],
+      "description": "The chat button by GetButton takes website visitor directly to the messaging app such as Facebook Messenger or WhatsApp and allows them to initiate a conversation with you.",
+      "website": "https://getbutton.io",
+      "icon": "GetButton.svg"
+    },
+    "Getsitecontrol": {
+      "cats": [
+        5,
+        73
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getsitecontrol\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Getsitecontrol is a form and popup builder.",
+      "website": "https://getsitecontrol.com",
+      "icon": "Getsitecontrol.svg"
+    },
+    "GoCertify": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*assets\\.gocertify\\.me/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "GoCertify is a conversion-focused and cost-effective way to verify students, key workers, under-26s, over-60s, military and more for exclusive discounts.",
+      "website": "https://www.gocertify.me",
+      "icon": "GoCertify.png"
+    },
+    "Gravitec": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:cdn|id)\\.gravitec\\.(?:media|net)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Gravitec !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Gravitec !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gravitecWebpackJsonp !== 'undefined';"
+        }
+      ],
+      "description": "Gravitec is a push notification tool.",
+      "website": "https://gravitec.net",
+      "icon": "Gravitec.png"
+    },
+    "Gridster": {
+      "cats": [
+        5,
+        12
+      ],
+      "implies": [
+        "jQuery"
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Gridster !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Gridster !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GridsterCollision !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GridsterCoords !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GridsterDraggable !== 'undefined';"
+        }
+      ],
+      "description": "Gridster is a jQuery plugin used to draw dashboards with drag-and-drop widgets.",
+      "website": "https://dsmorse.github.io/gridster.js"
+    },
+    "Gumstack": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*w\\.gumstack\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Gumstack !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Gumstack !== 'undefined';"
+        }
+      ],
+      "description": "Gumstack provides a live video shopping solution for eCommerce.",
+      "website": "https://gumstack.com/",
+      "icon": "Gumstack.svg"
+    },
+    "HT Mega": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ht-mega-for-elementor(?:\\/admin)?\\/assets\\/js(?:\\/admin)?(?:\\/(?:htb)?bootstrap)?(?:\\/jquery)?(?:\\/popper)?(?:\\/slick)?(?:\\/waypoints)?(?:\\.counterup)?(?:\\/htmega-widgets-active)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Elementor addons package for Elementor.",
+      "website": "https://wordpress.org/plugins/ht-mega-for-elementor/",
+      "icon": "HT Mega.png"
+    },
+    "Headroom.js": {
+      "cats": [
+        5,
+        59
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*headroom(?:\\.min)?\\.js(?:\\?ver=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Headroom.js is a JS widget that allows you to react to the user's scroll. The header slides out of view when scrolling down and slides back in when scrolling up.",
+      "website": "https://wicky.nillia.ms/headroom.js/"
+    },
+    "Headway": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.x-hello": {
+              "$regex": "^headway$"
+            }
+          }
+        }
+      ],
+      "description": "Headway is a product widget that keeps customers informed about updates and changes.",
+      "website": "https://headwayapp.co",
+      "icon": "Headway.svg"
+    },
+    "Hello Bar": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.?hellobar\\.(?:com|js)"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HelloBar !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HelloBar !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hellobarSiteSettings !== 'undefined';"
+        }
+      ],
+      "description": "Hello Bar is a customizable notification bar that draws visitors to an important call to action on the website.",
+      "website": "https://hellobar.com",
+      "icon": "Hello Bar.png"
+    },
+    "HurryTimer": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*hurrytimer(?:\\/assets)?(?:\\/js)?(?:\\/cookie)?(?:\\/jquery)?(?:\\.countdown)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof hurrytimer_ajax_object !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof hurrytimer_ajax_object !== 'undefined';"
+        }
+      ],
+      "description": "HurryTimer is a cutting-edge WordPress plugin that enables users to create customizable, scheduled countdown timers to further engage visitors and increase conversions.",
+      "website": "https://wordpress.org/plugins/hurrytimer",
+      "icon": "HurryTimer.png"
+    },
+    "Iframely": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof iframely !== 'undefined' \u0026\u0026 typeof iframely.ASPECT_WRAPPER_CLASS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loadIframelyEmbedJs !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof iframely.ASPECT_WRAPPER_CLASS !== 'undefined';"
+        }
+      ],
+      "description": "Iframely is a uniform delivery service for rich media embeds and URL metadata across various platforms.",
+      "website": "https://iframely.com",
+      "icon": "Iframely.svg"
+    },
+    "Infogram": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof InfogramEmbeds !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof InfogramEmbeds !== 'undefined';"
+        }
+      ],
+      "description": "Infogram is a web-based data visualisation and infographics platform.",
+      "website": "https://infogram.com",
+      "icon": "Infogram.svg"
+    },
+    "Instabot": {
+      "cats": [
+        5,
+        10,
+        32,
+        52,
+        58
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/rokoinstabot\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Instabot !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Instabot !== 'undefined';"
+        }
+      ],
+      "description": "Instabot is a conversion chatbot that understands your users, and curates information, answers questions, captures contacts, and books meetings instantly.",
+      "website": "https://instabot.io/",
+      "icon": "Instabot.png"
+    },
+    "Instagram Feed for WordPress": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*instagram-feed(?:\\/js)?(?:\\/sbi-scripts)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Display Instagram photos from any non-private Instagram accounts.",
+      "website": "https://wordpress.org/plugins/instagram-feed/"
+    },
+    "Interact": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.tryinteract\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof InteractApp !== 'undefined' \u0026\u0026 typeof InteractApp.name !== 'undefined' \u0026\u0026 InteractApp.name === 'InteractApp'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof InteractApp.name !== 'undefined';",
+          "version": "try { return String(InteractApp.name || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof InteractPromotionObject !== 'undefined';"
+        }
+      ],
+      "description": "Interact is a tool for creating online quizzes.",
+      "website": "https://www.tryinteract.com",
+      "icon": "Interact.svg"
+    },
+    "InteractiveCalculator": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*embed\\.interactivecalculator\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "InteractiveCalculator is a platform that enables users to create customized calculators that can be embedded on their website.",
+      "website": "https://www.interactivecalculator.com",
+      "icon": "InteractiveCalculator.svg"
+    },
+    "Jetboost": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof JETBOOST_SITE_ID !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof JETBOOST_SITE_ID !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Jetboost.loaded !== 'undefined';"
+        }
+      ],
+      "description": "Jetboost is a tool that enables real-time search, dynamic filtering, and other features for Webflow sites without requiring code.",
+      "website": "https://www.jetboost.io",
+      "icon": "Jetboost.svg"
+    },
+    "Ko-fi": {
+      "cats": [
+        5,
+        111
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ko-fi\\.com/widgets"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof kofiwidget2 !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof kofiwidget2 !== 'undefined';"
+        }
+      ],
+      "description": "Ko-fi is an online platform that helps content creators get the financial support.",
+      "website": "https://ko-fi.com",
+      "icon": "Ko-fi.svg"
+    },
+    "Laga Widget": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof laga-widget !== \"undefined\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof laga-widget !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof lagaWidgetOptions !== 'undefined';"
+        }
+      ],
+      "description": "Laga Widget is a tool for car dismantlers to search and manage parts within their inventory.",
+      "website": "https://laga.se",
+      "icon": "LagaWidget.svg"
+    },
+    "Lifter Apps Pop-up Window": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:\\.lifterpopup\\.com|popup\\.lifterapps\\.com)"
+            }
+          }
+        }
+      ],
+      "description": "Lifter Apps Pop-up Window is a customizable on-site feature designed to capture visitor emails and highlight sales promotions.",
+      "website": "https://lifterapps.com",
+      "icon": "LifterApps.svg"
+    },
+    "MICE Operations": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.miceoperations\\.com/widget/widget\\.js\\?ver=([\\d\\.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof miceWidgetSettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof miceWidgetSettings !== 'undefined';"
+        }
+      ],
+      "description": "MICE Operations is a software solution tailored for event venues, catering, and hospitality businesses, streamlining operational processes, sales, and client relationship management.",
+      "website": "https://www.miceoperations.com",
+      "icon": "MICEOperations.svg"
+    },
+    "MagicBell": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.content-security-policy": {
+              "$regex": "\\.magicbell\\.com"
+            }
+          }
+        }
+      ],
+      "description": "MagicBell is an embeddable notification inbox that allows applications to display and manage user notifications within their interfaces.",
+      "website": "https://www.magicbell.com",
+      "icon": "MagicBell.svg"
+    },
+    "MailOptin": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mailoptin(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mailoptin_globals !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mailoptin_globals !== 'undefined';"
+        }
+      ],
+      "description": "WordPress plugin to create email signup forms that convert visitors into subscribers combined with email automation and newsletter features.",
+      "website": "https://mailoptin.io/",
+      "icon": "MailOptin.png"
+    },
+    "Mangeznotez": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\w+.mangeznotez\\.\\w+(?:.*\\?ver=([\\d.]+))?\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.mangeznotez\\.\\w+"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Mangeznotez is a restaurant table booking widget.",
+      "website": "https://www.mangeznotez.com",
+      "icon": "Mangeznotez.svg"
+    },
+    "MapPress": {
+      "cats": [
+        5,
+        87
+      ],
+      "description": "MapPress is a WordPress plugin that provides easy integration of interactive maps into WordPress websites.",
+      "website": "https://mappresspro.com",
+      "icon": "MapPress.png"
+    },
+    "Marketo Forms": {
+      "cats": [
+        5,
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*marketo\\.\\w+/js/forms(?:[\\d.]+)/js/forms([\\d.]+)\\.min\\.js\\;version:\\1"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*v([\\d.]+)/js/marketo-alt-form\\.min\\.js\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof formatMarketoForm !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof formatMarketoForm !== 'undefined';"
+        }
+      ],
+      "description": "Marketo Forms help create web forms without programming knowledge. Forms can reside on Marketo landing pages and also be embedded on any page of website.",
+      "website": "https://www.marketo.com",
+      "icon": "Marketo.svg"
+    },
+    "Max Mega Menu": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:max)?megamenu(?:-pro)?(?:\\/assets)?(?:\\/public)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof megamenu !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof megamenu !== 'undefined';"
+        }
+      ],
+      "description": "Max Mega Menu is a popular WordPress plugin that enhances the menu functionality on WordPress websites.",
+      "website": "https://www.megamenu.com/",
+      "icon": "Max Mega Menu.png"
+    },
+    "Meebo": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "(?:\u003ciframe id=\"meebo-iframe\"|meebo\\('domready'\\))"
+            }
+          }
+        }
+      ],
+      "website": "https://www.meebo.com",
+      "icon": "Meebo.png"
+    },
+    "Meeting Scheduler": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*bookmenow\\.info/(?:runtime|main).+\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Meeting Scheduler is a schedule appointments widget.",
+      "website": "https://bookmenow.info",
+      "icon": "Meeting Scheduler.png"
+    },
+    "Meks Simple Flickr Widget": {
+      "cats": [
+        5,
+        87
+      ],
+      "description": "Meks Simple Flickr Widget is a WordPress plugin created by Meks. This plugin is designed to help WordPress website owners easily integrate Flickr photo streams into their websites.",
+      "website": "https://wordpress.org/plugins/meks-simple-flickr-widget"
+    },
+    "Mesmerize Companion": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*mesmerize-companion\\/theme-data\\/mesmerize\\/assets\\/js\\/companion(?:\\.bundle)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "The Mesmerize Companion is a WordPress plugin that enhances the Mesmerize theme by adding drag-and-drop page builder functionality.",
+      "website": "https://wordpress.org/plugins/mesmerize-companion"
+    },
+    "Metronet Profile Picture": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*metronet-profile-picture(?:\\/js)?(?:\\/mpp-frontend)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Set a custom profile image for a user using the standard WordPress media upload tool.",
+      "website": "https://wordpress.org/plugins/metronet-profile-picture/",
+      "icon": "Metronet Profile Picture.png"
+    },
+    "MiloTree": {
+      "cats": [
+        5,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']author[\"'][^\u003e]+content=[\"']^milotree[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn001\\.milotree\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof milotree_closeBox !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof milotree_closeBox !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof milotree_openBox !== 'undefined';"
+        }
+      ],
+      "description": "MiloTree is a pop-up tool that helps websites grow by converting visitors into social media followers and customers.",
+      "website": "https://milotree.com",
+      "icon": "MiloTree.svg"
+    },
+    "MindBody": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\w+\\.healcode\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof HealcodeWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof HealcodeWidget !== 'undefined';"
+        }
+      ],
+      "description": "Mindbody is a (SaaS) company that provides cloud-based online scheduling and other business management software for the wellness services industry.",
+      "website": "https://www.mindbodyonline.com",
+      "icon": "MindBody.svg"
+    },
+    "MiniOrange Login": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*miniorange-login-openid\\/includes\\/js(?:\\/mo_openid_jquery)?(?:\\/mo-openid-social_login)?(?:\\/social_login)?(?:\\/jquery)?(?:\\.cookie)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Social Login with Discord, Facebook, Google, Twitter, LinkedIn and other apps.",
+      "website": "https://wordpress.org/plugins/miniorange-login-openid",
+      "icon": "MiniOrange Login.png"
+    },
+    "Morningtrain": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']designer[\"'][^\u003e]+content=[\"']^morning train$[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*api\\.morningcatch\\.net"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Morningtrain is a pop-up window tool designed in Denmark for generating and capturing leads through on-site user engagement.",
+      "website": "https://morningtrain.dk/vi-lukker-morningcatch",
+      "icon": "Morningtrain.svg"
+    },
+    "Moxie": {
+      "cats": [
+        5,
+        68
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*moxie(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Pollyfills for XHR2 and File API",
+      "website": "https://github.com/moxiecode/moxie"
+    },
+    "Mulberry": {
+      "cats": [
+        5
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.getmulberry\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof mulberry !== 'undefined' \u0026\u0026 typeof mulberry.cta !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mulberry.cta !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof mulberryShop !== 'undefined';"
+        }
+      ],
+      "description": "Mulberry is a developer of personalised product protection solutions used to help brands unlock additional revenue.",
+      "website": "https://www.getmulberry.com",
+      "icon": "Mulberry.svg"
+    },
+    "MyBlogLog": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*pub\\.mybloglog\\.com"
+            }
+          }
+        }
+      ],
+      "website": "https://www.mybloglog.com",
+      "icon": "MyBlogLog.png"
+    },
+    "Myhkw player": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof myhk_player_songid !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof myhk_player_songid !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof myhkplayerlist !== 'undefined';"
+        }
+      ],
+      "description": "Myhkw player is a website music player.",
+      "website": "https://myhkw.cn",
+      "icon": "Myhkw player.png"
+    },
+    "Navidium Shipping Protection": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*^.*/navidium-extension-checker\\.js$"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof nvdShop !== 'undefined' \u0026\u0026 nvdShop === '\\.myshopify\\.com'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof nvdShop !== 'undefined';",
+          "version": "try { return String(nvdShop || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "Navidium is a shipping insurance company that covers packages that are lost, stolen, or damaged in transit. Navidium Shipping Protection is an optional shipping protection service where, in the event of an incident (the order is damaged, lost, or stolen during transit), we will immediately re-ship any damaged, lost, or stolen products.",
+      "website": "https://navidiumapp.com",
+      "icon": "Navidium.svg"
+    },
+    "Nextsale": {
+      "cats": [
+        5,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*(?:api|sdk)\\.nextsale\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof NextsaleObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NextsaleObject !== 'undefined';"
+        }
+      ],
+      "description": "Nextsale is a conversion optimisation platform that provides social proof and urgency tools for ecommerce websites.",
+      "website": "https://nextsale.io",
+      "icon": "Nextsale.svg"
+    },
+    "NowButtons": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.callnowbutton\\.com"
+            }
+          }
+        }
+      ],
+      "description": "NowButtons is a floating action button plugin that enhances website interactivity by providing quick access to key actions and improving user conversion rates.",
+      "website": "https://nowbuttons.com",
+      "icon": "NowButtons.svg"
+    },
+    "Octane AI": {
+      "cats": [
+        5,
+        52
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.octaneai\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OctaneConfig !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OctaneConfig !== 'undefined';"
+        }
+      ],
+      "description": "Octane AI provides an all-in-one platform for engaging quizzes, data collection, and personalised Facebook Messenger and SMS automation.",
+      "website": "https://www.octaneai.com",
+      "icon": "Octane AI.svg"
+    },
+    "OkMenu": {
+      "cats": [
+        5
+      ],
+      "description": "OkMenu is a provider of an all-in-one restaurant QR menu.",
+      "website": "https://oktabletmenu.com",
+      "icon": "OkMenu.svg"
+    },
+    "Omny Studio": {
+      "cats": [
+        5
+      ],
+      "description": "Omny Studio is a podcast hosting solution, which enables radio stations and enterprises to manage, monetize, publish, share, edit and analyze audio episodes.",
+      "website": "https://omnystudio.com",
+      "icon": "Omny Studio.svg"
+    },
+    "Ookla Speedtest Custom": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.content-security-policy": {
+                  "$regex": "\\.speedtestcustom\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.speedtestcustom\\.com/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Speedtest Custom is a robust and accurate testing solution that is HTML5-based, Flash-free and supports both mobile and desktop browsers built by Ookla.",
+      "website": "https://www.ookla.com/speedtest-custom",
+      "icon": "Ookla.svg"
+    },
+    "Outbrain": {
+      "cats": [
+        5,
+        36
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.outbrain\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof OB_ADV_ID !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return OB_releaseVer || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OB_releaseVer !== 'undefined';",
+          "version": "try { return String(OB_releaseVer || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OutbrainPermaLink !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof obApi.version !== 'undefined';",
+          "version": "try { return String(obApi.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof OB_ADV_ID !== 'undefined';"
+        }
+      ],
+      "description": "Outbrain is a web advertising platform that displays boxes of links, known as chumboxes, to pages within websites.",
+      "website": "https://www.outbrain.com",
+      "icon": "Outbrain.svg"
+    },
+    "Owids": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.access-control-allow-origin": {
+                  "$regex": "^x-owids-key$"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sdk\\.owids\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof owidsSDKJSP !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof owidsSDKJSP !== 'undefined';"
+        }
+      ],
+      "description": "Owids is a set of widgets designed to improve website conversion rates and visitor engagement across platforms without requiring coding skills.",
+      "website": "https://owids.com",
+      "icon": "Owids.svg"
+    },
+    "POWR": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.powr\\.io/powr\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof POWR_RECEIVERS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof POWR_RECEIVERS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof loadPowr !== 'undefined';"
+        }
+      ],
+      "description": "POWR is a cloud-based system of plugins that work on almost any website.",
+      "website": "https://www.powr.io",
+      "icon": "POWR.svg"
+    },
+    "PageLayer": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*pagelayer(?:-frontend)?(?:\\/js)?(?:\\/combined)?(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Drag and drop page builder for Wordpress.",
+      "website": "https://wordpress.org/plugins/pagelayer",
+      "icon": "PageLayer.png"
+    },
+    "Patreon": {
+      "cats": [
+        5,
+        41
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*patreon-connect/assets/.+ver=([\\d.]+)\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Patreon is an American membership platform that provides business tools for content creators to run a subscription service.",
+      "website": "https://www.patreon.com",
+      "icon": "Patreon.svg"
+    },
+    "PayKickStart": {
+      "cats": [
+        5,
+        71
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.paykickstart\\.com"
+            }
+          }
+        }
+      ],
+      "description": "PayKickstart is an online shopping cart and affiliate management platform with built-in conversion enhancing features like one-click upsells for credit card/paypal, order bumps, custom checkout pages/widgets/embed forms, coupon management, auto-complete shipping fields, subscription saver sequences, and more.",
+      "website": "https://paykickstart.com",
+      "icon": "PayKickStart.png"
+    },
+    "Peek": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*js\\.peek\\.\\w+"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Peek !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Peek !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PeekJsApi !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof _peekConfig !== 'undefined';"
+        }
+      ],
+      "description": "Peek is a online booking system for tour and activity providers.",
+      "website": "https://www.peek.com/",
+      "icon": "Peek.svg"
+    },
+    "Pinboard": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*feeds\\.pinboard\\.in"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Pinboard_Linkroll !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Pinboard_Linkroll !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pinboardNS_callback !== 'undefined';"
+        }
+      ],
+      "description": "Pinboard is a widget that displays bookmarks directly on a website for easy access and organization.",
+      "website": "https://pinboard.in",
+      "icon": "Pinboard.svg"
+    },
+    "Pinterest": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//assets\\.pinterest\\.com/js/pinit\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Pinterest is an image sharing and social media service designed to enable saving and discovery of information.",
+      "website": "https://pinterest.com",
+      "icon": "Pinterest.svg"
+    },
+    "Plum Popup": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*app\\.plumpopup\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Plum Popup is a tool for creating customizable popups designed to help increase sales by engaging visitors and promoting offers.",
+      "website": "https://plumpopup.com",
+      "icon": "Plum.svg"
+    },
+    "Po.st": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof pwidget_config !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof pwidget_config !== 'undefined';"
+        }
+      ],
+      "website": "https://www.po.st/",
+      "icon": "Po.st.png"
+    },
+    "Pocket": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widgets\\.getpocket\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Pocket is a social bookmarking service that can be integrated into a website with the use of a web widget.",
+      "website": "https://getpocket.com",
+      "icon": "pocket.svg"
+    },
+    "Podigee": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof podigeePodcastPlayers !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof podigeePodcastPlayers !== 'undefined';"
+        }
+      ],
+      "description": "Podigee is an independent company for podcast publishers. Podigee offers hosting, distribution, analytics and monetisation of podcasts.",
+      "website": "https://www.podigee.com",
+      "icon": "Podigee.svg"
+    },
+    "Podium": {
+      "cats": [
+        5,
+        52
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.podium\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PodiumWebChat !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof podiumWebsiteWidgetLoaded !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PodiumWebChat !== 'undefined';"
+        }
+      ],
+      "description": "Podium is a customer communication platform for businesses who interact with customers on a local level.",
+      "website": "https://www.podium.com",
+      "icon": "Podium.png"
+    },
+    "Popupular": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.popupular\\.io/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Popupular !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Popupular !== 'undefined';"
+        }
+      ],
+      "description": "Popupular is a platform that allows easy embedding of Mailchimp forms, YouTube videos, Calendly calendars, etc. into fully controllable popups on your site, with no coding required.",
+      "website": "https://popupular.io",
+      "icon": "Popupular.svg"
+    },
+    "Priice": {
+      "cats": [
+        5
+      ],
+      "description": "Priice is a widget that tracks and monitors product prices, providing up-to-date information for comparison and analysis.",
+      "website": "https://priice.net",
+      "icon": "Priice.svg"
+    },
+    "ProProfs Quiz Maker": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {}
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof GetSecureUrlProProfs !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof GetSecureUrlProProfs !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ProProfsSaveBotReport !== 'undefined';"
+        }
+      ],
+      "description": "ProProfs Quiz Maker is a quiz-based widget builder that enables the creation of interactive quizzes for embedding on websites or digital platforms.",
+      "website": "https://www.proprofs.com/quiz-school",
+      "icon": "ProProfs.svg"
+    },
+    "ProvenExpert": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*provenexpert\\.\\w+/widget"
+            }
+          }
+        }
+      ],
+      "description": "ProvenExpert is a review based marketing platform that allows users to create customer surveys, provides aggregate reviews and ratings.",
+      "website": "https://www.provenexpert.com",
+      "icon": "ProvenExpert.svg"
+    },
+    "Proximis": {
+      "cats": [
+        5,
+        6
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget-commerce(?:\\.min)?\\.js"
+            }
+          }
+        }
+      ],
+      "website": "https://www.proximis.com",
+      "icon": "Proximis Omnichannel.png"
+    },
+    "PushAd": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.push-ad\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PushAdReady !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PushAdReady !== 'undefined';"
+        }
+      ],
+      "description": "PushAd is a notification system from Poland.",
+      "website": "https://push-ad.com/en/home-page",
+      "icon": "PushAd.svg"
+    },
+    "Pushly": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof PushlySDK !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof PushlySDK !== 'undefined';"
+        }
+      ],
+      "description": "Pushly is a web push notification platform that allows businesses to send real-time messages to their website visitors.",
+      "website": "https://www.pushly.com",
+      "icon": "Pushly.svg"
+    },
+    "Q4 Cookie Monster": {
+      "cats": [
+        5,
+        67
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widgets\\.q4app\\.com/widgets/q4\\.cookiemonster\\.([\\d\\.]+)\\.min\\.js\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Q4 Cookie Monster is an cookie compliance widget built by Q4.",
+      "website": "https://q4mobile.github.io/q4widgets-jquery-ui/doc_html/q4.cookieMonster.html",
+      "icon": "Q4.png"
+    },
+    "RateParity": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*code\\.rateparity\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "RateParity is a conversion rate optimisation platform for hotels.",
+      "website": "https://www.rateparity.com",
+      "icon": "RateParity.svg"
+    },
+    "ReadAloud": {
+      "cats": [
+        5
+      ],
+      "description": "The SiteSpeaker text-to-speech widget is embedded into your posts and give users an alternate way to consume your content as audio.",
+      "website": "https://www.readaloudwidget.com",
+      "icon": "default.svg"
+    },
+    "ReadSpeaker": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.readspeaker\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ReadSpeaker !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ReadSpeaker !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ReadSpeaker.meta.version !== 'undefined';",
+          "version": "try { return String(ReadSpeaker.meta.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "ReadSpeaker is an intuitive text-to-speech API that converts text into natural-sounding audio files for websites and applications.",
+      "website": "https://www.readspeaker.com",
+      "icon": "ReadSpeaker.svg"
+    },
+    "Regiondo": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.regiondo\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Regiondo is a online booking system for tour and activity providers.",
+      "website": "https://www.regiondo.com",
+      "icon": "Regiondo.svg"
+    },
+    "Remixd": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tags\\.remixd\\.com/player"
+            }
+          }
+        }
+      ],
+      "description": "Remixd is a platform that enables podcast creators to efficiently produce and share their podcasts with a worldwide audience. The platform provides various tools and features to support podcast creation, hosting, and distribution, such as podcast hosting, analytics, monetisation, and social media integration.",
+      "website": "https://www.remixd.com",
+      "icon": "remixd.svg"
+    },
+    "Replyment": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.replyment\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Engage with your customers effortlessly on their preferred messaging app using Replyment, including WhatsApp, Messenger, and more. We support 20+ apps and platforms for seamless engagement.",
+      "website": "https://replyment.com",
+      "icon": "Replyment.svg"
+    },
+    "Rezdy": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*rezdy\\.\\w+/pluginjs"
+            }
+          }
+        }
+      ],
+      "description": "Rezdy is an online booking software for tours and attractions.",
+      "website": "https://www.rezdy.com",
+      "icon": "Rezdy.svg"
+    },
+    "Rezgo": {
+      "cats": [
+        5,
+        72
+      ],
+      "description": "Rezgo is a tour operator software that provides online booking system.",
+      "website": "https://www.rezgo.com",
+      "icon": "Rezgo.svg"
+    },
+    "Ruby Receptionists": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*chatwidget\\.ruby\\.com"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof rubyApi !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof rubyApi !== 'undefined';"
+        }
+      ],
+      "description": "Ruby Receptionists is a Portland, Oregon based virtual answering service for small businesses.",
+      "website": "https://www.ruby.com",
+      "icon": "Ruby Receptionists.svg"
+    },
+    "Salesfloor": {
+      "cats": [
+        5,
+        6
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.salesfloor\\.net/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof NMConfig !== 'undefined' \u0026\u0026 typeof NMConfig.SALESFLOOR_ENV !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof NMConfig.SALESFLOOR_ENV !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof salesFloorHost !== 'undefined';"
+        }
+      ],
+      "description": "Salesfloor is a mobile clienteling and virtual selling platform designed for store associates to connect with customers-beyond the store and a mpos platform for frictionless in-store experiences.",
+      "website": "https://salesfloor.net",
+      "icon": "salesfloor.png"
+    },
+    "Sassy Social Share": {
+      "cats": [
+        5,
+        87
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sassy-social-share(?:-public)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Sassy Social Share allows your website visitors to share your content over Facebook, Twitter, Google, Linkedin, Whatsapp, Tumblr, Pinterest, Reddit, Gab, Gettr and over 110 more social sharing and bookmarking services.",
+      "website": "https://wordpress.org/plugins/sassy-social-share"
+    },
+    "Setmore": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/setmore-appointments/script/"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*my\\.setmore\\.\\w+/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof setmorePopup !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof setmorePopup !== 'undefined';"
+        }
+      ],
+      "description": "Setmore is a cloud-based appointment scheduling solution.",
+      "website": "https://www.setmore.com",
+      "icon": "Setmore.svg"
+    },
+    "SevenRooms": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*sevenrooms\\.\\w+/widget/embed\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SevenroomsWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SevenroomsWidget !== 'undefined';"
+        }
+      ],
+      "description": "SevenRooms is an fully-integrated reservation, seating and restaurant management system.",
+      "website": "https://sevenrooms.com",
+      "icon": "SevenRooms.svg"
+    },
+    "ShareThis": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sharethis\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SHARETHIS !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SHARETHIS !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __sharethis__docReady !== 'undefined';"
+        }
+      ],
+      "description": "ShareThis provides free engagement and growth tools (e.g., share buttons, follow buttons, and reaction buttons) for site owners.",
+      "website": "https://sharethis.com",
+      "icon": "ShareThis.png"
+    },
+    "Shareaholic": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Shareaholic !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Shareaholic !== 'undefined';"
+        }
+      ],
+      "description": "Shareaholic is a all-in-one content amplification and monetisation platform.",
+      "website": "https://www.shareaholic.com/",
+      "icon": "shareaholic.svg"
+    },
+    "ShoppingGives": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.shoppinggives\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sgObservables !== 'undefined' \u0026\u0026 typeof sgObservables.getCharities !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sgObservables.getCharities !== 'undefined';"
+        }
+      ],
+      "description": "ShoppingGives is a B2B social ecommerce platform that allows companies of all sizes to make charitable donations through their customers' purchases.",
+      "website": "https://shoppinggives.com",
+      "icon": "ShoppingGives.png"
+    },
+    "Sirv": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "headers.x-sirv-cache": {
+                  "$exists": true
+                }
+              },
+              {
+                "headers.x-sirv-server": {
+                  "$exists": true
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*scripts\\.sirv\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Sirv is a solution for serving images, offering easy management, manipulation, and delivery.",
+      "website": "https://sirv.com",
+      "icon": "Sirv.svg"
+    },
+    "SiteMinder": {
+      "cats": [
+        5,
+        72
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.siteminder\\.com"
+            }
+          }
+        }
+      ],
+      "description": "SiteMinder is a appointment booking solution designed for hotels.",
+      "website": "https://www.siteminder.com",
+      "icon": "SiteMinder.svg"
+    },
+    "Slider Revolution": {
+      "cats": [
+        5,
+        7
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cmeta[^\u003e]+name=[\"']generator[\"'][^\u003e]+content=[\"']powered\\sby\\sslider revolution\\s([\\d\\.]+)\\;version:\\1[\"']"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*/wp-content/plugins/revslider/"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof RS_MODULES !== 'undefined' \u0026\u0026 typeof RS_MODULES.main !== 'undefined' \u0026\u0026 typeof RS_MODULES.main.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return RS_MODULES.main.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof revapi2 !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof revapi3 !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof revapi4 !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof revapi5 !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof revslider_showDoubleJqueryError !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof RS_MODULES.main.version !== 'undefined';",
+          "version": "try { return String(RS_MODULES.main.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SR7.version !== 'undefined';",
+          "version": "try { return String(SR7.version || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof revapi1 !== 'undefined';"
+        }
+      ],
+      "description": "Slider Revolution is a flexible and highly customisable slider.",
+      "website": "https://www.sliderrevolution.com",
+      "icon": "Slider Revolution.svg"
+    },
+    "SnapWidget": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*snapwidget\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "SnapWidget is a set of interactive Instagram, Twitter and 500px widgets.",
+      "website": "https://snapwidget.com",
+      "icon": "SnapWidget.svg"
+    },
+    "Social9": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*social9\\.com/.+\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1"
+            }
+          }
+        }
+      ],
+      "description": "Social9 is a social sharing widgets and plugins.",
+      "website": "https://social9.com",
+      "icon": "Social9.svg"
+    },
+    "Sorry": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sorryapp\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Sorry is a status page service that displays system downtime and operational incidents.",
+      "website": "https://www.sorryapp.com",
+      "icon": "Sorry.svg"
+    },
+    "SoundCloud": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sndcdn\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof SC !== 'undefined' \u0026\u0026 typeof SC.Widget !== 'undefined' \u0026\u0026 typeof SC.Widget.Events !== 'undefined' \u0026\u0026 typeof SC.Widget.Events.PLAY !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof SC.Widget.Events.PLAY !== 'undefined';"
+        }
+      ],
+      "description": "SoundCloud widget gives you the ability to upload, manage and share tracks.",
+      "website": "https://developers.soundcloud.com/docs/api/html5-widget",
+      "icon": "SoundCloud.svg"
+    },
+    "Spotify Widgets": {
+      "cats": [
+        5
+      ],
+      "description": "Spotify Widgets provide an embeddable view of a track, artist, album, user, playlist, podcast or episode for use within your web project.",
+      "website": "https://developer.spotify.com/documentation/widgets",
+      "icon": "Spotify.svg"
+    },
+    "SpurIT": {
+      "cats": [
+        5
+      ],
+      "implies": [
+        "Shopify"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn-spurit\\.com/shopify-apps/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Spurit !== 'undefined' \u0026\u0026 typeof Spurit.global !== 'undefined' \u0026\u0026 typeof Spurit.global.version !== 'undefined'; } catch(e){ return ''; }",
+          "version": "try { return Spurit.global.version || \"\"; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Spurit.global.version !== 'undefined';",
+          "version": "try { return String(Spurit.global.version || ''); } catch(e){ return ''; }"
+        }
+      ],
+      "description": "SpurIT is a team of certified Shopify experts which provide ecommerce software solutions.",
+      "website": "https://spur-i-t.com",
+      "icon": "SpurIT.svg"
+    },
+    "Squadded": {
+      "cats": [
+        5
+      ],
+      "implies": [
+        "Cart Functionality"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*static\\.squadded\\.co"
+            }
+          }
+        }
+      ],
+      "description": "Squadded is a social ecommerce solution that allows visitors to shop together with their friends and with other members of the brands online community.",
+      "website": "https://www.squadded.co",
+      "icon": "Squadded.svg"
+    },
+    "StorifyMe": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.storifyme\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "StorifyMe is a storytelling platform for creating and distributing web stories on social networks and the open web.",
+      "website": "https://www.storifyme.com",
+      "icon": "StorifyMe.png"
+    },
+    "Strava": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.strava\\.com"
+            }
+          }
+        }
+      ],
+      "description": "Strava is a community-driven platform that enables users to track progress and support each other through shared motivation.",
+      "website": "https://www.strava.com",
+      "icon": "Strava.svg"
+    },
+    "Streamwood": {
+      "cats": [
+        5,
+        52
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*clients\\.streamwood\\.ru/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __STREAMWOOD_MUTEX_QP3 !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __STREAMWOOD_MUTEX_QP3 !== 'undefined';"
+        }
+      ],
+      "description": "Streamwood is a call back and chat system designed to facilitate efficient communication.",
+      "website": "https://streamwood.ru",
+      "icon": "Streamwood.svg"
+    },
+    "Sumo": {
+      "cats": [
+        5,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.sumo(?:me)?\\.com/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof sumo !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sumo !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof sumome !== 'undefined';"
+        }
+      ],
+      "description": "Sumo is a plugin offering set of marketing tools to automate a website's growth. These tools help drive extra traffic, engage visitors, increase email subscribers and build community.",
+      "website": "https://sumo.com",
+      "icon": "Sumo.png"
+    },
+    "Supademo": {
+      "cats": [
+        5
+      ],
+      "description": "Supademo is a widget-based tool for creating interactive product demos that can be embedded into websites or shared via links.",
+      "website": "https://supademo.com",
+      "icon": "Supademo.svg"
+    },
+    "Taggbox": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.taggbox\\.com"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*taggbox\\.com/app/js/embed\\.min\\.js(?:\\?ver=([\\d.]+))?\\;version:\\1"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof taggboxAjaxurl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof taggboxAjaxurl !== 'undefined';"
+        }
+      ],
+      "description": "Taggbox is an UGC platform to collect, curate, manage rights, and publish user-generated content marketing campaigns across multiple channels.",
+      "website": "https://taggbox.com/",
+      "icon": "Taggbox.svg"
+    },
+    "Tamago": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003clink [^\u003e]*href=\"http://tamago\\.temonalab\\.com"
+            }
+          }
+        }
+      ],
+      "website": "https://tamago.temonalab.com",
+      "icon": "Tamago.png"
+    },
+    "TeamBrain": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TeamBrainExternalApp !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TeamBrainExternalApp !== 'undefined';"
+        }
+      ],
+      "description": "TeamBrain is a knowledge management solution which allows to use a self-learning dynamic FAQ on a website or widget on the bottom right of any page.",
+      "website": "https://www.teambrain.io",
+      "icon": "TeamBrain.png"
+    },
+    "Tiqets": {
+      "cats": [
+        5,
+        71
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof __TIQETS_LOADER_REINIT !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof __TIQETS_LOADER_REINIT !== 'undefined';"
+        }
+      ],
+      "description": "Tiqets provides a complete overview of a city - museums, attractions, zoos, canal cruises, concerts. Publishers joined to the Tiqets affiliate program can receive 6% commission during our 30-day cookie window from completed total bookings resulting from featuring links to Tiqets products and content across their brand: blog/website, social media, newsletters, etc.",
+      "website": "https://www.tiqets.com/affiliate",
+      "icon": "Tiqets.svg"
+    },
+    "Tockify": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*public\\.tockify\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Tockify is a customizable web calendar platform designed for embedding interactive event calendars into websites.",
+      "website": "https://tockify.com",
+      "icon": "Tockify.svg"
+    },
+    "Topic'it": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*connect\\.topicit\\.net"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof topicit_action !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof topicit_action !== 'undefined';"
+        }
+      ],
+      "description": "Topic'it is a tool that optimizes forums for mobile devices, enhancing usability and accessibility across smartphones and tablets.",
+      "website": "https://topicit.net",
+      "icon": "TopicIt.svg"
+    },
+    "Transistor.fm": {
+      "cats": [
+        5
+      ],
+      "description": "Transistor.fm is a podcast host, distribution and management platform.",
+      "website": "https://transistor.fm",
+      "icon": "Transistor.fm.svg"
+    },
+    "Trinity Audio": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//trinitymedia\\.ai/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof TRINITY_DISPLAY !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TRINITY_DISPLAY !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof TRINITY_PLAYER !== 'undefined';"
+        }
+      ],
+      "description": "Trinity Audio's AI-driven solutions help publishers and content creators create a world of smart audio experiences for their audiences, covering every stage of the audio journey from creation to distribution.",
+      "website": "https://www.trinityaudio.ai",
+      "icon": "Trinity Audio.svg"
+    },
+    "Tripadviser.Widget": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*tripadvisor\\.[\\w]+/widgetembed"
+            }
+          }
+        }
+      ],
+      "description": "Tripadvisor embed reviews widget.",
+      "website": "https://www.tripadvisor.com/Widgets",
+      "icon": "Tripadviser.Widget.svg"
+    },
+    "TrustYou": {
+      "cats": [
+        5
+      ],
+      "description": "TrustYou is guest feedback and hotel reputation software company located in Germany.",
+      "website": "https://www.trustyou.com",
+      "icon": "TrustYou.svg"
+    },
+    "Twitter": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*//platform\\.twitter\\.com/widgets\\.js"
+            }
+          }
+        }
+      ],
+      "description": "Twitter is a 'microblogging' system that allows you to send and receive short posts called tweets.",
+      "website": "https://twitter.com",
+      "icon": "Twitter.svg"
+    },
+    "Ubiliz": {
+      "cats": [
+        5,
+        6
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ubilizSettings !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ubilizSettings !== 'undefined';"
+        }
+      ],
+      "description": "Ubiliz is a gift voucher ecommerce solution.",
+      "website": "https://www.ubiliz.com",
+      "icon": "Ubiliz.svg"
+    },
+    "Ucalc": {
+      "cats": [
+        5,
+        110
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*ucalc\\.pro/api/"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof uCalc !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof uCalc !== 'undefined';"
+        }
+      ],
+      "description": "Ucalc is a platform offering calculators and form building tools, facilitating efficient computation and streamlined data collection processes.",
+      "website": "https://ucalc.pro",
+      "icon": "Ucalc.svg"
+    },
+    "Unity": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof UnityLoader !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof UnityLoader !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof createUnityInstance !== 'undefined';"
+        }
+      ],
+      "description": "Unity is a gaming widget that enables the playing of games developed using 3D gaming engine.",
+      "website": "https://unity.com",
+      "icon": "Unity.svg"
+    },
+    "VerifyPass": {
+      "cats": [
+        5,
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.id\\.services"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*cdn\\.verifypass\\.com"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof verifypass_api_instantiator !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof verifypass_popup !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof verifypass_api_instantiator !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof verifypass_is_loaded !== 'undefined';"
+        }
+      ],
+      "description": "VerifyPass is a company which provide secure identity proofing, authentication, and group affiliation verification for teachers and students.",
+      "website": "https://verifypass.com",
+      "icon": "VerifyPass.png"
+    },
+    "VideoPal": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof VideoPalEmbed !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VideoPalEmbed !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof VpPlayer !== 'undefined';"
+        }
+      ],
+      "description": "VideoPal is an avatar widget that functions as a help system, providing interactive assistance directly within the user interface.",
+      "website": "https://www.videopal.io/go/",
+      "icon": "VideoPal.svg"
+    },
+    "Volley": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*widget\\.meetvolley\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Volley is a website annotation tool that enables visual feedback on websites.",
+      "website": "https://meetvolley.com",
+      "icon": "Volley.svg"
+    },
+    "Waitlist": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof gw_backend_url !== 'undefined' \u0026\u0026 gw_backend_url === '//api\\.getwaitlist\\.com/'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gw_backend_url !== 'undefined';",
+          "version": "try { return String(gw_backend_url || ''); } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof gw_waitlist_name !== 'undefined';"
+        }
+      ],
+      "description": "Waitlist is a web-based tool that helps businesses to create a waitlist for their product or service.",
+      "website": "https://www.getwaitlist.com",
+      "icon": "Waitlist.svg"
+    },
+    "Waveform": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof Waveform !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof Waveform !== 'undefined';"
+        }
+      ],
+      "description": "Waveform is a media player that supports various media formats, including audio, video, Youtube, and Vimeo, and includes a waveform visualisation feature, utilising Web Audio API and HTML5 Canvas technologies.",
+      "website": "https://music.flatfull.com/waveme/about/",
+      "icon": "Waveme.svg"
+    },
+    "Web Stories": {
+      "cats": [
+        5
+      ],
+      "implies": [
+        "AMP"
+      ],
+      "description": "Web Stories is a format for visual storytelling for the open web.",
+      "website": "https://amp.dev/about/stories/",
+      "icon": "Web-Stories.svg"
+    },
+    "Webestools": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*www\\.webestools\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Webestools is a platform offering online tools, including counters and widgets, for various functionalities.",
+      "website": "https://www.webestools.com",
+      "icon": "Webestools.svg"
+    },
+    "Wheelio": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*wheelioapp\\.azureedge\\.net"
+            }
+          }
+        }
+      ],
+      "description": "Wheelio is gamified pop-up/widget for ecommerce sites.",
+      "website": "https://wheelio-app.com/",
+      "icon": "Wheelio.png"
+    },
+    "Whooshkaa": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003ciframe src=\"[^\u003e]+whooshkaa\\.com"
+            }
+          }
+        }
+      ],
+      "website": "https://www.whooshkaa.com",
+      "icon": "Whooshkaa.svg"
+    },
+    "Wisepops": {
+      "cats": [
+        5,
+        32
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*loader\\.wisepops\\.com/get-loader\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WisePopsObject !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WisePopsObject !== 'undefined';"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof wisepops._api !== 'undefined';"
+        }
+      ],
+      "description": "Wisepops is an intelligent popup and marketing automation system that offers marketers a single platform from which to create and manage website popups.",
+      "website": "https://wisepops.com",
+      "icon": "Wisepops.svg"
+    },
+    "WolframAlpha": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof WolframAlphaWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof WolframAlphaWidget !== 'undefined';"
+        }
+      ],
+      "description": "WolframAlpha is a tool that integrates live computational knowledge into blogs or websites.",
+      "website": "https://www.wolframalpha.com/widgets",
+      "icon": "WolframAlpha.svg"
+    },
+    "Worldz": {
+      "cats": [
+        5,
+        76
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*\\.worldztool\\.com/"
+            }
+          }
+        }
+      ],
+      "description": "Worldz calculates the economic value of a user’s social popularity (qualitatively and quantitatively). In proportion to this value, it provides a personalised discount, which can be applied in exchange for a social sharing by the user on their Instagram or Facebook profile.",
+      "website": "https://www.worldz-business.net",
+      "icon": "Worldz.png"
+    },
+    "Wowee": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof woweeScriptUrl !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof woweeScriptUrl !== 'undefined';"
+        }
+      ],
+      "description": "Wowee is a wishlist creation tool designed to help users organise and manage their desired items.",
+      "website": "https://wowee.cz",
+      "icon": "Wowee.svg"
+    },
+    "Yandex.Messenger": {
+      "cats": [
+        5,
+        52
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*chat\\.s3\\.yandex\\.net/widget\\.js"
+            }
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof yandexChatWidget !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof yandexChatWidget !== 'undefined';"
+        }
+      ],
+      "description": "Yandex.Messenger is an instant messaging application.",
+      "website": "https://dialogs.yandex.ru",
+      "icon": "Yandex.Messenger.svg"
+    },
+    "Yelp Review Badge": {
+      "cats": [
+        5
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "body": {
+              "$regex": "\u003cscript[^\u003e]+src=['\"][^'\"]*yelp\\.com/biz_badge_js"
+            }
+          }
+        }
+      ],
+      "description": "Yelp Review Badges showcase business reviews from Yelp on websites.",
+      "website": "https://yelp.com",
+      "icon": "Yelp.svg"
+    },
+    "eKomi": {
+      "cats": [
+        5
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof ekomiWidgetMain !== 'undefined'; } catch(e){ return ''; }"
+        },
+        {
+          "path": "/",
+          "detection": "return typeof ekomiWidgetMain !== 'undefined';"
+        }
+      ],
+      "description": "eKomi is a German supplier and product review service.",
+      "website": "https://www.ekomi.de",
+      "icon": "eKomi.png"
+    }
+  }
+}
