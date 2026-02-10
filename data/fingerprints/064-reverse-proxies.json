@@ -220,6 +220,27 @@
       "website": "https://www.urllo.com",
       "icon": "Urllo.svg"
     },
+    "Netflix Zuul": {
+      "cats": [
+        64
+      ],
+      "implies": [
+        "Java"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "headers.set-cookie": {
+              "$regex": "(?i)ZUULPROXY"
+            }
+          }
+        }
+      ],
+      "description": "Netflix Zuul is a Java-based API gateway and edge service that provides dynamic routing, monitoring, resiliency, and security for microservices architectures.",
+      "website": "https://github.com/Netflix/zuul",
+      "icon": "Netflix.svg"
+    },
     "V2Board": {
       "cats": [
         64
