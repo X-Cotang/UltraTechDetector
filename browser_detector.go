@@ -11,13 +11,20 @@ import (
 
 // BrowserDetector performs browser-based detection
 type BrowserDetector struct {
-	timeout time.Duration
+	timeout  time.Duration
+	proxyURL string
 }
 
 // NewBrowserDetector creates a new browser detector
 func NewBrowserDetector() *BrowserDetector {
+	return NewBrowserDetectorWithOptions("")
+}
+
+// NewBrowserDetectorWithOptions creates a new browser detector with proxy support
+func NewBrowserDetectorWithOptions(proxyURL string) *BrowserDetector {
 	return &BrowserDetector{
-		timeout: 30 * time.Second,
+		timeout:  30 * time.Second,
+		proxyURL: proxyURL,
 	}
 }
 
@@ -91,6 +98,11 @@ func (bd *BrowserDetector) DetectBrowser(baseURL string, fingerprints map[string
 		chromedp.Flag("disable-blink-features", "AutomationControlled"),
 		chromedp.Flag("disable-web-security", true),
 	)
+
+	// Add proxy configuration if provided
+	if bd.proxyURL != "" {
+		opts = append(opts, chromedp.ProxyServer(bd.proxyURL))
+	}
 
 	allocCtx, cancel := chromedp.NewExecAllocator(context.Background(), opts...)
 	defer cancel()

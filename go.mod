@@ -1,6 +1,6 @@
 module github.com/X-Cotang/UltraTechDetector
 
-go 1.21
+go 1.24.0
 
 require github.com/chromedp/chromedp v0.9.3
 
@@ -12,5 +12,6 @@ require (
 	github.com/gobwas/ws v1.3.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
-	golang.org/x/sys v0.13.0 // indirect
+	golang.org/x/net v0.50.0 // indirect
+	golang.org/x/sys v0.41.0 // indirect
 )

@@ -14,11 +14,11 @@ type Detector struct {
 
 // NewDetector creates a new detection engine
 func NewDetector(fingerprintsDir string) (*Detector, error) {
-	return NewDetectorWithOptions(fingerprintsDir, false)
+	return NewDetectorWithOptions(fingerprintsDir, false, "")
 }
 
 // NewDetectorWithOptions creates a new detection engine with custom options
-func NewDetectorWithOptions(fingerprintsDir string, insecureSkipVerify bool) (*Detector, error) {
+func NewDetectorWithOptions(fingerprintsDir string, insecureSkipVerify bool, proxyURL string) (*Detector, error) {
 	loader := NewLoader(fingerprintsDir)
 	fingerprints, err := loader.LoadAll()
 	if err != nil {
@@ -26,8 +26,8 @@ func NewDetectorWithOptions(fingerprintsDir string, insecureSkipVerify bool) (*D
 	}
 
 	return &Detector{
-		httpDetector:    NewHTTPDetectorWithOptions(insecureSkipVerify),
-		browserDetector: NewBrowserDetector(),
+		httpDetector:    NewHTTPDetectorWithOptions(insecureSkipVerify, proxyURL),
+		browserDetector: NewBrowserDetectorWithOptions(proxyURL),
 		fingerprints:    fingerprints,
 		loader:          loader,
 	}, nil

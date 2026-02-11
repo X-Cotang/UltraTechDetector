@@ -5,9 +5,13 @@ import (
 	"fmt"
 	"io"
 	"math"
+	"net"
 	"net/http"
+	"net/url"
 	"strings"
 	"time"
+
+	"golang.org/x/net/proxy"
 )
 
 const (
@@ -25,16 +29,47 @@ type HTTPDetector struct {
 
 // NewHTTPDetector creates a new HTTP detector
 func NewHTTPDetector() *HTTPDetector {
-	return NewHTTPDetectorWithOptions(false)
+	return NewHTTPDetectorWithOptions(false, "")
 }
 
 // NewHTTPDetectorWithOptions creates a new HTTP detector with custom options
-func NewHTTPDetectorWithOptions(insecureSkipVerify bool) *HTTPDetector {
-	// Create custom transport if needed
+func NewHTTPDetectorWithOptions(insecureSkipVerify bool, proxyURL string) *HTTPDetector {
+	// Create custom transport
 	transport := &http.Transport{
 		TLSClientConfig: &tls.Config{
 			InsecureSkipVerify: insecureSkipVerify,
 		},
+	}
+
+	// Configure proxy if provided
+	if proxyURL != "" {
+		parsedURL, err := url.Parse(proxyURL)
+		if err == nil {
+			// Check if it's a SOCKS5 proxy
+			if parsedURL.Scheme == "socks5" {
+				// Extract auth if present
+				var auth *proxy.Auth
+				if parsedURL.User != nil {
+					password, _ := parsedURL.User.Password()
+					auth = &proxy.Auth{
+						User:     parsedURL.User.Username(),
+						Password: password,
+					}
+				}
+
+				// Create SOCKS5 dialer
+				dialer, err := proxy.SOCKS5("tcp", parsedURL.Host, auth, proxy.Direct)
+				if err == nil {
+					// Use SOCKS5 dialer for transport
+					transport.Dial = func(network, addr string) (net.Conn, error) {
+						return dialer.Dial(network, addr)
+					}
+				}
+			} else {
+				// HTTP/HTTPS proxy
+				transport.Proxy = http.ProxyURL(parsedURL)
+			}
+		}
 	}
 
 	return &HTTPDetector{

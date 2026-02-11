@@ -19,6 +19,7 @@ func main() {
 	useBrowser := flag.Bool("browser", false, "Enable browser detection (slower but more accurate)")
 	format := flag.String("format", "text", "Output format: text, json, or jsonl")
 	insecure := flag.Bool("insecure", true, "Skip SSL certificate verification (useful for self-signed certs)")
+	proxyURL := flag.String("proxy", "", "Proxy URL (http://[user:pass@]host:port or socks5://[user:pass@]host:port)")
 
 	flag.Parse()
 
@@ -31,21 +32,27 @@ func main() {
 	} else if *url != "" {
 		urls = []string{*url}
 	} else {
-		// Read from stdin (pipe)
-		scanner := bufio.NewScanner(os.Stdin)
-		for scanner.Scan() {
-			line := strings.TrimSpace(scanner.Text())
-			if line != "" {
-				urls = append(urls, line)
+		// Check if stdin is a pipe or terminal
+		stat, err := os.Stdin.Stat()
+		if err == nil && (stat.Mode()&os.ModeCharDevice) == 0 {
+			// stdin is piped, read from it
+			scanner := bufio.NewScanner(os.Stdin)
+			for scanner.Scan() {
+				line := strings.TrimSpace(scanner.Text())
+				if line != "" {
+					urls = append(urls, line)
+				}
+			}
+			if err := scanner.Err(); err != nil {
+				if *format == "text" {
+					log.Fatalf("Error reading from stdin: %v", err)
+				}
+				// For JSON/JSONL, just exit silently
+				os.Exit(1)
 			}
 		}
-		if err := scanner.Err(); err != nil {
-			if *format == "text" {
-				log.Fatalf("Error reading from stdin: %v", err)
-			}
-			// For JSON/JSONL, just exit silently
-			os.Exit(1)
-		}
+		// If stdin is terminal (not piped), urls will remain empty
+		// and we'll show help below
 	}
 
 	if len(urls) == 0 {
@@ -67,9 +74,9 @@ func main() {
 	var detector *techdetect.Detector
 	var err error
 	if *insecure {
-		detector, err = techdetect.NewDetectorWithOptions(*fingerprintsDir, true)
+		detector, err = techdetect.NewDetectorWithOptions(*fingerprintsDir, true, *proxyURL)
 	} else {
-		detector, err = techdetect.NewDetector(*fingerprintsDir)
+		detector, err = techdetect.NewDetectorWithOptions(*fingerprintsDir, false, *proxyURL)
 	}
 	if err != nil {
 		if *format == "text" {

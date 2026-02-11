@@ -39,6 +39,18 @@ go build -o techdetect ./cmd/techdetect
 # Skip SSL verification
 ./techdetect -insecure true https://self-signed.example.com
 
+# Using HTTP proxy
+./techdetect -proxy http://proxy.example.com:8080 https://example.com
+
+# Using HTTP proxy with authentication
+./techdetect -proxy http://user:pass@proxy.example.com:8080 https://example.com
+
+# Using SOCKS5 proxy
+./techdetect -proxy socks5://proxy.example.com:1080 https://example.com
+
+# Using SOCKS5 proxy with authentication
+./techdetect -proxy socks5://user:pass@proxy.example.com:1080 https://example.com
+
 # Pipe input from other tools
 cat urls.txt | ./techdetect -format jsonl
 echo https://example.com | ./techdetect -format json
@@ -94,6 +106,7 @@ echo https://example.com | ./techdetect -format json
 | `-browser` | Enable browser detection (slower but more accurate) | `false` |
 | `-insecure` | Skip SSL certificate verification | `false` |
 | `-fingerprints` | Path to fingerprints directory | `./data/fingerprints` |
+| `-proxy` | Proxy URL (`http://[user:pass@]host:port` or `socks5://[user:pass@]host:port`) | - |
 
 ## Integration with ProjectDiscovery Tools
 

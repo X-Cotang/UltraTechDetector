@@ -3,6 +3,7 @@
 *.log
 # Environment variables
 .env
+*.zip
 
 # IDE
 .idea/
