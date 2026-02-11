@@ -6,13 +6,26 @@ A enhanced web technology detection engine inspired by [ProjectDiscovery's wappa
 
 - 🎯 **Dual-Stage Detection**: HTTP-based (fast) + Browser-based (accurate) detection
 - 📁 **Organized Fingerprints**: Technologies categorized into separate files for easier management
+- 📦 **Embedded Fingerprints**: All fingerprints bundled into binary - no external dependencies needed
 - 🔍 **MongoDB-Style Queries**: Advanced query evaluation with 9 operators (`$or`, `$and`, `$not`, `$nor`, `$regex`, `$eq`, `$ne`, `$exists`, `$in`, `$nin`) for precise detection and reduced false positives
 - 🌐 **Browser Detection**: Chromedp integration for JavaScript execution and accurate version extraction (e.g., Next.js, React)
 - 🔄 **Smart Redirect Handling**: Follows same-domain redirects with data accumulation
 - 🚀 **Pipeline-Friendly**: Clean JSON/JSONL output for seamless integration with other tools
+- 🌐 **Proxy Support**: HTTP and SOCKS5 proxies with authentication
 - 🔒 **SSL Options**: Skip verification for self-signed certificates
 
 ## Installation
+
+### Option 1: Download Binary (Recommended)
+
+Download the pre-built binary from releases. All fingerprints are embedded - no additional files needed!
+
+```bash
+# Just run it
+./techdetect https://example.com
+```
+
+### Option 2: Build from Source
 
 ```bash
 git clone <repository-url>
