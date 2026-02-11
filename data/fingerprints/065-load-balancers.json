@@ -100,7 +100,7 @@
           "path": "/",
           "detect": {
             "headers.server": {
-              "$regex": "^google frontend$"
+              "$regex": "(i?)^google frontend$"
             }
           }
         }
