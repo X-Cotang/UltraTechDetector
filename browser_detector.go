@@ -97,6 +97,8 @@ func (bd *BrowserDetector) DetectBrowser(baseURL string, fingerprints map[string
 	opts := append(chromedp.DefaultExecAllocatorOptions[:],
 		chromedp.Flag("disable-blink-features", "AutomationControlled"),
 		chromedp.Flag("disable-web-security", true),
+                chromedp.Flag("no-sandbox", true),
+                chromedp.Flag("disable-dev-shm-usage", true),
 	)
 
 	// Add proxy configuration if provided
