@@ -16090,6 +16090,9 @@
       "icon": "eShop eCommerce.svg"
     },
     "eCShop": {
+      "favicon_md5": [
+        "428b23df874b41d904bbae29057bdba5"
+      ],
       "cats": [
         6
       ],

@@ -21,14 +21,16 @@ type BatchResults struct {
 
 // Fingerprint represents the detection rules for a technology
 type Fingerprint struct {
-	Cats        []int          `json:"cats"`
-	Implies     []string       `json:"implies,omitempty"`
-	Paths       []PathProbe    `json:"paths,omitempty"`
-	Browser     []BrowserProbe `json:"browser,omitempty"`
-	Description string         `json:"description,omitempty"`
-	Website     string         `json:"website,omitempty"`
-	Icon        string         `json:"icon,omitempty"`
-	CPE         string         `json:"cpe,omitempty"`
+	Cats          []int          `json:"cats"`
+	Implies       []string       `json:"implies,omitempty"`
+	FaviconHashes []int32        `json:"favicon_hashes,omitempty"`
+	FaviconMD5    []string       `json:"favicon_md5,omitempty"`
+	Paths         []PathProbe    `json:"paths,omitempty"`
+	Browser       []BrowserProbe `json:"browser,omitempty"`
+	Description   string         `json:"description,omitempty"`
+	Website       string         `json:"website,omitempty"`
+	Icon          string         `json:"icon,omitempty"`
+	CPE           string         `json:"cpe,omitempty"`
 }
 
 // PathProbe represents an HTTP-based detection probe

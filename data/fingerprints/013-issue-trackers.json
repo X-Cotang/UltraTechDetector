@@ -9,6 +9,10 @@
       "icon": "Asana.svg"
     },
     "Atlassian Jira": {
+      "favicon_md5": [
+        "04d89d5b7a290334f5ce37c7e8b6a349",
+        "6c1452e18a09070c0b3ed85ce7cb3917"
+      ],
       "cats": [
         13
       ],
@@ -647,6 +651,9 @@
       "icon": "LoopedIn.svg"
     },
     "MantisBT": {
+      "favicon_md5": [
+        "701bb703b31f99da18251ca2e557edf0"
+      ],
       "cats": [
         13
       ],
@@ -1502,6 +1509,9 @@
       "icon": "osTicket.png"
     },
     "otrs": {
+      "favicon_md5": [
+        "49bf194d1eccb1e5110957d14559d33d"
+      ],
       "cats": [
         13
       ],

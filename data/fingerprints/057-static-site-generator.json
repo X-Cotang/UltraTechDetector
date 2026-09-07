@@ -351,6 +351,9 @@
       "icon": "Nextra.svg"
     },
     "Octopress": {
+      "favicon_md5": [
+        "eec3051d5c356d1798bea1d8a3617c51"
+      ],
       "cats": [
         57
       ],

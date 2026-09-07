@@ -2492,6 +2492,9 @@
       "icon": "nopStation.png"
     },
     "ownCloud": {
+      "favicon_md5": [
+        "a4eb4e0aa80740db8d7d951b6d63b2a2"
+      ],
       "cats": [
         19
       ],

@@ -266,6 +266,9 @@
       "cpe": "cpe:2.3:a:cherokee-project:cherokee:*:*:*:*:*:*:*:*"
     },
     "CherryPy": {
+      "favicon_md5": [
+        "0f45c2c79ebe90d6491ddb111e810a56"
+      ],
       "cats": [
         22
       ],
@@ -284,6 +287,9 @@
       "icon": "CherryPy.svg"
     },
     "CouchDB": {
+      "favicon_md5": [
+        "2ab2aae806e8393b70970b2eaace82e0"
+      ],
       "cats": [
         22
       ],
@@ -483,6 +489,9 @@
       "icon": "Google App Engine.svg"
     },
     "Google Web Server": {
+      "favicon_md5": [
+        "09b565a51e14b721a323f0ba44b2982a"
+      ],
       "cats": [
         22
       ],
@@ -527,6 +536,10 @@
       "icon": "default.svg"
     },
     "HCL Domino": {
+      "favicon_md5": [
+        "639b61409215d770a99667b446c80ea1",
+        "7dbe9acc2ab6e64d59fa67637b1239df"
+      ],
       "cats": [
         22
       ],
@@ -725,6 +738,10 @@
       "cpe": "cpe:2.3:a:intel:active_management_technology:*:*:*:*:*:*:*:*"
     },
     "JBoss Application Server": {
+      "favicon_md5": [
+        "192decdad41179599a776494efc3e720",
+        "799f70b71314a7508326d1d2f68f7519"
+      ],
       "cats": [
         22
       ],
@@ -787,6 +804,9 @@
       "cpe": "cpe:2.3:a:redhat:jboss_enterprise_application_platform:*:*:*:*:*:*:*:*"
     },
     "Jetty": {
+      "favicon_md5": [
+        "ed7d5c39c69262f4ba95418d4f909b10"
+      ],
       "cats": [
         22
       ],
@@ -1530,6 +1550,9 @@
       "icon": "Xitami.png"
     },
     "Yaws": {
+      "favicon_md5": [
+        "81feac35654318fb16d1a567b8b941e7"
+      ],
       "cats": [
         22
       ],

@@ -126,6 +126,9 @@
       "cpe": "cpe:2.3:a:google:firebase_cloud_messaging:*:*:*:*:*:*:*:*"
     },
     "Lucene": {
+      "favicon_md5": [
+        "b8fe2ec1fcc0477c0d0f00084d824071"
+      ],
       "cats": [
         34
       ],
@@ -245,6 +248,9 @@
       "cpe": "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
     },
     "Solr": {
+      "favicon_md5": [
+        "ffc05799dee87a4f8901c458f7291d73"
+      ],
       "cats": [
         34
       ],

@@ -343,6 +343,10 @@
       "icon": "Bonfire.png"
     },
     "CakePHP": {
+      "favicon_md5": [
+        "66b3119d379aee26ba668fef49188dd3",
+        "c0533ae5d0ed638ba3fb3485d8250a28"
+      ],
       "cats": [
         18
       ],
@@ -631,6 +635,9 @@
       "icon": "Fresh.svg"
     },
     "GLPI": {
+      "favicon_md5": [
+        "c9339a2ecde0980f40ba22c2d237b94b"
+      ],
       "cats": [
         18,
         53
@@ -1589,6 +1596,9 @@
       "icon": "PyWebIO.svg"
     },
     "Qwik": {
+      "favicon_md5": [
+        "af83bba99d82ea47ca9dafc8341ec110"
+      ],
       "cats": [
         18
       ],

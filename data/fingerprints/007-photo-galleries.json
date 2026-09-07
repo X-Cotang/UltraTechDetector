@@ -156,6 +156,9 @@
       "cpe": "cpe:2.3:a:coppermine-gallery:coppermine_photo_gallery:*:*:*:*:*:*:*:*"
     },
     "Gallery": {
+      "favicon_md5": [
+        "56753c5386a70edba6190d49252f00bb"
+      ],
       "cats": [
         7
       ],

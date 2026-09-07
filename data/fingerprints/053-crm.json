@@ -3571,6 +3571,9 @@
       "icon": "Rinsed.svg"
     },
     "Roller": {
+      "favicon_md5": [
+        "1cc16c64d0e471607677b036b3f06b6e"
+      ],
       "cats": [
         53
       ],
@@ -4920,6 +4923,9 @@
       "icon": "Virtuagym.svg"
     },
     "Vtiger": {
+      "favicon_md5": [
+        "d90cc1762bf724db71d6df86effab63c"
+      ],
       "cats": [
         53
       ],

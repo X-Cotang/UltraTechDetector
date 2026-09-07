@@ -1571,6 +1571,9 @@
       "cpe": "cpe:2.3:a:gitlist:gitlist:*:*:*:*:*:*:*:*"
     },
     "gitweb": {
+      "favicon_md5": [
+        "85138f44d577b03dfc738d3f27e04992"
+      ],
       "cats": [
         47
       ],

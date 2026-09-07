@@ -83,6 +83,11 @@
       "cpe": "cpe:2.3:a:directadmin:directadmin:*:*:*:*:*:*:*:*"
     },
     "Plesk": {
+      "favicon_md5": [
+        "64ca706a50715e421b6c2fa0b32ed7ec",
+        "9ceae7a3c88fc451d59e24d8d5f6f166",
+        "dcea02a5797ce9e36f19b7590752563e"
+      ],
       "cats": [
         9
       ],

@@ -331,6 +331,9 @@
       "icon": "Mailjet.svg"
     },
     "Mailman": {
+      "favicon_md5": [
+        "eb6d4ce00ec36af7d439ebd4e5a395d7"
+      ],
       "cats": [
         75
       ],

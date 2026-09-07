@@ -115,6 +115,9 @@
       "icon": "Canvas LMS.svg"
     },
     "Chamilo": {
+      "favicon_md5": [
+        "0c53ef3d151cbac70a8486dd1ebc8b25"
+      ],
       "cats": [
         21
       ],
@@ -738,6 +741,10 @@
       "icon": "MasteryManager.svg"
     },
     "Moodle": {
+      "favicon_md5": [
+        "933a83c6e9e47bd1e38424f3789d121d",
+        "d4af3be33d952c1f98684d985019757c"
+      ],
       "cats": [
         21
       ],

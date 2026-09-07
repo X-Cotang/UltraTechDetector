@@ -102,6 +102,9 @@
       "icon": "Editor.js.png"
     },
     "Etherpad": {
+      "favicon_md5": [
+        "fa2b274fab800af436ee688e97da4ac4"
+      ],
       "cats": [
         24
       ],

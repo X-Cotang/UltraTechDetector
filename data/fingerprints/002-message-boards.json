@@ -148,6 +148,10 @@
       "icon": "Discourse.png"
     },
     "Discuz! X": {
+      "favicon_md5": [
+        "8757fcbdbd83b0808955f6735078a287",
+        "9fac8b45400f794e0799d0d5458c092b"
+      ],
       "cats": [
         2
       ],
@@ -391,6 +395,9 @@
       "icon": "IPB.png"
     },
     "Invision Power Board": {
+      "favicon_md5": [
+        "e2cac3fad9fa3388f639546f3ba09bc0"
+      ],
       "cats": [
         2
       ],
@@ -1190,6 +1197,12 @@
       "icon": "punBB.png"
     },
     "vBulletin": {
+      "favicon_md5": [
+        "740af61c776a3cb98da3715bdf9d3fc1",
+        "c1201c47c81081c7f0930503cae7f71a",
+        "d7ac014e83b5c4a2dea76c50eaeda662",
+        "f425342764f8c356479d05daa7013c2f"
+      ],
       "cats": [
         2
       ],

@@ -54,6 +54,9 @@
       "cpe": "cpe:2.3:a:atlassian:confluence:*:*:*:*:*:*:*:*"
     },
     "DokuWiki": {
+      "favicon_md5": [
+        "3ef81fad2a3deaeb19f02c9cf67ed8eb"
+      ],
       "cats": [
         8
       ],
@@ -203,6 +206,10 @@
       "cpe": "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
     },
     "MoinMoin": {
+      "favicon_md5": [
+        "b7f98dd27febe36b7275f22ad73c5e84",
+        "e551b7017a9bd490fc5b76e833d689bf"
+      ],
       "cats": [
         8
       ],
@@ -247,6 +254,9 @@
       "icon": "PukiWiki.svg"
     },
     "TWiki": {
+      "favicon_md5": [
+        "9789c9ab400ea0b9ca8fcbd9952133bd"
+      ],
       "cats": [
         8
       ],
@@ -355,6 +365,9 @@
       "icon": "YesWiki.svg"
     },
     "ikiwiki": {
+      "favicon_md5": [
+        "32bf63ac2d3cfe82425ce8836c9ce87c"
+      ],
       "cats": [
         8
       ],

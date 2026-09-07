@@ -8,6 +8,12 @@
       "implies": [
         "PHP"
       ], // Technologies implied if this one is detected
+      "favicon_hashes": [
+        -831756631
+      ], // Optional Shodan-compatible mmh3 hashes of /favicon.ico (or <link rel="icon">)
+      "favicon_md5": [
+        "23e8c7bd78e8cd826c5a6073b15068b1"
+      ], // Optional OWASP/WhatWeb MD5 hashes of raw favicon bytes
       "paths": [ // HTTP probes grouped by request path (engine will dedupe paths globally)
         {
           "path": "/", // Request path (used as grouping key)

@@ -2053,6 +2053,9 @@
       "icon": "LiveSite.svg"
     },
     "Mahara": {
+      "favicon_md5": [
+        "5f8b52715c08dfc7826dad181c71dec8"
+      ],
       "cats": [
         51
       ],

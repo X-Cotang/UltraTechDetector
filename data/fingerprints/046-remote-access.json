@@ -83,6 +83,10 @@
       "icon": "Chaser.svg"
     },
     "Citrix": {
+      "favicon_md5": [
+        "9939a032a9845e4d931d14e08f5a6c7c",
+        "f097f0adf2b9e95a972d21e5e5ab746d"
+      ],
       "cats": [
         46
       ],

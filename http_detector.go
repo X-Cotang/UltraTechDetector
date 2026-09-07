@@ -123,6 +123,8 @@ func ClassifyByPath(fingerprints map[string]Fingerprint) []PathClassification {
 func (hd *HTTPDetector) DetectHTTP(baseURL string, fingerprints map[string]Fingerprint) (map[string]*Technology, []string) {
 	results := make(map[string]*Technology)
 	failedPaths := []string{}
+	homepageBody := ""
+	fatalNetworkError := false
 
 	// Classify fingerprints by path
 	pathClassifications := ClassifyByPath(fingerprints)
@@ -153,9 +155,14 @@ func (hd *HTTPDetector) DetectHTTP(baseURL string, fingerprints map[string]Finge
 						failedPaths = append(failedPaths, remainingClass.Path)
 					}
 				}
+				fatalNetworkError = true
 				break
 			}
 			continue
+		}
+
+		if classification.Path == "/" {
+			homepageBody = ctx.Body
 		}
 
 		// Check all technologies for this path
@@ -176,6 +183,10 @@ func (hd *HTTPDetector) DetectHTTP(baseURL string, fingerprints map[string]Finge
 				}
 			}
 		}
+	}
+
+	if !fatalNetworkError {
+		hd.detectByFavicon(baseURL, homepageBody, fingerprints, results)
 	}
 
 	return results, failedPaths

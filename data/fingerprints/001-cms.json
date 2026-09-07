@@ -1448,6 +1448,9 @@
       "icon": "CitizenSpace.svg"
     },
     "CivicPlus": {
+      "favicon_md5": [
+        "a1c686eb6e771878cf6040574a175933"
+      ],
       "cats": [
         1
       ],
@@ -2127,6 +2130,9 @@
       "icon": "DM Polopoly.png"
     },
     "DNN": {
+      "favicon_md5": [
+        "5b0e3b33aa166c88cee57f83de1d4e55"
+      ],
       "cats": [
         1
       ],
@@ -2536,6 +2542,12 @@
       "icon": "DrLeonardo.svg"
     },
     "Drupal": {
+      "favicon_md5": [
+        "a4819787db1dabe1a6b669d5d6df3bfd",
+        "b6341dfc213100c61db4fb8775878cec",
+        "e6a9dc66179d8c9f34288b16a02f987e",
+        "f0ee98b4394dfdab17c16245dd799204"
+      ],
       "cats": [
         1
       ],
@@ -4372,6 +4384,9 @@
       "icon": "Jimdo.svg"
     },
     "Joomla": {
+      "favicon_md5": [
+        "63b982eddd64d44233baa25066db6bc1"
+      ],
       "cats": [
         1
       ],
@@ -5843,6 +5858,9 @@
       "icon": "MotoCMS.svg"
     },
     "Movable Type": {
+      "favicon_md5": [
+        "06b60d90ccfb79c2574c7fdc3ac23f05"
+      ],
       "cats": [
         1
       ],
@@ -7121,6 +7139,9 @@
       "icon": "PlatformOS.svg"
     },
     "Pligg": {
+      "favicon_md5": [
+        "83a1fd57a1e1684fafd6d2487290fdf5"
+      ],
       "cats": [
         1
       ],
@@ -7158,6 +7179,11 @@
       "cpe": "cpe:2.3:a:pligg:pligg_cms:*:*:*:*:*:*:*:*"
     },
     "Plone": {
+      "favicon_md5": [
+        "10bd6ad7b318df92d9e9bd03104d9b80",
+        "4eb846f1286ab4e7a399c851d7d84cca",
+        "a47951fb41640e7a2f5862c296e6f218"
+      ],
       "cats": [
         1
       ],
@@ -9280,6 +9306,9 @@
       "icon": "Strikingly.png"
     },
     "Subrion": {
+      "favicon_md5": [
+        "bc18566dcc41a0ff503968f461c4995a"
+      ],
       "cats": [
         1
       ],
@@ -9399,6 +9428,9 @@
       "icon": "tessitura.svg"
     },
     "TYPO3 CMS": {
+      "favicon_md5": [
+        "8718c2998236c796896b725f264092ee"
+      ],
       "cats": [
         1
       ],
@@ -9935,6 +9967,9 @@
       "icon": "Unstack.svg"
     },
     "Ushahidi": {
+      "favicon_md5": [
+        "7350c3f75cb80e857efa88c2fd136da5"
+      ],
       "cats": [
         1,
         35
@@ -10667,6 +10702,9 @@
       "icon": "Wolf CMS.png"
     },
     "Woltlab Community Framework": {
+      "favicon_md5": [
+        "1bf954ba2d568ec9771d35c94a6eb2dc"
+      ],
       "cats": [
         1
       ],
@@ -10687,6 +10725,16 @@
       "icon": "Woltlab Community Framework.png"
     },
     "WordPress": {
+      "favicon_md5": [
+        "28a122aa74f6929b0994fc544555c0b1",
+        "3ead5afa19537170bb980924397b70d6",
+        "6cec5a9c106d45e458fc680f70df91b0",
+        "95103d0eabcd541527a86f23b636e794",
+        "b231ad66a2a9b0eb06f72c4c88973039",
+        "e1e8bdc3ce87340ab6ebe467519cf245",
+        "e44d22b74f7ee4435e22062d5adf4a6a",
+        "fa54dbf2f61bd2e0188e47f5f578f736"
+      ],
       "cats": [
         1,
         11
@@ -10778,6 +10826,10 @@
       "icon": "Wuilt.png"
     },
     "XOOPS": {
+      "favicon_md5": [
+        "389a8816c5b87685de7d8d5fec96c85b",
+        "9187f6607b402df8bbc2aeb69a07bbca"
+      ],
       "cats": [
         1
       ],
@@ -11378,6 +11430,9 @@
       "icon": "PHPWCMS.svg"
     },
     "phpwind": {
+      "favicon_md5": [
+        "4cfbb29d0d83685ba99323bc0d4d3513"
+      ],
       "cats": [
         1,
         2

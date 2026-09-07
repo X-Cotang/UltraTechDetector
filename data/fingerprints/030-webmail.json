@@ -172,6 +172,12 @@
       "icon": "RainLoop.png"
     },
     "RoundCube": {
+      "favicon_md5": [
+        "228ba3f6d946af4298b080e5c934487c",
+        "e9469705a8ac323e403d74c11425a62b",
+        "ef9c0362bf20a086bb7c2e8ea346b9f0",
+        "f1ac749564d5ba793550ec6bdc472e7c"
+      ],
       "cats": [
         30
       ],

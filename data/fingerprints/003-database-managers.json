@@ -116,6 +116,11 @@
       "icon": "Xano.svg"
     },
     "phpMyAdmin": {
+      "favicon_md5": [
+        "02dd7453848213a7b5277556bcc46307",
+        "531b63a51234bb06c9d77f219eb25553",
+        "d037ef2f629a22ddadcf438e6be7a325"
+      ],
       "cats": [
         3
       ],

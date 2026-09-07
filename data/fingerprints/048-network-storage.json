@@ -82,6 +82,9 @@
       "icon": "gluster.png"
     },
     "Synology DiskStation": {
+      "favicon_md5": [
+        "531e652a15bc0ad59b6af05019b1834a"
+      ],
       "cats": [
         48
       ],

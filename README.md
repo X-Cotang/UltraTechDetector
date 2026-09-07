@@ -5,6 +5,7 @@ A enhanced web technology detection engine inspired by [ProjectDiscovery's wappa
 ## Key Features
 
 - 🎯 **Dual-Stage Detection**: HTTP-based (fast) + Browser-based (accurate) detection
+- 🖼️ **Favicon Hash Detection**: Shodan mmh3 and OWASP/WhatWeb MD5 hashes of `/favicon.ico` and HTML icon links
 - 📁 **Organized Fingerprints**: Technologies categorized into separate files for easier management
 - 📦 **Embedded Fingerprints**: All fingerprints bundled into binary - no external dependencies needed
 - 🔍 **MongoDB-Style Queries**: Advanced query evaluation with 9 operators (`$or`, `$and`, `$not`, `$nor`, `$regex`, `$eq`, `$ne`, `$exists`, `$in`, `$nin`) for precise detection and reduced false positives
@@ -147,9 +148,10 @@ cat urls.txt | httpx -silent | ./techdetect -format jsonl -browser
 │  HTTP Detector  │    │ Browser Detector│
 │                 │    │                 │
 │ • Path classify │    │ • Chromedp      │
-│ • Retry logic   │    │ • JS execution  │
-│ • Query eval    │    │ • Version       │
-│ • Redirects     │    │   extraction    │
+│ • Favicon hash  │    │ • JS execution  │
+│ • Retry logic   │    │ • Version       │
+│ • Query eval    │    │   extraction    │
+│ • Redirects     │    │                 │
 └────────┬────────┘    └────────┬────────┘
          │                      │
          └──────────┬───────────┘
@@ -266,6 +268,7 @@ See [SCHEMA_GUIDE.md](SCHEMA_GUIDE.md) for detailed documentation.
 │       └── *.json               # Organized fingerprint files
 ├── browser_detector.go          # Browser-based detection (Chromedp)
 ├── detector.go                  # Main detector orchestration
+├── favicon.go                   # Favicon mmh3 and MD5 hash detection
 ├── http_detector.go             # HTTP-based detection
 ├── loader.go                    # Fingerprint loader
 ├── query.go                     # MongoDB-style query evaluator
