@@ -122,6 +122,90 @@
       "website": "https://www.citrix.com",
       "icon": "Citrix.svg"
     },
+    "Fortinet SSL VPN": {
+      "cats": [
+        46
+      ],
+      "implies": [
+        "Fortinet FortiGate"
+      ],
+      "paths": [
+        {
+          "path": "/",
+          "detect": {
+            "$or": [
+              {
+                "body": {
+                  "$regex": "top\\.location\\s*=\\s*[\"']/remote/login"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "(?:window\\.)?location(?:\\.href)?\\s*=\\s*[\"']/remote/login"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "path": "/remote/login",
+          "detect": {
+            "$or": [
+              {
+                "headers.set-cookie": {
+                  "$regex": "SVPNCOOKIE"
+                }
+              },
+              {
+                "headers.set-cookie": {
+                  "$regex": "SVPNNETWORKCOOKIE"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "/remote/fgt_lang"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "/remote/logincheck"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "ftnt-fortinet-grid"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "launchFortiClient"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "/sslvpn/js/login\\.js"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "/sslvpn/portal\\.html"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "browser": [
+        {
+          "path": "/",
+          "detection": "try { return typeof fgt_lang !== 'undefined' || typeof launchFortiClient === 'function'; } catch(e){ return false; }"
+        }
+      ],
+      "description": "Fortinet SSL VPN is the FortiGate web SSL-VPN portal used for remote access, typically exposing /remote/login and FortiClient launch.",
+      "website": "https://www.fortinet.com/products/vpn",
+      "icon": "Fortinet.svg",
+      "cpe": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*"
+    },
     "Glance": {
       "cats": [
         46

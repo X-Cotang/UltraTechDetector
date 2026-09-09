@@ -777,6 +777,12 @@
       "cats": [
         16
       ],
+      "favicon_hashes": [
+        945408572,
+        -1621579836,
+        1384678339,
+        -2013924196
+      ],
       "paths": [
         {
           "path": "/",
@@ -785,6 +791,38 @@
               {
                 "body": {
                   "$regex": "\u003cf-icon class=\"ftnt-fortinet-grid icon-xl\"\u003e"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "top\\.location\\s*=\\s*[\"']/remote/login"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "ftnt-fortinet-grid"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "path": "/remote/login",
+          "detect": {
+            "$or": [
+              {
+                "headers.set-cookie": {
+                  "$regex": "SVPNCOOKIE"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "ftnt-fortinet-grid"
+                }
+              },
+              {
+                "body": {
+                  "$regex": "/remote/fgt_lang"
                 }
               }
             ]
