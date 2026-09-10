@@ -170,7 +170,7 @@ func collectFaviconURLs(baseURL, homepageBody string) []string {
 		urls = append(urls, u)
 	}
 
-	base := strings.TrimSuffix(baseURL, "/")
+	base := originURL(baseURL)
 	add(base + "/favicon.ico")
 	for _, u := range extractFaviconURLs(homepageBody, base+"/") {
 		add(u)

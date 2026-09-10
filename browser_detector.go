@@ -3,7 +3,6 @@ package techdetect
 import (
 	"context"
 	"fmt"
-	"strings"
 	"time"
 
 	"github.com/chromedp/chromedp"
@@ -97,8 +96,8 @@ func (bd *BrowserDetector) DetectBrowser(baseURL string, fingerprints map[string
 	opts := append(chromedp.DefaultExecAllocatorOptions[:],
 		chromedp.Flag("disable-blink-features", "AutomationControlled"),
 		chromedp.Flag("disable-web-security", true),
-                chromedp.Flag("no-sandbox", true),
-                chromedp.Flag("disable-dev-shm-usage", true),
+		chromedp.Flag("no-sandbox", true),
+		chromedp.Flag("disable-dev-shm-usage", true),
 	)
 
 	// Add proxy configuration if provided
@@ -121,7 +120,7 @@ func (bd *BrowserDetector) DetectBrowser(baseURL string, fingerprints map[string
 
 	// Process each unique path
 	for _, classification := range pathClassifications {
-		fullURL := strings.TrimSuffix(baseURL, "/") + classification.Path
+		fullURL := fingerprintURL(baseURL, classification.Path)
 
 		// Navigate to the page
 		if err := chromedp.Run(ctx, chromedp.Navigate(fullURL)); err != nil {

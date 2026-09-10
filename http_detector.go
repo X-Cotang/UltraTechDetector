@@ -131,7 +131,7 @@ func (hd *HTTPDetector) DetectHTTP(baseURL string, fingerprints map[string]Finge
 
 	// Process each unique path
 	for _, classification := range pathClassifications {
-		fullURL := strings.TrimSuffix(baseURL, "/") + classification.Path
+		fullURL := fingerprintURL(baseURL, classification.Path)
 
 		// Make HTTP request with retry logic
 		ctx, err := hd.requestWithRetry(fullURL, classification.RequestConf)
@@ -417,4 +417,33 @@ func resolveURL(base, relative string) (string, error) {
 func isSameDomain(url1, url2 map[string]string) bool {
 	// Compare host (case-insensitive)
 	return strings.EqualFold(url1["host"], url2["host"])
+}
+
+// fingerprintURL resolves a fingerprint path against the origin of baseURL.
+// Fingerprint paths are site-root relative (e.g. "/"), so a page such as
+// https://host/login must become https://host/ not https://host/login/.
+func fingerprintURL(baseURL, path string) string {
+	u, err := url.Parse(baseURL)
+	if err != nil || u.Scheme == "" || u.Host == "" {
+		return strings.TrimSuffix(baseURL, "/") + path
+	}
+	if path == "" {
+		path = "/"
+	}
+	if !strings.HasPrefix(path, "/") {
+		path = "/" + path
+	}
+	ref, err := url.Parse(path)
+	if err != nil {
+		return u.Scheme + "://" + u.Host + path
+	}
+	return u.ResolveReference(ref).String()
+}
+
+func originURL(baseURL string) string {
+	u, err := url.Parse(baseURL)
+	if err != nil || u.Scheme == "" || u.Host == "" {
+		return strings.TrimSuffix(baseURL, "/")
+	}
+	return u.Scheme + "://" + u.Host
 }
